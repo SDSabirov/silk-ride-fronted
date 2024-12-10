@@ -7,7 +7,10 @@ export default defineNuxtConfig({
     "@": resolve(__dirname),
     "~": resolve(__dirname),
   },
-  css: ['~/assets/css/main.css'],
+  image: {
+    // Configuration options (if any)
+  },
+  css: ['~/assets/css/main.css','boxicons/css/boxicons.min.css'],
   modules: ["@nuxtjs/seo", "@nuxtjs/google-fonts",'@nuxt/image', "@pinia/nuxt"],
   postcss: {
     plugins: {
