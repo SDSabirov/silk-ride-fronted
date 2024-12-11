@@ -4,6 +4,8 @@
         <LandingMainHero/>
         <LandingKeyFeatures/>
         <LandingAbout/>
+        <LandingFleet/>
+        <Footer />
     </div>
 </template>
 <script setup>
