@@ -1,8 +1,9 @@
 <template>
     <div>
         <Navbar/>
-        <MainHero/>
-        <KeyFeatures/>
+        <LandingMainHero/>
+        <LandingKeyFeatures/>
+        <LandingAbout/>
     </div>
 </template>
 <script setup>

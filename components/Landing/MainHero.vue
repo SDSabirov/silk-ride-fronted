@@ -5,36 +5,36 @@
       <!-- Background -->
       <div class="absolute inset-0 overflow-hidden">
         <img
-          src="/assets/images/womanpassenger.webp"
+          src="/assets/images/vclassjett.webp"
           alt="Luxury Chauffeur"
           class="w-full h-full object-cover"
         />
-        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div class="absolute inset-0 bg-black bg-opacity-30"></div>
         <!-- Dark Overlay -->
       </div>
   
       <!-- Content -->
-      <div class="relative z-10 text-center space-y-6 text-white flex flex-col justify-center items-center h-full">
-        <h1 class="text-5xl md:text-7xl font-bold tracking-wide">
-          Experience <span class="text-[#FFCB6C]">Luxury Travel</span>
+      <div class="relative z-10 text-center space-y-8 text-white flex flex-col justify-center items-center h-full">
+        <h1 class="text-4xl md:text-8xl font-semibold tracking-wide ">
+          Experience <span class="text-gold">Luxury Travel</span>
         </h1>
-        <p class="text-lg md:text-2xl font-light max-w-xl">
+        <p class="text-xl md:text-3xl font-light px-2 md:px-0 ">
           Chauffeur services designed to redefine comfort and sophistication for
           every journey.
         </p>
   
         <!-- Call-to-Action Buttons -->
-        <div class="space-x-4">
+        <div class="space-x-4 mt-4">
           <a
             href="#book-now"
-            class="px-8 py-3 rounded-lg shadow-lg text-gray-900 font-semibold"
+            class="px-8 py-3 text-xl shadow-lg text-black font-semibold"
             style="background: #ffcb6c"
           >
             Book Now
           </a>
           <a
             href="#services"
-            class="px-8 py-3 rounded-lg shadow-lg border text-[#FFCB6C] font-semibold hover:bg-[#FFCB6C] hover:text-gray-900 transition"
+            class="px-8 py-3 shadow-lg border text-[#FFCB6C] text-xl font-semibold hover:bg-[#FFCB6C] hover:text-black transition"
             style="border-color: #ffcb6c"
           >
             Explore Services

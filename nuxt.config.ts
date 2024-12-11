@@ -18,6 +18,13 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
+  googleFonts: {
+    families: {
+      "Playfair+Display": [400, 500, 700],
+      "Open+Sans": [300, 400, 600], // For multi-word font names
+    },
+    display: "swap", // Optional: Controls font-display behavior
+  },
   robots: {
     UserAgent: "*", // Applies to all user agents
     Disallow: "/admin", // Disallow access to admin pages

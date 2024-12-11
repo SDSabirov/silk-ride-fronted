@@ -9,7 +9,7 @@
         <!-- Logo -->
         <div class="flex space-x-2 items-center">
           <img src="/logo.svg" alt="Silk Ride Logo" class="h-12 w-12">
-          <h1 class="text-xl font-bold text-[#FFCB6C]">SILK RIDE</h1>
+          <h1 class="text-3xl font-semibold text-gold">SILK RIDE</h1>
         </div>
   
         <!-- Hamburger Icon -->
