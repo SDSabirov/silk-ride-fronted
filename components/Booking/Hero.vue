@@ -5,7 +5,7 @@
       <!-- Background -->
       <div class="absolute inset-0 overflow-hidden">
         <img
-          src="/assets/images/vclassjett.webp"
+          src="/assets/images/womanpassenger.webp"
           alt="Luxury Chauffeur"
           class="w-full h-full object-cover"
         />

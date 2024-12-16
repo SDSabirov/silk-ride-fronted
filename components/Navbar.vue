@@ -7,10 +7,13 @@
     >
       <div class="container max-w-screen-xl mx-auto px-4 flex items-center justify-between py-4">
         <!-- Logo -->
-        <div class="flex space-x-2 items-center">
+         <NuxtLink to="/">
+          <div class="flex space-x-2 items-center">
           <img src="/logo.svg" alt="Silk Ride Logo" class="h-12 w-12">
           <h1 class="text-3xl font-semibold text-gold">SILK RIDE</h1>
         </div>
+         </NuxtLink>
+        
   
         <!-- Hamburger Icon -->
         <div>

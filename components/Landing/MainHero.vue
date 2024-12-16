@@ -26,7 +26,7 @@
         <!-- Call-to-Action Buttons -->
         <div class="space-x-4 mt-4">
           <a
-            href="#book-now"
+            href="/booking"
             class="px-8 py-3 text-xl shadow-lg text-black font-semibold"
             style="background: #ffcb6c"
           >
