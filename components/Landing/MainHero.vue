@@ -12,7 +12,7 @@
     </div>
 
     <!-- Content -->
-    <div
+    <header
       class="relative z-10 text-center space-y-8 text-white flex flex-col justify-center items-center h-full"
     >
       <h1 class="text-4xl md:text-8xl font-semibold tracking-wide">
@@ -41,7 +41,7 @@
         </div>
    
   
-    </div>
+    </header>
   </section>
 </template>
 

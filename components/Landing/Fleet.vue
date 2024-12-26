@@ -18,72 +18,118 @@
           <div class="h-3 w-3 bg-gold rotate-45"></div>
         </div>
         <!-- Cards Section -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
           <!-- Card 1 -->
           <div
-            class="overflow-hidden rounded-lg shadow-lg bg-gradient-to-b from-green-200"
+            class="relative overflow-hidden shadow-lg bg-gradient-to-b from-green-200 group"
           >
+            <!-- Image -->
             <img
-              src="/assets/images/sclasstransparent.webp"
+              src="/assets/images/eclass.webp"
               alt="Luxury Sedan"
-              class="w-full h-64 object-cover"
+              class="w-full h-full object-cover"
             />
-            <div class="p-4">
-              <h3 class="text-xl font-semibold text-gray-900 mb-2">
-                ElectraLux
-              </h3>
-              <p class="text-gray-600">
-                Designed for eco-conscious travelers, this electric vehicle
-                redefines sophistication and comfort for every journey.
+
+            <!-- Header (Visible by default) -->
+            <div
+              class="absolute inset-0 flex items-center justify-center bg-black/50 text-white text-xl font-semibold transition-opacity duration-300 group-hover:opacity-0"
+            >
+            <h3 class="text-4xl">E-Class</h3>
+              
+            </div>
+
+            <!-- Description (Visible on hover) -->
+           <div
+              class="absolute inset-0 flex items-center justify-center bg-black/75 text-white text-center p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex flex-col"
+            >
+              <p class="text-md">
+                Experience unparalleled comfort and style with our luxury
+                sedans, designed to redefine your travel experience.
               </p>
+              <div class="w-full flex items-center  justify-center absolute bottom-4">
+                <NuxtLink to="/booking" class="flex w-1/3 items-center justify-center border border-gold text-gold text-lg hover:bg-gold hover:text-black p-2">
+                  Book Now
+                </NuxtLink>
+              </div>
             </div>
           </div>
           <!-- Card 2 -->
           <div
-            class="overflow-hidden rounded-lg shadow-lg bg-gradient-to-b from-gold/90"
+            class="relative overflow-hidden shadow-lg bg-gradient-to-b from-gold group"
           >
+            <!-- Image -->
             <img
-              src="/assets/images/transparentcars/vclass.jpg"
-              alt="Premium SUV"
-              class="w-full h-64 object-cover"
+              src="/assets/images/vclassSide.webp"
+              alt="Luxury Sedan"
+              class="w-full h-full object-cover"
             />
-            <div class="p-4">
-              <h3 class="text-xl font-semibold text-gray-900 mb-2">
-                PrestigeVan
-              </h3>
-              <p class="text-gray-600">
-                Spacious and stylish, ideal for families or group travel with
-                added comfort.
+
+            <!-- Header (Visible by default) -->
+            <div
+              class="absolute inset-0 flex items-center justify-center bg-black/50 text-white text-xl font-semibold transition-opacity duration-300 group-hover:opacity-0"
+            >
+            <h3 class="text-4xl">V-Class</h3>
+            </div>
+
+           <!-- Description (Visible on hover) -->
+           <div
+              class="absolute inset-0 flex items-center justify-center bg-black/75 text-white text-center p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex flex-col"
+            >
+              <p class="text-md">
+                Experience unparalleled comfort and style with our luxury
+                sedans, designed to redefine your travel experience.
               </p>
+              <div class="w-full flex items-center  justify-center absolute bottom-4">
+                <NuxtLink to="/booking" class="flex w-1/3 items-center justify-center border border-gold text-gold text-lg hover:bg-gold hover:text-black p-2">
+                  Book Now
+                </NuxtLink>
+              </div>
             </div>
           </div>
           <!-- Card 3 -->
           <div
-            class="overflow-hidden rounded-lg shadow-lg bg-gradient-to-b from-gold"
+            class="relative overflow-hidden shadow-lg bg-gradient-to-b from-green-200 group md:col-span-2 row-span-1 h-[400px]"
           >
+            <!-- Image -->
             <img
-              src="/assets/images/sclasstransparent.webp"
-              alt="Executive Limousine"
-              class="w-full h-64 object-cover"
+              src="/assets/images/sclassBackground.webp"
+              alt="Luxury Sedan"
+              class="w-full h-full object-cover"
             />
-            <div class="p-4">
-              <h3 class="text-xl font-semibold text-gray-900 mb-2">
-                Executive Limousine
-              </h3>
-              <p class="text-gray-600">
-                The ultimate luxury for business executives and special events.
+
+            <!-- Header (Visible by default) -->
+            <div
+              class="absolute inset-0 flex items-center justify-center bg-black/50 text-white text-xl font-semibold transition-opacity duration-300 group-hover:opacity-0"
+            >
+            <h3 class="text-4xl">S-Class</h3>
+            </div>
+
+           <!-- Description (Visible on hover) -->
+           <div
+              class="absolute inset-0 flex items-center justify-center bg-black/75 text-white text-center p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex flex-col"
+            >
+              <p class="text-md">
+                Experience unparalleled comfort and style with our luxury
+                sedans, designed to redefine your travel experience.
               </p>
+              <div class="w-full flex items-center  justify-center absolute bottom-4">
+                <NuxtLink to="/booking" class="flex w-1/3 items-center justify-center border border-gold text-gold text-lg hover:bg-gold hover:text-black p-2">
+                  Book Now
+                </NuxtLink>
+              </div>
             </div>
           </div>
         </div>
         <div class="w-full flex items-center justify-center py-6">
-            <button class="px-8 py-3 bg-black flex items-center space-x-2 text-white">
-              <span> Learn More  </span>
+          <NuxtLink to="/cars"
+            class="px-8 py-3 bg-black flex items-center space-x-2 text-white"
+          >
+            <span> Learn More </span>
 
-              <span>
-                <i class="bx bx-chevrons-right"></i>
-              </span>
-            </button>
+            <span>
+              <i class="bx bx-chevrons-right"></i>
+            </span>
+          </NuxtLink>
         </div>
       </div>
     </div>

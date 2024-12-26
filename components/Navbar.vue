@@ -2,8 +2,8 @@
   <nav
     :class="[ 
       'fixed top-0 left-0 w-full text-white z-50 transition-colors duration-300',
-      isScrolled ? 'bg-black/70 shadow-md' : 'bg-transparent',
-      menuOpen ? 'bg-black/70':'bg-transparent',
+      isScrolled || menuOpen ? 'bg-black/70 shadow-md' : 'bg-transparent',
+      
     ]"
     ref="navRef"
   >
@@ -138,9 +138,6 @@ onUnmounted(() => {
 </script>
 
 <style>
-/* Additional styles */
-.text-gold {
-  color: #ffcb6c;
-}
+
 </style>
 

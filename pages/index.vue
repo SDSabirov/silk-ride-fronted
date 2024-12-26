@@ -2,9 +2,11 @@
     <div>
         <Navbar/>
         <LandingMainHero/>
-        <LandingKeyFeatures/>
-        <LandingAbout/>
         <LandingFleet/>
+        <LandingKeyFeatures/>
+        <LandingTestimonials />
+        <LandingAbout/>
+        
         <Footer />
     </div>
 </template>
