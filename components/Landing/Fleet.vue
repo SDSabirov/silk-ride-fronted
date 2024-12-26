@@ -43,7 +43,7 @@
             class="overflow-hidden rounded-lg shadow-lg bg-gradient-to-b from-gold/90"
           >
             <img
-              src="/assets/images/vclasstransparent.jpg"
+              src="/assets/images/transparentcars/vclass.jpg"
               alt="Premium SUV"
               class="w-full h-64 object-cover"
             />
