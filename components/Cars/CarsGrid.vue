@@ -8,9 +8,9 @@
       <div class="container mx-auto max-w-screen-xl px-4 text-center z-20 w-full">
         <div class="flex flex-col w-full items-center justify-center">
           <h2
-            class="text-2xl md:text-5xl font-semibold text-gray-900 mb-10 text-center w-full"
+            class="text-2xl md:text-4xl font-semibold text-gray-900 mb-10 text-center w-full"
           >
-            Popular Choices for Every Journey
+            Our Fleet
           </h2>
           <div class="flex items-center w-full mb-2 justify-center mb-6">
             <div class="h-3 w-3 bg-gold rotate-45"></div>

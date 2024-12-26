@@ -23,7 +23,7 @@
         every journey.
       </p>
         <!-- Call-to-Action Buttons -->
-        <div class="space-x-4 mt-4">
+        <div class="flex flex-col space-y-8 md:flex-row md:space-y-0 md:space-x-4 mt-4 justify-center items-center">
           <a
             href="/booking"
             class="px-8 py-3 text-xl shadow-lg text-black font-semibold"
