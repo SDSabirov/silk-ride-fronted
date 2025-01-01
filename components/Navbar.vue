@@ -1,8 +1,8 @@
 <template>
   <nav
     :class="[ 
-      'fixed top-0 left-0 w-full text-white z-50 transition-colors duration-300',
-      isScrolled || menuOpen ? 'bg-black/70 shadow-md' : 'bg-transparent',
+      'fixed top-0 left-0 w-full text-white z-50 transition-colors duration-200 ease-in-out',
+      isScrolled || menuOpen ? 'bg-black/70 shadow-md backdrop-blur border-white/30' : 'bg-transparent',
       
     ]"
     ref="navRef"
@@ -57,7 +57,7 @@
           :class="navLinkClass($route.path === '/cars')"
           @click="closeMenu"
         >
-          Cars
+          Our Fleet
         </NuxtLink>
         <NuxtLink
           to="/services"
@@ -108,25 +108,17 @@ const navLinkClass = (isActive) =>
     ? "text-gold border-b-2 border-[#FFCB6C]"
     : "hover:text-gold hover:border-[#FFCB6C] border-transparent";
 
-const switchLanguage = (event) => {
-  console.log("Language switched to:", event.target.value);
-};
 
-const toggleDarkMode = () => {
-  isDarkMode.value = !isDarkMode.value;
-  document.documentElement.classList.toggle("dark", isDarkMode.value);
-};
 
-// Scroll handling
 let timeout = null;
 const debounceScroll = () => {
   if (timeout) clearTimeout(timeout);
   timeout = setTimeout(() => {
-    isScrolled.value = window.scrollY > 10;
+    isScrolled.value = window.scrollY > 5;
   }, 100);
 };
 
-// Lifecycle hooks
+
 onMounted(() => {
   window.addEventListener("scroll", debounceScroll);
   router.afterEach(() => closeMenu());

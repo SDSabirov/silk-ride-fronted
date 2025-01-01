@@ -47,7 +47,7 @@
                   sedans, designed to redefine your travel experience.
                 </p>
                 <div class="w-full flex items-center  justify-center absolute bottom-4">
-                  <NuxtLink to="/booking" class="flex w-1/3 items-center justify-center border border-gold text-gold text-lg hover:bg-gold hover:text-black p-2">
+                  <NuxtLink to="/cars/mercedes-e-class" class="flex w-1/3 items-center justify-center border border-gold text-gold text-lg hover:bg-gold hover:text-black p-2">
                     Learn more
                   </NuxtLink>
                 </div>
@@ -60,7 +60,7 @@
               <!-- Image -->
               <img
                 src="/assets/images/vclassSide.webp"
-                alt="Luxury Sedan"
+                alt="Luxury Van"
                 class="w-full h-full object-cover"
               />
   
@@ -80,7 +80,7 @@
                   sedans, designed to redefine your travel experience.
                 </p>
                 <div class="w-full flex items-center  justify-center absolute bottom-4">
-                  <NuxtLink to="/booking" class="flex w-1/3 items-center justify-center border border-gold text-gold text-lg hover:bg-gold hover:text-black p-2">
+                  <NuxtLink to="/cars/mercedes-v-class" class="flex w-1/3 items-center justify-center border border-gold text-gold text-lg hover:bg-gold hover:text-black p-2">
                     Learn more
                   </NuxtLink>
                 </div>

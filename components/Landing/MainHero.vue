@@ -7,7 +7,7 @@
         alt="Luxury Chauffeur"
         class="w-full h-full object-cover"
       />
-      <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent via-30% to-90% to-black/80"></div>
       <!-- Dark Overlay -->
     </div>
 

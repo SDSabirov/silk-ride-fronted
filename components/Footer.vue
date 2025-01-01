@@ -12,7 +12,6 @@
           <p class="text-gray-300">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam
             accusamus ex molestiae cupiditate est velit aspernatur voluptatem!
-            
           </p>
         </div>
 
