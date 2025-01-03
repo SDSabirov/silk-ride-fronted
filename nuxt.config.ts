@@ -18,6 +18,14 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
+  site: {
+    url: "https://silkride.co.uk",
+    name: "Silk Ride",
+    
+    description:
+      "Silk Ride Chauffeur Services in London offers luxury airport transfers to Heathrow, Stansted, Gatwick, and Luton, business trips in Central London, elegant wedding transportation, and more. Experience comfort, style, and reliability with our premium V-Class, E-Class, and S-Class vehicles. Book now!",
+    defaultLocale: "en", // not needed if you have @nuxtjs/i18n installed
+  },
   googleFonts: {
     families: {
       "Playfair+Display": [400, 500, 700],

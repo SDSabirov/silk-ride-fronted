@@ -12,7 +12,7 @@
       paragraph="Experience unparalleled comfort and sophistication with the Mercedes-Benz V-Class. Designed for those who seek elegance and practicality in every journey, the V-Class offers a spacious interior, advanced technology, and a smooth driving experience. Whether it's a business trip, a family outing, or a VIP transfer, this versatile vehicle ensures you arrive in style and comfort. Discover the perfect blend of functionality and luxury with every ride."
     />
     <div class="flex flex-col w-full items-center justify-center py-22">
-      <h2 class="text-black text-4xl font-semibold leading-loose">
+      <h2 class="text-black text-4xl font-semibold leading-loose text-center">
         Unmatched Comfort, No Matter the Occasion
       </h2>
       <div class="w-full flex items-center justify-center mb-6">
@@ -33,9 +33,10 @@
               Mercedes-Benz V-Class. Designed for comfort and sophistication,
               it’s the ideal choice for transporting the bridal party or family.
             </p>
-          </div>
-          <div>
-            <ul class="text-xl list-disc inside">
+            <h4 class="text-gray-800 text-xl font-normal leading-loose mt-4">
+              Key Features
+            </h4>
+            <ul class="text-lg list-disc pl-6">
               <li>
                 Seats up to 7 passengers comfortably, perfect for bridal parties
                 or close family.
@@ -50,10 +51,26 @@
               </li>
             </ul>
           </div>
+          <div class="overflow-hidden">
+            <img
+              src="/assets/images/vclass2.webp"
+              alt="v-class at wedding"
+              loading="lazy"
+              class="object-cover"
+            />
+          </div>
+          <div class="md:col-span-2 flex items-center justify-center mt-4">
+            <NuxtLink
+              to="/booking"
+              class="flex px-6 py-3 items-center justify-center border border-black text-black text-xl  hover:bg-gold hover:text-black p-2"
+            >
+              Book Now
+            </NuxtLink>
+          </div>
         </div>
 
         <div
-          class="grid grid-cols-1 md:grid-cols-2 gap-6 border-b-2 border-b-gold px-4 mb-6 py-8"
+          class="grid grid-cols-1 md:grid-cols-2 gap-6 border-b-2 border-b-gold px-4 mb-6 py-8 items-center"
         >
           <div>
             <h3 class="text-black text-2xl font-normal leading-loose">
@@ -64,9 +81,10 @@
               for business meetings on the go. Stay productive and arrive in
               style.
             </p>
-          </div>
-          <div>
-            <ul class="text-xl list-disc inside">
+            <h4 class="text-gray-800 text-xl font-normal leading-loose mt-4">
+              Key Features
+            </h4>
+            <ul class="text-lg list-disc pl-6">
               <li>High-speed Wi-Fi for work during transit.</li>
               <li>
                 Spacious seating for team discussions or individual relaxation.
@@ -76,6 +94,22 @@
                 Punctual, professional chauffeurs ensure you’re always on time.
               </li>
             </ul>
+          </div>
+          <div class="md:order-first">
+            <img
+              src="/assets/images/vclass2.webp"
+              alt="v-class at wedding"
+              loading="lazy"
+              class="object-cover"
+            />
+          </div>
+          <div class="md:col-span-2 flex items-center justify-center mt-4">
+            <NuxtLink
+              to="/booking"
+              class="flex px-6 py-3 items-center justify-center border border-black text-black text-xl  hover:bg-gold hover:text-black p-2"
+            >
+              Book Now
+            </NuxtLink>
           </div>
         </div>
 
@@ -91,9 +125,10 @@
               V-Class. From meet-and-greet service to spacious luggage capacity,
               we take care of every detail.
             </p>
-          </div>
-          <div>
-            <ul class="text-xl list-disc inside">
+            <h4 class="text-gray-800 text-xl font-normal leading-loose mt-4">
+              Key Features
+            </h4>
+            <ul class="text-lg list-disc pl-6">
               <li>
                 Meet-and-Greet Service: Chauffeurs assist with luggage and
                 ensure a smooth arrival or departure.
@@ -109,6 +144,22 @@
               <li>Wi-Fi Onboard: Stay connected, even on the move.</li>
             </ul>
           </div>
+          <div>
+            <img
+              src="/assets/images/vclass2.webp"
+              alt="v-class at wedding"
+              loading="lazy"
+              class="object-cover"
+            />
+          </div>
+          <div class="md:col-span-2 flex items-center justify-center mt-4">
+            <NuxtLink
+              to="/booking"
+              class="flex px-6 py-3 items-center justify-center border border-black text-black text-xl  hover:bg-gold hover:text-black p-2"
+            >
+              Book Now
+            </NuxtLink>
+          </div>
         </div>
 
         <div
@@ -123,9 +174,10 @@
               V-Class. From galas to premieres, it ensures luxury and comfort
               for all attendees.
             </p>
-          </div>
-          <div>
-            <ul class="text-xl list-disc inside">
+            <h4 class="text-gray-800 text-xl font-normal leading-loose mt-4">
+              Key Features
+            </h4>
+            <ul class="text-lg list-disc pl-6">
               <li>
                 Discreet design with privacy glass for exclusive arrivals.
               </li>
@@ -134,6 +186,22 @@
                 Perfect for group arrivals, combining style and practicality.
               </li>
             </ul>
+          </div>
+          <div class="md:order-first">
+            <img
+              src="/assets/images/vclass2.webp"
+              alt="v-class at wedding"
+              loading="lazy"
+              class="object-cover"
+            />
+          </div>
+          <div class="md:col-span-2 flex items-center justify-center mt-4">
+            <NuxtLink
+              to="/booking"
+              class="flex px-6 py-3 items-center justify-center border border-black text-black text-xl  hover:bg-gold hover:text-black p-2"
+            >
+              Book Now
+            </NuxtLink>
           </div>
         </div>
 
@@ -149,9 +217,10 @@
               premium features, and a stress-free journey, whether it’s a road
               trip or an airport transfer.
             </p>
-          </div>
-          <div>
-            <ul class="text-xl list-disc inside">
+            <h4 class="text-gray-800 text-xl font-normal leading-loose mt-4">
+              Key Features
+            </h4>
+            <ul class="text-lg list-disc pl-6">
               <li>Room for 5 large suitcases and personal items.</li>
               <li>Rear entertainment systems for kids to enjoy.</li>
               <li>
@@ -159,23 +228,42 @@
               </li>
             </ul>
           </div>
+          <div>
+            <img
+              src="/assets/images/vclass2.webp"
+              alt="v-class at wedding"
+              loading="lazy"
+              class="object-cover"
+            />
+          </div>
+          <div class="md:col-span-2 flex items-center justify-center mt-4">
+            <NuxtLink
+              to="/booking"
+              class="flex px-6 py-3 items-center justify-center border border-black text-black text-xl  hover:bg-gold hover:text-black p-2"
+            >
+              Book Now
+            </NuxtLink>
+          </div>
+
         </div>
       </div>
     </div>
-    <div class=" flex flex-col w-full items-center justify-center py-22">
-        <CarsGallerySlider />
+    <div class="flex flex-col w-full max-w-screen items-center justify-center py-22">
+      <h3 class="w-full text-black text-4xl font-semibold leading-loose text-center mb-10">
+        Our Gallery
+      </h3>
+      <CarsGallerySlider />
     </div>
-    
+
     <Footer />
   </div>
 </template>
 
 <script setup>
-
 import hero from "~/assets/images/v-classshero.webp";
 const galleryImages = [
-        { src: hero, alt: "Mercedes-Benz V-Class Front View" },
-        { src: hero, alt: "Mercedes-Benz V-Class Interior" },
-        { src: hero, alt: "Mercedes-Benz V-Class Rear View" },
-      ];
+  { src: hero, alt: "Mercedes-Benz V-Class Front View" },
+  { src: hero, alt: "Mercedes-Benz V-Class Interior" },
+  { src: hero, alt: "Mercedes-Benz V-Class Rear View" },
+];
 </script>
