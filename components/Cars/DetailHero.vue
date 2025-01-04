@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="h-screen w-screen bg-gold relative">
+    <section class="h-screen w-screen bg-black/95 relative">
       <div class="h-full w-full">
         <img :src="img" :alt="altText" class="w-full h-full object-cover" />
       </div>
