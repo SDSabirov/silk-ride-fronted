@@ -4,9 +4,9 @@
         <LandingMainHero/>
         <LandingFleet/>
         <LandingKeyFeatures/>
-        <LandingTestimonials />
-        <LandingAbout/>
         
+        <LandingAbout/>
+        <LandingTestimonials />
         <Footer />
     </div>
 </template>

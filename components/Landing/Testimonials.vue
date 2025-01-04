@@ -1,9 +1,9 @@
 <template>
-  <div class="w-full max-w-xl mx-auto p-6 text-center mb-6">
+  <div class="w-full max-w-screen-lg mx-auto p-6 text-center mb-6">
     <!-- Testimonial Text -->
     <div class="relative">
-        <h4 class="text-2xl text-black mb-6"> What Our Clients Say</h4>
-      <p class="text-lg italic text-gray-700 transition-opacity duration-300">
+        <h4 class="text-4xl text-black mb-10"> What Our Clients Say</h4>
+      <p class="text-xl italic text-gray-700 transition-opacity duration-300">
         "{{ testimonials[currentIndex].text }}"
       </p>
       <h3 class="mt-4 text-md font-semibold text-black">

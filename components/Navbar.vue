@@ -67,8 +67,8 @@
           Services
         </NuxtLink>
         <NuxtLink
-          to="/contact"
-          :class="navLinkClass($route.path === '/contact')"
+          to="/contact-us"
+          :class="navLinkClass($route.path === '/contact-us')"
           @click="closeMenu"
         >
           Contact Us
