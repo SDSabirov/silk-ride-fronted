@@ -1,7 +1,7 @@
 <template>
   <section class="relative h-[70vh]">
     <img
-      src="/assets/images/4vclass.webp"
+      :src="image"
       alt="fleet"
       class="w-full h-full object-cover"
     />
@@ -22,3 +22,13 @@
     </div>
   </section>
 </template>
+<script>
+export default {
+  props: {
+    image: {
+      type: String,
+      required: true,
+    },
+  },
+};
+</script>

@@ -33,7 +33,7 @@
           </a>
           <a
             href="#services"
-            class="px-8 py-3 shadow-lg border text-[#FFCB6C] text-xl font-semibold hover:bg-[#FFCB6C] hover:text-black transition"
+            class="px-3 md:px-8 py-3 shadow-lg border text-[#FFCB6C] text-lg md:text-xl font-semibold hover:bg-[#FFCB6C] hover:text-black transition bg-black/70 shadow-md backdrop-blur"
             style="border-color: #ffcb6c"
           >
             Explore Services

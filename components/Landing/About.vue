@@ -33,22 +33,22 @@
         <div class="grid grid-cols-2 grid-rows-2 gap-4">
           <div class="row-span-2 rounded-lg overflow-hidden">
             <img
-              src="/assets/images/4vclass.webp"
-              alt="v-class fleet"
+              src="/assets/images/covers/business-trip.webp"
+              alt="business trip"
               class="object-cover w-full h-full"
             />
           </div>
           <div class="rounded-lg overflow-hidden">
             <img
-              src="/assets/images/4vclass.webp"
-              alt="v-class fleet"
+              src="/assets/images/covers/assist.webp"
+              alt="luggage assist"
               class="object-cover w-full h-full"
             />
           </div>
           <div class="rounded-lg overflow-hidden">
             <img
-              src="/assets/images/4vclass.webp"
-              alt="v-class fleet"
+              src="/assets/images/covers/fleet.webp"
+              alt="fleet v-class"
               class="object-cover w-full h-full"
             />
           </div>
