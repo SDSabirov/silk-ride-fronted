@@ -62,16 +62,16 @@
         </div>
         <div class="h-18 flex flex-col space-y-2 md:col-span-2">
           <label for="phone" class=" text-lg font-medium text-gray-700"
-            >Phone Number</label
+            >Message</label
           >
           <textarea
             rows="10"
-            type="phone"
-            id="phone"
-            v-model="form.email"
+            type="text"
+            id="message"
+            v-model="form.message"
             required
             class="  w-full p-2 border border-gray-300 rounded-sm h-full"
-            placeholder="+44 123456 78910" />
+            placeholder="Your Message . . ." />
         </div>
         <div class="h-18 flex flex-col space-y-2 md:col-span-2 items-center justify-center">
             <button
@@ -85,13 +85,12 @@
       <div class="grid grid-cols-1 md:grid-cols-3  max-w-screen-lg w-full">
         
     
-        <div class="flex flex-col items-center  justify-start spacey-2 text-center p-4">
+        <div class="flex flex-col items-center  justify-start spacey-3 text-center p-4">
             <i class='bx bxs-phone bx-lg'></i>
             <h3 class="text-xl text-gray-800">Call Us</h3>
-            <a href="tel:44(123) 456-7890">44(123) 456-7891</a>
-            <a href="tel:44(123) 456-7890">44(123) 456-7890</a>
+            <a href="tel:+447512905514">+44 7512 905514</a>
         </div>
-        <div class="flex flex-col items-center justify-center spacey-2 text-center p-4">
+        <div class="flex flex-col items-center justify-center spacey-3 text-center p-4">
             <i class='bx bxs-map-pin bx-lg'></i>
             <h3 class="text-xl text-gray-800">Our Office</h3>
             <address class="text-lg">123 Camberwell Rd <br>
@@ -99,11 +98,10 @@
                 United Kingdom
             </address>
         </div>
-        <div class="flex flex-col items-center justify-start spacey-2 text-center p-4">
+        <div class="flex flex-col items-center justify-start spacey-3 text-center p-4">
             <i class='bx bxs-envelope bx-lg'></i>
-            <h3 class="text-xl text-gray-800">Email or Call Us</h3>
+            <h3 class="text-xl text-gray-800">Email</h3>
             <a href="mailto:info@silkride.co.uk">info@silkride.co.uk</a>
-            <a href="mailto:info@silkride.co.uk">support@silkride.co.uk</a>
         </div>
       </div>
     </div>
