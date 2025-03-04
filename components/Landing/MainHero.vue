@@ -19,8 +19,7 @@
         Experience <span class="text-gold">Luxury Travel</span>
       </h1>
       <p class="text-xl md:text-3xl font-light px-2 md:px-0">
-        Chauffeur services designed to redefine comfort and sophistication for
-        every journey.
+        Premium chauffeur service designed for comfort, elegance, and seamless travel.
       </p>
         <!-- Call-to-Action Buttons -->
         <div class="flex flex-col space-y-8 md:flex-row md:space-y-0 md:space-x-4 mt-4 justify-center items-center">
@@ -32,7 +31,7 @@
             Book Now
           </a>
           <a
-            href="#services"
+            href="/services"
             class="px-3 md:px-8 py-3 shadow-lg border text-[#FFCB6C] text-lg md:text-xl font-semibold hover:bg-[#FFCB6C] hover:text-black transition bg-black/70 shadow-md backdrop-blur"
             style="border-color: #ffcb6c"
           >

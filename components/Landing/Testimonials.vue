@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full max-w-screen-lg mx-auto p-6 text-center mb-6">
+  <div class="w-full max-w-screen-lg mx-auto p-6 text-center mb-6 py-12">
     <!-- Testimonial Text -->
     <div class="relative">
         <h4 class="text-4xl text-black mb-10"> What Our Clients Say</h4>
@@ -7,8 +7,11 @@
         "{{ testimonials[currentIndex].text }}"
       </p>
       <h3 class="mt-4 text-md font-semibold text-black">
-        - {{ testimonials[currentIndex].author }}
+        - {{ testimonials[currentIndex].author }}, {{ testimonials[currentIndex].location }}
       </h3>
+       <div class="mt-4 text-md font-semibold text-black">
+        <i class='bx bxs-star' v-for="star in testimonials[currentIndex].rating"></i>
+      </div>
     </div>
 
     <!-- Navigation Lines -->
@@ -34,14 +37,20 @@ const testimonials = ref([
   {
     text: "This service was absolutely amazing! Highly recommended.",
     author: "John Doe",
+    location:"New York",
+    rating: 5,
   },
   {
     text: "I had an excellent experience. The staff were professional and courteous.",
     author: "Jane Smith",
+    location:"London",
+    rating: 4,
   },
   {
     text: "Top-notch service and a great attention to detail. Will use again.",
     author: "Michael Brown",
+    location:"Dubai",
+    rating: 5,
   },
 ]);
 
