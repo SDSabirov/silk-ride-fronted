@@ -30,39 +30,47 @@
           <img src="/assets/images/covers/fleet.webp" alt="V-Class fleet" />
         </div>
       </div>
-      <p class="text-xl text-gray-600 italic mt-6">Recognized for our dedication to safety, professionalism, and luxury service, we take pride in maintaining the highest industry standards.</p>
-      <!--Badges-->
-      <div class="grid grid-cols-3 w-full mt-10 mb-10 gap-8">
-        <div class="flex flex-col items-center max-w-[420px] space-y-4">
+      <p class="text-xl text-gray-600 italic mt-6">
+        Recognized for our dedication to safety, professionalism, and luxury
+        service, we take pride in maintaining the highest industry standards.
+      </p>
+      <!-- Badges -->
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full mt-10 mb-10 gap-8 text-center"
+      >
+        <!-- Badge 1 -->
+        <div class="flex flex-col items-center max-w-[420px] mx-auto space-y-4">
           <img
             src="/assets/icons/private-hire.png"
             class="w-[58px]"
-            alt="10  year of experience"
+            alt="Private Hire License"
           />
-          <p class="text-sm text-gray-600 italic capitalize">
+          <p class="text-sm text-gray-700 italic capitalize">
             We are a licensed Hertsmere Borough Council Private Hire License
             operator
           </p>
         </div>
-        <div class="flex flex-col items-center max-w-[420px] space-y-4">
-          <div class="flex space-x-2 items-start text-gray-900">
+
+        <!-- Badge 2 -->
+        <div class="flex flex-col items-center max-w-[420px] mx-auto space-y-4">
+          <div class="flex space-x-2 items-center text-gray-900">
             <i class="bx bxs-like bx-lg"></i>
             <p class="text-[22px] font-bold text-gray-900">50K+</p>
           </div>
-
-          <p class="text-sm text-gray-600 italic capitalize">
-            satisfied clients worldwide
+          <p class="text-sm text-gray-700 italic capitalize">
+            Satisfied clients worldwide
           </p>
         </div>
 
-        <div class="flex flex-col items-center max-w-[420px] space-y-4">
+        <!-- Badge 3 -->
+        <div class="flex flex-col items-center max-w-[420px] mx-auto space-y-4">
           <img
             src="/assets/icons/10yearsbadge.webp"
             class="w-[58px]"
-            alt="10  year of experience"
+            alt="10 years of experience"
           />
-          <p class="text-sm text-gray-600 italic capitalize">
-            10 years of Experince
+          <p class="text-sm text-gray-700 italic capitalize">
+            10 years of experience
           </p>
         </div>
       </div>

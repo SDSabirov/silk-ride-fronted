@@ -16,5 +16,5 @@
 </template>
 
 <script setup>
-import cover from "@/assets/images/covers/services-cover.webp";
+import cover from "@/assets/images/covers/about-us.webp";
 </script>
