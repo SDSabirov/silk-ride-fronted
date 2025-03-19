@@ -53,6 +53,13 @@
           Home
         </NuxtLink>
         <NuxtLink
+          to="/about"
+          :class="navLinkClass($route.path === '/about')"
+          @click="closeMenu"
+        >
+          About
+        </NuxtLink>
+        <NuxtLink
           to="/cars"
           :class="navLinkClass($route.path === '/cars')"
           @click="closeMenu"
@@ -75,11 +82,19 @@
         </NuxtLink>
       </div>
 
-      <!-- Contact -->
-      <div class="flex space-x-4 items-center mt-4 lg:mt-0">
-        <img src="/assets/icons/flagUK.svg" alt="UK Flag" class="max-w-[22px] max-h-[22px]" loading="lazy" />
-        <a href="tel:+44(123) 456-7890" rel="noopener noreferrer" aria-label="Call us">+44(123) 456-7890</a>
+      <div class="flex space-x-4 items-center mt-4 lg:mt-0 ">
+        <NuxtLink
+          to="/booking"
+          class="flex px-4 py-1 items-center space-x-2 justify-center border border-gold text-gold text-lg hover:bg-gold hover:text-black rounded-2xl"
+          @click="closeMenu"
+        >
+          Book Now
+          <span><i class='bx bx-right-arrow-alt'></i></span>
+          
+        </NuxtLink>
       </div>
+      <!-- Contact -->
+      
     </div>
   </nav>
 </template>

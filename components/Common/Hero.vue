@@ -11,7 +11,7 @@
       <div
         class="flex flex-col text-white text-center space-y-6 items-center justify-center w-full"
       >
-      
+        <h1 class="text-4xl md:text-8xl font-semibold tracking-wide">{{page}}</h1>
         <NuxtLink
           to="/booking"
           class="flex px-6 py-3 items-center justify-center border border-gold text-gold text-xl hover:bg-gold hover:text-black p-2"
@@ -29,6 +29,10 @@ export default {
       type: String,
       required: true,
     },
+    page:{
+      type:String,
+      required:false,
+    }
   },
 };
 </script>

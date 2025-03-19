@@ -18,7 +18,7 @@
           <div class="h-3 w-3 bg-gold rotate-45"></div>
         </div>
         <!-- Cards Section -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <!-- Card 1 -->
           <div
             class="relative overflow-hidden shadow-lg bg-gradient-to-b from-green-200 group"
@@ -53,6 +53,7 @@
               </div>
             </div>
           </div>
+
           <!-- Card 2 -->
           <div
             class="relative overflow-hidden shadow-lg bg-gradient-to-b from-gold group"
@@ -86,9 +87,10 @@
               </div>
             </div>
           </div>
+
           <!-- Card 3 -->
           <div
-            class="relative overflow-hidden shadow-lg bg-gradient-to-b from-green-200 group md:col-span-2 row-span-1 h-[400px]"
+            class="relative overflow-hidden shadow-lg bg-gradient-to-b from-green-200 group row-span-1 h-[400px]"
           >
             <!-- Image -->
             <img
@@ -119,6 +121,7 @@
               </div>
             </div>
           </div>
+
         </div>
         <div class="w-full flex items-center justify-center py-6">
           <NuxtLink to="/cars"

@@ -1,5 +1,5 @@
 <template>
-  <section class="py-12 bg-white">
+  <section class="py-12 bg-white bg-[url(/assets/images/covers/bgpattern.png)] bg-contain bg-center bg-no-repeat">
     <div class="container mx-auto max-w-screen-xl px-4 text-center">
       <!-- Section Title -->
       <h2 class="text-2xl md:text-5xl font-semibold text-black mb-4">
@@ -22,7 +22,7 @@
       <!-- Features Grid -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
         <!-- Professional Chauffeurs -->
-        <div class="bg-white p-6 hover:shadow-lg transition max-w-[380px]">
+        <div class="bg-white p-6 shadow-lg transition max-w-[380px]">
           <div class="flex justify-center mb-4 text-gold">
             <i class="bx bxs-user-check bx-lg"></i>
           </div>
@@ -37,7 +37,7 @@
         </div>
 
         <!-- Luxury Fleet -->
-        <div class="bg-white p-6 hover:shadow-lg transition max-w-[380px]">
+        <div class="bg-white p-6 shadow-lg transition max-w-[380px]">
           <div class="flex justify-center mb-4 text-gold">
             <i class="bx bxs-car bx-lg"></i>
           </div>
@@ -53,7 +53,7 @@
         </div>
 
         <!-- 24/7 Availability -->
-        <div class="bg-white p-6 hover:shadow-lg transition max-w-[380px]">
+        <div class="bg-white p-6 shadow-lg transition max-w-[380px]">
           <div class="flex justify-center mb-4 text-gold">
             <i class="bx bxs-time-five bx-lg"></i>
           </div>
@@ -71,7 +71,7 @@
           class="lg:col-span-3 flex flex-col md:flex-row justify-center gap-8"
         >
           <!-- Global Airport Coverage -->
-          <div class="bg-white p-6 hover:shadow-lg transition max-w-[380px]">
+          <div class="bg-white p-6 shadow-lg transition max-w-[380px]">
             <div class="flex justify-center mb-4 text-gold">
               <i class="bx bxs-map bx-lg"></i>
             </div>
@@ -87,7 +87,7 @@
           </div>
 
           <!-- Trusted by business -->
-          <div class="bg-white p-6 hover:shadow-lg transition max-w-[380px]">
+          <div class="bg-white p-6 shadow-lg transition max-w-[380px]">
             <div class="flex justify-center mb-4 text-gold">
               <i class="bx bxs-badge-check bx-lg"></i>
             </div>

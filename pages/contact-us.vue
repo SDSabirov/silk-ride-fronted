@@ -1,7 +1,7 @@
 <template>
   <div>
     <Navbar />
-    <CommonHero />
+    <CommonHero :image="cover" page="Contact Us" />
     <CommonPageIntro
       title="Get In Touch"
       paragraph="Our friendly team is here to help"
@@ -109,5 +109,6 @@
   </div>
 </template>
 <script setup>
+import cover from "@/assets/images/covers/contactus.webp";
 const form = ref({})
 </script>

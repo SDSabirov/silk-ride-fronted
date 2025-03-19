@@ -27,13 +27,16 @@
           <div
             class="w-full flex items-center justify-end text-xl text-white self-end"
           >
-            <button class="px-8 py-3 bg-black flex items-center space-x-2">
+            <nuxt-link to="/about">
+              <button class="px-8 py-3 bg-black flex items-center space-x-2">
               <span> Read More </span>
 
               <span>
                 <i class="bx bx-chevrons-right"></i>
               </span>
             </button>
+            </nuxt-link>
+            
           </div>
         </div>
         <div class="grid grid-cols-2 grid-rows-2 gap-4">
