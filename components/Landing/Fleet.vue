@@ -124,7 +124,7 @@
 
         </div>
         <div class="w-full flex items-center justify-center py-6">
-          <NuxtLink to="/cars"
+          <NuxtLink to="/fleet"
             class="px-8 py-3 bg-black flex items-center space-x-2 text-white"
           >
             <span> Learn More </span>

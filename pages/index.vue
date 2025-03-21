@@ -1,5 +1,6 @@
 <template>
     <div>
+        
         <Navbar/>
         <LandingMainHero/>
         <LandingFleet/>
@@ -7,6 +8,7 @@
         
         <LandingAbout/>
         <LandingTestimonials />
+        <FormsContactDrawer/>
         <Footer />
     </div>
 </template>

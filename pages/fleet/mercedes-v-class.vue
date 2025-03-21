@@ -6,6 +6,7 @@
       title="Mercedes Benz"
       subtitle="V-Class"
       altText="Mercedes Benz V-Class side view"
+      :car="VClass"
     />
     <CommonPageIntro
       title="Redefine Luxury Travel with the Mercedes-Benz V-Class"
@@ -266,4 +267,12 @@ const galleryImages = [
   { src: hero, alt: "Mercedes-Benz V-Class Interior" },
   { src: hero, alt: "Mercedes-Benz V-Class Rear View" },
 ];
+
+const VClass = {
+  passengers : 7,
+  cabinLuggage: 12,
+  mediumLuggage: 7,
+  hourlyRate: 75,
+  minHours: 4 ,
+}
 </script>

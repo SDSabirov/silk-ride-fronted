@@ -17,30 +17,31 @@
         >
           {{ title }} <span class="text-gold">{{ subtitle }}</span>
         </h1>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-3 w-full whitespace-nowrap">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full whitespace-nowrap capitalize">
           <div class="flex items-center justify-start space-x-2">
-            <i class='bx bxs-backpack bx-md'></i>
-            <p>up to 5 suitcases</p>
+            <i class='bx bxs-briefcase bx-md' ></i>
+            <p>up to {{ car.cabinLuggage }} suitcases</p>
           </div>
           <div class="flex items-center justify-start space-x-2">
             <i class='bx bxs-user bx-md'></i>
-            <p>up to 6 passengers</p>
+            <p>up to {{ car.passengers }} passengers</p>
           </div>
           <div class="flex items-center justify-start space-x-2">
             <i class='bx bx-wifi bx-md' ></i>
             <p>On board Wi-Fi</p>
           </div>
           <div class="flex items-center justify-start space-x-2">
+            <i class='bx bxs-backpack bx-md'></i>
+            <p>up to {{ car.mediumLuggage }} medium size luggage</p>
+          </div>
+          <div class="flex items-center justify-start space-x-2">
             <i class='bx bxs-hide bx-md'></i>
             <p>Privacy Glasses</p>
           </div>
+          
           <div class="flex items-center justify-start space-x-2">
-            <i class='bx bx-wind bx-md' ></i>
-            <p>Climate Control</p>
-          </div>
-          <div class="flex items-center justify-start space-x-2">
-            <i class='bx bxs-movie-play bx-md'></i>
-            <p>Entertainment System</p>
+            <i class='bx bxs-stopwatch bx-md'></i>
+            <p>minimum {{ car.minHours }} hours</p>
           </div>
         </div>
         <NuxtLink
@@ -75,6 +76,10 @@ export default {
       type: String,
       default: "Car image",
     },
+    car:{
+      type:Object,
+      required:true,
+    }
   },
 };
 </script>
