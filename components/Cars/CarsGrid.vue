@@ -43,8 +43,7 @@
                 class="absolute inset-0 flex items-center justify-center bg-black/75 text-white text-center p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex flex-col"
               >
                 <p class="text-md">
-                  Experience unparalleled comfort and style with our luxury
-                  sedans, designed to redefine your travel experience.
+                  Enjoy a perfect balance of luxury and efficiency with the Mercedes-Benz E-Class, designed for business and leisure travel alike
                 </p>
                 <div class="w-full flex items-center  justify-center absolute bottom-4">
                   <NuxtLink to="/fleet/mercedes-e-class" class="flex w-[160px] items-center justify-center border border-gold text-gold text-lg hover:bg-gold hover:text-black p-2">
@@ -76,8 +75,7 @@
                 class="absolute inset-0 flex items-center justify-center bg-black/75 text-white text-center p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex flex-col"
               >
                 <p class="text-md">
-                  Experience unparalleled comfort and style with our luxury
-                  sedans, designed to redefine your travel experience.
+                  Ideal for groups and families, the Mercedes-Benz V-Class offers spacious interiors and premium comfort for every journey.
                 </p>
                 <div class="w-full flex items-center  justify-center absolute bottom-4">
                   <NuxtLink to="/fleet/mercedes-v-class" class="flex w-[160px] items-center justify-center border border-gold text-gold text-lg hover:bg-gold hover:text-black p-2">
@@ -109,8 +107,7 @@
                 class="absolute inset-0 flex items-center justify-center bg-black/75 text-white text-center p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex flex-col"
               >
                 <p class="text-md">
-                  Experience unparalleled comfort and style with our luxury
-                  sedans, designed to redefine your travel experience.
+                  The pinnacle of luxury, the Mercedes-Benz S-Class delivers unmatched elegance, cutting-edge technology, and supreme comfort.
                 </p>
                 <div class="w-full flex items-center  justify-center absolute bottom-4">
                   <NuxtLink to="/fleet/mercedes-s-class" class="flex w-[160px] items-center justify-center border border-gold text-gold text-lg hover:bg-gold hover:text-black p-2">

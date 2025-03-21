@@ -5,14 +5,18 @@
       :img="hero"
       title="Mercedes Benz"
       subtitle="V-Class"
+      slogan="Designed for Every Journey: Unmatched Versatility & Comfort"
       altText="Mercedes Benz V-Class side view"
       :car="VClass"
     />
-    <CommonPageIntro
+    <div class="bg-[url(/assets/images/covers/bgpattern.png)] bg-cover bg-center bg-no-repeat">
+      <CommonPageIntro
       title="Redefine Luxury Travel with the Mercedes-Benz V-Class"
       paragraph="Experience unparalleled comfort and sophistication with the Mercedes-Benz V-Class. Designed for those who seek elegance and practicality in every journey, the V-Class offers a spacious interior, advanced technology, and a smooth driving experience. Whether it's a business trip, a family outing, or a VIP transfer, this versatile vehicle ensures you arrive in style and comfort. Discover the perfect blend of functionality and luxury with every ride."
     />
-    <div class="flex flex-col w-full items-center justify-center py-22">
+    </div>
+    
+    <div class="flex flex-col w-full items-center justify-center py-22  bg-[url(/assets/images/covers/bgpattern2.png)] bg-contain bg-center bg-no-repeat">
       <h2 class="text-black text-4xl font-semibold leading-loose text-center">
         Unmatched Comfort, No Matter the Occasion
       </h2>
@@ -21,11 +25,11 @@
         <div class="h-1 bg-gold w-full max-w-screen-xl"></div>
         <div class="h-3 w-3 bg-gold rotate-45"></div>
       </div>
-      <div class="max-w-screen-xl w-full flex flex-col space-y-6 mb-6">
+      <div class="max-w-screen-xl w-full flex flex-col space-y-8 mb-6 px-2 md:px-0">
         <div
-          class="grid grid-cols-1 md:grid-cols-2 gap-6 border-b-2 border-b-gold px-4 mb-6 py-8"
+          class="grid grid-cols-1 md:grid-cols-2 gap-6 border-b-2 border-b-gold px-4 mb-6 py-8 bg-white p-4  "
         >
-          <div>
+          <div class="">
             <h3 class="text-black text-2xl font-normal leading-loose">
               V-Class for Weddings
             </h3>
@@ -52,7 +56,7 @@
               </li>
             </ul>
           </div>
-          <div class="overflow-hidden">
+          <div class="overflow-hidden   ">
             <img
               src="/assets/images/vclass2.webp"
               alt="v-class at wedding"
@@ -63,7 +67,7 @@
           <div class="md:col-span-2 flex items-center justify-center mt-4">
             <NuxtLink
               to="/booking"
-              class="flex px-6 py-3 items-center justify-center border border-black text-black text-xl  hover:bg-gold hover:text-black p-2"
+              class="flex px-6 py-3 items-center justify-center border border-black text-black text-xl   hover:bg-gold hover:text-black p-2"
             >
               Book Now
             </NuxtLink>
@@ -71,7 +75,7 @@
         </div>
 
         <div
-          class="grid grid-cols-1 md:grid-cols-2 gap-6 border-b-2 border-b-gold px-4 mb-6 py-8 items-center"
+          class="grid grid-cols-1 md:grid-cols-2 gap-6 border-b-2 border-b-gold px-4 mb-6 py-8 items-center bg-white p-4 rounded-sm "
         >
           <div>
             <h3 class="text-black text-2xl font-normal leading-loose">
@@ -96,7 +100,7 @@
               </li>
             </ul>
           </div>
-          <div class="md:order-first">
+          <div class="md:order-first  overflow-hidden">
             <img
               src="/assets/images/vclass2.webp"
               alt="v-class at wedding"
@@ -115,7 +119,7 @@
         </div>
 
         <div
-          class="grid grid-cols-1 md:grid-cols-2 gap-6 border-b-2 border-b-gold px-4 mb-6 py-8"
+          class="grid grid-cols-1 md:grid-cols-2 gap-6 border-b-2 border-b-gold px-4 mb-6 py-8 bg-white p-4  "
         >
           <div>
             <h3 class="text-black text-2xl font-normal leading-loose">
@@ -145,7 +149,7 @@
               <li>Wi-Fi Onboard: Stay connected, even on the move.</li>
             </ul>
           </div>
-          <div>
+          <div class=" overflow-hidden">
             <img
               src="/assets/images/vclass2.webp"
               alt="v-class at wedding"
@@ -164,7 +168,7 @@
         </div>
 
         <div
-          class="grid grid-cols-1 md:grid-cols-2 gap-6 border-b-2 border-b-gold px-4 mb-6 py-8"
+          class="grid grid-cols-1 md:grid-cols-2 gap-6 border-b-2 border-b-gold px-4 mb-6 py-8 bg-white p-4  "
         >
           <div>
             <h3 class="text-black text-2xl font-normal leading-loose">
@@ -188,7 +192,7 @@
               </li>
             </ul>
           </div>
-          <div class="md:order-first">
+          <div class="md:order-first  overflow-hidden">
             <img
               src="/assets/images/vclass2.webp"
               alt="v-class at wedding"
@@ -207,7 +211,7 @@
         </div>
 
         <div
-          class="grid grid-cols-1 md:grid-cols-2 gap-6 border-b-2 border-b-gold px-4 mb-6 py-8"
+          class="grid grid-cols-1 md:grid-cols-2 gap-6 border-b-2 border-b-gold px-4 mb-6 py-8 bg-white p-4  "
         >
           <div>
             <h3 class="text-black text-2xl font-normal leading-loose">
@@ -229,7 +233,7 @@
               </li>
             </ul>
           </div>
-          <div>
+          <div class=" overflow-hidden">
             <img
               src="/assets/images/vclass2.webp"
               alt="v-class at wedding"

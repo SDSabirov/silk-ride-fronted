@@ -11,12 +11,13 @@
       <header
         class="flex flex-col text-white text-center space-y-6 items-center justify-center w-full h-full absolute top-0"
       >
-      <div class="max-w-screen-xl flex flex-col items-center justify-center space-y-6 p-4  bg-black/20 rounded-md backdrop-blur-md">
+      <div class="max-w-screen-xl flex flex-col items-center justify-center space-y-6 p-4  bg-black/20 rounded-md backdrop-blur-md px-2 mx-2 md:mx-0 md:px-12">
         <h1
-          class="text-3xl md:text-6xl font-semibold tracking-wide text-white bottom-28 mx-auto w-full text-center"
+          class="text-3xl md:text-6xl font-semibold tracking-wide text-white bottom-28 mx-auto w-full text-center font-heading"
         >
           {{ title }} <span class="text-gold">{{ subtitle }}</span>
         </h1>
+        <p class="text-gray-300 italic text-xl font-heading leading-8">{{ slogan }}</p>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full whitespace-nowrap capitalize">
           <div class="flex items-center justify-start space-x-2">
             <i class='bx bxs-briefcase bx-md' ></i>
@@ -40,8 +41,8 @@
           </div>
           
           <div class="flex items-center justify-start space-x-2">
-            <i class='bx bxs-stopwatch bx-md'></i>
-            <p>minimum {{ car.minHours }} hours</p>
+            <i class='bx bxs-movie-play bx-md' ></i>
+            <p>Entertainment System</p>
           </div>
         </div>
         <NuxtLink
@@ -69,6 +70,10 @@ export default {
       required: true,
     },
     subtitle: {
+      type: String,
+      required: true,
+    },
+    slogan: {
       type: String,
       required: true,
     },
