@@ -117,7 +117,7 @@
         <div class="flex flex-col items-center">
           <div class="flex space-x-2 items-start text-gray-900">
             <i class="bx bxs-like bx-lg"></i>
-            <p class="text-[22px]  font-bold text-gray-900">5K+</p>
+            <p class="text-[22px]  font-bold text-gray-900">50K+</p>
           </div>
 
           <p class="text-sm text-gray-600 italic whitespace-nowrap capitalize">

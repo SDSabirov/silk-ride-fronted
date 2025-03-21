@@ -7,7 +7,7 @@
         <LandingKeyFeatures/>
         
         <LandingAbout/>
-        <LandingTestimonials />
+        
         <FormsContactDrawer/>
         <Footer />
     </div>

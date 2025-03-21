@@ -29,7 +29,7 @@
           >
             <nuxt-link to="/about">
               <button class="px-8 py-3 bg-black flex items-center space-x-2">
-              <span> Read More </span>
+              <span> Learn More </span>
 
               <span>
                 <i class="bx bx-chevrons-right"></i>
