@@ -21,7 +21,7 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <!-- Card 1 -->
           <div
-            class="relative overflow-hidden shadow-lg bg-gradient-to-b from-green-200 group"
+            class="relative overflow-hidden shadow-lg bg-gradient-to-b from-green-200 group h-[700px]"
           >
             <!-- Image -->
             <img
@@ -34,20 +34,42 @@
             <div
               class="absolute inset-0 flex items-center justify-center bg-black/50 text-white text-xl font-semibold transition-opacity duration-300 group-hover:opacity-0"
             >
-            <h3 class="text-4xl">E-Class</h3>
-              
+              <h3 class="text-4xl">E-Class</h3>
             </div>
 
             <!-- Description (Visible on hover) -->
-           <div
+            <div
               class="absolute inset-0 flex items-center justify-center bg-black/75 text-white text-center p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex flex-col"
             >
               <p class="text-md">
-                Enjoy a perfect balance of luxury and efficiency with the Mercedes-Benz E-Class, designed for business and leisure travel alike
+                Enjoy a perfect balance of luxury and efficiency with the
+                Mercedes-Benz E-Class, designed for business and leisure travel
+                alike
               </p>
-              <div class="w-full flex items-center  justify-center absolute bottom-4">
-                <NuxtLink to="/booking" class="flex w-[160px] items-center justify-center border border-gold text-gold text-lg hover:bg-gold hover:text-black p-2">
+              <CommonPriceGuide
+                hourlyRate="50"
+                dayRate="400"
+                heathrowToCenteral="160"
+              />
+              <div
+                class="w-full flex flex-col space-y-2 items-center justify-center absolute bottom-4"
+              >
+                <NuxtLink
+                  to="/booking"
+                  class="flex w-[160px] items-center justify-center border border-white text-white text-lg hover:bg-gold hover:text-black hover:border-gold p-2 transition-all duration-300 ease-in bg-delay-300"
+                >
                   Book Now
+                </NuxtLink>
+
+                <NuxtLink
+                  to="/fleet/mercedes-e-class"
+                  class="flex w-[160px] flex items-center space-x-2 justify-center  text-white text-lg hover:text-gold hover:text-black p-2"
+                >
+                  <span> Learn More </span>
+
+                  <span>
+                    <i class='bx bx-right-arrow-alt' ></i>
+                  </span>
                 </NuxtLink>
               </div>
             </div>
@@ -55,7 +77,7 @@
 
           <!-- Card 2 -->
           <div
-            class="relative overflow-hidden shadow-lg bg-gradient-to-b from-gold group"
+            class="relative overflow-hidden shadow-lg bg-gradient-to-b from-gold group h-[700px]"
           >
             <!-- Image -->
             <img
@@ -68,19 +90,41 @@
             <div
               class="absolute inset-0 flex items-center justify-center bg-black/50 text-white text-xl font-semibold transition-opacity duration-300 group-hover:opacity-0"
             >
-            <h3 class="text-4xl">V-Class</h3>
+              <h3 class="text-4xl">V-Class</h3>
             </div>
 
-           <!-- Description (Visible on hover) -->
-           <div
+            <!-- Description (Visible on hover) -->
+            <div
               class="absolute inset-0 flex items-center justify-center bg-black/75 text-white text-center p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex flex-col"
             >
               <p class="text-md">
-                Ideal for groups and families, the Mercedes-Benz V-Class offers spacious interiors and premium comfort for every journey.
+                Ideal for groups and families, the Mercedes-Benz V-Class offers
+                spacious interiors and premium comfort for every journey.
               </p>
-              <div class="w-full flex items-center  justify-center absolute bottom-4">
-                <NuxtLink to="/booking" class="flex w-[160px] items-center justify-center border border-gold text-gold text-lg hover:bg-gold hover:text-black p-2">
+              <CommonPriceGuide
+                hourlyRate="75"
+                dayRate="600"
+                heathrowToCenteral="160"
+              />
+              <div
+                class="w-full flex flex-col space-y-2 items-center justify-center absolute bottom-4"
+              >
+                <NuxtLink
+                  to="/booking"
+                  class="flex w-[160px] items-center justify-center border border-white text-white text-lg hover:bg-gold hover:text-black hover:border-gold p-2 transition-all duration-300 ease-in bg-delay-300"
+                >
                   Book Now
+                </NuxtLink>
+
+                <NuxtLink
+                  to="/fleet/mercedes-v-class"
+                  class="flex w-[160px] flex items-center space-x-2 justify-center  text-white text-lg hover:text-gold hover:text-black p-2"
+                >
+                  <span> Learn More </span>
+
+                  <span>
+                    <i class='bx bx-right-arrow-alt' ></i>
+                  </span>
                 </NuxtLink>
               </div>
             </div>
@@ -88,7 +132,7 @@
 
           <!-- Card 3 -->
           <div
-            class="relative overflow-hidden shadow-lg bg-gradient-to-b from-green-200 group row-span-1 h-[400px]"
+            class="relative overflow-hidden shadow-lg bg-gradient-to-b from-green-200 group row-span-1 h-[700px]"
           >
             <!-- Image -->
             <img
@@ -101,36 +145,48 @@
             <div
               class="absolute inset-0 flex items-center justify-center bg-black/50 text-white text-xl font-semibold transition-opacity duration-300 group-hover:opacity-0"
             >
-            <h3 class="text-4xl">S-Class</h3>
+              <h3 class="text-4xl">S-Class</h3>
             </div>
 
-           <!-- Description (Visible on hover) -->
-           <div
+            <!-- Description (Visible on hover) -->
+            <div
               class="absolute inset-0 flex items-center justify-center bg-black/75 text-white text-center p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex flex-col"
             >
               <p class="text-md">
-                The pinnacle of luxury, the Mercedes-Benz S-Class delivers unmatched elegance, cutting-edge technology, and supreme comfort.
+                The pinnacle of luxury, the Mercedes-Benz S-Class delivers
+                unmatched elegance, cutting-edge technology, and supreme
+                comfort.
               </p>
-              <div class="w-full flex items-center  justify-center absolute bottom-4">
-                <NuxtLink to="/booking" class="flex w-[160px] items-center justify-center border border-gold text-gold text-lg hover:bg-gold hover:text-black p-2">
+              <CommonPriceGuide
+                hourlyRate="75"
+                dayRate="600"
+                heathrowToCenteral="160"
+              />
+              <div
+                class="w-full flex flex-col space-y-2 items-center justify-center absolute bottom-4"
+              >
+                <NuxtLink
+                  to="/booking"
+                  class="flex w-[160px] items-center justify-center border border-white text-white text-lg hover:bg-gold hover:text-black hover:border-gold p-2 transition-all duration-300 ease-in bg-delay-300"
+                >
                   Book Now
+                </NuxtLink>
+
+                <NuxtLink
+                  to="/fleet/mercedes-s-class"
+                  class="flex w-[160px] flex items-center space-x-2 justify-center  text-white text-lg hover:text-gold hover:text-black p-2"
+                >
+                  <span> Learn More </span>
+
+                  <span>
+                    <i class='bx bx-right-arrow-alt' ></i>
+                  </span>
                 </NuxtLink>
               </div>
             </div>
           </div>
-
         </div>
-        <div class="w-full flex items-center justify-center py-6">
-          <NuxtLink to="/fleet"
-            class="px-8 py-3 bg-black flex items-center space-x-2 text-white"
-          >
-            <span> Learn More </span>
 
-            <span>
-              <i class="bx bx-chevrons-right"></i>
-            </span>
-          </NuxtLink>
-        </div>
       </div>
     </div>
   </section>
