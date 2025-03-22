@@ -17,22 +17,22 @@
       class="mySwiper"
     >
       <swiper-slide class="max-w-screen-md ">
-        <img src="/assets/images/womanpassenger.webp" class="w-screen-lg"/>
+        <img src="/assets/images/eclass1.webp" class="w-screen-lg"/>
       </swiper-slide>
       <swiper-slide class="max-w-screen-md ">
         <img src="/assets/images/vclassjett.webp" class="w-screen-lg"/>
       </swiper-slide>
       <swiper-slide class="max-w-screen-md ">
-        <img src="/assets/images/womanpassenger.webp" class="w-screen-lg"/>
+        <img src="/assets/images/sclassBackground.webp" class="w-screen-lg"/>
       </swiper-slide>
       <swiper-slide class="max-w-screen-md ">
-        <img src="/assets/images/vclassjett.webp" class="w-screen-lg"/>
+        <img src="/assets/images/covers/business-trip.webp" class="w-screen-lg"/>
       </swiper-slide>
       <swiper-slide class="max-w-screen-md ">
-        <img src="/assets/images/womanpassenger.webp" class="w-screen-lg"/>
+        <img src="/assets/images/covers/assist.webp" class="w-screen-lg"/>
       </swiper-slide>
       <swiper-slide class="max-w-screen-md ">
-        <img src="/assets/images/vclassjett.webp" class="w-screen-lg"/>
+        <img src="/assets/images/covers/about-us.webp" class="w-screen-lg"/>
       </swiper-slide>
     </swiper>
   </div>

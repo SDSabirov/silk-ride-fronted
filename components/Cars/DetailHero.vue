@@ -17,7 +17,7 @@
         >
           {{ title }} <span class="text-gold">{{ subtitle }}</span>
         </h1>
-        <p class="text-gray-300 italic text-xl font-heading leading-8">{{ slogan }}</p>
+        
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full whitespace-nowrap capitalize">
           <div class="flex items-center justify-start space-x-2">
             <i class='bx bxs-briefcase bx-md' ></i>

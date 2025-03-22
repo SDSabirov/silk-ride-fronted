@@ -49,7 +49,7 @@
               <CommonPriceGuide
                 hourlyRate="50"
                 dayRate="400"
-                heathrowToCenteral="160"
+                heathrowToCenteral="120"
               />
               <div
                 class="w-full flex flex-col space-y-2 items-center justify-center absolute bottom-4"
@@ -186,7 +186,10 @@
             </div>
           </div>
         </div>
-
+        <div class="w-full flex flex-col items-center justify-center space-y-4 mt-6 bg-gradient-to-r from-black via-gray-900 via-10% to-90% to-black p-6 rounded-xl">
+          <h3 class="text-xl md:text-3xl font-semibold text-white">Not your ordinary booking?</h3>
+          <p class="text-lg md:text-xl italic text-white">Whether you need a fleet or something extra, our team is here to help. Contact us at <a href="tel:+447512905514" class="text-gold">+44 7512 905514</a></p>
+        </div>
       </div>
     </div>
   </section>
