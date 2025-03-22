@@ -30,47 +30,66 @@
           <img src="/assets/images/covers/fleet.webp" alt="V-Class fleet" />
         </div>
       </div>
-      <p class="text-xl text-gray-600 italic mt-6">
+      <h2 class="text-black text-3xl font-semibold leading-loose mt-8">
+        Safety First
+      </h2>
+      <p class="text-xl text-gray-600 italic">
         Recognized for our dedication to safety, professionalism, and luxury
         service, we take pride in maintaining the highest industry standards.
       </p>
       <!-- Badges -->
       <div
-        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full mt-10 mb-10 gap-8 text-center"
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 w-full mt-10 mb-10 gap-8 text-center"
       >
         <!-- Badge 1 -->
-        <div class="flex flex-col items-center max-w-[420px] mx-auto space-y-4">
+        <div class="flex flex-col items-center max-w-[420px] mx-auto space-y-2">
           <img
-            src="/assets/icons/private-hire.png"
+            src="/assets/icons/certificate.svg"
             class="w-[58px]"
             alt="Private Hire License"
           />
-          <p class="text-sm text-gray-700 italic capitalize">
+          <h4 class="text-md text-gray-900 capitalize">Licenced operator</h4>
+          <p class="text-sm text-gray-700 italic">
             We are a licensed Hertsmere Borough Council Private Hire License
             operator
           </p>
         </div>
 
         <!-- Badge 2 -->
-        <div class="flex flex-col items-center max-w-[420px] mx-auto space-y-4">
-          <div class="flex space-x-2 items-center text-gray-900">
-            <i class="bx bxs-like bx-lg"></i>
-            <p class="text-[22px] font-bold text-gray-900">50K+</p>
-          </div>
-          <p class="text-sm text-gray-700 italic capitalize">
-            Satisfied clients worldwide
+        <div class="flex flex-col items-center max-w-[420px] mx-auto space-y-2">
+          <img
+            src="/assets/icons/id-card.svg"
+            class="w-[58px]"
+            alt="License Chauffer"
+          />
+          <h4 class="text-md text-gray-900 capitalize">Licenced Chauffeurs</h4>
+          <p class="text-sm text-gray-700 italic">
+            All of our chauffeurs are licensed for private hire.
           </p>
         </div>
 
         <!-- Badge 3 -->
-        <div class="flex flex-col items-center max-w-[420px] mx-auto space-y-4">
-          <img
-            src="/assets/icons/10yearsbadge.webp"
+        <div class="flex flex-col items-center max-w-[420px] mx-auto space-y-2">
+            <img
+            src="/assets/icons/profile-tick.svg"
             class="w-[58px]"
-            alt="10 years of experience"
+            alt="License Chauffer"
           />
+          <h4 class="text-md text-gray-900 capitalize">Background Check</h4>
           <p class="text-sm text-gray-700 italic capitalize">
-            10 years of experience
+            All of our chauffeurs are required to have an ‘enhanced’ criminal records check.
+          </p>
+        </div>
+        <!-- Badge 4 -->
+        <div class="flex flex-col items-center max-w-[420px] mx-auto space-y-2">
+            <img
+            src="/assets/icons/award.svg"
+            class="w-[58px]"
+            alt="License Chauffer"
+          />
+          <h4 class="text-md text-gray-900 capitalize">Years of Experience</h4>
+          <p class="text-sm text-gray-700 italic capitalize">
+            All of our chauffeurs are experienced professionals.
           </p>
         </div>
       </div>

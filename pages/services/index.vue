@@ -3,8 +3,8 @@
     <Navbar />
     <CommonHero :image="cover" page="Services" loading="lazy" />
     <CommonPageIntro
-      title="The pinnacle of luxury, the Mercedes-Benz S-Class delivers unmatched elegance, cutting-edge technology, and supreme comfort."
-      paragraph="The pinnacle of luxury, the Mercedes-Benz S-Class delivers unmatched elegance, cutting-edge technology, and supreme comfort."
+      title="Luxury Chauffeur Services Tailored to Your Needs"
+      paragraph="Experience world-class chauffeur services designed for business executives, travelers, and VIP guests. Whether you need a seamless airport transfer, a private chauffeur for the day, or elegant transportation for a special event, Silk Ride ensures a smooth, comfortable, and stress-free journey."
     />
     <ServicesMainPoints/>
     <ServicesListServices />

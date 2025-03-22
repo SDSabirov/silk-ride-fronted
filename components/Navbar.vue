@@ -156,7 +156,6 @@ const navLinks = [
   { path: "/", label: "Home" },
   { path: "/fleet", label: "Our Fleet" },
   { path: "/services", label: "Services" },
-  { path: "/blogs", label: "Blogs" },
 ];
 
 // Dropdown items for "Our Company"
