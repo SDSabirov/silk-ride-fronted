@@ -20,7 +20,7 @@ export default defineNuxtConfig({
   },
   site: {
     url: "https://silkride.co.uk",
-    name: "Silk Ride",
+    name: "Private Chauffeur UK | Hourly, Daily, Point-to-Point & Airport Transfers | Silkride",
     
     description:
       "Silk Ride Chauffeur Services in London offers luxury airport transfers to Heathrow, Stansted, Gatwick, and Luton, business trips in Central London, elegant wedding transportation, and more. Experience comfort, style, and reliability with our premium V-Class, E-Class, and S-Class vehicles. Book now!",
