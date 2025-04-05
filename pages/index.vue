@@ -8,7 +8,7 @@
         
         <LandingAbout/>
         
-        <FormsContactDrawer/>
+        
         <Footer />
     </div>
 </template>
