@@ -10,7 +10,7 @@
       <div class="flex flex-col justify-between space-y-2 items-center text-xl">
         <i class="bx bxs-trophy bx-md text-gold"></i>
         <h3 class="text-xl font-semibold">Professional Chauffeurs</h3>
-        <p class="text-center italic">Discreet, experienced, and multidivngual.</p>
+        <p class="text-center italic">Discreet, experienced, and multilingual.</p>
       </div>
 
       <div class="flex flex-col justify-between space-y-2 items-center text-xl">

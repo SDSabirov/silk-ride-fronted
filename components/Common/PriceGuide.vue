@@ -7,7 +7,7 @@
           <h3 class="text-md font-semibold">Hourly Rate</h3>
           <p class="text-sm text-gray-300">(minimum 4 hours)</p>
         </div>
-        <span class="text-md font-bold text-white">{{ hourlyRate }} £</span>
+        <span class="text-md font-bold text-white">£ {{ hourlyRate }} </span>
       </div>
   
       <!-- Day Rate -->
@@ -16,7 +16,7 @@
           <h3 class="text-md font-semibold">Day Rate</h3>
           <p class="text-sm text-gray-300">(8 hours)</p>
         </div>
-        <span class="text-md font-bold text-white">{{ dayRate }} £</span>
+        <span class="text-md font-bold text-white">£ {{ dayRate }} </span>
       </div>
   
       <!-- Heathrow to Central London -->
@@ -24,7 +24,7 @@
         <div class="text-left">
           <h3 class="text-md font-semibold">Heathrow to Central London</h3>
         </div>
-        <span class="text-md font-bold text-white">{{ heathrowToCenteral }} £</span>
+        <span class="text-md font-bold text-white">£ {{ heathrowToCenteral }} </span>
       </div>
     </div>
   </template>
