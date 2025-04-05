@@ -5,7 +5,7 @@
   >
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       <!-- Pickup Location with full address suggestions -->
-      <div class="relative mb-4">
+      <div class="relative mb-4 h-14">
         <label for="pickup" class="block text-lg font-medium text-gray-700">
           Pickup Location
         </label>
@@ -15,7 +15,7 @@
           v-model="form.pickup"
           @input="fetchSuggestions"
           required
-          class="mt-1 block w-full p-2 border border-gray-300 rounded-sm"
+          class="mt-1 block w-full p-2 border border-gray-300 rounded-sm h-14"
           placeholder="Enter pickup address"
           autocomplete="off"
         />
@@ -83,7 +83,7 @@ export default {
         pickupDateTime: "",
         hours: "",
       },
-      hoursOptions: [3, 4, 5, 6, 7, 8, 9, 10, 12],
+      hoursOptions: [4, 5, 6, 7, 8, 9, 10, 12],
       suggestions: [],
     };
   },

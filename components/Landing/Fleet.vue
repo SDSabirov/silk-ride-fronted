@@ -63,12 +63,12 @@
 
                 <NuxtLink
                   to="/fleet/mercedes-e-class"
-                  class="flex w-[160px] flex items-center space-x-2 justify-center  text-white text-lg hover:text-gold hover:text-black p-2"
+                  class="flex w-[160px] flex items-center space-x-2 justify-center text-white text-lg hover:text-gold hover:text-black p-2"
                 >
                   <span> Learn More </span>
 
                   <span>
-                    <i class='bx bx-right-arrow-alt' ></i>
+                    <i class="bx bx-right-arrow-alt"></i>
                   </span>
                 </NuxtLink>
               </div>
@@ -81,7 +81,7 @@
           >
             <!-- Image -->
             <img
-              src="/assets/images/vclassSide.webp"
+              src="/assets/images/covers/business-trip.webp"
               alt="Luxury Sedan"
               class="w-full h-full object-cover"
             />
@@ -118,12 +118,12 @@
 
                 <NuxtLink
                   to="/fleet/mercedes-v-class"
-                  class="flex w-[160px] flex items-center space-x-2 justify-center  text-white text-lg hover:text-gold hover:text-black p-2"
+                  class="flex w-[160px] flex items-center space-x-2 justify-center text-white text-lg hover:text-gold hover:text-black p-2"
                 >
                   <span> Learn More </span>
 
                   <span>
-                    <i class='bx bx-right-arrow-alt' ></i>
+                    <i class="bx bx-right-arrow-alt"></i>
                   </span>
                 </NuxtLink>
               </div>
@@ -174,21 +174,29 @@
 
                 <NuxtLink
                   to="/fleet/mercedes-s-class"
-                  class="flex w-[160px] flex items-center space-x-2 justify-center  text-white text-lg hover:text-gold hover:text-black p-2"
+                  class="flex w-[160px] flex items-center space-x-2 justify-center text-white text-lg hover:text-gold hover:text-black p-2"
                 >
                   <span> Learn More </span>
 
                   <span>
-                    <i class='bx bx-right-arrow-alt' ></i>
+                    <i class="bx bx-right-arrow-alt"></i>
                   </span>
                 </NuxtLink>
               </div>
             </div>
           </div>
         </div>
-        <div class="w-full flex flex-col items-center justify-center space-y-4 mt-6 bg-gradient-to-r from-black via-gray-900 via-10% to-90% to-black p-6 rounded-xl">
-          <h3 class="text-xl md:text-3xl font-semibold text-white">Not your ordinary booking?</h3>
-          <p class="text-lg md:text-xl italic text-white">Whether you need a fleet or something extra, our team is here to help. Contact us at <a href="tel:+447512905514" class="text-gold">+44 7512 905514</a></p>
+        <div
+          class="w-full flex flex-col items-center justify-center space-y-4 mt-6 bg-gradient-to-r from-black via-gray-900 via-10% to-90% to-black p-6 rounded-xl"
+        >
+          <h3 class="text-xl md:text-3xl font-semibold text-white">
+            Not your ordinary booking?
+          </h3>
+          <p class="text-lg md:text-xl italic text-white">
+            Whether you need a fleet or something extra, our team is here to
+            help. Contact us at
+            <a href="tel:+447512905514" class="text-gold">+44 7512 905514</a>
+          </p>
         </div>
       </div>
     </div>

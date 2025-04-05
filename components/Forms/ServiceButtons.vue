@@ -1,16 +1,17 @@
 <template>
-  <div class="flex flex-col items-center">
+  <div class="flex flex-col items-center w-full px-4">
     <label
       for="serviceType"
       class="block text-lg font-medium text-gray-700 mb-2"
     >
       Service Type
     </label>
-    <div class="flex gap-6 w-full">
+    <div class="flex flex-col md:flex-row gap-6 w-full">
       <button
         v-for="type in serviceTypes"
         :key="type.value"
         @click="bookingStore.setBookingType(type.value)"
+        class="w-full whitespace-nowrap"
         :class="[
           'px-6 py-4 rounded border text-lg font-medium hover:bg-opacity-80',
           bookingStore.bookingType === type.value
@@ -35,6 +36,7 @@ const bookingStore = useBookingStore();
 const serviceTypes = [
   { value: "pointToPoint", label: "Point-to-Point" },
   { value: "hourlyService", label: "Hourly Service" },
+ 
 ];
 </script>
 

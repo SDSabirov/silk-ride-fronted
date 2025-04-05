@@ -1,6 +1,6 @@
 <template>
     <div class="w-full  text-white mt-6">
-      
+      <h2 class="text-sm text-gray-100">Price Guide</h2>
       <!-- Hourly Rate -->
       <div class=" border-b border-t border-gray-300 p-4 rounded flex items-center justify-between">
         <div class="text-left">

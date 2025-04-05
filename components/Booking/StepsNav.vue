@@ -9,7 +9,7 @@
         ]"
         aria-label="Step 1"
       >
-        <span class="transform -rotate-45">1</span>
+        <span class="transform -rotate-45"></span>
       </div>
     </div>
     <!-- Line to Step 2 -->
@@ -28,7 +28,7 @@
         ]"
         aria-label="Step 2"
       >
-        <span class="transform -rotate-45">2</span>
+        <span class="transform -rotate-45"></span>
       </div>
     </div>
     <!-- Line to Step 3 -->
@@ -47,7 +47,7 @@
         ]"
         aria-label="Step 3"
       >
-        <span class="transform -rotate-45">3</span>
+        <span class="transform -rotate-45"></span>
       </div>
     </div>
     <!-- Line to Step 4 -->
@@ -66,7 +66,7 @@
         ]"
         aria-label="Step 4"
       >
-        <span class="transform -rotate-45">4</span>
+        <span class="transform -rotate-45"></span>
       </div>
     </div>
   </div>

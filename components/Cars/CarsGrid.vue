@@ -80,7 +80,7 @@
           >
             <!-- Image -->
             <img
-              src="/assets/images/vclassSide.webp"
+              src="/assets/images/covers/business-trip.webp"
               alt="Luxury Sedan"
               class="w-full h-full object-cover"
             />

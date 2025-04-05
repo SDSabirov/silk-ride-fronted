@@ -97,13 +97,13 @@
           </button>
           <div
             v-show="showDropdown"
-            class="lg:absolute left-0 lg:mt-2 w-full lg:w-48 bg-white text-gray-900 shadow-lg rounded-lg overflow-hidden"
+            class="lg:absolute left-0 lg:mt-2 w-full lg:w-48 md:bg-black/70  md:backdrop-blur text-white  overflow-hidden"
           >
             <NuxtLink
               v-for="item in dropdownItems"
               :key="item.path"
               :to="item.path"
-              class="block px-4 py-2 text-sm hover:bg-gray-200"
+              class="block px-4 py-2 mb-2 text-lg hover:bg-gray-200"
               @click="closeDropdown"
             >
               {{ item.label }}
