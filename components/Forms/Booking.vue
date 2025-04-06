@@ -18,13 +18,17 @@
         <FormsServiceButtons />
       </div>
       <FormsPointToPoint v-if="bookingStore.bookingType == 'pointToPoint'" />
-      <FormsHourly v-else />
+      <FormsHourly v-else-if="bookingStore.bookingType == 'hourlyService'" />
+      <FormsAirportTransfer v-else />
     </div>
     <div v-if="bookingStore.currentStep == 2">
       <FormsCarSelect />
     </div>
     <div v-if="bookingStore.currentStep == 3">
       <FormsPassengerDetails />
+    </div>
+    <div v-if="bookingStore.currentStep == 4">
+      <FormsStripe />
     </div>
     <div class="flex w-full items-center justify-center mt-4">
       <button

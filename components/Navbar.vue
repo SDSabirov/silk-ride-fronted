@@ -27,7 +27,7 @@
             Book Now
           </NuxtLink>
           <!-- Language Switch for Mobile -->
-          <div class="flex space-x-2">
+          <!-- <div class="flex space-x-2">
             <button @click="switchLanguage('en')" class="flex items-center space-x-1">
               <img src="/assets/icons/flagUK.svg" alt="English" class="w-5 h-5" />
               <span class="text-sm">EN</span>
@@ -36,7 +36,7 @@
               <img src="/assets/icons/flagRU.svg" alt="Russian" class="w-5 h-5" />
               <span class="text-sm">RU</span>
             </button>
-          </div>
+          </div> -->
           <button
             class="focus:outline-none"
             @click="toggleMenu"

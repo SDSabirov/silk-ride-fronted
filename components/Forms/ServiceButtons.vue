@@ -36,6 +36,7 @@ const bookingStore = useBookingStore();
 const serviceTypes = [
   { value: "pointToPoint", label: "Point-to-Point" },
   { value: "hourlyService", label: "Hourly Service" },
+  { value: "airportTransfer", label: "Airport Transfer" },
  
 ];
 </script>

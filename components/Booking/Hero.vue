@@ -14,7 +14,7 @@
       </div>
   
       <!-- Content -->
-      <header class="relative z-10 text-center space-y-8 text-white flex flex-col justify-center items-center h-full">
+      <header class="relative z-10 text-center space-y-8 text-white flex flex-col justify-center items-center h-full px-4 md:px-0">
         <h1 class="text-4xl md:text-8xl font-semibold tracking-wide ">
           Start Your <span class="text-gold">Luxury Travel</span>
         </h1>
