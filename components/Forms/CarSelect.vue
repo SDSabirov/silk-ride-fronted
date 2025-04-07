@@ -41,7 +41,10 @@
         </div>
       </div>
       <!-- Price -->
-      <p class="text-lg text-gray-600 mt-2">£{{ car.price }}</p>
+       <div class="flex justify-between items-center">
+        <p class="text-lg text-gray-700 mt-2">From £{{ car.transferPrice }}</p>
+       </div>
+      
       <!-- Features -->
       <ul class="list-image-[url(/assets/icons/checkmark-circle.png)] list-inside">
         <li class="flex items-center">
@@ -91,30 +94,33 @@ const carModels = [
     id: 1,
     brand: "Mercedes-Benz",
     model: "V-Class",
-    carryBags: 4,
-    numberOfPassengers: 6,
-    luggage: 2,
-    price: 560,
+    carryBags: 12,
+    numberOfPassengers: 7,
+    luggage: 7,
+    price: 75,
+    transferPrice:160,
     image: vclass,
   },
   {
     id: 2,
     brand: "Mercedes-Benz",
     model: "S-Class",
-    carryBags: 4,
-    numberOfPassengers: 4,
-    luggage: 3,
-    price: 500,
+    carryBags: 3,
+    numberOfPassengers: 3,
+    luggage: 2,
+    price: 75,
+    transferPrice:160,
     image: sclass,
   },
   {
     id: 3,
     brand: "Comfort",
     model: "E-Class /Alternative",
-    carryBags: 4,
-    numberOfPassengers: 4,
-    luggage: 4,
-    price: 700,
+    carryBags: 3,
+    numberOfPassengers: 3,
+    luggage: 2,
+    price: 50,
+    transferPrice:120,
     image: eclass,
   },
 ];
