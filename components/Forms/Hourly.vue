@@ -21,11 +21,11 @@
         />
 
         <ul
-          v-if="suggestions.length"
+          v-if="suggestionsPickup.length"
           class="absolute z-10 bg-white w-full border border-gray-300 max-h-48 overflow-auto shadow"
         >
           <li
-            v-for="(suggestion, index) in suggestions"
+            v-for="(suggestion, index) in suggestionsPickup"
             :key="index"
             @click="selectSuggestion(suggestion)"
             class="cursor-pointer p-2 hover:bg-gray-100"
@@ -47,7 +47,11 @@
           class="mt-1 block w-full p-2 border border-gray-300 rounded-sm h-full"
         >
           <option value="" disabled>Select number of hours</option>
-          <option v-for="hour in hoursOptions" :key="hour" :value="hour">
+          <option
+            v-for="hour in hoursOptions"
+            :key="hour"
+            :value="hour"
+          >
             {{ hour }} {{ hour === 1 ? "Hour" : "Hours" }}
           </option>
         </select>
@@ -58,8 +62,9 @@
         <label
           for="pickupDateTime"
           class="block text-lg font-medium text-gray-700"
-          >Pickup Date & Time</label
         >
+          Pickup Date & Time
+        </label>
         <input
           type="datetime-local"
           id="pickupDateTime"
@@ -72,64 +77,64 @@
   </form>
 </template>
 
-<script>
+<script setup>
 import debounce from "lodash.debounce";
+import { storeToRefs } from "pinia";
+import { useBookingStore } from "@/stores/booking";
 
-export default {
-  data() {
-    return {
-      form: {
-        pickup: "",
-        pickupDateTime: "",
-        hours: "",
-      },
-      hoursOptions: [4, 5, 6, 7, 8, 9, 10, 12],
-      suggestions: [],
-    };
-  },
-  methods: {
-    handleSubmit() {
-      console.log("Form Submitted:", this.form);
-      alert("Booking submitted successfully!");
-      this.resetForm();
-    },
-    resetForm() {
-      this.form = {
-        pickup: "",
-        pickupDateTime: "",
-        hours: "",
-      };
-      this.suggestions = [];
-    },
-    fetchSuggestions: debounce(async function () {
-      if (this.form.pickup.length < 3) {
-        this.suggestions = [];
-        return;
-      }
+const bookingStore = useBookingStore();
+const { form, suggestionsPickup } = storeToRefs(bookingStore);
 
-      const apiKey = 'dtoken_hEDzcyiWMr2mNISubea6iRMiOzi1fRaQY-jnAUY7gG11A0PTPJY9iY1eyhADhPZyqh-3OOe5ZYHWstYmZbDNW7_QgUIwjEitGBTfADrf7wNL7L8_MeEyCcqtn_HwAcnOqALOQhN0qer7Ao60jiU-xY4JsQNqO_4v_JI0f0DvN5r63eVCYiAwQxL7qdneoZL061F5v4qlyJ8';
-      try {
-        const res = await fetch(
-          `https://api.getAddress.io/autocomplete/${encodeURIComponent(
-            this.form.pickup
-          )}?api-key=${apiKey}`
-        );
-        const data = await res.json();
-        if (data.suggestions) {
-          this.suggestions = data.suggestions.map((item) => item.address);
-        } else {
-          this.suggestions = [];
-        }
-      } catch (err) {
-        console.error("Error fetching addresses:", err);
-        this.suggestions = [];
-      }
-    }, 300),
+// Local constant for hours options
+const hoursOptions = [4, 5, 6, 7, 8, 9, 10, 12];
 
-    selectSuggestion(suggestion) {
-      this.form.pickup = suggestion;
-      this.suggestions = [];
-    },
-  },
-};
+function handleSubmit() {
+  console.log("Form Submitted:", form.value);
+  alert("Booking submitted successfully!");
+  resetForm();
+}
+
+function resetForm() {
+  bookingStore.form = {
+    pickup: "",
+    dropoff: "",
+    pickupDateTime: "",
+    hours: "",
+  };
+  bookingStore.suggestionsPickup = [];
+  bookingStore.suggestionsDropoff = [];
+}
+
+const fetchSuggestions = debounce(async () => {
+  if (form.value.pickup.length < 3) {
+    bookingStore.suggestionsPickup = [];
+    return;
+  }
+
+  const apiKey =
+    "dtoken_hEDzcyiWMr2mNISubea6iRMiOzi1fRaQY-jnAUY7gG11A0PTPJY9iY1eyhADhPZyqh-3OOe5ZYHWstYmZbDNW7_QgUIwjEitGBTfADrf7wNL7L8_MeEyCcqtn_HwAcnOqALOQhN0qer7Ao60jiU-xY4JsQNqO_4v_JI0f0DvN5r63eVCYiAwQxL7qdneoZL061F5v4qlyJ8";
+  try {
+    const res = await fetch(
+      `https://api.getAddress.io/autocomplete/${encodeURIComponent(
+        form.value.pickup
+      )}?api-key=${apiKey}`
+    );
+    const data = await res.json();
+    if (data.suggestions) {
+      bookingStore.suggestionsPickup = data.suggestions.map(
+        (item) => item.address
+      );
+    } else {
+      bookingStore.suggestionsPickup = [];
+    }
+  } catch (err) {
+    console.error("Error fetching addresses:", err);
+    bookingStore.suggestionsPickup = [];
+  }
+}, 300);
+
+function selectSuggestion(suggestion) {
+  bookingStore.form.pickup = suggestion;
+  bookingStore.suggestionsPickup = [];
+}
 </script>

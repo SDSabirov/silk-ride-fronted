@@ -20,9 +20,7 @@
       <h3 class="text-xl font-semibold text-gray-800">
         {{ car.brand }} {{ car.model }}
       </h3>
-      <div
-        class="flex w-full space-x-3 text-lg h-12 items-center justify-center p-4"
-      >
+      <div class="flex w-full space-x-3 text-lg h-12 items-center justify-center p-4">
         <div class="grid grid-cols-2 gap-3 text-sm mt-4">
           <div>
             <i class="bx bxs-shopping-bag mr-2"></i>
@@ -42,7 +40,6 @@
           </div>
         </div>
       </div>
-
       <!-- Price -->
       <p class="text-lg text-gray-600 mt-2">£{{ car.price }}</p>
       <!-- Features -->
@@ -78,54 +75,52 @@
   </div>
 </template>
 
-<script>
+<script setup>
+import { storeToRefs } from "pinia";
+import { useBookingStore } from "@/stores/booking";
 import vclass from "~/assets/images/covers/business-trip.webp";
-import sclass from "~/assets/images/eclass.webp";
-import eclass from "~/assets/images/sclassBackground.webp";
+import sclass from "~/assets/images/sclassBackground.webp";
+import eclass from "~/assets/images/eclass.webp";
 
-export default {
-  data() {
-    return {
-      carModels: [
-        {
-          id: 1,
-          brand: "Mercedes-Benz",
-          model: "V-Class",
-          carryBags: 4,
-          numberOfPassengers: 6,
-          luggage: 2,
-          price: 560,
-          image: vclass,
-        },
-        {
-          id: 2,
-          brand: "Mercedes-Benz",
-          model: "S-Class",
-          carryBags: 4,
-          numberOfPassengers: 4,
-          luggage: 3,
-          price: 500,
-          image: sclass,
-        },
-        {
-          id: 3,
-          brand: "Comfort",
-          model: "E-Class /Alternative",
-          carryBags: 4,
-          numberOfPassengers: 4,
-          luggage: 4,
-          price: 700,
-          image: eclass,
-        },
-      ],
-      selectedCar: null,
-    };
+const bookingStore = useBookingStore();
+const { selectedCar } = storeToRefs(bookingStore);
+
+// Local car models for selection
+const carModels = [
+  {
+    id: 1,
+    brand: "Mercedes-Benz",
+    model: "V-Class",
+    carryBags: 4,
+    numberOfPassengers: 6,
+    luggage: 2,
+    price: 560,
+    image: vclass,
   },
-  methods: {
-    selectCar(car) {
-      this.selectedCar = car;
-      console.log("Selected Car:", car);
-    },
+  {
+    id: 2,
+    brand: "Mercedes-Benz",
+    model: "S-Class",
+    carryBags: 4,
+    numberOfPassengers: 4,
+    luggage: 3,
+    price: 500,
+    image: sclass,
   },
-};
+  {
+    id: 3,
+    brand: "Comfort",
+    model: "E-Class /Alternative",
+    carryBags: 4,
+    numberOfPassengers: 4,
+    luggage: 4,
+    price: 700,
+    image: eclass,
+  },
+];
+
+function selectCar(car) {
+  bookingStore.selectedCar = car;
+  console.log("Selected Car:", car);
+}
 </script>

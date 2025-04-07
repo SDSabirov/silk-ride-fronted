@@ -4,10 +4,11 @@
     class="max-w-screen-xl mx-auto p-6 bg-white w-full"
   >
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Pickup Location -->
       <div class="mb-4 relative h-14">
-        <label for="pickup" class="block text-lg font-medium text-gray-700"
-          >Pickup Location</label
-        >
+        <label for="pickup" class="block text-lg font-medium text-gray-700">
+          Pickup Location
+        </label>
         <input
           type="text"
           id="pickup"
@@ -34,9 +35,9 @@
 
       <!-- Drop-Off Location -->
       <div class="mb-4 relative h-14">
-        <label for="dropoff" class="block text-lg font-medium text-gray-700"
-          >Drop-Off Location</label
-        >
+        <label for="dropoff" class="block text-lg font-medium text-gray-700">
+          Drop-Off Location
+        </label>
         <input
           type="text"
           id="dropoff"
@@ -63,11 +64,9 @@
 
       <!-- Pickup Date and Time -->
       <div class="mb-4 h-14">
-        <label
-          for="pickupDateTime"
-          class="block text-lg font-medium text-gray-700"
-          >Pickup Date & Time</label
-        >
+        <label for="pickupDateTime" class="block text-lg font-medium text-gray-700">
+          Pickup Date & Time
+        </label>
         <input
           type="datetime-local"
           id="pickupDateTime"
@@ -76,104 +75,91 @@
           class="mt-1 block w-full p-2 border border-gray-300 rounded-sm h-full"
         />
       </div>
-
-      <!-- Special Requests
-      <div class="mb-4 h-18 md:col-span-2">
-        <label
-          for="specialRequests"
-          class="block text-lg font-medium text-gray-700"
-          >Special Requests</label
-        >
-        <textarea
-          id="specialRequests"
-          v-model="form.specialRequests"
-          class="mt-1 block w-full p-2 border border-gray-300 rounded-sm h-full"
-          placeholder="Any additional requirements or requests"
-        ></textarea>
-      </div> -->
     </div>
-
-    <!-- Submit Button -->
   </form>
 </template>
 
-<script>
+<script setup>
 import debounce from "lodash.debounce";
+import { storeToRefs } from "pinia";
+import { useBookingStore } from "@/stores/booking";
 
-export default {
-  data() {
-    return {
-      form: {
-        pickup: "",
-        dropoff: "",
-        pickupDateTime: "",
-      },
-      suggestionsPickup: [],
-      suggestionsDropoff: [],
-    };
-  },
-  methods: {
-    handleSubmit() {
-      console.log("Form Submitted:", this.form);
-      alert("Booking submitted successfully!");
-      this.resetForm();
-    },
+const bookingStore = useBookingStore();
 
-    fetchSuggestions: debounce(async function (type) {
-      const query = type === "pickup" ? this.form.pickup : this.form.dropoff;
+// Use storeToRefs to create reactive references from the booking store
+const { form, suggestionsPickup, suggestionsDropoff } = storeToRefs(bookingStore);
 
-      if (query.length < 3) {
-        type === "pickup"
-          ? (this.suggestionsPickup = [])
-          : (this.suggestionsDropoff = []);
-        return;
-      }
+// Initialize state in the booking store if it isn't already set
+if (!form.value) {
+  bookingStore.form = {
+    pickup: "",
+    dropoff: "",
+    pickupDateTime: "",
+  };
+}
+if (!suggestionsPickup.value) {
+  bookingStore.suggestionsPickup = [];
+}
+if (!suggestionsDropoff.value) {
+  bookingStore.suggestionsDropoff = [];
+}
 
-      const apiKey =
-        "dtoken_hEDzcyiWMr2mNISubea6iRMiOzi1fRaQY-jnAUY7gG11A0PTPJY9iY1eyhADhPZyqh-3OOe5ZYHWstYmZbDNW7_QgUIwjEitGBTfADrf7wNL7L8_MeEyCcqtn_HwAcnOqALOQhN0qer7Ao60jiU-xY4JsQNqO_4v_JI0f0DvN5r63eVCYiAwQxL7qdneoZL061F5v4qlyJ8";
 
-      try {
-        const res = await fetch(
-          `https://api.getAddress.io/autocomplete/${encodeURIComponent(
-            query
-          )}?api-key=${apiKey}`
-        );
-        const data = await res.json();
-        const suggestions = data.suggestions
-          ? data.suggestions.map((item) => item.address)
-          : [];
+const fetchSuggestions = debounce(async (type) => {
+  const query = type === "pickup" ? form.value.pickup : form.value.dropoff;
 
-        if (type === "pickup") {
-          this.suggestionsPickup = suggestions;
-        } else {
-          this.suggestionsDropoff = suggestions;
-        }
-      } catch (err) {
-        console.error("Error fetching addresses:", err);
-        if (type === "pickup") this.suggestionsPickup = [];
-        else this.suggestionsDropoff = [];
-      }
-    }, 300),
+  if (query.length < 3) {
+    if (type === "pickup") {
+      bookingStore.suggestionsPickup = [];
+    } else {
+      bookingStore.suggestionsDropoff = [];
+    }
+    return;
+  }
 
-    selectSuggestion(type, suggestion) {
-      if (type === "pickup") {
-        this.form.pickup = suggestion;
-        this.suggestionsPickup = [];
-      } else {
-        this.form.dropoff = suggestion;
-        this.suggestionsDropoff = [];
-      }
-    },
+  const apiKey =
+    "dtoken_hEDzcyiWMr2mNISubea6iRMiOzi1fRaQY-jnAUY7gG11A0PTPJY9iY1eyhADhPZyqh-3OOe5ZYHWstYmZbDNW7_QgUIwjEitGBTfADrf7wNL7L8_MeEyCcqtn_HwAcnOqALOQhN0qer7Ao60jiU-xY4JsQNqO_4v_JI0f0DvN5r63eVCYiAwQxL7qdneoZL061F5v4qlyJ8";
 
-    resetForm() {
-      this.form = {
-        pickup: "",
-        dropoff: "",
-        pickupDateTime: "",
-      };
-      this.suggestionsPickup = [];
-      this.suggestionsDropoff = [];
-    },
-  },
-};
+  try {
+    const res = await fetch(
+      `https://api.getAddress.io/autocomplete/${encodeURIComponent(query)}?api-key=${apiKey}`
+    );
+    const data = await res.json();
+    const suggestions = data.suggestions
+      ? data.suggestions.map(item => item.address)
+      : [];
+    if (type === "pickup") {
+      bookingStore.suggestionsPickup = suggestions;
+    } else {
+      bookingStore.suggestionsDropoff = suggestions;
+    }
+  } catch (err) {
+    console.error("Error fetching addresses:", err);
+    if (type === "pickup") {
+      bookingStore.suggestionsPickup = [];
+    } else {
+      bookingStore.suggestionsDropoff = [];
+    }
+  }
+}, 300);
+
+function selectSuggestion(type, suggestion) {
+  if (type === "pickup") {
+    bookingStore.form.pickup = suggestion;
+    bookingStore.suggestionsPickup = [];
+  } else {
+    bookingStore.form.dropoff = suggestion;
+    bookingStore.suggestionsDropoff = [];
+  }
+}
+
+function resetForm() {
+  bookingStore.form = {
+    pickup: "",
+    dropoff: "",
+    pickupDateTime: "",
+  };
+  bookingStore.suggestionsPickup = [];
+  bookingStore.suggestionsDropoff = [];
+}
 </script>
