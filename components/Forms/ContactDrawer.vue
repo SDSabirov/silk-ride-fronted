@@ -24,7 +24,7 @@
     <div
       :class="[
         'fixed top-0 w-[300px] h-full bg-white shadow-md transition-all duration-700 z-[10001] animate-fadeLeft',
-        isOpen ? 'right-0' : 'right-[-300px]',
+        isOpen ? 'right-0' : 'right-[-300px]'
       ]"
     >
       <div class="p-5 relative h-full overflow-y-auto">
@@ -37,9 +37,13 @@
           &times;
         </button>
         <h2 class="text-xl font-bold mb-4">Contact Us</h2>
+
+        <!-- Optionally show an error message -->
+        <p v-if="errorMessage" class="mb-4 text-red-500">{{ errorMessage }}</p>
+
         <form @submit.prevent="submitForm" class="space-y-4">
           <div>
-            <label for="name" class="block font-semibold mb-1">Name</label>
+            <label for="name" class="block font-semibold mb-1">First Name</label>
             <input
               type="text"
               id="name"
@@ -49,13 +53,11 @@
             />
           </div>
           <div>
-            <label for="lastName" class="block font-semibold mb-1"
-              >Last Name</label
-            >
+            <label for="lastName" class="block font-semibold mb-1">Last Name</label>
             <input
               type="text"
               id="lastName"
-              v-model="form.name"
+              v-model="form.lastName"
               required
               class="w-full p-2 border border-gray-300 rounded"
             />
@@ -63,9 +65,9 @@
           <div>
             <label for="phone" class="block font-semibold mb-1">Phone</label>
             <input
-              type="phone"
+              type="tel"
               id="phone"
-              v-model="form.name"
+              v-model="form.phone"
               required
               class="w-full p-2 border border-gray-300 rounded"
             />
@@ -81,9 +83,7 @@
             />
           </div>
           <div>
-            <label for="message" class="block font-semibold mb-1"
-              >Message</label
-            >
+            <label for="message" class="block font-semibold mb-1">Message</label>
             <textarea
               id="message"
               v-model="form.message"
@@ -93,16 +93,17 @@
           </div>
           <button
             type="submit"
-            class="bg-gold py-2 px-4 rounded-xl font-bold text-black w-full"
+            :disabled="loading"
+            class="bg-gold py-2 px-4 rounded-xl font-bold text-black w-full flex justify-center items-center"
           >
-            Send
+            <!-- Show spinner if loading, otherwise show "Send" -->
+            <span v-if="loading" class="loader"></span>
+            <span v-else>Send</span>
           </button>
         </form>
 
         <p class="mb-2 text-sm text-light dark:text-gray-400 mt-6">
-          <a href="mailto:info@silkride.co.uk" class="hover:underline"
-            >info@silkride.co.uk</a
-          >
+          <a href="mailto:info@silkride.co.uk" class="hover:underline">info@silkride.co.uk</a>
         </p>
         <p class="text-sm text-light dark:text-gray-400">
           <a href="tel:+447512905514" class="hover:underline">+44 7512 905514</a>
@@ -120,8 +121,13 @@ const showButton = ref(false);
 const showText = ref(false);
 let hideTimer = null;
 
+const loading = ref(false);
+const errorMessage = ref(null);
+
 const form = ref({
   name: "",
+  lastName: "",
+  phone: "",
   email: "",
   message: "",
 });
@@ -130,10 +136,40 @@ const toggleDrawer = () => {
   isOpen.value = !isOpen.value;
 };
 
-const submitForm = () => {
-  console.log("Form submitted:", form.value);
-  // Add your submission logic (e.g., API call) here
-  toggleDrawer();
+const submitForm = async () => {
+  // Reset any previous error
+  errorMessage.value = null;
+  loading.value = true;
+  try {
+    // API call to your Django endpoint
+    const response = await fetch("https://api.silkride.co.uk/api/contact/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(form.value),
+    });
+    const data = await response.json();
+    if (!response.ok) {
+      errorMessage.value = data.error || "An error occurred. Please try again.";
+      return;
+    }
+    console.log("Form submitted successfully:", data);
+    // Optionally clear the form after successful submission
+    form.value = {
+      name: "",
+      lastName: "",
+      phone: "",
+      email: "",
+      message: "",
+    };
+    toggleDrawer();
+  } catch (error) {
+    console.error("Error submitting form:", error);
+    errorMessage.value = error.message;
+  } finally {
+    loading.value = false;
+  }
 };
 
 const onHover = () => {
@@ -159,3 +195,25 @@ onMounted(() => {
   }, 2000);
 });
 </script>
+
+<style scoped>
+/* Simple loader spinner */
+.loader {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+  margin-right: 8px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+</style>

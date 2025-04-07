@@ -161,9 +161,9 @@ const navLinks = [
 // Dropdown items for "Our Company"
 const dropdownItems = [
   { path: "/about", label: "About Us" },
-  { path: "/why-choose-us", label: "Why Choose Us" },
-  { path: "/testimonials", label: "What Our Clients Say" },
-  { path: "/our-partners", label: "Our Partners" },
+  { path: "/#why-choose-us", label: "Why Choose Us" },
+  // { path: "/testimonials", label: "What Our Clients Say" },
+  // { path: "/our-partners", label: "Our Partners" },
   { path: "/contact-us", label: "Contact Us" },
 ];
 

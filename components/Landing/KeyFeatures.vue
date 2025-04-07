@@ -1,5 +1,5 @@
 <template>
-  <section class="py-12 bg-white bg-[url(/assets/images/covers/bgpattern.png)] bg-contain bg-center bg-no-repeat">
+  <section class="py-12 bg-white bg-[url(/assets/images/covers/bgpattern.png)] bg-contain bg-center bg-no-repeat" id="why-choose-us">
     <div class="container mx-auto max-w-screen-xl px-4 text-center">
       <!-- Section Title -->
       <h2 class="text-2xl md:text-5xl font-semibold text-black mb-4">
