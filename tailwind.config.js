@@ -33,11 +33,11 @@ export default {
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
         fadeLeft: {
-          '0%': { opacity: '0', transform: 'translateX(-20px)' },
+          '0%': { opacity: '0', transform: 'translateX(-20%)' },
           '100%': { opacity: '1', transform: 'translateX(0)' },
         },
         fadeRight: {
-          '0%': { opacity: '0', transform: 'translateX(20px)' },
+          '0%': { opacity: '0', transform: 'translateX(50%)' },
           '100%': { opacity: '1', transform: 'translateX(0)' },
         },
         slideRight: {

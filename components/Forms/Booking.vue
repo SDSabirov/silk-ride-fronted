@@ -1,7 +1,7 @@
 <template>
   <form
     @submit.prevent="handleSubmit"
-    class="max-w-screen-xl mx-auto p-6 bg-white shadow-md rounded-lg w-full"
+    class="max-w-screen-xl mx-auto p-6 bg-white shadow-md rounded-lg w-full overflow-x-hidden"
   >
     <h2 class="text-2xl md:text-6xl font-semibold text-black mb-4 text-center mb-8">
       Book Your Ride
@@ -13,7 +13,7 @@
     </div>
 
     <!-- Step 1: Booking details -->
-    <div v-if="bookingStore.currentStep == 1">
+    <div class="animate-fadeRight" v-if="bookingStore.currentStep == 1">
       <div class="flex w-full justify-center items-center">
         <FormsServiceButtons />
       </div>
@@ -23,17 +23,17 @@
     </div>
 
     <!-- Step 2: Car Selection -->
-    <div v-if="bookingStore.currentStep == 2">
+    <div class="animate-fadeRight" v-if="bookingStore.currentStep == 2">
       <FormsCarSelect />
     </div>
 
     <!-- Step 3: Passenger Details -->
-    <div v-if="bookingStore.currentStep == 3">
+    <div class="animate-fadeRight" v-if="bookingStore.currentStep == 3">
       <FormsPassengerDetails />
     </div>
 
     <!-- Step 4: Confirmation -->
-    <div v-if="bookingStore.currentStep == 4">
+    <div class="animate-fadeRight" v-if="bookingStore.currentStep == 4">
       <FormsConfirmation/>
     </div>
 
@@ -73,11 +73,14 @@
 <script setup>
 import { useBookingStore } from "@/stores/booking";
 
+
 // Access the booking state from your Pinia store (or similar state management)
 const bookingStore = useBookingStore();
 
 // This function is triggered when the user confirms and wants to pay
 const handleCheckout = async () => {
+  const data = bookingStore.form
+  console.log(data)
   try {
     // Call your Django backend endpoint to create a Stripe Checkout Session
     const response = await fetch('https://api.silkride.co.uk/api/create-checkout-session/', {

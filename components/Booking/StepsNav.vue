@@ -1,5 +1,5 @@
 <template>
-  <div class="flex items-center w-full justify-center">
+  <div class="flex items-center w-full justify-center transition-all  duration-300 ease-in">
     <!-- Step 1 -->
     <div class="flex flex-col items-center">
       <div
@@ -15,8 +15,8 @@
     <!-- Line to Step 2 -->
     <div
       :class="[
-        'h-1 flex-1 bg-gray-400',
-        currentStep >= 2 ? 'bg-gold' : 'bg-gray-400',
+        'h-1 flex-1',
+        currentStep >= 2 ? 'bg-gold animate-fadeLeft' : 'bg-gray-400',
       ]"
     ></div>
     <!-- Step 2 -->
@@ -34,8 +34,8 @@
     <!-- Line to Step 3 -->
     <div
       :class="[
-        'h-1 flex-1 bg-gray-400',
-        currentStep >= 3 ? 'bg-gold' : 'bg-gray-400',
+        'h-1 flex-1 ',
+        currentStep >= 3 ? 'bg-gold animate-fadeLeft' : 'bg-gray-400',
       ]"
     ></div>
     <!-- Step 3 -->
@@ -53,8 +53,8 @@
     <!-- Line to Step 4 -->
     <div
       :class="[
-        'h-1 flex-1 bg-gray-400',
-        currentStep >= 3 ? 'bg-gold' : 'bg-gray-400',
+        'h-1 flex-1 ',
+        currentStep > 3 ? 'bg-gold animate-fadeLeft' : 'bg-gray-400',
       ]"
     ></div>
     <!-- Step 3 -->
@@ -62,7 +62,7 @@
       <div
         :class="[
           'h-8 w-8 flex items-center justify-center rotate-45 text-white',
-          currentStep >= 3 ? 'bg-gold' : 'bg-gray-400',
+          currentStep > 3 ? 'bg-gold' : 'bg-gray-400',
         ]"
         aria-label="Step 4"
       >

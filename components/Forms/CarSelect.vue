@@ -7,7 +7,7 @@
       @click="selectCar(car)"
       :class="[
         'flex flex-col items-center border border-gray-300 rounded-lg shadow-md cursor-pointer hover:shadow-lg hover:border-gray-400 transition',
-        selectedCar && selectedCar.id === car.id ? 'bg-green-100' : 'bg-white'
+        selectedCar && selectedCar.id === car.id ? 'bg-green-100' : 'bg-white',
       ]"
     >
       <!-- Car Image -->
@@ -17,36 +17,43 @@
         class="w-full h-40 object-cover mb-4"
       />
       <!-- Brand and Model -->
-      <h3 class="text-xl font-semibold text-gray-800">
+      <h3 class="text-xl font-semibold text-gray-800 mb-4">
         {{ car.brand }} {{ car.model }}
       </h3>
-      <div class="flex w-full space-x-3 text-lg h-12 items-center justify-center p-4">
-        <div class="grid grid-cols-2 gap-3 text-sm mt-4">
+      <div
+        class="flex w-full space-x-3 text-lg h-12 items-center justify-center p-4"
+      >
+        <div class="grid grid-cols-2 gap-2 text-sm px-2">
           <div>
             <i class="bx bxs-shopping-bag mr-2"></i>
-            up to {{ car.carryBags }} carry bags
+            <span>Up to {{ car.carryBags }} carry bags</span>
           </div>
           <div>
             <i class="bx bxs-backpack mr-2"></i>
-            up to {{ car.luggage }} luggages
+            <span>Up to {{ car.luggage }} luggages </span>
           </div>
           <div>
             <i class="bx bxs-group mr-2"></i>
-            {{ car.numberOfPassengers }} passengers
+            <span>
+            Up to {{ car.numberOfPassengers }} passengers
+            </span>
+            
           </div>
           <div>
             <i class="bx bx-wifi mr-2"></i>
-            <span>Wi fi included</span>
+            <span>
+              Wi fi included
+            </span>
           </div>
         </div>
       </div>
       <!-- Price -->
-       <div class="flex justify-between items-center">
-        <p class="text-lg text-gray-700 mt-2">From £{{ car.transferPrice }}</p>
-       </div>
-      
+      <div class="flex justify-between items-center"></div>
+
       <!-- Features -->
-      <ul class="list-image-[url(/assets/icons/checkmark-circle.png)] list-inside">
+      <ul
+        class="list-image-[url(/assets/icons/checkmark-circle.png)] list-inside mt-4 space-y-2"
+      >
         <li class="flex items-center">
           <span class="bg-gold h-2 w-2 rotate-45 mr-2"></span>
           First class chauffeur
@@ -65,9 +72,15 @@
         </li>
       </ul>
       <div class="flex w-full items-center justify-center my-4">
-        <button class="px-6 py-2 w-1/2 text-xl text-black border border-black hover:bg-gold">
+        <button
+          class="px-6 py-2 w-1/2 text-xl text-black border border-black hover:bg-gold"
+          :class="[
+        ' transition',
+        selectedCar && selectedCar.id === car.id ? 'bg-black' : 'bg-transparent',
+      ]"
+        >
           <template v-if="selectedCar && selectedCar.id === car.id">
-            <i class="bx bx-check bx-md text-green-500"></i>
+            <i class="bx bx-check  text-white text-2xl"></i>
           </template>
           <template v-else>
             <p class="whitespace-nowrap">Choose</p>
@@ -98,7 +111,7 @@ const carModels = [
     numberOfPassengers: 7,
     luggage: 7,
     price: 75,
-    transferPrice:160,
+    transferPrice: 160,
     image: vclass,
   },
   {
@@ -109,7 +122,7 @@ const carModels = [
     numberOfPassengers: 3,
     luggage: 2,
     price: 75,
-    transferPrice:160,
+    transferPrice: 160,
     image: sclass,
   },
   {
@@ -120,7 +133,7 @@ const carModels = [
     numberOfPassengers: 3,
     luggage: 2,
     price: 50,
-    transferPrice:120,
+    transferPrice: 120,
     image: eclass,
   },
 ];
