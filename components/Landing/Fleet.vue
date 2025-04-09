@@ -195,7 +195,7 @@
           <p class="text-lg md:text-xl italic text-white">
             Whether you need a fleet or something extra, our team is here to
             help. Contact us at
-            <a href="tel:+447512905514" class="text-gold">+44 7512 905514</a>
+            <a href="tel:+447512905514" class="text-gold whitespace-nowrap">+44 7512 905514</a>
           </p>
         </div>
       </div>

@@ -1,6 +1,6 @@
 <template>
   <form
-    @submit.prevent="handleSubmit"
+    @submit.prevent
     class="max-w-screen-xl mx-auto p-6 bg-white w-full"
   >
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -88,12 +88,6 @@ const { form, suggestionsPickup } = storeToRefs(bookingStore);
 // Local constant for hours options
 const hoursOptions = [4, 5, 6, 7, 8, 9, 10, 12];
 
-function handleSubmit() {
-  console.log("Form Submitted:", form.value);
-  alert("Booking submitted successfully!");
-  resetForm();
-}
-
 function resetForm() {
   bookingStore.form = {
     pickup: "",
@@ -113,17 +107,21 @@ const fetchSuggestions = debounce(async () => {
 
   const apiKey =
     "dtoken_hEDzcyiWMr2mNISubea6iRMiOzi1fRaQY-jnAUY7gG11A0PTPJY9iY1eyhADhPZyqh-3OOe5ZYHWstYmZbDNW7_QgUIwjEitGBTfADrf7wNL7L8_MeEyCcqtn_HwAcnOqALOQhN0qer7Ao60jiU-xY4JsQNqO_4v_JI0f0DvN5r63eVCYiAwQxL7qdneoZL061F5v4qlyJ8";
+  
   try {
     const res = await fetch(
       `https://api.getAddress.io/autocomplete/${encodeURIComponent(
         form.value.pickup
       )}?api-key=${apiKey}`
     );
+    
     const data = await res.json();
+    
     if (data.suggestions) {
-      bookingStore.suggestionsPickup = data.suggestions.map(
-        (item) => item.address
-      );
+      bookingStore.suggestionsPickup = data.suggestions.map(item => {
+        // Combine address and postcode. Adjust property names if necessary.
+        return `${item.address} (${item.postcode})`;
+      });
     } else {
       bookingStore.suggestionsPickup = [];
     }

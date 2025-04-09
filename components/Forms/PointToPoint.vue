@@ -1,6 +1,6 @@
 <template>
   <form
-    @submit.prevent="handleSubmit"
+    @submit.prevent
     class="max-w-screen-xl mx-auto p-6 bg-white w-full"
   >
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -105,61 +105,37 @@ if (!suggestionsDropoff.value) {
 }
 
 
-const fetchSuggestions = debounce(async (type) => {
-  const query = type === "pickup" ? form.value.pickup : form.value.dropoff;
-
-  if (query.length < 3) {
-    if (type === "pickup") {
-      bookingStore.suggestionsPickup = [];
-    } else {
-      bookingStore.suggestionsDropoff = [];
-    }
+const fetchSuggestions = debounce(async () => {
+  if (form.value.pickup.length < 3) {
+    bookingStore.suggestionsPickup = [];
     return;
   }
 
   const apiKey =
     "dtoken_hEDzcyiWMr2mNISubea6iRMiOzi1fRaQY-jnAUY7gG11A0PTPJY9iY1eyhADhPZyqh-3OOe5ZYHWstYmZbDNW7_QgUIwjEitGBTfADrf7wNL7L8_MeEyCcqtn_HwAcnOqALOQhN0qer7Ao60jiU-xY4JsQNqO_4v_JI0f0DvN5r63eVCYiAwQxL7qdneoZL061F5v4qlyJ8";
-
+  
   try {
     const res = await fetch(
-      `https://api.getAddress.io/autocomplete/${encodeURIComponent(query)}?api-key=${apiKey}`
+      `https://api.getAddress.io/autocomplete/${encodeURIComponent(
+        form.value.pickup
+      )}?api-key=${apiKey}`
     );
+    
     const data = await res.json();
-    const suggestions = data.suggestions
-      ? data.suggestions.map(item => item.address)
-      : [];
-    if (type === "pickup") {
-      bookingStore.suggestionsPickup = suggestions;
+    
+    if (data.suggestions) {
+      bookingStore.suggestionsPickup = data.suggestions.map(item => {
+        // Combine address and postcode. Adjust property names if necessary.
+        return `${item.address} (${item.postcode})`;
+      });
     } else {
-      bookingStore.suggestionsDropoff = suggestions;
+      bookingStore.suggestionsPickup = [];
     }
   } catch (err) {
     console.error("Error fetching addresses:", err);
-    if (type === "pickup") {
-      bookingStore.suggestionsPickup = [];
-    } else {
-      bookingStore.suggestionsDropoff = [];
-    }
+    bookingStore.suggestionsPickup = [];
   }
 }, 300);
 
-function selectSuggestion(type, suggestion) {
-  if (type === "pickup") {
-    bookingStore.form.pickup = suggestion;
-    bookingStore.suggestionsPickup = [];
-  } else {
-    bookingStore.form.dropoff = suggestion;
-    bookingStore.suggestionsDropoff = [];
-  }
-}
 
-function resetForm() {
-  bookingStore.form = {
-    pickup: "",
-    dropoff: "",
-    pickupDateTime: "",
-  };
-  bookingStore.suggestionsPickup = [];
-  bookingStore.suggestionsDropoff = [];
-}
 </script>

@@ -167,42 +167,30 @@ const locationLabel = computed(() =>
   form.value.tripType === "arrival" ? "Drop off Location" : "Pick up Location"
 );
 
-function handleSubmit() {
-  console.log("Form Submitted:", form.value);
-  alert("Booking submitted successfully!");
-  resetForm();
-}
-
-function resetForm() {
-  bookingStore.form = {
-    pickup: "",
-    dropoff: "",
-    pickupDateTime: "",
-    flightNumber: "",
-    airport: "",
-    tripType: "arrival",
-  };
-  bookingStore.suggestionsPickup = [];
-}
 
 const fetchSuggestions = debounce(async () => {
-  if (locationModel.value.length < 3) {
+  if (form.value.pickup.length < 3) {
     bookingStore.suggestionsPickup = [];
     return;
   }
+
   const apiKey =
     "dtoken_hEDzcyiWMr2mNISubea6iRMiOzi1fRaQY-jnAUY7gG11A0PTPJY9iY1eyhADhPZyqh-3OOe5ZYHWstYmZbDNW7_QgUIwjEitGBTfADrf7wNL7L8_MeEyCcqtn_HwAcnOqALOQhN0qer7Ao60jiU-xY4JsQNqO_4v_JI0f0DvN5r63eVCYiAwQxL7qdneoZL061F5v4qlyJ8";
+  
   try {
     const res = await fetch(
       `https://api.getAddress.io/autocomplete/${encodeURIComponent(
-        locationModel.value
+        form.value.pickup
       )}?api-key=${apiKey}`
     );
+    
     const data = await res.json();
+    
     if (data.suggestions) {
-      bookingStore.suggestionsPickup = data.suggestions.map(
-        (item) => item.address
-      );
+      bookingStore.suggestionsPickup = data.suggestions.map(item => {
+        // Combine address and postcode. Adjust property names if necessary.
+        return `${item.address} (${item.postcode})`;
+      });
     } else {
       bookingStore.suggestionsPickup = [];
     }
@@ -211,11 +199,6 @@ const fetchSuggestions = debounce(async () => {
     bookingStore.suggestionsPickup = [];
   }
 }, 300);
-
-function selectSuggestion(suggestion) {
-  locationModel.value = suggestion;
-  bookingStore.suggestionsPickup = [];
-}
 
 // When tripType changes, update the corresponding field with the airport value.
 // For arrival: set form.pickup = airport (selected airport)

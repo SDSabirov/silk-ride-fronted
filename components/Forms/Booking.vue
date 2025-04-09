@@ -1,7 +1,7 @@
 <template>
   <form
-    @submit.prevent="handleSubmit"
-    class="max-w-screen-xl mx-auto p-6 bg-white shadow-md rounded-lg w-full overflow-x-hidden"
+    @submit.prevent
+    class="max-w-screen-xl mx-auto p-6 bg-white shadow-md rounded-lg w-full overflow-x-hidden relative"
   >
     <h2 class="text-2xl md:text-6xl font-semibold text-black mb-4 text-center mb-8">
       Book Your Ride
@@ -34,7 +34,7 @@
 
     <!-- Step 4: Confirmation -->
     <div class="animate-fadeRight" v-if="bookingStore.currentStep == 4">
-      <FormsConfirmation/>
+      <FormsConfirmation />
     </div>
 
     <!-- Navigation buttons -->
@@ -43,8 +43,8 @@
         v-if="bookingStore.currentStep > 1"
         @click="bookingStore.previousStep"
         type="button"
-        class="py-3 px-10 text-gray-700 font-medium text-lg rounded-sm hover:bg-gold hover:text-black transition-color duration-500 whitespace-nowrap"
-      > 
+        class="py-3 px-10 text-gray-700 font-medium text-lg rounded-sm hover:bg-gold hover:text-black transition-colors duration-500 whitespace-nowrap"
+      >
         <i class="bx bx-left-arrow-alt"></i>
         Back
       </button>
@@ -52,38 +52,111 @@
         v-if="bookingStore.currentStep < 4"
         @click="bookingStore.nextStep"
         type="button"
-        class="py-3 px-10 bg-black text-white font-medium text-lg rounded-sm hover:bg-gold hover:text-black transition-color duration-500"
+        class="py-3 px-10 bg-black text-white font-medium text-lg rounded-sm hover:bg-gold hover:text-black transition-colors duration-500"
       >
         Next
         <i class="bx bx-right-arrow-alt"></i>
       </button>
+      <!-- Confirm & Pay now calls submitBooking for booking submission -->
       <button
         v-if="bookingStore.currentStep == 4"
-        @click="handleCheckout"
+        @click="submitBooking"
         type="button"
-        class="py-3 px-10 bg-black text-white font-medium text-lg rounded-sm hover:bg-gold hover:text-black transition-color duration-500 whitespace-nowrap"
+        class="py-3 px-10 bg-black text-white font-medium text-lg rounded-sm hover:bg-gold hover:text-black transition-colors duration-500 whitespace-nowrap"
       >
         Confirm & Pay
         <i class="bx bx-right-arrow-alt"></i>
       </button>
     </div>
+
+    <!-- Overlays -->
+    <!-- Loading Indicator -->
+    <div class="absolute inset-0" v-if="loading">
+      <CommonLoading />
+    </div>
+    <!-- Error Message -->
+    <div class="absolute inset-0 w-full h-full flex items-center justify-center bg-white/90" v-if="error">
+      <CommonError :message="apiErrorMessage" />
+    </div>
+    <!-- Success Message for Quote Submission -->
+    <div class="absolute inset-0 w-full h-full flex items-center justify-center bg-white/90" v-if="quoteSuccess">
+      <BookingQuoteSuccess :message="successMessage" />
+    </div>
   </form>
 </template>
 
 <script setup>
-import { useBookingStore } from "@/stores/booking";
+import { ref } from 'vue';
+import { useBookingStore } from '@/stores/booking';
 
-
-// Access the booking state from your Pinia store (or similar state management)
 const bookingStore = useBookingStore();
 
-// This function is triggered when the user confirms and wants to pay
-const handleCheckout = async () => {
-  const data = bookingStore.form
-  console.log(data)
+// Reactive state variables
+const loading = ref(false);
+const error = ref(false);
+const apiErrorMessage = ref("An unexpected error occurred. Please try again.");
+const quoteSuccess = ref(false);
+const successMessage = ref("Your quote has been submitted successfully!");
+
+// This function handles booking submission and shows success for 5 seconds before redirecting.
+const submitBooking = async () => {
+  loading.value = true;
+  error.value = false;
+  quoteSuccess.value = false;
+
   try {
-    // Call your Django backend endpoint to create a Stripe Checkout Session
-    const response = await fetch('https://api.silkride.co.uk/api/create-checkout-session/', {
+    // Construct the payload from the booking store state
+    const bookingData = {
+      bookingType: bookingStore.bookingType,
+      serviceType: bookingStore.serviceType,
+      dropoffLocation: bookingStore.dropoffLocation,
+      form: bookingStore.form,
+    };
+
+    // POST the booking data to the API endpoint
+    const response = await fetch('http://127.0.0.1:8000/api/booking-notification/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(bookingData)
+    });
+
+    // Check if the response was unsuccessful
+    if (!response.ok) {
+      const errorData = await response.json();
+      console.error("Error submitting booking:", errorData);
+      error.value = true;
+      return; // Stop execution if there's an error
+    }
+
+    // Parse the successful response JSON data
+    const data = await response.json();
+    console.log("Booking submitted successfully:", data.message);
+
+    // Show the success message overlay
+    quoteSuccess.value = true;
+
+    // Wait 5 seconds before redirecting to home page
+    setTimeout(() => {
+      window.location.href = "/";
+    }, 5000);
+  } catch (err) {
+    console.error("Error in submitBooking:", err);
+    error.value = true;
+    setTimeout(() => {
+      window.location.href = "/";
+    }, 5000);
+  } finally {
+    loading.value = false;
+  }
+};
+
+// This function remains for Stripe integration.
+// It is triggered via the form's @submit.prevent event.
+const handleSubmit = async () => {
+  try {
+    const response = await fetch('http://127.0.0.1:8000/api/create-checkout-session/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -91,13 +164,12 @@ const handleCheckout = async () => {
     });
     const data = await response.json();
     if (data.url) {
-      // Redirect to the Stripe-hosted checkout page
       window.location.href = data.url;
     } else {
-      console.error('No URL returned', data);
+      console.error("No URL returned from checkout session:", data);
     }
-  } catch (error) {
-    console.error('Error creating checkout session:', error);
+  } catch (err) {
+    console.error("Error creating checkout session:", err);
   }
 };
 </script>
