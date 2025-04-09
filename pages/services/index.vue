@@ -13,5 +13,15 @@
 </template>
 <script setup>
 import cover from "@/assets/images/covers/services-cover.webp";
-
+useHead({
+  title:
+    "Luxury Chauffeur Service in London & UK | Private Car Hire",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Explore Silk Ride's luxury chauffeur services in London, including private airport transfers, executive car hire, event transportation, VIP meet-and-greet, and personalized travel solutions. Travel in style, comfort, and discretion.",
+    },
+  ],
+});
 </script>

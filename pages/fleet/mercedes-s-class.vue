@@ -256,6 +256,16 @@
 
 <script setup>
 import hero from "~/assets/images/sclassBackground.webp";
+useHead({
+  title: "Mercedes S-Class Chauffeur Hire London & UK | Luxury Executive Car",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Experience first-class travel with Silk Ride’s chauffeur-driven Mercedes S-Class in London. Ideal for VIP travel, corporate events, and luxury airport transfers. Travel in unmatched elegance and comfort.",
+    },
+  ],
+});
 const galleryImages = [
   { src: hero, alt: "Mercedes-Benz V-Class Front View" },
   { src: hero, alt: "Mercedes-Benz V-Class Interior" },

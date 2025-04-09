@@ -10,5 +10,15 @@
 </template>
 <script setup>
 import cover from "@/assets/images/covers/fleet.webp";
-
+useHead({
+  title:
+    "Our Luxury Chauffeur Fleet | Executive Car Hire London & UK",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Discover Silk Ride's premium fleet of chauffeur-driven vehicles in London, including Mercedes-Benz E-Class, S-Class, and spacious V-Class models. Travel in luxury, comfort, and style with our executive cars.",
+    },
+  ],
+});
 </script>

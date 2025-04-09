@@ -338,6 +338,16 @@
 
 <script setup>
 import hero from "~/assets/images/v-classshero.webp";
+useHead({
+  title: "Mercedes V-Class Chauffeur Hire London & UK | Luxury MPV for Groups ",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Book a spacious Mercedes V-Class with a professional chauffeur from Silk Ride. Perfect for group travel, airport transfers, and business trips in London. Comfort, space, and style combined.",
+    },
+  ],
+});
 const galleryImages = [
   { src: hero, alt: "Mercedes-Benz V-Class Front View" },
   { src: hero, alt: "Mercedes-Benz V-Class Interior" },

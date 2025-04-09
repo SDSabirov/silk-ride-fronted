@@ -14,7 +14,7 @@
       paragraph="Travel in style and sophistication with the Mercedes-Benz E-Class – a premium sedan that combines prestige, advanced technology, and an exceptionally smooth ride. Designed for those who appreciate reliability and elegance in every journey, the E-Class ensures a first-class experience"
     />
     <div class="flex flex-col w-full items-center justify-center py-22">
-      <div class="max-w-screen-xl w-full flex flex-col space-y-6 mb-6 ">
+      <div class="max-w-screen-xl w-full flex flex-col space-y-6 mb-6">
         <div
           class="grid grid-cols-1 md:grid-cols-2 gap-4 border-b-2 border-b-gold px-4 mb-6 py-4 mb-6"
         >
@@ -94,37 +94,41 @@
             <h2 class="text-black text-4xl font-semibold leading-loose">
               Perfect For Any Occasion
             </h2>
-            
-           
+
             <ul class="mt-4 space-y-4 text-md leading-loose">
               <li class="flex items-center space-x-2">
                 <div class="h-3 w-3 bg-gold rotate-45"></div>
                 <span
-                  ><strong>Business meetings and corporate travel</strong> – arrive in style and make a lasting impression.</span
+                  ><strong>Business meetings and corporate travel</strong> –
+                  arrive in style and make a lasting impression.</span
                 >
               </li>
               <li class="flex items-center space-x-2">
                 <div class="h-3 w-3 bg-gold rotate-45"></div>
                 <span
-                  ><strong>Airport transfers</strong> – stress-free, comfortable rides to and from the airport</span
+                  ><strong>Airport transfers</strong> – stress-free, comfortable
+                  rides to and from the airport</span
                 >
               </li>
               <li class="flex items-center space-x-2">
                 <div class="h-3 w-3 bg-gold rotate-45"></div>
                 <span
-                  ><strong>Special occasions</strong> – ideal for romantic dinners, anniversaries, or theatere nights.</span
+                  ><strong>Special occasions</strong> – ideal for romantic
+                  dinners, anniversaries, or theatere nights.</span
                 >
               </li>
               <li class="flex items-center space-x-2">
                 <div class="h-3 w-3 bg-gold rotate-45"></div>
                 <span
-                  ><strong>City rides and tours</strong> – explore London in absolute comfort with a personal chauffeur.</span
+                  ><strong>City rides and tours</strong> – explore London in
+                  absolute comfort with a personal chauffeur.</span
                 >
               </li>
-             
             </ul>
             <p class="pr-6 text-lg italic leading-loose">
-              Choose the Mercedes-Benz E-Class - more than just a ride, it's an experience of luxury and refinement. Book now and enjoy the comfort of business-class travel!
+              Choose the Mercedes-Benz E-Class - more than just a ride, it's an
+              experience of luxury and refinement. Book now and enjoy the
+              comfort of business-class travel!
             </p>
           </div>
           <div class="md:order-first h-full">
@@ -144,8 +148,6 @@
             </NuxtLink>
           </div>
         </div>
-
-        
       </div>
     </div>
 
@@ -166,6 +168,16 @@
 
 <script setup>
 import hero from "~/assets/images/eclass.webp";
+useHead({
+  title: "Mercedes E-Class Chauffeur Hire London & UK| Executive Car Service",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Discover Silk Ride's premium fleet of chauffeur-driven vehicles in London, including Mercedes-Benz E-Class, S-Class, and spacious V-Class models. Travel in luxury, comfort, and style with our executive cars.Hire a chauffeur-driven Mercedes E-Class in London with Silk Ride. The perfect blend of comfort, style, and professionalism for business travel, airport transfers, and city rides. Book your executive car today.",
+    },
+  ],
+});
 const galleryImages = [
   { src: hero, alt: "Mercedes-Benz V-Class Front View" },
   { src: hero, alt: "Mercedes-Benz V-Class Interior" },
