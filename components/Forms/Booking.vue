@@ -64,7 +64,7 @@
         type="button"
         class="py-3 px-10 bg-black text-white font-medium text-lg rounded-sm hover:bg-gold hover:text-black transition-colors duration-500 whitespace-nowrap"
       >
-        Confirm & Pay
+        Get Quote
         <i class="bx bx-right-arrow-alt"></i>
       </button>
     </div>

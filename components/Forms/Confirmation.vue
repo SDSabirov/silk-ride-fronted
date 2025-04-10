@@ -110,7 +110,7 @@
         </div>
   
         <!-- Price -->
-        <div class="flex flex-col items-center border-b border-b-gray-200">
+        <!-- <div class="flex flex-col items-center border-b border-b-gray-200">
           <div class="w-full flex justify-center items-center">
             <h4 class="block text-lg font-medium text-gray-700">Price</h4>
           </div>
@@ -118,7 +118,7 @@
             <h4 class="block text-md font-medium text-gray-700">Booking Fee</h4>
             <p class="font-garamond text-lg text-gray-900 text-right">£ {{ bookingFee }}</p>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </template>

@@ -11,6 +11,10 @@
           required
           class="mt-1 block w-full p-2 border border-gray-300 rounded-sm h-full"
           placeholder="John"
+          :class="[
+          'mt-1 block w-full p-2 rounded-sm h-14 transition-colors duration-500',
+          bookingStore.errors.name ? 'border border-red-500' : 'border border-gray-300'
+        ]"
         />
       </div>
       <!-- Surname -->
@@ -23,6 +27,10 @@
           required
           class="mt-1 block w-full p-2 border border-gray-300 rounded-sm h-full"
           placeholder="Doe"
+          :class="[
+          'mt-1 block w-full p-2 rounded-sm h-14 transition-colors duration-500',
+          bookingStore.errors.surname ? 'border border-red-500' : 'border border-gray-300'
+        ]"
         />
       </div>
       <!-- Phone -->
@@ -35,6 +43,10 @@
           required
           class="mt-1 block w-full p-2 border border-gray-300 rounded-sm h-full"
           placeholder="+44 123456789"
+          :class="[
+          'mt-1 block w-full p-2 rounded-sm h-14 transition-colors duration-500',
+          bookingStore.errors.phone ? 'border border-red-500' : 'border border-gray-300'
+        ]"
         />
       </div>
       <!-- Email -->
@@ -47,6 +59,10 @@
           required
           class="mt-1 block w-full p-2 border border-gray-300 rounded-sm h-full"
           placeholder="example@mail.com"
+          :class="[
+          'mt-1 block w-full p-2 rounded-sm h-14 transition-colors duration-500',
+          bookingStore.errors.email ? 'border border-red-500' : 'border border-gray-300'
+        ]"
         />
       </div>
       <!-- Number of Passengers -->

@@ -1,6 +1,7 @@
 <template>
   <div class="flex flex-wrap gap-6 justify-center w-full">
     <!-- Car Cards -->
+     
     <div
       v-for="car in carModels"
       :key="car.id"
@@ -71,7 +72,7 @@
           Free cancellation within 24 hours
         </li>
       </ul>
-      <div class="flex w-full items-center justify-center my-4">
+      <div class="flex flex-col w-full items-center justify-center my-4">
         <button
           class="px-6 py-2 w-1/2 text-xl text-black border border-black hover:bg-gold"
           :class="[
@@ -86,6 +87,7 @@
             <p class="whitespace-nowrap">Choose</p>
           </template>
         </button>
+        <small v-if="bookingStore.errors.selectedCar" class="text-red-500 text-sm mt-2">Please choose your car</small>
       </div>
     </div>
   </div>

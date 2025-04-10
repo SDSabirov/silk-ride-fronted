@@ -17,6 +17,10 @@
           required
           class="mt-1 block w-full p-2 border border-gray-300 rounded-sm h-full"
           placeholder="Enter pickup address"
+          :class="[
+          'mt-1 block w-full p-2 rounded-sm h-14 transition-colors duration-500',
+          bookingStore.errors.pickup ? 'border border-red-500' : 'border border-gray-300'
+        ]"
         />
         <ul
           v-if="suggestionsPickup.length"
@@ -46,6 +50,10 @@
           required
           class="mt-1 block w-full p-2 border border-gray-300 rounded-sm h-full"
           placeholder="Enter drop-off address"
+          :class="[
+          'mt-1 block w-full p-2 rounded-sm h-14 transition-colors duration-500',
+          bookingStore.errors.dropoff ? 'border border-red-500' : 'border border-gray-300'
+        ]"
         />
         <ul
           v-if="suggestionsDropoff.length"
@@ -73,6 +81,10 @@
           v-model="form.pickupDateTime"
           required
           class="mt-1 block w-full p-2 border border-gray-300 rounded-sm h-full"
+          :class="[
+          'mt-1 block w-full p-2 rounded-sm h-14 transition-colors duration-500',
+          bookingStore.errors.pickupDateTime ? 'border border-red-500' : 'border border-gray-300'
+        ]"
         />
       </div>
     </div>

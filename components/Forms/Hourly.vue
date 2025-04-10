@@ -18,6 +18,10 @@
           class="mt-1 block w-full p-2 border border-gray-300 rounded-sm h-14"
           placeholder="Enter pickup address"
           autocomplete="off"
+          :class="[
+          'mt-1 block w-full p-2 rounded-sm h-14 transition-colors duration-500',
+          bookingStore.errors.pickup ? 'border border-red-500' : 'border border-gray-300'
+        ]"
         />
 
         <ul
@@ -45,6 +49,10 @@
           v-model="form.hours"
           required
           class="mt-1 block w-full p-2 border border-gray-300 rounded-sm h-full"
+          :class="[
+          'mt-1 block w-full p-2 rounded-sm h-14 transition-colors duration-500',
+          bookingStore.errors.hours ? 'border border-red-500' : 'border border-gray-300'
+        ]"
         >
           <option value="" disabled>Select number of hours</option>
           <option
@@ -71,6 +79,10 @@
           v-model="form.pickupDateTime"
           required
           class="mt-1 block w-full p-2 border border-gray-300 rounded-sm h-full"
+          :class="[
+          'mt-1 block w-full p-2 rounded-sm h-14 transition-colors duration-500',
+          bookingStore.errors.pickupDateTime ? 'border border-red-500' : 'border border-gray-300'
+        ]"
         />
       </div>
     </div>

@@ -14,6 +14,10 @@
           v-model="form.airport"
           required
           class="mt-1 block w-full p-2 border border-gray-300 rounded-sm h-full"
+          :class="[
+          'mt-1 block w-full p-2 rounded-sm h-14 transition-colors duration-500',
+          bookingStore.errors.airport ? 'border border-red-500' : 'border border-gray-300'
+        ]"
         >
           <option value="" disabled>Your arrival/departure airport</option>
           <option
@@ -40,6 +44,10 @@
           class="mt-1 block w-full p-2 border border-gray-300 rounded-sm h-14"
           placeholder="Enter address"
           autocomplete="off"
+          :class="[
+          'mt-1 block w-full p-2 rounded-sm h-14 transition-colors duration-500',
+          bookingStore.errors.pickup || bookingStore.errors.dropoff ? 'border border-red-500' : 'border border-gray-300'
+        ]"
         />
         <ul
           v-if="suggestionsPickup.length"
@@ -81,6 +89,10 @@
           v-model="form.pickupDateTime"
           required
           class="mt-1 block w-full p-2 border border-gray-300 rounded-sm h-full"
+          :class="[
+          'mt-1 block w-full p-2 rounded-sm h-14 transition-colors duration-500',
+          bookingStore.errors.pickupDateTime ? 'border border-red-500' : 'border border-gray-300'
+        ]"
         />
       </div>
 
