@@ -138,7 +138,7 @@ const fetchSuggestions = debounce(async () => {
     if (data.suggestions) {
       bookingStore.suggestionsPickup = data.suggestions.map(item => {
         // Combine address and postcode. Adjust property names if necessary.
-        return `${item.address} (${item.postcode})`;
+        return `${item.address}`;
       });
     } else {
       bookingStore.suggestionsPickup = [];
