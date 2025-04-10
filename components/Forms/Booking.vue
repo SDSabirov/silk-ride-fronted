@@ -114,7 +114,7 @@ const submitBooking = async () => {
     };
 
     // POST the booking data to the API endpoint
-    const response = await fetch('http://127.0.0.1:8000/api/booking-notification/', {
+    const response = await fetch('https://api.silkride.co.uk/api/booking-notification/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -156,7 +156,7 @@ const submitBooking = async () => {
 // It is triggered via the form's @submit.prevent event.
 const handleSubmit = async () => {
   try {
-    const response = await fetch('http://127.0.0.1:8000/api/create-checkout-session/', {
+    const response = await fetch('https://api.silkride.co.uk/api/create-checkout-session/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
