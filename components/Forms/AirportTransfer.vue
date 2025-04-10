@@ -181,28 +181,28 @@ const locationLabel = computed(() =>
 
 
 const fetchSuggestions = debounce(async () => {
-  if (form.value.pickup.length < 3) {
+  if (locationModel.value.length < 3) {
     bookingStore.suggestionsPickup = [];
     return;
   }
 
   const apiKey =
     "dtoken_hEDzcyiWMr2mNISubea6iRMiOzi1fRaQY-jnAUY7gG11A0PTPJY9iY1eyhADhPZyqh-3OOe5ZYHWstYmZbDNW7_QgUIwjEitGBTfADrf7wNL7L8_MeEyCcqtn_HwAcnOqALOQhN0qer7Ao60jiU-xY4JsQNqO_4v_JI0f0DvN5r63eVCYiAwQxL7qdneoZL061F5v4qlyJ8";
-  
+
   try {
     const res = await fetch(
       `https://api.getAddress.io/autocomplete/${encodeURIComponent(
-        form.value.pickup
+        locationModel.value
       )}?api-key=${apiKey}`
     );
-    
+
     const data = await res.json();
-    
+
     if (data.suggestions) {
-      bookingStore.suggestionsPickup = data.suggestions.map(item => {
-        // Combine address and postcode. Adjust property names if necessary.
-        return `${item.address} `;
-      });
+      bookingStore.suggestionsPickup = data.suggestions.map(
+        (item) => item.address
+      );
+
     } else {
       bookingStore.suggestionsPickup = [];
     }
@@ -211,6 +211,37 @@ const fetchSuggestions = debounce(async () => {
     bookingStore.suggestionsPickup = [];
   }
 }, 300);
+
+function selectSuggestion(suggestion) {
+  locationModel.value = suggestion;
+  bookingStore.suggestionsPickup = [];
+}
+
+// When tripType changes, update the corresponding field with the airport value.
+// For arrival: set form.pickup = airport (selected airport)
+// For departure: set form.dropoff = airport (selected airport)
+watch(
+  () => form.value.tripType,
+  (newTripType) => {
+    if (newTripType === "arrival") {
+      form.value.pickup = form.value.airport;
+    } else if (newTripType === "departure") {
+      form.value.dropoff = form.value.airport;
+    }
+  }
+);
+
+// Also watch for changes in the selected airport.
+watch(
+  () => form.value.airport,
+  (newAirport) => {
+    if (form.value.tripType === "arrival") {
+      form.value.pickup = newAirport;
+    } else if (form.value.tripType === "departure") {
+      form.value.dropoff = newAirport;
+    }
+  }
+);
 
 // When tripType changes, update the corresponding field with the airport value.
 // For arrival: set form.pickup = airport (selected airport)

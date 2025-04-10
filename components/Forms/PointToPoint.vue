@@ -18,9 +18,11 @@
           class="mt-1 block w-full p-2 border border-gray-300 rounded-sm h-full"
           placeholder="Enter pickup address"
           :class="[
-          'mt-1 block w-full p-2 rounded-sm h-14 transition-colors duration-500',
-          bookingStore.errors.pickup ? 'border border-red-500' : 'border border-gray-300'
-        ]"
+            'mt-1 block w-full p-2 rounded-sm h-14 transition-colors duration-500',
+            bookingStore.errors.pickup
+              ? 'border border-red-500'
+              : 'border border-gray-300',
+          ]"
         />
         <ul
           v-if="suggestionsPickup.length"
@@ -51,9 +53,11 @@
           class="mt-1 block w-full p-2 border border-gray-300 rounded-sm h-full"
           placeholder="Enter drop-off address"
           :class="[
-          'mt-1 block w-full p-2 rounded-sm h-14 transition-colors duration-500',
-          bookingStore.errors.dropoff ? 'border border-red-500' : 'border border-gray-300'
-        ]"
+            'mt-1 block w-full p-2 rounded-sm h-14 transition-colors duration-500',
+            bookingStore.errors.dropoff
+              ? 'border border-red-500'
+              : 'border border-gray-300',
+          ]"
         />
         <ul
           v-if="suggestionsDropoff.length"
@@ -102,6 +106,7 @@ const bookingStore = useBookingStore();
 const { form, suggestionsPickup, suggestionsDropoff } = storeToRefs(bookingStore);
 
 // Initialize state in the booking store if it isn't already set
+// Initialize state in the booking store if it isn't already set
 if (!form.value) {
   bookingStore.form = {
     pickup: "",
@@ -117,37 +122,56 @@ if (!suggestionsDropoff.value) {
 }
 
 
-const fetchSuggestions = debounce(async () => {
-  if (form.value.pickup.length < 3) {
-    bookingStore.suggestionsPickup = [];
+const fetchSuggestions = debounce(async (type) => {
+  const query = type === "pickup" ? form.value.pickup : form.value.dropoff;
+
+  if (query.length < 3) {
+    if (type === "pickup") {
+      bookingStore.suggestionsPickup = [];
+    } else {
+      bookingStore.suggestionsDropoff = [];
+    }
     return;
   }
 
   const apiKey =
     "dtoken_hEDzcyiWMr2mNISubea6iRMiOzi1fRaQY-jnAUY7gG11A0PTPJY9iY1eyhADhPZyqh-3OOe5ZYHWstYmZbDNW7_QgUIwjEitGBTfADrf7wNL7L8_MeEyCcqtn_HwAcnOqALOQhN0qer7Ao60jiU-xY4JsQNqO_4v_JI0f0DvN5r63eVCYiAwQxL7qdneoZL061F5v4qlyJ8";
-  
+
   try {
     const res = await fetch(
-      `https://api.getAddress.io/autocomplete/${encodeURIComponent(
-        form.value.pickup
-      )}?api-key=${apiKey}`
+      `https://api.getAddress.io/autocomplete/${encodeURIComponent(query)}?api-key=${apiKey}`
+
+
     );
-    
+
     const data = await res.json();
-    
-    if (data.suggestions) {
-      bookingStore.suggestionsPickup = data.suggestions.map(item => {
-        // Combine address and postcode. Adjust property names if necessary.
-        return `${item.address}`;
-      });
+    const suggestions = data.suggestions
+      ? data.suggestions.map(item => item.address)
+      : [];
+    if (type === "pickup") {
+      bookingStore.suggestionsPickup = suggestions;
+
     } else {
-      bookingStore.suggestionsPickup = [];
+      bookingStore.suggestionsDropoff = suggestions;
     }
   } catch (err) {
     console.error("Error fetching addresses:", err);
-    bookingStore.suggestionsPickup = [];
+    if (type === "pickup") {
+      bookingStore.suggestionsPickup = [];
+    } else {
+      bookingStore.suggestionsDropoff = [];
+    }
   }
 }, 300);
 
+function selectSuggestion(type, suggestion) {
+  if (type === "pickup") {
+    bookingStore.form.pickup = suggestion;
+    bookingStore.suggestionsPickup = [];
+  } else {
+    bookingStore.form.dropoff = suggestion;
+    bookingStore.suggestionsDropoff = [];
+  }
+}
 
 </script>
