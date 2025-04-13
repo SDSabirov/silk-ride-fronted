@@ -24,27 +24,29 @@
       <div
         class="flex flex-col space-y-8 md:flex-row md:space-y-0 md:space-x-4 mt-4 justify-center items-center"
       >
-        <a
-          href="/booking"
+        <NuxtLink
+          :to="localePath('/booking')"
           class="flex justify-center py-3 text-lg w-[238px] shadow-lg text-black font-semibold capitalize"
           style="background: #ffcb6c"
         >
           {{ $t("hero.bookNow") }}
-        </a>
-        <a
-          href="/services"
+        </NuxtLink>
+        <NuxtLink
+          :to="localePath('/services')"
           class="flex justify-center  py-3 shadow-lg border text-[#FFCB6C] w-[238px] text-lg md:text-xl font-semibold hover:bg-[#FFCB6C] hover:text-black transition bg-black/70 shadow-md backdrop-blur capitalize"
           style="border-color: #ffcb6c"
         >
           {{ $t("hero.exploreServices") }}
-        </a>
+        </NuxtLink>
       </div>
     </header>
   </section>
 </template>
 
-<script>
-export default {};
+<script setup>
+import { useLocalePath } from '#imports'
+
+const localePath = useLocalePath()
 </script>
 
 <style>

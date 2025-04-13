@@ -42,7 +42,9 @@ export default defineNuxtConfig({
         flag: '/flags/ru.svg'
       }
     ],
-    optimizeTranslationDirective: false,
+    bundle: {
+      optimizeTranslationDirective: false,
+    },
     defaultLocale: "en",
     lazy: true,
     langDir: "locales/",

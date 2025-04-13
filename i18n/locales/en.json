@@ -9,6 +9,27 @@
     "contact": "Contact Us",
     "bookNow": "Book Now"
   },
+  "footer": {
+    "description": "Experience first-class travel across the UK & Europe with our premium chauffeur services. Whether for business, leisure, or special events, we ensure comfort, reliability, and elegance on every journey.",
+    "quickLinks": {
+      "title": "Quick Links",
+      "about": "About Us",
+      "fleet": "Our Fleet",
+      "services": "Services",
+      "blog": "Blog"
+    },
+    "contact": {
+      "title": "Get in Touch",
+      "phone": "Phone",
+      "email": "Email"
+    },
+    "rights": "All rights reserved.",
+    "bottom": {
+      "terms": "Terms of Service",
+      "privacy": "Privacy Policy",
+      "faq": "FAQ"
+    }
+  },
   "hero": {
     "title": "Experience Luxury Travel",
     "subtitle": "Premium chauffeur service designed for comfort, elegance, and seamless travel.",

@@ -82,7 +82,7 @@
           </button>
           <div
             v-show="showDropdown"
-            class="lg:absolute left-0 lg:mt-2 w-full lg:w-48 md:bg-black/70  md:backdrop-blur text-white  overflow-hidden"
+            class="lg:absolute left-0 lg:mt-2 w-full lg:w-[268px] md:bg-black/70  md:backdrop-blur text-white  overflow-hidden"
           >
             <NuxtLink
               v-for="item in dropdownItems"
@@ -96,7 +96,7 @@
           </div>
         </div>
         <NuxtLink
-            to="/booking"
+            :to="localePath('/booking')"
             class="px-4 py-2 border border-gold text-gold text-lg hover:bg-gold hover:text-black rounded-md md:hidden"
             @click="closeMenu"
             aria-label="Book a ride now"
@@ -108,7 +108,7 @@
       <!-- Desktop Booking Button & Language Switch -->
       <div class="hidden lg:flex space-x-4 items-center">
         <NuxtLink
-          to="/booking"
+          :to="localePath('/booking')"
           class="px-4 py-1 border border-gold text-gold  text-lg hover:bg-gold hover:text-black rounded-xl"
           @click="closeMenu"
           aria-label="Book a ride now"
@@ -127,7 +127,9 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
 import { useRouter } from "vue-router";
+import { useLocalePath } from '#imports'
 
+const localePath = useLocalePath()
 // Menu state
 const menuOpen = ref(false);
 const isScrolled = ref(false);
@@ -141,17 +143,16 @@ const { t } = useI18n()
 
 // Navigation links (without "About" as it's now in the dropdown)
 const navLinks = [
-  { path: '/', label: t('navbar.home') },
-  { path: '/fleet', label: t('navbar.fleet') },
-  { path: '/services', label: t('navbar.services') }
+  { path: localePath('/'), label: t('navbar.home') },
+  { path: localePath('/fleet'), label: t('navbar.fleet') },
+  { path: localePath('/services'), label: t('navbar.services') }
 ]
 
 const dropdownItems = [
-  { path: '/about', label: t('navbar.about') },
-  { path: '/#why-choose-us', label: t('navbar.whyChooseUs') },
-  { path: '/contact-us', label: t('navbar.contact') }
+  { path: localePath('/about'), label: t('navbar.about') },
+  { path: localePath('/#why-choose-us'), label: t('navbar.whyChooseUs') },
+  { path: localePath('/contact-us'), label: t('navbar.contact') }
 ]
-
 // Utility functions
 const toggleMenu = () => {
   menuOpen.value = !menuOpen.value;

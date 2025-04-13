@@ -12,7 +12,7 @@
           </p>
 
           <div class="w-full flex items-center justify-end text-xl text-white self-end">
-            <NuxtLink to="/about">
+            <NuxtLink :to="localePath('/about')">
               <button class="px-8 py-3 bg-black flex items-center space-x-2">
                 <span>{{ $t('about.learnMore') }}</span>
                 <span><i class="bx bx-chevrons-right"></i></span>
@@ -48,3 +48,9 @@
     </div>
   </section>
 </template>
+
+<script setup>
+import { useLocalePath } from '#imports'
+
+const localePath = useLocalePath()
+</script>

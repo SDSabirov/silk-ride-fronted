@@ -1,7 +1,6 @@
 <template>
   <footer class="bg-black text-white py-8">
     <div class="max-w-screen-xl mx-auto px-4">
-      <!-- Footer Grid -->
       <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
         <!-- Company Info -->
         <div class="hidden md:block">
@@ -10,54 +9,52 @@
             <h1 class="text-3xl font-semibold text-gold">SILK RIDE</h1>
           </div>
           <p class="text-gray-300">
-            Experience first-class travel across the UK & Europe with our
-            premium chauffeur services. Whether for business, leisure, or
-            special events, we ensure comfort, reliability, and elegance on
-            every journey
+            {{ $t('footer.description') }}
           </p>
-
-          
         </div>
-        <!-- Quick Links -->
-        <div class="">
-            <h3 class="text-lg font-bold mb-3">Quick Links</h3>
-            <ul class="space-y-2">
-              <li>
-                <a href="/about" class="text-gray-400 hover:text-white">About Us</a>
-              </li>
 
-              <li>
-                <a href="/fleet" class="text-gray-400 hover:text-white">Our Fleet</a>
-              </li>
-              <li>
-                <a href="/services" class="text-gray-400 hover:text-white">Services</a>
-              </li>
-              <li>
-                <a href="/blog" class="text-gray-400 hover:text-white">Blog</a>
-              </li>
-             
-            </ul>
-          </div>
+        <!-- Quick Links -->
+        <div>
+          <h3 class="text-lg font-bold mb-3">{{ $t('footer.quickLinks.title') }}</h3>
+          <ul class="space-y-2">
+            <li>
+              <NuxtLink :to="localePath('/about')" class="text-gray-400 hover:text-white">
+                {{ $t('footer.quickLinks.about') }}
+              </NuxtLink>
+            </li>
+            <li>
+              <NuxtLink :to="localePath('/fleet')" class="text-gray-400 hover:text-white">
+                {{ $t('footer.quickLinks.fleet') }}
+              </NuxtLink>
+            </li>
+            <li>
+              <NuxtLink :to="localePath('/services')" class="text-gray-400 hover:text-white">
+                {{ $t('footer.quickLinks.services') }}
+              </NuxtLink>
+            </li>
+            <li>
+              <NuxtLink :to="localePath('/blog')" class="text-gray-400 hover:text-white">
+                {{ $t('footer.quickLinks.blog') }}
+              </NuxtLink>
+            </li>
+          </ul>
+        </div>
+
         <!-- Contact and Social Media -->
-        <div class="">
-          <h3 class="text-lg font-bold mb-3">Get in Touch</h3>
+        <div class="space-y-4 md:space-y-0">
+          <h3 class="text-lg font-bold mb-3">{{ $t('footer.contact.title') }}</h3>
           <p class="text-gray-400">
-            Phone: <a href="tel:+447512905514">+44 7512 905514</a>
+            {{ $t('footer.contact.phone') }}:
+            <a href="tel:+447512905514" class="whitespace-nowrap">+44 7512 905514</a>
           </p>
           <p class="text-gray-400">
-            Email: <a href="mailto:info@silkride.co.uk">info@silkride.co.uk</a>
+            {{ $t('footer.contact.email') }}:
+            <a href="mailto:info@silkride.co.uk">info@silkride.co.uk</a>
           </p>
           <div class="flex space-x-4 mt-4">
-            <!-- Social Icons -->
-            <a
-              href="https://www.instagram.com/silkrideofficial?igsh=MXAxbDAwbXBrbTc2NA=="
-              target="_blank"
-              rel="noopener noreferrer"
-              class="text-gray-400 hover:text-white"
-            >
+            <a href="https://www.instagram.com/silkrideofficial" target="_blank" class="text-gray-400 hover:text-white">
               <i class="bx bxl-instagram bx-sm"></i>
             </a>
-
             <a href="#" class="text-gray-400 hover:text-white">
               <i class="bx bxl-facebook-circle bx-sm"></i>
             </a>
@@ -73,27 +70,30 @@
 
       <!-- Footer Bottom -->
       <div class="mt-8 text-center text-gray-400 flex justify-between items-center flex-col md:flex-row space-y-2 md:space-y-0">
-        <p>&copy; 2025 Silk Ride. All rights reserved.</p>
-        <ul class="flex space-x-4 ">
+        <p>&copy; 2025 Silk Ride. {{ $t('footer.rights') }}</p>
+        <ul class="flex space-x-4">
           <li>
-                <a
-                  href="/terms-of-service"
-                  class="text-gray-400 hover:text-white"
-                  >Terms of Service</a
-                >
-              </li>
-              <li>
-                <a href="/privacy-policy" class="text-gray-400 hover:text-white"
-                  >Privacy Policy</a
-                >
-              </li>
-              <li>
-                <a href="/faq" class="text-gray-400 hover:text-white">FAQ</a>
-              </li>
+            <NuxtLink :to="localePath('/terms-of-service')" class="text-gray-400 hover:text-white">
+              {{ $t('footer.bottom.terms') }}
+            </NuxtLink>
+          </li>
+          <li>
+            <NuxtLink :to="localePath('/privacy-policy')" class="text-gray-400 hover:text-white">
+              {{ $t('footer.bottom.privacy') }}
+            </NuxtLink>
+          </li>
+          <li>
+            <NuxtLink :to="localePath('/faq')" class="text-gray-400 hover:text-white">
+              {{ $t('footer.bottom.faq') }}
+            </NuxtLink>
+          </li>
         </ul>
       </div>
     </div>
   </footer>
 </template>
 
-<script setup></script>
+<script setup>
+import { useLocalePath } from '#imports'
+const localePath = useLocalePath()
+</script>

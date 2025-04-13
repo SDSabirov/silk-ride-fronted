@@ -36,10 +36,10 @@
               </p>
               <CommonPriceGuide hourlyRate="50" dayRate="400" heathrowToCenteral="120" />
               <div class="w-full flex flex-col space-y-2 items-center justify-center absolute bottom-4">
-                <NuxtLink to="/booking" class="flex w-[220px] items-center justify-center capitalize whitespace-nowrap border border-white text-white text-lg hover:bg-gold hover:text-black hover:border-gold p-2 transition-all duration-300 ease-in bg-delay-300">
+                <NuxtLink :to="localePath('/booking')" class="flex w-[220px] items-center justify-center capitalize whitespace-nowrap border border-white text-white text-lg hover:bg-gold hover:text-black hover:border-gold p-2 transition-all duration-300 ease-in bg-delay-300">
                   {{ $t('servicesSection.bookNow') }}
                 </NuxtLink>
-                <NuxtLink to="/fleet/mercedes-e-class" class="flex w-[220px] flex items-center space-x-2 justify-center text-white text-lg hover:text-gold hover:text-black p-2 capitalize whitespace-nowrap">
+                <NuxtLink :to="localePath('/fleet/mercedes-e-class')" class="flex w-[220px] flex items-center space-x-2 justify-center text-white text-lg hover:text-gold hover:text-black p-2 capitalize whitespace-nowrap">
                   <span>{{ $t('servicesSection.learnMore') }}</span>
                   <span><i class="bx bx-right-arrow-alt"></i></span>
                 </NuxtLink>
@@ -61,10 +61,10 @@
               </p>
               <CommonPriceGuide hourlyRate="75" dayRate="600" heathrowToCenteral="160" />
               <div class="w-full flex flex-col space-y-2 items-center justify-center absolute bottom-4">
-                <NuxtLink to="/booking" class="flex w-[220px] items-center justify-center capitalize whitespace-nowrap border border-white text-white text-lg hover:bg-gold hover:text-black hover:border-gold p-2 transition-all duration-300 ease-in bg-delay-300">
+                <NuxtLink :to="localePath('/booking')" class="flex w-[220px] items-center justify-center capitalize whitespace-nowrap border border-white text-white text-lg hover:bg-gold hover:text-black hover:border-gold p-2 transition-all duration-300 ease-in bg-delay-300">
                   {{ $t('servicesSection.bookNow') }}
                 </NuxtLink>
-                <NuxtLink to="/fleet/mercedes-v-class" class="flex w-[220px] flex items-center space-x-2 justify-center text-white text-lg hover:text-gold hover:text-black p-2 capitalize whitespace-nowrap">
+                <NuxtLink :to="localePath('/fleet/mercedes-v-class')" class="flex w-[220px] flex items-center space-x-2 justify-center text-white text-lg hover:text-gold hover:text-black p-2 capitalize whitespace-nowrap">
                   <span>{{ $t('servicesSection.learnMore') }}</span>
                   <span><i class="bx bx-right-arrow-alt"></i></span>
                 </NuxtLink>
@@ -86,10 +86,10 @@
               </p>
               <CommonPriceGuide hourlyRate="75" dayRate="600" heathrowToCenteral="160" />
               <div class="w-full flex flex-col space-y-2 items-center justify-center absolute bottom-4">
-                <NuxtLink to="/booking" class="flex w-[220px] items-center justify-center capitalize whitespace-nowrap border border-white text-white text-lg hover:bg-gold hover:text-black hover:border-gold p-2 transition-all duration-300 ease-in bg-delay-300">
+                <NuxtLink :to="localePath('/booking')" class="flex w-[220px] items-center justify-center capitalize whitespace-nowrap border border-white text-white text-lg hover:bg-gold hover:text-black hover:border-gold p-2 transition-all duration-300 ease-in bg-delay-300">
                   {{ $t('servicesSection.bookNow') }}
                 </NuxtLink>
-                <NuxtLink to="/fleet/mercedes-s-class" class="flex w-[220px] flex items-center space-x-2 justify-center text-white text-lg hover:text-gold hover:text-black p-2 capitalize whitespace-nowrap">
+                <NuxtLink :to="localePath('/fleet/mercedes-s-class')" class="flex w-[220px] flex items-center space-x-2 justify-center text-white text-lg hover:text-gold hover:text-black p-2 capitalize whitespace-nowrap">
                   <span>{{ $t('servicesSection.learnMore') }}</span>
                   <span><i class="bx bx-right-arrow-alt"></i></span>
                 </NuxtLink>
@@ -112,3 +112,9 @@
     </div>
   </section>
 </template>
+
+<script setup>
+import { useLocalePath } from '#imports'
+
+const localePath = useLocalePath()
+</script>
