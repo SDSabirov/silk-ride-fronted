@@ -1,33 +1,34 @@
 <template>
-    <div class="w-full  text-white mt-6">
-      <h2 class="text-sm text-gray-100">Price Guide</h2>
-      <!-- Hourly Rate -->
-      <div class=" border-b border-t border-gray-300 p-4 rounded flex items-center justify-between">
-        <div class="text-left">
-          <h3 class="text-md font-semibold">Hourly Rate</h3>
-          <p class="text-sm text-gray-300">(minimum 4 hours)</p>
-        </div>
-        <span class="text-md font-bold text-white">£ {{ hourlyRate }} </span>
+  <div class="w-full text-white mt-6">
+    <h2 class="text-sm text-gray-100">{{ $t('priceGuide.title') }}</h2>
+
+    <!-- Hourly Rate -->
+    <div class="border-b border-t border-gray-300 p-4 rounded flex items-center justify-between">
+      <div class="text-left">
+        <h3 class="text-md font-semibold">{{ $t('priceGuide.hourly.title') }}</h3>
+        <p class="text-sm text-gray-300">{{ $t('priceGuide.hourly.note') }}</p>
       </div>
-  
-      <!-- Day Rate -->
-      <div class=" border-b border-gray-300 p-4 rounded flex items-center justify-between">
-        <div class="text-left">
-          <h3 class="text-md font-semibold">Day Rate</h3>
-          <p class="text-sm text-gray-300">(8 hours)</p>
-        </div>
-        <span class="text-md font-bold text-white">£ {{ dayRate }} </span>
-      </div>
-  
-      <!-- Heathrow to Central London -->
-      <div class="p-4 rounded flex items-center justify-between">
-        <div class="text-left">
-          <h3 class="text-md font-semibold">Heathrow to Central London</h3>
-        </div>
-        <span class="text-md font-bold text-white">£ {{ heathrowToCenteral }} </span>
-      </div>
+      <span class="text-md font-bold text-white">£ {{ hourlyRate }} </span>
     </div>
-  </template>
+
+    <!-- Day Rate -->
+    <div class="border-b border-gray-300 p-4 rounded flex items-center justify-between">
+      <div class="text-left">
+        <h3 class="text-md font-semibold">{{ $t('priceGuide.daily.title') }}</h3>
+        <p class="text-sm text-gray-300">{{ $t('priceGuide.daily.note') }}</p>
+      </div>
+      <span class="text-md font-bold text-white">£ {{ dayRate }} </span>
+    </div>
+
+    <!-- Heathrow to Central London -->
+    <div class="p-4 rounded flex items-center justify-between">
+      <div class="text-left">
+        <h3 class="text-md font-semibold">{{ $t('priceGuide.heathrow') }}</h3>
+      </div>
+      <span class="text-md font-bold text-white">£ {{ heathrowToCenteral }} </span>
+    </div>
+  </div>
+</template>
 
 <script>
 export default {

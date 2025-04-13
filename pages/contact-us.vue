@@ -93,8 +93,9 @@
         <div class="flex flex-col items-center justify-center spacey-3 text-center p-4">
             <i class='bx bxs-map-pin bx-lg'></i>
             <h3 class="text-xl text-gray-800">Our Office</h3>
-            <address class="text-lg">123 Camberwell Rd <br>
-                 SE5 0EE, London <br>
+            <address class="text-lg">Centre 42 <br>
+              42 Watling Street <br>
+              WD7 7NN, Radlett <br>
                 United Kingdom
             </address>
         </div>

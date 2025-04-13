@@ -12,6 +12,7 @@
   "dependencies": {
     "@nuxt/image": "^1.8.1",
     "@nuxtjs/gtm": "^2.4.0",
+    "@nuxtjs/i18n": "^9.5.3",
     "@nuxtjs/seo": "^2.0.2",
     "@pinia/nuxt": "^0.9.0",
     "@stripe/stripe-js": "^7.0.0",

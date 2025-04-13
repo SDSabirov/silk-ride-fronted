@@ -1,9 +1,12 @@
 <template>
-  <section class="py-12 bg-white bg-[url(/assets/images/covers/bgpattern.png)] bg-contain bg-center bg-no-repeat" id="why-choose-us">
+  <section
+    class="py-12 bg-white bg-[url(/assets/images/covers/bgpattern.png)] bg-contain bg-center bg-no-repeat"
+    id="why-choose-us"
+  >
     <div class="container mx-auto max-w-screen-xl px-4 text-center">
       <!-- Section Title -->
-      <h2 class="text-2xl md:text-5xl font-semibold text-black mb-4">
-        Why Silk Ride is Your Best Choice for Luxury Travel
+      <h2 class="text-2xl md:text-4xl font-semibold text-black mb-4 capitalize">
+        {{ $t("why.title") }}
       </h2>
 
       <div class="flex items-center w-full mb-4 justify-center">
@@ -11,124 +14,108 @@
         <div class="h-1 bg-gold w-1/2"></div>
         <div class="h-3 w-3 bg-gold rotate-45"></div>
       </div>
+
       <p class="text-lg md:text-xl font-normal text-gray-700 mb-10">
-        At <strong>Silk Ride</strong>, we go beyond just transportation – we
-        offer an exceptional travel experience. Whether you're heading to a
-        business meeting, airport, or special event, we ensure
-        <strong>comfort, reliability, and first-class service</strong> every
-        step of the way.
+        {{ $t("why.description") }}
       </p>
 
       <!-- Features Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
-        <!-- Professional Chauffeurs -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div class="bg-white p-6 shadow-lg transition max-w-[380px]">
           <div class="flex justify-center mb-4 text-gold">
             <i class="bx bxs-user-check bx-lg"></i>
           </div>
           <h3 class="text-2xl font-semibold text-gray-800 mb-4">
-            Professional Chauffeurs
+            {{ $t("why.features.chauffeurs.title") }}
           </h3>
           <p class="text-gray-600">
-            Our experienced, multi-lingual chauffeurs are trained to the highest
-            standards. Courteous, knowledgeable, and always punctual, they
-            provide a seamless experience tailored to your needs.
+            {{ $t("why.features.chauffeurs.text") }}
           </p>
         </div>
 
-        <!-- Luxury Fleet -->
         <div class="bg-white p-6 shadow-lg transition max-w-[380px]">
           <div class="flex justify-center mb-4 text-gold">
             <i class="bx bxs-car bx-lg"></i>
           </div>
           <h3 class="text-2xl font-semibold text-gray-800 mb-4">
-            Premium Fleet & Ultimate Comfort
+            {{ $t("why.features.fleet.title") }}
           </h3>
           <p class="text-gray-600">
-            Travel in luxury and style with our top-of-the-line vehicles,
-            including Mercedes-Benz E-Class, V-Class, and S-Class. Spacious
-            interiors, climate control, and advanced technology guarantee a
-            smooth and enjoyable ride.
+            {{ $t("why.features.fleet.text") }}
           </p>
         </div>
 
-        <!-- 24/7 Availability -->
         <div class="bg-white p-6 shadow-lg transition max-w-[380px]">
           <div class="flex justify-center mb-4 text-gold">
             <i class="bx bxs-time-five bx-lg"></i>
           </div>
           <h3 class="text-2xl font-semibold text-gray-800 mb-4">
-            24/7 Availability – Anytime, Anywhere
+            {{ $t("why.features.availability.title") }}
           </h3>
           <p class="text-gray-600">
-            Your schedule is our priority. Our chauffeur services are available
-            24/7, so whether you need an early morning airport transfer or a
-            late-night ride, we’ve got you covered.
+            {{ $t("why.features.availability.text") }}
           </p>
         </div>
 
         <div
           class="lg:col-span-3 flex flex-col md:flex-row justify-center gap-8"
         >
-          <!-- Global Airport Coverage -->
           <div class="bg-white p-6 shadow-lg transition max-w-[380px]">
             <div class="flex justify-center mb-4 text-gold">
               <i class="bx bxs-map bx-lg"></i>
             </div>
             <h3 class="text-2xl font-semibold text-gray-800 mb-4">
-              Coverage Across London & the UK
+              {{ $t("why.features.coverage.title") }}
             </h3>
             <p class="text-gray-600">
-              We offer transfers across London and major UK cities, ensuring you
-              reach your destination effortlessly. Whether you need an airport
-              pickup, a city transfer, or an intercity ride, Silk Ride is always
-              available.
+              {{ $t("why.features.coverage.text") }}
             </p>
           </div>
 
-          <!-- Trusted by business -->
           <div class="bg-white p-6 shadow-lg transition max-w-[380px]">
             <div class="flex justify-center mb-4 text-gold">
               <i class="bx bxs-badge-check bx-lg"></i>
             </div>
             <h3 class="text-2xl font-semibold text-gray-800 mb-4">
-              Trusted by Business & VIP Clients
+              {{ $t("why.features.trusted.title") }}
             </h3>
             <p class="text-gray-600">
-              Silk Ride is the preferred choice for corporate executives, VIP
-              travelers, and high-profile clients who demand excellence in every
-              journey
+              {{ $t("why.features.trusted.text") }}
             </p>
           </div>
         </div>
       </div>
-      <!--BAdges grid -->
-      <div class="flex space-x-4 items-end justify-end w-full mt-10 mb-10">
-        <div class="flex flex-col items-center">
+
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 gap-y-6 md:gap-x-12 justify-center w-full max-w-lg mx-auto mt-10 mb-4 md:mb-10"
+      >
+        <!-- Badge 1 -->
+        <div class="flex flex-col items-center text-center">
           <img
             src="/assets/icons/10yearsbadge.webp"
             class="w-[58px]"
-            alt="10  year of experience"
+            alt="10 years of experience"
           />
-          <p class="text-sm text-gray-600 italic whitespace-nowrap capitalize">
-            10 years of Experince
+          <p class="text-sm text-gray-600 italic capitalize mt-2 min-h-[48px]">
+            {{ $t("why.badges.experience") }}
           </p>
         </div>
-        <div class="flex flex-col items-center">
-          <div class="flex space-x-2 items-start text-gray-900">
-            <i class="bx bxs-like bx-lg"></i>
-            <p class="text-[22px]  font-bold text-gray-900">50K+</p>
-          </div>
 
-          <p class="text-sm text-gray-600 italic whitespace-nowrap capitalize">
-            satisfied clients worldwide
+        <!-- Badge 2 -->
+        <div class="flex flex-col items-center text-center">
+          <div class="flex items-center space-x-2 text-gray-900">
+            <i class="bx bxs-like bx-lg"></i>
+            <p class="text-[22px] font-bold">50K+</p>
+          </div>
+          <p class="text-sm text-gray-600 italic capitalize mt-2 min-h-[48px]">
+            {{ $t("why.badges.clients") }}
           </p>
         </div>
       </div>
+
     </div>
   </section>
 </template>
-
 <script setup>
 // No additional script is required for static content.
 </script>

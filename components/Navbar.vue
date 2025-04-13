@@ -18,25 +18,9 @@
 
         <!-- Mobile Menu, Book Now Button & Language Switch -->
         <div class="flex items-center space-x-4 lg:hidden">
-          <NuxtLink
-            to="/booking"
-            class="px-3 py-1 border border-gold text-gold text-lg hover:bg-gold hover:text-black rounded-2xl"
-            @click="closeMenu"
-            aria-label="Book a ride now"
-          >
-            Book Now
-          </NuxtLink>
+          
           <!-- Language Switch for Mobile -->
-          <!-- <div class="flex space-x-2">
-            <button @click="switchLanguage('en')" class="flex items-center space-x-1">
-              <img src="/assets/icons/flagUK.svg" alt="English" class="w-5 h-5" />
-              <span class="text-sm">EN</span>
-            </button>
-            <button @click="switchLanguage('ru')" class="flex items-center space-x-1">
-              <img src="/assets/icons/flagRU.svg" alt="Russian" class="w-5 h-5" />
-              <span class="text-sm">RU</span>
-            </button>
-          </div> -->
+          <LanguageSwitch/>
           <button
             class="focus:outline-none"
             @click="toggleMenu"
@@ -68,7 +52,7 @@
       <!-- Links -->
       <div
         :class="[
-          'lg:flex lg:items-center lg:space-x-8 text-lg mt-4 lg:mt-0 transition-all duration-300 whitespace-nowrap',
+          'lg:flex lg:items-center lg:space-x-8 text-lg mt-4 lg:mt-0 transition-all duration-300 whitespace-nowrap capitalize',
           menuOpen ? 'block flex flex-col items-center space-y-4 mt-6' : 'hidden lg:flex'
         ]"
       >
@@ -83,6 +67,7 @@
         >
           {{ link.label }}
         </NuxtLink>
+        
 
         <!-- Our Company Dropdown -->
         <div class="relative w-full">
@@ -92,7 +77,7 @@
             aria-haspopup="true"
             :aria-expanded="showDropdown"
           >
-            <span>Our Company</span>
+            <span>{{$t('navbar.ourCompany')}}</span>
             <i class="bx bx-chevron-down"></i>
           </button>
           <div
@@ -110,29 +95,30 @@
             </NuxtLink>
           </div>
         </div>
+        <NuxtLink
+            to="/booking"
+            class="px-4 py-2 border border-gold text-gold text-lg hover:bg-gold hover:text-black rounded-md md:hidden"
+            @click="closeMenu"
+            aria-label="Book a ride now"
+          >
+            Book Now
+          </NuxtLink>
       </div>
 
       <!-- Desktop Booking Button & Language Switch -->
       <div class="hidden lg:flex space-x-4 items-center">
         <NuxtLink
           to="/booking"
-          class="px-4 py-1 border border-gold text-gold text-lg hover:bg-gold hover:text-black rounded-xl"
+          class="px-4 py-1 border border-gold text-gold  text-lg hover:bg-gold hover:text-black rounded-xl"
           @click="closeMenu"
           aria-label="Book a ride now"
         >
           Book Now
         </NuxtLink>
         <!-- Language Switch for Desktop -->
-        <!-- <div class="flex space-x-2">
-          <button @click="switchLanguage('en')" class="flex items-center space-x-1">
-            <img src="/assets/icons/flagUK.svg" alt="English" class="w-5 h-5" />
-            <span class="text-sm">EN</span>
-          </button>
-          <button @click="switchLanguage('ru')" class="flex items-center space-x-1">
-            <img src="/assets/icons/flagRU.svg" alt="Russian" class="w-5 h-5" />
-            <span class="text-sm">RU</span>
-          </button>
-        </div> -->
+        <div class="flex space-x-2">
+         <LanguageSwitch />
+        </div>
       </div>
     </div>
   </nav>
@@ -151,21 +137,20 @@ const currentLanguage = ref('en');
 // Router for dynamic link highlighting
 const router = useRouter();
 
+const { t } = useI18n()
+
 // Navigation links (without "About" as it's now in the dropdown)
 const navLinks = [
-  { path: "/", label: "Home" },
-  { path: "/fleet", label: "Our Fleet" },
-  { path: "/services", label: "Services" },
-];
+  { path: '/', label: t('navbar.home') },
+  { path: '/fleet', label: t('navbar.fleet') },
+  { path: '/services', label: t('navbar.services') }
+]
 
-// Dropdown items for "Our Company"
 const dropdownItems = [
-  { path: "/about", label: "About Us" },
-  { path: "/#why-choose-us", label: "Why Choose Us" },
-  // { path: "/testimonials", label: "What Our Clients Say" },
-  // { path: "/our-partners", label: "Our Partners" },
-  { path: "/contact-us", label: "Contact Us" },
-];
+  { path: '/about', label: t('navbar.about') },
+  { path: '/#why-choose-us', label: t('navbar.whyChooseUs') },
+  { path: '/contact-us', label: t('navbar.contact') }
+]
 
 // Utility functions
 const toggleMenu = () => {
