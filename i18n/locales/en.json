@@ -30,6 +30,8 @@
       "faq": "FAQ"
     }
   },
+
+
   "hero": {
     "title": "Experience Luxury Travel",
     "subtitle": "Premium chauffeur service designed for comfort, elegance, and seamless travel.",
@@ -57,18 +59,7 @@
       "description": "Whether you need a fleet or something extra, our team is here to help. Contact us at"
     }
   },
-  "priceGuide": {
-    "title": "Price Guide",
-    "hourly": {
-      "title": "Hourly Rate",
-      "note": "(minimum 4 hours)"
-    },
-    "daily": {
-      "title": "Day Rate",
-      "note": "(8 hours)"
-    },
-    "heathrow": "Heathrow to Central London"
-  },
+  
   "why": {
     "title": "Why Silk Ride is Your Best Choice for Luxury Travel",
     "description": "At Silk Ride, we go beyond just transportation – we offer an exceptional travel experience. Whether you're heading to a business meeting, airport, or special event, we ensure comfort, reliability, and first-class service every step of the way.",
@@ -103,5 +94,127 @@
     "title": "About Us",
     "description": "At Silk Ride, we believe that every journey should be as seamless and luxurious as the destination itself. We provide premium chauffeur services in London and across the UK, ensuring comfort, reliability, and sophistication at every step. Our services include airport transfers, executive business travel, intercity rides, and chauffeur hire for special events. Whether you need a smooth transfer from Heathrow, a VIP ride across the city, or a long-distance journey in ultimate comfort, we’ve got you covered. With over 10 years of experience and 50,000+ satisfied clients, we have built a reputation for excellence, professionalism, and personalized service. Book your ride today and experience the Silk Ride difference.",
     "learnMore": "Learn More"
+  },
+
+  
+  "commonHero": {
+    "defaultTitle": "Our Services",
+    "bookNow": "Book Now"
+  },
+  "priceGuide": {
+    "title": "Price Guide",
+    "hourly": {
+      "title": "Hourly Rate",
+      "note": "(minimum 4 hours)"
+    },
+    "daily": {
+      "title": "Day Rate",
+      "note": "(8 hours)"
+    },
+    "heathrow": "Heathrow to Central London"
+  },
+
+  "pages": {
+    "common": {
+      "bookNow": "Book Now"
+    },
+    "fleet": {
+      "heroTitle": "Our Fleet",
+      "introTitle": "Sophistication Meets Comfort",
+      "introText": "Our premium fleet, led by the luxurious Mercedes-Benz V-Class, is crafted for those who value comfort and elegance. Whether you choose the spacious V-Class, the stylish E-Class, or the luxurious S-Class, every ride promises a first-class experience.",
+      "seoTitle": "Our Luxury Chauffeur Fleet | Executive Car Hire London & UK",
+      "seoDescription": "Discover Silk Ride's premium fleet of chauffeur-driven vehicles in London, including Mercedes-Benz E-Class, S-Class, and spacious V-Class models. Travel in luxury, comfort, and style with our executive cars."
+    },
+    "services": {
+      "title": "Our Services",
+      "heroTitle": "Services",
+      "introTitle": "Luxury Chauffeur Services Tailored to Your Needs",
+      "introParagraph": "Experience world-class chauffeur services designed for business executives, travelers, and VIP guests. Whether you need a seamless airport transfer, a private chauffeur for the day, or elegant transportation for a special event, Silk Ride ensures a smooth, comfortable, and stress-free journey.",
+      "seoTitle": "Luxury Chauffeur Service in London & UK | Private Car Hire",
+      "seoDescription": "Explore Silk Ride's luxury chauffeur services in London, including private airport transfers, executive car hire, event transportation, VIP meet-and-greet, and personalized travel solutions. Travel in style, comfort, and discretion.",
+      "mainPoints": {
+        "vehicles": {
+          "title": "Premium Vehicles",
+          "text": "Mercedes-Benz fleet for ultimate comfort."
+        },
+        "chauffeurs": {
+          "title": "Professional Chauffeurs",
+          "text": "Discreet, experienced, and multilingual."
+        },
+        "experience": {
+          "title": "Seamless Experience",
+          "text": "Complimentary Wi-Fi, bottled water & phone chargers."
+        },
+        "availability": {
+          "title": "24/7 Availability",
+          "text": "Book anytime, anywhere."
+        }
+      },
+      "cards": {
+        "airport": {
+          "title": "Airport Transfers",
+          "description": "Skip the hassle of airport taxis with our executive airport transfers...",
+          "bullets": [
+            "Flight Tracking – We monitor your flight for on-time pickups.",
+            "Meet & Greet Service – Personal welcome at arrivals.",
+            "No Waiting Charges – 60 minutes of free waiting time included."
+          ],
+          "note": "Serving all major airports: Heathrow, Gatwick, Luton, Stansted & more."
+        },
+        "corporate": {
+          "title": "Corporate Travel",
+          "description": "Designed for executives, VIPs, and corporate teams, our business chauffeur service ensures punctuality, discretion, and comfort. Arrive at meetings, conferences, and business events feeling refreshed and prepared.",
+          "bullets": [
+            "Complimentary Wi-Fi & phone chargers – Stay connected on the go.",
+            "Luxury Mercedes-Benz fleet – First-class comfort for professionals.",
+            "Hourly or full-day hire – Flexible booking to fit your schedule."
+          ],
+          "note": "Maximize your productivity—book a corporate chauffeur today."
+        },
+        "hourly": {
+          "title": "Hourly Chauffeur Hire",
+          "description": "Need a luxury car for a few hours or a full day? Our hourly chauffeur service gives you the freedom to move at your own pace—perfect for business meetings, sightseeing, or shopping trips.",
+          "bullets": [
+            "Flexible bookings – Hire a chauffeur for 3+ hours or a full day.",
+            "Door-to-door service – Your chauffeur is at your disposal.",
+            "Explore in style – Perfect for city tours & special occasions."
+          ],
+          "note": "Enjoy personalized travel—book your private chauffeur today."
+        },
+        "longDistance": {
+          "title": "Travel Across the UK & Europe",
+          "description": "Looking to explore historic landmarks, charming countryside, or vibrant European cities? Our long-distance chauffeur services let you travel in absolute comfort and luxury, whether you’re heading to Stonehenge, the Cotswolds, or even Amsterdam.",
+          "bullets": [
+            "Bespoke Private Tours – Tailor-made journeys to the destinations of your choice.",
+            "Luxury Road Trips – Travel in a first-class Mercedes-Benz with a professional chauffeur.",
+            "Cross-Border Travel – Chauffeur-driven transfers to European cities."
+          ],
+          "note": "Explore in comfort—book your private tour today."
+        },
+        "wedding": {
+          "title": "Wedding Chauffeur Services",
+          "description": "Your wedding day deserves perfection, and Silk Ride ensures an elegant and stress-free arrival with our luxury chauffeur service. From the bride and groom’s grand entrance to seamless guest transportation, we provide a first-class experience tailored to your special day.",
+          "bullets": [
+            "Elegant Mercedes-Benz Fleet – Choose from the sophisticated S-Class, V-Class, or E-Class for ultimate luxury.",
+            "Professional, Discreet Chauffeurs – Experienced drivers ensuring a smooth, stylish ride.",
+            "Bridal Car Decoration Available – Personalize your wedding car with ribbons & flowers.",
+            "Guest & Family Transfers – Comfortable transport for bridesmaids, groomsmen, and guests."
+          ],
+          "note": "Make your wedding day unforgettable—book your luxury wedding chauffeur today."
+        },
+        "event": {
+          "title": "Event Chauffeur Services",
+          "description": "Make every occasion unforgettable with Silk Ride’s premium chauffeur service. Whether you're attending a high-profile event, exclusive party, or major sporting match, we ensure a seamless, stylish, and stress-free journey.",
+          "bullets": [
+            "Luxury Fleet for Every Occasion – Travel in style with our Mercedes-Benz S-Class, V-Class, or E-Class.",
+            "Punctual & Professional Chauffeurs – Ensuring you arrive on time and in comfort.",
+            "Perfect for All Events – Concerts, sporting events, private parties, award ceremonies, and corporate galas.",
+            "Group & VIP Transfers Available – Tailored transport solutions for individuals and groups."
+          ],
+          "note": ""
+        }
+      }
+    }
+    
   }
 }

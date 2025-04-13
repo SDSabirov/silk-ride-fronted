@@ -41,7 +41,7 @@
         </div>
 
         <!-- Contact and Social Media -->
-        <div class="space-y-4 md:space-y-0">
+        <div class="space-y-4 ">
           <h3 class="text-lg font-bold mb-3">{{ $t('footer.contact.title') }}</h3>
           <p class="text-gray-400">
             {{ $t('footer.contact.phone') }}:
