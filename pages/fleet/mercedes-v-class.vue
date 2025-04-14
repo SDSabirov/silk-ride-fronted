@@ -3,9 +3,9 @@
     <Navbar />
     <CarsDetailHero
       :img="hero"
-      title="Mercedes Benz"
-      subtitle="V-Class"
-      slogan="Designed for Every Journey: Unmatched Versatility & Comfort"
+      :title="t('fleetPages.vClass.title')"
+      :subtitle="t('fleetPages.vClass.subtitle')"
+      :slogan="t('fleetPages.vClass.slogan')"
       altText="Mercedes Benz V-Class side view"
       :car="VClass"
     />
@@ -13,8 +13,8 @@
       class="bg-[url(/assets/images/covers/bgpattern.png)] bg-cover bg-center bg-no-repeat"
     >
       <CommonPageIntro
-        title="Redefine Luxury Travel with the Mercedes-Benz V-Class"
-        paragraph="Experience unparalleled comfort and sophistication with the Mercedes-Benz V-Class. Designed for those who seek elegance and practicality in every journey, the V-Class offers a spacious interior, advanced technology, and a smooth driving experience. Whether it's a business trip, a family outing, or a VIP transfer, this versatile vehicle ensures you arrive in style and comfort. Discover the perfect blend of functionality and luxury with every ride."
+        :title="t('fleetPages.vClass.intro.title')"
+        :paragraph="t('fleetPages.vClass.intro.paragraph')"
       />
     </div>
 
@@ -22,7 +22,7 @@
       class="flex flex-col w-full items-center justify-center py-22 bg-[url(/assets/images/covers/bgpattern2.png)] bg-contain bg-center bg-no-repeat"
     >
       <h2 class="text-black text-4xl font-semibold leading-loose text-center">
-        Unmatched Comfort, No Matter the Occasion
+        {{ t("fleetPages.vClass.sectionTitle") }}
       </h2>
       <div class="w-full flex items-center justify-center mb-6">
         <div class="h-3 w-3 bg-gold rotate-45"></div>
@@ -32,46 +32,36 @@
       <div
         class="max-w-screen-xl w-full flex flex-col space-y-8 mb-6 px-2 md:px-0"
       >
-        <!-- Card 1 -->
-        <div
+       <!-- Card 1 -->
+       <div
           class="grid grid-cols-1 md:grid-cols-2 gap-6 border-b-2 border-b-gold px-4 mb-6 py-8 bg-white p-4"
         >
           <div>
             <h3 class="text-black text-2xl font-normal leading-loose">
-              V-Class for Weddings
+              {{ t("fleetPages.vClass.cards.weddings.title") }}
             </h3>
             <p class="pr-6 text-lg italic">
-              Turn your special day into a seamless and elegant affair with the
-              Mercedes-Benz V-Class. Designed for comfort and sophistication,
-              it’s the ideal choice for transporting the bridal party or family.
+              {{ t("fleetPages.vClass.cards.weddings.description") }}
             </p>
             <h4 class="text-gray-800 text-xl font-semibold leading-loose mt-4">
-              Key Features
+              {{ t("fleetPages.vClass.cards.weddings.featuresTitle") }}
             </h4>
             <ul class="text-lg leading-loose">
               <li class="flex items-center space-x-2">
                 <div class="h-3 w-3 bg-gold rotate-45"></div>
-                <span>
-                  Seats up to 7 passengers comfortably, perfect for bridal
-                  parties or close family.
-                </span>
+                <span>{{ t("fleetPages.vClass.cards.weddings.features[0]") }}</span>
               </li>
               <li class="flex items-center space-x-2">
                 <div class="h-3 w-3 bg-gold rotate-45"></div>
-                <span>Luxurious interiors complement any wedding theme.</span>
+                <span>{{ t("fleetPages.vClass.cards.weddings.features[1]") }}</span>
               </li>
               <li class="flex items-center space-x-2">
                 <div class="h-3 w-3 bg-gold rotate-45"></div>
-                <span>
-                  Optional vehicle decorations to match your wedding colors.
-                </span>
+                <span>{{ t("fleetPages.vClass.cards.weddings.features[2]") }}</span>
               </li>
               <li class="flex items-center space-x-2">
                 <div class="h-3 w-3 bg-gold rotate-45"></div>
-                <span>
-                  Climate-controlled comfort ensures everyone arrives fresh and
-                  ready.
-                </span>
+                <span>{{ t("fleetPages.vClass.cards.weddings.features[3]") }}</span>
               </li>
             </ul>
           </div>
@@ -88,7 +78,7 @@
               to="/booking"
               class="flex px-6 py-3 items-center justify-center border border-black text-black text-xl hover:bg-gold hover:text-black p-2"
             >
-              Book Now
+            {{ t('pages.common.bookNow') }}
             </NuxtLink>
           </div>
         </div>
@@ -99,37 +89,33 @@
         >
           <div>
             <h3 class="text-black text-2xl font-normal leading-loose">
-              V-Class for Business Trips: A Mobile Office on Wheels
+              {{ t("fleetPages.vClass.cards.business.title") }}
             </h3>
             <p class="pr-6 text-lg italic">
-              Travel smarter with the Mercedes-Benz V-Class, your mobile office
-              for business meetings on the go. Stay productive and arrive in
-              style.
+              {{ t("fleetPages.vClass.cards.business.description") }}
             </p>
-            <h4 class="text-gray-800 text-xl font-normal leading-loose mt-4">
-              Key Features
+            <h4 class="text-gray-800 text-xl font-semibold leading-loose mt-4">
+              {{ t("fleetPages.vClass.cards.business.featuresTitle") }}
             </h4>
             <ul class="text-lg leading-loose">
               <li class="flex items-center space-x-2">
                 <div class="h-3 w-3 bg-gold rotate-45"></div>
-                <span>High-speed Wi-Fi for work during transit.</span>
+                <span>{{ t("fleetPages.vClass.cards.business.features[0]") }}</span>
               </li>
               <li class="flex items-center space-x-2">
                 <div class="h-3 w-3 bg-gold rotate-45"></div>
                 <span>
-                  Spacious seating for team discussions or individual
-                  relaxation.
+                  {{ t("fleetPages.vClass.cards.business.features[1]") }}.
                 </span>
               </li>
               <li class="flex items-center space-x-2">
                 <div class="h-3 w-3 bg-gold rotate-45"></div>
-                <span>Power outlets and USB ports for charging devices.</span>
+                <span>{{ t("fleetPages.vClass.cards.business.features[2]") }}</span>
               </li>
               <li class="flex items-center space-x-2">
                 <div class="h-3 w-3 bg-gold rotate-45"></div>
                 <span>
-                  Punctual, professional chauffeurs ensure you’re always on
-                  time.
+                  {{ t("fleetPages.vClass.cards.business.features[3]") }}
                 </span>
               </li>
             </ul>
@@ -147,7 +133,7 @@
               to="/booking"
               class="flex px-6 py-3 items-center justify-center border border-black text-black text-xl hover:bg-gold hover:text-black p-2"
             >
-              Book Now
+            {{ t('pages.common.bookNow') }}
             </NuxtLink>
           </div>
         </div>
@@ -158,41 +144,34 @@
         >
           <div>
             <h3 class="text-black text-2xl font-normal leading-loose">
-              V-Class for Airport Pick-Up & Drop-Off: Stress-Free Transfers
+              {{ t("fleetPages.vClass.cards.airport.title") }}
             </h3>
             <p class="pr-6 text-lg italic">
-              Experience hassle-free airport transfers with the Mercedes-Benz
-              V-Class. From meet-and-greet service to spacious luggage capacity,
-              we take care of every detail.
+              {{ t("fleetPages.vClass.cards.airport.description") }}
             </p>
-            <h4 class="text-gray-800 text-xl font-normal leading-loose mt-4">
-              Key Features
+            <h4 class="text-gray-800 text-xl font-semibold leading-loose mt-4">
+              {{ t("fleetPages.vClass.cards.airport.featuresTitle") }}
             </h4>
             <ul class="text-lg leading-loose">
               <li class="flex items-center space-x-2">
                 <div class="h-3 w-3 bg-gold rotate-45"></div>
-                <span>
-                  Meet-and-Greet Service: Chauffeurs assist with luggage and
-                  ensure a smooth arrival or departure.
-                </span>
+                <span>{{ t("fleetPages.vClass.cards.airport.features[0]") }}</span>
               </li>
               <li class="flex items-center space-x-2">
                 <div class="h-3 w-3 bg-gold rotate-45"></div>
                 <span>
-                  Spacious Interiors: Comfortably fits 7 passengers and their
-                  luggage.
+                  {{ t("fleetPages.vClass.cards.airport.features[1]") }}.
                 </span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <div class="h-3 w-3 bg-gold rotate-45"></div>
+                <span>{{ t("fleetPages.vClass.cards.airport.features[2]") }}</span>
               </li>
               <li class="flex items-center space-x-2">
                 <div class="h-3 w-3 bg-gold rotate-45"></div>
                 <span>
-                  Flight Monitoring: We track your flight for adjustments to
-                  delays or early arrivals.
+                  {{ t("fleetPages.vClass.cards.airport.features[3]") }}
                 </span>
-              </li>
-              <li class="flex items-center space-x-2">
-                <div class="h-3 w-3 bg-gold rotate-45"></div>
-                <span>Wi-Fi Onboard: Stay connected, even on the move.</span>
               </li>
             </ul>
           </div>
@@ -209,7 +188,7 @@
               to="/booking"
               class="flex px-6 py-3 items-center justify-center border border-black text-black text-xl hover:bg-gold hover:text-black p-2"
             >
-              Book Now
+            {{ t('pages.common.bookNow') }}
             </NuxtLink>
           </div>
         </div>
@@ -220,35 +199,30 @@
         >
           <div>
             <h3 class="text-black text-2xl font-normal leading-loose">
-              V-Class For VIP Events: Arrive in Style
+              {{ t("fleetPages.vClass.cards.events.title") }}
             </h3>
             <p class="pr-6 text-lg italic">
-              Make a grand entrance at any VIP event with the Mercedes-Benz
-              V-Class. From galas to premieres, it ensures luxury and comfort
-              for all attendees.
+              {{ t("fleetPages.vClass.cards.events.description") }}
             </p>
-            <h4 class="text-gray-800 text-xl font-normal leading-loose mt-4">
-              Key Features
+            <h4 class="text-gray-800 text-xl font-semibold leading-loose mt-4">
+              {{ t("fleetPages.vClass.cards.events.featuresTitle") }}
             </h4>
             <ul class="text-lg leading-loose">
               <li class="flex items-center space-x-2">
                 <div class="h-3 w-3 bg-gold rotate-45"></div>
-                <span>
-                  Discreet design with privacy glass for exclusive arrivals.
-                </span>
+                <span>{{ t("fleetPages.vClass.cards.events.features[0]") }}</span>
               </li>
               <li class="flex items-center space-x-2">
                 <div class="h-3 w-3 bg-gold rotate-45"></div>
                 <span>
-                  Plush interiors to match the prestige of the event.
+                  {{ t("fleetPages.vClass.cards.events.features[1]") }}.
                 </span>
               </li>
               <li class="flex items-center space-x-2">
                 <div class="h-3 w-3 bg-gold rotate-45"></div>
-                <span>
-                  Perfect for group arrivals, combining style and practicality.
-                </span>
+                <span>{{ t("fleetPages.vClass.cards.events.features[2]") }}</span>
               </li>
+             
             </ul>
           </div>
           <div class="md:order-first overflow-hidden">
@@ -264,7 +238,7 @@
               to="/booking"
               class="flex px-6 py-3 items-center justify-center border border-black text-black text-xl hover:bg-gold hover:text-black p-2"
             >
-              Book Now
+            {{ t('pages.common.bookNow') }}
             </NuxtLink>
           </div>
         </div>
@@ -275,31 +249,30 @@
         >
           <div>
             <h3 class="text-black text-2xl font-normal leading-loose">
-              V-Class For Family Vacations: Comfort for Everyone
+              {{ t("fleetPages.vClass.cards.family.title") }}
             </h3>
             <p class="pr-6 text-lg italic">
-              Family travel made easy with the V-Class. Enjoy ample space,
-              premium features, and a stress-free journey, whether it’s a road
-              trip or an airport transfer.
+              {{ t("fleetPages.vClass.cards.family.description") }}
             </p>
-            <h4 class="text-gray-800 text-xl font-normal leading-loose mt-4">
-              Key Features
+            <h4 class="text-gray-800 text-xl font-semibold leading-loose mt-4">
+              {{ t("fleetPages.vClass.cards.family.featuresTitle") }}
             </h4>
             <ul class="text-lg leading-loose">
               <li class="flex items-center space-x-2">
                 <div class="h-3 w-3 bg-gold rotate-45"></div>
-                <span> Room for 5 large suitcases and personal items. </span>
-              </li>
-              <li class="flex items-center space-x-2">
-                <div class="h-3 w-3 bg-gold rotate-45"></div>
-                <span> Rear entertainment systems for kids to enjoy. </span>
+                <span>{{ t("fleetPages.vClass.cards.family.features[0]") }}</span>
               </li>
               <li class="flex items-center space-x-2">
                 <div class="h-3 w-3 bg-gold rotate-45"></div>
                 <span>
-                  Comfortable seating for long journeys with plenty of legroom.
+                  {{ t("fleetPages.vClass.cards.family.features[1]") }}.
                 </span>
               </li>
+              <li class="flex items-center space-x-2">
+                <div class="h-3 w-3 bg-gold rotate-45"></div>
+                <span>{{ t("fleetPages.vClass.cards.family.features[2]") }}</span>
+              </li>
+              
             </ul>
           </div>
           <div class="overflow-hidden">
@@ -315,7 +288,7 @@
               to="/booking"
               class="flex px-6 py-3 items-center justify-center border border-black text-black text-xl hover:bg-gold hover:text-black p-2"
             >
-              Book Now
+            {{ t('pages.common.bookNow') }}
             </NuxtLink>
           </div>
         </div>
@@ -338,6 +311,7 @@
 
 <script setup>
 import hero from "~/assets/images/v-classshero.webp";
+const { t } = useI18n();
 useHead({
   title: "Mercedes V-Class Chauffeur Hire London & UK | Luxury MPV for Groups ",
   meta: [

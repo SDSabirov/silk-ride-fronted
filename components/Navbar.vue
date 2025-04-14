@@ -101,7 +101,7 @@
             @click="closeMenu"
             aria-label="Book a ride now"
           >
-            Book Now
+            {{$t('navbar.bookNow')}}
           </NuxtLink>
       </div>
 
@@ -113,7 +113,7 @@
           @click="closeMenu"
           aria-label="Book a ride now"
         >
-          Book Now
+        {{$t('navbar.bookNow')}}
         </NuxtLink>
         <!-- Language Switch for Desktop -->
         <div class="flex space-x-2">

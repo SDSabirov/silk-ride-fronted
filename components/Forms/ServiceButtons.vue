@@ -4,7 +4,7 @@
       for="serviceType"
       class="block text-lg font-medium text-gray-700 mb-2"
     >
-      Service Type
+      Choose your service
     </label>
     <div class="flex flex-col md:flex-row gap-6 w-full">
       <button
@@ -20,6 +20,7 @@
         ]"
       >
         {{ type.label }}
+        <span v-if="bookingStore.bookingType === type.value" class="ml-2"><i class='bx bx-check'></i></span>
       </button>
     </div>
   </div>
@@ -31,16 +32,11 @@ import { useBookingStore } from "@/stores/booking";
 // Access the booking store
 const bookingStore = useBookingStore();
 
-
- 
 const serviceTypes = [
+  { value: "airportTransfer", label: "Airport Transfer" },
   { value: "pointToPoint", label: "Point-to-Point" },
   { value: "hourlyService", label: "Hourly Service" },
-  { value: "airportTransfer", label: "Airport Transfer" },
- 
 ];
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

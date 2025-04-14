@@ -3,8 +3,8 @@ import { defineStore } from "pinia";
 export const useBookingStore = defineStore("booking", {
   state: () => ({
     currentStep: 1, // Tracks the current step in the booking process
-    bookingType: "pointToPoint", // Default booking type (e.g., "pointToPoint", "hourlyService", "airportTransfer")
-    serviceType: "pointToPoint", // Stores the selected service type
+    bookingType: "airportTransfer", // Default booking type (e.g., "pointToPoint", "hourlyService", "airportTransfer")
+    serviceType: "airportTransfer", // Stores the selected service type
     dropoffLocation: "", // Stores the selected drop-off location
 
     // Consolidated form data for all booking types (steps 1 and 3)

@@ -216,5 +216,110 @@
       }
     }
     
-  }
+  },
+
+  "fleetPages": {
+    "common": {
+    "features": {
+      "luggage": "Up to {count} suitcases",
+      "passengers": "Up to {count} passengers",
+      "wifi": "On board Wi-Fi",
+      "mediumLuggage": "Up to {count} medium size luggage",
+      "privacy": "Privacy Glasses",
+      "entertainment": "Entertainment System"
+    }
+    },
+    "eClass": {
+      "title": "Mercedes Benz",
+      "subtitle": "E-Class",
+      "slogan": "The Perfect Blend of Business and Comfort",
+      "intro": {
+        "title": "The Perfect Blend of Business and Comfort",
+        "paragraph": "Travel in style and sophistication with the Mercedes-Benz E-Class – a premium sedan that combines prestige, advanced technology, and an exceptionally smooth ride. Designed for those who appreciate reliability and elegance in every journey, the E-Class ensures a first-class experience."
+      },
+      "whyTitle": "Why Choose the E-Class?",
+      "whyBullets": [
+        "Business-class excellence – sleek design, premium interior, and a quiet, smooth ride.",
+        "Comfort for long journeys – spacious leather seats, climate control, and adaptive suspension.",
+        "Cutting-edge technology – intelligent safety systems, seamless performance, and an innovative interface.",
+        "Generous luggage capacity – fits 2 large suitcases and 2 carry-ons.",
+        "Flexible rental options – available from 4 hours to a full day, tailored to your needs."
+      ],
+      "occasionsTitle": "Perfect For Any Occasion",
+      "occasionsBullets": [
+        "Business meetings and corporate travel – arrive in style and make a lasting impression.",
+        "Airport transfers – stress-free, comfortable rides to and from the airport.",
+        "Special occasions – ideal for romantic dinners, anniversaries, or theatre nights.",
+        "City rides and tours – explore London in absolute comfort with a personal chauffeur."
+      ],
+      "closingNote": "Choose the Mercedes-Benz E-Class - more than just a ride, it's an experience of luxury and refinement. Book now and enjoy the comfort of business-class travel!",
+      "galleryTitle": "Our Gallery"
+    },
+    "vClass": {
+      "title": "Mercedes Benz",
+      "subtitle": "V-Class",
+      "slogan": "Designed for Every Journey: Unmatched Versatility & Comfort",
+      "intro": {
+        "title": "Redefine Luxury Travel with the Mercedes-Benz V-Class",
+        "paragraph": "Experience unparalleled comfort and sophistication with the Mercedes-Benz V-Class. Designed for those who seek elegance and practicality in every journey, the V-Class offers a spacious interior, advanced technology, and a smooth driving experience. Whether it's a business trip, a family outing, or a VIP transfer, this versatile vehicle ensures you arrive in style and comfort. Discover the perfect blend of functionality and luxury with every ride."
+      },
+      "sectionTitle": "Unmatched Comfort, No Matter the Occasion",
+      "cards": {
+        "wedding": {
+          "title": "V-Class for Weddings",
+          "description": "Turn your special day into a seamless and elegant affair with the Mercedes-Benz V-Class. Designed for comfort and sophistication, it’s the ideal choice for transporting the bridal party or family.",
+          "featuresTitle": "Key Features",
+          "bullets": [
+            "Seats up to 7 passengers comfortably, perfect for bridal parties or close family.",
+            "Luxurious interiors complement any wedding theme.",
+            "Optional vehicle decorations to match your wedding colors.",
+            "Climate-controlled comfort ensures everyone arrives fresh and ready."
+          ]
+        },
+        "business": {
+          "title": "V-Class for Business Trips: A Mobile Office on Wheels",
+          "description": "Travel smarter with the Mercedes-Benz V-Class, your mobile office for business meetings on the go. Stay productive and arrive in style.",
+          "featuresTitle": "Key Features",
+          "bullets": [
+            "High-speed Wi-Fi for work during transit.",
+            "Spacious seating for team discussions or individual relaxation.",
+            "Power outlets and USB ports for charging devices.",
+            "Punctual, professional chauffeurs ensure you’re always on time."
+          ]
+        },
+        "airport": {
+          "title": "V-Class for Airport Pick-Up & Drop-Off: Stress-Free Transfers",
+          "description": "Experience hassle-free airport transfers with the Mercedes-Benz V-Class. From meet-and-greet service to spacious luggage capacity, we take care of every detail.",
+          "featuresTitle": "Key Features",
+          "bullets": [
+            "Meet-and-Greet Service: Chauffeurs assist with luggage and ensure a smooth arrival or departure.",
+            "Spacious Interiors: Comfortably fits 7 passengers and their luggage.",
+            "Flight Monitoring: We track your flight for adjustments to delays or early arrivals.",
+            "Wi-Fi Onboard: Stay connected, even on the move."
+          ]
+        },
+        "vip": {
+          "title": "V-Class For VIP Events: Arrive in Style",
+          "description": "Make a grand entrance at any VIP event with the Mercedes-Benz V-Class. From galas to premieres, it ensures luxury and comfort for all attendees.",
+          "featuresTitle": "Key Features",
+          "bullets": [
+            "Discreet design with privacy glass for exclusive arrivals.",
+            "Plush interiors to match the prestige of the event.",
+            "Perfect for group arrivals, combining style and practicality."
+          ]
+        },
+        "family": {
+          "title": "V-Class For Family Vacations: Comfort for Everyone",
+          "description": "Family travel made easy with the V-Class. Enjoy ample space, premium features, and a stress-free journey, whether it’s a road trip or an airport transfer.",
+          "featuresTitle": "Key Features",
+          "bullets": [
+            "Room for 5 large suitcases and personal items.",
+            "Rear entertainment systems for kids to enjoy.",
+            "Comfortable seating for long journeys with plenty of legroom."
+          ]
+        }
+      },
+      "galleryTitle": "Our Gallery"
+    }
+}
 }
