@@ -144,11 +144,14 @@ if (!form.value.tripType) {
 
 // Local constant for airport options
 const airportOptions = [
-  "London Heathrow Airport T-1,2,3 & 5",
-  "London Heathrow Airport T-4",
+  "London Heathrow Airport T 2 & 3",
+  "London Heathrow Airport T 4",
+  "London Heathrow Airport T 5",
   "London Gatwick Airport",
   "London Stansted Airport",
   "London Luton Airport",
+  "London Biggin Hill Airport",
+  "Farnborough Airport"
 ];
 
 // Set a constant for the location input field ID
