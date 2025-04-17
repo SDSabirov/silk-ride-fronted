@@ -1,10 +1,10 @@
 <template>
   <form @submit.prevent class="max-w-screen-xl mx-auto p-6 bg-white w-full">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <!-- Pickup Location with full address suggestions -->
+      <!-- Pickup Location -->
       <div class="relative mb-4 h-14">
         <label for="pickup" class="block text-lg font-medium text-gray-700">
-          Pickup Location
+          {{ t("bookingForm.labels.pickupLocation") }}
         </label>
         <input
           type="text"
@@ -13,7 +13,7 @@
           @input="fetchSuggestions"
           required
           class="mt-1 block w-full p-2 border border-gray-300 rounded-sm h-14"
-          placeholder="Enter pickup address"
+          :placeholder="t('bookingForm.placeholders.location')"
           autocomplete="off"
           :class="[
             'mt-1 block w-full p-2 rounded-sm h-14 transition-colors duration-500',
@@ -22,7 +22,6 @@
               : 'border border-gray-300',
           ]"
         />
-
         <ul
           v-if="suggestionsPickup.length"
           class="absolute z-10 bg-white w-full border border-gray-300 max-h-48 overflow-auto shadow"
@@ -41,7 +40,7 @@
       <!-- Hours -->
       <div class="mb-4 h-14">
         <label for="hours" class="block text-lg font-medium text-gray-700">
-          Select Hours
+          {{ t("bookingForm.labels.hours") }}
         </label>
         <select
           id="hours"
@@ -55,9 +54,11 @@
               : 'border border-gray-300',
           ]"
         >
-          <option value="" disabled>Select number of hours</option>
+          <option value="" disabled>
+            {{ t("bookingForm.placeholders.hours") }}
+          </option>
           <option v-for="hour in hoursOptions" :key="hour" :value="hour">
-            {{ hour }} {{ hour === 1 ? "Hour" : "Hours" }}
+            {{ hour }} {{ hour === 4 ? t("bookingForm.units.hour") : t("bookingForm.units.hours") }}
           </option>
         </select>
       </div>
@@ -68,7 +69,7 @@
           for="pickupDateTime"
           class="block text-lg font-medium text-gray-700"
         >
-          Pickup Date & Time
+          {{ t("bookingForm.labels.dateTime") }}
         </label>
         <input
           type="datetime-local"
@@ -92,6 +93,9 @@
 import debounce from "lodash.debounce";
 import { storeToRefs } from "pinia";
 import { useBookingStore } from "@/stores/booking";
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 
 const bookingStore = useBookingStore();
 const { form, suggestionsPickup } = storeToRefs(bookingStore);

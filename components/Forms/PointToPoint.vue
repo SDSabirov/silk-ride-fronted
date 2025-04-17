@@ -1,13 +1,10 @@
 <template>
-  <form
-    @submit.prevent
-    class="max-w-screen-xl mx-auto p-6 bg-white w-full"
-  >
+  <form @submit.prevent class="max-w-screen-xl mx-auto p-6 bg-white w-full">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       <!-- Pickup Location -->
       <div class="mb-4 relative h-14">
         <label for="pickup" class="block text-lg font-medium text-gray-700">
-          Pickup Location
+          {{ t("bookingForm.labels.pickupLocation") }}
         </label>
         <input
           type="text"
@@ -16,7 +13,7 @@
           @input="fetchSuggestions('pickup')"
           required
           class="mt-1 block w-full p-2 border border-gray-300 rounded-sm h-full"
-          placeholder="Enter pickup address"
+          :placeholder="t('bookingForm.placeholders.location')"
           :class="[
             'mt-1 block w-full p-2 rounded-sm h-14 transition-colors duration-500',
             bookingStore.errors.pickup
@@ -42,7 +39,7 @@
       <!-- Drop-Off Location -->
       <div class="mb-4 relative h-14">
         <label for="dropoff" class="block text-lg font-medium text-gray-700">
-          Drop-Off Location
+          {{ t("bookingForm.labels.dropoffLocation") }}
         </label>
         <input
           type="text"
@@ -51,7 +48,7 @@
           @input="fetchSuggestions('dropoff')"
           required
           class="mt-1 block w-full p-2 border border-gray-300 rounded-sm h-full"
-          placeholder="Enter drop-off address"
+          :placeholder="t('bookingForm.placeholders.location')"
           :class="[
             'mt-1 block w-full p-2 rounded-sm h-14 transition-colors duration-500',
             bookingStore.errors.dropoff
@@ -77,7 +74,7 @@
       <!-- Pickup Date and Time -->
       <div class="mb-4 h-14">
         <label for="pickupDateTime" class="block text-lg font-medium text-gray-700">
-          Pickup Date & Time
+          {{ t("bookingForm.labels.dateTime") }}
         </label>
         <input
           type="datetime-local"
@@ -86,9 +83,11 @@
           required
           class="mt-1 block w-full p-2 border border-gray-300 rounded-sm h-full"
           :class="[
-          'mt-1 block w-full p-2 rounded-sm h-14 transition-colors duration-500',
-          bookingStore.errors.pickupDateTime ? 'border border-red-500' : 'border border-gray-300'
-        ]"
+            'mt-1 block w-full p-2 rounded-sm h-14 transition-colors duration-500',
+            bookingStore.errors.pickupDateTime
+              ? 'border border-red-500'
+              : 'border border-gray-300',
+          ]"
         />
       </div>
     </div>
@@ -99,7 +98,9 @@
 import debounce from "lodash.debounce";
 import { storeToRefs } from "pinia";
 import { useBookingStore } from "@/stores/booking";
+import { useI18n } from 'vue-i18n';
 
+const { t } = useI18n();
 const bookingStore = useBookingStore();
 
 // Use storeToRefs to create reactive references from the booking store

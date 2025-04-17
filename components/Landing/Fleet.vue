@@ -41,6 +41,7 @@
                 </NuxtLink>
                 <NuxtLink :to="localePath('/fleet/mercedes-e-class')" class="flex w-[220px] flex items-center space-x-2 justify-center text-white text-lg hover:text-gold hover:text-black p-2 capitalize whitespace-nowrap">
                   <span>{{ $t('servicesSection.learnMore') }}</span>
+                  <span class="sr-only">{{ $t('srOnly.aboutEClass') }}</span>
                   <span><i class="bx bx-right-arrow-alt"></i></span>
                 </NuxtLink>
               </div>
@@ -66,6 +67,7 @@
                 </NuxtLink>
                 <NuxtLink :to="localePath('/fleet/mercedes-v-class')" class="flex w-[220px] flex items-center space-x-2 justify-center text-white text-lg hover:text-gold hover:text-black p-2 capitalize whitespace-nowrap">
                   <span>{{ $t('servicesSection.learnMore') }}</span>
+                  <span class="sr-only">{{ $t('srOnly.aboutVClass') }}</span>
                   <span><i class="bx bx-right-arrow-alt"></i></span>
                 </NuxtLink>
               </div>
@@ -91,6 +93,7 @@
                 </NuxtLink>
                 <NuxtLink :to="localePath('/fleet/mercedes-s-class')" class="flex w-[220px] flex items-center space-x-2 justify-center text-white text-lg hover:text-gold hover:text-black p-2 capitalize whitespace-nowrap">
                   <span>{{ $t('servicesSection.learnMore') }}</span>
+                  <span class="sr-only">{{ $t('srOnly.aboutSClass') }}</span>
                   <span><i class="bx bx-right-arrow-alt"></i></span>
                 </NuxtLink>
               </div>

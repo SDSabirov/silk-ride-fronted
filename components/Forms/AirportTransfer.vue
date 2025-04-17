@@ -1,13 +1,13 @@
 <template>
   <form
-    @submit.prevent="handleSubmit"
+    @submit.prevent
     class="max-w-screen-xl mx-auto p-6 bg-white w-full"
   >
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       <!-- Airport -->
       <div class="mb-4 h-14">
         <label for="airport" class="block text-lg font-medium text-gray-700">
-          Select Airport
+          {{ t("bookingForm.labels.selectAirport") }}
         </label>
         <select
           id="airport"
@@ -15,11 +15,11 @@
           required
           class="mt-1 block w-full p-2 border border-gray-300 rounded-sm h-full"
           :class="[
-          'mt-1 block w-full p-2 rounded-sm h-14 transition-colors duration-500',
-          bookingStore.errors.airport ? 'border border-red-500' : 'border border-gray-300'
-        ]"
+            'mt-1 block w-full p-2 rounded-sm h-14 transition-colors duration-500',
+            bookingStore.errors.airport ? 'border border-red-500' : 'border border-gray-300'
+          ]"
         >
-          <option value="" disabled>Your arrival/departure airport</option>
+          <option value="" disabled>{{ t("bookingForm.placeholders.airport") }}</option>
           <option
             v-for="airport in airportOptions"
             :key="airport"
@@ -42,12 +42,12 @@
           @input="fetchSuggestions"
           required
           class="mt-1 block w-full p-2 border border-gray-300 rounded-sm h-14"
-          placeholder="Enter address"
+          :placeholder="t('bookingForm.placeholders.location')"
           autocomplete="off"
           :class="[
-          'mt-1 block w-full p-2 rounded-sm h-14 transition-colors duration-500',
-          bookingStore.errors.pickup || bookingStore.errors.dropoff ? 'border border-red-500' : 'border border-gray-300'
-        ]"
+            'mt-1 block w-full p-2 rounded-sm h-14 transition-colors duration-500',
+            bookingStore.errors.pickup || bookingStore.errors.dropoff ? 'border border-red-500' : 'border border-gray-300'
+          ]"
         />
         <ul
           v-if="suggestionsPickup.length"
@@ -67,21 +67,21 @@
       <!-- Flight Number -->
       <div class="relative mb-4 h-14">
         <label for="flight" class="block text-lg font-medium text-gray-700">
-          Flight Number
+          {{ t("bookingForm.labels.flightNumber") }}
         </label>
         <input
           type="text"
           id="flight"
           v-model="form.flightNumber"
           class="mt-1 block w-full p-2 border border-gray-300 rounded-sm h-14"
-          placeholder="Your Flight Number (i.e HY201)"
+          :placeholder="t('bookingForm.placeholders.flightNumber')"
         />
       </div>
 
       <!-- Date & Time -->
       <div class="mb-4 h-14">
         <label for="pickupDateTime" class="block text-lg font-medium text-gray-700">
-          Date & Time
+          {{ t("bookingForm.labels.dateTime") }}
         </label>
         <input
           type="datetime-local"
@@ -90,16 +90,16 @@
           required
           class="mt-1 block w-full p-2 border border-gray-300 rounded-sm h-full"
           :class="[
-          'mt-1 block w-full p-2 rounded-sm h-14 transition-colors duration-500',
-          bookingStore.errors.pickupDateTime ? 'border border-red-500' : 'border border-gray-300'
-        ]"
+            'mt-1 block w-full p-2 rounded-sm h-14 transition-colors duration-500',
+            bookingStore.errors.pickupDateTime ? 'border border-red-500' : 'border border-gray-300'
+          ]"
         />
       </div>
 
       <!-- Transfer Type -->
       <div class="mb-4 md:flex md:space-x-4">
         <label class="block text-lg font-medium text-gray-700">
-          I will be
+          {{ t("bookingForm.labels.transferType") }}
         </label>
         <div class="mt-1 flex items-center">
           <label class="inline-flex items-center mr-6">
@@ -110,7 +110,7 @@
               v-model="form.tripType"
               class="form-radio"
             />
-            <span class="ml-2">Arriving</span>
+            <span class="ml-2">{{ t("bookingForm.options.arriving") }}</span>
           </label>
           <label class="inline-flex items-center">
             <input
@@ -120,7 +120,7 @@
               v-model="form.tripType"
               class="form-radio"
             />
-            <span class="ml-2">Departing</span>
+            <span class="ml-2">{{ t("bookingForm.options.departing") }}</span>
           </label>
         </div>
       </div>
@@ -133,6 +133,9 @@ import debounce from "lodash.debounce";
 import { storeToRefs } from "pinia";
 import { computed, watch } from "vue";
 import { useBookingStore } from "@/stores/booking";
+import { useI18n } from '#imports';
+
+const { t } = useI18n();
 
 const bookingStore = useBookingStore();
 const { form, suggestionsPickup } = storeToRefs(bookingStore);
@@ -179,7 +182,9 @@ const locationModel = computed({
 // For "arrival": show "Drop off Location".
 // For "departure": show "Pick up Location".
 const locationLabel = computed(() =>
-  form.value.tripType === "arrival" ? "Drop off Location" : "Pick up Location"
+  form.value.tripType === "arrival"
+    ? t('bookingForm.labels.dropoffLocation')
+    : t('bookingForm.labels.pickupLocation')
 );
 
 

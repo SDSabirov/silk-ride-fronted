@@ -125,6 +125,7 @@
       "seoTitle": "Our Luxury Chauffeur Fleet | Executive Car Hire London & UK",
       "seoDescription": "Discover Silk Ride's premium fleet of chauffeur-driven vehicles in London, including Mercedes-Benz E-Class, S-Class, and spacious V-Class models. Travel in luxury, comfort, and style with our executive cars."
     },
+
     "services": {
       "title": "Our Services",
       "heroTitle": "Services",
@@ -175,7 +176,7 @@
           "title": "Hourly Chauffeur Hire",
           "description": "Need a luxury car for a few hours or a full day? Our hourly chauffeur service gives you the freedom to move at your own pace—perfect for business meetings, sightseeing, or shopping trips.",
           "bullets": [
-            "Flexible bookings – Hire a chauffeur for 3+ hours or a full day.",
+            "Flexible bookings – Hire a chauffeur for 4+ hours or a full day.",
             "Door-to-door service – Your chauffeur is at your disposal.",
             "Explore in style – Perfect for city tours & special occasions."
           ],
@@ -214,6 +215,31 @@
           "note": ""
         }
       }
+    },
+
+    "about": {
+      "title": "About Us",
+      "intro": {
+        "title": "Our Company",
+        "paragraph": "At Silk Ride, we believe that every journey should be as seamless and luxurious as the destination itself. We provide premium chauffeur services in London and across the UK, ensuring comfort, reliability, and sophistication at every step. Our services include airport transfers, executive business travel, intercity rides, and chauffeur hire for special events. Whether you need a smooth transfer from Heathrow, a VIP ride across the city, or a long-distance journey in ultimate comfort, we’ve got you covered. With over 10 years of experience and 50000+ satisfied clients, we have built a reputation for excellence, professionalism, and personalized service. Book your ride today and experience the Silk Ride difference."
+        
+      },
+      "standards": {
+          "title": "Elite Chauffeurs, Exceptional Service",
+          "description": "We handpick only the most experienced and professional chauffeurs to deliver a world-class travel experience. Each driver undergoes a rigorous selection process, including thorough background checks, advanced driving assessments, and specialized customer service training. With years of expertise in luxury transportation, our chauffeurs ensure every journey is smooth, safe, and tailored to your needs. Whether for business or leisure, our unwavering commitment to excellence guarantees a seamless, first-class ride every time.",
+          "safetyTitle": "Safety First",
+          "safetyParagraph": "Recognized for our dedication to safety, professionalism, and luxury service, we take pride in maintaining the highest industry standards.",
+          "badges": {
+            "licenceTitle": "Licenced operator",
+            "licenceDesc": "We are a licensed Hertsmere Borough Council Private Hire License operator",
+            "chauffeurTitle": "Licenced Chauffeurs",
+            "chauffeurDesc": "All of our chauffeurs are licensed for private hire.",
+            "checkTitle": "Background Check",
+            "checkDesc": "All of our chauffeurs are required to have an ‘enhanced’ criminal records check.",
+            "experienceTitle": "Years of Experience",
+            "experienceDesc": "All of our chauffeurs are experienced professionals."
+          }
+        }
     }
     
   },
@@ -321,5 +347,107 @@
       },
       "galleryTitle": "Our Gallery"
     }
+  },
+
+  "bookingForm": {
+    "labels": {
+      "selectAirport": "Select Airport",
+      "flightNumber": "Flight Number",
+      "dateTime": "Date & Time",
+      "dropoffLocation": "Drop off Location",
+      "pickupLocation": "Pick up Location",
+      "transferType": "I will be",
+      "chooseService": "Choose your service",
+      "hours": "Select Hours"
+    },
+    "placeholders": {
+      "airport": "Your arrival/departure airport",
+      "location": "Enter address",
+      "flightNumber": "Your Flight Number (i.e HY201)",
+      "hours": "Select number of hours"
+    },
+    "options": {
+      "arriving": "Arriving",
+      "departing": "Departing"
+    },
+    "serviceTypes": {
+      "airport": "Airport Transfer",
+      "point": "Point-to-Point",
+      "hourly": "Hourly Service"
+    },
+    "units": {
+      "hour": "Hours", 
+      "hours": "Hours"
+    },
+    "fleet": {
+      "common": {
+        "carryBags": "Up to {count} carry bags",
+        "luggage": "Up to {count} luggages",
+        "passengers": "Up to {count} passengers",
+        "wifi": "Wi-Fi included",
+        "select":"Select Vehicle"
+      },
+      "features": {
+        "chauffeur": "First class chauffeur",
+        "freeParking": "Free 60 mins airport parking & waiting",
+        "shortWait": "Free 15 mins waiting for other journeys",
+        "cancellation": "Free cancellation within 24 hours"
+      }
+     },
+    "step3": {
+      "labels": {
+        "name": "Name",
+        "surname": "Surname",
+        "phone": "Contact Number",
+        "email": "Email",
+        "passengers": "Number of passengers",
+        "adults": "Adults",
+        "children": "Children",
+        "infants": "Infants",
+        "additionalInfo": "Additional Information"
+      },
+      "placeholders": {
+        "name": "John",
+        "surname": "Doe",
+        "phone": "+44 123456789",
+        "email": "Your email address",
+        "additionalInfo": "Any additional requirements or requests"
+      }
+    },
+    "summary": {
+      "labels": {
+        "fullName": "Full Name",
+        "contactNumber": "Contact Number",
+        "email": "Email",
+        "additionalInfo": "Additional Information",
+        "passengers": "Passengers",
+        "adults": "Adults",
+        "children": "Children",
+        "infants": "Infants",
+        "total": "Total",
+        "service": "Service",
+        "type": "Type",
+        "car": "Car",
+        "pickup": "Pickup at",
+        "dropoff": "Dropoff at",
+        "duration": "Hire Duration",
+        "flightNumber": "Flight Number",
+        "dateTime": "Date & Time"
+      },
+      "types": {
+        "airport": "Airport Transfer | { direction }",
+        "point": "Point To Point",
+        "hourly": "Hourly Hire"
+      }
+    }
+  },
+  "srOnly": {
+    "aboutVClass": "About V Class",
+    "aboutEClass": "About E Class",
+    "aboutSClass": "About S Class",
+    "aboutSilkRide": "About Silk Ride"
+  }
+    
+  
 }
-}
+

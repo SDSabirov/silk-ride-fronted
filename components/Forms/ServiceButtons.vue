@@ -4,7 +4,7 @@
       for="serviceType"
       class="block text-lg font-medium text-gray-700 mb-2"
     >
-      Choose your service
+      {{ t('bookingForm.labels.chooseService') }}
     </label>
     <div class="flex flex-col md:flex-row gap-6 w-full">
       <button
@@ -19,7 +19,7 @@
             : 'bg-gray-200 text-gray-700',
         ]"
       >
-        {{ type.label }}
+        {{ t(type.label) }}
         <span v-if="bookingStore.bookingType === type.value" class="ml-2"><i class='bx bx-check'></i></span>
       </button>
     </div>
@@ -28,14 +28,15 @@
 
 <script setup>
 import { useBookingStore } from "@/stores/booking";
-
+import { useI18n } from 'vue-i18n';
+const { t } = useI18n();
 // Access the booking store
 const bookingStore = useBookingStore();
 
 const serviceTypes = [
-  { value: "airportTransfer", label: "Airport Transfer" },
-  { value: "pointToPoint", label: "Point-to-Point" },
-  { value: "hourlyService", label: "Hourly Service" },
+  { value: "airportTransfer", label: "bookingForm.serviceTypes.airport" },
+  { value: "pointToPoint", label: "bookingForm.serviceTypes.point" },
+  { value: "hourlyService", label: "bookingForm.serviceTypes.hourly" },
 ];
 </script>
 

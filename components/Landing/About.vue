@@ -14,7 +14,7 @@
           <div class="w-full flex items-center justify-end text-xl text-white self-end">
             <NuxtLink :to="localePath('/about')">
               <button class="px-8 py-3 bg-black flex items-center space-x-2">
-                <span>{{ $t('about.learnMore') }}</span>
+                <span>{{ $t('about.learnMore') }}</span><span class="sr-only">{{ $t('srOnly.aboutSilkRide') }}</span>
                 <span><i class="bx bx-chevrons-right"></i></span>
               </button>
             </NuxtLink>
