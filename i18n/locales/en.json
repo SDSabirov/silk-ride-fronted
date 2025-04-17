@@ -121,9 +121,8 @@
     "fleet": {
       "heroTitle": "Our Fleet",
       "introTitle": "Sophistication Meets Comfort",
-      "introText": "Our premium fleet, led by the luxurious Mercedes-Benz V-Class, is crafted for those who value comfort and elegance. Whether you choose the spacious V-Class, the stylish E-Class, or the luxurious S-Class, every ride promises a first-class experience.",
-      "seoTitle": "Our Luxury Chauffeur Fleet | Executive Car Hire London & UK",
-      "seoDescription": "Discover Silk Ride's premium fleet of chauffeur-driven vehicles in London, including Mercedes-Benz E-Class, S-Class, and spacious V-Class models. Travel in luxury, comfort, and style with our executive cars."
+      "introText": "Our premium fleet, led by the luxurious Mercedes-Benz V-Class, is crafted for those who value comfort and elegance. Whether you choose the spacious V-Class, the stylish E-Class, or the luxurious S-Class, every ride promises a first-class experience."
+      
     },
 
     "services": {
@@ -350,6 +349,18 @@
   },
 
   "bookingForm": {
+    "heading": "Book Your Ride",
+      "buttons": {
+        "back": "Back",
+        "next": "Next",
+        "getQuote": "Get Quote"
+      },
+    "hero": {
+      "start": "Start Your",
+      "highlight": "Luxury Travel",
+      "subtitle": "Chauffeur services designed to redefine comfort and sophistication for every journey.",
+      "alt": "Luxury Chauffeur"
+    },
     "labels": {
       "selectAirport": "Select Airport",
       "flightNumber": "Flight Number",
@@ -446,8 +457,43 @@
     "aboutEClass": "About E Class",
     "aboutSClass": "About S Class",
     "aboutSilkRide": "About Silk Ride"
+  },
+
+  "seo": {
+    "home": {
+      "title": "Luxury Chauffeur Service in London & UK | Private Car Hire",
+      "description": "Silk Ride offers exceptional luxury chauffeur services in London, specializing in private car hire, executive travel, and airport transfers. Enjoy unmatched comfort, discretion, and reliability with our professional chauffeurs. Book your premium Silk Ride experience today."
+    },
+    "fleet":{
+      "title": "Our Luxury Chauffeur Fleet | Executive Car Hire London & UK",
+      "description": "Discover Silk Ride's premium fleet of chauffeur-driven vehicles in London, including Mercedes-Benz E-Class, S-Class, and spacious V-Class models. Travel in luxury, comfort, and style with our executive cars."
+    },
+    "services": {
+      "title": "Chauffeur Services in London & UK | Silk Ride",
+      "description": "Discover Silk Ride’s premium chauffeur services: hourly hire, airport transfers, UK & Europe transfers, city tours, event and wedding chauffeurs. Travel in luxury and style."
+    },
+    "about": {
+      "title": "About Silk Ride | Luxury Chauffeur Services in London",
+      "description": "Learn about Silk Ride’s commitment to excellence: our history, mission, and team of professional chauffeurs delivering premium airport transfers, corporate travel, and bespoke chauffeured experiences."
+    },
+    "vClass": {
+      "title": "Mercedes V‑Class Hire | VIP Group Transfers | Silk Ride",
+      "description": "Hire our spacious Mercedes V‑Class for VIP group transfers, airport pickups and city tours across London. Enjoy comfort, space and professional chauffeurs with Silk Ride."
+    },
+    "sClass": {
+      "title": "Mercedes S‑Class Chauffeur Hire | Executive Luxury | Silk Ride",
+      "description": "Experience ultimate luxury and comfort in our Mercedes S‑Class. Perfect for executive travel, VIP airport transfers and corporate events across London. Book your S‑Class with Silk Ride today."
+    },
+    "eClass": {
+      "title": "Mercedes E‑Class Chauffeur Hire | Luxury Executive Car | Silk Ride",
+      "description": "Travel in elegance with our Mercedes E‑Class for executive business trips, VIP airport transfers and private city journeys across London. Book your bespoke E‑Class experience with Silk Ride today."
+    },
+    "booking": {
+      "title": "Book Your Chauffeur Online | Silk Ride Luxury Transfers",
+      "description": "Easily book your luxury Silk Ride chauffeur online. Choose your vehicle, date and time for airport transfers, corporate travel or special events in London & UK. Instant confirmation."
+    }
   }
-    
+  
   
 }
 

@@ -114,16 +114,8 @@ import hero from "~/assets/images/eclass.webp";
 import { useI18n, useLocalePath } from '#imports';
 
 const { t } = useI18n()
-useHead({
-  title: "Mercedes E-Class Chauffeur Hire London & UK| Executive Car Service",
-  meta: [
-    {
-      name: "description",
-      content:
-        "Discover Silk Ride's premium fleet of chauffeur-driven vehicles in London, including Mercedes-Benz E-Class, S-Class, and spacious V-Class models. Travel in luxury, comfort, and style with our executive cars.Hire a chauffeur-driven Mercedes E-Class in London with Silk Ride. The perfect blend of comfort, style, and professionalism for business travel, airport transfers, and city rides. Book your executive car today.",
-    },
-  ],
-});
+import { useSeo } from '~/utils/useSeo'
+useSeo('eClass')
 const galleryImages = [
   { src: hero, alt: "Mercedes-Benz V-Class Front View" },
   { src: hero, alt: "Mercedes-Benz V-Class Interior" },

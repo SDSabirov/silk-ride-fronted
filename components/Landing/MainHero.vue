@@ -14,10 +14,10 @@
     <header
       class="relative z-10 text-center space-y-8 text-white flex flex-col justify-center items-center h-full max-w-screen-xl mx-auto"
     >
-      <h1 class="text-4xl md:text-7xl font-semibold tracking-wide capitalize">
+      <h1 class="text-2xl md:text-7xl font-semibold tracking-wide capitalize">
         {{ $t("hero.title").split(' ')[0] }} <span class="text-gold"> {{ $t("hero.title").split(' ')[1] }} {{ $t("hero.title").split(' ')[2] }}</span>
       </h1>
-      <p class="text-xl md:text-2xl font-light px-2 md:px-0 w-full whitespace-wrap capitalize">
+      <p class="text-lg md:text-2xl font-light px-2 md:px-0 w-full whitespace-wrap capitalize">
         {{ $t("hero.subtitle") }}
       </p>
 

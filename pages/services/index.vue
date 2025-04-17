@@ -22,13 +22,6 @@ import cover from "@/assets/images/covers/services-cover.webp"
 
 const { t } = useI18n()
 
-useHead({
-  title: t("pages.services.seoTitle"),
-  meta: [
-    {
-      name: "description",
-      content: t("pages.services.seoDescription")
-    }
-  ]
-})
+import { useSeo } from '~/utils/useSeo'
+useSeo('services')
 </script>

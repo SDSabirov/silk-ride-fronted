@@ -3,8 +3,8 @@
     @submit.prevent
     class="max-w-screen-xl mx-auto p-6 bg-white shadow-md rounded-lg w-full overflow-x-hidden relative"
   >
-    <h2 class="text-2xl md:text-6xl font-semibold text-black mb-4 text-center mb-8">
-      Book Your Ride
+    <h2 class="text-xl md:text-4xl font-semibold text-black mb-4 text-center mb-8">
+      {{ $t("bookingForm.heading") }}
     </h2>
 
     <!-- Navigation for booking steps -->
@@ -46,7 +46,7 @@
         class="py-3 px-10 text-gray-700 font-medium text-lg rounded-sm hover:bg-gold hover:text-black transition-colors duration-500 whitespace-nowrap"
       >
         <i class="bx bx-left-arrow-alt"></i>
-        Back
+        {{ $t("bookingForm.buttons.back") }}
       </button>
       <button
         v-if="bookingStore.currentStep < 4"
@@ -54,7 +54,7 @@
         type="button"
         class="py-3 px-10 bg-black text-white font-medium text-lg rounded-sm hover:bg-gold hover:text-black transition-colors duration-500"
       >
-        Next
+      {{ $t("bookingForm.buttons.next") }}
         <i class="bx bx-right-arrow-alt"></i>
       </button>
       <!-- Confirm & Pay now calls submitBooking for booking submission -->
@@ -64,7 +64,7 @@
         type="button"
         class="py-3 px-10 bg-black text-white font-medium text-lg rounded-sm hover:bg-gold hover:text-black transition-colors duration-500 whitespace-nowrap"
       >
-        Get Quote
+      {{ $t("bookingForm.buttons.getQuote") }}
         <i class="bx bx-right-arrow-alt"></i>
       </button>
     </div>

@@ -16,6 +16,7 @@
 <script setup>
 import cover from "@/assets/images/covers/about-us.webp";
 import { useI18n } from '#imports';
-
+import { useSeo } from '~/utils/useSeo'
+useSeo('about')
 const { t } = useI18n();
 </script>

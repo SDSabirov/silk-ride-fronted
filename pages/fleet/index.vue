@@ -21,13 +21,6 @@ import { useI18n } from "#imports";
 
 const { t } = useI18n();
 
-useHead({
-  title: t("pages.fleet.seoTitle"),
-  meta: [
-    {
-      name: "description",
-      content: t("pages.fleet.seoDescription"),
-    },
-  ],
-});
+import { useSeo } from '~/utils/useSeo'
+useSeo('fleet')
 </script>

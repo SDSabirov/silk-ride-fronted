@@ -14,14 +14,6 @@
 </template>
 
 <script setup>
-useHead({
-  title: "Book Your Chauffeur Online ",
-  meta: [
-    {
-      name: "description",
-      content:
-        "Easily book your chauffeur-driven car online with Silk Ride. Choose from our luxury fleet, including Mercedes E-Class, S-Class, and V-Class. Reliable, professional service across London and beyond.",
-    },
-  ],
-});
+import { useSeo } from '~/utils/useSeo'
+useSeo('booking')
 </script>
