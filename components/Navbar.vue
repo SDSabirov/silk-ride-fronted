@@ -12,7 +12,7 @@
         <NuxtLink to="/" aria-label="Go to home page">
           <div class="flex flex-col justify-center items-center space-y-2">
             <img src="/logo.svg" alt="Silk Ride Logo" class="h-10 w-10" loading="lazy" />
-            <h1 class="text-md font-semibold text-gold">SILK RIDE</h1>
+            <h2 class="text-md font-semibold text-gold">SILK RIDE</h2>
           </div>
         </NuxtLink>
 

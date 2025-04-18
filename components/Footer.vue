@@ -6,7 +6,7 @@
         <div class="hidden md:block">
           <div class="flex space-x-2 items-center mb-4">
             <img src="/logo.svg" alt="Silk Ride Logo" class="h-12 w-12" />
-            <h1 class="text-3xl font-semibold text-gold">SILK RIDE</h1>
+            <h2 class="text-3xl font-semibold text-gold">SILK RIDE</h2>
           </div>
           <p class="text-gray-300">
             {{ $t('footer.description') }}
