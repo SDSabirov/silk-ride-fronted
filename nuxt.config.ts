@@ -57,11 +57,11 @@ export default defineNuxtConfig({
     },
   },
   site:{
-    name:"Silk Ride",
+    name:"Silk Ride Chauffeur Services",
   },
   seo: {
     baseUrl: 'https://silkride.co.uk',
-    siteName: 'Silk Ride',
+    siteName: 'Silk Ride Chauffeur Services',
     title: 'Luxury Chauffeur & Airport Transfers in London ',
     description: 'Silk Ride Chauffeur Services offers premium airport transfers to Heathrow, Gatwick, Luton, Stansted & beyond, luxury business transport in Central London, wedding cars, and more. Travel in comfort and style with our V-Class, E-Class, and S-Class vehicles.',
     ogSiteName: 'Silk Ride',

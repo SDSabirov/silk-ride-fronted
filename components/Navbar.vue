@@ -2,7 +2,7 @@
   <nav
     :class="[
       'fixed top-0 left-0 w-full text-white z-50 transition-colors duration-200 ease-in-out animate-fadeDown',
-      isScrolled || menuOpen ? 'bg-black/70 shadow-md backdrop-blur border-white/30' : 'bg-transparent'
+      isScrolled || menuOpen || isPolicyPage ? 'bg-black/70 shadow-md backdrop-blur border-white/30' : 'bg-transparent'
     ]"
     ref="navRef"
   >
@@ -140,7 +140,11 @@ const currentLanguage = ref('en');
 const router = useRouter();
 
 const { t } = useI18n()
+const route = useRoute()
 
+const isPolicyPage = computed(() =>
+  route.path === localePath('/terms-of-service') || route.path === localePath('/privacy-policy') || route.path === localePath('/faq')
+)
 // Navigation links (without "About" as it's now in the dropdown)
 const navLinks = [
   { path: localePath('/'), label: t('navbar.home') },

@@ -239,6 +239,11 @@
             "experienceDesc": "All of our chauffeurs are experienced professionals."
           }
         }
+    },
+    "blog": {
+      "title": "Our Blog",
+      "intro": "Luxury travel insights and chauffeur service tips.",
+      "paragraph": "Discover expert articles on premium travel, event transportation, airport pickups, and insider tips from the world of private chauffeurs. Stay informed, inspired, and prepared for your next ride with Silk Ride."
     }
     
   },
@@ -491,7 +496,60 @@
     "booking": {
       "title": "Book Your Chauffeur Online | Silk Ride Luxury Transfers",
       "description": "Easily book your luxury Silk Ride chauffeur online. Choose your vehicle, date and time for airport transfers, corporate travel or special events in London & UK. Instant confirmation."
+    },
+    "faq":{
+      "title":"Frequently Asked Questions",
+      "description":"Explore answers to the most common questions about our luxury chauffeur services, bookings, airport transfers, and vehicles. Everything you need to know before your ride."
+    },
+    "blog":{
+      "title": "Silk Ride Blog | Chauffeur Service Tips & Luxury Travel Insights",
+      "description": "Read expert articles from Silk Ride on premium chauffeur services, airport transfers, luxury travel tips, and exclusive client experiences. Stay informed and inspired."
     }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "items": [
+      {
+        "question": "How do I book a chauffeur service?",
+        "answer": "You can book a ride directly on our website, through our app, or by contacting our support team."
+      },
+      {
+        "question": "What vehicles are available?",
+        "answer": "We offer a premium fleet including Mercedes V-Class, E-Class, and S-Class vehicles."
+      },
+      {
+        "question": "Can I make changes to my booking?",
+        "answer": "Yes, you can modify or cancel your booking up to 24 hours before the scheduled time."
+      },
+      {
+        "question": "Is airport pickup included?",
+        "answer": "Yes, we offer meet and greet services at all major airports."
+      },
+      {
+        "question": "Do you provide child seats?",
+        "answer": "Child seats are available upon request. Please mention it while booking."
+      },
+      {
+        "question": "How are your chauffeurs trained?",
+        "answer": "All our chauffeurs are professionally trained, experienced, and background-checked."
+      },
+      {
+        "question": "What payment methods do you accept?",
+        "answer": "We accept all major credit/debit cards, Apple Pay, and bank transfers."
+      },
+      {
+        "question": "Can I book a chauffeur for a full day?",
+        "answer": "Yes, hourly and daily bookings are available for both business and personal needs."
+      },
+      {
+        "question": "Is Wi-Fi available in the car?",
+        "answer": "Yes, complimentary Wi-Fi is available in all vehicles."
+      },
+      {
+        "question": "What happens if my flight is delayed?",
+        "answer": "We track your flight in real-time and adjust the pickup accordingly—no extra charge."
+      }
+    ]
   }
   
   
