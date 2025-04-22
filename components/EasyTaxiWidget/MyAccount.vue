@@ -1,0 +1,42 @@
+<template>
+  <div class="customer-iframe">
+    <iframe
+      ref="customerIframe"
+      src="https://silkride.trial.easytaxioffice.com/customer?site_key=7e3f3d3085b900d598bc40543d611575"
+      id="eto-iframe-customer"
+      allow="geolocation"
+      width="100%"
+      height="250"
+      scrolling="no"
+      frameborder="0"
+      style="width: 1px; min-width: 100%; border: 0"
+    ></iframe>
+  </div>
+</template>
+
+<script setup>
+onMounted(() => {
+  const script = document.createElement("script");
+  script.src =
+    "https://silkride.trial.easytaxioffice.com/assets/plugins/iframe-resizer/iframeResizer.min.js";
+  script.onload = () => {
+    if (window.iFrameResize) {
+      window.iFrameResize(
+        {
+          log: false,
+          targetOrigin: "*",
+          checkOrigin: false,
+        },
+        "#eto-iframe-customer"
+      );
+    }
+  };
+  document.head.appendChild(script);
+});
+</script>
+
+<style scoped>
+.customer-iframe {
+  width: 100%;
+}
+</style>
