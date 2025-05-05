@@ -15,7 +15,7 @@ import { useSeo } from '~/utils/useSeo'
 useSeo('home')
 const schema = {
   "@context": "https://schema.org",
-  "@type": "ChauffeurService",
+  "@type": "LocalBusiness",
   "name": "Silk Ride Chauffeur Services",
   "url": "https://silkride.co.uk",
   "logo": "https://silkride.co.uk/logo.svg",
