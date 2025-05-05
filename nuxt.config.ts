@@ -122,6 +122,9 @@ export default defineNuxtConfig({
       "Playfair+Display": [400, 500, 700],
       "Open+Sans": [300, 400, 600], // For multi-word font names
     },
-    display: "swap", // Optional: Controls font-display behavior
+    display: "swap", 
+    preload: true,         // ✅ Adds <link rel="preload"> tags
+    preconnect: true,      // ✅ Adds <link rel="preconnect"> to Google fonts
+    inject: true 
   },
 });

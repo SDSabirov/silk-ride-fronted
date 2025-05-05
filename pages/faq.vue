@@ -11,41 +11,48 @@
 <script setup>
 import { useI18n } from 'vue-i18n'
 import { useSeo } from '~/utils/useSeo'
+import { onMounted, ref } from 'vue'
+
 useSeo('faq')
 
 const { t } = useI18n()
 
-const faqs = [
-  { question: t('faq.items[0].question'), answer: t('faq.items[0].answer') },
-  { question: t('faq.items[1].question'), answer: t('faq.items[1].answer') },
-  { question: t('faq.items[2].question'), answer: t('faq.items[2].answer') },
-  { question: t('faq.items[3].question'), answer: t('faq.items[3].answer') },
-  { question: t('faq.items[4].question'), answer: t('faq.items[4].answer') },
-  { question: t('faq.items[5].question'), answer: t('faq.items[5].answer') },
-  { question: t('faq.items[6].question'), answer: t('faq.items[6].answer') },
-  { question: t('faq.items[7].question'), answer: t('faq.items[7].answer') },
-  { question: t('faq.items[8].question'), answer: t('faq.items[8].answer') },
-  { question: t('faq.items[9].question'), answer: t('faq.items[9].answer') },
-]
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": faqs.map(faq => ({
-    "@type": "Question",
-    "name": faq.question,
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": faq.answer
-    }
-  }))
-}
+const faqs = ref([])
 
-useHead({
-  script: [
-    {
-      type: 'application/ld+json',
-      children: JSON.stringify(faqSchema)
-    }
+onMounted(() => {
+  faqs.value = [
+    { question: t('faq.items[0].question'), answer: t('faq.items[0].answer') },
+    { question: t('faq.items[1].question'), answer: t('faq.items[1].answer') },
+    { question: t('faq.items[2].question'), answer: t('faq.items[2].answer') },
+    { question: t('faq.items[3].question'), answer: t('faq.items[3].answer') },
+    { question: t('faq.items[4].question'), answer: t('faq.items[4].answer') },
+    { question: t('faq.items[5].question'), answer: t('faq.items[5].answer') },
+    { question: t('faq.items[6].question'), answer: t('faq.items[6].answer') },
+    { question: t('faq.items[7].question'), answer: t('faq.items[7].answer') },
+    { question: t('faq.items[8].question'), answer: t('faq.items[8].answer') },
+    { question: t('faq.items[9].question'), answer: t('faq.items[9].answer') }
   ]
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.value.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  }
+
+  useHead({
+    script: [
+      {
+        type: 'application/ld+json',
+        children: JSON.stringify(faqSchema)
+      }
+    ]
+  })
 })
 </script>
