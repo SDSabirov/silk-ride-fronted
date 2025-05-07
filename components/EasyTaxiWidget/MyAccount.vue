@@ -2,7 +2,7 @@
   <div class="customer-iframe">
     <iframe
       ref="customerIframe"
-      src="https://silkride.trial.easytaxioffice.com/customer?site_key=7e3f3d3085b900d598bc40543d611575"
+      src="https://u3396.eto2.taxi/customer?site_key=7e3f3d3085b900d598bc40543d611575"
       id="eto-iframe-customer"
       allow="geolocation"
       width="100%"
@@ -18,7 +18,7 @@
 onMounted(() => {
   const script = document.createElement("script");
   script.src =
-    "https://silkride.trial.easytaxioffice.com/assets/plugins/iframe-resizer/iframeResizer.min.js";
+    "https://u3396.eto2.taxi/assets/plugins/iframe-resizer/iframeResizer.min.js";
   script.onload = () => {
     if (window.iFrameResize) {
       window.iFrameResize(

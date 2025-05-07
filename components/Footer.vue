@@ -61,7 +61,7 @@
             <a href="#" class="text-gray-400 hover:text-white">
               <i class="bx bxl-linkedin-square bx-sm"></i>
             </a>
-            <a href="#" class="text-gray-400 hover:text-white">
+            <a href="https://wa.me/447512905514?text=Hello%2C%20I%27d%20like%20to%20request%20a%20chauffeur%20service." target="_blank" rel="noopener" class="text-gray-400 hover:text-white">
               <i class="bx bxl-whatsapp bx-sm"></i>
             </a>
           </div>
