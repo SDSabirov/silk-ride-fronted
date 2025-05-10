@@ -11,7 +11,7 @@
     />
     <CommonPageIntro
       title="Prestige on Every Mile"
-      paragraph="Experience unparalleled comfort and sophistication with the Mercedes-Benz V-Class. Designed for those who seek elegance and practicality in every journey, the V-Class offers a spacious interior, advanced technology, and a smooth driving experience. Whether it's a business trip, a family outing, or a VIP transfer, this versatile vehicle ensures you arrive in style and comfort. Discover the perfect blend of functionality and luxury with every ride."
+      paragraph="Experience unparalleled comfort and sophistication with the Mercedes-Benz S-Class. Designed for those who seek elegance and practicality in every journey, the S-Class offers a spacious interior, advanced technology, and a smooth driving experience. Whether it's a business trip, a family outing, or a VIP transfer, this versatile vehicle ensures you arrive in style and comfort. Discover the perfect blend of functionality and luxury with every ride."
     />
     <div class="flex flex-col w-full items-center justify-center py-22">
       <h2 class="text-black text-4xl font-semibold leading-loose text-center">
@@ -260,9 +260,9 @@ import { useSeo } from '~/utils/useSeo'
 useSeo('sClass')
 
 const galleryImages = [
-  { src: hero, alt: "Mercedes-Benz V-Class Front View" },
-  { src: hero, alt: "Mercedes-Benz V-Class Interior" },
-  { src: hero, alt: "Mercedes-Benz V-Class Rear View" },
+  { src: hero, alt: "Mercedes-Benz S-Class Front View" },
+  { src: hero, alt: "Mercedes-Benz S-Class Interior" },
+  { src: hero, alt: "Mercedes-Benz S-Class Rear View" },
 ];
 
 const SClass = {

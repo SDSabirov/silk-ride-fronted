@@ -550,7 +550,31 @@
         "answer": "We track your flight in real-time and adjust the pickup accordingly—no extra charge."
       }
     ]
-  }
+  },
+  "contact":{
+  "get_in_touch": "Get In Touch",
+  "friendly_team_intro": "Our friendly team is here to help",
+  "company_info_title": "Company Information",
+  "company_info_text": "Silk Ride\nWe are a licensed Hertsmere Borough Council Private Hire License operator",
+  "address_title": "Address",
+  "address_text": "Centre 42\n42 Watling Street\nWD7 7NN, Radlett\nUnited Kingdom",
+  "contact_section_title": "Contact Us",
+  "contact_section_text": "Email or call us for general queries, including marketing and partnership opportunities.",
+  "open_contact_drawer": "Open contact drawer",
+  "close_contact_drawer": "Close contact drawer",
+  "contact_us": "Contact Us",
+  "first_name": "First Name",
+  "first_name_placeholder": "John",
+  "last_name": "Last Name",
+  "last_name_placeholder": "Doe",
+  "phone": "Phone",
+   "phone_placeholder": "+44 123456 78910",
+  "email": "Email",
+  "send": "Send",
+  "message": "Message",
+  "message_placeholder": "Your message...",
+  "send_message": "Send Message"
+}
   
   
 }

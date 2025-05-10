@@ -13,11 +13,11 @@
       @click="toggleDrawer"
       @mouseenter="onHover"
       @mouseleave="onLeave"
-      class="fixed right-0 bottom-[40%] transform translate-y-[40%] bg-gold py-2 px-4 cursor-pointer z-[10000] rounded-tl-lg rounded-bl-lg text-black font-bold flex items-center space-x-2 animate-slideLeft hover:animate-slideRight"
-      aria-label="Open contact drawer"
+      class="fixed right-0 bottom-[40%] transform translate-y-[40%] bg-gold py-3 px-4 cursor-pointer z-[10000] rounded-tl-lg rounded-bl-lg text-black font-bold flex items-center space-x-2 animate-slideLeft hover:animate-slideRight"
+      :aria-label="$t('contact.open_contact_drawer')"
     >
       <span><i class="bx bxs-envelope"></i></span>
-      <p v-show="showText" class="transition-all duration-500">Contact Us</p>
+      <p v-show="showText" class="transition-all duration-500">{{ $t('contact.contact_us') }}</p>
     </button>
 
     <!-- Drawer -->
@@ -32,18 +32,18 @@
         <button
           @click="toggleDrawer"
           class="absolute top-2 right-2 text-2xl text-gray-700"
-          aria-label="Close contact drawer"
+          :aria-label="$t('contact.close_contact_drawer')"
         >
           &times;
         </button>
-        <h2 class="text-xl font-bold mb-4">Contact Us</h2>
+        <h2 class="text-xl font-bold mb-4">{{ $t('contact.contact_us') }}</h2>
 
         <!-- Optionally show an error message -->
         <p v-if="errorMessage" class="mb-4 text-red-500">{{ errorMessage }}</p>
 
         <form @submit.prevent="submitForm" class="space-y-4">
           <div>
-            <label for="name" class="block font-semibold mb-1">First Name</label>
+            <label for="name" class="block font-semibold mb-1">{{ $t('contact.first_name') }}</label>
             <input
               type="text"
               id="name"
@@ -53,7 +53,7 @@
             />
           </div>
           <div>
-            <label for="lastName" class="block font-semibold mb-1">Last Name</label>
+            <label for="lastName" class="block font-semibold mb-1">{{ $t('contact.last_name') }}</label>
             <input
               type="text"
               id="lastName"
@@ -63,7 +63,7 @@
             />
           </div>
           <div>
-            <label for="phone" class="block font-semibold mb-1">Phone</label>
+            <label for="phone" class="block font-semibold mb-1">{{ $t('contact.phone') }}</label>
             <input
               type="tel"
               id="phone"
@@ -73,7 +73,7 @@
             />
           </div>
           <div>
-            <label for="email" class="block font-semibold mb-1">Email</label>
+            <label for="email" class="block font-semibold mb-1">{{ $t('contact.email') }}</label>
             <input
               type="email"
               id="email"
@@ -83,7 +83,7 @@
             />
           </div>
           <div>
-            <label for="message" class="block font-semibold mb-1">Message</label>
+            <label for="message" class="block font-semibold mb-1">{{ $t('contact.message') }}</label>
             <textarea
               id="message"
               v-model="form.message"
@@ -96,9 +96,9 @@
             :disabled="loading"
             class="bg-gold py-2 px-4 rounded-xl font-bold text-black w-full flex justify-center items-center"
           >
-            <!-- Show spinner if loading, otherwise show "Send" -->
+            <!-- Show spinner if loading, otherwise show translated "Send" -->
             <span v-if="loading" class="loader"></span>
-            <span v-else>Send</span>
+            <span v-else>{{ $t('contact.send') }}</span>
           </button>
         </form>
 
@@ -112,7 +112,6 @@
     </div>
   </div>
 </template>
-
 <script setup>
 import { ref, onMounted } from "vue";
 

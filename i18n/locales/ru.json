@@ -543,5 +543,30 @@
         "answer": "Мы отслеживаем рейсы в режиме реального времени и подстраиваем время встречи без дополнительной оплаты."
       }
     ]
-  }
+  },
+  "contact":{
+    "get_in_touch": "Свяжитесь с нами",
+  "friendly_team_intro": "Наша дружелюбная команда готова помочь",
+  "company_info_title": "Информация о компании",
+  "company_info_text": "Silk Ride\nМы лицензированный оператор такси по лицензии совета Хертсмер",
+  "address_title": "Адрес",
+  "address_text": "Centre 42\n 42 Watling Street\nWD7 7NN, Radlett\nВеликобритания",
+  "contact_section_title": "Контакты",
+  "contact_section_text": "Напишите нам или позвоните по общим вопросам, включая маркетинг и партнёрство.",
+  "open_contact_drawer": "Открыть окно контактов",
+  "close_contact_drawer": "Закрыть окно контактов",
+  "contact_us": "Свяжитесь с нами",
+  "first_name": "Имя",
+  "first_name_placeholder": "Иван",
+  "last_name": "Фамилия",
+  "last_name_placeholder": "Иванов",
+  "phone": "Телефон",
+  "phone_placeholder": "+7 123 456 7890",
+  "email": "Электронная почта",
+
+  "message": "Сообщение",
+  "send": "Отправить",
+  "message_placeholder": "Ваше сообщение...",
+  "send_message": "Отправить сообщение"
+}
 }
