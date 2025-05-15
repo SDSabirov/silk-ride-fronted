@@ -22,11 +22,14 @@ export default defineNuxtPlugin(() => {
     // 2) init & track the first pageview
     window.fbq('init', '1036069138475539');
     window.fbq('track', 'PageView');
+    window.fbq('track', 'Lead');
 
     // 3) track subsequent client-side navigations
     const router = useRouter();
     router.afterEach(() => {
       window.fbq('track', 'PageView');
+      window.fbq('track', 'Lead');
+      
     });
   }
 });
