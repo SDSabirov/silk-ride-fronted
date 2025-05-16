@@ -268,7 +268,7 @@
         "paragraph": "Travel in style and sophistication with the Mercedes-Benz E-Class – a premium sedan that combines prestige, advanced technology, and an exceptionally smooth ride. Designed for those who appreciate reliability and elegance in every journey, the E-Class ensures a first-class experience."
       },
       "whyTitle": "Why Choose the E-Class?",
-      "whyfeatures": [
+      "whyBullets": [
         "Business-class excellence – sleek design, premium interior, and a quiet, smooth ride.",
         "Comfort for long journeys – spacious leather seats, climate control, and adaptive suspension.",
         "Cutting-edge technology – intelligent safety systems, seamless performance, and an innovative interface.",
@@ -276,7 +276,7 @@
         "Flexible rental options – available from 4 hours to a full day, tailored to your needs."
       ],
       "occasionsTitle": "Perfect For Any Occasion",
-      "occasionsfeatures": [
+      "occasionsBullets": [
         "Business meetings and corporate travel – arrive in style and make a lasting impression.",
         "Airport transfers – stress-free, comfortable rides to and from the airport.",
         "Special occasions – ideal for romantic dinners, anniversaries, or theatre nights.",
@@ -350,7 +350,60 @@
         }
       },
       "galleryTitle": "Our Gallery"
-    }
+    },
+    "sclass": {
+    "brand": "Mercedes Benz",
+    "model": "S-Class",
+    "slogan": "Prestige on Every Mile",
+    "alt": "Mercedes Benz S-Class side view",
+    "description": "Experience unparalleled comfort and sophistication with the Mercedes-Benz S-Class. Designed for those who seek elegance and practicality in every journey, the S-Class offers a spacious interior, advanced technology, and a smooth driving experience. Whether it's a business trip, a family outing, or a VIP transfer, this versatile vehicle ensures you arrive in style and comfort. Discover the perfect blend of functionality and luxury with every ride.",
+    "unmatched": "Unmatched Luxury, No Matter the Occasion",
+    "key_features": "Key Features",
+    "weddings": {
+      "title": "S-Class for Weddings: Arrive in Timeless Elegance",
+      "text": "Make your wedding day even more memorable with the Mercedes-Benz S-Class. Elegant, refined, and luxurious—perfect for arriving in style.",
+      "feature1": "Luxurious interior finish that complements any wedding theme.",
+      "feature2": "Seats up to 3 passengers in first-class comfort.",
+      "feature3": "Optional floral decorations and ribbon matching your wedding colors.",
+      "feature4": "Silent, smooth ride for a calm and graceful arrival.",
+      "img_alt": "s-class at wedding"
+    },
+    "business": {
+      "title": "S-Class for Business Travel: The Executive Choice",
+      "text": "The Mercedes-Benz S-Class provides the perfect environment for focused productivity and total relaxation between meetings and destinations.",
+      "feature1": "Quiet cabin with noise insulation for uninterrupted work.",
+      "feature2": "Rear seat climate and massage controls for added comfort.",
+      "feature3": "Power outlets and USB charging for your devices.",
+      "feature4": "Driven by punctual, discreet, professional chauffeurs.",
+      "img_alt": "s-class for business"
+    },
+    "airport": {
+      "title": "S-Class Airport Transfers: Seamless, First-Class Travel",
+      "text": "Begin or end your journey with the smooth, stress-free experience of a chauffeur-driven S-Class. Punctual, private, and indulgently comfortable.",
+      "feature1": "Meet-and-greet service with luggage assistance.",
+      "feature2": "Flight monitoring to adjust for delays or early arrivals.",
+      "feature3": "Ambient lighting and reclining rear seats for a restful ride.",
+      "feature4": "Wi-Fi and charging ports onboard for seamless productivity.",
+      "img_alt": "s-class airport transfer"
+    },
+    "vip": {
+      "title": "S-Class for VIP Events: Arrive with Distinction",
+      "text": "For red carpet moments or high-profile meetings, the Mercedes-Benz S-Class ensures an arrival that’s as impressive as the destination.",
+      "feature1": "Privacy glass and refined styling for discreet travel.",
+      "feature2": "Executive seating with extended legroom and luxury finish.",
+      "feature3": "Ideal for solo VIPs or intimate pairs attending exclusive events.",
+      "img_alt": "s-class vip event"
+    },
+    "romantic": {
+      "title": "S-Class for Romantic Evenings: A Night to Remember",
+      "text": "Celebrate a special night in the comfort of the S-Class. Whether it’s an anniversary, proposal, or luxurious date, every detail is taken care of.",
+      "feature1": "Ambient interior lighting to set the mood.",
+      "feature2": "Chilled drinks upon request for toasting special moments.",
+      "feature3": "Soft-close doors and quiet cabin for uninterrupted intimacy.",
+      "img_alt": "s-class romantic evening"
+    },
+    "galleryTitle": "Our Gallery"
+  }
   },
 
   "bookingForm": {

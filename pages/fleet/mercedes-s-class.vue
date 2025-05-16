@@ -3,19 +3,20 @@
     <Navbar />
     <CarsDetailHero
       :img="hero"
-      title="Mercedes Benz"
-      subtitle="S-Class"
-      slogan="Prestige on Every Mile"
-      altText="Mercedes Benz S-Class side view"
+      :title="$t('fleetPages.sclass.brand')"
+      :subtitle="$t('fleetPages.sclass.model')"
+      :slogan="$t('fleetPages.sclass.slogan')"
+      :altText="$t('fleetPages.sclass.alt')"
       :car="SClass"
     />
     <CommonPageIntro
-      title="Prestige on Every Mile"
-      paragraph="Experience unparalleled comfort and sophistication with the Mercedes-Benz S-Class. Designed for those who seek elegance and practicality in every journey, the S-Class offers a spacious interior, advanced technology, and a smooth driving experience. Whether it's a business trip, a family outing, or a VIP transfer, this versatile vehicle ensures you arrive in style and comfort. Discover the perfect blend of functionality and luxury with every ride."
+      :title="$t('fleetPages.sclass.slogan')"
+      :paragraph="$t('fleetPages.sclass.description')"
     />
+
     <div class="flex flex-col w-full items-center justify-center py-22">
       <h2 class="text-black text-4xl font-semibold leading-loose text-center">
-        Unmatched Luxury, No Matter the Occasion
+        {{ $t('fleetPages.sclass.unmatched') }}
       </h2>
       <div class="w-full flex items-center justify-center mb-6">
         <div class="h-3 w-3 bg-gold rotate-45"></div>
@@ -23,37 +24,29 @@
         <div class="h-3 w-3 bg-gold rotate-45"></div>
       </div>
       <div class="max-w-screen-xl w-full flex flex-col space-y-6 mb-6">
-        <div
-          class="grid grid-cols-1 md:grid-cols-2 gap-6 border-b-2 border-b-gold px-4 mb-6 py-8"
-        >
+        <!-- Weddings Section -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 border-b-2 border-b-gold px-4 mb-6 py-8">
           <div>
             <h3 class="text-black text-2xl font-normal leading-loose">
-              S-Class for Weddings: Arrive in Timeless Elegance
+              {{ $t('fleetPages.sclass.weddings.title') }}
             </h3>
             <p class="pr-6 text-lg italic">
-              Make your wedding day even more memorable with the Mercedes-Benz
-              S-Class. Elegant, refined, and luxurious—perfect for arriving in
-              style.
+              {{ $t('fleetPages.sclass.weddings.text') }}
             </p>
             <h4 class="text-gray-800 text-xl font-normal leading-loose mt-4">
-              Key Features
+              {{ $t('fleetPages.sclass.key_features') }}
             </h4>
             <ul class="text-lg list-disc pl-6">
-              <li>
-                Luxurious interior finish that complements any wedding theme.
-              </li>
-              <li>Seats up to 3 passengers in first-class comfort.</li>
-              <li>
-                Optional floral decorations and ribbon matching your wedding
-                colors.
-              </li>
-              <li>Silent, smooth ride for a calm and graceful arrival.</li>
+              <li>{{ $t('fleetPages.sclass.weddings.feature1') }}</li>
+              <li>{{ $t('fleetPages.sclass.weddings.feature2') }}</li>
+              <li>{{ $t('fleetPages.sclass.weddings.feature3') }}</li>
+              <li>{{ $t('fleetPages.sclass.weddings.feature4') }}</li>
             </ul>
           </div>
           <div class="overflow-hidden">
             <img
               src="/assets/images/sclass.webp"
-              alt="s-class at wedding"
+              :alt="$t('fleetPages.sclass.weddings.img_alt')"
               loading="lazy"
               class="object-cover"
             />
@@ -63,37 +56,34 @@
               to="/booking"
               class="flex px-6 py-3 items-center justify-center border border-black text-black text-xl hover:bg-gold hover:text-black p-2"
             >
-              Book Now
+              {{ $t('pages.common.bookNow') }}
             </NuxtLink>
           </div>
         </div>
 
-        <div
-          class="grid grid-cols-1 md:grid-cols-2 gap-6 border-b-2 border-b-gold px-4 mb-6 py-8 items-center"
-        >
+        <!-- Business Section -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 border-b-2 border-b-gold px-4 mb-6 py-8 items-center">
           <div>
             <h3 class="text-black text-2xl font-normal leading-loose">
-              S-Class for Business Travel: The Executive Choice
+              {{ $t('fleetPages.sclass.business.title') }}
             </h3>
             <p class="pr-6 text-lg italic">
-              The Mercedes-Benz S-Class provides the perfect environment for
-              focused productivity and total relaxation between meetings and
-              destinations.
+              {{ $t('fleetPages.sclass.business.text') }}
             </p>
             <h4 class="text-gray-800 text-xl font-normal leading-loose mt-4">
-              Key Features
+              {{ $t('fleetPages.sclass.key_features') }}
             </h4>
             <ul class="text-lg list-disc pl-6">
-              <li>Quiet cabin with noise insulation for uninterrupted work.</li>
-              <li>Rear seat climate and massage controls for added comfort.</li>
-              <li>Power outlets and USB charging for your devices.</li>
-              <li>Driven by punctual, discreet, professional chauffeurs.</li>
+              <li>{{ $t('fleetPages.sclass.business.feature1') }}</li>
+              <li>{{ $t('fleetPages.sclass.business.feature2') }}</li>
+              <li>{{ $t('fleetPages.sclass.business.feature3') }}</li>
+              <li>{{ $t('fleetPages.sclass.business.feature4') }}</li>
             </ul>
           </div>
           <div class="md:order-first">
             <img
               src="/assets/images/sclass.webp"
-              alt="s-class for business"
+              :alt="$t('fleetPages.sclass.business.img_alt')"
               loading="lazy"
               class="object-cover"
             />
@@ -103,41 +93,34 @@
               to="/booking"
               class="flex px-6 py-3 items-center justify-center border border-black text-black text-xl hover:bg-gold hover:text-black p-2"
             >
-              Book Now
+              {{ $t('pages.common.bookNow') }}
             </NuxtLink>
           </div>
         </div>
 
-        <div
-          class="grid grid-cols-1 md:grid-cols-2 gap-6 border-b-2 border-b-gold px-4 mb-6 py-8"
-        >
+        <!-- Airport Section -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 border-b-2 border-b-gold px-4 mb-6 py-8">
           <div>
             <h3 class="text-black text-2xl font-normal leading-loose">
-              S-Class Airport Transfers: Seamless, First-Class Travel
+              {{ $t('fleetPages.sclass.airport.title') }}
             </h3>
             <p class="pr-6 text-lg italic">
-              Begin or end your journey with the smooth, stress-free experience
-              of a chauffeur-driven S-Class. Punctual, private, and indulgently
-              comfortable.
+              {{ $t('fleetPages.sclass.airport.text') }}
             </p>
             <h4 class="text-gray-800 text-xl font-normal leading-loose mt-4">
-              Key Features
+              {{ $t('fleetPages.sclass.key_features') }}
             </h4>
             <ul class="text-lg list-disc pl-6">
-              <li>Meet-and-greet service with luggage assistance.</li>
-              <li>Flight monitoring to adjust for delays or early arrivals.</li>
-              <li>
-                Ambient lighting and reclining rear seats for a restful ride.
-              </li>
-              <li>
-                Wi-Fi and charging ports onboard for seamless productivity.
-              </li>
+              <li>{{ $t('fleetPages.sclass.airport.feature1') }}</li>
+              <li>{{ $t('fleetPages.sclass.airport.feature2') }}</li>
+              <li>{{ $t('fleetPages.sclass.airport.feature3') }}</li>
+              <li>{{ $t('fleetPages.sclass.airport.feature4') }}</li>
             </ul>
           </div>
           <div>
             <img
               src="/assets/images/sclass.webp"
-              alt="s-class airport transfer"
+              :alt="$t('fleetPages.sclass.airport.img_alt')"
               loading="lazy"
               class="object-cover"
             />
@@ -147,41 +130,33 @@
               to="/booking"
               class="flex px-6 py-3 items-center justify-center border border-black text-black text-xl hover:bg-gold hover:text-black p-2"
             >
-              Book Now
+              {{ $t('pages.common.bookNow') }}
             </NuxtLink>
           </div>
         </div>
 
-        <div
-          class="grid grid-cols-1 md:grid-cols-2 gap-6 border-b-2 border-b-gold px-4 mb-6 py-8"
-        >
+        <!-- VIP Section -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 border-b-2 border-b-gold px-4 mb-6 py-8">
           <div>
             <h3 class="text-black text-2xl font-normal leading-loose">
-              S-Class for VIP Events: Arrive with Distinction
+              {{ $t('fleetPages.sclass.vip.title') }}
             </h3>
             <p class="pr-6 text-lg italic">
-              For red carpet moments or high-profile meetings, the Mercedes-Benz
-              S-Class ensures an arrival that’s as impressive as the
-              destination.
+              {{ $t('fleetPages.sclass.vip.text') }}
             </p>
             <h4 class="text-gray-800 text-xl font-normal leading-loose mt-4">
-              Key Features
+              {{ $t('fleetPages.sclass.key_features') }}
             </h4>
             <ul class="text-lg list-disc pl-6">
-              <li>Privacy glass and refined styling for discreet travel.</li>
-              <li>
-                Executive seating with extended legroom and luxury finish.
-              </li>
-              <li>
-                Ideal for solo VIPs or intimate pairs attending exclusive
-                events.
-              </li>
+              <li>{{ $t('fleetPages.sclass.vip.feature1') }}</li>
+              <li>{{ $t('fleetPages.sclass.vip.feature2') }}</li>
+              <li>{{ $t('fleetPages.sclass.vip.feature3') }}</li>
             </ul>
           </div>
           <div class="md:order-first">
             <img
               src="/assets/images/sclass.webp"
-              alt="s-class vip event"
+              :alt="$t('fleetPages.sclass.vip.img_alt')"
               loading="lazy"
               class="object-cover"
             />
@@ -191,38 +166,33 @@
               to="/booking"
               class="flex px-6 py-3 items-center justify-center border border-black text-black text-xl hover:bg-gold hover:text-black p-2"
             >
-              Book Now
+              {{ $t('pages.common.bookNow') }}
             </NuxtLink>
           </div>
         </div>
 
-        <div
-          class="grid grid-cols-1 md:grid-cols-2 gap-6 border-b-2 border-b-gold px-4 mb-6 py-8"
-        >
+        <!-- Romantic Section -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 border-b-2 border-b-gold px-4 mb-6 py-8">
           <div>
             <h3 class="text-black text-2xl font-normal leading-loose">
-              S-Class for Romantic Evenings: A Night to Remember
+              {{ $t('fleetPages.sclass.romantic.title') }}
             </h3>
             <p class="pr-6 text-lg italic">
-              Celebrate a special night in the comfort of the S-Class. Whether
-              it’s an anniversary, proposal, or luxurious date, every detail is
-              taken care of.
+              {{ $t('fleetPages.sclass.romantic.text') }}
             </p>
             <h4 class="text-gray-800 text-xl font-normal leading-loose mt-4">
-              Key Features
+              {{ $t('fleetPages.sclass.key_features') }}
             </h4>
             <ul class="text-lg list-disc pl-6">
-              <li>Ambient interior lighting to set the mood.</li>
-              <li>Chilled drinks upon request for toasting special moments.</li>
-              <li>
-                Soft-close doors and quiet cabin for uninterrupted intimacy.
-              </li>
+              <li>{{ $t('fleetPages.sclass.romantic.feature1') }}</li>
+              <li>{{ $t('fleetPages.sclass.romantic.feature2') }}</li>
+              <li>{{ $t('fleetPages.sclass.romantic.feature3') }}</li>
             </ul>
           </div>
           <div>
             <img
               src="/assets/images/sclass.webp"
-              alt="s-class romantic evening"
+              :alt="$t('fleetPages.sclass.romantic.img_alt')"
               loading="lazy"
               class="object-cover"
             />
@@ -232,7 +202,7 @@
               to="/booking"
               class="flex px-6 py-3 items-center justify-center border border-black text-black text-xl hover:bg-gold hover:text-black p-2"
             >
-              Book Now
+              {{ $t('pages.common.bookNow') }}
             </NuxtLink>
           </div>
         </div>
@@ -245,7 +215,7 @@
       <h3
         class="w-full text-black text-4xl font-semibold leading-loose text-center mb-10"
       >
-        Our Gallery
+       {{ $t('fleetPages.sclass.galleryTitle') }}
       </h3>
       <CarsGallerySlider />
     </div>
