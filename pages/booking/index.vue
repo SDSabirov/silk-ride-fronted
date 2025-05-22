@@ -15,5 +15,8 @@
 
 <script setup>
 import { useSeo } from '~/utils/useSeo'
+
+
+
 useSeo('booking')
 </script>
