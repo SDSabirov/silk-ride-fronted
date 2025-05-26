@@ -12,13 +12,10 @@ export default defineNuxtConfig({
     // Configuration options (if any)
   },
   css: ["~/assets/css/main.css", "boxicons/css/boxicons.min.css"],
-  modules: [
-    "@nuxtjs/seo",
-    "@nuxtjs/google-fonts",
-    "@nuxt/image",
-    "@pinia/nuxt",
-    "@nuxtjs/i18n",
-  ],
+  modules: ["@nuxtjs/seo", "@nuxtjs/google-fonts", "@nuxt/image", "@pinia/nuxt", "@nuxtjs/i18n", 'nuxt-gtag'],
+  gtag: {
+    id: 'GTM-MNJ8LQSZ'
+  },
   plugins: ['~/plugins/facebook-pixel.client.js'],
   postcss: {
     plugins: {
