@@ -14,7 +14,7 @@ export default defineNuxtConfig({
   css: ["~/assets/css/main.css", "boxicons/css/boxicons.min.css"],
   modules: ["@nuxtjs/seo", "@nuxtjs/google-fonts", "@nuxt/image", "@pinia/nuxt", "@nuxtjs/i18n", 'nuxt-gtag'],
   gtag: {
-    id: 'GTM-MNJ8LQSZ'
+    id: 'G-KGTCEM0MZ4'
   },
   plugins: ['~/plugins/facebook-pixel.client.js'],
   postcss: {
