@@ -16,7 +16,7 @@ export default defineNuxtConfig({
   gtag: {
     id: 'G-KGTCEM0MZ4'
   },
-  plugins: ['~/plugins/facebook-pixel.client.js'],
+  plugins: ['~/plugins/facebook-pixel.client.js','~/plugins/yandex-metrica.client.ts'],
   postcss: {
     plugins: {
       tailwindcss: {},
