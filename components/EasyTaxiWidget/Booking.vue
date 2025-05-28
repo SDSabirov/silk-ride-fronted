@@ -22,14 +22,14 @@ const { track } = useFacebookPixel()
 
 // EasyTaxiOffice site key & base booking URL
 const siteKey = '7e3f3d3085b900d598bc40543d611575'
-const vendorBaseUrl = `https://u3396.eto2.taxi/booking?site_key=${siteKey}`
+const vendorBaseUrl = `https://app.silkride.co.uk//booking?site_key=${siteKey}`
 
 // Reactive iframe source
 const iframeSrc = ref('')
 
 // Handle postMessage from iframe
 function handleMessage(event) {
-  if (event.origin !== 'https://u3396.eto2.taxi') return;
+  if (event.origin !== 'https://app.silkride.co.uk/') return;
   console.log('📣 Received message:', event.data);
   const { type, value, currency } = event.data;
   if (type === 'bookingCompleted' && typeof value === 'number') {
@@ -52,7 +52,7 @@ onMounted(() => {
 
   // 4) Inject the iframe-resizer script
   const script = document.createElement('script')
-  script.src = 'https://u3396.eto2.taxi/assets/plugins/iframe-resizer/iframeResizer.min.js'
+  script.src = 'https://app.silkride.co.uk//assets/plugins/iframe-resizer/iframeResizer.min.js'
   script.onload = () => {
     if (window.iFrameResize) {
       window.iFrameResize(

@@ -19,7 +19,7 @@ import { onMounted, ref } from 'vue'
 
 // Your EasyTaxiOffice site key and vendor URL
 const siteKey = '7e3f3d3085b900d598bc40543d611575'
-const vendorUrl = `https://u3396.eto2.taxi/booking/widget?site_key=${siteKey}`
+const vendorUrl = `https://app.silkride.co.uk/booking/widget?site_key=${siteKey}`
 
 // Reactive iframe source defaults to the vendor URL
 const iframeSrc = ref(vendorUrl)
@@ -39,7 +39,7 @@ onMounted(() => {
 
   // Load the iframe-resizer script for non-iOS Safari browsers
   const script = document.createElement('script')
-  script.src = 'https://u3396.eto2.taxi/assets/plugins/iframe-resizer/iframeResizer.min.js'
+  script.src = 'https://app.silkride.co.uk/assets/plugins/iframe-resizer/iframeResizer.min.js'
   script.onload = () => {
     if (window.iFrameResize) {
       window.iFrameResize(
