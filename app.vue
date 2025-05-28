@@ -7,39 +7,44 @@
   </div>
 </template>
 <script setup>
-
 import { useRoute } from 'vue-router'
 import { useI18n } from 'vue-i18n'
-import { useRuntimeConfig } from '#imports'
+import { useRuntimeConfig, useHead } from '#imports'
 
 const route = useRoute()
 const { locale, availableLocales, defaultLocale } = useI18n()
 const config = useRuntimeConfig()
+
 const baseUrl = config.public.BASE_URL || 'https://silkride.co.uk'
 
-// Remove any trailing slash from the path
-const path = route.path.replace(/\/$/, '')
-// Construct the canonical URL (with trailing slash)
-const canonical = `${baseUrl.replace(/\/$/, '')}${path}/`
+// Clean trailing slashes and locale prefix
+const cleanPath = route.path.replace(/\/$/, '')
+const canonicalPath = locale.value === defaultLocale
+  ? cleanPath
+  : cleanPath.replace(`/${locale.value}`, '')
 
-// Build hreflang alternate links for each locale
+const canonical = `${baseUrl}${locale.value === defaultLocale ? canonicalPath : `/${locale.value}${canonicalPath}`}`
+
+// Build hreflang alternates
 const alternates = availableLocales.map(loc => {
-  // Strip the current locale prefix before rebuilding
-  const pathWithoutLocale = path.replace(`/${locale}`, '')
+  const altHref = loc === defaultLocale
+    ? `${baseUrl}${canonicalPath}`
+    : `${baseUrl}/${loc}${canonicalPath}`
   return {
     rel: 'alternate',
     hreflang: loc,
-    href: `${baseUrl.replace(/\/$/, '')}/${loc}${pathWithoutLocale}/`
+    href: altHref
   }
 })
-// Add x-default fallback
+
+// Add x-default
 alternates.push({
   rel: 'alternate',
   hreflang: 'x-default',
-  href: `${baseUrl.replace(/\/$/, '')}/${defaultLocale}${path}/`
+  href: `${baseUrl}${canonicalPath}`
 })
 
-// Inject canonical and hreflang links into head
+// Inject canonical and alternates
 useHead({
   link: [
     { rel: 'canonical', href: canonical },
