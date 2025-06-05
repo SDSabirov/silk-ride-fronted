@@ -3,4 +3,5 @@ Disallow: /admin
 Disallow: /booking/cancel
 Disallow: /booking/success
 Allow: /
-Sitemap: https://silkride.co.uk/sitemap.xml
+Sitemap: https://silkride.co.uk/__sitemap__/en.xml
+Sitemap: https://silkride.co.uk/__sitemap__/ru.xml
