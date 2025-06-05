@@ -29,7 +29,7 @@ export default defineNuxtConfig({
     ]
     , 
   },
-  plugins: ['~/plugins/facebook-pixel.client.js','~/plugins/yandex-metrica.client.ts'],
+  plugins: ['~/plugins/facebook-pixel.client.js'],
   postcss: {
     plugins: {
       tailwindcss: {},
