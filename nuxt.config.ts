@@ -16,7 +16,11 @@ export default defineNuxtConfig({
   gtag: {
     tags:[
       {
-      id: 'G-KGTCEM0MZ4'
+      id: 'G-KGTCEM0MZ4',
+      config: {
+        send_page_view: true,
+        anonymize_ip: true
+      }
       },
       {
       id:'AW-16982457254',
