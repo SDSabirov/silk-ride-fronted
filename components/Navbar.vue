@@ -20,6 +20,12 @@
         <div class="flex items-center space-x-4 lg:hidden">
           
           <!-- Language Switch for Mobile -->
+          <div class="flex space-x-4 items-center">
+          <NuxtLink :to="localePath('/customer')" class="px-4 py-1 border border-gold text-gold  text-lg hover:bg-gold hover:text-black rounded-xl">
+            {{$t('navbar.registerLogin')}}
+          </NuxtLink>
+          
+         </div>
           <LanguageSwitch/>
           <button
             class="focus:outline-none"
@@ -118,6 +124,13 @@
         <!-- Language Switch for Desktop -->
         <div class="flex space-x-2">
          <LanguageSwitch />
+         <div class="relative -right-28 flex space-x-4 items-center">
+          <NuxtLink :to="localePath('/customer')" class="px-4 py-1 border border-gold text-gold  text-lg hover:bg-gold hover:text-black rounded-xl">
+            {{$t('navbar.registerLogin')}}
+          </NuxtLink>
+          
+         </div>
+         
         </div>
       </div>
     </div>

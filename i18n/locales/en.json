@@ -7,7 +7,8 @@
     "about": "About Us",
     "whyChooseUs": "Why Choose Us",
     "contact": "Contact Us",
-    "bookNow": "Book Now"
+    "bookNow": "Book Now",
+    "registerLogin":"Register or Login"
   },
   "footer": {
     "description": "Experience first-class travel across the UK & Europe with our premium chauffeur services. Whether for business, leisure, or special events, we ensure comfort, reliability, and elegance on every journey.",
@@ -118,6 +119,7 @@
     "common": {
       "bookNow": "Book Now"
     },
+    
     "fleet": {
       "heroTitle": "Our Fleet",
       "introTitle": "Sophistication Meets Comfort",
@@ -239,6 +241,9 @@
             "experienceDesc": "All of our chauffeurs are experienced professionals."
           }
         }
+    },
+    "customer":{
+      "heroTitle":"Create Your Account to Access Premium Chauffeur Services"
     },
     "blog": {
       "title": "Our Blog",
@@ -557,6 +562,10 @@
     "blog": {
       "title": "Silk Ride Blog | Insights on Luxury Chauffeur Services & Travel",
       "description": "Explore expert articles and insights on premium chauffeur services, travel tips, and exclusive experiences with Silk Ride's luxury transportation blog."
+    },
+    "customer":{
+      "title":"Create Your Account – Access Premium Chauffeur Services",
+      "description":"Sign up with Silk Ride to access our premium chauffeur services. Book your private Mercedes E-Class, S-Class, or V-Class ride in minutes. Experience luxury, comfort, and convenience today."
     }
   },
   "faq": {

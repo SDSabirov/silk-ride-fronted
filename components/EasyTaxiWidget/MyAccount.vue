@@ -24,11 +24,11 @@ const siteKey = '7e3f3d3085b900d598bc40543d611575'
 const iframeSrc = ref(`https://app.silkride.co.uk/customer?site_key=${siteKey}`)
 
 onMounted(() => {
-  // Inject iframe resizer script
   const script = document.createElement('script')
   script.src = 'https://app.silkride.co.uk/assets/plugins/iframe-resizer/iframeResizer.min.js'
   script.onload = () => {
-    if (window.iFrameResize) {
+    const iframeEl = document.getElementById('eto-iframe-customer')
+    if (iframeEl && window.iFrameResize) {
       window.iFrameResize(
         {
           log: false,
@@ -38,7 +38,7 @@ onMounted(() => {
             console.log('Iframe resized to:', data.height + 'px')
           }
         },
-        '#eto-iframe-customer'
+        iframeEl
       )
     }
   }
