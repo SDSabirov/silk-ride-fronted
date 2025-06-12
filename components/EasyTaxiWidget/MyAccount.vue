@@ -2,14 +2,14 @@
   <div class="booking-widget">
     <iframe
       ref="bookingIframe"
-      id="eto-iframe-booking-widget"
+      id="eto-iframe-customer"
       :src="iframeSrc"
       allow="geolocation"
       width="100%"
-      height="250"
+      height="400"
       scrolling="no"
       frameborder="0"
-      style="width: 1px; min-width: 100%; border: 0"
+      style="width: 1px; min-width: 100%; min-height: 400px; border: 0"
     ></iframe>
   </div>
 </template>
@@ -17,33 +17,28 @@
 <script setup>
 import { onMounted, ref } from 'vue'
 
-// Define your site key and vendor URL\ n
+// Replace with your actual site key
 const siteKey = '7e3f3d3085b900d598bc40543d611575'
-const vendorUrl = `https://app.silkride.co.uk/widget?site_key=${siteKey}`
 
-// Reactive iframe source defaults to vendor URL\ nconst iframeSrc = ref(vendorUrl)
-
-// Detect iOS Safari
-function isIosSafari() {
-  const ua = navigator.userAgent
-  return /iP(hone|od|ad)/.test(ua) && /Safari/.test(ua) && !/CriOS|FxiOS/.test(ua)
-}
+// Widget URL
+const iframeSrc = ref(`https://app.silkride.co.uk/customer?site_key=${siteKey}`)
 
 onMounted(() => {
-  if (isIosSafari()) {
-    // Redirect iOS Safari users to the vendor URL
-    window.location.replace(vendorUrl)
-    return
-  }
-
-  // Load iframe-resizer script for all non-iOS Safari users
+  // Inject iframe resizer script
   const script = document.createElement('script')
   script.src = 'https://app.silkride.co.uk/assets/plugins/iframe-resizer/iframeResizer.min.js'
   script.onload = () => {
     if (window.iFrameResize) {
       window.iFrameResize(
-        { log: false, targetOrigin: '*', checkOrigin: false },
-        '#eto-iframe-booking-widget'
+        {
+          log: false,
+          checkOrigin: false,
+          heightCalculationMethod: 'bodyScroll',
+          resizedCallback(data) {
+            console.log('Iframe resized to:', data.height + 'px')
+          }
+        },
+        '#eto-iframe-customer'
       )
     }
   }
@@ -54,5 +49,6 @@ onMounted(() => {
 <style scoped>
 .booking-widget {
   width: 100%;
+  min-height: 400px;
 }
 </style>
