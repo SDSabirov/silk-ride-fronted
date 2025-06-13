@@ -13,18 +13,27 @@
       @click="toggleDrawer"
       @mouseenter="onHover"
       @mouseleave="onLeave"
-      class="fixed right-0 bottom-[40%] transform translate-y-[40%] bg-gold py-3 px-4 cursor-pointer z-[10000] rounded-tl-lg rounded-bl-lg text-black font-bold flex items-center space-x-2 animate-slideLeft hover:animate-slideRight"
+      class="fixed bottom-1/4 right-0 z-[10000] flex items-center bg-gold text-black font-semibold py-3 px-4 rounded-l-2xl shadow-lg transition-all duration-300 group hover:bg-yellow-400 focus:outline-none"
       :aria-label="$t('contact.open_contact_drawer')"
     >
-      <span><i class="bx bxs-envelope"></i></span>
-      <p v-show="showText" class="transition-all duration-500">{{ $t('contact.contact_us') }}</p>
+      <i
+        class="bx bxs-envelope text-2xl transition-transform duration-300 group-hover:scale-110"
+      ></i>
+      <transition name="fade">
+        <p
+          v-if="showText"
+          class="ml-3 whitespace-nowrap transition-all duration-500 ease-in-out"
+        >
+          {{ $t("contact.contact_us") }}
+        </p>
+      </transition>
     </button>
 
     <!-- Drawer -->
     <div
       :class="[
         'fixed top-0 w-[300px] h-full bg-white shadow-md transition-all duration-700 z-[10001] animate-fadeLeft',
-        isOpen ? 'right-0' : 'right-[-300px]'
+        isOpen ? 'right-0' : 'right-[-300px]',
       ]"
     >
       <div class="p-5 relative h-full overflow-y-auto">
@@ -36,14 +45,16 @@
         >
           &times;
         </button>
-        <h2 class="text-xl font-bold mb-4">{{ $t('contact.contact_us') }}</h2>
+        <h2 class="text-xl font-bold mb-4">{{ $t("contact.contact_us") }}</h2>
 
         <!-- Optionally show an error message -->
         <p v-if="errorMessage" class="mb-4 text-red-500">{{ errorMessage }}</p>
 
         <form @submit.prevent="submitForm" class="space-y-4">
           <div>
-            <label for="name" class="block font-semibold mb-1">{{ $t('contact.first_name') }}</label>
+            <label for="name" class="block font-semibold mb-1">{{
+              $t("contact.first_name")
+            }}</label>
             <input
               type="text"
               id="name"
@@ -53,7 +64,9 @@
             />
           </div>
           <div>
-            <label for="lastName" class="block font-semibold mb-1">{{ $t('contact.last_name') }}</label>
+            <label for="lastName" class="block font-semibold mb-1">{{
+              $t("contact.last_name")
+            }}</label>
             <input
               type="text"
               id="lastName"
@@ -63,7 +76,9 @@
             />
           </div>
           <div>
-            <label for="phone" class="block font-semibold mb-1">{{ $t('contact.phone') }}</label>
+            <label for="phone" class="block font-semibold mb-1">{{
+              $t("contact.phone")
+            }}</label>
             <input
               type="tel"
               id="phone"
@@ -73,7 +88,9 @@
             />
           </div>
           <div>
-            <label for="email" class="block font-semibold mb-1">{{ $t('contact.email') }}</label>
+            <label for="email" class="block font-semibold mb-1">{{
+              $t("contact.email")
+            }}</label>
             <input
               type="email"
               id="email"
@@ -83,7 +100,9 @@
             />
           </div>
           <div>
-            <label for="message" class="block font-semibold mb-1">{{ $t('contact.message') }}</label>
+            <label for="message" class="block font-semibold mb-1">{{
+              $t("contact.message")
+            }}</label>
             <textarea
               id="message"
               v-model="form.message"
@@ -98,15 +117,19 @@
           >
             <!-- Show spinner if loading, otherwise show translated "Send" -->
             <span v-if="loading" class="loader"></span>
-            <span v-else>{{ $t('contact.send') }}</span>
+            <span v-else>{{ $t("contact.send") }}</span>
           </button>
         </form>
 
         <p class="mb-2 text-sm text-light dark:text-gray-400 mt-6">
-          <a href="mailto:info@silkride.co.uk" class="hover:underline">info@silkride.co.uk</a>
+          <a href="mailto:info@silkride.co.uk" class="hover:underline"
+            >info@silkride.co.uk</a
+          >
         </p>
         <p class="text-sm text-light dark:text-gray-400">
-          <a href="tel:+447512905514" class="hover:underline">+44 7512 905514</a>
+          <a href="tel:+447512905514" class="hover:underline"
+            >+44 7512 905514</a
+          >
         </p>
       </div>
     </div>
@@ -214,5 +237,11 @@ onMounted(() => {
   100% {
     transform: rotate(360deg);
   }
+}
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+.fade-enter-from, .fade-leave-to {
+  opacity: 0;
 }
 </style>

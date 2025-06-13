@@ -6,18 +6,23 @@
         alt="Luxury Chauffeur"
         class="w-full h-full object-cover"
       />
-      <div
-        class="absolute inset-0 bg-black/60 "
-      ></div>
+      <div class="absolute inset-0 bg-black/60"></div>
     </div>
 
     <header
       class="relative z-10 text-center space-y-8 text-white flex flex-col justify-center items-center h-full max-w-screen-xl mx-auto"
     >
-      <h1 class="text-2xl md:text-7xl font-semibold tracking-wide capitalize">
-        {{ $t("hero.title").split(' ')[0] }} <span class="text-gold"> {{ $t("hero.title").split(' ')[1] }} {{ $t("hero.title").split(' ')[2] }}</span>
+      <h1 class="text-2xl md:text-6xl font-semibold tracking-wide capitalize">
+        {{ $t("hero.title").split(" ")[0] }}
+        <span class="text-gold">
+          {{ $t("hero.title").split(" ")[1] }}
+          {{ $t("hero.title").split(" ")[2] }}
+        </span>
+        {{ $t("hero.title").split(" ").slice(3).join(" ") }}
       </h1>
-      <p class="text-lg md:text-2xl font-light px-2 md:px-0 w-full whitespace-wrap capitalize">
+      <p
+        class="text-lg md:text-2xl font-light px-2 md:px-0 w-full whitespace-wrap capitalize"
+      >
         {{ $t("hero.subtitle") }}
       </p>
 
@@ -33,7 +38,7 @@
         </NuxtLink>
         <NuxtLink
           :to="localePath('/services')"
-          class="flex justify-center  py-3 shadow-lg border text-[#FFCB6C] w-[238px] text-lg md:text-xl font-semibold hover:bg-[#FFCB6C] hover:text-black transition bg-black/70 shadow-md backdrop-blur capitalize"
+          class="flex justify-center py-3 shadow-lg border text-[#FFCB6C] w-[238px] text-lg md:text-xl font-semibold hover:bg-[#FFCB6C] hover:text-black transition bg-black/70 shadow-md backdrop-blur capitalize"
           style="border-color: #ffcb6c"
         >
           {{ $t("hero.exploreServices") }}
@@ -44,9 +49,9 @@
 </template>
 
 <script setup>
-import { useLocalePath } from '#imports'
+import { useLocalePath } from "#imports";
 
-const localePath = useLocalePath()
+const localePath = useLocalePath();
 </script>
 
 <style>

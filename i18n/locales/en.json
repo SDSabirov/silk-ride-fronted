@@ -8,7 +8,7 @@
     "whyChooseUs": "Why Choose Us",
     "contact": "Contact Us",
     "bookNow": "Book Now",
-    "registerLogin":"Register or Login"
+    "registerLogin":"Login"
   },
   "footer": {
     "description": "Experience first-class travel across the UK & Europe with our premium chauffeur services. Whether for business, leisure, or special events, we ensure comfort, reliability, and elegance on every journey.",
@@ -34,8 +34,8 @@
 
 
   "hero": {
-    "title": "Experience Luxury Travel",
-    "subtitle": "Premium chauffeur service designed for comfort, elegance, and seamless travel.",
+    "title": "Tailored Chauffeur Services for Airport, Events & Business",
+    "subtitle": "Seamlessly connecting your journeys with executive-class service.",
     "bookNow": "Book Now",
     "exploreServices": "Explore Services"
   },
@@ -524,16 +524,16 @@
 
  "seo": {
     "home": {
-      "title": "Luxury Chauffeur Services in London & UK | Silk Ride",
-      "description": "Experience premium chauffeur services across London and the UK with Silk Ride. Book executive travel, airport transfers, and private car hire with professional drivers."
+      "title": "Tailored Chauffeur Services in London & UK | Airport, Events & Business",
+      "description": "Book tailored chauffeur services in London and across the UK for airport transfers, business travel, and exclusive events. Ride in comfort and elegance with Silk Ride’s professional drivers."
     },
     "fleet": {
-      "title": "Chauffeur-Driven Fleet | Mercedes V-Class, S-Class, E-Class | Silk Ride",
-      "description": "Explore Silk Ride's luxury fleet of chauffeur-driven vehicles, including Mercedes V-Class for group travel, S-Class for VIPs, and E-Class for business journeys."
+      "title": "Luxury Chauffeur Fleet | Mercedes V-Class, S-Class & E-Class Hire",
+      "description": "Discover Silk Ride’s premium chauffeur-driven fleet, featuring the spacious Mercedes V-Class for groups, elegant S-Class for VIP transfers, and E-Class for executive travel across London and the UK."
     },
     "services": {
-      "title": "Professional Chauffeur Services in London | Airport, Corporate, Events",
-      "description": "Discover tailored chauffeur services from Silk Ride: airport transfers, corporate hire, event travel, wedding chauffeurs, and luxury city tours across London and the UK."
+      "title": "Chauffeur Services for Every Occasion | Airport, Business & Private Hire UK",
+      "description": "Silk Ride offers bespoke chauffeur services tailored to your needs — airport pickups, executive travel, wedding cars, event transport, and luxury private hire across London and the UK."
     },
     "about": {
       "title": "About Silk Ride | Premier Chauffeur Company in London",

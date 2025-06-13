@@ -21,8 +21,8 @@
           
           <!-- Language Switch for Mobile -->
           <div class="flex space-x-4 items-center">
-          <NuxtLink :to="localePath('/customer')" class="px-4 py-1 border border-gold text-gold  text-lg hover:bg-gold hover:text-black rounded-xl">
-            {{$t('navbar.registerLogin')}}
+          <NuxtLink :to="localePath('/customer')" class="px-4 py-1  text-white shadow-2xl shadow-black text-lg hover:bg-gold hover:text-black rounded-xl flex items-center">
+            <i class='bx bx-user text-4xl'></i> <span class="sr-only">{{$t('navbar.registerLogin')}}</span>
           </NuxtLink>
           
          </div>
@@ -125,8 +125,8 @@
         <div class="flex space-x-2">
          <LanguageSwitch />
          <div class="relative -right-28 flex space-x-4 items-center">
-          <NuxtLink :to="localePath('/customer')" class="px-4 py-1 border border-gold text-gold  text-lg hover:bg-gold hover:text-black rounded-xl">
-            {{$t('navbar.registerLogin')}}
+          <NuxtLink :to="localePath('/customer')" class="px-4 py-1 border border-gold text-gold  text-lg hover:bg-gold hover:text-black rounded-xl flex items-center">
+            <i class='bx bx-user mr-2'></i>  {{$t('navbar.registerLogin')}} 
           </NuxtLink>
           
          </div>
