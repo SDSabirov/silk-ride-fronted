@@ -18,9 +18,19 @@ useSeo('faq')
 const { t } = useI18n()
 
 const faqs = ref([])
-
-onMounted(() => {
-  faqs.value = [
+const faqSchema = computed(() => ({
+  "@context": "https://schema.org",
+  "@type":    "FAQPage",
+  mainEntity: faqs.value.map(f => ({
+    "@type": "Question",
+    name:    f.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text:    f.answer
+    }
+  }))
+}))
+faqs.value = [
     { question: t('faq.items[0].question'), answer: t('faq.items[0].answer') },
     { question: t('faq.items[1].question'), answer: t('faq.items[1].answer') },
     { question: t('faq.items[2].question'), answer: t('faq.items[2].answer') },
@@ -32,27 +42,8 @@ onMounted(() => {
     { question: t('faq.items[8].question'), answer: t('faq.items[8].answer') },
     { question: t('faq.items[9].question'), answer: t('faq.items[9].answer') }
   ]
-
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": faqs.value.map(faq => ({
-      "@type": "Question",
-      "name": faq.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": faq.answer
-      }
-    }))
-  }
-
-  useHead({
-    script: [
-      {
-        type: 'application/ld+json',
-        children: JSON.stringify(faqSchema)
-      }
-    ]
-  })
+useHead({
+  script: [{ type: 'application/ld+json', children: JSON.stringify(faqSchema.value) }]
 })
+
 </script>
