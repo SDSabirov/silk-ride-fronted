@@ -10,70 +10,71 @@
 </template>
 <script setup>
 import { useI18n } from 'vue-i18n'
-import { useSeo } from '~/utils/useSeo'
-import { onMounted, ref } from 'vue'
+import { useHead } from '#imports'
+import { computed } from 'vue'
 
-useSeo('faq')
+const { t, te } = useI18n()
 
-const { t } = useI18n()
+// Dynamically build FAQs until no more translation keys exist
+const faqs = computed(() => {
+  const arr = []
+  for (let i = 0; ; i++) {
+    const qKey = `faq.items[${i}].question`
+    const aKey = `faq.items[${i}].answer`
+    if (!te(qKey) || !te(aKey)) break
+    arr.push({
+      question: t(qKey),
+      answer:   t(aKey),
+      id:       `https://silkride.co.uk/faq/#question${i+1}`
+    })
+  }
+  return arr
+})
 
-const faqs = ref([])
-faqs.value = [
-    { question: t('faq.items[0].question'), answer: t('faq.items[0].answer') },
-    { question: t('faq.items[1].question'), answer: t('faq.items[1].answer') },
-    { question: t('faq.items[2].question'), answer: t('faq.items[2].answer') },
-    { question: t('faq.items[3].question'), answer: t('faq.items[3].answer') },
-    { question: t('faq.items[4].question'), answer: t('faq.items[4].answer') },
-    { question: t('faq.items[5].question'), answer: t('faq.items[5].answer') },
-    { question: t('faq.items[6].question'), answer: t('faq.items[6].answer') },
-    { question: t('faq.items[7].question'), answer: t('faq.items[7].answer') },
-    { question: t('faq.items[8].question'), answer: t('faq.items[8].answer') },
-    { question: t('faq.items[9].question'), answer: t('faq.items[9].answer') }
-  ]
+// Build combined JSON-LD @graph for WebSite, WebPage, and FAQPage
 const schema = computed(() => ({
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type":       "WebPage",
-      "@id":         "https://silkride.co.uk/faq/#webpage",
-      "url":         "https://silkride.co.uk/faq",
-      "name":        t('seo.faq.title'),
-      "description": t('seo.faq.description'),
-      "isPartOf": {
-        "@id": "https://silkride.co.uk/#website"
-      },
-      "inLanguage": "en",
-      "mainEntity": {
-        "@id": "https://silkride.co.uk/faq/#faq"
-      }
-    },
-    {
       "@type": "WebSite",
       "@id":   "https://silkride.co.uk/#website",
-      "url":   "https://silkride.co.uk/",
-      "name":  "Silk Ride Chauffeur Services"
+      url:     "https://silkride.co.uk/",
+      name:    "Silk Ride Chauffeur Services"
     },
     {
-      "@type":    "FAQPage",
-      "@id":      "https://silkride.co.uk/faq/#faq",
-      "mainEntity": faqs.value.map((faq, i) => ({
+      "@type":       "WebPage",
+      "@id":         "https://silkride.co.uk/faq/#webpage",
+      url:           "https://silkride.co.uk/faq",
+      name:          t('seo.faq.title'),
+      description:   t('seo.faq.description'),
+      isPartOf:      { "@id": "https://silkride.co.uk/#website" },
+      inLanguage:    "en",
+      mainEntity:    { "@id": "https://silkride.co.uk/faq/#faq" }
+    },
+    {
+      "@type":     "FAQPage",
+      "@id":       "https://silkride.co.uk/faq/#faq",
+      mainEntity: faqs.value.map(faq => ({
         "@type":          "Question",
-        "@id":            `https://silkride.co.uk/faq/#question${i+1}`,
-        "name":           faq.question,
-        "acceptedAnswer": {
+        "@id":            faq.id,
+        name:             faq.question,
+        acceptedAnswer: {
           "@type": "Answer",
-          "text":  faq.answer
+          text:    faq.answer
         }
       }))
     }
   ]
 }))
 
+// Inject head: title, meta, canonical link, and JSON-LD
 useHead({
+  title: t('seo.faq.title'),
+  meta: [{ name: 'description', content: t('seo.faq.description') }],
+  link: [{ rel: 'canonical', href: 'https://silkride.co.uk/faq' }],
   script: [{
     type:     'application/ld+json',
     children: JSON.stringify(schema.value)
   }]
 })
-
 </script>
