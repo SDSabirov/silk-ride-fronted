@@ -18,18 +18,6 @@ useSeo('faq')
 const { t } = useI18n()
 
 const faqs = ref([])
-const faqSchema = computed(() => ({
-  "@context": "https://schema.org",
-  "@type":    "FAQPage",
-  mainEntity: faqs.value.map(f => ({
-    "@type": "Question",
-    name:    f.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text:    f.answer
-    }
-  }))
-}))
 faqs.value = [
     { question: t('faq.items[0].question'), answer: t('faq.items[0].answer') },
     { question: t('faq.items[1].question'), answer: t('faq.items[1].answer') },
@@ -42,8 +30,50 @@ faqs.value = [
     { question: t('faq.items[8].question'), answer: t('faq.items[8].answer') },
     { question: t('faq.items[9].question'), answer: t('faq.items[9].answer') }
   ]
+const schema = computed(() => ({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type":       "WebPage",
+      "@id":         "https://silkride.co.uk/faq/#webpage",
+      "url":         "https://silkride.co.uk/faq",
+      "name":        t('seo.faq.title'),
+      "description": t('seo.faq.description'),
+      "isPartOf": {
+        "@id": "https://silkride.co.uk/#website"
+      },
+      "inLanguage": "en",
+      "mainEntity": {
+        "@id": "https://silkride.co.uk/faq/#faq"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id":   "https://silkride.co.uk/#website",
+      "url":   "https://silkride.co.uk/",
+      "name":  "Silk Ride Chauffeur Services"
+    },
+    {
+      "@type":    "FAQPage",
+      "@id":      "https://silkride.co.uk/faq/#faq",
+      "mainEntity": faqs.value.map((faq, i) => ({
+        "@type":          "Question",
+        "@id":            `https://silkride.co.uk/faq/#question${i+1}`,
+        "name":           faq.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text":  faq.answer
+        }
+      }))
+    }
+  ]
+}))
+
 useHead({
-  script: [{ type: 'application/ld+json', children: JSON.stringify(faqSchema.value) }]
+  script: [{
+    type:     'application/ld+json',
+    children: JSON.stringify(schema.value)
+  }]
 })
 
 </script>
