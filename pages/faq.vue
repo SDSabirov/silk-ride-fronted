@@ -9,13 +9,13 @@
     </div>
 </template>
 <script setup>
-import { useI18n } from 'vue-i18n'
-import { useHead } from '#imports'
+import { useI18n }  from 'vue-i18n'
+import { useHead }  from '#imports'
 import { computed } from 'vue'
 
 const { t, te } = useI18n()
 
-// Dynamically build FAQs until no more translation keys exist
+// 1) Build FAQs array
 const faqs = computed(() => {
   const arr = []
   for (let i = 0; ; i++) {
@@ -31,8 +31,8 @@ const faqs = computed(() => {
   return arr
 })
 
-// Build combined JSON-LD @graph for WebSite, WebPage, and FAQPage
-const schema = computed(() => ({
+// 2) Build unified JSON-LD @graph
+const jsonLd = computed(() => ({
   "@context": "https://schema.org",
   "@graph": [
     {
@@ -67,14 +67,13 @@ const schema = computed(() => ({
   ]
 }))
 
-// Inject head: title, meta, canonical link, and JSON-LD
+// 3) Single useHead call for everything
 useHead({
   title: t('seo.faq.title'),
-  meta: [{ name: 'description', content: t('seo.faq.description') }],
-  link: [{ rel: 'canonical', href: 'https://silkride.co.uk/faq' }],
+  meta:  [{ name: 'description', content: t('seo.faq.description') }],
   script: [{
     type:     'application/ld+json',
-    children: JSON.stringify(schema.value)
+    children: JSON.stringify(jsonLd.value)
   }]
 })
 </script>
