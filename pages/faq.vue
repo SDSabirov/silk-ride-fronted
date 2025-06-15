@@ -12,11 +12,7 @@
 import { useI18n }  from 'vue-i18n'
 import { useHead }  from '#imports'
 import { computed } from 'vue'
-definePageMeta({
-  
-  schemaOrg: false,
-  structuredData: []
-})
+
 const { t, te } = useI18n()
 
 // 1) Build FAQs array
@@ -71,13 +67,22 @@ const jsonLd = computed(() => ({
   ]
 }))
 
-// 3) Single useHead call for everything
 useHead({
   title: t('seo.faq.title'),
-  meta:  [{ name: 'description', content: t('seo.faq.description') }],
-  script: [{
-    type:     'application/ld+json',
-    children: JSON.stringify(jsonLd.value)
-  }]
+  meta: [
+    { name: 'description', content: t('seo.faq.description') }
+  ]
 })
+
+// 3) Let Unhead emit the FAQPage + Question JSON-LD for you
+useSchemaOrg([
+  defineWebPage({ '@type': 'FAQPage' }),
+  // map each localised FAQ into a defineQuestion node
+  ...faqs.value.map(faq =>
+    defineQuestion({
+      name: faq.question,
+      acceptedAnswer: faq.answer
+    })
+  )
+])
 </script>
