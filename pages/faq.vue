@@ -15,7 +15,9 @@ import { computed } from 'vue'
 definePageMeta({
   seo: {
     // Completely clear out any structuredData the module would emit
+    schemaOrg: false,
     structuredData: []
+
   }
 })
 const { t, te } = useI18n()
