@@ -87,48 +87,7 @@ export default defineNuxtConfig({
     additionalMeta: [
       { name: 'author', content: 'Silk Ride Ltd' }
     ],
-    structuredData: [
-      // Business schema with OfferCatalog of services
-      {
-        type: 'ChauffeurService',
-        data: {
-          name: 'Silk Ride Chauffeur Services',
-          url: 'https://silkride.co.uk',
-          logo: 'https://silkride.co.uk/logo.png',
-          telephone: '+44 7512 905514',
-          address: {
-            '@type': 'PostalAddress',
-            streetAddress: '42 Watling Street',
-            addressLocality: 'Radlett',
-            postalCode: 'WD7 7NN',
-            addressCountry: 'GB'
-          },
-          areaServed: [
-            'London Heathrow Airport T2 & T3',
-            'London Heathrow Airport T4',
-            'London Heathrow Airport T5',
-            'London Gatwick Airport',
-            'London Stansted Airport',
-            'London Luton Airport',
-            'London Biggin Hill Airport',
-            'Farnborough Airport'
-          ],
-          priceRange: '££–£££',
-          hasOfferCatalog: {
-            '@type': 'OfferCatalog',
-            name: 'Silk Ride Service List',
-            itemListElement: [
-              { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Hourly Chauffeur Hire', serviceType: 'Hourly Chauffeur Hire' } },
-              { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Airport Transfer', serviceType: 'Airport Transfer' } },
-              { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Transfer Across UK & Europe', serviceType: 'Transfer Across UK & Europe' } },
-              { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'City Tours', serviceType: 'City Tours' } },
-              { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Event Chauffeur', serviceType: 'Event Chauffeur' } },
-              { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Wedding Chauffeur', serviceType: 'Wedding Chauffeur' } }
-            ]
-          }
-        }
-      }
-    ]
+    
   },
   googleFonts: {
     families: {
