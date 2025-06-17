@@ -1,5 +1,5 @@
 <template>
-  <section class="relative h-[50vh]">
+  <section class="relative h-[60vh]">
     <!-- Background -->
     <div class="absolute inset-0 overflow-hidden">
       <img
@@ -21,11 +21,24 @@
       <p class="text-lg md:text-xl font-light px-2 md:px-0">
         {{ t("bookingForm.hero.subtitle") }}
       </p>
+      <button
+        @click="scrollToWidget"
+        class="absolute bottom-0 flex flex-col items-center text-white animate-bounce space-y-1 focus:outline-none mt-12 bg-gradient-to-b from-black to-gold rounded-full p-6 md:hidden shadow-xl"
+        aria-label="Start your journey"
+      >
+       
+        <i class='bx  bx-chevrons-down text-2xl'  ></i> 
+      </button>
     </header>
+    <!-- Bouncing scroll-down button -->
   </section>
 </template>
 
 <script setup lang="ts">
 import { useI18n } from "vue-i18n";
 const { t } = useI18n();
+function scrollToWidget() {
+  const widget = document.getElementById("eto-iframe-booking");
+  if (widget) widget.scrollIntoView({ behavior: "smooth" });
+}
 </script>
