@@ -89,9 +89,8 @@ const schema = {
     }
   ],
   "sameAs": [
-    "https://www.facebook.com/silkridechauffeur",
-    "https://www.instagram.com/silkridechauffeur",
-    "https://www.linkedin.com/company/silkridechauffeur"
+    "https://www.instagram.com/silkrideofficial?igsh=MXAxbDAwbXBrbTc2NA%3D%3D",
+    "https://www.linkedin.com/company/silk-ride"
   ],
   "hasOfferCatalog": {
     "@type": "OfferCatalog",

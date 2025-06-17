@@ -1,5 +1,5 @@
 <template>
-  <section class="relative h-[70vh]">
+  <section class="relative h-[50vh]">
     <img :src="image" alt="fleet" class="w-full h-full object-cover" />
     <div class="absolute top-0 bg-black/70 w-full h-full flex flex-col items-center justify-center">
       <div class="flex flex-col text-white text-center space-y-6 items-center justify-center w-full">

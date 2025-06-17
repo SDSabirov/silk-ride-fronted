@@ -40,4 +40,5 @@ const serviceTypes = [
 ];
 </script>
 
-<style scoped></style>
+<style scoped>
+</style>

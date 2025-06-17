@@ -1,5 +1,5 @@
 <template>
-  <section class="relative h-[70vh]">
+  <section class="relative h-[50vh]">
     <!-- Background -->
     <div class="absolute inset-0 overflow-hidden">
       <img

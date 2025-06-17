@@ -1,22 +1,19 @@
 <template>
-    <div>
-        <Navbar/>
-        <BookingHero/>
-        <div class="flex items-center justify-center w-full relative h-full py-22">
-            <div class="w-full max-w-screen-xl mx-auto">
-                <EasyTaxiWidgetBooking/>
-            </div>
-            
-        </div>
-        
-        <Footer/>
+  <div>
+    <Navbar />
+    <BookingHero />
+    <div class="flex items-center justify-center w-full relative h-full py-22">
+      <div class="w-full max-w-screen-xl mx-auto py-12">
+        <EasyTaxiWidgetBooking />
+      </div>
     </div>
+
+    <Footer />
+  </div>
 </template>
 
 <script setup>
-import { useSeo } from '~/utils/useSeo'
+import { useSeo } from "~/utils/useSeo";
 
-
-
-useSeo('booking')
+useSeo("booking");
 </script>
