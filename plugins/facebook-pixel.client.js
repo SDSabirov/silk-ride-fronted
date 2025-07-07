@@ -20,7 +20,7 @@ export default defineNuxtPlugin(() => {
     })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
 
     // 2) init & track the first pageview
-    window.fbq('init', '1036069138475539');
+    window.fbq('init', '1415971713055988');
     window.fbq('track', 'PageView');
     window.fbq('track', 'Lead');
 

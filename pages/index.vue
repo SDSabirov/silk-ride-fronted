@@ -1,6 +1,7 @@
 <template>
   <div>
     <Navbar />
+    
     <LandingMainHero />
     <LandingFleet />
     <LandingKeyFeatures />
