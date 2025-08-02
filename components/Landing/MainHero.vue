@@ -13,12 +13,7 @@
       class="relative z-10 text-center space-y-8 text-white flex flex-col justify-center items-center h-full max-w-screen-xl mx-auto"
     >
       <h1 class="text-2xl md:text-6xl font-semibold tracking-wide capitalize">
-        {{ $t("hero.title").split(" ")[0] }}
-        <span class="text-gold">
-          {{ $t("hero.title").split(" ")[1] }}
-          {{ $t("hero.title").split(" ")[2] }}
-        </span>
-        {{ $t("hero.title").split(" ").slice(3).join(" ") }}
+        Premium <span class="text-gold">London Chauffeur</span> Service for Airport Transfers & Business Travel
       </h1>
       <p
         class="text-lg md:text-2xl font-light px-2 md:px-0 w-full whitespace-wrap capitalize"

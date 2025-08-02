@@ -109,3 +109,8 @@
     <Footer />
   </div>
 </template>
+
+<script setup>
+import { useSeo } from '~/utils/useSeo'
+useSeo('privacy')
+</script>

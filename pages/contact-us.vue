@@ -128,6 +128,9 @@
   </div>
 </template>
 <script setup>
+import { useSeo } from '~/utils/useSeo'
 import cover from "@/assets/images/covers/contactus.webp";
 const form = ref({});
+
+useSeo('contact')
 </script>

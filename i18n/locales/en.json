@@ -524,48 +524,74 @@
 
  "seo": {
     "home": {
-      "title": "Tailored Chauffeur Services in London & UK | Airport, Events & Business",
-      "description": "Book tailored chauffeur services in London and across the UK for airport transfers, business travel, and exclusive events. Ride in comfort and elegance with Silk Ride’s professional drivers."
+      "title": "London Chauffeur Service | Luxury Airport Transfers & Executive Car Hire | Silk Ride",
+      "description": "Premium chauffeur service in London offering luxury airport transfers to Heathrow, Gatwick, Stansted & Luton. Executive Mercedes car hire for business travel, weddings & events. Book now for professional drivers & 24/7 service.",
+      "keywords": "London chauffeur service, luxury car hire London, airport transfers London, Heathrow chauffeur, Gatwick transfers, executive car hire, Mercedes chauffeur London, private driver London"
     },
     "fleet": {
-      "title": "Luxury Chauffeur Fleet | Mercedes V-Class, S-Class & E-Class Hire",
-      "description": "Discover Silk Ride’s premium chauffeur-driven fleet, featuring the spacious Mercedes V-Class for groups, elegant S-Class for VIP transfers, and E-Class for executive travel across London and the UK."
+      "title": "Luxury Mercedes Fleet | Chauffeur Car Hire London | V-Class, S-Class & E-Class",
+      "description": "Hire luxury Mercedes vehicles with professional chauffeurs in London. Mercedes V-Class for groups, S-Class for VIP travel, E-Class for business. All vehicles include Wi-Fi, climate control & premium comfort.",
+      "keywords": "Mercedes chauffeur hire London, luxury car hire, Mercedes V-Class hire, Mercedes S-Class chauffeur, Mercedes E-Class London, executive car rental London"
     },
     "services": {
-      "title": "Chauffeur Services for Every Occasion | Airport, Business & Private Hire UK",
-      "description": "Silk Ride offers bespoke chauffeur services tailored to your needs — airport pickups, executive travel, wedding cars, event transport, and luxury private hire across London and the UK."
+      "title": "Chauffeur Services London | Airport Transfers, Business Travel & Event Transport",
+      "description": "Professional chauffeur services across London & UK. Specializing in airport transfers, corporate travel, wedding cars, event transport & hourly hire. Licensed operators with luxury Mercedes fleet.",
+      "keywords": "chauffeur services London, airport transfer service, corporate chauffeur London, wedding car hire London, event transport, hourly chauffeur hire, business travel London"
     },
     "about": {
-      "title": "About Silk Ride | Premier Chauffeur Company in London",
-      "description": "Learn about Silk Ride's commitment to excellence, our experienced team of professional chauffeurs, and our dedication to providing premium transportation services in London."
+      "title": "About Silk Ride | Professional Chauffeur Company London | Licensed & Insured",
+      "description": "Silk Ride is a licensed Hertsmere Borough Council private hire operator providing luxury chauffeur services in London since 2014. Professional drivers, luxury Mercedes fleet, and 50,000+ satisfied customers.",
+      "keywords": "chauffeur company London, licensed private hire, professional chauffeurs London, luxury transport company, Hertsmere Borough Council licensed"
     },
     "vClass": {
-      "title": "Mercedes V-Class Chauffeur Hire | Luxury Group Travel | Silk Ride",
-      "description": "Hire the spacious Mercedes V-Class for luxury group travel, airport transfers, and city tours in London. Enjoy comfort and professional chauffeur service with Silk Ride."
+      "title": "Mercedes V-Class Chauffeur Hire London | Luxury Group Travel & Airport Transfers",
+      "description": "Hire Mercedes V-Class with professional chauffeur for group travel in London. Seats up to 7 passengers, perfect for family airport transfers, corporate groups, and luxury city tours. Book online now.",
+      "keywords": "Mercedes V-Class hire London, group chauffeur service, 7 seater chauffeur London, family airport transfers, group transport London, luxury minibus hire"
     },
     "sClass": {
-      "title": "Mercedes S-Class Chauffeur Hire | Executive Luxury Travel | Silk Ride",
-      "description": "Experience ultimate luxury with our Mercedes S-Class chauffeur service. Ideal for executive travel, VIP airport transfers, and special events across London."
+      "title": "Mercedes S-Class Chauffeur London | Executive VIP Transport & Airport Transfers",
+      "description": "Experience ultimate luxury with Mercedes S-Class chauffeur service in London. Perfect for VIP airport transfers, executive business travel, and special occasions. Professional drivers and premium comfort.",
+      "keywords": "Mercedes S-Class chauffeur London, VIP transport London, executive car hire, luxury airport transfers, business chauffeur service, premium car hire London"
     },
     "eClass": {
-      "title": "Mercedes E-Class Chauffeur Hire | Business Travel Solutions | Silk Ride",
-      "description": "Opt for the elegant Mercedes E-Class for your business travel needs. Perfect for airport transfers and corporate journeys in London with Silk Ride's professional chauffeurs."
+      "title": "Mercedes E-Class Chauffeur London | Business Travel & Executive Airport Transfers",
+      "description": "Professional Mercedes E-Class chauffeur service for business travel in London. Ideal for airport transfers, corporate meetings, and executive transport. Comfortable, reliable, and professional service.",
+      "keywords": "Mercedes E-Class chauffeur London, business car hire, executive transport London, corporate chauffeur service, business airport transfers"
     },
     "booking": {
-      "title": "Book Your Chauffeur Online | Silk Ride Luxury Transfers",
-      "description": "Easily book your luxury chauffeur service online with Silk Ride. Choose your vehicle, schedule your ride, and enjoy premium transportation across London and the UK."
+      "title": "Book Chauffeur Online London | Instant Quote & Reservation | Silk Ride",
+      "description": "Book luxury chauffeur service online in London. Instant quotes, secure payment, choose your Mercedes vehicle, and schedule your ride. Available 24/7 for airport transfers and business travel.",
+      "keywords": "book chauffeur online London, chauffeur booking system, instant quote chauffeur, online car hire London, book airport transfer London"
     },
     "faq": {
-      "title": "Frequently Asked Questions | Silk Ride Chauffeur Services",
-      "description": "Find answers to common questions about our luxury chauffeur services, booking process, vehicle options, and more. Everything you need to know before your ride."
+      "title": "Chauffeur Service FAQ London | Booking, Pricing & Vehicle Information | Silk Ride",
+      "description": "Frequently asked questions about our London chauffeur service. Get answers about booking process, pricing, vehicle options, airport transfers, and our professional chauffeur drivers.",
+      "keywords": "chauffeur service FAQ London, chauffeur booking questions, airport transfer FAQ, luxury car hire questions, London chauffeur information"
     },
     "blog": {
-      "title": "Silk Ride Blog | Insights on Luxury Chauffeur Services & Travel",
-      "description": "Explore expert articles and insights on premium chauffeur services, travel tips, and exclusive experiences with Silk Ride's luxury transportation blog."
+      "title": "Chauffeur Service Blog London | Travel Tips & Luxury Transport Insights | Silk Ride",
+      "description": "Expert insights on luxury chauffeur services, London travel tips, airport transfer guides, and premium transport experiences. Stay updated with the latest from Silk Ride's chauffeur experts.",
+      "keywords": "chauffeur service blog, London travel tips, luxury transport blog, airport transfer guide, chauffeur service news London"
     },
     "customer":{
-      "title":"Create Your Account – Access Premium Chauffeur Services",
-      "description":"Sign up with Silk Ride to access our premium chauffeur services. Book your private Mercedes E-Class, S-Class, or V-Class ride in minutes. Experience luxury, comfort, and convenience today."
+      "title":"Customer Account | Manage Bookings & Profile | Silk Ride Chauffeur Services",
+      "description":"Access your Silk Ride customer account to manage bookings, view ride history, update payment methods, and book luxury chauffeur services in London. Sign up for exclusive member benefits.",
+      "keywords": "chauffeur service account, manage bookings London, customer portal, ride history, chauffeur booking management"
+    },
+    "contact": {
+      "title": "Contact Silk Ride | London Chauffeur Service | Book Your Luxury Transfer",
+      "description": "Contact Silk Ride for luxury chauffeur services in London. Licensed Hertsmere Borough Council operator. Call +44 7512 905514 or email info@silkride.co.uk for airport transfers and executive travel.",
+      "keywords": "contact chauffeur service London, book luxury transfer, chauffeur company contact details, London airport transfers contact, Silk Ride contact information"
+    },
+    "privacy": {
+      "title": "Privacy Policy | Silk Ride Chauffeur Services London | Data Protection",
+      "description": "Silk Ride's privacy policy explaining how we collect, use, and protect your personal information when booking chauffeur services. GDPR compliant data handling for London luxury transport.",
+      "keywords": "chauffeur service privacy policy, data protection London transport, GDPR compliance chauffeur, luxury car hire privacy"
+    },
+    "terms": {
+      "title": "Terms of Service | Silk Ride Chauffeur London | Booking Terms & Conditions",
+      "description": "Terms and conditions for Silk Ride's luxury chauffeur services in London. Booking policies, cancellation terms, and service conditions for airport transfers and executive travel.",
+      "keywords": "chauffeur service terms London, booking terms conditions, luxury transport terms, airport transfer terms London"
     }
   },
   "faq": {
