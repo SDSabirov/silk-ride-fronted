@@ -239,6 +239,7 @@ const servicesDropdownItems = [
 
 const dropdownItems = [
   { path: localePath('/about'), label: t('navbar.about'), icon: 'bx bx-info-circle' },
+  { path: localePath('/partners'), label: t('navbar.partners'), icon: 'bx bx-group' },
   { path: localePath('/#why-choose-us'), label: t('navbar.whyChooseUs'), icon: 'bx bx-star' },
   { path: localePath('/contact-us'), label: t('navbar.contact'), icon: 'bx bx-phone' }
 ]

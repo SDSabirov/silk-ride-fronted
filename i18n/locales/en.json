@@ -5,6 +5,7 @@
     "services": "Services",
     "ourCompany": "Our Company",
     "about": "About Us",
+    "partners": "Partners",
     "whyChooseUs": "Why Choose Us",
     "contact": "Contact Us",
     "bookNow": "Book Now",
@@ -270,10 +271,229 @@
 
     "about": {
       "title": "About Us",
+      "heroSubtitle": "Your trusted partner for luxury transportation since 2009",
       "intro": {
-        "title": "Our Company",
-        "paragraph": "At Silk Ride, we believe that every journey should be as seamless and luxurious as the destination itself. We provide premium chauffeur services in London and across the UK, ensuring comfort, reliability, and sophistication at every step. Our services include airport transfers, executive business travel, intercity rides, and chauffeur hire for special events. Whether you need a smooth transfer from Heathrow, a VIP ride across the city, or a long-distance journey in ultimate comfort, we’ve got you covered. With over 10 years of experience and 50000+ satisfied clients, we have built a reputation for excellence, professionalism, and personalized service. Book your ride today and experience the Silk Ride difference."
-        
+        "title": "Welcome to Silk Ride",
+        "paragraph": "At Silk Ride, we believe that every journey should be as seamless and luxurious as the destination itself. We provide premium chauffeur services in London and across the UK, ensuring comfort, reliability, and sophistication at every step.",
+        "extended": "Our services include airport transfers, executive business travel, intercity rides, and chauffeur hire for special events. Whether you need a smooth transfer from Heathrow, a VIP ride across the city, or a long-distance journey in ultimate comfort, we've got you covered."
+      },
+      "bookNow": "Book Now",
+      "contactUs": "Contact Us",
+      "yearsExperience": "Years Experience",
+      "stats": {
+        "customers": "Satisfied Customers",
+        "vehicles": "Premium Vehicles",
+        "availability": "Service Available",
+        "satisfaction": "Customer Satisfaction"
+      },
+      "story": {
+        "title": "Our Story",
+        "subtitle": "From humble beginnings to London's premier chauffeur service",
+        "founding": {
+          "title": "Founded with Vision",
+          "text": "Established in 2009, Silk Ride was founded with a simple vision: to provide unparalleled luxury transportation that combines comfort, reliability, and exceptional service. Our founders recognized the need for a chauffeur service that truly understood the expectations of discerning clients."
+        },
+        "growth": {
+          "title": "Growing Excellence",
+          "text": "Over the years, we've grown from a small local service to London's trusted premium chauffeur company. Through word-of-mouth recommendations and repeat customers, we've built a reputation for excellence that spans across corporate clients, celebrities, and luxury travelers."
+        },
+        "future": {
+          "title": "Future Forward",
+          "text": "Today, we continue to innovate while maintaining our core values of luxury, reliability, and personalized service. With our modern fleet and professional team, we're ready to serve the next generation of travelers who demand nothing but the best."
+        }
+      },
+      "values": {
+        "title": "Our Core Values",
+        "subtitle": "The principles that guide every journey we provide",
+        "luxury": {
+          "title": "Uncompromising Luxury",
+          "description": "We believe luxury is in the details - from our pristine Mercedes fleet to the personalized service that makes every journey exceptional."
+        },
+        "reliability": {
+          "title": "Absolute Reliability",
+          "description": "Punctuality and dependability are non-negotiable. Our clients trust us with their most important journeys, and we never let them down."
+        },
+        "service": {
+          "title": "Exceptional Service",
+          "description": "Every interaction is an opportunity to exceed expectations. Our team is dedicated to providing service that goes beyond transportation."
+        }
+      },
+      "team": {
+        "title": "Our Professional Team",
+        "subtitle": "Meet the people who make every journey extraordinary",
+        "chauffeurs": {
+          "title": "Expert Chauffeurs",
+          "description": "Highly trained professionals with extensive knowledge of London and exceptional driving skills, dedicated to your safety and comfort."
+        },
+        "support": {
+          "title": "Customer Support",
+          "description": "Our 24/7 customer service team ensures seamless bookings, real-time updates, and immediate assistance whenever you need it."
+        },
+        "maintenance": {
+          "title": "Technical Team",
+          "description": "Skilled technicians who maintain our fleet to the highest standards, ensuring every vehicle meets our strict quality requirements."
+        }
+      },
+      "cta": {
+        "title": "Experience the Silk Ride Difference",
+        "description": "Join thousands of satisfied customers who trust us for their luxury transportation needs. Book your journey today.",
+        "bookNow": "Book Your Journey",
+        "viewFleet": "View Our Fleet"
+      },
+      "partners": {
+        "title": "Partners",
+        "heroSubtitle": "Building successful partnerships in luxury transportation",
+        "intro": {
+          "title": "Partnership Opportunities",
+          "description": "Join our network of trusted partners and grow your business while providing exceptional transportation services to your clients. We believe in building long-term relationships that benefit everyone.",
+          "whyPartner": {
+            "title": "Why Partner with Silk Ride?",
+            "reliability": {
+              "title": "Proven Reliability",
+              "description": "15+ years of consistent service delivery with 99% customer satisfaction rates and punctual arrivals."
+            },
+            "quality": {
+              "title": "Premium Quality",
+              "description": "Licensed chauffeurs, luxury Mercedes fleet, and comprehensive insurance for complete peace of mind."
+            },
+            "support": {
+              "title": "Dedicated Support",
+              "description": "24/7 partner support, account management, and marketing materials to help you succeed."
+            }
+          }
+        },
+        "types": {
+          "title": "Partnership Types",
+          "subtitle": "Choose the partnership model that best fits your business needs",
+          "corporate": {
+            "title": "Corporate Partners",
+            "description": "Perfect for businesses requiring regular transportation services for executives, clients, and events.",
+            "benefits": {
+              "volumeDiscount": "Volume-based discounts",
+              "priority": "Priority booking access",
+              "account": "Dedicated account manager"
+            }
+          },
+          "hotel": {
+            "title": "Hotel & Hospitality",
+            "description": "Enhance your guest experience with premium transportation services and concierge partnerships.",
+            "benefits": {
+              "concierge": "Concierge integration",
+              "commission": "Competitive commission rates",
+              "branding": "Co-branded materials"
+            }
+          },
+          "event": {
+            "title": "Event Planners",
+            "description": "Reliable transportation solutions for weddings, corporate events, and special occasions.",
+            "benefits": {
+              "coordination": "Event coordination support",
+              "packages": "Custom event packages",
+              "logistics": "Complete logistics management"
+            }
+          }
+        },
+        "benefits": {
+          "title": "Partnership Benefits",
+          "subtitle": "What you gain by partnering with Silk Ride",
+          "competitive": {
+            "title": "Competitive Rates",
+            "description": "Attractive commission structures and volume discounts for regular partners"
+          },
+          "support": {
+            "title": "Full Support",
+            "description": "Dedicated account management, marketing materials, and operational support"
+          },
+          "growth": {
+            "title": "Business Growth",
+            "description": "Expand your service offerings and increase revenue with our partnership programs"
+          },
+          "availability": {
+            "title": "24/7 Availability",
+            "description": "Round-the-clock service availability to meet all your clients' transportation needs"
+          }
+        },
+        "current": {
+          "title": "Our Partner Network",
+          "subtitle": "We're proud to work with leading organizations across various industries",
+          "luxury": {
+            "title": "Luxury & Hospitality",
+            "hotels": "5-star hotels and resorts",
+            "restaurants": "Fine dining establishments", 
+            "venues": "Premium event venues"
+          },
+          "corporate": {
+            "title": "Corporate Clients",
+            "financial": "Financial services firms",
+            "consulting": "Management consultancies",
+            "technology": "Technology companies"
+          },
+          "travel": {
+            "title": "Travel & Tourism",
+            "agencies": "Luxury travel agencies",
+            "concierge": "Concierge services",
+            "airlines": "Airline partnerships"
+          },
+          "stats": {
+            "partners": "Active Partners",
+            "retention": "Partner Retention",
+            "support": "Support Available",
+            "years": "Years Experience"
+          }
+        },
+        "process": {
+          "title": "Partnership Process",
+          "subtitle": "Simple steps to become a Silk Ride partner",
+          "steps": {
+            "contact": {
+              "title": "Initial Contact",
+              "description": "Reach out to discuss your partnership needs and business requirements"
+            },
+            "discuss": {
+              "title": "Partnership Discussion",
+              "description": "We'll explore how our services can benefit your business and clients"
+            },
+            "agreement": {
+              "title": "Partnership Agreement",
+              "description": "Formalize the partnership with terms that work for both parties"
+            },
+            "launch": {
+              "title": "Launch & Support",
+              "description": "Begin serving your clients with ongoing support and account management"
+            }
+          }
+        },
+        "cta": {
+          "title": "Become a Partner Today",
+          "description": "Join our network of successful partners and start offering premium transportation services to your clients.",
+          "becomePartner": "Become a Partner",
+          "emailUs": "Email Us"
+        },
+        "trusted": {
+          "title": "Organizations That Trust Us",
+          "subtitle": "Proud to serve leading companies and organizations with our premium chauffeur services",
+          "organizations": {
+            "uzbekCulture": {
+              "name": "Uzbek Culture Week UK",
+              "description": "A cultural organization promoting Uzbek heritage and traditions in the United Kingdom through educational and cultural events.",
+              "service": "Annual events transportation"
+            },
+            "tezParcel": {
+              "name": "Tez Parcel",
+              "description": "International cargo and parcel delivery company providing reliable shipping services across multiple countries.",
+              "service": "Corporate transport services"
+            },
+            "oshpaz": {
+              "name": "Oshpaz",
+              "description": "Premium food chain restaurant offering authentic cuisine and exceptional dining experiences.",
+              "service": "Executive and event transportation"
+            }
+          },
+          "cta": {
+            "text": "Ready to join our network of satisfied partners and clients?",
+            "button": "Get in Touch"
+          }
+        }
       },
       "standards": {
           "title": "Elite Chauffeurs, Exceptional Service",
@@ -592,6 +812,11 @@
       "title": "About Silk Ride | Professional Chauffeur Company London | Licensed & Insured",
       "description": "Silk Ride is a licensed Hertsmere Borough Council private hire operator providing luxury chauffeur services in London since 2014. Professional drivers, luxury Mercedes fleet, and 50,000+ satisfied customers.",
       "keywords": "chauffeur company London, licensed private hire, professional chauffeurs London, luxury transport company, Hertsmere Borough Council licensed"
+    },
+    "partners": {
+      "title": "Partners | Luxury Chauffeur Service Partnerships | Business Opportunities",
+      "description": "Partner with Silk Ride for premium chauffeur services. Corporate partnerships, hotel concierge services, event planning collaborations. Competitive rates and dedicated support for business partners.",
+      "keywords": "chauffeur service partnerships, corporate transport partners, hotel concierge partnerships, event planning transport, business partnerships luxury transport"
     },
     "vClass": {
       "title": "Mercedes V-Class Chauffeur Hire London | Luxury Group Travel & Airport Transfers",
