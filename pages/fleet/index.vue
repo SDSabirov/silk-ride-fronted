@@ -22,7 +22,7 @@
             <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-4">
               <i class="bx bx-car text-white text-2xl"></i>
             </div>
-            <h3 class="text-3xl font-bold text-gray-900 mb-2">15+</h3>
+            <h3 class="text-3xl font-bold text-gray-900 mb-2">20+</h3>
             <p class="text-gray-600">{{ $t('pages.fleet.stats.vehicles') }}</p>
           </div>
           
@@ -103,7 +103,7 @@
               <div class="border-t pt-4 mb-6">
                 <div class="flex justify-between items-center mb-2">
                   <span class="text-sm text-gray-600">{{ $t('priceGuide.hourly.title') }}</span>
-                  <span class="font-bold text-gold">£60/hour</span>
+                  <span class="font-bold text-gold">£65/hour</span>
                 </div>
                 <div class="flex justify-between items-center">
                   <span class="text-sm text-gray-600">{{ $t('priceGuide.heathrow') }}</span>
@@ -165,7 +165,7 @@
               <div class="border-t pt-4 mb-6">
                 <div class="flex justify-between items-center mb-2">
                   <span class="text-sm text-gray-600">{{ $t('priceGuide.hourly.title') }}</span>
-                  <span class="font-bold text-gold">£80/hour</span>
+                  <span class="font-bold text-gold">£85/hour</span>
                 </div>
                 <div class="flex justify-between items-center">
                   <span class="text-sm text-gray-600">{{ $t('priceGuide.heathrow') }}</span>
@@ -227,7 +227,7 @@
               <div class="border-t pt-4 mb-6">
                 <div class="flex justify-between items-center mb-2">
                   <span class="text-sm text-gray-600">{{ $t('priceGuide.hourly.title') }}</span>
-                  <span class="font-bold text-gold">£70/hour</span>
+                  <span class="font-bold text-gold">£85/hour</span>
                 </div>
                 <div class="flex justify-between items-center">
                   <span class="text-sm text-gray-600">{{ $t('priceGuide.heathrow') }}</span>

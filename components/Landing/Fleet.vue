@@ -40,7 +40,7 @@
               Professional transfers to/from all London airports with flight tracking, meet & greet service, and 60 minutes free waiting time.
             </p>
             <div class="flex justify-between items-center mb-4">
-              <span class="text-2xl font-bold text-gold animate-pulse">From £80</span>
+              <span class="text-2xl font-bold text-gold animate-pulse">From £120</span>
               <span class="text-sm text-gray-500">Heathrow to Central London</span>
             </div>
             <div class="flex space-x-3">
@@ -75,7 +75,7 @@
               Executive chauffeur service for business meetings, conferences, and corporate events. Wi-Fi enabled vehicles and discrete professional service.
             </p>
             <div class="flex justify-between items-center mb-4">
-              <span class="text-2xl font-bold text-gold">From £60/hr</span>
+              <span class="text-2xl font-bold text-gold">From £65/hr</span>
               <span class="text-sm text-gray-500">4 hour minimum</span>
             </div>
             <div class="flex space-x-3">

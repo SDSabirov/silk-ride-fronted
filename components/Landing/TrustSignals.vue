@@ -7,12 +7,12 @@
           <div class="text-sm md:text-base opacity-80">Happy Customers</div>
         </div>
         <div class="flex flex-col items-center">
-          <div class="text-2xl md:text-3xl font-bold text-gold mb-1">15+</div>
+          <div class="text-2xl md:text-3xl font-bold text-gold mb-1">10+</div>
           <div class="text-sm md:text-base opacity-80">Years Experience</div>
         </div>
         <div class="flex flex-col items-center">
-          <div class="text-2xl md:text-3xl font-bold text-gold mb-1">99%</div>
-          <div class="text-sm md:text-base opacity-80">On-Time Rating</div>
+          <div class="text-2xl md:text-3xl font-bold text-gold mb-1">20+</div>
+          <div class="text-sm md:text-base opacity-80">Premium vehicles</div>
         </div>
         <div class="flex flex-col items-center">
           <div class="flex items-center text-2xl md:text-3xl font-bold text-gold mb-1">
