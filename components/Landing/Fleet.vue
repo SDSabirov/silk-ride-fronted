@@ -174,7 +174,7 @@
           <!-- V-Class -->
           <div class="text-center group">
             <div class="relative overflow-hidden rounded-lg mb-4">
-              <img src="/assets/images/vclassJett.webp" alt="Mercedes V-Class" 
+              <img src="/assets/images/vclassjett.webp" alt="Mercedes V-Class" 
                    class="w-full h-40 object-cover transition-transform duration-300 group-hover:scale-105">
               <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300"></div>
             </div>
