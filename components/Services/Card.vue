@@ -28,12 +28,20 @@
   
         <p v-if="note" class="mt-4 mb-4">{{ note }}</p>
   
-        <NuxtLink
-          :to="localePath('/booking')"
-          class="py-2 px-4 text-black text-md border border-gold hover:bg-gold mt-auto flex justify-center"
-        >
-          {{ t('pages.common.bookNow') }}
-        </NuxtLink>
+        <div class="mt-auto space-y-3">
+          <NuxtLink
+            :to="localePath(serviceDetailPath)"
+            class="py-2 px-4 text-gold text-md border border-gold hover:bg-gold hover:text-black transition flex justify-center"
+          >
+            Learn More
+          </NuxtLink>
+          <NuxtLink
+            :to="localePath('/booking')"
+            class="py-2 px-4 bg-gold text-black text-md hover:bg-yellow-500 transition flex justify-center"
+          >
+            {{ t('pages.common.bookNow') }}
+          </NuxtLink>
+        </div>
       </div>
     </div>
   </template>
@@ -65,6 +73,18 @@
   const note = computed(() => {
     const key = `pages.services.cards.${props.card}.note`
     return te(key) ? t(key) : ''
+  })
+
+  const serviceDetailPath = computed(() => {
+    const pathMap = {
+      'airport': '/services/airport-transfers',
+      'corporate': '/services/corporate-travel',
+      'hourly': '/services/hourly-chauffeur',
+      'longDistance': '/services/uk-europe-travel',
+      'wedding': '/services/wedding-chauffeur',
+      'event': '/services/event-chauffeur'
+    }
+    return pathMap[props.card] || '/services'
   })
   </script>
   

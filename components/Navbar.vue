@@ -16,50 +16,63 @@
           </div>
         </NuxtLink>
 
-        <!-- Mobile Menu, Book Now Button & Language Switch -->
-        <div class="flex items-center space-x-4 lg:hidden">
-          
-          <!-- Language Switch for Mobile -->
-          <div class="flex space-x-4 items-center">
-          <NuxtLink :to="localePath('/customer')" class="px-4 py-1  text-white shadow-2xl shadow-black text-lg hover:bg-gold hover:text-black rounded-xl flex items-center">
-            <i class='bx bx-user text-4xl'></i> <span class="sr-only">{{$t('navbar.registerLogin')}}</span>
+        <!-- Mobile Menu Controls -->
+        <div class="flex items-center space-x-3 lg:hidden">
+          <!-- Customer Account -->
+          <NuxtLink :to="localePath('/customer')" 
+                    class="p-2 text-white hover:bg-gold hover:text-black rounded-lg transition-colors">
+            <i class='bx bx-user text-xl'></i>
+            <span class="sr-only">{{$t('navbar.registerLogin')}}</span>
           </NuxtLink>
           
-         </div>
+          <!-- Language Switch -->
           <LanguageSwitch/>
+          
+          <!-- Mobile Menu Toggle -->
           <button
-            class="focus:outline-none"
+            class="relative p-2 focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-transparent rounded-lg group"
             @click="toggleMenu"
             :aria-expanded="menuOpen"
             aria-label="Toggle menu"
           >
-            <span
-              :class="[
-                'block h-0.5 w-6 bg-white transition-all my-1',
-                menuOpen ? 'rotate-45 translate-y-1.5' : ''
-              ]"
-            ></span>
-            <span
-              :class="[
-                'block h-0.5 w-6 bg-white transition-all my-1',
-                menuOpen ? 'opacity-0' : ''
-              ]"
-            ></span>
-            <span
-              :class="[
-                'block h-0.5 w-6 bg-white transition-all my-1',
-                menuOpen ? '-rotate-45 -translate-y-1.5' : ''
-              ]"
-            ></span>
+            <div class="relative w-6 h-6 flex flex-col justify-center items-center">
+              <span
+                :class="[
+                  'absolute h-0.5 w-6 bg-white transition-all duration-300 ease-in-out',
+                  menuOpen ? 'rotate-45 translate-y-0' : '-translate-y-2'
+                ]"
+              ></span>
+              <span
+                :class="[
+                  'absolute h-0.5 w-6 bg-white transition-all duration-300 ease-in-out',
+                  menuOpen ? 'opacity-0 scale-0' : 'opacity-100 scale-100'
+                ]"
+              ></span>
+              <span
+                :class="[
+                  'absolute h-0.5 w-6 bg-white transition-all duration-300 ease-in-out',
+                  menuOpen ? '-rotate-45 translate-y-0' : 'translate-y-2'
+                ]"
+              ></span>
+            </div>
           </button>
         </div>
       </div>
 
+      <!-- Mobile Menu Overlay -->
+      <div
+        v-if="menuOpen"
+        class="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
+        @click="closeMenu"
+      ></div>
+
       <!-- Links -->
       <div
         :class="[
-          'lg:flex lg:items-center lg:space-x-8 text-lg mt-4 lg:mt-0 transition-all duration-300 whitespace-nowrap capitalize',
-          menuOpen ? 'block flex flex-col items-center space-y-4 mt-6' : 'hidden lg:flex'
+          'lg:flex lg:items-center lg:space-x-8 text-lg lg:mt-0 transition-all duration-500 whitespace-nowrap capitalize',
+          menuOpen 
+            ? 'fixed top-20 left-0 w-full bg-black/95 backdrop-blur-md border-t border-gold/30 z-50 flex flex-col items-start px-6 py-6 space-y-6 min-h-[50vh] lg:relative lg:top-auto lg:left-auto lg:w-auto lg:bg-transparent lg:border-none lg:px-0 lg:py-0 lg:space-y-0 lg:min-h-0 lg:flex-row lg:items-center lg:space-x-8' 
+            : 'hidden lg:flex'
         ]"
       >
         <!-- Standard navigation links -->
@@ -67,48 +80,96 @@
           v-for="link in navLinks"
           :key="link.path"
           :to="link.path"
-          :class="navLinkClass($route.path === link.path)"
+          :class="[
+            'w-full lg:w-auto py-3 lg:py-0 text-left lg:text-center border-b border-gray-700/30 lg:border-none transition-all duration-200',
+            navLinkClass($route.path === link.path)
+          ]"
           @click="closeMenu"
           :aria-label="`Go to ${link.label} page`"
         >
-          {{ link.label }}
+          <span class="flex items-center">
+            <i v-if="link.icon" :class="link.icon + ' mr-3 text-gold lg:hidden'"></i>
+            {{ link.label }}
+          </span>
         </NuxtLink>
         
+        <!-- Services Dropdown -->
+        <div class="relative w-full lg:w-auto border-b border-gray-700/30 lg:border-none">
+          <button
+            @click="toggleServicesDropdown"
+            class="w-full lg:w-auto py-3 lg:py-0 text-left text-white hover:text-gold focus:outline-none flex items-center justify-between transition-colors duration-200"
+            aria-haspopup="true"
+            :aria-expanded="showServicesDropdown"
+          >
+            <span class="flex items-center">
+              <i class="bx bx-briefcase mr-3 text-gold lg:hidden"></i>
+              {{$t('navbar.services')}}
+            </span>
+            <i :class="['bx transition-transform duration-200', showServicesDropdown ? 'bx-chevron-up' : 'bx-chevron-down']"></i>
+          </button>
+          <div
+            v-show="showServicesDropdown"
+            class="w-full lg:absolute left-0 lg:mt-2 lg:w-[280px] bg-gray-800/90 lg:bg-black/95 backdrop-blur text-white lg:rounded-lg lg:shadow-xl overflow-hidden transition-all duration-300"
+          >
+            <NuxtLink
+              v-for="item in servicesDropdownItems"
+              :key="item.path"
+              :to="item.path"
+              class="block px-6 lg:px-4 py-3 lg:py-2 text-base lg:text-lg hover:bg-gold/20 border-l-2 border-transparent hover:border-gold lg:border-none transition-all duration-200"
+              @click="closeServicesDropdown"
+            >
+              <span class="flex items-center">
+                <i v-if="item.icon" :class="item.icon + ' mr-3 text-gold lg:hidden'"></i>
+                {{ item.label }}
+              </span>
+            </NuxtLink>
+          </div>
+        </div>
 
         <!-- Our Company Dropdown -->
-        <div class="relative w-full">
+        <div class="relative w-full lg:w-auto border-b border-gray-700/30 lg:border-none">
           <button
             @click="toggleDropdown"
-            class="w-full lg:w-auto text-left text-white hover:text-gold focus:outline-none flex items-center justify-between"
+            class="w-full lg:w-auto py-3 lg:py-0 text-left text-white hover:text-gold focus:outline-none flex items-center justify-between transition-colors duration-200"
             aria-haspopup="true"
             :aria-expanded="showDropdown"
           >
-            <span>{{$t('navbar.ourCompany')}}</span>
-            <i class="bx bx-chevron-down"></i>
+            <span class="flex items-center">
+              <i class="bx bx-building mr-3 text-gold lg:hidden"></i>
+              {{$t('navbar.ourCompany')}}
+            </span>
+            <i :class="['bx transition-transform duration-200', showDropdown ? 'bx-chevron-up' : 'bx-chevron-down']"></i>
           </button>
           <div
             v-show="showDropdown"
-            class="lg:absolute left-0 lg:mt-2 w-full lg:w-[268px] md:bg-black/70  md:backdrop-blur text-white  overflow-hidden"
+            class="w-full lg:absolute left-0 lg:mt-2 lg:w-[268px] bg-gray-800/90 lg:bg-black/95 backdrop-blur text-white lg:rounded-lg lg:shadow-xl overflow-hidden transition-all duration-300"
           >
             <NuxtLink
               v-for="item in dropdownItems"
               :key="item.path"
               :to="item.path"
-              class="block px-4 py-2 mb-2 text-lg hover:bg-gold/20"
+              class="block px-6 lg:px-4 py-3 lg:py-2 text-base lg:text-lg hover:bg-gold/20 border-l-2 border-transparent hover:border-gold lg:border-none transition-all duration-200"
               @click="closeDropdown"
             >
-              {{ item.label }}
+              <span class="flex items-center">
+                <i v-if="item.icon" :class="item.icon + ' mr-3 text-gold lg:hidden'"></i>
+                {{ item.label }}
+              </span>
             </NuxtLink>
           </div>
         </div>
-        <NuxtLink
+        <!-- Mobile Booking Button -->
+        <div class="w-full pt-4 lg:hidden">
+          <NuxtLink
             :to="localePath('/booking')"
-            class="px-4 py-2 border border-gold text-gold text-lg hover:bg-gold hover:text-black rounded-md md:hidden"
+            class="w-full flex items-center justify-center bg-gold text-black py-4 rounded-lg font-bold text-lg hover:bg-gold/90 transition-all duration-200 shadow-lg"
             @click="closeMenu"
             aria-label="Book a ride now"
           >
+            <i class="bx bx-calendar mr-2"></i>
             {{$t('navbar.bookNow')}}
           </NuxtLink>
+        </div>
       </div>
 
       <!-- Desktop Booking Button & Language Switch -->
@@ -147,6 +208,7 @@ const localePath = useLocalePath()
 const menuOpen = ref(false);
 const isScrolled = ref(false);
 const showDropdown = ref(false);
+const showServicesDropdown = ref(false);
 const currentLanguage = ref('en');
 
 // Router for dynamic link highlighting
@@ -158,31 +220,67 @@ const route = useRoute()
 const isPolicyPage = computed(() =>
   route.path === localePath('/terms-of-service') || route.path === localePath('/privacy-policy') || route.path === localePath('/faq')
 )
-// Navigation links (without "About" as it's now in the dropdown)
+// Navigation links with icons for mobile (services removed to make it dropdown)
 const navLinks = [
-  { path: localePath('/'), label: t('navbar.home') },
-  { path: localePath('/fleet'), label: t('navbar.fleet') },
-  { path: localePath('/services'), label: t('navbar.services') }
+  { path: localePath('/'), label: t('navbar.home'), icon: 'bx bx-home' },
+  { path: localePath('/fleet'), label: t('navbar.fleet'), icon: 'bx bx-car' }
+]
+
+// Services dropdown items
+const servicesDropdownItems = [
+  { path: localePath('/services'), label: 'All Services', icon: 'bx bx-list-ul' },
+  { path: localePath('/services/airport-transfers'), label: 'Airport Transfers', icon: 'bx bx-placeholder' },
+  { path: localePath('/services/corporate-travel'), label: 'Corporate Travel', icon: 'bx bx-briefcase' },
+  { path: localePath('/services/wedding-chauffeur'), label: 'Wedding Chauffeur', icon: 'bx bx-heart' },
+  { path: localePath('/services/hourly-chauffeur'), label: 'Hourly Chauffeur', icon: 'bx bx-time' },
+  { path: localePath('/services/uk-europe-travel'), label: 'UK & Europe Travel', icon: 'bx bx-world' },
+  { path: localePath('/services/event-chauffeur'), label: 'Event Transport', icon: 'bx bx-calendar-event' }
 ]
 
 const dropdownItems = [
-  { path: localePath('/about'), label: t('navbar.about') },
-  { path: localePath('/#why-choose-us'), label: t('navbar.whyChooseUs') },
-  { path: localePath('/contact-us'), label: t('navbar.contact') }
+  { path: localePath('/about'), label: t('navbar.about'), icon: 'bx bx-info-circle' },
+  { path: localePath('/#why-choose-us'), label: t('navbar.whyChooseUs'), icon: 'bx bx-star' },
+  { path: localePath('/contact-us'), label: t('navbar.contact'), icon: 'bx bx-phone' }
 ]
 // Utility functions
 const toggleMenu = () => {
   menuOpen.value = !menuOpen.value;
+  // Prevent body scroll when menu is open on mobile
+  if (process.client) {
+    if (menuOpen.value) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+  }
 };
+
 const closeMenu = () => {
   menuOpen.value = false;
   showDropdown.value = false;
+  showServicesDropdown.value = false;
+  // Restore body scroll
+  if (process.client) {
+    document.body.style.overflow = '';
+  }
 };
+
 const toggleDropdown = () => {
   showDropdown.value = !showDropdown.value;
+  showServicesDropdown.value = false; // Close services dropdown when opening company dropdown
 };
+
+const toggleServicesDropdown = () => {
+  showServicesDropdown.value = !showServicesDropdown.value;
+  showDropdown.value = false; // Close company dropdown when opening services dropdown
+};
+
 const closeDropdown = () => {
   showDropdown.value = false;
+};
+
+const closeServicesDropdown = () => {
+  showServicesDropdown.value = false;
 };
 const navLinkClass = (isActive) =>
   isActive
@@ -207,5 +305,9 @@ onMounted(() => {
 });
 onUnmounted(() => {
   window.removeEventListener("scroll", debounceScroll);
+  // Restore body scroll on component unmount
+  if (process.client) {
+    document.body.style.overflow = '';
+  }
 });
 </script>

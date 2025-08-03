@@ -100,7 +100,8 @@
   
   "commonHero": {
     "defaultTitle": "Our Services",
-    "bookNow": "Book Now"
+    "bookNow": "Book Now",
+    "getQuote": "Get Quote"
   },
   "priceGuide": {
     "title": "Price Guide",
@@ -122,9 +123,58 @@
     
     "fleet": {
       "heroTitle": "Our Fleet",
+      "heroSubtitle": "Premium Mercedes-Benz vehicles for every occasion",
       "introTitle": "Sophistication Meets Comfort",
-      "introText": "Our premium fleet, led by the luxurious Mercedes-Benz V-Class, is crafted for those who value comfort and elegance. Whether you choose the spacious V-Class, the stylish E-Class, or the luxurious S-Class, every ride promises a first-class experience."
-      
+      "introText": "Our premium fleet, led by the luxurious Mercedes-Benz V-Class, is crafted for those who value comfort and elegance. Whether you choose the spacious V-Class, the stylish E-Class, or the luxurious S-Class, every ride promises a first-class experience.",
+      "stats": {
+        "vehicles": "Premium Vehicles",
+        "maintained": "Professionally Maintained",
+        "availability": "Available",
+        "rating": "Customer Rating"
+      },
+      "fleetTitle": "Choose Your Perfect Vehicle",
+      "fleetDescription": "Each vehicle in our fleet is carefully selected and maintained to the highest standards, ensuring comfort, safety, and luxury for every journey.",
+      "popular": "Popular",
+      "luxury": "Luxury",
+      "spacious": "Spacious",
+      "capacity": {
+        "eClass": "Up to 4 passengers",
+        "sClass": "Up to 3 passengers",
+        "vClass": "Up to 7 passengers"
+      },
+      "luggage": {
+        "large": "Large luggage capacity",
+        "extra": "Extra luggage space"
+      },
+      "features": {
+        "wifi": "Complimentary Wi-Fi",
+        "premium": "Premium interior",
+        "spacious": "Spacious interior",
+        "safety": "Advanced Safety",
+        "safetyDesc": "Latest Mercedes safety technology and professional driver training",
+        "eco": "Eco-Friendly",
+        "ecoDesc": "Efficient engines and environmentally conscious fleet management",
+        "connectivity": "Connected",
+        "connectivityDesc": "Wi-Fi, charging ports, and modern entertainment systems",
+        "maintenance": "Maintained",
+        "maintenanceDesc": "Regular servicing and quality assurance for optimal performance"
+      },
+      "featuresTitle": "Why Choose Our Fleet",
+      "featuresDescription": "Every vehicle meets the highest standards of luxury, safety, and reliability.",
+      "standardsTitle": "Our Quality Standards",
+      "standardsDescription": "We maintain the highest standards across our entire fleet to ensure every journey exceeds your expectations.",
+      "standards": {
+        "regular": "Regular Maintenance",
+        "regularDesc": "Comprehensive servicing schedules and quality checks",
+        "cleaning": "Professional Cleaning",
+        "cleaningDesc": "Deep cleaning and sanitization after every journey",
+        "inspection": "Safety Inspections",
+        "inspectionDesc": "Regular safety checks and compliance with all regulations"
+      },
+      "ctaTitle": "Experience Luxury Travel Today",
+      "ctaDescription": "Book your premium chauffeur service and discover the difference quality makes.",
+      "bookNow": "Book Now",
+      "getQuote": "Get Quote"
     },
 
     "services": {
@@ -578,9 +628,9 @@
       "description":"Access your Silk Ride customer account to manage bookings, view ride history, update payment methods, and book luxury chauffeur services in London. Sign up for exclusive member benefits.",
       "keywords": "chauffeur service account, manage bookings London, customer portal, ride history, chauffeur booking management"
     },
-    "contact": {
+    "contactPage": {
       "title": "Contact Silk Ride | London Chauffeur Service | Book Your Luxury Transfer",
-      "description": "Contact Silk Ride for luxury chauffeur services in London. Licensed Hertsmere Borough Council operator. Call +44 7512 905514 or email info@silkride.co.uk for airport transfers and executive travel.",
+      "description": "Contact Silk Ride for luxury chauffeur services in London. Licensed Hertsmere Borough Council operator. Call +44 7512 905514 or email info at silkride.co.uk for airport transfers and executive travel.",
       "keywords": "contact chauffeur service London, book luxury transfer, chauffeur company contact details, London airport transfers contact, Silk Ride contact information"
     },
     "privacy": {
@@ -592,6 +642,36 @@
       "title": "Terms of Service | Silk Ride Chauffeur London | Booking Terms & Conditions",
       "description": "Terms and conditions for Silk Ride's luxury chauffeur services in London. Booking policies, cancellation terms, and service conditions for airport transfers and executive travel.",
       "keywords": "chauffeur service terms London, booking terms conditions, luxury transport terms, airport transfer terms London"
+    },
+    "airportTransfers": {
+      "title": "Airport Transfers London | Heathrow, Gatwick, Stansted & Luton Chauffeur Service",
+      "description": "Premium airport transfer service to/from Heathrow, Gatwick, Stansted & Luton airports. Flight tracking, meet & greet, 60 minutes free waiting. Luxury Mercedes chauffeur service.",
+      "keywords": "airport transfers London, Heathrow chauffeur service, Gatwick airport transfer, Stansted transfers, Luton airport chauffeur, meet and greet service London"
+    },
+    "corporateTravel": {
+      "title": "Corporate Chauffeur Service London | Executive Business Travel & Transport",
+      "description": "Professional corporate chauffeur service for executives and business travel in London. Luxury Mercedes fleet, Wi-Fi, discretion guaranteed. Meeting transfers and corporate events.",
+      "keywords": "corporate chauffeur London, executive transport, business travel chauffeur, corporate car hire London, executive airport transfers, business meeting transport"
+    },
+    "hourlyChauffeur": {
+      "title": "Hourly Chauffeur Hire London | Private Driver Service & Luxury Car Rental",
+      "description": "Flexible hourly chauffeur service in London. Minimum 4 hours booking for business meetings, sightseeing, shopping. Professional drivers with luxury Mercedes vehicles.",
+      "keywords": "hourly chauffeur London, private driver hire, chauffeur by the hour, luxury car hire London, personal chauffeur service, London sightseeing chauffeur"
+    },
+    "ukEuropeTravel": {
+      "title": "UK & Europe Luxury Travel | Long Distance Chauffeur Service | Private Tours",
+      "description": "Luxury long-distance chauffeur service across UK & Europe. Bespoke private tours, Cotswolds, Stonehenge, Paris, Amsterdam. Professional drivers and premium Mercedes fleet.",
+      "keywords": "UK long distance chauffeur, Europe travel chauffeur, Cotswolds private tour, Stonehenge chauffeur tour, luxury UK travel, European chauffeur service"
+    },
+    "weddingChauffeur": {
+      "title": "Wedding Chauffeur Service London | Luxury Wedding Car Hire & Bridal Transport",
+      "description": "Elegant wedding chauffeur service with luxury Mercedes vehicles. Bridal car decoration, guest transport, professional drivers. Make your wedding day perfect with Silk Ride.",
+      "keywords": "wedding chauffeur London, wedding car hire, bridal car service London, luxury wedding transport, wedding Mercedes hire, wedding guest transport"
+    },
+    "eventChauffeur": {
+      "title": "Event Chauffeur Service London | Concert, Sporting & Corporate Event Transport",
+      "description": "Premium event chauffeur service for concerts, sporting events, corporate galas, and private parties. Professional transport to Wembley, Royal Albert Hall, West End theatres.",
+      "keywords": "event chauffeur London, concert transport, sporting event chauffeur, corporate event transport, Wembley chauffeur, West End theatre transport"
     }
   },
   "faq": {
@@ -640,30 +720,28 @@
     ]
   },
   "contact":{
-  "get_in_touch": "Get In Touch",
-  "friendly_team_intro": "Our friendly team is here to help",
-  "company_info_title": "Company Information",
-  "company_info_text": "Silk Ride\nWe are a licensed Hertsmere Borough Council Private Hire License operator",
-  "address_title": "Address",
-  "address_text": "Centre 42\n42 Watling Street\nWD7 7NN, Radlett\nUnited Kingdom",
-  "contact_section_title": "Contact Us",
-  "contact_section_text": "Email or call us for general queries, including marketing and partnership opportunities.",
-  "open_contact_drawer": "Open contact drawer",
-  "close_contact_drawer": "Close contact drawer",
-  "contact_us": "Contact Us",
-  "first_name": "First Name",
-  "first_name_placeholder": "John",
-  "last_name": "Last Name",
-  "last_name_placeholder": "Doe",
-  "phone": "Phone",
-   "phone_placeholder": "+44 123456 78910",
-  "email": "Email",
-  "send": "Send",
-  "message": "Message",
-  "message_placeholder": "Your message...",
-  "send_message": "Send Message"
-}
-  
-  
+    "get_in_touch": "Get In Touch",
+    "friendly_team_intro": "Our friendly team is here to help",
+    "company_info_title": "Company Information",
+    "company_info_text": "Silk Ride\nWe are a licensed Hertsmere Borough Council Private Hire License operator",
+    "address_title": "Address",
+    "address_text": "Centre 42\n42 Watling Street\nWD7 7NN, Radlett\nUnited Kingdom",
+    "contact_section_title": "Contact Us",
+    "contact_section_text": "Email or call us for general queries, including marketing and partnership opportunities.",
+    "open_contact_drawer": "Open contact drawer",
+    "close_contact_drawer": "Close contact drawer",
+    "contact_us": "Contact Us",
+    "first_name": "First Name",
+    "first_name_placeholder": "John",
+    "last_name": "Last Name",
+    "last_name_placeholder": "Doe",
+    "phone": "Phone",
+    "phone_placeholder": "+44 123456 78910",
+    "email": "Email",
+    "send": "Send",
+    "message": "Message",
+    "message_placeholder": "Your message...",
+    "send_message": "Send Message"
+  }
 }
 

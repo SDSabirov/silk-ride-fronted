@@ -1,47 +1,59 @@
 <template>
-  <section class="py-12 bg-white relative">
-    <div class="container mx-auto max-w-screen-xl px-4 text-center">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="flex flex-col items-center justify-start space-y-4 relative">
-          <h2 class="text-2xl md:text-5xl font-semibold text-gray-900 mb-10 text-left w-full">
+  <section class="section-padding bg-white relative">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="space-y-6">
+          <h2 class="heading-1 text-gray-900 text-left">
             {{ $t('about.title') }}
           </h2>
 
-          <p class="text-lg text-left text-gray-700 leading-loose">
+          <p class="body-large text-gray-600 text-left leading-relaxed">
             {{ $t('about.description') }}
           </p>
 
-          <div class="w-full flex items-center justify-end text-xl text-white self-end">
+          <div class="flex justify-start pt-4">
             <NuxtLink :to="localePath('/about')">
-              <button class="px-8 py-3 bg-black flex items-center space-x-2">
-                <span>{{ $t('about.learnMore') }}</span><span class="sr-only">{{ $t('srOnly.aboutSilkRide') }}</span>
-                <span><i class="bx bx-chevrons-right"></i></span>
+              <button class="btn btn-primary group">
+                <span>{{ $t('about.learnMore') }}</span>
+                <span class="sr-only">{{ $t('srOnly.aboutSilkRide') }}</span>
+                <i class="bx bx-chevrons-right ml-2 group-hover:translate-x-1 transition-transform duration-200"></i>
               </button>
             </NuxtLink>
           </div>
         </div>
 
-        <div class="grid grid-cols-2 grid-rows-2 gap-4">
-          <div class="row-span-2 rounded-lg overflow-hidden">
+        <div class="grid grid-cols-2 grid-rows-2 gap-4 h-96">
+          <!-- Main large image -->
+          <div class="row-span-2 rounded-xl overflow-hidden group relative">
             <img
               src="/assets/images/covers/business-trip.webp"
-              alt="business trip"
-              class="object-cover w-full h-full"
+              alt="Professional business chauffeur service"
+              class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
+              loading="lazy"
             />
+            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
           </div>
-          <div class="rounded-lg overflow-hidden">
+          
+          <!-- Top right image -->
+          <div class="rounded-xl overflow-hidden group relative">
             <img
               src="/assets/images/covers/assist.webp"
-              alt="luggage assist"
-              class="object-cover w-full h-full"
+              alt="Luxury chauffeur luggage assistance"
+              class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
+              loading="lazy"
             />
+            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
           </div>
-          <div class="rounded-lg overflow-hidden">
+          
+          <!-- Bottom right image -->
+          <div class="rounded-xl overflow-hidden group relative">
             <img
               src="/assets/images/covers/fleet.webp"
-              alt="fleet v-class"
-              class="object-cover w-full h-full"
+              alt="Premium Mercedes fleet vehicles"
+              class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
+              loading="lazy"
             />
+            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
           </div>
         </div>
       </div>
