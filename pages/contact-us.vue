@@ -1,128 +1,248 @@
 <template>
   <div>
     <Navbar />
-    <CommonHero :image="cover" :page="$t('contact.contact_us')" />
-    <CommonPageIntro
-      :title="$t('contact.get_in_touch')"
-      :paragraph="$t('contact.friendly_team_intro')"
+    
+    <CommonHero 
+      :image="cover" 
+      :page="$t('contact.contact_us')"
+      :subtitle="$t('contact.heroSubtitle')"
+      :showTrustBadges="false"
     />
 
-    <div class="flex w-full max-w-screen-xl mx-auto mb-6">
-      <div
-        class="grid grid-cols-1 gap-6 text-center sm:gap-16 sm:grid-cols-2 lg:grid-cols-3"
-      >
-        <div>
-          <div
-            class="inline-flex items-center justify-center w-16 h-16 mx-auto text-gray-500 bg-gray-100 rounded-lg"
-          >
-            <!-- Icon -->
-            <svg aria-hidden="true" class="w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a1 1 0 110 2h-3a1 1 0 01-1-1v-2a1 1 0 00-1-1H9a1 1 0 00-1 1v2a1 1 0 01-1 1H4a1 1 0 110-2V4zm3 1h2v2H7V5zm2 4H7v2h2V9zm2-4h2v2h-2V5zm2 4h-2v2h2V9z" clip-rule="evenodd"/>
-            </svg>
-          </div>
-          <div class="mt-4">
-            <h3 class="text-xl font-bold text-gray-900">{{ $t('contact.company_info_title') }}</h3>
-            <p class="mt-1 text-base font-normal text-gray-500" v-html="$t('contact.company_info_text')"></p>
-          </div>
+    <!-- Contact Introduction -->
+    <section class="py-16">
+      <div class="max-w-screen-xl mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            {{ $t('contact.get_in_touch') }}
+          </h2>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            {{ $t('contact.friendly_team_intro') }}
+          </p>
         </div>
 
-        <div>
-          <div class="inline-flex items-center justify-center w-16 h-16 mx-auto text-gray-500 bg-gray-100 rounded-lg">
-            <!-- Icon -->
-            <svg aria-hidden="true" class="w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000" clip-rule="evenodd"/>
-            </svg>
+        <!-- Contact Methods -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <!-- Phone -->
+          <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow text-center">
+            <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-6">
+              <i class="bx bx-phone text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-4">{{ $t('contact.phone_title') }}</h3>
+            <p class="text-gray-600 mb-4">{{ $t('contact.phone_description') }}</p>
+            <a 
+              href="tel:+447512905514" 
+              class="text-gold font-semibold hover:text-gold/80 transition-colors text-lg"
+            >
+              +44 7512 905514
+            </a>
           </div>
-          <div class="mt-4">
-            <h3 class="text-xl font-bold text-gray-900">{{ $t('contact.address_title') }}</h3>
-            <p class="mt-1 text-base font-normal text-gray-500" v-html="$t('contact.address_text')"></p>
-          </div>
-        </div>
 
-        <div class="hidden lg:block">
-          <div class="inline-flex items-center justify-center w-16 h-16 mx-auto text-gray-500 bg-gray-100 rounded-lg">
-            <!-- Icon -->
-            <svg aria-hidden="true" class="w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
-            </svg>
+          <!-- Email -->
+          <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow text-center">
+            <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-6">
+              <i class="bx bx-envelope text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-4">{{ $t('contact.email_title') }}</h3>
+            <p class="text-gray-600 mb-4">{{ $t('contact.email_description') }}</p>
+            <a 
+              href="mailto:info@silkride.co.uk" 
+              class="text-gold font-semibold hover:text-gold/80 transition-colors text-lg"
+            >
+              info@silkride.co.uk
+            </a>
           </div>
-          <div class="mt-4">
-            <h3 class="text-xl font-bold text-gray-900">{{ $t('contact.contact_section_title') }}</h3>
-            <p class="mt-1 text-base font-normal text-gray-500">{{ $t('contact.contact_section_text') }}</p>
-            <a href="mailto:info@silkride.co.uk" class="block mt-1 text-base font-semibold text-gray-900 hover:underline">info@silkride.co.uk</a>
-            <a href="tel:+447512905514" class="block mt-1 text-base font-semibold text-gray-900 hover:underline">+44 7512 905514</a>
+
+          <!-- WhatsApp -->
+          <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow text-center">
+            <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-6">
+              <i class="bx bxl-whatsapp text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-4">{{ $t('contact.whatsapp_title') }}</h3>
+            <p class="text-gray-600 mb-4">{{ $t('contact.whatsapp_description') }}</p>
+            <a 
+              href="https://wa.me/447512905514" 
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-gold font-semibold hover:text-gold/80 transition-colors text-lg"
+            >
+              {{ $t('contact.message_us') }}
+            </a>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="w-full flex flex-col space-y-6 items-center justify-center bg-white">
-      <form class="w-full grid grid-cols md:grid-cols-2 max-w-screen-xl gap-6 py-8">
-        <div class="h-18 flex flex-col space-y-2">
-          <label for="name" class="text-lg font-medium text-gray-700">{{ $t('contact.first_name') }}</label>
-          <input
-            type="text"
-            id="name"
-            v-model="form.name"
-            required
-            class="w-full p-2 border border-gray-300 rounded-sm h-full"
-            :placeholder="$t('contact.first_name_placeholder')"
-          />
+    <!-- Contact Form Section -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-screen-xl mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <!-- Form -->
+          <div class="bg-white p-8 rounded-lg shadow-lg">
+            <h3 class="text-2xl font-bold text-gray-900 mb-6">{{ $t('contact.send_message_title') }}</h3>
+            
+            <form @submit.prevent="submitForm" class="space-y-6">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label for="name" class="block text-sm font-medium text-gray-700 mb-2">
+                    {{ $t('contact.first_name') }}
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    v-model="form.name"
+                    required
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-transparent transition-colors"
+                    :placeholder="$t('contact.first_name_placeholder')"
+                  />
+                </div>
+                
+                <div>
+                  <label for="lastName" class="block text-sm font-medium text-gray-700 mb-2">
+                    {{ $t('contact.last_name') }}
+                  </label>
+                  <input
+                    type="text"
+                    id="lastName"
+                    v-model="form.lastName"
+                    required
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-transparent transition-colors"
+                    :placeholder="$t('contact.last_name_placeholder')"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label for="email" class="block text-sm font-medium text-gray-700 mb-2">
+                  {{ $t('contact.email') }}
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  v-model="form.email"
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-transparent transition-colors"
+                  :placeholder="$t('contact.email')"
+                />
+              </div>
+
+              <div>
+                <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">
+                  {{ $t('contact.phone') }}
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  v-model="form.phone"
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-transparent transition-colors"
+                  :placeholder="$t('contact.phone_placeholder')"
+                />
+              </div>
+
+              <div>
+                <label for="service" class="block text-sm font-medium text-gray-700 mb-2">
+                  {{ $t('contact.service_type') }}
+                </label>
+                <select
+                  id="service"
+                  v-model="form.service"
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-transparent transition-colors"
+                >
+                  <option value="">{{ $t('contact.select_service') }}</option>
+                  <option value="airport-transfer">{{ $t('contact.services.airport') }}</option>
+                  <option value="corporate-travel">{{ $t('contact.services.corporate') }}</option>
+                  <option value="wedding">{{ $t('contact.services.wedding') }}</option>
+                  <option value="hourly-hire">{{ $t('contact.services.hourly') }}</option>
+                  <option value="long-distance">{{ $t('contact.services.longDistance') }}</option>
+                  <option value="other">{{ $t('contact.services.other') }}</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="message" class="block text-sm font-medium text-gray-700 mb-2">
+                  {{ $t('contact.message') }}
+                </label>
+                <textarea
+                  rows="6"
+                  id="message"
+                  v-model="form.message"
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-transparent transition-colors"
+                  :placeholder="$t('contact.message_placeholder')"
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                :disabled="isSubmitting"
+                class="w-full bg-gold text-black font-semibold py-4 px-6 rounded-lg hover:bg-gold/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                <span v-if="!isSubmitting">{{ $t('contact.send_message') }}</span>
+                <span v-else class="flex items-center justify-center">
+                  <i class="bx bx-loader-alt animate-spin mr-2"></i>
+                  {{ $t('contact.sending') }}
+                </span>
+              </button>
+            </form>
+          </div>
+
+          <!-- Contact Information -->
+          <div class="space-y-8">
+            <!-- Business Hours -->
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+              <h3 class="text-xl font-semibold mb-6">{{ $t('contact.business_hours.title') }}</h3>
+              <div class="space-y-4">
+                <div class="flex justify-between">
+                  <span class="text-gray-600">{{ $t('contact.business_hours.everyday') }}</span>
+                  <span class="font-medium">{{ $t('contact.business_hours.available') }}</span>
+                </div>
+                <div class="border-t pt-4">
+                  <p class="text-sm text-gray-600">{{ $t('contact.business_hours.note') }}</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Service Areas -->
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+              <h3 class="text-xl font-semibold mb-6">{{ $t('contact.service_areas.title') }}</h3>
+              <div class="space-y-3">
+                <div class="flex items-start">
+                  <i class="bx bx-check text-gold mr-3 mt-1"></i>
+                  <span class="text-gray-600">{{ $t('contact.service_areas.london') }}</span>
+                </div>
+                <div class="flex items-start">
+                  <i class="bx bx-check text-gold mr-3 mt-1"></i>
+                  <span class="text-gray-600">{{ $t('contact.service_areas.airports') }}</span>
+                </div>
+                <div class="flex items-start">
+                  <i class="bx bx-check text-gold mr-3 mt-1"></i>
+                  <span class="text-gray-600">{{ $t('contact.service_areas.uk') }}</span>
+                </div>
+                <div class="flex items-start">
+                  <i class="bx bx-check text-gold mr-3 mt-1"></i>
+                  <span class="text-gray-600">{{ $t('contact.service_areas.europe') }}</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Emergency Contact -->
+            <div class="bg-gold/10 p-8 rounded-lg border border-gold/20">
+              <h3 class="text-xl font-semibold mb-4 text-gold">{{ $t('contact.emergency.title') }}</h3>
+              <p class="text-gray-700 mb-4">{{ $t('contact.emergency.description') }}</p>
+              <a 
+                href="tel:+447512905514" 
+                class="inline-flex items-center bg-gold text-black px-6 py-3 rounded-lg font-semibold hover:bg-gold/90 transition-colors"
+              >
+                <i class="bx bx-phone mr-2"></i>
+                {{ $t('contact.emergency.call_now') }}
+              </a>
+            </div>
+          </div>
         </div>
-        <div class="h-18 flex flex-col space-y-2">
-          <label for="lastName" class="text-lg font-medium text-gray-700">{{ $t('contact.last_name') }}</label>
-          <input
-            type="text"
-            id="lastName"
-            v-model="form.lastName"
-            required
-            class="w-full p-2 border border-gray-300 rounded-sm h-full"
-            :placeholder="$t('contact.last_name_placeholder')"
-          />
-        </div>
-        <div class="h-18 flex flex-col space-y-2">
-          <label for="email" class="text-lg font-medium text-gray-700">{{ $t('contact.email') }}</label>
-          <input
-            type="email"
-            id="email"
-            v-model="form.email"
-            required
-            class="w-full p-2 border border-gray-300 rounded-sm h-full"
-            :placeholder="$t('contact.email')"
-          />
-        </div>
-        <div class="h-18 flex flex-col space-y-2">
-          <label for="phone" class="text-lg font-medium text-gray-700">{{ $t('contact.phone') }}</label>
-          <input
-            type="tel"
-            id="phone"
-            v-model="form.phone"
-            required
-            class="w-full p-2 border border-gray-300 rounded-sm h-full"
-            :placeholder="$t('contact.phone_placeholder')"
-          />
-        </div>
-        <div class="h-18 flex flex-col space-y-2 md:col-span-2">
-          <label for="message" class="text-lg font-medium text-gray-700">{{ $t('contact.message') }}</label>
-          <textarea
-            rows="10"
-            id="message"
-            v-model="form.message"
-            required
-            class="w-full p-2 border border-gray-300 rounded-sm h-full"
-            :placeholder="$t('contact.message_placeholder')"
-          />
-        </div>
-        <div class="h-18 flex flex-col space-y-2 md:col-span-2 items-center justify-center">
-          <button
-            type="submit"
-            class="flex px-6 py-3 items-center justify-center border border-black text-black text-xl hover:bg-gold hover:text-black"
-          >
-            {{ $t('contact.send_message') }}
-          </button>
-        </div>
-      </form>
-    </div>
+      </div>
+    </section>
 
     <Footer />
   </div>
@@ -130,7 +250,46 @@
 <script setup>
 import { useSeo } from '~/utils/useSeo'
 import cover from "@/assets/images/covers/contactus.webp";
-const form = ref({});
+
+const form = ref({
+  name: '',
+  lastName: '',
+  email: '',
+  phone: '',
+  service: '',
+  message: ''
+});
+
+const isSubmitting = ref(false);
+
+const submitForm = async () => {
+  isSubmitting.value = true;
+  
+  try {
+    // Here you would typically send the form data to your backend
+    // For now, we'll just simulate the submission
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    
+    // Reset form after successful submission
+    form.value = {
+      name: '',
+      lastName: '',
+      email: '',
+      phone: '',
+      service: '',
+      message: ''
+    };
+    
+    // You could show a success message here
+    alert('Message sent successfully! We will get back to you soon.');
+    
+  } catch (error) {
+    console.error('Error submitting form:', error);
+    alert('There was an error sending your message. Please try again.');
+  } finally {
+    isSubmitting.value = false;
+  }
+};
 
 useSeo('contactPage')
 </script>
