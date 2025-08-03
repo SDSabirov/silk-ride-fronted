@@ -7,6 +7,7 @@
     <LandingFleet />
     <LandingKeyFeatures />
     <LandingAbout />
+    <LandingTestimonials />
 
     <Footer />
   </div>
@@ -138,7 +139,61 @@ const schema = {
         }
       }
     ]
-  }
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "127",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": { 
+        "@type": "Person", 
+        "name": "James Richardson" 
+      },
+      "reviewRating": { 
+        "@type": "Rating", 
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "reviewBody": "Exceptional service from start to finish. The chauffeur was punctual, professional, and the Mercedes S-Class was immaculate. Made our airport transfer stress-free and luxurious.",
+      "datePublished": "2024-01-15"
+    },
+    {
+      "@type": "Review",
+      "author": { 
+        "@type": "Person", 
+        "name": "Sarah Mitchell" 
+      },
+      "reviewRating": { 
+        "@type": "Rating", 
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "reviewBody": "Used Silk Ride for our wedding day and they exceeded all expectations. The team went above and beyond to ensure everything was perfect. Highly recommend for special occasions.",
+      "datePublished": "2024-01-20"
+    },
+    {
+      "@type": "Review",
+      "author": { 
+        "@type": "Person", 
+        "name": "Emma Thompson" 
+      },
+      "reviewRating": { 
+        "@type": "Rating", 
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "reviewBody": "Reliable corporate transport solution. Our executives always arrive on time and in style. The booking system is seamless and the drivers are extremely professional.",
+      "datePublished": "2024-01-25"
+    }
+  ]
 }
 
 useHead({

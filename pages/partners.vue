@@ -283,102 +283,90 @@
       </div>
     </section>
 
-    <!-- Trusted Organizations -->
-    <section class="py-16 bg-gray-50">
+    <!-- Partnership Types -->
+    <section class="py-16">
       <div class="max-w-screen-xl mx-auto px-6">
         <div class="text-center mb-12">
           <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            {{ $t('pages.about.partners.trusted.title') }}
+            {{ $t('pages.about.partners.types.title') }}
           </h2>
           <p class="text-lg text-gray-600">
-            {{ $t('pages.about.partners.trusted.subtitle') }}
+            {{ $t('pages.about.partners.types.subtitle') }}
           </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <!-- Uzbek Culture Week -->
+          <!-- Corporate Partners -->
           <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-            <div class="flex flex-col items-center text-center">
-              <div class="w-24 h-24 bg-gray-100 rounded-lg flex items-center justify-center mb-6 p-4">
-                <img 
-                  src="/assets/images/partners/uzbek-culture.svg" 
-                  alt="Uzbek Culture Week UK Logo" 
-                  class="w-full h-full object-contain"
-                />
+            <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-6">
+              <i class="bx bx-buildings text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-4 text-center">{{ $t('pages.about.partners.types.corporate.title') }}</h3>
+            <p class="text-gray-600 mb-6 text-center">{{ $t('pages.about.partners.types.corporate.description') }}</p>
+            
+            <div class="space-y-3">
+              <div class="flex items-center text-sm text-gray-600">
+                <i class="bx bx-check mr-2 text-gold"></i>
+                <span>{{ $t('pages.about.partners.types.corporate.benefits.volumeDiscount') }}</span>
               </div>
-              <h3 class="text-xl font-semibold mb-4">
-                <a 
-                  href="https://www.uzbekculture.co.uk/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  class="hover:text-gold transition-colors"
-                >
-                  {{ $t('pages.about.partners.trusted.organizations.uzbekCulture.name') }}
-                </a>
-              </h3>
-              <p class="text-gray-600 mb-4">{{ $t('pages.about.partners.trusted.organizations.uzbekCulture.description') }}</p>
-              <p class="text-sm text-gold font-medium">{{ $t('pages.about.partners.trusted.organizations.uzbekCulture.service') }}</p>
+              <div class="flex items-center text-sm text-gray-600">
+                <i class="bx bx-check mr-2 text-gold"></i>
+                <span>{{ $t('pages.about.partners.types.corporate.benefits.priority') }}</span>
+              </div>
+              <div class="flex items-center text-sm text-gray-600">
+                <i class="bx bx-check mr-2 text-gold"></i>
+                <span>{{ $t('pages.about.partners.types.corporate.benefits.account') }}</span>
+              </div>
             </div>
           </div>
 
-          <!-- Tez Parcel -->
+          <!-- Hotel Partners -->
           <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-            <div class="flex flex-col items-center text-center">
-              <div class="w-24 h-24 bg-gray-100 rounded-lg flex items-center justify-center mb-6 p-4">
-                <img 
-                  src="/assets/images/partners/tezparcel.svg" 
-                  alt="Tez Parcel Logo" 
-                  class="w-full h-full object-contain"
-                />
+            <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-6">
+              <i class="bx bx-hotel text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-4 text-center">{{ $t('pages.about.partners.types.hotel.title') }}</h3>
+            <p class="text-gray-600 mb-6 text-center">{{ $t('pages.about.partners.types.hotel.description') }}</p>
+            
+            <div class="space-y-3">
+              <div class="flex items-center text-sm text-gray-600">
+                <i class="bx bx-check mr-2 text-gold"></i>
+                <span>{{ $t('pages.about.partners.types.hotel.benefits.concierge') }}</span>
               </div>
-              <h3 class="text-xl font-semibold mb-4">
-                <a 
-                  href="https://tezparcel.com/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  class="hover:text-gold transition-colors"
-                >
-                  {{ $t('pages.about.partners.trusted.organizations.tezParcel.name') }}
-                </a>
-              </h3>
-              <p class="text-gray-600 mb-4">{{ $t('pages.about.partners.trusted.organizations.tezParcel.description') }}</p>
-              <p class="text-sm text-gold font-medium">{{ $t('pages.about.partners.trusted.organizations.tezParcel.service') }}</p>
+              <div class="flex items-center text-sm text-gray-600">
+                <i class="bx bx-check mr-2 text-gold"></i>
+                <span>{{ $t('pages.about.partners.types.hotel.benefits.commission') }}</span>
+              </div>
+              <div class="flex items-center text-sm text-gray-600">
+                <i class="bx bx-check mr-2 text-gold"></i>
+                <span>{{ $t('pages.about.partners.types.hotel.benefits.branding') }}</span>
+              </div>
             </div>
           </div>
 
-          <!-- Oshpaz -->
+          <!-- Event Partners -->
           <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-            <div class="flex flex-col items-center text-center">
-              <div class="w-24 h-24 bg-gray-100 rounded-lg flex items-center justify-center mb-6">
-                <!-- Logo placeholder - add oshpaz logo when available -->
-                <i class="bx bx-restaurant text-4xl text-gray-400"></i>
+            <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-6">
+              <i class="bx bx-calendar-event text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-4 text-center">{{ $t('pages.about.partners.types.event.title') }}</h3>
+            <p class="text-gray-600 mb-6 text-center">{{ $t('pages.about.partners.types.event.description') }}</p>
+            
+            <div class="space-y-3">
+              <div class="flex items-center text-sm text-gray-600">
+                <i class="bx bx-check mr-2 text-gold"></i>
+                <span>{{ $t('pages.about.partners.types.event.benefits.coordination') }}</span>
               </div>
-              <h3 class="text-xl font-semibold mb-4">
-                <a 
-                  href="https://oshpaz.co.uk/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  class="hover:text-gold transition-colors"
-                >
-                  {{ $t('pages.about.partners.trusted.organizations.oshpaz.name') }}
-                </a>
-              </h3>
-              <p class="text-gray-600 mb-4">{{ $t('pages.about.partners.trusted.organizations.oshpaz.description') }}</p>
-              <p class="text-sm text-gold font-medium">{{ $t('pages.about.partners.trusted.organizations.oshpaz.service') }}</p>
+              <div class="flex items-center text-sm text-gray-600">
+                <i class="bx bx-check mr-2 text-gold"></i>
+                <span>{{ $t('pages.about.partners.types.event.benefits.packages') }}</span>
+              </div>
+              <div class="flex items-center text-sm text-gray-600">
+                <i class="bx bx-check mr-2 text-gold"></i>
+                <span>{{ $t('pages.about.partners.types.event.benefits.logistics') }}</span>
+              </div>
             </div>
           </div>
-        </div>
-
-        <!-- Call to Action -->
-        <div class="text-center mt-12">
-          <p class="text-lg text-gray-600 mb-6">{{ $t('pages.about.partners.trusted.cta.text') }}</p>
-          <NuxtLink
-            :to="localePath('/contact-us')"
-            class="inline-flex items-center px-8 py-3 bg-gold text-black font-semibold rounded-lg hover:bg-gold/90 transition-colors"
-          >
-            {{ $t('pages.about.partners.trusted.cta.button') }}
-            <i class="bx bx-right-arrow-alt ml-2"></i>
-          </NuxtLink>
         </div>
       </div>
     </section>
