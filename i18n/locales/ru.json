@@ -928,28 +928,65 @@
     ]
   },
   "contact":{
+    "contact_us": "Контакты",
+    "heroSubtitle": "Свяжитесь с нашей командой для заказа роскошных услуг шофера",
     "get_in_touch": "Свяжитесь с нами",
-  "friendly_team_intro": "Наша дружелюбная команда готова помочь",
-  "company_info_title": "Информация о компании",
-  "company_info_text": "Silk Ride\nМы лицензированный оператор такси по лицензии совета Хертсмер",
-  "address_title": "Адрес",
-  "address_text": "Centre 42\n 42 Watling Street\nWD7 7NN, Radlett\nВеликобритания",
-  "contact_section_title": "Контакты",
-  "contact_section_text": "Напишите нам или позвоните по общим вопросам, включая маркетинг и партнёрство.",
-  "open_contact_drawer": "Открыть окно контактов",
-  "close_contact_drawer": "Закрыть окно контактов",
-  "contact_us": "Свяжитесь с нами",
-  "first_name": "Имя",
-  "first_name_placeholder": "Иван",
-  "last_name": "Фамилия",
-  "last_name_placeholder": "Иванов",
-  "phone": "Телефон",
-  "phone_placeholder": "+7 123 456 7890",
-  "email": "Электронная почта",
-
-  "message": "Сообщение",
-  "send": "Отправить",
-  "message_placeholder": "Ваше сообщение...",
-  "send_message": "Отправить сообщение"
-}
+    "friendly_team_intro": "Наша дружелюбная команда готова помочь с вашими потребностями в роскошном транспорте",
+    "phone_title": "Позвонить нам",
+    "phone_description": "Свяжитесь напрямую с нашей командой бронирования",
+    "email_title": "Написать нам",
+    "email_description": "Отправьте нам ваши требования, и мы оперативно ответим",
+    "whatsapp_title": "WhatsApp",
+    "whatsapp_description": "Быстрая связь для мгновенной помощи с бронированием",
+    "message_us": "Написать нам",
+    "send_message_title": "Отправить нам сообщение",
+    "first_name": "Имя",
+    "first_name_placeholder": "Иван",
+    "last_name": "Фамилия",
+    "last_name_placeholder": "Иванов",
+    "email": "Электронная почта",
+    "phone": "Телефон",
+    "phone_placeholder": "+44 123456789",
+    "service_type": "Тип услуги",
+    "select_service": "Выберите услугу",
+    "services": {
+      "airport": "Трансфер в аэропорт",
+      "corporate": "Корпоративные поездки",
+      "wedding": "Свадебные услуги",
+      "hourly": "Почасовая аренда",
+      "longDistance": "Междугородние поездки",
+      "other": "Другое"
+    },
+    "message": "Сообщение",
+    "message_placeholder": "Расскажите нам о ваших требованиях...",
+    "send_message": "Отправить сообщение",
+    "sending": "Отправка...",
+    "business_hours": {
+      "title": "Часы работы",
+      "everyday": "Каждый день",
+      "available": "Доступны 24/7",
+      "note": "Мы доступны круглосуточно для вашего удобства"
+    },
+    "service_areas": {
+      "title": "Зоны обслуживания",
+      "london": "Лондон и Большой Лондон",
+      "airports": "Все крупные аэропорты Великобритании",
+      "uk": "Покрытие по всей Великобритании",
+      "europe": "Европейские направления"
+    },
+    "emergency": {
+      "title": "Экстренная связь 24/7",
+      "description": "Для срочного бронирования или помощи в нерабочее время",
+      "call_now": "Позвонить сейчас"
+    },
+    "company_info_title": "Информация о компании",
+    "company_info_text": "Silk Ride\nМы лицензированный оператор такси по лицензии совета Хертсмер",
+    "address_title": "Адрес",
+    "address_text": "Centre 42\n 42 Watling Street\nWD7 7NN, Radlett\nВеликобритания",
+    "contact_section_title": "Контакты",
+    "contact_section_text": "Напишите нам или позвоните по общим вопросам, включая маркетинг и партнёрство.",
+    "open_contact_drawer": "Открыть окно контактов",
+    "close_contact_drawer": "Закрыть окно контактов",
+    "send": "Отправить"
+  }
 }

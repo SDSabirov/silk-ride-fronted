@@ -945,8 +945,57 @@
     ]
   },
   "contact":{
+    "contact_us": "Contact Us",
+    "heroSubtitle": "Get in touch with our team for luxury chauffeur services",
     "get_in_touch": "Get In Touch",
-    "friendly_team_intro": "Our friendly team is here to help",
+    "friendly_team_intro": "Our friendly team is here to help with your luxury transport needs",
+    "phone_title": "Call Us",
+    "phone_description": "Speak directly with our booking team",
+    "email_title": "Email Us",
+    "email_description": "Send us your requirements and we'll respond promptly",
+    "whatsapp_title": "WhatsApp",
+    "whatsapp_description": "Quick chat for instant booking assistance",
+    "message_us": "Message Us",
+    "send_message_title": "Send Us a Message",
+    "first_name": "First Name",
+    "first_name_placeholder": "John",
+    "last_name": "Last Name",
+    "last_name_placeholder": "Doe",
+    "email": "Email",
+    "phone": "Phone",
+    "phone_placeholder": "+44 123456789",
+    "service_type": "Service Type",
+    "select_service": "Select a service",
+    "services": {
+      "airport": "Airport Transfer",
+      "corporate": "Corporate Travel",
+      "wedding": "Wedding Service",
+      "hourly": "Hourly Hire",
+      "longDistance": "Long Distance Travel",
+      "other": "Other"
+    },
+    "message": "Message",
+    "message_placeholder": "Tell us about your requirements...",
+    "send_message": "Send Message",
+    "sending": "Sending...",
+    "business_hours": {
+      "title": "Business Hours",
+      "everyday": "Every Day",
+      "available": "24/7 Available",
+      "note": "We're available around the clock for your convenience"
+    },
+    "service_areas": {
+      "title": "Service Areas",
+      "london": "London & Greater London",
+      "airports": "All Major UK Airports",
+      "uk": "Nationwide UK Coverage",
+      "europe": "European Destinations"
+    },
+    "emergency": {
+      "title": "24/7 Emergency Contact",
+      "description": "For urgent bookings or assistance outside normal hours",
+      "call_now": "Call Now"
+    },
     "company_info_title": "Company Information",
     "company_info_text": "Silk Ride\nWe are a licensed Hertsmere Borough Council Private Hire License operator",
     "address_title": "Address",
@@ -955,18 +1004,7 @@
     "contact_section_text": "Email or call us for general queries, including marketing and partnership opportunities.",
     "open_contact_drawer": "Open contact drawer",
     "close_contact_drawer": "Close contact drawer",
-    "contact_us": "Contact Us",
-    "first_name": "First Name",
-    "first_name_placeholder": "John",
-    "last_name": "Last Name",
-    "last_name_placeholder": "Doe",
-    "phone": "Phone",
-    "phone_placeholder": "+44 123456 78910",
-    "email": "Email",
-    "send": "Send",
-    "message": "Message",
-    "message_placeholder": "Your message...",
-    "send_message": "Send Message"
+    "send": "Send"
   }
 }
 
