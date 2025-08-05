@@ -938,45 +938,122 @@
     "items": [
       {
         "question": "How do I book a chauffeur service?",
-        "answer": "You can book a ride directly on our website, through our app, or by contacting our support team."
+        "answer": "You can book a ride directly on our website using our instant booking system, through our mobile app, by calling +44 7512 905514, or by emailing info{'@'}silkride.co.uk. Our online booking system provides instant quotes and confirmation."
       },
       {
-        "question": "What vehicles are available?",
-        "answer": "We offer a premium fleet including Mercedes V-Class, E-Class, and S-Class vehicles."
+        "question": "What vehicles are available in your fleet?",
+        "answer": "We offer a premium fleet of luxury Mercedes vehicles including the spacious V-Class (perfect for groups and airport transfers), the elegant E-Class (ideal for business travel), and the flagship S-Class (the ultimate in luxury and comfort). All vehicles are maintained to the highest standards."
       },
       {
         "question": "Can I make changes to my booking?",
-        "answer": "Yes, you can modify or cancel your booking up to 24 hours before the scheduled time."
+        "answer": "Yes, you can modify or cancel your booking up to 24 hours before the scheduled time without charge. For changes within 24 hours, please contact us directly and we'll do our best to accommodate your needs, though cancellation fees may apply."
       },
       {
-        "question": "Is airport pickup included?",
-        "answer": "Yes, we offer meet and greet services at all major airports."
+        "question": "Do you provide airport transfer services?",
+        "answer": "Absolutely! We specialize in airport transfers to and from all major London airports including Heathrow, Gatwick, Stansted, and Luton. We offer complimentary flight tracking, meet and greet service, and 60 minutes free waiting time for international flights, 45 minutes for domestic flights."
       },
       {
-        "question": "Do you provide child seats?",
-        "answer": "Child seats are available upon request. Please mention it while booking."
+        "question": "Do you provide child seats and accessibility options?",
+        "answer": "Yes, we provide complimentary child seats (infant, booster, and car seats) upon request - please specify ages when booking. We also accommodate wheelchairs and mobility aids, and can provide vehicles with wheelchair access when requested in advance."
       },
       {
-        "question": "How are your chauffeurs trained?",
-        "answer": "All our chauffeurs are professionally trained, experienced, and background-checked."
+        "question": "How are your chauffeurs trained and vetted?",
+        "answer": "All our chauffeurs are professionally trained, hold valid PCO (Private Hire) licenses, undergo comprehensive background checks, and have extensive experience in luxury transport. They're trained in defensive driving, customer service, and maintain the highest standards of professionalism and discretion."
       },
       {
         "question": "What payment methods do you accept?",
-        "answer": "We accept all major credit/debit cards, Apple Pay, and bank transfers."
+        "answer": "We accept all major credit and debit cards (Visa, Mastercard, Amex), Apple Pay, Google Pay, bank transfers, and corporate accounts. Payment can be made online during booking, in the vehicle, or we can set up corporate billing for regular clients."
       },
       {
-        "question": "Can I book a chauffeur for a full day?",
-        "answer": "Yes, hourly and daily bookings are available for both business and personal needs."
+        "question": "Can I hire a chauffeur for multiple hours or full day?",
+        "answer": "Yes, we offer flexible hourly hire with a minimum of 4 hours, perfect for business meetings, sightseeing tours, shopping trips, or any occasion where you need door-to-door service. Full day rates are available and offer excellent value for extended use."
       },
       {
-        "question": "Is Wi-Fi available in the car?",
-        "answer": "Yes, complimentary Wi-Fi is available in all vehicles."
+        "question": "What amenities are available in your vehicles?",
+        "answer": "All our vehicles feature complimentary Wi-Fi, phone chargers, bottled water, air conditioning, and comfortable leather seating. Our S-Class vehicles also include premium sound systems, privacy glass, and additional luxury amenities for the ultimate travel experience."
       },
       {
         "question": "What happens if my flight is delayed?",
-        "answer": "We track your flight in real-time and adjust the pickup accordingly—no extra charge."
+        "answer": "We monitor all flights in real-time using advanced flight tracking systems. If your flight is delayed, we automatically adjust your pickup time at no extra charge. You'll receive updates via SMS or email, and your chauffeur will be ready when you land."
+      },
+      {
+        "question": "Do you provide services outside London?",
+        "answer": "Yes, we provide long-distance travel throughout the UK and Europe. Popular destinations include Oxford, Cambridge, Bath, Cotswolds, as well as European cities like Paris, Amsterdam, and Brussels. We offer competitive rates for long-distance journeys and multi-day trips."
+      },
+      {
+        "question": "What are your operating hours?",
+        "answer": "We operate 24/7, 365 days a year. Whether you need an early morning airport transfer, late-night pickup, or weekend service, our team and chauffeurs are available around the clock to meet your transportation needs."
+      },
+      {
+        "question": "How much notice do you need for bookings?",
+        "answer": "For standard bookings, we can often accommodate same-day requests subject to availability. However, we recommend booking at least 24 hours in advance to guarantee your preferred vehicle and time slot. For special events or peak times, earlier booking is advisable."
+      },
+      {
+        "question": "Do you offer corporate and wedding packages?",
+        "answer": "Yes, we provide tailored corporate packages including executive airport transfers, business meeting transport, and event logistics. We also offer wedding packages with decorated vehicles, red carpet service, and coordination with your wedding schedule. Contact us for bespoke quotations."
+      },
+      {
+        "question": "What safety measures do you have in place?",
+        "answer": "Safety is our top priority. All vehicles undergo regular maintenance and safety inspections, our chauffeurs are trained in defensive driving, and we maintain comprehensive insurance coverage. We also follow all current health and safety protocols and can provide sanitized vehicles upon request."
+      },
+      {
+        "question": "Can I request a specific chauffeur?",
+        "answer": "Yes, if you've had a particularly good experience with one of our chauffeurs, you can request them for future bookings. While we can't guarantee availability, we'll do our best to accommodate your preference and will let you know when booking."
+      },
+      {
+        "question": "What is your cancellation policy?",
+        "answer": "Cancellations made more than 24 hours before your booking are free of charge. Cancellations within 24 hours may incur a 50% charge, and cancellations within 2 hours of pickup time incur a 100% charge. No-shows are charged in full."
+      },
+      {
+        "question": "Do you provide receipts and invoices for business travel?",
+        "answer": "Yes, we provide detailed receipts and invoices suitable for business expense claims and VAT reclaim. Corporate clients can set up accounts for streamlined billing and reporting. All receipts include journey details, VAT breakdown, and can be customized to your company requirements."
       }
     ]
+  },
+  "booking": {
+    "hero": {
+      "title": "Book Your Luxury Journey",
+      "subtitle": "Experience premium chauffeur service with our simple, secure booking system",
+      "features": {
+        "instant": {
+          "title": "Instant Booking",
+          "description": "Get immediate confirmation and quotes"
+        },
+        "secure": {
+          "title": "Secure Payment",
+          "description": "Safe and encrypted payment processing"
+        },
+        "support": {
+          "title": "24/7 Support",
+          "description": "Round-the-clock customer assistance"
+        }
+      },
+      "stats": {
+        "availability": "Available",
+        "rating": "Average Rating",
+        "trips": "Happy Customers"
+      }
+    }
+  },
+  "bookingForm": {
+    "heading": "Book Your Luxury Journey",
+    "steps": {
+      "details": "Trip Details",
+      "vehicle": "Choose Vehicle",
+      "details_passenger": "Your Details", 
+      "confirmation": "Confirmation"
+    },
+    "buttons": {
+      "back": "Back",
+      "next": "Continue",
+      "getQuote": "Get Quote"
+    },
+    "success": {
+      "title": "Booking Request Sent!",
+      "message": "Thank you for choosing Silk Ride. We'll contact you shortly with a detailed quote and confirmation.",
+      "redirect": "Redirecting to homepage in a few seconds...",
+      "contact": "Need immediate assistance? Contact us:"
+    }
   },
   "contact":{
     "contact_us": "Contact Us",

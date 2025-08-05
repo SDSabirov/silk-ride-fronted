@@ -1,16 +1,37 @@
 <template>
-  <div class="booking-iframe">
-    <iframe
-      ref="bookingIframe"
-      id="eto-iframe-booking"
-      :src="iframeSrc"
-      allow="geolocation"
-      width="100%"
-      height="250"
-      scrolling="no"
-      frameborder="0"
-      style="width: 1px; min-width: 100%; border: 0"
-    ></iframe>
+  <div class="booking-iframe-wrapper">
+    <!-- Iframe Container -->
+    <div class="booking-iframe">
+      <!-- Top accent bar -->
+      <div class="accent-bar"></div>
+      
+      <iframe
+        ref="bookingIframe"
+        id="eto-iframe-booking"
+        :src="iframeSrc"
+        allow="geolocation"
+        width="100%"
+        height="250"
+        scrolling="no"
+        frameborder="0"
+        style="width: 1px; min-width: 100%; border: 0; border-radius: 0 0 16px 16px;"
+      ></iframe>
+    </div>
+
+    <!-- Help Text -->
+    <div class="help-text mt-6 text-center">
+      <p class="text-sm text-gray-500 mb-2">
+        Need assistance? Our team is available 24/7
+      </p>
+      <div class="flex justify-center space-x-4 text-sm">
+        <a href="tel:+447512905514" class="text-gold hover:text-gold/80 font-medium">
+          📞 +44 7512 905514
+        </a>
+        <a href="mailto:info@silkride.co.uk" class="text-gold hover:text-gold/80 font-medium"> 
+          ✉️ info@silkride.co.uk
+        </a>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -70,7 +91,84 @@ onBeforeUnmount(() => {
 </script>
 
 <style scoped>
+.booking-iframe-wrapper {
+  width: 100%;
+  position: relative;
+}
+
 .booking-iframe {
   width: 100%;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
 }
+
+
+.accent-bar {
+  height: 4px;
+  background: linear-gradient(90deg, #FFCB6C 0%, #F59E0B 50%, #FFCB6C 100%);
+  border-radius: 16px 16px 0 0;
+  position: relative;
+  z-index: 2;
+}
+
+.booking-iframe iframe {
+  display: block;
+  width: 100% !important;
+  min-width: 100% !important;
+  border: none !important;
+  background: white;
+  transition: opacity 0.3s ease;
+}
+
+
+.help-text {
+  padding: 16px;
+  background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.help-text a {
+  transition: all 0.2s ease;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.help-text a:hover {
+  background: rgba(255, 203, 108, 0.1);
+  transform: translateY(-1px);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .booking-iframe iframe {
+    min-height: 600px !important;
+  }
+  
+  .help-text {
+    margin-top: 1rem;
+    padding: 12px;
+  }
+  
+  .help-text .flex {
+    flex-direction: column;
+    space-y: 2;
+  }
+  
+  .help-text a {
+    margin: 2px 0;
+  }
+}
+
+@media (min-width: 769px) {
+  .booking-iframe iframe {
+    min-height: 500px !important;
+  }
+}
+
 </style>
