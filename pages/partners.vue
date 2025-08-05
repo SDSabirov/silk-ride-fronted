@@ -276,7 +276,7 @@
           </div>
           
           <div class="bg-white p-6 rounded-lg shadow-md">
-            <div class="text-4xl font-bold text-gold mb-2">15+</div>
+            <div class="text-4xl font-bold text-gold mb-2">10+</div>
             <p class="text-gray-600">{{ $t('pages.about.partners.current.stats.years') }}</p>
           </div>
         </div>

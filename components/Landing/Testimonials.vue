@@ -151,7 +151,7 @@ const testimonials = ref([
     text: "I recently used this transport service for a trip to Eastbourne, and it was a very comfortable and pleasant experience. The driver was professional, polite, and drove safely throughout the journey. The car was clean, elegant, and spacious, making the trip truly relaxing. It’s also very convenient for airport transfers, with reliable service and on-time pickups. The free Wi-Fi in the car was a great bonus, allowing me to stay connected during the ride. I highly recommend this taxi service to everyone looking for a comfortable and stress-free travel experience.",
     author: "Sarah & David Mitchell",
     location: "Eastbourne, UK",
-    service: "Azamat Karimiov",
+    service: "Long Distance Travel",
     rating: 5,
     date: "July 2025",
     verified: true,

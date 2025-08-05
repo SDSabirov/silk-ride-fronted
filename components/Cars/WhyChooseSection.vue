@@ -63,7 +63,7 @@
             </div>
             <div class="group">
               <i class="bx bxs-medal text-4xl text-gold mb-3 group-hover:scale-110 transition-transform duration-300"></i>
-              <div class="text-3xl font-bold text-white mb-2">15+</div>
+              <div class="text-3xl font-bold text-white mb-2">10+</div>
               <div class="text-gray-300">{{ $t('whyChoose.stats.experience') }}</div>
             </div>
             <div class="group">

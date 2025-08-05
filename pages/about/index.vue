@@ -48,7 +48,7 @@
             />
             <div class="absolute -bottom-6 -right-6 bg-gold text-black p-6 rounded-lg shadow-lg">
               <div class="text-center">
-                <div class="text-3xl font-bold">15+</div>
+                <div class="text-3xl font-bold">10+</div>
                 <div class="text-sm font-medium">{{ t('pages.about.yearsExperience') }}</div>
               </div>
             </div>
@@ -67,7 +67,7 @@
           </div>
           
           <div class="bg-white p-6 rounded-lg shadow-md">
-            <div class="text-4xl font-bold text-gold mb-2">15+</div>
+            <div class="text-4xl font-bold text-gold mb-2">10+</div>
             <p class="text-gray-600">{{ t('pages.about.stats.vehicles') }}</p>
           </div>
           
