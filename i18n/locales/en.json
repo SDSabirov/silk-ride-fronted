@@ -1,4 +1,7 @@
 {
+  "common": {
+    "fromPrice": "From £{price}/hour"
+  },
   "navbar": {
     "home": "Home",
     "fleet": "Our Fleet",
@@ -38,7 +41,24 @@
     "title": "Tailored Chauffeur Services for Airport, Events & Business",
     "subtitle": "Seamlessly connecting your journeys with executive-class service.",
     "bookNow": "Book Now",
-    "exploreServices": "Explore Services"
+    "exploreServices": "Explore Services",
+    "brandValues": {
+      "luxury": {
+        "title": "Luxury Redefined",
+        "description": "Experience the pinnacle of automotive elegance"
+      },
+      "service": {
+        "title": "Professional Service",
+        "description": "Expert chauffeurs dedicated to your comfort"
+      },
+      "punctual": {
+        "title": "Always Punctual",
+        "description": "Reliable service you can count on"
+      }
+    },
+    "cta": {
+      "features": "Instant booking • Professional service • 24/7 support"
+    }
   },
   "servicesSection": {
     "title": "Our Most Requested Chauffeur Services",
@@ -560,15 +580,29 @@
       "closingNote": "Choose the Mercedes-Benz E-Class - more than just a ride, it's an experience of luxury and refinement. Book now and enjoy the comfort of business-class travel!",
       "galleryTitle": "Our Gallery"
     },
+    "sClass": {
+      "title": "Mercedes Benz", 
+      "subtitle": "S-Class",
+      "slogan": "The Pinnacle of Automotive Luxury",
+      "intro": {
+        "title": "The Pinnacle of Automotive Luxury",
+        "paragraph": "Experience the ultimate in luxury travel with the Mercedes-Benz S-Class – the flagship sedan that defines automotive excellence. With cutting-edge technology, unparalleled comfort, and prestigious design, the S-Class transforms every journey into a first-class experience worthy of executives and VIPs."
+      },
+      "whyTitle": "Why Choose the S-Class?",
+      "occasionsTitle": "Perfect For Every Prestigious Occasion",
+      "galleryTitle": "Our Gallery"
+    },
     "vClass": {
       "title": "Mercedes Benz",
       "subtitle": "V-Class",
-      "slogan": "Designed for Every Journey: Unmatched Versatility & Comfort",
+      "slogan": "Luxury Group Travel Redefined",
       "intro": {
-        "title": "Redefine Luxury Travel with the Mercedes-Benz V-Class",
-        "paragraph": "Experience unparalleled comfort and sophistication with the Mercedes-Benz V-Class. Designed for those who seek elegance and practicality in every journey, the V-Class offers a spacious interior, advanced technology, and a smooth driving experience. Whether it's a business trip, a family outing, or a VIP transfer, this versatile vehicle ensures you arrive in style and comfort. Discover the perfect blend of functionality and luxury with every ride."
+        "title": "Luxury Group Travel Redefined", 
+        "paragraph": "Experience unparalleled comfort and sophistication with the Mercedes-Benz V-Class. Designed for groups who demand luxury without compromise, the V-Class offers spacious accommodations for up to 7 passengers, advanced technology, and premium amenities. Whether it's a family adventure, corporate event, or special celebration, this versatile vehicle ensures everyone travels in first-class comfort."
       },
-      "sectionTitle": "Unmatched Comfort, No Matter the Occasion",
+      "whyTitle": "Why Choose the V-Class?",
+      "occasionsTitle": "Perfect For Every Group Journey", 
+      "galleryTitle": "Our Gallery",
       "cards": {
         "weddings": {
           "title": "V-Class for Weddings",
@@ -623,8 +657,8 @@
             "Comfortable seating for long journeys with plenty of legroom."
           ]
         }
-      },
-      "galleryTitle": "Our Gallery"
+      }
+      
     },
     "sclass": {
     "brand": "Mercedes Benz",
@@ -1005,6 +1039,279 @@
     "open_contact_drawer": "Open contact drawer",
     "close_contact_drawer": "Close contact drawer",
     "send": "Send"
+  },
+  "whyChoose": {
+    "comfort": {
+      "title": "Business Class Comfort",
+      "description": "Premium leather seating, climate control, and whisper-quiet cabin create the perfect business environment on wheels."
+    },
+    "technology": {
+      "title": "Advanced Technology",
+      "description": "MBUX infotainment system, smartphone integration, and intelligent safety features keep you connected and secure."
+    },
+    "performance": {
+      "title": "Refined Performance", 
+      "description": "Smooth 245hp engine with adaptive suspension delivers an effortlessly comfortable ride for all passengers."
+    },
+    "practical": {
+      "title": "Practical Luxury",
+      "description": "Generous luggage space and flexible seating configuration perfect for business trips and special occasions."
+    },
+    "safety": {
+      "title": "Mercedes Safety Excellence",
+      "description": "5-star safety rating with comprehensive active safety systems and driver assistance technologies."
+    },
+    "service": {
+      "title": "Professional Service",
+      "description": "Expert chauffeurs trained in hospitality and discretion ensure a seamless, stress-free journey every time."
+    },
+    "luxury": {
+      "title": "Ultimate Luxury",
+      "description": "Experience the pinnacle of automotive refinement with premium materials, executive seating, and ambient lighting."
+    },
+    "executive": {
+      "title": "Executive Excellence", 
+      "description": "Impress clients and colleagues with a vehicle that commands respect and demonstrates success."
+    },
+    "prestige": {
+      "title": "Prestigious Arrival",
+      "description": "Make a statement at every destination with the flagship Mercedes-Benz S-Class luxury sedan."
+    },
+    "capacity": {
+      "title": "Spacious for 7",
+      "description": "Accommodate your entire group in comfort with flexible seating configurations and ample luggage space."
+    },
+    "versatility": {
+      "title": "Ultimate Versatility",
+      "description": "From family trips to corporate events, the V-Class adapts to every occasion with premium comfort."
+    },
+    "connectivity": {
+      "title": "Stay Connected",
+      "description": "Built-in WiFi, multiple charging ports, and entertainment systems keep everyone connected and entertained."
+    },
+    "statsTitle": "Why Choose {carModel}?",
+    "statsDescription": "Excellence backed by numbers and experience",
+    "stats": {
+      "safety": "Safety Rating",
+      "experience": "Years Experience", 
+      "clients": "Happy Clients",
+      "availability": "Availability"
+    },
+    "cta": {
+      "title": "Ready to Experience Luxury?",
+      "description": "Book your {carModel} today and discover the difference that premium chauffeur service makes.",
+      "button": "Book {carModel} Now"
+    }
+  },
+  "occasions": {
+    "business": {
+      "title": "Business Travel",
+      "description": "Arrive at meetings refreshed and professional. The E-Class provides a mobile office environment with premium comfort and connectivity.",
+      "points": [
+        "Quiet cabin for conference calls",
+        "Charging ports for all devices", 
+        "Professional arrival experience",
+        "Flexible scheduling options"
+      ]
+    },
+    "airport": {
+      "title": "Airport Transfers",
+      "description": "Start or end your journey in style. Our E-Class service includes flight monitoring and complimentary waiting time.",
+      "points": [
+        "Flight tracking included",
+        "Meet & greet service",
+        "60 minutes free waiting",
+        "All major airports covered"
+      ]
+    },
+    "special": {
+      "title": "Special Occasions",
+      "description": "Make memories that last a lifetime. Perfect for anniversaries, date nights, or celebrating important milestones.",
+      "points": [
+        "Elegant arrival experience",
+        "Complimentary refreshments",
+        "Photo-worthy moments",
+        "Discrete professional service"
+      ]
+    },
+    "leisure": {
+      "title": "City Tours & Leisure",
+      "description": "Explore London and beyond in comfort. Ideal for sightseeing, shopping trips, or cultural experiences with friends and family.",
+      "points": [
+        "Local knowledge & recommendations",
+        "Flexible itinerary planning", 
+        "Comfortable for extended trips",
+        "Shopping assistance available"
+      ]
+    },
+    "cta": {
+      "title": "Need Something Specific?",
+      "description": "Every journey is unique. Our team can customize your {carModel} experience for any special occasion or requirement.",
+      "bookStandard": "Book Standard Service",
+      "customRequest": "Custom Request"
+    },
+    "executive": {
+      "title": "Executive Travel",
+      "description": "Command respect and demonstrate success with the S-Class. Perfect for C-suite executives and VIP business meetings.",
+      "points": [
+        "Executive rear seats with massage",
+        "MBUX Hyperscreen technology",
+        "Sound-proof cabin for calls",
+        "Refrigerated champagne compartment"
+      ]
+    },
+    "vip": {
+      "title": "VIP Events & Red Carpet",
+      "description": "Arrive in style at premieres, galas, and exclusive events. The S-Class ensures a prestigious entrance every time.",
+      "points": [
+        "Discreet privacy glass",
+        "Professional VIP chauffeur",
+        "Red carpet-worthy arrival",
+        "Paparazzi-proof comfort"
+      ]
+    },
+    "wedding": {
+      "title": "Luxury Weddings",
+      "description": "Make your special day unforgettable with the elegance and sophistication of the Mercedes-Benz S-Class.",
+      "points": [
+        "Bridal party luxury transport",
+        "Wedding decoration options",
+        "Professional wedding chauffeur",
+        "Memorable photo opportunities"
+      ]
+    },
+    "luxury": {
+      "title": "Luxury Lifestyle",
+      "description": "From Michelin-star dining to exclusive shopping, the S-Class elevates every luxury experience in London.",
+      "points": [
+        "Concierge-level service",
+        "Fine dining reservations",
+        "Exclusive venue access",
+        "Personal shopping assistance"
+      ]
+    },
+    "family": {
+      "title": "Family Adventures",
+      "description": "Create lasting memories with spacious luxury travel for the whole family. The V-Class makes every journey special.",
+      "points": [
+        "Seats up to 7 family members",
+        "Child-friendly entertainment",
+        "Ample space for luggage",
+        "Comfortable for long trips"
+      ]
+    },
+    "group": {
+      "title": "Group Events & Tours",
+      "description": "Whether it's a corporate outing or friends' celebration, the V-Class brings your group together in comfort.",
+      "points": [
+        "Group coordination made easy",
+        "Individual climate zones",
+        "Entertainment for everyone",
+        "Professional group transport"
+      ]
+    },
+    "corporate": {
+      "title": "Corporate Groups",
+      "description": "Impress clients and colleagues with professional group transportation that reflects your company's standards.",
+      "points": [
+        "Executive group seating",  
+        "Mobile office capability",
+        "Professional appearance",
+        "Reliable corporate service"
+      ]
+    }
+  },
+  "overview": {
+    "title": "Vehicle Overview",
+    "subtitle": "Essential specifications at a glance",
+    "capacity": {
+      "title": "Passenger Capacity",
+      "passengers": "Maximum Passengers",
+      "cabinLuggage": "Cabin Luggage",
+      "largeLuggage": "Large Luggage"
+    },
+    "pricing": {
+      "title": "Pricing Information",
+      "hourlyRate": "Hourly Rate",
+      "minimumBooking": "Minimum Booking",
+      "includesService": "All prices include professional chauffeur service"
+    },
+    "features": {
+      "title": "Key Features",
+      "wifi": "Free WiFi",
+      "climate": "Climate Control",
+      "audio": "Premium Audio",
+      "driver": "Professional Driver"
+    },
+    "cta": {
+      "button": "Book This Vehicle Now"
+    }
+  },
+  "specifications": {
+    "title": "Technical Excellence",
+    "description": "Discover the sophisticated engineering and luxury features that make each vehicle in our fleet exceptional",
+    "tabs": {
+      "overview": "Overview",
+      "features": "Luxury Features",
+      "performance": "Performance & Safety"
+    },
+    "capacity": {
+      "title": "Passenger Capacity",
+      "passengers": "Maximum Passengers",
+      "cabinLuggage": "Cabin Luggage",
+      "largeLuggage": "Large Luggage"
+    },
+    "pricing": {
+      "title": "Pricing Information",
+      "hourlyRate": "Hourly Rate",
+      "minimumBooking": "Minimum Booking",
+      "includesService": "All prices include professional chauffeur service"
+    },
+    "dimensions": {
+      "title": "Vehicle Dimensions"
+    },
+    "performance": {
+      "title": "Engine & Performance",
+      "description": "Smooth, refined performance optimized for passenger comfort"
+    },
+    "safety": {
+      "title": "Advanced Safety Systems",
+      "description": "Mercedes-Benz safety technology with 5-star safety rating"
+    },
+    "technical": {
+      "title": "Technical Excellence",
+      "maintenance": {
+        "title": "Regular Maintenance",
+        "description": "Professional servicing every 10,000 miles"
+      },
+      "eco": {
+        "title": "Eco-Friendly",
+        "description": "Low emissions and fuel efficiency"
+      },
+      "certified": {
+        "title": "Certified Quality",
+        "description": "Meets all UK transport regulations"
+      }
+    },
+    "categories": {
+      "comfort": "Comfort & Interior",
+      "technology": "Technology",
+      "service": "Service Excellence"
+    },
+    "features": {
+      "leather": "Premium leather seating",
+      "climate": "Climate control system",
+      "lighting": "Ambient lighting",
+      "privacy": "Privacy glass",
+      "entertainment": "Entertainment system",
+      "charging": "USB charging ports",
+      "wifi": "WiFi connectivity",
+      "navigation": "Navigation system",
+      "chauffeur": "Professional chauffeur",
+      "doorToDoor": "Door-to-door service",
+      "refreshments": "Complimentary refreshments",
+      "flightMonitoring": "Flight monitoring"
+    }
   }
 }
 

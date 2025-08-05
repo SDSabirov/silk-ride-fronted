@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div class="min-h-screen bg-gradient-to-b from-gray-50 to-white">
     <Navbar />
     <CarsDetailHero
       :img="hero"
@@ -14,91 +14,31 @@
       :paragraph="t('fleetPages.eClass.intro.paragraph')"
     />
 
-    <div class="flex flex-col w-full items-center justify-center py-22">
-      <div class="max-w-screen-xl w-full flex flex-col space-y-6 mb-6">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 border-b-2 border-b-gold px-4 mb-6 py-4 mb-6">
-          <div>
-            <h2 class="text-black text-4xl font-semibold leading-loose text-center">
-              {{ t('fleetPages.eClass.whyTitle') }}
-            </h2>
-            <div class="w-full flex items-center justify-center mb-4">
-              <div class="h-3 w-3 bg-gold rotate-45"></div>
-              <div class="h-1 bg-gold w-full max-w-screen-xl"></div>
-              <div class="h-3 w-3 bg-gold rotate-45"></div>
-            </div>
-            <ul class="mt-4 space-y-4 text-md leading-loose">
-              <li class="flex items-center space-x-2">
-                <div class="h-3 w-3 bg-gold rotate-45"></div>
-                <span>{{ t('fleetPages.eClass.whyBullets[0]') }}</span>
-              </li>
-              <li class="flex items-center space-x-2">
-                <div class="h-3 w-3 bg-gold rotate-45"></div>
-                <span>{{ t('fleetPages.eClass.whyBullets[1]') }}</span>
-              </li>
-              <li class="flex items-center space-x-2">
-                <div class="h-3 w-3 bg-gold rotate-45"></div>
-                <span>{{ t('fleetPages.eClass.whyBullets[2]') }}</span>
-              </li>
-              <li class="flex items-center space-x-2">
-                <div class="h-3 w-3 bg-gold rotate-45"></div>
-                <span>{{ t('fleetPages.eClass.whyBullets[3]') }}</span>
-              </li>
-              <li class="flex items-center space-x-2">
-                <div class="h-3 w-3 bg-gold rotate-45"></div>
-                <span>{{ t('fleetPages.eClass.whyBullets[4]') }}</span>
-              </li>
-            </ul>
-          </div>
-          <div class="overflow-hidden">
-            <img src="/assets/images/eclass1.webp" alt="s-class at wedding" loading="lazy" class="object-cover h-full sepia" />
-          </div>
-          <div class="md:col-span-2 flex items-center justify-center mt-4">
-            <NuxtLink to="/booking" class="flex px-6 py-3 items-center justify-center border border-black text-black text-xl hover:bg-gold hover:text-black p-2">
-              {{ t('pages.common.bookNow') }}
-            </NuxtLink>
-          </div>
-        </div>
+    <!-- Vehicle Overview Card -->
+    <CarsOverviewCard :car="EClass" />
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 border-b-2 border-b-gold px-4 mb-6 py-4 items-center">
-          <div class="flex flex-col space-y-4 justify-start h-full">
-            <h2 class="text-black text-4xl font-semibold leading-loose">
-              {{ t('fleetPages.eClass.occasionsTitle') }}
-            </h2>
-            <ul class="mt-4 space-y-4 text-md leading-loose">
-              <li class="flex items-center space-x-2">
-                <div class="h-3 w-3 bg-gold rotate-45"></div>
-                <span>{{ t('fleetPages.eClass.occasionsBullets[0]') }}</span>
-              </li>
-              <li class="flex items-center space-x-2">
-                <div class="h-3 w-3 bg-gold rotate-45"></div>
-                <span>{{ t('fleetPages.eClass.occasionsBullets[1]') }}</span>
-              </li>
-              <li class="flex items-center space-x-2">
-                <div class="h-3 w-3 bg-gold rotate-45"></div>
-                <span>{{ t('fleetPages.eClass.occasionsBullets[2]') }}</span>
-              </li>
-              <li class="flex items-center space-x-2">
-                <div class="h-3 w-3 bg-gold rotate-45"></div>
-                <span>{{ t('fleetPages.eClass.occasionsBullets[3]') }}</span>
-              </li>
-            </ul>
-            <p class="pr-6 text-lg italic leading-loose">
-              {{ t('fleetPages.eClass.closingNote') }}
-            </p>
-          </div>
-          <div class="md:order-first h-full">
-            <img src="/assets/images/covers/wedding.webp" alt="s-class for business" loading="lazy" class="object-cover h-full" />
-          </div>
-          <div class="md:col-span-2 flex items-center justify-center mt-4">
-            <NuxtLink to="/booking" class="flex px-6 py-3 items-center justify-center border border-black text-black text-xl hover:bg-gold hover:text-black p-2">
-              {{ t('pages.common.bookNow') }}
-            </NuxtLink>
-          </div>
-        </div>
-      </div>
-    </div>
+    <!-- Why Choose E-Class Section -->
+    <CarsWhyChooseSection
+      :title="t('fleetPages.eClass.whyTitle')"
+      description="Experience the perfect balance of luxury and performance with the Mercedes-Benz E-Class. Every journey becomes a statement of sophistication and comfort."
+      car-model="E-Class"
+      :features="whyChooseFeatures"
+    />
 
-    <div class="flex flex-col w-full max-w-screen items-center justify-center py-22">
+    <!-- Occasions Section -->
+    <CarsOccasionsSection
+      :title="t('fleetPages.eClass.occasionsTitle')"
+      description="From business meetings to special celebrations, the E-Class adapts to every occasion with sophistication and comfort."
+      car-model="E-Class"
+      :base-price="EClass.hourlyRate"
+      :occasions="occasionScenarios"
+    />
+
+    <!-- Specifications Section -->
+    <CarsSpecifications :car="EClassDetailed" />
+
+    <!-- Gallery Section -->
+    <div class="flex flex-col w-full items-center justify-center py-16 bg-gray-50">
       <h3 class="w-full text-black text-4xl font-semibold leading-loose text-center mb-10">
         {{ t('fleetPages.eClass.galleryTitle') }}
       </h3>
@@ -111,16 +51,15 @@
 
 <script setup>
 import hero from "~/assets/images/eclass.webp";
-import { useI18n, useLocalePath } from '#imports';
+import businessTripImg from "~/assets/images/covers/business-trip.webp";
+import assistImg from "~/assets/images/covers/assist.webp";
+import weddingImg from "~/assets/images/covers/wedding.webp";
+import aboutUsImg from "~/assets/images/covers/about-us.webp";
+import { useI18n } from '#imports';
+import { useSeo } from '~/utils/useSeo'
 
 const { t } = useI18n()
-import { useSeo } from '~/utils/useSeo'
 useSeo('eClass')
-const galleryImages = [
-  { src: hero, alt: "Mercedes-Benz V-Class Front View" },
-  { src: hero, alt: "Mercedes-Benz V-Class Interior" },
-  { src: hero, alt: "Mercedes-Benz V-Class Rear View" },
-];
 
 const EClass = {
   passengers: 3,
@@ -129,4 +68,147 @@ const EClass = {
   hourlyRate: 75,
   minHours: 4,
 };
+
+const EClassDetailed = {
+  ...EClass,
+  dimensions: {
+    length: "4923mm",
+    width: "1852mm", 
+    height: "1468mm",
+    wheelbase: "2939mm"
+  },
+  performance: {
+    engine: "2.0L Turbo I4",
+    power: "245hp",
+    acceleration: "6.6s",
+    topSpeed: "250km/h",
+    fuelType: "Petrol",
+    transmission: "9G-TRONIC"
+  },
+  features: [
+    { name: "ARTICO Leather Seats", icon: "bx bxs-car-mechanic", description: "Premium artificial leather upholstery" },
+    { name: "THERMOTRONIC Climate", icon: "bx bx-wind", description: "Automatic dual-zone climate control" },
+    { name: "Burmester Surround Sound", icon: "bx bx-volume-full", description: "13-speaker premium audio system" },
+    { name: "MBUX Navigation", icon: "bx bx-map", description: "Mercedes-Benz User Experience with voice control" },
+    { name: "Smartphone Integration", icon: "bx bxl-bluetooth", description: "Apple CarPlay & Android Auto" },
+    { name: "Wireless Charging Pad", icon: "bx bx-usb", description: "Qi wireless charging for compatible devices" },
+    { name: "Privacy Glass", icon: "bx bx-glasses", description: "Tinted rear windows for discretion" },
+    { name: "Professional Chauffeur", icon: "bx bx-user-check", description: "Experienced, uniformed driver service" },
+    { name: "Ambient Lighting", icon: "bx bx-bulb", description: "64-color LED ambient lighting system" },
+    { name: "Memory Package", icon: "bx bx-save", description: "Driver seat and mirror memory settings" },
+    { name: "Heated Seats", icon: "bx bx-sun", description: "Front and rear seat heating" },
+    { name: "Air Quality System", icon: "bx bx-leaf", description: "HEPA filtration and air purification" }
+  ],
+  safety: [
+    "Active Brake Assist with Cross-Traffic Function",
+    "Blind Spot Assist with Exit Warning",
+    "Active Lane Keeping Assist",
+    "Traffic Sign Assist with Wrong-Way Warning",
+    "PRE-SAFE System with Sound",
+    "Attention Assist Drowsiness Detection",
+    "ESP Electronic Stability Program",
+    "9 Airbags including Knee Airbags",
+    "Active Parking Assist with PARKTRONIC"
+  ]
+}
+
+const whyFeatures = [
+  t('fleetPages.eClass.whyBullets[0]'),
+  t('fleetPages.eClass.whyBullets[1]'),
+  t('fleetPages.eClass.whyBullets[2]'),
+  t('fleetPages.eClass.whyBullets[3]'),
+  t('fleetPages.eClass.whyBullets[4]')
+]
+
+const whyChooseFeatures = [
+  {
+    icon: 'bx bxs-car',
+    title: t('whyChoose.comfort.title'),
+    description: t('whyChoose.comfort.description')
+  },
+  {
+    icon: 'bx bx-chip',
+    title: t('whyChoose.technology.title'),
+    description: t('whyChoose.technology.description')
+  },
+  {
+    icon: 'bx bx-tachometer',
+    title: t('whyChoose.performance.title'),
+    description: t('whyChoose.performance.description')
+  },
+  {
+    icon: 'bx bx-briefcase',
+    title: t('whyChoose.practical.title'),
+    description: t('whyChoose.practical.description')
+  },
+  {
+    icon: 'bx bx-shield-check',
+    title: t('whyChoose.safety.title'),
+    description: t('whyChoose.safety.description')
+  },
+  {
+    icon: 'bx bx-user-check',
+    title: t('whyChoose.service.title'),
+    description: t('whyChoose.service.description')
+  }
+]
+
+const occasionFeatures = [
+  t('fleetPages.eClass.occasionsBullets[0]'),
+  t('fleetPages.eClass.occasionsBullets[1]'),
+  t('fleetPages.eClass.occasionsBullets[2]'),
+  t('fleetPages.eClass.occasionsBullets[3]')
+]
+
+const occasionScenarios = [
+  {
+    title: t('occasions.business.title'),
+    description: t('occasions.business.description'),
+    image: businessTripImg,
+    icon: 'bx bx-briefcase',
+    keyPoints: [
+      t('occasions.business.points.0'),
+      t('occasions.business.points.1'),
+      t('occasions.business.points.2'),
+      t('occasions.business.points.3')
+    ]
+  },
+  {
+    title: t('occasions.airport.title'),
+    description: t('occasions.airport.description'),
+    image: assistImg,
+    icon: 'bx bx-plane',
+    keyPoints: [
+      t('occasions.airport.points.0'),
+      t('occasions.airport.points.1'),
+      t('occasions.airport.points.2'),
+      t('occasions.airport.points.3')
+    ]
+  },
+  {
+    title: t('occasions.special.title'),
+    description: t('occasions.special.description'),
+    image: weddingImg,
+    icon: 'bx bx-heart',
+    keyPoints: [
+      t('occasions.special.points.0'),
+      t('occasions.special.points.1'),
+      t('occasions.special.points.2'),
+      t('occasions.special.points.3')
+    ]
+  },
+  {
+    title: t('occasions.leisure.title'),
+    description: t('occasions.leisure.description'),
+    image: aboutUsImg,
+    icon: 'bx bx-map',
+    keyPoints: [
+      t('occasions.leisure.points.0'),
+      t('occasions.leisure.points.1'),
+      t('occasions.leisure.points.2'),
+      t('occasions.leisure.points.3')
+    ]
+  }
+]
+
 </script>

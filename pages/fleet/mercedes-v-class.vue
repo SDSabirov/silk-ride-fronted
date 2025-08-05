@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-screen overflow-hidden">
+  <div class="min-h-screen bg-gradient-to-b from-gray-50 to-white overflow-hidden">
     <Navbar />
     <CarsDetailHero
       :img="hero"
@@ -18,289 +18,32 @@
       />
     </div>
 
-    <div
-      class="flex flex-col w-full items-center justify-center py-22 bg-[url(/assets/images/covers/bgpattern2.png)] bg-contain bg-center bg-no-repeat"
-    >
-      <h2 class="text-black text-4xl font-semibold leading-loose text-center">
-        {{ t("fleetPages.vClass.sectionTitle") }}
-      </h2>
-      <div class="w-full flex items-center justify-center mb-6">
-        <div class="h-3 w-3 bg-gold rotate-45"></div>
-        <div class="h-1 bg-gold w-full max-w-screen-xl"></div>
-        <div class="h-3 w-3 bg-gold rotate-45"></div>
-      </div>
-      <div
-        class="max-w-screen-xl w-full flex flex-col space-y-8 mb-6 px-2 md:px-0"
-      >
-       <!-- Card 1 -->
-       <div
-          class="grid grid-cols-1 md:grid-cols-2 gap-6 border-b-2 border-b-gold px-4 mb-6 py-8 bg-white p-4"
-        >
-          <div>
-            <h3 class="text-black text-2xl font-normal leading-loose">
-              {{ t("fleetPages.vClass.cards.weddings.title") }}
-            </h3>
-            <p class="pr-6 text-lg italic">
-              {{ t("fleetPages.vClass.cards.weddings.description") }}
-            </p>
-            <h4 class="text-gray-800 text-xl font-semibold leading-loose mt-4">
-              {{ t("fleetPages.vClass.cards.weddings.featuresTitle") }}
-            </h4>
-            <ul class="text-lg leading-loose">
-              <li class="flex items-center space-x-2">
-                <div class="h-3 w-3 bg-gold rotate-45"></div>
-                <span>{{ t("fleetPages.vClass.cards.weddings.features[0]") }}</span>
-              </li>
-              <li class="flex items-center space-x-2">
-                <div class="h-3 w-3 bg-gold rotate-45"></div>
-                <span>{{ t("fleetPages.vClass.cards.weddings.features[1]") }}</span>
-              </li>
-              <li class="flex items-center space-x-2">
-                <div class="h-3 w-3 bg-gold rotate-45"></div>
-                <span>{{ t("fleetPages.vClass.cards.weddings.features[2]") }}</span>
-              </li>
-              <li class="flex items-center space-x-2">
-                <div class="h-3 w-3 bg-gold rotate-45"></div>
-                <span>{{ t("fleetPages.vClass.cards.weddings.features[3]") }}</span>
-              </li>
-            </ul>
-          </div>
-          <div class="overflow-hidden">
-            <img
-              src="/assets/images/vclass2.webp"
-              alt="v-class at wedding"
-              loading="lazy"
-              class="object-cover"
-            />
-          </div>
-          <div class="md:col-span-2 flex items-center justify-center mt-4">
-            <NuxtLink
-              to="/booking"
-              class="flex px-6 py-3 items-center justify-center border border-black text-black text-xl hover:bg-gold hover:text-black p-2"
-            >
-            {{ t('pages.common.bookNow') }}
-            </NuxtLink>
-          </div>
-        </div>
+    <!-- Vehicle Overview Card -->
+    <CarsOverviewCard :car="VClass" />
 
-        <!-- Card 2 -->
-        <div
-          class="grid grid-cols-1 md:grid-cols-2 gap-6 border-b-2 border-b-gold px-4 mb-6 py-8 items-center bg-white p-4 rounded-sm"
-        >
-          <div>
-            <h3 class="text-black text-2xl font-normal leading-loose">
-              {{ t("fleetPages.vClass.cards.business.title") }}
-            </h3>
-            <p class="pr-6 text-lg italic">
-              {{ t("fleetPages.vClass.cards.business.description") }}
-            </p>
-            <h4 class="text-gray-800 text-xl font-semibold leading-loose mt-4">
-              {{ t("fleetPages.vClass.cards.business.featuresTitle") }}
-            </h4>
-            <ul class="text-lg leading-loose">
-              <li class="flex items-center space-x-2">
-                <div class="h-3 w-3 bg-gold rotate-45"></div>
-                <span>{{ t("fleetPages.vClass.cards.business.features[0]") }}</span>
-              </li>
-              <li class="flex items-center space-x-2">
-                <div class="h-3 w-3 bg-gold rotate-45"></div>
-                <span>
-                  {{ t("fleetPages.vClass.cards.business.features[1]") }}.
-                </span>
-              </li>
-              <li class="flex items-center space-x-2">
-                <div class="h-3 w-3 bg-gold rotate-45"></div>
-                <span>{{ t("fleetPages.vClass.cards.business.features[2]") }}</span>
-              </li>
-              <li class="flex items-center space-x-2">
-                <div class="h-3 w-3 bg-gold rotate-45"></div>
-                <span>
-                  {{ t("fleetPages.vClass.cards.business.features[3]") }}
-                </span>
-              </li>
-            </ul>
-          </div>
-          <div class="md:order-first overflow-hidden">
-            <img
-              src="/assets/images/covers/business-trip.webp"
-              alt="v-class for business trips"
-              loading="lazy"
-              class="object-cover"
-            />
-          </div>
-          <div class="md:col-span-2 flex items-center justify-center mt-4">
-            <NuxtLink
-              to="/booking"
-              class="flex px-6 py-3 items-center justify-center border border-black text-black text-xl hover:bg-gold hover:text-black p-2"
-            >
-            {{ t('pages.common.bookNow') }}
-            </NuxtLink>
-          </div>
-        </div>
+    <!-- Why Choose V-Class Section -->
+    <CarsWhyChooseSection
+      :title="t('fleetPages.vClass.whyTitle')"
+      description="Experience unparalleled versatility with the Mercedes-Benz V-Class. Whether for family adventures, group travel, or business occasions, the V-Class delivers premium comfort for up to 7 passengers."
+      car-model="V-Class"
+      :features="whyChooseFeatures"
+    />
 
-        <!-- Card 3 -->
-        <div
-          class="grid grid-cols-1 md:grid-cols-2 gap-6 border-b-2 border-b-gold px-4 mb-6 py-8 bg-white p-4"
-        >
-          <div>
-            <h3 class="text-black text-2xl font-normal leading-loose">
-              {{ t("fleetPages.vClass.cards.airport.title") }}
-            </h3>
-            <p class="pr-6 text-lg italic">
-              {{ t("fleetPages.vClass.cards.airport.description") }}
-            </p>
-            <h4 class="text-gray-800 text-xl font-semibold leading-loose mt-4">
-              {{ t("fleetPages.vClass.cards.airport.featuresTitle") }}
-            </h4>
-            <ul class="text-lg leading-loose">
-              <li class="flex items-center space-x-2">
-                <div class="h-3 w-3 bg-gold rotate-45"></div>
-                <span>{{ t("fleetPages.vClass.cards.airport.features[0]") }}</span>
-              </li>
-              <li class="flex items-center space-x-2">
-                <div class="h-3 w-3 bg-gold rotate-45"></div>
-                <span>
-                  {{ t("fleetPages.vClass.cards.airport.features[1]") }}.
-                </span>
-              </li>
-              <li class="flex items-center space-x-2">
-                <div class="h-3 w-3 bg-gold rotate-45"></div>
-                <span>{{ t("fleetPages.vClass.cards.airport.features[2]") }}</span>
-              </li>
-              <li class="flex items-center space-x-2">
-                <div class="h-3 w-3 bg-gold rotate-45"></div>
-                <span>
-                  {{ t("fleetPages.vClass.cards.airport.features[3]") }}
-                </span>
-              </li>
-            </ul>
-          </div>
-          <div class="overflow-hidden">
-            <img
-              src="/assets/images/vclassjett.webp"
-              alt="v-class for airport transfers"
-              loading="lazy"
-              class="object-cover"
-            />
-          </div>
-          <div class="md:col-span-2 flex items-center justify-center mt-4">
-            <NuxtLink
-              to="/booking"
-              class="flex px-6 py-3 items-center justify-center border border-black text-black text-xl hover:bg-gold hover:text-black p-2"
-            >
-            {{ t('pages.common.bookNow') }}
-            </NuxtLink>
-          </div>
-        </div>
+    <!-- Occasions Section -->
+    <CarsOccasionsSection
+      :title="t('fleetPages.vClass.occasionsTitle')"
+      description="From family vacations to corporate events, the V-Class adapts to every group travel need with luxury, space, and sophistication."
+      car-model="V-Class"
+      :base-price="VClass.hourlyRate"
+      :occasions="occasionScenarios"
+    />
 
-        <!-- Card 4 -->
-        <div
-          class="grid grid-cols-1 md:grid-cols-2 gap-6 border-b-2 border-b-gold px-4 mb-6 py-8 bg-white p-4"
-        >
-          <div>
-            <h3 class="text-black text-2xl font-normal leading-loose">
-              {{ t("fleetPages.vClass.cards.events.title") }}
-            </h3>
-            <p class="pr-6 text-lg italic">
-              {{ t("fleetPages.vClass.cards.events.description") }}
-            </p>
-            <h4 class="text-gray-800 text-xl font-semibold leading-loose mt-4">
-              {{ t("fleetPages.vClass.cards.events.featuresTitle") }}
-            </h4>
-            <ul class="text-lg leading-loose">
-              <li class="flex items-center space-x-2">
-                <div class="h-3 w-3 bg-gold rotate-45"></div>
-                <span>{{ t("fleetPages.vClass.cards.events.features[0]") }}</span>
-              </li>
-              <li class="flex items-center space-x-2">
-                <div class="h-3 w-3 bg-gold rotate-45"></div>
-                <span>
-                  {{ t("fleetPages.vClass.cards.events.features[1]") }}.
-                </span>
-              </li>
-              <li class="flex items-center space-x-2">
-                <div class="h-3 w-3 bg-gold rotate-45"></div>
-                <span>{{ t("fleetPages.vClass.cards.events.features[2]") }}</span>
-              </li>
-             
-            </ul>
-          </div>
-          <div class="md:order-first overflow-hidden">
-            <img
-              src="/assets/images/v-classshero.webp"
-              alt="v-class for vip events"
-              loading="lazy"
-              class="object-cover"
-            />
-          </div>
-          <div class="md:col-span-2 flex items-center justify-center mt-4">
-            <NuxtLink
-              to="/booking"
-              class="flex px-6 py-3 items-center justify-center border border-black text-black text-xl hover:bg-gold hover:text-black p-2"
-            >
-            {{ t('pages.common.bookNow') }}
-            </NuxtLink>
-          </div>
-        </div>
-
-        <!-- Card 5 -->
-        <div
-          class="grid grid-cols-1 md:grid-cols-2 gap-6 border-b-2 border-b-gold px-4 mb-6 py-8 bg-white p-4"
-        >
-          <div>
-            <h3 class="text-black text-2xl font-normal leading-loose">
-              {{ t("fleetPages.vClass.cards.family.title") }}
-            </h3>
-            <p class="pr-6 text-lg italic">
-              {{ t("fleetPages.vClass.cards.family.description") }}
-            </p>
-            <h4 class="text-gray-800 text-xl font-semibold leading-loose mt-4">
-              {{ t("fleetPages.vClass.cards.family.featuresTitle") }}
-            </h4>
-            <ul class="text-lg leading-loose">
-              <li class="flex items-center space-x-2">
-                <div class="h-3 w-3 bg-gold rotate-45"></div>
-                <span>{{ t("fleetPages.vClass.cards.family.features[0]") }}</span>
-              </li>
-              <li class="flex items-center space-x-2">
-                <div class="h-3 w-3 bg-gold rotate-45"></div>
-                <span>
-                  {{ t("fleetPages.vClass.cards.family.features[1]") }}.
-                </span>
-              </li>
-              <li class="flex items-center space-x-2">
-                <div class="h-3 w-3 bg-gold rotate-45"></div>
-                <span>{{ t("fleetPages.vClass.cards.family.features[2]") }}</span>
-              </li>
-              
-            </ul>
-          </div>
-          <div class="overflow-hidden">
-            <img
-              src="/assets/images/vclassSide.webp"
-              alt="v-class for family vacations"
-              loading="lazy"
-              class="object-cover"
-            />
-          </div>
-          <div class="md:col-span-2 flex items-center justify-center mt-4">
-            <NuxtLink
-              to="/booking"
-              class="flex px-6 py-3 items-center justify-center border border-black text-black text-xl hover:bg-gold hover:text-black p-2"
-            >
-            {{ t('pages.common.bookNow') }}
-            </NuxtLink>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="flex flex-col w-full max-w-screen items-center justify-center py-22"
-    >
-      <h3
-        class="w-full text-black text-4xl font-semibold leading-loose text-center mb-10"
-      >
-        Our Gallery
+    <!-- Specifications Section -->
+    <CarsSpecifications :car="VClassDetailed" />
+    <!-- Gallery Section -->
+    <div class="flex flex-col w-full items-center justify-center py-16 bg-gray-50">
+      <h3 class="w-full text-black text-4xl font-semibold leading-loose text-center mb-10">
+        {{ t('fleetPages.vClass.galleryTitle') || 'Our Gallery' }}
       </h3>
       <CarsGallerySlider />
     </div>
@@ -311,16 +54,15 @@
 
 <script setup>
 import hero from "~/assets/images/v-classshero.webp";
-const { t } = useI18n();
-
+import businessTripImg from "~/assets/images/covers/business-trip.webp";
+import assistImg from "~/assets/images/covers/assist.webp";
+import weddingImg from "~/assets/images/covers/wedding.webp";
+import aboutUsImg from "~/assets/images/covers/about-us.webp";
+import { useI18n } from '#imports';
 import { useSeo } from '~/utils/useSeo'
-useSeo('vClass')
 
-const galleryImages = [
-  { src: hero, alt: "Mercedes-Benz V-Class Front View" },
-  { src: hero, alt: "Mercedes-Benz V-Class Interior" },
-  { src: hero, alt: "Mercedes-Benz V-Class Rear View" },
-];
+const { t } = useI18n();
+useSeo('vClass')
 
 const VClass = {
   passengers: 7,
@@ -329,4 +71,132 @@ const VClass = {
   hourlyRate: 75,
   minHours: 4,
 };
+
+const VClassDetailed = {
+  ...VClass,
+  dimensions: {
+    length: "5370mm",
+    width: "1928mm", 
+    height: "1880mm",
+    wheelbase: "3430mm"
+  },
+  performance: {
+    engine: "2.0L CDI Turbo",
+    power: "190hp",
+    acceleration: "10.9s",
+    topSpeed: "200km/h",
+    fuelType: "Diesel",
+    transmission: "7G-TRONIC"
+  },
+  features: [
+    { name: "Flexible 7-Seater Layout", icon: "bx bxs-user-detail", description: "Configurable seating with tables" },
+    { name: "Captain's Chairs", icon: "bx bxs-car-mechanic", description: "Individual luxury seats with armrests" },
+    { name: "Rear Entertainment Package", icon: "bx bx-tv", description: "Overhead screens and tablet holders" },
+    { name: "Electric Panoramic Sunroof", icon: "bx bx-brightness", description: "Large glass roof with electric blind" },
+    { name: "Harman Kardon Audio", icon: "bx bx-volume-full", description: "Premium 15-speaker sound system" },
+    { name: "Multiple USB-C Ports", icon: "bx bx-usb", description: "USB charging throughout the cabin" },
+    { name: "All-Round Privacy Glass", icon: "bx bx-glasses", description: "Comprehensive window tinting" },
+    { name: "Group Travel Specialist", icon: "bx bx-group", description: "Experienced in group transportation" },
+    { name: "Easy-PACK Tailgate", icon: "bx bx-door-open", description: "Electric tailgate with kick sensor" },
+    { name: "MBUX Tablet", icon: "bx bx-tablet", description: "10.25-inch touchscreen control center" },
+    { name: "Individual Climate Zones", icon: "bx bx-wind", description: "Separate climate control for each row" },
+    { name: "Comfort Suspension", icon: "bx bx-road", description: "AGILITY CONTROL with selective damping" }
+  ],
+  safety: [
+    "Crosswind Assist Stabilization",
+    "Attention Assist Fatigue Detection", 
+    "Adaptive Highbeam Assist Plus",
+    "Active Lane Keeping Assist",
+    "Load Adaptive ESP with Hill Start",
+    "Active Brake Assist with Pedestrian",
+    "Blind Spot Assist",
+    "360° Parking Camera",
+    "PARKTRONIC with Visual Display"
+  ]
+}
+
+const whyChooseFeatures = [
+  {
+    icon: 'bx bx-group',
+    title: t('whyChoose.capacity.title'),
+    description: t('whyChoose.capacity.description')
+  },
+  {
+    icon: 'bx bx-layout',
+    title: t('whyChoose.versatility.title'),
+    description: t('whyChoose.versatility.description')
+  },
+  {
+    icon: 'bx bxs-car',
+    title: t('whyChoose.comfort.title'),
+    description: t('whyChoose.comfort.description')
+  },
+  {
+    icon: 'bx bx-wifi',
+    title: t('whyChoose.connectivity.title'),
+    description: t('whyChoose.connectivity.description')
+  },
+  {
+    icon: 'bx bx-shield-check',
+    title: t('whyChoose.safety.title'),
+    description: t('whyChoose.safety.description')
+  },
+  {
+    icon: 'bx bx-user-check',
+    title: t('whyChoose.service.title'),
+    description: t('whyChoose.service.description')
+  }
+]
+
+const occasionScenarios = [
+  {
+    title: t('occasions.family.title'),
+    description: t('occasions.family.description'),
+    image: businessTripImg,
+    icon: 'bx bx-home-heart',
+    keyPoints: [
+      t('occasions.family.points.0'),
+      t('occasions.family.points.1'),
+      t('occasions.family.points.2'),
+      t('occasions.family.points.3')
+    ]
+  },
+  {
+    title: t('occasions.group.title'),
+    description: t('occasions.group.description'),
+    image: assistImg,
+    icon: 'bx bx-group',
+    keyPoints: [
+      t('occasions.group.points.0'),
+      t('occasions.group.points.1'),
+      t('occasions.group.points.2'),
+      t('occasions.group.points.3')
+    ]
+  },
+  {
+    title: t('occasions.wedding.title'),
+    description: t('occasions.wedding.description'),
+    image: weddingImg,
+    icon: 'bx bx-heart',
+    keyPoints: [
+      t('occasions.wedding.points.0'),
+      t('occasions.wedding.points.1'),
+      t('occasions.wedding.points.2'),
+      t('occasions.wedding.points.3')
+    ]
+  },
+  {
+    title: t('occasions.corporate.title'),
+    description: t('occasions.corporate.description'),
+    image: aboutUsImg,
+    icon: 'bx bx-briefcase',
+    keyPoints: [
+      t('occasions.corporate.points.0'),
+      t('occasions.corporate.points.1'),
+      t('occasions.corporate.points.2'),
+      t('occasions.corporate.points.3')
+    ]
+  }
+]
+
 </script>
