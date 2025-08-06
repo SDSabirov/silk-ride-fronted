@@ -6,6 +6,9 @@
     "home": "Home",
     "fleet": "Our Fleet",
     "services": "Services",
+    "popularRoutes": "Popular Routes",
+    "airports": "Airports",
+    "destinations": "UK Destinations",
     "ourCompany": "Our Company",
     "about": "About Us",
     "partners": "Partners",
@@ -907,6 +910,51 @@
       "description": "Premium airport transfer service to/from Heathrow, Gatwick, Stansted & Luton airports. Flight tracking, meet & greet, 60 minutes free waiting. Luxury Mercedes chauffeur service.",
       "keywords": "airport transfers London, Heathrow chauffeur service, Gatwick airport transfer, Stansted transfers, Luton airport chauffeur, meet and greet service London"
     },
+    "heathrowChauffeur": {
+      "title": "Heathrow Airport Chauffeur Service London | Luxury Airport Transfers | Silk Ride",
+      "description": "Premium Heathrow Airport chauffeur service with luxury Mercedes fleet. Professional meet & greet, flight tracking, 60min free waiting. Book your Heathrow transfer today with Silk Ride.",
+      "keywords": "Heathrow chauffeur service, Heathrow airport transfer, luxury car hire Heathrow, meet and greet Heathrow, chauffeur service London, airport transfer London, Heathrow T2 T3 T4 T5 transfer"
+    },
+    "gatwickChauffeur": {
+      "title": "Gatwick Airport Chauffeur Service London | North & South Terminal Transfers | Silk Ride",
+      "description": "Premium Gatwick Airport chauffeur service covering North & South terminals. Luxury Mercedes fleet, professional meet & greet, flight tracking. Book your Gatwick transfer with Silk Ride.",
+      "keywords": "Gatwick chauffeur service, Gatwick airport transfer, Gatwick North Terminal, Gatwick South Terminal, luxury car hire Gatwick, meet and greet Gatwick, chauffeur service London"
+    },
+    "stanstedChauffeur": {
+      "title": "Stansted Airport Chauffeur Service London | Professional Airport Transfers | Silk Ride",
+      "description": "Professional Stansted Airport chauffeur service with luxury Mercedes fleet. Reliable transfers, flight monitoring, meet & greet service. Book your Stansted transfer with Silk Ride.",
+      "keywords": "Stansted chauffeur service, Stansted airport transfer, Stansted airport taxi, luxury car hire Stansted, meet and greet Stansted, Ryanair transfer Stansted, chauffeur service London"
+    },
+    "lutonChauffeur": {
+      "title": "Luton Airport Chauffeur Service London | Premium Airport Transfers | Silk Ride",
+      "description": "Premium Luton Airport chauffeur service with luxury Mercedes fleet and shuttle coordination. Professional meet & greet, flight tracking. Book your Luton transfer with Silk Ride.",
+      "keywords": "Luton chauffeur service, Luton airport transfer, Luton airport taxi, luxury car hire Luton, meet and greet Luton, easyJet transfer Luton, shuttle service Luton, chauffeur service London"
+    },
+    "oxfordChauffeur": {
+      "title": "Oxford Chauffeur Service & Tours from London | University City Visits | Silk Ride",
+      "description": "Luxury Oxford chauffeur service and private tours from London. Visit Oxford University, Christ Church, Bodleian Library. Professional drivers, premium Mercedes vehicles.",
+      "keywords": "Oxford chauffeur service, Oxford tours from London, Oxford University visits, Christ Church tours, Bodleian Library, Bicester Village, luxury car hire Oxford, private tours Oxford"
+    },
+    "cambridgeChauffeur": {
+      "title": "Cambridge Chauffeur Service & University Tours from London | Historic City Visits | Silk Ride",
+      "description": "Luxury Cambridge chauffeur service and private tours from London. Visit Cambridge University, King's College Chapel, River Cam punting. Professional drivers, premium Mercedes vehicles.",
+      "keywords": "Cambridge chauffeur service, Cambridge tours from London, Cambridge University visits, King's College tours, River Cam punting, luxury car hire Cambridge, private tours Cambridge"
+    },
+    "bathChauffeur": {
+      "title": "Bath Chauffeur Service & Historic City Tours from London | Roman Baths & Georgian Architecture | Silk Ride",
+      "description": "Luxury Bath chauffeur service and private tours from London. Visit Roman Baths, Bath Abbey, Georgian architecture. UNESCO World Heritage Site tours with professional drivers.",
+      "keywords": "Bath chauffeur service, Bath tours from London, Roman Baths visits, Bath Abbey tours, Georgian architecture, UNESCO World Heritage Site, luxury car hire Bath, private tours Bath"
+    },
+    "cotswoldsChauffeur": {
+      "title": "Cotswolds Chauffeur Service & Village Tours from London | Countryside & Historic Villages | Silk Ride",
+      "description": "Luxury Cotswolds chauffeur service and private countryside tours from London. Visit Chipping Campden, Bourton-on-the-Water, Stow-on-the-Wold. Professional drivers, premium vehicles.",
+      "keywords": "Cotswolds chauffeur service, Cotswolds tours from London, Chipping Campden visits, Bourton-on-the-Water tours, Stow-on-the-Wold, countryside tours, luxury car hire Cotswolds"
+    },
+    "stonehengeChauffeur": {
+      "title": "Stonehenge Chauffeur Service & Historic Tours from London | Prehistoric Monument Visits | Silk Ride",
+      "description": "Luxury Stonehenge chauffeur service and private tours from London. Visit the prehistoric monument, Salisbury Cathedral, Avebury Stone Circle. UNESCO World Heritage Site tours.",
+      "keywords": "Stonehenge chauffeur service, Stonehenge tours from London, prehistoric monument visits, Salisbury Cathedral tours, Avebury Stone Circle, UNESCO World Heritage Site, luxury car hire Stonehenge"
+    },
     "corporateTravel": {
       "title": "Corporate Chauffeur Service London | Executive Business Travel & Transport",
       "description": "Professional corporate chauffeur service for executives and business travel in London. Luxury Mercedes fleet, Wi-Fi, discretion guaranteed. Meeting transfers and corporate events.",
@@ -1037,6 +1085,12 @@
   },
   "bookingForm": {
     "heading": "Book Your Luxury Journey",
+    "hero": {
+      "alt": "Professional woman passenger in luxury chauffeur service",
+      "start": "Start Your",
+      "highlight": "Luxury Journey",
+      "subtitle": "Experience premium chauffeur service with instant booking and professional drivers"
+    },
     "steps": {
       "details": "Trip Details",
       "vehicle": "Choose Vehicle",

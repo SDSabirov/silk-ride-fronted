@@ -126,6 +126,60 @@
           </div>
         </div>
 
+        <!-- Popular Routes Dropdown -->
+        <div class="relative w-full lg:w-auto border-b border-gray-700/30 lg:border-none">
+          <button
+            @click="toggleRoutesDropdown"
+            class="w-full lg:w-auto py-3 lg:py-0 text-left text-white hover:text-gold focus:outline-none flex items-center justify-between transition-colors duration-200"
+            aria-haspopup="true"
+            :aria-expanded="showRoutesDropdown"
+          >
+            <span class="flex items-center">
+              <i class="bx bx-map mr-3 text-gold lg:hidden"></i>
+              {{$t('navbar.popularRoutes')}}
+            </span>
+            <i :class="['bx transition-transform duration-200', showRoutesDropdown ? 'bx-chevron-up' : 'bx-chevron-down']"></i>
+          </button>
+          <div
+            v-show="showRoutesDropdown"
+            class="w-full lg:absolute left-0 lg:mt-2 lg:w-[320px] bg-gray-800/90 lg:bg-black/95 backdrop-blur text-white lg:rounded-lg lg:shadow-xl overflow-hidden transition-all duration-300"
+          >
+            <!-- Airport Routes -->
+            <div class="px-4 py-2 bg-gold/10 border-b border-gold/20">
+              <span class="text-gold text-sm font-semibold uppercase tracking-wider">{{$t('navbar.airports')}}</span>
+            </div>
+            <NuxtLink
+              v-for="airport in airportRoutes"
+              :key="airport.path"
+              :to="airport.path"
+              class="block px-6 lg:px-4 py-3 lg:py-2 text-base lg:text-lg hover:bg-gold/20 border-l-2 border-transparent hover:border-gold lg:border-none transition-all duration-200"
+              @click="closeRoutesDropdown"
+            >
+              <span class="flex items-center">
+                <i v-if="airport.icon" :class="airport.icon + ' mr-3 text-gold lg:hidden'"></i>
+                {{ airport.label }}
+              </span>
+            </NuxtLink>
+            
+            <!-- Popular Destinations -->
+            <div class="px-4 py-2 bg-gold/10 border-b border-gold/20 border-t">
+              <span class="text-gold text-sm font-semibold uppercase tracking-wider">{{$t('navbar.destinations')}}</span>
+            </div>
+            <NuxtLink
+              v-for="destination in popularDestinations"
+              :key="destination.path"
+              :to="destination.path"
+              class="block px-6 lg:px-4 py-3 lg:py-2 text-base lg:text-lg hover:bg-gold/20 border-l-2 border-transparent hover:border-gold lg:border-none transition-all duration-200"
+              @click="closeRoutesDropdown"
+            >
+              <span class="flex items-center">
+                <i v-if="destination.icon" :class="destination.icon + ' mr-3 text-gold lg:hidden'"></i>
+                {{ destination.label }}
+              </span>
+            </NuxtLink>
+          </div>
+        </div>
+
         <!-- Our Company Dropdown -->
         <div class="relative w-full lg:w-auto border-b border-gray-700/30 lg:border-none">
           <button
@@ -209,6 +263,7 @@ const menuOpen = ref(false);
 const isScrolled = ref(false);
 const showDropdown = ref(false);
 const showServicesDropdown = ref(false);
+const showRoutesDropdown = ref(false);
 const currentLanguage = ref('en');
 
 // Router for dynamic link highlighting
@@ -243,6 +298,23 @@ const dropdownItems = [
   { path: localePath('/#why-choose-us'), label: t('navbar.whyChooseUs'), icon: 'bx bx-star' },
   { path: localePath('/contact-us'), label: t('navbar.contact'), icon: 'bx bx-phone' }
 ]
+
+// Airport routes for Popular Routes dropdown
+const airportRoutes = [
+  { path: localePath('/airport-transfers/heathrow'), label: 'Heathrow Airport', icon: 'bx bx-plane-takeoff' },
+  { path: localePath('/airport-transfers/gatwick'), label: 'Gatwick Airport', icon: 'bx bx-plane-takeoff' },
+  { path: localePath('/airport-transfers/stansted'), label: 'Stansted Airport', icon: 'bx bx-plane-takeoff' },
+  { path: localePath('/airport-transfers/luton'), label: 'Luton Airport', icon: 'bx bx-plane-takeoff' }
+]
+
+// Popular UK destinations
+const popularDestinations = [
+  { path: localePath('/destination-tours/oxford'), label: 'Oxford', icon: 'bx bx-map' },
+  { path: localePath('/destination-tours/cambridge'), label: 'Cambridge', icon: 'bx bx-map' },
+  { path: localePath('/destination-tours/bath'), label: 'Bath', icon: 'bx bx-map' },
+  { path: localePath('/destination-tours/cotswolds'), label: 'Cotswolds', icon: 'bx bx-map' },
+  { path: localePath('/destination-tours/stonehenge'), label: 'Stonehenge', icon: 'bx bx-map' }
+]
 // Utility functions
 const toggleMenu = () => {
   menuOpen.value = !menuOpen.value;
@@ -260,6 +332,7 @@ const closeMenu = () => {
   menuOpen.value = false;
   showDropdown.value = false;
   showServicesDropdown.value = false;
+  showRoutesDropdown.value = false;
   // Restore body scroll
   if (process.client) {
     document.body.style.overflow = '';
@@ -269,11 +342,19 @@ const closeMenu = () => {
 const toggleDropdown = () => {
   showDropdown.value = !showDropdown.value;
   showServicesDropdown.value = false; // Close services dropdown when opening company dropdown
+  showRoutesDropdown.value = false; // Close routes dropdown
 };
 
 const toggleServicesDropdown = () => {
   showServicesDropdown.value = !showServicesDropdown.value;
   showDropdown.value = false; // Close company dropdown when opening services dropdown
+  showRoutesDropdown.value = false; // Close routes dropdown
+};
+
+const toggleRoutesDropdown = () => {
+  showRoutesDropdown.value = !showRoutesDropdown.value;
+  showDropdown.value = false; // Close company dropdown
+  showServicesDropdown.value = false; // Close services dropdown
 };
 
 const closeDropdown = () => {
@@ -282,6 +363,10 @@ const closeDropdown = () => {
 
 const closeServicesDropdown = () => {
   showServicesDropdown.value = false;
+};
+
+const closeRoutesDropdown = () => {
+  showRoutesDropdown.value = false;
 };
 const navLinkClass = (isActive) =>
   isActive

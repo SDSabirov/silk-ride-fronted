@@ -3,7 +3,7 @@
     <!-- Background with improved gradient overlay -->
     <div class="absolute inset-0 overflow-hidden">
       <img
-        src="/assets/images/vclassjett.webp"
+        src="~/assets/images/vclassjett.webp"
         alt="Luxury Mercedes Chauffeur Service in London"
         class="w-full h-full object-cover"
         loading="eager"

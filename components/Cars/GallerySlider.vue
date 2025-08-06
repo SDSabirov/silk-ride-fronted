@@ -20,7 +20,7 @@
         <img src="/assets/images/eclass1.webp" class="w-screen-lg"/>
       </swiper-slide>
       <swiper-slide class="max-w-screen-md ">
-        <img src="/assets/images/vclassjett.webp" class="w-screen-lg"/>
+        <img src="~/assets/images/vclassjett.webp" class="w-screen-lg"/>
       </swiper-slide>
       <swiper-slide class="max-w-screen-md ">
         <img src="/assets/images/sclassBackground.webp" class="w-screen-lg"/>

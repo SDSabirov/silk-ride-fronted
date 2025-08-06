@@ -23,7 +23,7 @@
         <!-- Airport Transfers -->
         <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group">
           <div class="h-48 relative overflow-hidden">
-            <img src="/assets/images/vclassjett.webp" alt="Airport Transfer Service" 
+            <img src="~/assets/images/vclassjett.webp" alt="Airport Transfer Service" 
                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                  loading="lazy">
             <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent transition-opacity duration-300 group-hover:from-black/80"></div>
@@ -174,7 +174,7 @@
           <!-- V-Class -->
           <div class="text-center group">
             <div class="relative overflow-hidden rounded-lg mb-4">
-              <img src="/assets/images/vclassjett.webp" alt="Mercedes V-Class" 
+              <img src="~/assets/images/vclassjett.webp" alt="Mercedes V-Class" 
                    class="w-full h-40 object-cover transition-transform duration-300 group-hover:scale-105">
               <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300"></div>
             </div>

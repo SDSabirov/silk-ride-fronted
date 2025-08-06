@@ -29,7 +29,6 @@ export default defineNuxtConfig({
     ]
     , 
   },
-  plugins: ['~/plugins/facebook-pixel.client.js'],
   postcss: {
     plugins: {
       tailwindcss: {},
@@ -99,16 +98,6 @@ export default defineNuxtConfig({
     preconnect: true,      // ✅ Adds <link rel="preconnect"> to Google fonts
     inject: true 
   },
-  app: {
-    head: {
-      noscript: [
-        {
-          children:
-            '<img height="1" width="1" style="display:none" ' +
-            'src="https://www.facebook.com/tr?id=1036069138475539&ev=PageView&noscript=1" />'
-        }
-      ]
-    }
-  },
+ 
  
 });
