@@ -1,151 +1,56 @@
-# Silk Ride - Premium Chauffeur Service Website
+# Luxury Airport Transfers & Executive Car Hire | Silk Ride Chauffeur Services
 
-## Overview
-Silk Ride is a luxury chauffeur service company based in London, providing premium airport transfers, corporate travel, and destination tours across the UK. This is the main marketing website built with Nuxt 3, Vue.js, and Tailwind CSS.
+Premium chauffeur service in London offering luxury airport transfers to Heathrow, Gatwick, Stansted & Luton. Executive Mercedes car hire for business travel, weddings & events. Book now for professional drivers & 24/7 service.
 
-## Technology Stack
-- **Framework**: Nuxt 3 (Vue.js 3)
-- **Styling**: Tailwind CSS
-- **Internationalization**: Vue i18n (English/Russian)
-- **SEO**: Nuxt SEO utilities with structured data
-- **Icons**: BoxIcons (bx- classes)
-- **Deployment**: Static site generation
+## Services Overview
 
-## Key Services
-1. **Airport Transfers**: Heathrow, Gatwick, Stansted, Luton
-2. **Destination Tours**: Oxford, Cambridge, Bath, Cotswolds, Stonehenge
-3. **Corporate Travel**: Executive transport and business meetings
-4. **Fleet**: Mercedes S-Class, E-Class, V-Class vehicles
+- [SILK RIDE](https://silkride.co.uk/): The main portal for Silk Ride's luxury chauffeur services.
+- [All Services](https://silkride.co.uk/services): A comprehensive list of all services offered by Silk Ride, including airport transfers and corporate travel.
+- [Airport Transfers](https://silkride.co.uk/services/airport-transfers): Detailed information on luxury airport transfer services to major airports.
+- [Corporate Travel](https://silkride.co.uk/services/corporate-travel): Tailored chauffeur services for business professionals and corporate events.
+- [Wedding Chauffeur](https://silkride.co.uk/services/wedding-chauffeur): Specialized chauffeur services for weddings, ensuring a luxurious experience.
+- [Hourly Chauffeur](https://silkride.co.uk/services/hourly-chauffeur): Flexible hourly chauffeur services for various needs.
+- [Event Transport](https://silkride.co.uk/services/event-chauffeur): Transportation solutions for events, ensuring timely and stylish arrivals.
 
-## Site Structure
+## Airport Information
 
-### Main Pages
-- `/` - Homepage with hero, services, fleet overview
-- `/fleet` - Vehicle fleet (S-Class, E-Class, V-Class details)
-- `/services` - Service categories and offerings
-- `/about` - Company information and licensing details
-- `/contact-us` - Contact form and company details
-- `/booking` - Online booking system (3rd party EasyTaxi widget)
-- `/faq` - Frequently asked questions (18 comprehensive Q&As)
+- [Heathrow Airport](https://silkride.co.uk/airport-transfers/heathrow): Specific services and details related to transfers from Heathrow.
+- [Gatwick Airport](https://silkride.co.uk/airport-transfers/gatwick): Information on luxury transfers to and from Gatwick.
+- [Stansted Airport](https://silkride.co.uk/airport-transfers/stansted): Services available for Stansted airport transfers.
+- [Luton Airport](https://silkride.co.uk/airport-transfers/luton): Details on chauffeur services for Luton airport.
 
-### Airport Transfer Pages
-- `/airport-transfers/heathrow` - Heathrow Airport chauffeur service
-- `/airport-transfers/gatwick` - Gatwick Airport transfers (North/South terminals)
-- `/airport-transfers/stansted` - Stansted Airport service
-- `/airport-transfers/luton` - Luton Airport transfers with shuttle coordination
+## Travel Destinations
 
-### Destination Tour Pages
-- `/destination-tours/oxford` - Oxford University city tours
-- `/destination-tours/cambridge` - Cambridge University and River Cam
-- `/destination-tours/bath` - Roman Baths and Georgian architecture
-- `/destination-tours/cotswolds` - Countryside villages tour
-- `/destination-tours/stonehenge` - Prehistoric monument visits
+- [UK & Europe Travel](https://silkride.co.uk/services/uk-europe-travel): Information on travel services available across the UK and Europe.
+- [Oxford](https://silkride.co.uk/destination-tours/oxford): Chauffeur services available for travel to and from Oxford.
+- [Cambridge](https://silkride.co.uk/destination-tours/cambridge): Details on services for Cambridge travel.
+- [Bath](https://silkride.co.uk/destination-tours/bath): Information on chauffeur services for Bath.
+- [Cotswolds](https://silkride.co.uk/destination-tours/cotswolds): Luxury transport options for the Cotswolds region.
+- [Stonehenge](https://silkride.co.uk/destination-tours/stonehenge): Chauffeur services for visits to Stonehenge.
 
-## Key Components
+## Company Information
 
-### Navigation (`components/Navbar.vue`)
-- Responsive navbar with dropdown menus
-- Popular Routes dropdown (airports + destinations)
-- Services dropdown
-- Our Company dropdown
-- Mobile-friendly hamburger menu
+- [About Us](https://silkride.co.uk/about): Background information about Silk Ride and its mission.
+- [Partners](https://silkride.co.uk/partners): Information on partnerships and collaborations.
+- [Why Choose Us](https://silkride.co.uk/#why-choose-us): Reasons to select Silk Ride for chauffeur services.
+- [Contact Us](https://silkride.co.uk/contact-us): Contact information for inquiries and bookings.
 
-### Fleet Components
-- `components/FleetSection.vue` - Homepage fleet overview
-- Individual vehicle pages with detailed specifications
+## Booking and Support
 
-### Booking System
-- `components/EasyTaxiWidget/Booking.vue` - 3rd party booking integration
-- Custom styling applied to iframe widget
+- [Book Now](https://silkride.co.uk/booking): Direct link to book chauffeur services.
+- [Login](https://silkride.co.uk/customer): Access for existing customers to manage bookings.
+- [FAQ](https://silkride.co.uk/faq): Frequently asked questions regarding services and policies.
+- [Terms of Service](https://silkride.co.uk/terms-of-service): Legal terms governing the use of Silk Ride services.
+- [Privacy Policy](https://silkride.co.uk/privacy-policy): Information on data protection and privacy practices.
 
-### SEO Components
-- `utils/useSeo.ts` - Centralized SEO management utility
-- Structured data implementation with `useSchemaOrg`
-- Comprehensive meta tags and Open Graph data
+## Additional Resources
 
-## Internationalization
-Supported languages: English (en), Russian (ru)
+- [Blog](https://silkride.co.uk/blog): Articles and updates related to luxury travel and chauffeur services.
+- [View All Google Reviews](https://maps.app.goo.gl/jKFx8rtmUACaqVcF7): Customer reviews and testimonials about Silk Ride services.
+- [info@silkride.co.uk](mailto:info@silkride.co.uk): Email contact for inquiries and support.
+- [+44 7512 905514](tel:+447512905514): Phone number for direct contact.
 
-### Key Translation Sections
-- `navbar.*` - Navigation menu items
-- `hero.*` - Homepage hero section
-- `services.*` - Service descriptions
-- `seo.*` - SEO meta data (titles, descriptions, keywords)
-- `faq.*` - FAQ questions and answers
-- `footer.*` - Footer links and information
+## Additional Information
 
-## SEO Optimization
-
-### Meta Tags Structure
-All pages use `useSeo('pageKey')` utility that pulls from:
-- `i18n/locales/en.json` -> `seo.{pageKey}.title`
-- `i18n/locales/en.json` -> `seo.{pageKey}.description`  
-- `i18n/locales/en.json` -> `seo.{pageKey}.keywords`
-
-### Structured Data
-- Local Business schema for each service area
-- Geographic coordinates for service locations
-- Service area definitions
-- Contact information and pricing ranges
-
-## Contact Information
-- **Phone**: +44 7512 905514
-- **Email**: info@silkride.co.uk
-- **License**: Hertsmere Borough Council Private Hire Operator
-- **Areas Served**: London, UK airports, popular UK destinations
-
-## Design System
-
-### Colors
-- **Primary Gold**: `text-gold`, `bg-gold` (custom Tailwind color)
-- **Black/Gray**: Various gray scales for text and backgrounds
-- **White**: Clean backgrounds and contrast text
-
-### Typography
-- **Headings**: `font-heading` class (custom font family)
-- **Body**: Default system fonts with various weights
-- **Responsive**: Progressive sizing (text-sm to text-6xl)
-
-### Layout Patterns
-- **Hero Sections**: Full-screen backgrounds with overlay gradients
-- **Service Cards**: White cards with shadows and hover effects
-- **CTAs**: Gold buttons with hover animations
-- **Grid Layouts**: Responsive grids for content organization
-
-## Booking Integration
-- 3rd party EasyTaxi widget embedded in iframe
-- Custom styling container around widget
-- Professional header and help sections
-- Mobile-responsive integration
-
-## Content Strategy
-
-### Airport Pages Content
-- Terminal information and coverage
-- Airline partnerships and routes  
-- Journey times from various London areas
-- Meet & greet service details
-- Flight tracking and waiting times
-
-### Destination Pages Content
-- Historical and cultural information
-- Major attractions and activities
-- Journey times and route information
-- Tour packages and pricing
-- Professional photography and descriptions
-
-## Performance Optimizations
-- Static site generation with Nuxt
-- Optimized images with WebP format
-- Lazy loading for non-critical content
-- Minimal JavaScript for interactive elements
-- Efficient CSS with Tailwind purging
-
-## Development Notes
-- Mobile-first responsive design approach
-- Accessibility considerations with proper ARIA labels
-- SEO-first architecture with clean URL structure
-- Component-based architecture for maintainability
-- Comprehensive error handling for forms and widgets
-
-This website serves as the primary marketing and booking platform for Silk Ride's luxury chauffeur services, focusing on conversions through professional presentation, comprehensive service information, and streamlined booking processes.
+- [Chauffeur Services for Every Occasion - Silk Ride](https://silkride.co.uk/en/services): Overview of various chauffeur services tailored for different events.
+- [Event Chauffeur Service London - Silk Ride](http://silkride.co.uk/services/event-chauffeur): Specific details on chauffeur services for events in London.
