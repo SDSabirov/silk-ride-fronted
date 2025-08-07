@@ -12,6 +12,7 @@
       <NuxtPage />
       <FormsContactDrawer/>
       <BackToTop />
+      <ConsentBanner />
     </NuxtLayout>
   </div>
 </template>
