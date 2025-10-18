@@ -26,6 +26,7 @@
             <div class="text-center">
               <NuxtLink
                 :to="localePath(service.path)"
+                :aria-label="`Learn More About ${service.title}`"
                 class="inline-block px-6 py-2 bg-gold text-black font-semibold rounded hover:bg-yellow-500 transition"
               >
                 Learn More
@@ -143,6 +144,12 @@ const servicesSchema = {
     "name": "Silk Ride Chauffeur Services",
     "url": "https://silkride.co.uk",
     "telephone": "+44 7512 905514",
+    "image": [
+      "https://silkride.co.uk/logo.svg",
+      "https://silkride.co.uk/vclassSide.webp",
+      "https://silkride.co.uk/sclassSide.webp",
+      "https://silkride.co.uk/eclassSide.webp"
+    ],
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "London",

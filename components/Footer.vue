@@ -32,11 +32,6 @@
                 {{ $t('footer.quickLinks.services') }}
               </NuxtLink>
             </li>
-            <li>
-              <NuxtLink :to="localePath('/blog')" class="text-gray-400 hover:text-white">
-                {{ $t('footer.quickLinks.blog') }}
-              </NuxtLink>
-            </li>
           </ul>
         </div>
 

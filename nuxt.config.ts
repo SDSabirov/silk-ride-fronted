@@ -81,7 +81,19 @@ export default defineNuxtConfig({
   sitemap: {
     enabled: true,
     strictNuxtContentPaths: true,
-    xsl: false
+    xsl: false,
+    autoI18n: true,
+    defaultLocale: 'en',
+    urls: async () => {
+      // Add any dynamic routes here if needed
+      return []
+    },
+    exclude: [
+      '/__sitemap__/**',
+      '/booking/cancel',
+      '/booking/success',
+      '/blog/**'
+    ]
   },
   seo: {
     baseUrl: 'https://silkride.co.uk',

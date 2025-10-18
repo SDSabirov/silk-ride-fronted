@@ -31,6 +31,7 @@
         <div class="mt-auto space-y-3">
           <NuxtLink
             :to="localePath(serviceDetailPath)"
+            :aria-label="learnMoreLabel"
             class="py-2 px-4 text-gold text-md border border-gold hover:bg-gold hover:text-black transition flex justify-center"
           >
             Learn More
@@ -85,6 +86,18 @@
       'event': '/services/event-chauffeur'
     }
     return pathMap[props.card] || '/services'
+  })
+
+  const learnMoreLabel = computed(() => {
+    const labelMap = {
+      'airport': 'Learn More About Airport Transfers',
+      'corporate': 'Learn More About Corporate Travel',
+      'hourly': 'Learn More About Hourly Chauffeur Service',
+      'longDistance': 'Learn More About UK & Europe Travel',
+      'wedding': 'Learn More About Wedding Chauffeur Service',
+      'event': 'Learn More About Event Chauffeur Service'
+    }
+    return labelMap[props.card] || 'Learn More About Our Services'
   })
   </script>
   

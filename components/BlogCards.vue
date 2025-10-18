@@ -25,7 +25,7 @@
         <!-- Read More Button (appears on hover) -->
         <div class="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
           <NuxtLink
-            :to="`/blog/${post.slug}`"
+            :to="localePath('/')"
             class="bg-white text-black px-4 py-2 rounded-full text-sm font-semibold hover:bg-gold transition-colors duration-200 shadow-lg"
           >
             Read More
@@ -49,7 +49,7 @@
         
         <!-- Title -->
         <h3 class="text-xl font-bold text-gray-900 mb-3 line-clamp-2 group-hover:text-gold transition-colors duration-200">
-          <NuxtLink :to="`/blog/${post.slug}`">
+          <NuxtLink :to="localePath('/')">
             {{ post.title }}
           </NuxtLink>
         </h3>
@@ -79,8 +79,8 @@
             <span class="text-sm text-gray-600">{{ post.author || 'Silk Ride Team' }}</span>
           </div>
           
-          <NuxtLink 
-            :to="`/blog/${post.slug}`"
+          <NuxtLink
+            :to="localePath('/')"
             class="text-gold hover:text-yellow-600 transition-colors duration-200 flex items-center space-x-1 text-sm font-semibold"
           >
             <span>Read Article</span>
@@ -93,6 +93,10 @@
 </template>
 
 <script setup>
+import { useLocalePath } from '#imports'
+
+const localePath = useLocalePath()
+
 const props = defineProps({
   posts: {
     type: Array,
@@ -101,10 +105,10 @@ const props = defineProps({
 })
 
 const formatDate = (dateString) => {
-  const options = { 
-    year: 'numeric', 
-    month: 'long', 
-    day: 'numeric' 
+  const options = {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
   }
   return new Date(dateString).toLocaleDateString('en-US', options)
 }

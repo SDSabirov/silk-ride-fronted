@@ -308,7 +308,13 @@ const eventChauffeurSchema = {
     "@type": "LocalBusiness",
     "name": "Silk Ride Chauffeur Services",
     "url": "https://silkride.co.uk",
-    "telephone": "+44 7512 905514"
+    "telephone": "+44 7512 905514",
+    "image": [
+      "https://silkride.co.uk/logo.svg",
+      "https://silkride.co.uk/vclassSide.webp",
+      "https://silkride.co.uk/sclassSide.webp",
+      "https://silkride.co.uk/eclassSide.webp"
+    ]
   },
   "serviceType": "Event Transportation",
   "areaServed": ["London", "United Kingdom"],

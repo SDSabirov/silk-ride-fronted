@@ -5,6 +5,12 @@ export const organizationSchema = {
   "legalName": "Silk Ride Ltd",
   "url": "https://silkride.co.uk",
   "logo": "https://silkride.co.uk/logo.svg",
+  "image": [
+    "https://silkride.co.uk/logo.svg",
+    "https://silkride.co.uk/vclassSide.webp",
+    "https://silkride.co.uk/sclassSide.webp",
+    "https://silkride.co.uk/eclassSide.webp"
+  ],
   "telephone": "+44 7512 905514",
   "email": "info@silkride.co.uk",
   "address": {

@@ -67,14 +67,14 @@
         Our friendly team is here to help with any additional questions about our luxury chauffeur services.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a 
-          href="/contact" 
+        <NuxtLink
+          :to="localePath('/contact-us')"
           class="inline-flex items-center justify-center px-6 py-3 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors duration-200 font-medium"
         >
           Contact Us
-        </a>
-        <a 
-          href="tel:+447512905514" 
+        </NuxtLink>
+        <a
+          href="tel:+447512905514"
           class="inline-flex items-center justify-center px-6 py-3 bg-gold text-black rounded-lg hover:bg-gold/90 transition-colors duration-200 font-medium"
         >
           Call Now
@@ -86,6 +86,9 @@
 
 <script setup>
 import { ref, nextTick } from "vue";
+import { useLocalePath } from '#imports'
+
+const localePath = useLocalePath()
 
 defineProps({
   items: {
