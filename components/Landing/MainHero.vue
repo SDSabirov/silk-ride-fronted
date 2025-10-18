@@ -15,25 +15,25 @@
     <div class="relative z-10 max-w-screen-xl mx-auto px-6 text-white">
       <div class="max-w-4xl">
         <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-          Premium <span class="text-gold">London Chauffeur</span> Service
+          {{ $t("landing.mainHero.title") }}
         </h1>
         <p class="text-xl md:text-2xl font-light mb-8 opacity-90 leading-relaxed">
           {{ $t("hero.subtitle") }}
         </p>
-        
+
         <!-- Key benefits -->
         <div class="flex flex-wrap gap-4 mb-8 text-sm md:text-base">
           <div class="flex items-center space-x-2 bg-black/30 px-3 py-2 rounded-full backdrop-blur">
             <i class="bx bx-check-circle text-gold"></i>
-            <span>24/7 Available</span>
+            <span>{{ $t("landing.mainHero.badges.available") }}</span>
           </div>
           <div class="flex items-center space-x-2 bg-black/30 px-3 py-2 rounded-full backdrop-blur">
             <i class="bx bx-check-circle text-gold"></i>
-            <span>Licensed & Insured</span>
+            <span>{{ $t("landing.mainHero.badges.licensed") }}</span>
           </div>
           <div class="flex items-center space-x-2 bg-black/30 px-3 py-2 rounded-full backdrop-blur">
             <i class="bx bx-check-circle text-gold"></i>
-            <span>Professional Drivers</span>
+            <span>{{ $t("landing.mainHero.badges.professional") }}</span>
           </div>
         </div>
         
@@ -57,19 +57,19 @@
         
         <!-- Quick contact option -->
         <div class="mt-8 flex items-center space-x-4 text-sm opacity-80">
-          <span>Instant Quote:</span>
+          <span>{{ $t("landing.mainHero.quickContact") }}</span>
           <a href="tel:+447512905514" class="text-gold hover:text-gold/80 transition-colors font-semibold">
-            +44 7512 905514
+            {{ $t("landing.mainHero.phoneNumber") }}
           </a>
         </div>
       </div>
     </div>
     
     <!-- Enhanced scroll indicator -->
-    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce cursor-pointer group" 
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce cursor-pointer group"
          @click="scrollToServices">
       <div class="flex flex-col items-center">
-        <span class="text-xs opacity-60 mb-2 group-hover:opacity-80 transition-opacity">Scroll to explore</span>
+        <span class="text-xs opacity-60 mb-2 group-hover:opacity-80 transition-opacity">{{ $t("landing.mainHero.scrollCta") }}</span>
         <div class="relative">
           <i class="bx bx-chevron-down text-3xl opacity-60 group-hover:opacity-80 transition-opacity"></i>
           <div class="absolute inset-0 rounded-full border border-white/20 animate-ping"></div>

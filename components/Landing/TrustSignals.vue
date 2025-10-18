@@ -4,22 +4,22 @@
       <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
         <div class="flex flex-col items-center">
           <div class="text-2xl md:text-3xl font-bold text-gold mb-1">50K+</div>
-          <div class="text-sm md:text-base opacity-80">Happy Customers</div>
+          <div class="text-sm md:text-base opacity-80">{{ $t('landing.trustSignals.customers') }}</div>
         </div>
         <div class="flex flex-col items-center">
           <div class="text-2xl md:text-3xl font-bold text-gold mb-1">10+</div>
-          <div class="text-sm md:text-base opacity-80">Years Experience</div>
+          <div class="text-sm md:text-base opacity-80">{{ $t('landing.trustSignals.experience') }}</div>
         </div>
         <div class="flex flex-col items-center">
           <div class="text-2xl md:text-3xl font-bold text-gold mb-1">20+</div>
-          <div class="text-sm md:text-base opacity-80">Premium vehicles</div>
+          <div class="text-sm md:text-base opacity-80">{{ $t('landing.trustSignals.vehicles') }}</div>
         </div>
         <div class="flex flex-col items-center">
           <div class="flex items-center text-2xl md:text-3xl font-bold text-gold mb-1">
             <i class="bx bx-shield-check mr-1"></i>
             <span>5★</span>
           </div>
-          <div class="text-sm md:text-base opacity-80">Average Rating</div>
+          <div class="text-sm md:text-base opacity-80">{{ $t('landing.trustSignals.rating') }}</div>
         </div>
       </div>
       
@@ -28,15 +28,15 @@
         <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8 text-center">
           <div class="flex items-center space-x-2">
             <img src="/assets/icons/certificate.svg" alt="Licensed Operator" class="w-6 h-6">
-            <span class="text-sm">Hertsmere Borough Council Licensed</span>
+            <span class="text-sm">{{ $t('landing.trustSignals.licensed') }}</span>
           </div>
           <div class="flex items-center space-x-2">
             <i class="bx bx-star text-gold"></i>
-            <span class="text-sm">5-Star Rated Service</span>
+            <span class="text-sm">{{ $t('landing.trustSignals.fiveStars') }}</span>
           </div>
           <div class="flex items-center space-x-2">
             <i class="bx bx-check-shield text-gold"></i>
-            <span class="text-sm">Background Checked Drivers</span>
+            <span class="text-sm">{{ $t('landing.trustSignals.backgroundCheck') }}</span>
           </div>
         </div>
       </div>

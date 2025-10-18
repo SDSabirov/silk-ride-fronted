@@ -15,7 +15,29 @@
     "whyChooseUs": "Why Choose Us",
     "contact": "Contact Us",
     "bookNow": "Book Now",
-    "registerLogin":"Login"
+    "registerLogin":"Login",
+    "servicesDropdown": {
+      "all": "All Services",
+      "airport": "Airport Transfers",
+      "corporate": "Corporate Travel",
+      "wedding": "Wedding Chauffeur",
+      "hourly": "Hourly Chauffeur",
+      "ukEurope": "UK & Europe Travel",
+      "event": "Event Transport"
+    },
+    "airportsDropdown": {
+      "heathrow": "Heathrow Airport",
+      "gatwick": "Gatwick Airport",
+      "stansted": "Stansted Airport",
+      "luton": "Luton Airport"
+    },
+    "destinationsDropdown": {
+      "oxford": "Oxford",
+      "cambridge": "Cambridge",
+      "bath": "Bath",
+      "cotswolds": "Cotswolds",
+      "stonehenge": "Stonehenge"
+    }
   },
   "footer": {
     "description": "Experience first-class travel across the UK & Europe with our premium chauffeur services. Whether for business, leisure, or special events, we ensure comfort, reliability, and elegance on every journey.",
@@ -62,6 +84,86 @@
     "cta": {
       "features": "Instant booking • Professional service • 24/7 support"
     }
+  },
+  "landing": {
+    "mainHero": {
+      "title": "Premium London Chauffeur Service",
+      "badges": {
+        "available": "24/7 Available",
+        "licensed": "Licensed & Insured",
+        "professional": "Professional Drivers"
+      },
+      "quickContact": "Instant Quote:",
+      "phoneNumber": "+44 7512 905514",
+      "scrollCta": "Scroll to explore"
+    },
+    "trustSignals": {
+      "customers": "Happy Customers",
+      "experience": "Years Experience",
+      "vehicles": "Premium vehicles",
+      "rating": "Average Rating",
+      "licensed": "Hertsmere Borough Council Licensed",
+      "fiveStars": "5-Star Rated Service",
+      "backgroundCheck": "Background Checked Drivers"
+    },
+    "fleet": {
+      "title": "Our Chauffeur Services",
+      "subtitle": "From airport transfers to special events, we provide luxury transportation tailored to your needs",
+      "airport": {
+        "title": "Airport Transfers",
+        "subtitle": "All London Airports",
+        "description": "Professional transfers to/from all London airports with meet & greet service, flight tracking, and 60 minutes free waiting time.",
+        "price": "From £120",
+        "route": "Heathrow to Central London"
+      },
+      "corporate": {
+        "title": "Corporate Travel",
+        "subtitle": "Executive & Business",
+        "description": "Executive chauffeur service for business meetings, conferences, and corporate events. Stay productive on the move with Wi-Fi and charging facilities.",
+        "price": "From £65/hr",
+        "minimum": "4 hour minimum"
+      },
+      "wedding": {
+        "title": "Wedding & Events",
+        "subtitle": "Special Occasions",
+        "description": "Elegant wedding chauffeur service and VIP event transportation. Make your special day unforgettable with luxury vehicles and professional service.",
+        "customQuote": "Custom Quote",
+        "packages": "Package rates available"
+      },
+      "fleetTitle": "Our Premium Mercedes Fleet",
+      "eclass": {
+        "title": "Mercedes E-Class",
+        "description": "Perfect for business & executive travel",
+        "capacity": "Up to 4 passengers",
+        "comfort": "Premium comfort"
+      },
+      "sclass": {
+        "title": "Mercedes S-Class",
+        "description": "Ultimate luxury for VIP clients",
+        "capacity": "Up to 3 passengers",
+        "luxury": "Luxury interior"
+      },
+      "vclass": {
+        "title": "Mercedes V-Class",
+        "description": "Spacious comfort for groups",
+        "capacity": "Up to 7 passengers",
+        "luggage": "Extra luggage space"
+      }
+    },
+    "testimonials": {
+      "title": "What Our Clients Say",
+      "subtitle": "Don't just take our word for it - hear from our satisfied customers",
+      "googleReviewCount": "19 Google Reviews",
+      "verified": "Verified Google Review",
+      "viewAllReviews": "View All Google Reviews"
+    }
+  },
+  "common": {
+    "fromPrice": "From £{price}/hour",
+    "learnMore": "Learn More",
+    "bookNow": "Book Now",
+    "viewDetails": "View Details →",
+    "getCustomQuote": "Get Custom Quote"
   },
   "servicesSection": {
     "title": "Our Most Requested Chauffeur Services",
