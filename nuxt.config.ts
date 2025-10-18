@@ -4,6 +4,11 @@ import { resolve } from "path";
 export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
+  runtimeConfig: {
+    public: {
+      siteUrl: 'https://silkride.co.uk'
+    }
+  },
   alias: {
     "@": resolve(__dirname),
     "~": resolve(__dirname),
@@ -70,7 +75,13 @@ export default defineNuxtConfig({
     },
   },
   site:{
+    url: 'https://silkride.co.uk',
     name:"Silk Ride Chauffeur Services",
+  },
+  sitemap: {
+    enabled: true,
+    strictNuxtContentPaths: true,
+    xsl: false
   },
   seo: {
     baseUrl: 'https://silkride.co.uk',
@@ -87,7 +98,7 @@ export default defineNuxtConfig({
     additionalMeta: [
       { name: 'author', content: 'Silk Ride Ltd' }
     ],
-    
+
   },
   googleFonts: {
     families: {

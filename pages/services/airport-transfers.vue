@@ -357,6 +357,7 @@ import { useLocalePath, useI18n } from '#imports'
 import { computed } from 'vue'
 import heroImage from '@/assets/images/vclassjett.webp'
 import serviceImage from '@/assets/images/vclassjett.webp'
+import { organizationSchema } from '~/utils/organizationSchema'
 
 const { t } = useI18n()
 const localePath = useLocalePath()
@@ -378,21 +379,18 @@ const airportTransfersSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "name": "Airport Transfer Service",
-  "provider": {
-    "@type": "LocalBusiness",
-    "name": "Silk Ride Chauffeur Services",
-    "url": "https://silkride.co.uk",
-    "telephone": "+44 7512 905514"
-  },
+  "provider": organizationSchema,
   "serviceType": "Airport Transfer",
-  "areaServed": [
-    "London Heathrow Airport",
-    "London Gatwick Airport", 
-    "London Stansted Airport",
-    "London Luton Airport",
-    "London City Airport"
-  ],
-  "description": "Premium airport transfer service with luxury Mercedes vehicles and professional chauffeurs. Flight tracking, meet & greet service, and 60 minutes free waiting time included."
+  "areaServed": {
+    "@type": "City",
+    "name": "London"
+  },
+  "description": "Premium airport transfer service with luxury Mercedes vehicles and professional chauffeurs. Flight tracking, meet & greet service, and 60 minutes free waiting time included.",
+  "offers": {
+    "@type": "Offer",
+    "priceRange": "£120-£270",
+    "priceCurrency": "GBP"
+  }
 }
 
 useHead({

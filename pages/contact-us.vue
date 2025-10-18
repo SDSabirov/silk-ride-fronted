@@ -60,8 +60,8 @@
             </div>
             <h3 class="text-xl font-semibold mb-4">{{ $t('contact.whatsapp_title') }}</h3>
             <p class="text-gray-600 mb-4">{{ $t('contact.whatsapp_description') }}</p>
-            <a 
-              href="https://wa.me/447512905514" 
+            <a
+              href="https://wa.me/447512905514?text=Hello,%20I'd%20like%20to%20request%20a%20chauffeur%20service."
               target="_blank"
               rel="noopener noreferrer"
               class="text-gold font-semibold hover:text-gold/80 transition-colors text-lg"

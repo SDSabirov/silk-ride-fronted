@@ -14,8 +14,9 @@
 
           <div class="pt-4">
             <NuxtLink :to="localePath('/about')"
+                      :aria-label="$t('about.learnMore')"
                       class="inline-block bg-gold text-black px-8 py-4 rounded-lg font-semibold hover:bg-gold/90 transition-colors">
-              {{ $t('about.learnMore') }}
+              {{ $t('common.learnMore') }}
             </NuxtLink>
           </div>
         </div>

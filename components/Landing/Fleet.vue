@@ -35,6 +35,7 @@
             </div>
             <div class="flex gap-3">
               <NuxtLink :to="localePath('/services/airport-transfers')"
+                        :aria-label="$t('landing.fleet.airport.learnMore')"
                         class="flex-1 text-center bg-gold text-black py-3 rounded-lg font-semibold hover:bg-gold/90 transition-colors">
                 {{ $t('common.learnMore') }}
               </NuxtLink>
@@ -67,6 +68,7 @@
             </div>
             <div class="flex gap-3">
               <NuxtLink :to="localePath('/services/corporate-travel')"
+                        :aria-label="$t('landing.fleet.corporate.learnMore')"
                         class="flex-1 text-center bg-gold text-black py-3 rounded-lg font-semibold hover:bg-gold/90 transition-colors">
                 {{ $t('common.learnMore') }}
               </NuxtLink>
@@ -99,6 +101,7 @@
             </div>
             <div class="flex gap-3">
               <NuxtLink :to="localePath('/services/wedding-chauffeur')"
+                        :aria-label="$t('landing.fleet.wedding.learnMore')"
                         class="flex-1 text-center bg-gold text-black py-3 rounded-lg font-semibold hover:bg-gold/90 transition-colors">
                 {{ $t('common.learnMore') }}
               </NuxtLink>

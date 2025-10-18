@@ -30,13 +30,16 @@ const schema = {
   "description": "Silk Ride offers luxury chauffeur services in London and across the UK, specializing in airport transfers, corporate travel, weddings, events, and bespoke guided tours with a premium fleet of Mercedes vehicles.",
   "address": {
     "@type": "PostalAddress",
-    "addressLocality": "London",
+    "streetAddress": "42 Watling Street, Centre 42",
+    "addressLocality": "Radlett",
+    "addressRegion": "Hertfordshire",
+    "postalCode": "WD7 7NN",
     "addressCountry": "GB"
   },
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": "51.5074",
-    "longitude": "-0.1278"
+    "latitude": "51.6879",
+    "longitude": "-0.3197"
   },
   "areaServed": [
     {
@@ -46,52 +49,19 @@ const schema = {
     {
       "@type": "Country",
       "name": "United Kingdom"
-    },
-    {
-      "@type": "Airport",
-      "name": "London Heathrow Airport T2 & T3"
-    },
-    {
-      "@type": "Airport",
-      "name": "London Heathrow Airport T4"
-    },
-    {
-      "@type": "Airport",
-      "name": "London Heathrow Airport T5"
-    },
-    {
-      "@type": "Airport",
-      "name": "London Gatwick Airport"
-    },
-    {
-      "@type": "Airport",
-      "name": "London Stansted Airport"
-    },
-    {
-      "@type": "Airport",
-      "name": "London Luton Airport"
-    },
-    {
-      "@type": "Airport",
-      "name": "London Biggin Hill Airport"
-    },
-    {
-      "@type": "Airport",
-      "name": "Farnborough Airport"
     }
   ],
   "telephone": "+44 7512 905514",
+  "email": "info@silkride.co.uk",
   "priceRange": "£££",
-  "openingHoursSpecification": [
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-      "opens": "00:00",
-      "closes": "23:59"
-    }
-  ],
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+    "opens": "00:00",
+    "closes": "23:59"
+  },
   "sameAs": [
-    "https://www.instagram.com/silkrideofficial?igsh=MXAxbDAwbXBrbTc2NA%3D%3D",
+    "https://www.instagram.com/silkrideofficial",
     "https://www.linkedin.com/company/silk-ride"
   ],
   "hasOfferCatalog": {

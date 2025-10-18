@@ -52,16 +52,13 @@
             <a href="mailto:info@silkride.co.uk">info@silkride.co.uk</a>
           </p>
           <div class="flex space-x-4 mt-4">
-            <a href="https://www.instagram.com/silkrideofficial" target="_blank" class="text-gray-400 hover:text-white">
+            <a href="https://www.instagram.com/silkrideofficial" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white">
               <i class="bx bxl-instagram bx-sm"></i>
             </a>
-            <a href="#" class="text-gray-400 hover:text-white">
-              <i class="bx bxl-facebook-circle bx-sm"></i>
-            </a>
-            <a href="#" class="text-gray-400 hover:text-white">
+            <a href="https://www.linkedin.com/company/silk-ride" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white">
               <i class="bx bxl-linkedin-square bx-sm"></i>
             </a>
-            <a href="https://wa.me/447512905514?text=Hello%2C%20I%27d%20like%20to%20request%20a%20chauffeur%20service." target="_blank" rel="noopener" class="text-gray-400 hover:text-white">
+            <a href="https://wa.me/447512905514?text=Hello,%20I'd%20like%20to%20request%20a%20chauffeur%20service." target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white">
               <i class="bx bxl-whatsapp bx-sm"></i>
             </a>
           </div>

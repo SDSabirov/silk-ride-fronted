@@ -114,21 +114,24 @@
         "subtitle": "All London Airports",
         "description": "Professional transfers to/from all London airports with meet & greet service, flight tracking, and 60 minutes free waiting time.",
         "price": "From £120",
-        "route": "Heathrow to Central London"
+        "route": "Heathrow to Central London",
+        "learnMore": "Learn More About Airport Transfers"
       },
       "corporate": {
         "title": "Corporate Travel",
         "subtitle": "Executive & Business",
         "description": "Executive chauffeur service for business meetings, conferences, and corporate events. Stay productive on the move with Wi-Fi and charging facilities.",
         "price": "From £65/hr",
-        "minimum": "4 hour minimum"
+        "minimum": "4 hour minimum",
+        "learnMore": "Learn More About Corporate Travel"
       },
       "wedding": {
         "title": "Wedding & Events",
         "subtitle": "Special Occasions",
         "description": "Elegant wedding chauffeur service and VIP event transportation. Make your special day unforgettable with luxury vehicles and professional service.",
         "customQuote": "Custom Quote",
-        "packages": "Package rates available"
+        "packages": "Package rates available",
+        "learnMore": "Learn More About Wedding Chauffeur"
       },
       "fleetTitle": "Our Premium Mercedes Fleet",
       "eclass": {
@@ -219,8 +222,8 @@
   },
   "about": {
     "title": "About Us",
-    "description": "At Silk Ride, we believe that every journey should be as seamless and luxurious as the destination itself. We provide premium chauffeur services in London and across the UK, ensuring comfort, reliability, and sophistication at every step. Our services include airport transfers, executive business travel, intercity rides, and chauffeur hire for special events. Whether you need a smooth transfer from Heathrow, a VIP ride across the city, or a long-distance journey in ultimate comfort, we’ve got you covered. With over 10 years of experience and 50,000+ satisfied clients, we have built a reputation for excellence, professionalism, and personalized service. Book your ride today and experience the Silk Ride difference.",
-    "learnMore": "Learn More"
+    "description": "At Silk Ride, we believe that every journey should be as seamless and luxurious as the destination itself. We provide premium chauffeur services in London and across the UK, ensuring comfort, reliability, and sophistication at every step. Our services include airport transfers, executive business travel, intercity rides, and chauffeur hire for special events. Whether you need a smooth transfer from Heathrow, a VIP ride across the city, or a long-distance journey in ultimate comfort, we've got you covered. With over 10 years of experience and 50,000+ satisfied clients, we have built a reputation for excellence, professionalism, and personalized service. Book your ride today and experience the Silk Ride difference.",
+    "learnMore": "Learn More About Us"
   },
 
   
