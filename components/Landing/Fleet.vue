@@ -18,7 +18,9 @@
           <div class="h-56 relative overflow-hidden">
             <img src="~/assets/images/vclassjett.webp" alt="Airport Transfer Service"
                  class="w-full h-full object-cover"
-                 loading="lazy">
+                 loading="lazy"
+                 width="600"
+                 height="400" />
             <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
             <div class="absolute bottom-6 left-6 text-white">
               <h3 class="text-2xl font-bold mb-1">{{ $t('landing.fleet.airport.title') }}</h3>
@@ -50,8 +52,11 @@
         <!-- Corporate Travel -->
         <div class="bg-white rounded-lg overflow-hidden border border-gray-100">
           <div class="h-56 relative overflow-hidden">
-            <img src="/assets/images/covers/business-trip.webp" alt="Corporate Travel Service"
-                 class="w-full h-full object-cover">
+            <img src="~/assets/images/covers/business-trip.webp" alt="Corporate Travel Service"
+                 class="w-full h-full object-cover"
+                 loading="lazy"
+                 width="600"
+                 height="400" />
             <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
             <div class="absolute bottom-6 left-6 text-white">
               <h3 class="text-2xl font-bold mb-1">{{ $t('landing.fleet.corporate.title') }}</h3>
@@ -83,8 +88,11 @@
         <!-- Wedding & Events -->
         <div class="bg-white rounded-lg overflow-hidden border border-gray-100">
           <div class="h-56 relative overflow-hidden">
-            <img src="/assets/images/covers/wedding.webp" alt="Wedding & Event Service"
-                 class="w-full h-full object-cover">
+            <img src="~/assets/images/covers/wedding.webp" alt="Wedding & Event Service"
+                 class="w-full h-full object-cover"
+                 loading="lazy"
+                 width="600"
+                 height="400" />
             <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
             <div class="absolute bottom-6 left-6 text-white">
               <h3 class="text-2xl font-bold mb-1">{{ $t('landing.fleet.wedding.title') }}</h3>
@@ -121,8 +129,11 @@
           <!-- E-Class -->
           <div class="text-center">
             <div class="relative overflow-hidden rounded-lg mb-4">
-              <img src="/assets/images/eclass.webp" alt="Mercedes E-Class"
-                   class="w-full h-48 object-cover">
+              <img src="~/assets/images/eclass.webp" alt="Mercedes E-Class"
+                   class="w-full h-48 object-cover"
+                   loading="lazy"
+                   width="500"
+                   height="300" />
             </div>
             <h4 class="text-2xl font-bold text-gray-900 mb-2">{{ $t('landing.fleet.eclass.title') }}</h4>
             <p class="text-gray-600 mb-4">{{ $t('landing.fleet.eclass.description') }}</p>
@@ -140,8 +151,11 @@
           <!-- S-Class -->
           <div class="text-center">
             <div class="relative overflow-hidden rounded-lg mb-4">
-              <img src="/assets/images/sclassBackground.webp" alt="Mercedes S-Class"
-                   class="w-full h-48 object-cover">
+              <img src="~/assets/images/sclassBackground.webp" alt="Mercedes S-Class"
+                   class="w-full h-48 object-cover"
+                   loading="lazy"
+                   width="500"
+                   height="300" />
             </div>
             <h4 class="text-2xl font-bold text-gray-900 mb-2">{{ $t('landing.fleet.sclass.title') }}</h4>
             <p class="text-gray-600 mb-4">{{ $t('landing.fleet.sclass.description') }}</p>
@@ -160,7 +174,10 @@
           <div class="text-center">
             <div class="relative overflow-hidden rounded-lg mb-4">
               <img src="~/assets/images/vclassjett.webp" alt="Mercedes V-Class"
-                   class="w-full h-48 object-cover">
+                   class="w-full h-48 object-cover"
+                   loading="lazy"
+                   width="500"
+                   height="300" />
             </div>
             <h4 class="text-2xl font-bold text-gray-900 mb-2">{{ $t('landing.fleet.vclass.title') }}</h4>
             <p class="text-gray-600 mb-4">{{ $t('landing.fleet.vclass.description') }}</p>

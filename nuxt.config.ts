@@ -9,12 +9,73 @@ export default defineNuxtConfig({
       siteUrl: 'https://silkride.co.uk'
     }
   },
+  experimental: {
+    payloadExtraction: false,
+  },
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      routes: ['/'],
+    },
+    compressPublicAssets: true,
+  },
+  vite: {
+    build: {
+      cssCodeSplit: true,
+      rollupOptions: {
+        output: {
+          manualChunks: (id) => {
+            if (id.includes('node_modules')) {
+              if (id.includes('vue') || id.includes('vue-router')) {
+                return 'vue-vendor';
+              }
+            }
+          }
+        }
+      }
+    }
+  },
   alias: {
     "@": resolve(__dirname),
     "~": resolve(__dirname),
   },
   image: {
-    // Configuration options (if any)
+    format: ['webp', 'avif'],
+    quality: 80,
+    screens: {
+      xs: 320,
+      sm: 640,
+      md: 768,
+      lg: 1024,
+      xl: 1280,
+      xxl: 1536,
+    },
+    densities: [1, 2],
+    presets: {
+      hero: {
+        modifiers: {
+          format: 'webp',
+          quality: 85,
+          width: 800,
+          height: 1000,
+        }
+      },
+      thumbnail: {
+        modifiers: {
+          format: 'webp',
+          quality: 75,
+          width: 400,
+          height: 300,
+        }
+      },
+      cover: {
+        modifiers: {
+          format: 'webp',
+          quality: 80,
+          fit: 'cover',
+        }
+      }
+    }
   },
   css: ["~/assets/css/main.css", "boxicons/css/boxicons.min.css"],
   modules: ["@nuxtjs/seo", "@nuxtjs/google-fonts", "@nuxt/image", "@pinia/nuxt", "@nuxtjs/i18n", 'nuxt-gtag'],
@@ -112,15 +173,23 @@ export default defineNuxtConfig({
     ],
 
   },
+  app: {
+    head: {
+      link: [
+        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' },
+      ]
+    }
+  },
   googleFonts: {
     families: {
       "Playfair+Display": [400, 500, 700],
-      "Open+Sans": [300, 400, 600], // For multi-word font names
+      "Open+Sans": [300, 400, 600],
     },
-    display: "swap", 
-    preload: true,         // ✅ Adds <link rel="preload"> tags
-    preconnect: true,      // ✅ Adds <link rel="preconnect"> to Google fonts
-    inject: true 
+    display: "swap",
+    preload: true,
+    preconnect: true,
+    inject: true
   },
  
  

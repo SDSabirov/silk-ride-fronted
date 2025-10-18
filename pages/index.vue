@@ -1,13 +1,13 @@
 <template>
   <div>
     <Navbar />
-    
+
     <LandingMainHero />
     <LandingTrustSignals />
     <LandingFleet />
-    <LandingKeyFeatures />
-    <LandingAbout />
-    <LandingTestimonials />
+    <LazyLandingKeyFeatures />
+    <LazyLandingAbout />
+    <LazyLandingTestimonials />
 
     <Footer />
   </div>

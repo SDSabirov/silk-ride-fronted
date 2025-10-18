@@ -26,30 +26,36 @@
           <!-- Main large image -->
           <div class="row-span-2 rounded-lg overflow-hidden">
             <img
-              src="/assets/images/covers/business-trip.webp"
+              src="~/assets/images/covers/business-trip.webp"
               alt="Professional business chauffeur service"
               class="object-cover w-full h-full"
               loading="lazy"
+              width="600"
+              height="800"
             />
           </div>
 
           <!-- Top right image -->
           <div class="rounded-lg overflow-hidden">
             <img
-              src="/assets/images/covers/assist.webp"
+              src="~/assets/images/covers/assist.webp"
               alt="Luxury chauffeur luggage assistance"
               class="object-cover w-full h-full"
               loading="lazy"
+              width="400"
+              height="300"
             />
           </div>
 
           <!-- Bottom right image -->
           <div class="rounded-lg overflow-hidden">
             <img
-              src="/assets/images/covers/fleet.webp"
+              src="~/assets/images/covers/fleet.webp"
               alt="Premium Mercedes fleet vehicles"
               class="object-cover w-full h-full"
               loading="lazy"
+              width="400"
+              height="300"
             />
           </div>
         </div>

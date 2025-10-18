@@ -54,6 +54,9 @@
                     alt="Luxury Mercedes Chauffeur Service"
                     class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                     loading="eager"
+                    fetchpriority="high"
+                    width="800"
+                    height="1000"
                   />
 
                   <!-- Dynamic gradient overlay -->
