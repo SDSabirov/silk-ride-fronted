@@ -39,13 +39,15 @@ export default defineNuxtConfig({
     locales: [
       {
         code: 'en',
+        iso: 'en-GB',
         name: 'English',
         file: 'en.json',
         label: 'English',
-        flag: '/flags/gb.svg' // or use a PNG like /flags/gb.png
+        flag: '/flags/gb.svg'
       },
       {
         code: 'ru',
+        iso: 'ru-RU',
         name: 'Русский',
         file: 'ru.json',
         label: 'Русский',
@@ -55,12 +57,11 @@ export default defineNuxtConfig({
     bundle: {
       optimizeTranslationDirective: false,
     },
+    baseUrl: 'https://silkride.co.uk',
     defaultLocale: "en",
     lazy: true,
     langDir: "locales/",
     strategy: 'prefix_except_default',
-    
-    
     detectBrowserLanguage: {
       useCookie: true,
       cookieKey: "i18n_redirected",
