@@ -1,73 +1,82 @@
 <template>
-  <section class="relative h-[60vh] lg:h-[70vh] overflow-hidden">
-    <!-- Background image with parallax effect -->
-    <div class="absolute inset-0 transform scale-105">
-      <img 
-        :src="image" 
-        :alt="page || 'Silk Ride Hero'" 
-        class="w-full h-full object-cover transition-transform duration-700 ease-out"
-        loading="eager"
-      />
-    </div>
-    
-    <!-- Gradient overlay with improved opacity -->
-    <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70"></div>
-    
-    <!-- Animated content container -->
-    <div class="relative h-full flex flex-col items-center justify-center px-6">
-      <div class="text-center space-y-8 max-w-4xl mx-auto animate-fadeUp">
-        <!-- Enhanced heading with better typography -->
-        <h1 class="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight text-white font-heading leading-tight animate-fadeIn">
-          {{ page ? page : $t('commonHero.defaultTitle') }}
-        </h1>
-        
-        <!-- Subtitle if provided -->
-        <p v-if="subtitle" class="text-lg md:text-xl lg:text-2xl text-white/90 font-light max-w-2xl mx-auto animate-fadeIn" style="animation-delay: 0.3s;">
-          {{ subtitle }}
-        </p>
-        
-        <!-- Enhanced CTA buttons -->
-        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fadeIn" style="animation-delay: 0.6s;">
-          <NuxtLink
-            :to="localePath('/booking')"
-            class="group inline-flex items-center justify-center px-8 py-4 bg-gold text-black text-lg font-semibold rounded-lg hover:bg-gold/90 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
-          >
-            <span>{{ $t('commonHero.bookNow') }}</span>
-            <i class="bx bx-arrow-back rotate-180 ml-2 text-xl group-hover:translate-x-1 transition-transform duration-300"></i>
-          </NuxtLink>
-          
-          <NuxtLink
-            v-if="showSecondaryButton"
-            :to="localePath('/contact-us')"
-            class="group inline-flex items-center justify-center px-8 py-4 border-2 border-white/80 text-white text-lg font-semibold rounded-lg hover:bg-white hover:text-black transform hover:scale-105 transition-all duration-300"
-          >
-            <span>{{ $t('commonHero.getQuote') }}</span>
-            <i class="bx bx-phone ml-2 text-xl group-hover:scale-110 transition-transform duration-300"></i>
-          </NuxtLink>
-        </div>
-        
-        <!-- Trust indicators -->
-        <div v-if="showTrustBadges" class="flex flex-wrap justify-center items-center gap-6 md:gap-8 mt-8 animate-fadeIn" style="animation-delay: 0.9s;">
-          <div class="flex items-center space-x-2 text-white/80">
-            <i class="bx bx-shield-check text-gold text-xl"></i>
-            <span class="text-sm font-medium">Licensed & Insured</span>
+  <section class="relative min-h-[85vh] flex items-center overflow-hidden bg-white">
+    <!-- Subtle accent circle -->
+    <div class="absolute top-20 right-0 w-96 h-96 bg-gold/5 rounded-full blur-3xl"></div>
+
+    <div class="relative z-10 max-w-screen-xl mx-auto px-6 py-24 w-full">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <!-- Left Content -->
+        <div class="space-y-10 lg:pr-8">
+          <div class="space-y-6">
+            <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-gray-900">
+              {{ page ? page : $t('commonHero.defaultTitle') }}
+            </h1>
+            <p v-if="subtitle" class="text-xl text-gray-600 leading-relaxed max-w-xl">
+              {{ subtitle }}
+            </p>
           </div>
-          <div class="flex items-center space-x-2 text-white/80">
-            <i class="bx bx-time text-gold text-xl"></i>
-            <span class="text-sm font-medium">24/7 Available</span>
+
+          <!-- CTA Buttons -->
+          <div class="flex flex-col sm:flex-row gap-4">
+            <NuxtLink
+              :to="localePath('/booking')"
+              class="inline-flex items-center justify-center bg-gold text-black hover:bg-gold/90 px-8 py-4 text-base font-semibold rounded-lg transition-colors"
+            >
+              {{ $t('commonHero.bookNow') }}
+            </NuxtLink>
+            <NuxtLink
+              v-if="showSecondaryButton"
+              :to="localePath('/contact-us')"
+              class="inline-flex items-center justify-center border-2 border-gray-300 text-gray-700 hover:border-gray-900 hover:text-gray-900 px-8 py-4 text-base font-semibold rounded-lg transition-colors"
+            >
+              {{ $t('commonHero.getQuote') }}
+            </NuxtLink>
           </div>
-          <div class="flex items-center space-x-2 text-white/80">
-            <i class="bx bx-star text-gold text-xl"></i>
-            <span class="text-sm font-medium">Premium Service</span>
+
+          <!-- Trust badges -->
+          <div v-if="showTrustBadges" class="flex flex-wrap gap-8">
+            <div class="flex items-center gap-2 text-gray-500">
+              <div class="w-8 h-8 rounded-full bg-gold/10 flex items-center justify-center">
+                <i class="bx bx-shield-check text-gold text-sm"></i>
+              </div>
+              <span class="text-sm">Licensed & Insured</span>
+            </div>
+            <div class="flex items-center gap-2 text-gray-500">
+              <div class="w-8 h-8 rounded-full bg-gold/10 flex items-center justify-center">
+                <i class="bx bx-time text-gold text-sm"></i>
+              </div>
+              <span class="text-sm">24/7 Available</span>
+            </div>
+            <div class="flex items-center gap-2 text-gray-500">
+              <div class="w-8 h-8 rounded-full bg-gold/10 flex items-center justify-center">
+                <i class="bx bx-star text-gold text-sm"></i>
+              </div>
+              <span class="text-sm">Premium Service</span>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-    
-    <!-- Scroll indicator -->
-    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce" style="animation-delay: 1.2s;">
-      <div class="w-6 h-10 border-2 border-white/60 rounded-full flex justify-center">
-        <div class="w-1 h-3 bg-white/60 rounded-full mt-2 animate-pulse"></div>
+
+        <!-- Right Image - Clean Elevated Card -->
+        <div class="relative">
+          <div class="relative group">
+            <!-- Simple elevated card with subtle shadow -->
+            <div class="relative overflow-hidden rounded-2xl shadow-xl">
+              <div class="aspect-[3/4] relative">
+                <img
+                  :src="image"
+                  :alt="page || 'Silk Ride'"
+                  class="absolute inset-0 w-full h-full object-cover"
+                  loading="eager"
+                />
+                <!-- Minimal overlay -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+              </div>
+            </div>
+
+            <!-- Single accent element -->
+            <div class="absolute -bottom-6 -left-6 w-24 h-24 bg-gold/10 rounded-2xl -z-10"></div>
+          </div>
+        </div>
       </div>
     </div>
   </section>

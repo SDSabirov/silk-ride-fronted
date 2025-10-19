@@ -276,8 +276,8 @@
           <div class="bg-white p-6 rounded-lg shadow">
             <h3 class="text-xl font-semibold mb-3">How much does an airport transfer cost in London?</h3>
             <p class="text-gray-600">
-              Our airport transfer prices start from £75-£95 depending on the airport and destination. Heathrow transfers 
-              to Central London start from £80, Gatwick from £90, and Stansted from £95. All prices are fixed and include 
+              Our airport transfer prices start from £120 depending on the airport, vehicle, and destination. Heathrow transfers
+              to Central London start from £120 (E-Class), Gatwick from £180, Stansted from £200, and Luton from £200. All prices are fixed and include
               waiting time, meet & greet, and professional chauffeur service with no hidden charges.
             </p>
           </div>

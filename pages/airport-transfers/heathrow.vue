@@ -254,7 +254,7 @@
                 <li>• Advanced climate control</li>
                 <li>• Complimentary Wi-Fi & refreshments</li>
               </ul>
-              <div class="text-gold font-bold text-lg">From £95</div>
+              <div class="text-gold font-bold text-lg">£160</div>
             </div>
           </div>
 
@@ -272,7 +272,7 @@
                 <li>• Professional service</li>
                 <li>• Ample luggage space</li>
               </ul>
-              <div class="text-gold font-bold text-lg">From £75</div>
+              <div class="text-gold font-bold text-lg">£120</div>
             </div>
           </div>
 
@@ -290,7 +290,7 @@
                 <li>• Group travel comfort</li>
                 <li>• Premium amenities</li>
               </ul>
-              <div class="text-gold font-bold text-lg">From £110</div>
+              <div class="text-gold font-bold text-lg">£160</div>
             </div>
           </div>
         </div>

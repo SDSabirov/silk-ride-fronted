@@ -15,112 +15,122 @@
     />
 
     <!-- Fleet Overview Stats -->
-    <section class="py-16 bg-gray-50">
-      <div class="max-w-screen-xl mx-auto px-6">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-          <div class="bg-white p-6 rounded-lg shadow-md">
-            <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-4">
-              <i class="bx bx-car text-white text-2xl"></i>
+    <section class="relative py-20 bg-white overflow-hidden">
+      <div class="absolute top-0 right-0 w-80 h-80 bg-gold/5 rounded-full blur-3xl"></div>
+
+      <div class="relative max-w-screen-xl mx-auto px-6">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+          <div class="text-center">
+            <div class="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gold/10 mb-4">
+              <i class="bx bx-car text-gold text-xl"></i>
             </div>
-            <h3 class="text-3xl font-bold text-gray-900 mb-2">20+</h3>
-            <p class="text-gray-600">{{ $t('pages.fleet.stats.vehicles') }}</p>
+            <h3 class="text-4xl md:text-5xl font-bold text-gray-900 mb-2">20+</h3>
+            <p class="text-sm text-gray-600">{{ $t('pages.fleet.stats.vehicles') }}</p>
           </div>
-          
-          <div class="bg-white p-6 rounded-lg shadow-md">
-            <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-4">
-              <i class="bx bx-shield-check text-white text-2xl"></i>
+
+          <div class="text-center">
+            <div class="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gold/10 mb-4">
+              <i class="bx bx-shield-check text-gold text-xl"></i>
             </div>
-            <h3 class="text-3xl font-bold text-gray-900 mb-2">100%</h3>
-            <p class="text-gray-600">{{ $t('pages.fleet.stats.maintained') }}</p>
+            <h3 class="text-4xl md:text-5xl font-bold text-gray-900 mb-2">100%</h3>
+            <p class="text-sm text-gray-600">{{ $t('pages.fleet.stats.maintained') }}</p>
           </div>
-          
-          <div class="bg-white p-6 rounded-lg shadow-md">
-            <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-4">
-              <i class="bx bx-time text-white text-2xl"></i>
+
+          <div class="text-center">
+            <div class="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gold/10 mb-4">
+              <i class="bx bx-time text-gold text-xl"></i>
             </div>
-            <h3 class="text-3xl font-bold text-gray-900 mb-2">24/7</h3>
-            <p class="text-gray-600">{{ $t('pages.fleet.stats.availability') }}</p>
+            <h3 class="text-4xl md:text-5xl font-bold text-gray-900 mb-2">24/7</h3>
+            <p class="text-sm text-gray-600">{{ $t('pages.fleet.stats.availability') }}</p>
           </div>
-          
-          <div class="bg-white p-6 rounded-lg shadow-md">
-            <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-4">
-              <i class="bx bx-star text-white text-2xl"></i>
+
+          <div class="text-center">
+            <div class="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gold/10 mb-4">
+              <i class="bx bx-star text-gold text-xl"></i>
             </div>
-            <h3 class="text-3xl font-bold text-gray-900 mb-2">5★</h3>
-            <p class="text-gray-600">{{ $t('pages.fleet.stats.rating') }}</p>
+            <h3 class="text-4xl md:text-5xl font-bold text-gray-900 mb-2">5★</h3>
+            <p class="text-sm text-gray-600">{{ $t('pages.fleet.stats.rating') }}</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Enhanced Fleet Grid -->
-    <section class="py-16">
+    <section class="py-24 bg-gray-50">
       <div class="max-w-screen-xl mx-auto px-6">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        <!-- Section Header -->
+        <div class="text-center mb-16">
+          <div class="w-16 h-1 bg-gold mb-6 mx-auto"></div>
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             {{ $t('pages.fleet.fleetTitle') }}
           </h2>
-          <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
             {{ $t('pages.fleet.fleetDescription') }}
           </p>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <!-- Mercedes E-Class -->
-          <div class="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:scale-105">
+          <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
             <div class="relative h-64 overflow-hidden">
-              <img 
-                src="/assets/images/eclass.webp" 
-                alt="Mercedes E-Class" 
-                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+              <img
+                src="/assets/images/eclass.webp"
+                alt="Mercedes E-Class"
+                class="w-full h-full object-cover"
               />
               <div class="absolute top-4 left-4">
-                <span class="bg-gold text-black px-3 py-1 rounded-full text-sm font-semibold">
+                <span class="bg-gold/90 backdrop-blur-sm text-black px-3 py-1.5 rounded-lg text-xs font-semibold">
                   {{ $t('pages.fleet.popular') }}
                 </span>
               </div>
             </div>
-            
-            <div class="p-6">
-              <h3 class="text-2xl font-bold mb-3">{{ $t('servicesSection.eClass.title') }}</h3>
-              <p class="text-gray-600 mb-4">{{ $t('servicesSection.eClass.description') }}</p>
-              
-              <div class="space-y-2 mb-6">
+
+            <div class="p-8">
+              <h3 class="text-2xl font-bold mb-3 text-gray-900">{{ $t('servicesSection.eClass.title') }}</h3>
+              <p class="text-gray-600 mb-6 leading-relaxed">{{ $t('servicesSection.eClass.description') }}</p>
+
+              <div class="space-y-3 mb-6">
                 <div class="flex items-center text-sm text-gray-600">
-                  <i class="bx bx-user mr-2 text-gold"></i>
+                  <div class="w-8 h-8 rounded-lg bg-gold/10 flex items-center justify-center mr-3">
+                    <i class="bx bx-user text-gold text-base"></i>
+                  </div>
                   <span>{{ $t('pages.fleet.capacity.eClass') }}</span>
                 </div>
                 <div class="flex items-center text-sm text-gray-600">
-                  <i class="bx bx-briefcase mr-2 text-gold"></i>
+                  <div class="w-8 h-8 rounded-lg bg-gold/10 flex items-center justify-center mr-3">
+                    <i class="bx bx-briefcase text-gold text-base"></i>
+                  </div>
                   <span>{{ $t('pages.fleet.luggage.large') }}</span>
                 </div>
                 <div class="flex items-center text-sm text-gray-600">
-                  <i class="bx bx-wifi mr-2 text-gold"></i>
+                  <div class="w-8 h-8 rounded-lg bg-gold/10 flex items-center justify-center mr-3">
+                    <i class="bx bx-wifi text-gold text-base"></i>
+                  </div>
                   <span>{{ $t('pages.fleet.features.wifi') }}</span>
                 </div>
               </div>
-              
-              <div class="border-t pt-4 mb-6">
+
+              <div class="border-t border-gray-100 pt-5 mb-6">
                 <div class="flex justify-between items-center mb-2">
-                  <span class="text-sm text-gray-600">{{ $t('priceGuide.hourly.title') }}</span>
-                  <span class="font-bold text-gold">£65/hour</span>
+                  <span class="text-sm text-gray-500">{{ $t('priceGuide.hourly.title') }}</span>
+                  <span class="font-bold text-gray-900">£50/hour</span>
                 </div>
                 <div class="flex justify-between items-center">
-                  <span class="text-sm text-gray-600">{{ $t('priceGuide.heathrow') }}</span>
-                  <span class="font-bold text-gold">£120</span>
+                  <span class="text-sm text-gray-500">{{ $t('priceGuide.heathrow') }}</span>
+                  <span class="font-bold text-gray-900">£120</span>
                 </div>
               </div>
-              
+
               <div class="flex gap-3">
-                <NuxtLink 
+                <NuxtLink
                   :to="localePath('/booking')"
-                  class="flex-1 bg-gold text-black text-center py-3 rounded-lg font-semibold hover:bg-gold/90 transition-colors"
+                  class="flex-1 bg-gold text-black text-center py-3 rounded-lg text-sm font-semibold hover:bg-gold/90 transition-colors"
                 >
                   {{ $t('servicesSection.bookNow') }}
                 </NuxtLink>
-                <NuxtLink 
+                <NuxtLink
                   :to="localePath('/fleet/mercedes-e-class')"
-                  class="flex-1 border border-gray-300 text-gray-700 text-center py-3 rounded-lg font-semibold hover:border-gold hover:text-gold transition-colors"
+                  class="flex-1 border-2 border-gray-200 text-gray-700 text-center py-3 rounded-lg text-sm font-semibold hover:border-gray-900 hover:text-gray-900 transition-colors"
                 >
                   {{ $t('servicesSection.learnMore') }}
                 </NuxtLink>
@@ -129,60 +139,66 @@
           </div>
 
           <!-- Mercedes S-Class -->
-          <div class="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:scale-105">
+          <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
             <div class="relative h-64 overflow-hidden">
-              <img 
-                src="/assets/images/sclassBackground.webp" 
-                alt="Mercedes S-Class" 
-                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+              <img
+                src="/assets/images/sclassBackground.webp"
+                alt="Mercedes S-Class"
+                class="w-full h-full object-cover"
               />
               <div class="absolute top-4 left-4">
-                <span class="bg-black text-gold px-3 py-1 rounded-full text-sm font-semibold">
+                <span class="bg-gray-900/90 backdrop-blur-sm text-gold px-3 py-1.5 rounded-lg text-xs font-semibold">
                   {{ $t('pages.fleet.luxury') }}
                 </span>
               </div>
             </div>
-            
-            <div class="p-6">
-              <h3 class="text-2xl font-bold mb-3">{{ $t('servicesSection.sClass.title') }}</h3>
-              <p class="text-gray-600 mb-4">{{ $t('servicesSection.sClass.description') }}</p>
-              
-              <div class="space-y-2 mb-6">
+
+            <div class="p-8">
+              <h3 class="text-2xl font-bold mb-3 text-gray-900">{{ $t('servicesSection.sClass.title') }}</h3>
+              <p class="text-gray-600 mb-6 leading-relaxed">{{ $t('servicesSection.sClass.description') }}</p>
+
+              <div class="space-y-3 mb-6">
                 <div class="flex items-center text-sm text-gray-600">
-                  <i class="bx bx-user mr-2 text-gold"></i>
+                  <div class="w-8 h-8 rounded-lg bg-gold/10 flex items-center justify-center mr-3">
+                    <i class="bx bx-user text-gold text-base"></i>
+                  </div>
                   <span>{{ $t('pages.fleet.capacity.sClass') }}</span>
                 </div>
                 <div class="flex items-center text-sm text-gray-600">
-                  <i class="bx bx-briefcase mr-2 text-gold"></i>
+                  <div class="w-8 h-8 rounded-lg bg-gold/10 flex items-center justify-center mr-3">
+                    <i class="bx bx-briefcase text-gold text-base"></i>
+                  </div>
                   <span>{{ $t('pages.fleet.luggage.large') }}</span>
                 </div>
                 <div class="flex items-center text-sm text-gray-600">
-                  <i class="bx bx-star mr-2 text-gold"></i>
+                  <div class="w-8 h-8 rounded-lg bg-gold/10 flex items-center justify-center mr-3">
+                    <i class="bx bx-star text-gold text-base"></i>
+                  </div>
                   <span>{{ $t('pages.fleet.features.premium') }}</span>
                 </div>
               </div>
-              
-              <div class="border-t pt-4 mb-6">
+
+              <div class="border-t border-gray-100 pt-5 mb-6">
                 <div class="flex justify-between items-center mb-2">
-                  <span class="text-sm text-gray-600">{{ $t('priceGuide.hourly.title') }}</span>
-                  <span class="font-bold text-gold">£85/hour</span>
+                  <span class="text-sm text-gray-500">{{ $t('priceGuide.hourly.title') }}</span>
+                  <span class="font-bold text-gray-900">£75/hour</span>
                 </div>
                 <div class="flex justify-between items-center">
-                  <span class="text-sm text-gray-600">{{ $t('priceGuide.heathrow') }}</span>
-                  <span class="font-bold text-gold">£160</span>
+                  <span class="text-sm text-gray-500">{{ $t('priceGuide.heathrow') }}</span>
+                  <span class="font-bold text-gray-900">£160</span>
                 </div>
               </div>
-              
+
               <div class="flex gap-3">
-                <NuxtLink 
+                <NuxtLink
                   :to="localePath('/booking')"
-                  class="flex-1 bg-gold text-black text-center py-3 rounded-lg font-semibold hover:bg-gold/90 transition-colors"
+                  class="flex-1 bg-gold text-black text-center py-3 rounded-lg text-sm font-semibold hover:bg-gold/90 transition-colors"
                 >
                   {{ $t('servicesSection.bookNow') }}
                 </NuxtLink>
-                <NuxtLink 
+                <NuxtLink
                   :to="localePath('/fleet/mercedes-s-class')"
-                  class="flex-1 border border-gray-300 text-gray-700 text-center py-3 rounded-lg font-semibold hover:border-gold hover:text-gold transition-colors"
+                  class="flex-1 border-2 border-gray-200 text-gray-700 text-center py-3 rounded-lg text-sm font-semibold hover:border-gray-900 hover:text-gray-900 transition-colors"
                 >
                   {{ $t('servicesSection.learnMore') }}
                 </NuxtLink>
@@ -191,60 +207,66 @@
           </div>
 
           <!-- Mercedes V-Class -->
-          <div class="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:scale-105">
+          <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
             <div class="relative h-64 overflow-hidden">
-              <img 
-                src="/assets/images/covers/business-trip.webp" 
-                alt="Mercedes V-Class" 
-                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+              <img
+                src="/assets/images/covers/business-trip.webp"
+                alt="Mercedes V-Class"
+                class="w-full h-full object-cover"
               />
               <div class="absolute top-4 left-4">
-                <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                <span class="bg-gray-700/90 backdrop-blur-sm text-white px-3 py-1.5 rounded-lg text-xs font-semibold">
                   {{ $t('pages.fleet.spacious') }}
                 </span>
               </div>
             </div>
-            
-            <div class="p-6">
-              <h3 class="text-2xl font-bold mb-3">{{ $t('servicesSection.vClass.title') }}</h3>
-              <p class="text-gray-600 mb-4">{{ $t('servicesSection.vClass.description') }}</p>
-              
-              <div class="space-y-2 mb-6">
+
+            <div class="p-8">
+              <h3 class="text-2xl font-bold mb-3 text-gray-900">{{ $t('servicesSection.vClass.title') }}</h3>
+              <p class="text-gray-600 mb-6 leading-relaxed">{{ $t('servicesSection.vClass.description') }}</p>
+
+              <div class="space-y-3 mb-6">
                 <div class="flex items-center text-sm text-gray-600">
-                  <i class="bx bx-group mr-2 text-gold"></i>
+                  <div class="w-8 h-8 rounded-lg bg-gold/10 flex items-center justify-center mr-3">
+                    <i class="bx bx-group text-gold text-base"></i>
+                  </div>
                   <span>{{ $t('pages.fleet.capacity.vClass') }}</span>
                 </div>
                 <div class="flex items-center text-sm text-gray-600">
-                  <i class="bx bx-briefcase mr-2 text-gold"></i>
+                  <div class="w-8 h-8 rounded-lg bg-gold/10 flex items-center justify-center mr-3">
+                    <i class="bx bx-briefcase text-gold text-base"></i>
+                  </div>
                   <span>{{ $t('pages.fleet.luggage.extra') }}</span>
                 </div>
                 <div class="flex items-center text-sm text-gray-600">
-                  <i class="bx bx-home mr-2 text-gold"></i>
+                  <div class="w-8 h-8 rounded-lg bg-gold/10 flex items-center justify-center mr-3">
+                    <i class="bx bx-home text-gold text-base"></i>
+                  </div>
                   <span>{{ $t('pages.fleet.features.spacious') }}</span>
                 </div>
               </div>
-              
-              <div class="border-t pt-4 mb-6">
+
+              <div class="border-t border-gray-100 pt-5 mb-6">
                 <div class="flex justify-between items-center mb-2">
-                  <span class="text-sm text-gray-600">{{ $t('priceGuide.hourly.title') }}</span>
-                  <span class="font-bold text-gold">£85/hour</span>
+                  <span class="text-sm text-gray-500">{{ $t('priceGuide.hourly.title') }}</span>
+                  <span class="font-bold text-gray-900">£75/hour</span>
                 </div>
                 <div class="flex justify-between items-center">
-                  <span class="text-sm text-gray-600">{{ $t('priceGuide.heathrow') }}</span>
-                  <span class="font-bold text-gold">£160</span>
+                  <span class="text-sm text-gray-500">{{ $t('priceGuide.heathrow') }}</span>
+                  <span class="font-bold text-gray-900">£160</span>
                 </div>
               </div>
-              
+
               <div class="flex gap-3">
-                <NuxtLink 
+                <NuxtLink
                   :to="localePath('/booking')"
-                  class="flex-1 bg-gold text-black text-center py-3 rounded-lg font-semibold hover:bg-gold/90 transition-colors"
+                  class="flex-1 bg-gold text-black text-center py-3 rounded-lg text-sm font-semibold hover:bg-gold/90 transition-colors"
                 >
                   {{ $t('servicesSection.bookNow') }}
                 </NuxtLink>
-                <NuxtLink 
+                <NuxtLink
                   :to="localePath('/fleet/mercedes-v-class')"
-                  class="flex-1 border border-gray-300 text-gray-700 text-center py-3 rounded-lg font-semibold hover:border-gold hover:text-gold transition-colors"
+                  class="flex-1 border-2 border-gray-200 text-gray-700 text-center py-3 rounded-lg text-sm font-semibold hover:border-gray-900 hover:text-gray-900 transition-colors"
                 >
                   {{ $t('servicesSection.learnMore') }}
                 </NuxtLink>
@@ -256,103 +278,108 @@
     </section>
 
     <!-- Fleet Features Section -->
-    <section class="py-16 bg-gray-50">
-      <div class="max-w-screen-xl mx-auto px-6">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+    <section class="relative py-24 bg-white overflow-hidden">
+      <div class="absolute bottom-0 left-0 w-80 h-80 bg-gold/5 rounded-full blur-3xl"></div>
+
+      <div class="relative max-w-screen-xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <div class="w-16 h-1 bg-gold mb-6 mx-auto"></div>
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             {{ $t('pages.fleet.featuresTitle') }}
           </h2>
-          <p class="text-lg text-gray-600">
+          <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
             {{ $t('pages.fleet.featuresDescription') }}
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
           <div class="text-center">
-            <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-4">
-              <i class="bx bx-shield-check text-white text-2xl"></i>
+            <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gold/10 mb-6">
+              <i class="bx bx-shield-check text-gold text-2xl"></i>
             </div>
-            <h3 class="text-xl font-semibold mb-3">{{ $t('pages.fleet.features.safety') }}</h3>
-            <p class="text-gray-600">{{ $t('pages.fleet.features.safetyDesc') }}</p>
+            <h3 class="text-xl font-bold mb-3 text-gray-900">{{ $t('pages.fleet.features.safety') }}</h3>
+            <p class="text-gray-600 leading-relaxed">{{ $t('pages.fleet.features.safetyDesc') }}</p>
           </div>
 
           <div class="text-center">
-            <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-4">
-              <i class="bx bx-leaf text-white text-2xl"></i>
+            <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gold/10 mb-6">
+              <i class="bx bx-leaf text-gold text-2xl"></i>
             </div>
-            <h3 class="text-xl font-semibold mb-3">{{ $t('pages.fleet.features.eco') }}</h3>
-            <p class="text-gray-600">{{ $t('pages.fleet.features.ecoDesc') }}</p>
+            <h3 class="text-xl font-bold mb-3 text-gray-900">{{ $t('pages.fleet.features.eco') }}</h3>
+            <p class="text-gray-600 leading-relaxed">{{ $t('pages.fleet.features.ecoDesc') }}</p>
           </div>
 
           <div class="text-center">
-            <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-4">
-              <i class="bx bx-wifi text-white text-2xl"></i>
+            <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gold/10 mb-6">
+              <i class="bx bx-wifi text-gold text-2xl"></i>
             </div>
-            <h3 class="text-xl font-semibold mb-3">{{ $t('pages.fleet.features.connectivity') }}</h3>
-            <p class="text-gray-600">{{ $t('pages.fleet.features.connectivityDesc') }}</p>
+            <h3 class="text-xl font-bold mb-3 text-gray-900">{{ $t('pages.fleet.features.connectivity') }}</h3>
+            <p class="text-gray-600 leading-relaxed">{{ $t('pages.fleet.features.connectivityDesc') }}</p>
           </div>
 
           <div class="text-center">
-            <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-4">
-              <i class="bx bx-cog text-white text-2xl"></i>
+            <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gold/10 mb-6">
+              <i class="bx bx-cog text-gold text-2xl"></i>
             </div>
-            <h3 class="text-xl font-semibold mb-3">{{ $t('pages.fleet.features.maintenance') }}</h3>
-            <p class="text-gray-600">{{ $t('pages.fleet.features.maintenanceDesc') }}</p>
+            <h3 class="text-xl font-bold mb-3 text-gray-900">{{ $t('pages.fleet.features.maintenance') }}</h3>
+            <p class="text-gray-600 leading-relaxed">{{ $t('pages.fleet.features.maintenanceDesc') }}</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Fleet Standards Section -->
-    <section class="py-16">
+    <section class="py-24 bg-gray-50">
       <div class="max-w-screen-xl mx-auto px-6">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            <div class="w-16 h-1 bg-gold mb-6"></div>
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
               {{ $t('pages.fleet.standardsTitle') }}
             </h2>
-            <p class="text-lg text-gray-600 mb-8">
+            <p class="text-lg md:text-xl text-gray-600 mb-10 leading-relaxed">
               {{ $t('pages.fleet.standardsDescription') }}
             </p>
-            
-            <div class="space-y-6">
-              <div class="flex items-start space-x-4">
-                <div class="w-12 h-12 bg-gold rounded-full flex items-center justify-center flex-shrink-0">
-                  <i class="bx bx-check text-white text-xl"></i>
+
+            <div class="space-y-8">
+              <div class="flex items-start gap-5">
+                <div class="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center flex-shrink-0">
+                  <i class="bx bx-check text-gold text-2xl"></i>
                 </div>
                 <div>
-                  <h3 class="text-xl font-semibold mb-2">{{ $t('pages.fleet.standards.regular') }}</h3>
-                  <p class="text-gray-600">{{ $t('pages.fleet.standards.regularDesc') }}</p>
+                  <h3 class="text-xl font-bold mb-2 text-gray-900">{{ $t('pages.fleet.standards.regular') }}</h3>
+                  <p class="text-gray-600 leading-relaxed">{{ $t('pages.fleet.standards.regularDesc') }}</p>
                 </div>
               </div>
-              
-              <div class="flex items-start space-x-4">
-                <div class="w-12 h-12 bg-gold rounded-full flex items-center justify-center flex-shrink-0">
-                  <i class="bx bx-check text-white text-xl"></i>
+
+              <div class="flex items-start gap-5">
+                <div class="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center flex-shrink-0">
+                  <i class="bx bx-check text-gold text-2xl"></i>
                 </div>
                 <div>
-                  <h3 class="text-xl font-semibold mb-2">{{ $t('pages.fleet.standards.cleaning') }}</h3>
-                  <p class="text-gray-600">{{ $t('pages.fleet.standards.cleaningDesc') }}</p>
+                  <h3 class="text-xl font-bold mb-2 text-gray-900">{{ $t('pages.fleet.standards.cleaning') }}</h3>
+                  <p class="text-gray-600 leading-relaxed">{{ $t('pages.fleet.standards.cleaningDesc') }}</p>
                 </div>
               </div>
-              
-              <div class="flex items-start space-x-4">
-                <div class="w-12 h-12 bg-gold rounded-full flex items-center justify-center flex-shrink-0">
-                  <i class="bx bx-check text-white text-xl"></i>
+
+              <div class="flex items-start gap-5">
+                <div class="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center flex-shrink-0">
+                  <i class="bx bx-check text-gold text-2xl"></i>
                 </div>
                 <div>
-                  <h3 class="text-xl font-semibold mb-2">{{ $t('pages.fleet.standards.inspection') }}</h3>
-                  <p class="text-gray-600">{{ $t('pages.fleet.standards.inspectionDesc') }}</p>
+                  <h3 class="text-xl font-bold mb-2 text-gray-900">{{ $t('pages.fleet.standards.inspection') }}</h3>
+                  <p class="text-gray-600 leading-relaxed">{{ $t('pages.fleet.standards.inspectionDesc') }}</p>
                 </div>
               </div>
             </div>
           </div>
-          
+
           <div class="relative">
-            <img 
-              src="/assets/images/covers/fleet.webp" 
-              alt="Fleet Standards" 
-              class="w-full h-96 object-cover rounded-lg shadow-lg"
+            <div class="absolute -bottom-6 -right-6 w-full h-full bg-gold/10 rounded-2xl -z-10"></div>
+            <img
+              src="/assets/images/covers/fleet.webp"
+              alt="Fleet Standards"
+              class="relative w-full h-[500px] object-cover rounded-2xl shadow-xl"
             />
           </div>
         </div>
@@ -360,15 +387,15 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="py-16 bg-gray-900 text-white">
-      <div class="max-w-screen-xl mx-auto px-6 text-center">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+    <section class="py-24 bg-gray-900">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
           {{ $t('pages.fleet.ctaTitle') }}
         </h2>
-        <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+        <p class="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
           {{ $t('pages.fleet.ctaDescription') }}
         </p>
-        
+
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <NuxtLink
             :to="localePath('/booking')"
@@ -378,7 +405,7 @@
           </NuxtLink>
           <NuxtLink
             :to="localePath('/contact-us')"
-            class="px-8 py-4 border border-gold text-gold font-semibold rounded-lg hover:bg-gold hover:text-black transition-colors"
+            class="px-8 py-4 border-2 border-gray-700 text-white font-semibold rounded-lg hover:border-gray-500 transition-colors"
           >
             {{ $t('pages.fleet.getQuote') }}
           </NuxtLink>

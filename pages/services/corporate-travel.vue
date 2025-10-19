@@ -195,9 +195,9 @@
           <div class="p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-shadow">
             <h3 class="text-xl font-semibold mb-3">Hourly Business Travel</h3>
             <div class="space-y-2 text-gray-600">
-              <p><strong>Mercedes E-Class:</strong> £60/hour</p>
-              <p><strong>Mercedes S-Class:</strong> £80/hour</p>
-              <p><strong>Mercedes V-Class:</strong> £70/hour</p>
+              <p><strong>Mercedes E-Class:</strong> £50/hour</p>
+              <p><strong>Mercedes S-Class:</strong> £75/hour</p>
+              <p><strong>Mercedes V-Class:</strong> £75/hour</p>
               <p><strong>Minimum booking:</strong> 4 hours</p>
             </div>
             <p class="mt-4 text-sm text-gray-500">Perfect for meetings, conferences, and daily business travel</p>
@@ -206,9 +206,9 @@
           <div class="p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-shadow">
             <h3 class="text-xl font-semibold mb-3">Half Day Executive</h3>
             <div class="space-y-2 text-gray-600">
-              <p><strong>4 Hours E-Class:</strong> £220</p>
+              <p><strong>4 Hours E-Class:</strong> £200</p>
               <p><strong>4 Hours S-Class:</strong> £300</p>
-              <p><strong>4 Hours V-Class:</strong> £260</p>
+              <p><strong>4 Hours V-Class:</strong> £300</p>
               <p><strong>Coverage:</strong> London Zone 1-6</p>
             </div>
             <p class="mt-4 text-sm text-gray-500">Ideal for half-day business schedules and client meetings</p>
@@ -217,9 +217,9 @@
           <div class="p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-shadow">
             <h3 class="text-xl font-semibold mb-3">Full Day Corporate</h3>
             <div class="space-y-2 text-gray-600">
-              <p><strong>8 Hours E-Class:</strong> £420</p>
-              <p><strong>8 Hours S-Class:</strong> £580</p>
-              <p><strong>8 Hours V-Class:</strong> £500</p>
+              <p><strong>8 Hours E-Class:</strong> £400</p>
+              <p><strong>8 Hours S-Class:</strong> £600</p>
+              <p><strong>8 Hours V-Class:</strong> £600</p>
               <p><strong>Coverage:</strong> London & M25</p>
             </div>
             <p class="mt-4 text-sm text-gray-500">Complete day coverage for executive schedules and events</p>
@@ -244,8 +244,8 @@
           <div class="bg-white p-6 rounded-lg shadow">
             <h3 class="text-xl font-semibold mb-3">How much does corporate chauffeur service cost in London?</h3>
             <p class="text-gray-600">
-              Our corporate chauffeur rates start from £60 per hour for Mercedes E-Class vehicles with a 4-hour minimum. 
-              Half-day packages from £220 and full-day executive travel from £420. We offer volume discounts for regular 
+              Our corporate chauffeur rates start from £50 per hour for Mercedes E-Class vehicles with a 4-hour minimum.
+              Half-day packages from £200 and full-day executive travel from £400. We offer volume discounts for regular
               corporate bookings and dedicated account management for businesses requiring frequent transportation.
             </p>
           </div>
