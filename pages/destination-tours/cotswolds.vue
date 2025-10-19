@@ -339,6 +339,12 @@ useSchemaOrg([
   defineLocalBusiness({
     name: 'Silk Ride Cotswolds Chauffeur Service',
     description: 'Luxury chauffeur service and private countryside tours to the Cotswolds from London, featuring historic villages and scenic landscapes.',
+    image: [
+      'https://silkride.co.uk/logo.svg',
+      'https://silkride.co.uk/vclassSide.webp',
+      'https://silkride.co.uk/sclassSide.webp',
+      'https://silkride.co.uk/eclassSide.webp'
+    ],
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'London',

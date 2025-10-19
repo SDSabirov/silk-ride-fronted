@@ -339,6 +339,12 @@ useSchemaOrg([
   defineLocalBusiness({
     name: 'Silk Ride Stonehenge Chauffeur Service',
     description: 'Luxury chauffeur service and private tours to Stonehenge from London, featuring prehistoric monument visits and UNESCO World Heritage attractions.',
+    image: [
+      'https://silkride.co.uk/logo.svg',
+      'https://silkride.co.uk/vclassSide.webp',
+      'https://silkride.co.uk/sclassSide.webp',
+      'https://silkride.co.uk/eclassSide.webp'
+    ],
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'London',

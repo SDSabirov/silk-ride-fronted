@@ -336,6 +336,12 @@ useSchemaOrg([
   defineLocalBusiness({
     name: 'Silk Ride Heathrow Chauffeur Service',
     description: 'Premium luxury chauffeur service for Heathrow Airport transfers with professional drivers and luxury Mercedes vehicles.',
+    image: [
+      'https://silkride.co.uk/logo.svg',
+      'https://silkride.co.uk/vclassSide.webp',
+      'https://silkride.co.uk/sclassSide.webp',
+      'https://silkride.co.uk/eclassSide.webp'
+    ],
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'London',

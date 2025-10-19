@@ -314,6 +314,12 @@ useSchemaOrg([
   defineLocalBusiness({
     name: 'Silk Ride Stansted Chauffeur Service',
     description: 'Professional luxury chauffeur service for Stansted Airport transfers with experienced drivers and premium Mercedes vehicles.',
+    image: [
+      'https://silkride.co.uk/logo.svg',
+      'https://silkride.co.uk/vclassSide.webp',
+      'https://silkride.co.uk/sclassSide.webp',
+      'https://silkride.co.uk/eclassSide.webp'
+    ],
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'London',

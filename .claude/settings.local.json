@@ -6,7 +6,8 @@
       "Bash(npm run generate:*)",
       "Bash(sed:*)",
       "Bash(grep:*)",
-      "Bash(mv:*)"
+      "Bash(mv:*)",
+      "WebFetch(domain:unhead.unjs.io)"
     ],
     "deny": []
   }

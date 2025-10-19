@@ -284,6 +284,12 @@ useSchemaOrg([
   defineLocalBusiness({
     name: 'Silk Ride Gatwick Chauffeur Service',
     description: 'Premium luxury chauffeur service for Gatwick Airport transfers covering North & South terminals with professional drivers.',
+    image: [
+      'https://silkride.co.uk/logo.svg',
+      'https://silkride.co.uk/vclassSide.webp',
+      'https://silkride.co.uk/sclassSide.webp',
+      'https://silkride.co.uk/eclassSide.webp'
+    ],
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'London',

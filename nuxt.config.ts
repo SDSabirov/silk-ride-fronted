@@ -18,6 +18,10 @@ export default defineNuxtConfig({
       routes: ['/'],
     },
     compressPublicAssets: true,
+    routeRules: {
+      '/__sitemap__/en.xml': { redirect: '/__sitemap__/en-GB.xml' },
+      '/__sitemap__/ru.xml': { redirect: '/__sitemap__/ru-RU.xml' },
+    },
   },
   vite: {
     build: {
@@ -150,7 +154,6 @@ export default defineNuxtConfig({
       return []
     },
     exclude: [
-      '/__sitemap__/**',
       '/booking/cancel',
       '/booking/success',
       '/blog/**'

@@ -31,10 +31,9 @@
         <div class="mt-auto space-y-3">
           <NuxtLink
             :to="localePath(serviceDetailPath)"
-            :aria-label="learnMoreLabel"
             class="py-2 px-4 text-gold text-md border border-gold hover:bg-gold hover:text-black transition flex justify-center"
           >
-            Learn More
+            Learn More<span class="sr-only"> about {{ t(`pages.services.cards.${card}.title`) }}</span>
           </NuxtLink>
           <NuxtLink
             :to="localePath('/booking')"

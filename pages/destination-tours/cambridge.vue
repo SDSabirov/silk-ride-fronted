@@ -339,6 +339,12 @@ useSchemaOrg([
   defineLocalBusiness({
     name: 'Silk Ride Cambridge Chauffeur Service',
     description: 'Luxury chauffeur service and private tours to Cambridge from London, featuring university visits and historic attractions.',
+    image: [
+      'https://silkride.co.uk/logo.svg',
+      'https://silkride.co.uk/vclassSide.webp',
+      'https://silkride.co.uk/sclassSide.webp',
+      'https://silkride.co.uk/eclassSide.webp'
+    ],
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'London',
