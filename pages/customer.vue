@@ -25,7 +25,7 @@
 <script setup>
 import { onMounted, ref } from 'vue'
 import { useRoute } from 'vue-router'
-import cover from "@/assets/images/covers/business-trip.webp";
+const cover = "/images/covers/business-trip.webp"
 
 const siteKey = '7e3f3d3085b900d598bc40543d611575'
 const iframeSrc = ref(`https://app.silkride.co.uk/customer?site_key=${siteKey}`)

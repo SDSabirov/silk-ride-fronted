@@ -94,7 +94,8 @@
 <script setup>
 import { useSeo } from '~/utils/useSeo'
 import { useI18n, useLocalePath } from '#imports'
-import cover from "@/assets/images/covers/services-cover.webp"
+
+const cover = "/images/covers/services-cover.webp"
 
 const { t } = useI18n()
 const localePath = useLocalePath()

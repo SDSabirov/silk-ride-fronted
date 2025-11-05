@@ -1,6 +1,10 @@
 {
   "common": {
-    "fromPrice": "From £{price}/hour"
+    "fromPrice": "From £{price}/hour",
+    "learnMore": "Learn More",
+    "bookNow": "Book Now",
+    "viewDetails": "View Details →",
+    "getCustomQuote": "Get Custom Quote"
   },
   "navbar": {
     "home": "Home",
@@ -160,13 +164,6 @@
       "verified": "Verified Google Review",
       "viewAllReviews": "View All Google Reviews"
     }
-  },
-  "common": {
-    "fromPrice": "From £{price}/hour",
-    "learnMore": "Learn More",
-    "bookNow": "Book Now",
-    "viewDetails": "View Details →",
-    "getCustomQuote": "Get Custom Quote"
   },
   "servicesSection": {
     "title": "Our Most Requested Chauffeur Services",
@@ -824,17 +821,23 @@
   },
 
   "bookingForm": {
-    "heading": "Book Your Ride",
-      "buttons": {
-        "back": "Back",
-        "next": "Next",
-        "getQuote": "Get Quote"
-      },
+    "heading": "Book Your Luxury Journey",
+    "buttons": {
+      "back": "Back",
+      "next": "Continue",
+      "getQuote": "Get Quote"
+    },
     "hero": {
       "start": "Start Your",
-      "highlight": "Luxury Travel",
-      "subtitle": "Chauffeur services designed to redefine comfort and sophistication for every journey.",
-      "alt": "Luxury Chauffeur"
+      "highlight": "Luxury Journey",
+      "subtitle": "Experience premium chauffeur service with instant booking and professional drivers",
+      "alt": "Professional woman passenger in luxury chauffeur service"
+    },
+    "steps": {
+      "details": "Trip Details",
+      "vehicle": "Choose Vehicle",
+      "details_passenger": "Your Details",
+      "confirmation": "Confirmation"
     },
     "labels": {
       "selectAirport": "Select Airport",
@@ -925,6 +928,12 @@
         "point": "Point To Point",
         "hourly": "Hourly Hire"
       }
+    },
+    "success": {
+      "title": "Booking Request Sent!",
+      "message": "Thank you for choosing Silk Ride. We'll contact you shortly with a detailed quote and confirmation.",
+      "redirect": "Redirecting to homepage in a few seconds...",
+      "contact": "Need immediate assistance? Contact us:"
     }
   },
   "srOnly": {
@@ -1186,32 +1195,6 @@
         "rating": "Average Rating",
         "trips": "Happy Customers"
       }
-    }
-  },
-  "bookingForm": {
-    "heading": "Book Your Luxury Journey",
-    "hero": {
-      "alt": "Professional woman passenger in luxury chauffeur service",
-      "start": "Start Your",
-      "highlight": "Luxury Journey",
-      "subtitle": "Experience premium chauffeur service with instant booking and professional drivers"
-    },
-    "steps": {
-      "details": "Trip Details",
-      "vehicle": "Choose Vehicle",
-      "details_passenger": "Your Details", 
-      "confirmation": "Confirmation"
-    },
-    "buttons": {
-      "back": "Back",
-      "next": "Continue",
-      "getQuote": "Get Quote"
-    },
-    "success": {
-      "title": "Booking Request Sent!",
-      "message": "Thank you for choosing Silk Ride. We'll contact you shortly with a detailed quote and confirmation.",
-      "redirect": "Redirecting to homepage in a few seconds...",
-      "contact": "Need immediate assistance? Contact us:"
     }
   },
   "contact":{

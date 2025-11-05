@@ -310,7 +310,7 @@
 </template>
 
 <script setup>
-import cover from "@/assets/images/covers/about-us.webp";
+const cover = "/images/covers/about-us.webp"
 import { useI18n, useLocalePath } from '#imports';
 import { useSeo } from '~/utils/useSeo'
 

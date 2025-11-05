@@ -451,7 +451,7 @@
 </template>
 
 <script setup>
-import cover from "@/assets/images/covers/business-trip.webp";
+const cover = "/images/covers/business-trip.webp"
 import { useI18n, useLocalePath } from '#imports';
 import { useSeo } from '~/utils/useSeo'
 

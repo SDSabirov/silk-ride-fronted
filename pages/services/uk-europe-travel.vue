@@ -209,8 +209,8 @@
 import { useSeo } from '~/utils/useSeo'
 import { useLocalePath, useI18n } from '#imports'
 import { computed } from 'vue'
-import heroImage from '@/assets/images/covers/assist.webp'
-import serviceImage from '@/assets/images/covers/assist.webp'
+const heroImage = '/images/covers/assist.webp'
+const serviceImage = '/images/covers/assist.webp'
 
 const { t } = useI18n()
 const localePath = useLocalePath()

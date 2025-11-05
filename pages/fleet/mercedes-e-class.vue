@@ -50,11 +50,11 @@
 </template>
 
 <script setup>
-import hero from "~/assets/images/eclass.webp";
-import businessTripImg from "~/assets/images/covers/business-trip.webp";
-import assistImg from "~/assets/images/covers/assist.webp";
-import weddingImg from "~/assets/images/covers/wedding.webp";
-import aboutUsImg from "~/assets/images/covers/about-us.webp";
+const hero = "/images/eclass.webp"
+const businessTripImg = "/images/covers/business-trip.webp"
+const assistImg = "/images/covers/assist.webp"
+const weddingImg = "/images/covers/wedding.webp"
+const aboutUsImg = "/images/covers/about-us.webp"
 import { useI18n } from '#imports';
 import { useSeo } from '~/utils/useSeo'
 

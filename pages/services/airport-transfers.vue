@@ -355,8 +355,8 @@
 import { useSeo } from '~/utils/useSeo'
 import { useLocalePath, useI18n } from '#imports'
 import { computed } from 'vue'
-import heroImage from '@/assets/images/vclassjett.webp'
-import serviceImage from '@/assets/images/vclassjett.webp'
+const heroImage = '/images/vclassjett.webp'
+const serviceImage = '/images/vclassjett.webp'
 import { organizationSchema } from '~/utils/organizationSchema'
 
 const { t } = useI18n()

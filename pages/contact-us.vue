@@ -249,7 +249,7 @@
 </template>
 <script setup>
 import { useSeo } from '~/utils/useSeo'
-import cover from "@/assets/images/covers/contactus.webp";
+const cover = "/images/covers/contactus.webp"
 
 const form = ref({
   name: '',

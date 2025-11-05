@@ -26,10 +26,10 @@
   </div>
 </template>
 <script setup>
-import airportImage from '@/assets/images/vclassjett.webp'
-import corporateImage from '@/assets/images/covers/business-trip.webp'
-import hourlyImage from '@/assets/images/covers/about-us.webp'
-import longDistanceImage from '@/assets/images/covers/assist.webp'
-import weddingImage from '@/assets/images/covers/wedding.webp'
-import eventImage from '@/assets/images/womanpassenger.webp'
+const airportImage = '/images/vclassjett.webp'
+const corporateImage = '/images/covers/business-trip.webp'
+const hourlyImage = '/images/covers/about-us.webp'
+const longDistanceImage = '/images/covers/assist.webp'
+const weddingImage = '/images/covers/wedding.webp'
+const eventImage = '/images/womanpassenger.webp'
 </script>

@@ -86,9 +86,9 @@
 <script setup>
 import { storeToRefs } from "pinia";
 import { useBookingStore } from "@/stores/booking";
-import vclass from "~/assets/images/covers/business-trip.webp";
-import sclass from "~/assets/images/sclassBackground.webp";
-import eclass from "~/assets/images/eclass.webp";
+const vclass = "/images/covers/business-trip.webp"
+const sclass = "/images/sclassBackground.webp"
+const eclass = "/images/eclass.webp"
 import { useI18n } from 'vue-i18n';
 
 const { t } = useI18n();
