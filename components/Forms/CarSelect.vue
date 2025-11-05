@@ -10,7 +10,7 @@
       ]"
     >
       <!-- Car Image -->
-      <img :src="car.image" :alt="car.model" class="w-full h-40 object-cover mb-4" />
+      <NuxtImg :src="car.image" :alt="`Mercedes-Benz ${car.model} luxury chauffeur`" class="w-full h-40 object-cover mb-4" loading="lazy" width="380" height="200" />
 
       <!-- Brand and Model -->
       <h3 class="text-xl font-semibold text-gray-800 mb-4">

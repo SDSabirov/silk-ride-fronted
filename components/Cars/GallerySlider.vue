@@ -17,22 +17,22 @@
       class="mySwiper"
     >
       <swiper-slide class="max-w-screen-md ">
-        <img src="/assets/images/eclass1.webp" class="w-screen-lg"/>
+        <NuxtImg src="/images/eclass1.webp" alt="Mercedes E-Class luxury interior" class="w-screen-lg" loading="lazy" width="1200" height="800"/>
       </swiper-slide>
       <swiper-slide class="max-w-screen-md ">
-        <img src="~/assets/images/vclassjett.webp" class="w-screen-lg"/>
+        <NuxtImg src="/images/vclassjett.webp" alt="Mercedes V-Class chauffeur service" class="w-screen-lg" loading="lazy" width="1200" height="800"/>
       </swiper-slide>
       <swiper-slide class="max-w-screen-md ">
-        <img src="/assets/images/sclassBackground.webp" class="w-screen-lg"/>
+        <NuxtImg src="/images/sclassBackground.webp" alt="Mercedes S-Class premium sedan" class="w-screen-lg" loading="lazy" width="1200" height="800"/>
       </swiper-slide>
       <swiper-slide class="max-w-screen-md ">
-        <img src="/assets/images/covers/business-trip.webp" class="w-screen-lg"/>
+        <NuxtImg src="/images/covers/business-trip.webp" alt="Business travel chauffeur service" class="w-screen-lg" loading="lazy" width="1200" height="800"/>
       </swiper-slide>
       <swiper-slide class="max-w-screen-md ">
-        <img src="/assets/images/covers/assist.webp" class="w-screen-lg"/>
+        <NuxtImg src="/images/covers/assist.webp" alt="Professional luggage assistance service" class="w-screen-lg" loading="lazy" width="1200" height="800"/>
       </swiper-slide>
       <swiper-slide class="max-w-screen-md ">
-        <img src="/assets/images/covers/about-us.webp" class="w-screen-lg"/>
+        <NuxtImg src="/images/covers/about-us.webp" alt="Silk Ride luxury chauffeur fleet" class="w-screen-lg" loading="lazy" width="1200" height="800"/>
       </swiper-slide>
     </swiper>
   </div>

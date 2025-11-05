@@ -1,9 +1,12 @@
 <template>
     <div class="bg-white shadow-lg rounded-lg overflow-hidden flex flex-col">
-      <img
+      <NuxtImg
         :src="image"
         :alt="t(`pages.services.cards.${card}.title`)"
         class="w-full h-48 object-cover"
+        loading="lazy"
+        width="600"
+        height="300"
       />
   
       <div class="p-6 flex flex-col flex-grow">

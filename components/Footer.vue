@@ -5,7 +5,7 @@
         <!-- Company Info -->
         <div class="hidden md:block">
           <div class="flex space-x-2 items-center mb-4">
-            <img src="/logo.svg" alt="Silk Ride Logo" class="h-12 w-12" />
+            <NuxtImg src="/logo.svg" alt="Silk Ride Logo" class="h-12 w-12" loading="lazy" width="48" height="48" />
             <h2 class="text-3xl font-semibold text-gold">SILK RIDE</h2>
           </div>
           <p class="text-gray-300">

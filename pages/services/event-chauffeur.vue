@@ -207,10 +207,13 @@
           </div>
           
           <div>
-            <img
-              src="@/assets/images/covers/business-trip.webp"
-              alt="Corporate event transportation"
+            <NuxtImg
+              src="/images/covers/business-trip.webp"
+              alt="Corporate event luxury chauffeur transportation"
               class="w-full h-80 object-cover rounded-lg shadow-lg"
+              loading="lazy"
+              width="800"
+              height="500"
             />
           </div>
         </div>

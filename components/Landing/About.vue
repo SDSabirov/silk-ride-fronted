@@ -24,8 +24,8 @@
         <div class="grid grid-cols-2 grid-rows-2 gap-4 h-[500px]">
           <!-- Main large image -->
           <div class="row-span-2 rounded-lg overflow-hidden">
-            <img
-              src="~/assets/images/covers/business-trip.webp"
+            <NuxtImg
+              src="/images/covers/business-trip.webp"
               alt="Professional business chauffeur service"
               class="object-cover w-full h-full"
               loading="lazy"
@@ -36,8 +36,8 @@
 
           <!-- Top right image -->
           <div class="rounded-lg overflow-hidden">
-            <img
-              src="~/assets/images/covers/assist.webp"
+            <NuxtImg
+              src="/images/covers/assist.webp"
               alt="Luxury chauffeur luggage assistance"
               class="object-cover w-full h-full"
               loading="lazy"
@@ -48,8 +48,8 @@
 
           <!-- Bottom right image -->
           <div class="rounded-lg overflow-hidden">
-            <img
-              src="~/assets/images/covers/fleet.webp"
+            <NuxtImg
+              src="/images/covers/fleet.webp"
               alt="Premium Mercedes fleet vehicles"
               class="object-cover w-full h-full"
               loading="lazy"

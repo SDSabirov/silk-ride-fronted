@@ -21,9 +21,12 @@
         >
           <!-- Background Image -->
           <div class="aspect-[3/4] sm:aspect-[4/3] lg:aspect-[4/3] relative">
-            <img 
-              :src="occasion.image" 
+            <NuxtImg
+              :src="occasion.image"
               :alt="occasion.title"
+              loading="lazy"
+              width="800"
+              height="600"
               class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
             />
             <!-- Enhanced Overlay for better readability -->

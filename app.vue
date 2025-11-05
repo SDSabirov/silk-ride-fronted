@@ -28,7 +28,7 @@ const { pending } = await useLazyAsyncData('app-init', () => Promise.resolve(tru
 useHead({
   link: [
     // Preload critical images for better performance
-    { rel: 'preload', href: '/assets/images/vclassjett.webp', as: 'image', type: 'image/webp' },
+    { rel: 'preload', href: '/images/vclassjett.webp', as: 'image', type: 'image/webp' },
     { rel: 'preload', href: '/logo.svg', as: 'image', type: 'image/svg+xml' },
     // DNS prefetch for external resources
     { rel: 'dns-prefetch', href: '//fonts.googleapis.com' },

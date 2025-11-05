@@ -2,10 +2,13 @@
   <section class="relative h-[60vh]">
     <!-- Background -->
     <div class="absolute inset-0 overflow-hidden">
-      <img
-        src="/assets/images/womanpassenger.webp"
+      <NuxtImg
+        src="/images/womanpassenger.webp"
         :alt="t('bookingForm.hero.alt')"
         class="w-full h-full object-cover"
+        loading="eager"
+        width="1920"
+        height="1080"
       />
       <div class="absolute inset-0 bg-black bg-opacity-30"></div>
     </div>

@@ -88,10 +88,13 @@
         </div>
 
         <div class="lg:order-first">
-          <img
+          <NuxtImg
             :src="serviceImage"
-            alt="Wedding Chauffeur Service"
+            alt="Luxury wedding chauffeur service with Mercedes vehicles"
             class="w-full h-96 object-cover rounded-lg shadow-lg"
+            loading="lazy"
+            width="800"
+            height="600"
           />
         </div>
       </div>
@@ -104,7 +107,7 @@
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div class="bg-white p-6 rounded-lg shadow-md text-center">
-            <img src="@/assets/images/sclass.webp" alt="Mercedes S-Class" class="w-full h-48 object-cover rounded-lg mb-4">
+            <NuxtImg src="/images/sclass.webp" alt="Mercedes S-Class wedding car" class="w-full h-48 object-cover rounded-lg mb-4" loading="lazy" width="600" height="300" />
             <h3 class="text-xl font-semibold mb-3">Mercedes S-Class</h3>
             <p class="text-gray-600 mb-4">Ultimate luxury for the bride and groom. Elegant, sophisticated, and perfect for grand entrances.</p>
             <ul class="text-sm text-gray-600 space-y-1">
@@ -116,7 +119,7 @@
           </div>
           
           <div class="bg-white p-6 rounded-lg shadow-md text-center">
-            <img src="@/assets/images/eclass.webp" alt="Mercedes E-Class" class="w-full h-48 object-cover rounded-lg mb-4">
+            <NuxtImg src="/images/eclass.webp" alt="Mercedes E-Class bridal car" class="w-full h-48 object-cover rounded-lg mb-4" loading="lazy" width="600" height="300" />
             <h3 class="text-xl font-semibold mb-3">Mercedes E-Class</h3>
             <p class="text-gray-600 mb-4">Stylish elegance for bridal party and family members. Perfect balance of luxury and comfort.</p>
             <ul class="text-sm text-gray-600 space-y-1">
@@ -128,7 +131,7 @@
           </div>
           
           <div class="bg-white p-6 rounded-lg shadow-md text-center">
-            <img src="@/assets/images/transparentcars/vclass.jpg" alt="Mercedes V-Class" class="w-full h-48 object-cover rounded-lg mb-4">
+            <NuxtImg src="/images/transparentcars/vclass.jpg" alt="Mercedes V-Class wedding party transport" class="w-full h-48 object-cover rounded-lg mb-4" loading="lazy" width="600" height="300" />
             <h3 class="text-xl font-semibold mb-3">Mercedes V-Class</h3>
             <p class="text-gray-600 mb-4">Spacious luxury for larger bridal parties and family groups. Comfort for everyone.</p>
             <ul class="text-sm text-gray-600 space-y-1">
@@ -191,10 +194,13 @@
           </div>
           
           <div>
-            <img
-              src="@/assets/images/covers/wedding.webp"
-              alt="Wedding decoration"
+            <NuxtImg
+              src="/images/covers/wedding.webp"
+              alt="Luxury wedding chauffeur car decoration"
               class="w-full h-80 object-cover rounded-lg shadow-lg"
+              loading="lazy"
+              width="800"
+              height="500"
             />
           </div>
         </div>

@@ -156,10 +156,13 @@
           </div>
           
           <div>
-            <img
-              src="@/assets/images/eclass.webp"
-              alt="Mercedes E-Class Interior"
+            <NuxtImg
+              src="/images/eclass.webp"
+              alt="Mercedes E-Class luxury interior for hourly hire"
               class="w-full h-80 object-cover rounded-lg shadow-lg"
+              loading="lazy"
+              width="800"
+              height="500"
             />
           </div>
         </div>

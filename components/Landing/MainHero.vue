@@ -49,14 +49,15 @@
               <!-- Main image -->
               <div class="relative overflow-hidden rounded-3xl shadow-2xl">
                 <div class="aspect-[4/5] relative">
-                  <img
-                    src="~/assets/images/vclassjett.webp"
+                  <NuxtImg
+                    src="/images/vclassjett.webp"
                     alt="Luxury Mercedes Chauffeur Service"
                     class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                     loading="eager"
                     fetchpriority="high"
                     width="800"
                     height="1000"
+                    preset="hero"
                   />
 
                   <!-- Dynamic gradient overlay -->

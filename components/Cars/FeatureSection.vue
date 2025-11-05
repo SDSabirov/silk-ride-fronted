@@ -23,10 +23,12 @@
       </p>
     </div>
     <div :class="{ 'md:order-1': reverseLayout }" class="overflow-hidden rounded-lg">
-      <img 
-        :src="image" 
-        :alt="imageAlt" 
-        loading="lazy" 
+      <NuxtImg
+        :src="image"
+        :alt="imageAlt"
+        loading="lazy"
+        width="800"
+        height="600"
         class="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
       />
     </div>

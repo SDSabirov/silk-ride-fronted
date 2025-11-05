@@ -21,7 +21,7 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <!-- E-Class -->
           <div class="relative overflow-hidden shadow-lg bg-gradient-to-b from-green-200 group h-[700px]">
-            <img src="/assets/images/eclass.webp" alt="Luxury Sedan" class="w-full h-full object-cover" />
+            <NuxtImg src="/images/eclass.webp" alt="Mercedes E-Class luxury sedan" class="w-full h-full object-cover" loading="lazy" width="800" height="1000" />
 
             <div class="absolute inset-0 flex items-center justify-center bg-black/50 text-white text-xl font-semibold transition-opacity duration-300 group-hover:opacity-0">
               <h3 class="text-4xl">{{ $t('servicesSection.eClass.title') }}</h3>
@@ -46,7 +46,7 @@
 
           <!-- V-Class -->
           <div class="relative overflow-hidden shadow-lg bg-gradient-to-b from-gold group h-[700px]">
-            <img src="/assets/images/covers/business-trip.webp" alt="Luxury Sedan" class="w-full h-full object-cover" />
+            <NuxtImg src="/images/covers/business-trip.webp" alt="Mercedes V-Class business travel" class="w-full h-full object-cover" loading="lazy" width="800" height="1000" />
 
             <div class="absolute inset-0 flex items-center justify-center bg-black/50 text-white text-xl font-semibold transition-opacity duration-300 group-hover:opacity-0">
               <h3 class="text-4xl">{{ $t('servicesSection.vClass.title') }}</h3>
@@ -71,7 +71,7 @@
 
           <!-- S-Class -->
           <div class="relative overflow-hidden shadow-lg bg-gradient-to-b from-green-200 group row-span-1 h-[700px]">
-            <img src="/assets/images/sclassBackground.webp" alt="Luxury Sedan" class="w-full h-full object-cover" />
+            <NuxtImg src="/images/sclassBackground.webp" alt="Mercedes S-Class luxury flagship" class="w-full h-full object-cover" loading="lazy" width="800" height="1000" />
 
             <div class="absolute inset-0 flex items-center justify-center bg-black/50 text-white text-xl font-semibold transition-opacity duration-300 group-hover:opacity-0">
               <h3 class="text-4xl">{{ $t('servicesSection.sClass.title') }}</h3>

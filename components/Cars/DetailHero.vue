@@ -3,10 +3,13 @@
     <section class="relative min-h-screen w-full overflow-hidden">
       <!-- Background Image -->
       <div class="absolute inset-0">
-        <img 
-          :src="img" 
-          :alt="altText" 
-          class="w-full h-full object-cover transform scale-105 hover:scale-100 transition-transform duration-700" 
+        <NuxtImg
+          :src="img"
+          :alt="altText"
+          class="w-full h-full object-cover transform scale-105 hover:scale-100 transition-transform duration-700"
+          loading="eager"
+          width="1920"
+          height="1080"
         />
         <!-- Enhanced Gradient Overlay -->
         <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/30 to-black/80"></div>

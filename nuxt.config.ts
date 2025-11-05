@@ -84,6 +84,8 @@ export default defineNuxtConfig({
   css: ["~/assets/css/main.css", "boxicons/css/boxicons.min.css"],
   modules: ["@nuxtjs/seo", "@nuxtjs/google-fonts", "@nuxt/image", "@pinia/nuxt", "@nuxtjs/i18n", 'nuxt-gtag'],
   gtag: {
+    // Optimize loading strategy for better performance
+    loadingStrategy: 'defer', // Defer loading for better Time to Interactive
     tags:[
       {
       id: 'G-KGTCEM0MZ4',
@@ -94,10 +96,9 @@ export default defineNuxtConfig({
       },
       {
       id:'AW-16982457254',
-  
+      // Google Ads conversion tracking
       }
     ]
-    , 
   },
   postcss: {
     plugins: {

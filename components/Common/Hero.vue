@@ -62,11 +62,13 @@
             <!-- Simple elevated card with subtle shadow -->
             <div class="relative overflow-hidden rounded-2xl shadow-xl">
               <div class="aspect-[3/4] relative">
-                <img
+                <NuxtImg
                   :src="image"
-                  :alt="page || 'Silk Ride'"
+                  :alt="page || 'Silk Ride luxury chauffeur service'"
                   class="absolute inset-0 w-full h-full object-cover"
                   loading="eager"
+                  width="800"
+                  height="1000"
                 />
                 <!-- Minimal overlay -->
                 <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>

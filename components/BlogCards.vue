@@ -7,11 +7,13 @@
     >
       <!-- Image Container -->
       <div class="relative overflow-hidden aspect-[16/10]">
-        <img
+        <NuxtImg
           :src="post.image"
           :alt="post.title"
           class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
           loading="lazy"
+          width="800"
+          height="500"
         />
         <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         

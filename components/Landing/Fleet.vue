@@ -16,7 +16,7 @@
         <!-- Airport Transfers -->
         <div class="bg-white rounded-lg overflow-hidden border border-gray-100">
           <div class="h-56 relative overflow-hidden">
-            <img src="~/assets/images/vclassjett.webp" alt="Airport Transfer Service"
+            <NuxtImg src="/images/vclassjett.webp" alt="Airport Transfer Service"
                  class="w-full h-full object-cover"
                  loading="lazy"
                  width="600"
@@ -52,7 +52,7 @@
         <!-- Corporate Travel -->
         <div class="bg-white rounded-lg overflow-hidden border border-gray-100">
           <div class="h-56 relative overflow-hidden">
-            <img src="~/assets/images/covers/business-trip.webp" alt="Corporate Travel Service"
+            <NuxtImg src="/images/covers/business-trip.webp" alt="Corporate Travel Service"
                  class="w-full h-full object-cover"
                  loading="lazy"
                  width="600"
@@ -88,7 +88,7 @@
         <!-- Wedding & Events -->
         <div class="bg-white rounded-lg overflow-hidden border border-gray-100">
           <div class="h-56 relative overflow-hidden">
-            <img src="~/assets/images/covers/wedding.webp" alt="Wedding & Event Service"
+            <NuxtImg src="/images/covers/wedding.webp" alt="Wedding & Event Service"
                  class="w-full h-full object-cover"
                  loading="lazy"
                  width="600"
@@ -129,7 +129,7 @@
           <!-- E-Class -->
           <div class="text-center">
             <div class="relative overflow-hidden rounded-lg mb-4">
-              <img src="~/assets/images/eclass.webp" alt="Mercedes E-Class"
+              <NuxtImg src="/images/eclass.webp" alt="Mercedes E-Class"
                    class="w-full h-48 object-cover"
                    loading="lazy"
                    width="500"
@@ -151,7 +151,7 @@
           <!-- S-Class -->
           <div class="text-center">
             <div class="relative overflow-hidden rounded-lg mb-4">
-              <img src="~/assets/images/sclassBackground.webp" alt="Mercedes S-Class"
+              <NuxtImg src="/images/sclassBackground.webp" alt="Mercedes S-Class"
                    class="w-full h-48 object-cover"
                    loading="lazy"
                    width="500"
@@ -173,7 +173,7 @@
           <!-- V-Class -->
           <div class="text-center">
             <div class="relative overflow-hidden rounded-lg mb-4">
-              <img src="~/assets/images/vclassjett.webp" alt="Mercedes V-Class"
+              <NuxtImg src="/images/vclassjett.webp" alt="Mercedes V-Class"
                    class="w-full h-48 object-cover"
                    loading="lazy"
                    width="500"

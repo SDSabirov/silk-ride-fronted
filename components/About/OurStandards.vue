@@ -17,7 +17,7 @@
           </p>
         </div>
         <div class="rounded-md overflow-hidden">
-          <img src="/assets/images/covers/fleet.webp" alt="V-Class fleet" />
+          <NuxtImg src="/images/covers/fleet.webp" alt="Mercedes V-Class luxury fleet" loading="lazy" width="800" height="600" />
         </div>
       </div>
 
@@ -32,7 +32,7 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 w-full mt-10 mb-10 gap-8 text-center">
         <!-- Badge 1 -->
         <div class="flex flex-col items-center max-w-[420px] mx-auto space-y-2">
-          <img src="/assets/icons/certificate.svg" class="w-[58px]" alt="Private Hire License" />
+          <NuxtImg src="/icons/certificate.svg" class="w-[58px]" alt="Private Hire License certification" width="58" height="58" loading="lazy" />
           <h4 class="text-md text-gray-900 capitalize">
             {{ t('pages.about.standards.badges.licenceTitle') }}
           </h4>
@@ -43,7 +43,7 @@
 
         <!-- Badge 2 -->
         <div class="flex flex-col items-center max-w-[420px] mx-auto space-y-2">
-          <img src="/assets/icons/id-card.svg" class="w-[58px]" alt="License Chauffeur" />
+          <NuxtImg src="/icons/id-card.svg" class="w-[58px]" alt="Licensed chauffeur ID card" width="58" height="58" loading="lazy" />
           <h4 class="text-md text-gray-900 capitalize">
             {{ t('pages.about.standards.badges.chauffeurTitle') }}
           </h4>
@@ -54,7 +54,7 @@
 
         <!-- Badge 3 -->
         <div class="flex flex-col items-center max-w-[420px] mx-auto space-y-2">
-          <img src="/assets/icons/profile-tick.svg" class="w-[58px]" alt="Background Check" />
+          <NuxtImg src="/icons/profile-tick.svg" class="w-[58px]" alt="Background check verification" width="58" height="58" loading="lazy" />
           <h4 class="text-md text-gray-900 capitalize">
             {{ t('pages.about.standards.badges.checkTitle') }}
           </h4>
@@ -65,7 +65,7 @@
 
         <!-- Badge 4 -->
         <div class="flex flex-col items-center max-w-[420px] mx-auto space-y-2">
-          <img src="/assets/icons/award.svg" class="w-[58px]" alt="Experience" />
+          <NuxtImg src="/icons/award.svg" class="w-[58px]" alt="Award winning experience" width="58" height="58" loading="lazy" />
           <h4 class="text-md text-gray-900 capitalize">
             {{ t('pages.about.standards.badges.experienceTitle') }}
           </h4>

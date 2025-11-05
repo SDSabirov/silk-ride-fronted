@@ -4,7 +4,7 @@
         @click="toggleDropdown"
         class="flex items-center px-2 md:px-4 py-2 rounded-md bg-transparent text-white shadow"
       >
-        <img :src="currentFlag" alt="flag" class="w-5 h-5 mr-2" />
+        <NuxtImg :src="currentFlag" alt="language flag" class="w-5 h-5 mr-2" width="20" height="20" loading="eager" />
         {{ currentLabel }}
         <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -19,7 +19,7 @@
             @click="changeLanguage(locale.code)"
             class="flex items-center px-4 py-2 cursor-pointer hover:text-gold"
           >
-            <img :src="locale.flag" alt="flag" class="w-5 h-5 mr-2" />
+            <NuxtImg :src="locale.flag" :alt="`${locale.label} flag`" class="w-5 h-5 mr-2" width="20" height="20" loading="lazy" />
             {{ locale.label }}
           </li>
         </ul>
