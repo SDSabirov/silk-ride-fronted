@@ -7,7 +7,8 @@
       "Bash(sed:*)",
       "Bash(grep:*)",
       "Bash(mv:*)",
-      "WebFetch(domain:unhead.unjs.io)"
+      "WebFetch(domain:unhead.unjs.io)",
+      "Bash(node:*)"
     ],
     "deny": []
   }
