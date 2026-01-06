@@ -2,7 +2,7 @@
   <section class="relative py-20 bg-white overflow-hidden">
     <div class="absolute top-0 right-0 w-80 h-80 bg-gold/5 rounded-full blur-3xl"></div>
 
-    <div class="relative max-w-screen-xl mx-auto px-6">
+    <div class="relative max-w-screen-2xl mx-auto px-6">
       <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
         <div class="text-center">
           <div class="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gold/10 mb-4">

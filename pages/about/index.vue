@@ -11,7 +11,7 @@
 
     <!-- Company Introduction -->
     <section class="py-16">
-      <div class="max-w-screen-xl mx-auto px-6">
+      <div class="max-w-screen-2xl mx-auto px-6">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
@@ -59,7 +59,7 @@
 
     <!-- Company Stats -->
     <section class="py-16 bg-gray-50">
-      <div class="max-w-screen-xl mx-auto px-6">
+      <div class="max-w-screen-2xl mx-auto px-6">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
           <div class="bg-white p-6 rounded-lg shadow-md">
             <div class="text-4xl font-bold text-gold mb-2">50,000+</div>
@@ -86,7 +86,7 @@
 
     <!-- Our Story -->
     <section class="py-16">
-      <div class="max-w-screen-xl mx-auto px-6">
+      <div class="max-w-screen-2xl mx-auto px-6">
         <div class="text-center mb-12">
           <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             {{ t('pages.about.story.title') }}
@@ -142,7 +142,7 @@
 
     <!-- Our Values -->
     <section class="py-16 bg-gray-50">
-      <div class="max-w-screen-xl mx-auto px-6">
+      <div class="max-w-screen-2xl mx-auto px-6">
         <div class="text-center mb-12">
           <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             {{ t('pages.about.values.title') }}
@@ -182,7 +182,7 @@
 
     <!-- Our Standards & Certifications -->
     <section class="py-16">
-      <div class="max-w-screen-xl mx-auto px-6">
+      <div class="max-w-screen-2xl mx-auto px-6">
         <div class="text-center mb-12">
           <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             {{ t('pages.about.standards.title') }}
@@ -240,7 +240,7 @@
 
     <!-- Team Section -->
     <section class="py-16 bg-gray-50">
-      <div class="max-w-screen-xl mx-auto px-6">
+      <div class="max-w-screen-2xl mx-auto px-6">
         <div class="text-center mb-12">
           <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             {{ t('pages.about.team.title') }}
@@ -280,7 +280,7 @@
 
     <!-- CTA Section -->
     <section class="py-16 bg-gray-900 text-white">
-      <div class="max-w-screen-xl mx-auto px-6 text-center">
+      <div class="max-w-screen-2xl mx-auto px-6 text-center">
         <h2 class="text-3xl md:text-4xl font-bold mb-4">
           {{ t('pages.about.cta.title') }}
         </h2>

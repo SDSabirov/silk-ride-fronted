@@ -10,7 +10,7 @@
     />
 
     <!-- Service Details Section -->
-    <section class="max-w-screen-xl mx-auto py-16 px-6">
+    <section class="max-w-screen-2xl mx-auto py-16 px-6">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div>
           <h2 class="text-3xl font-bold mb-6">Luxury Wedding Chauffeur Service London</h2>
@@ -102,7 +102,7 @@
 
     <!-- Vehicle Options Section -->
     <section class="bg-gray-50 py-16">
-      <div class="max-w-screen-xl mx-auto px-6">
+      <div class="max-w-screen-2xl mx-auto px-6">
         <h2 class="text-3xl font-bold text-center mb-12">Perfect Vehicles for Your Wedding</h2>
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -147,7 +147,7 @@
 
     <!-- Special Services Section -->
     <section class="py-16">
-      <div class="max-w-screen-xl mx-auto px-6">
+      <div class="max-w-screen-2xl mx-auto px-6">
         <h2 class="text-3xl font-bold text-center mb-12">Special Wedding Services</h2>
         
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -209,7 +209,7 @@
 
     <!-- Testimonials Section -->
     <section class="bg-gray-50 py-16">
-      <div class="max-w-screen-xl mx-auto px-6">
+      <div class="max-w-screen-2xl mx-auto px-6">
         <h2 class="text-3xl font-bold text-center mb-12">What Our Couples Say</h2>
         
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -232,7 +232,7 @@
 
     <!-- Planning Timeline Section -->
     <section class="py-16">
-      <div class="max-w-screen-xl mx-auto px-6">
+      <div class="max-w-screen-2xl mx-auto px-6">
         <h2 class="text-3xl font-bold text-center mb-12">Wedding Planning Timeline</h2>
         
         <div class="max-w-3xl mx-auto">
@@ -273,7 +273,7 @@
 
     <!-- Wedding Pricing Section -->
     <section class="py-16 bg-white">
-      <div class="max-w-screen-xl mx-auto px-6">
+      <div class="max-w-screen-2xl mx-auto px-6">
         <h2 class="text-3xl font-bold text-center mb-12">Wedding Car Hire Pricing & Packages</h2>
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -322,7 +322,7 @@
 
     <!-- Popular Wedding Venues Section -->
     <section class="py-16 bg-gray-50">
-      <div class="max-w-screen-xl mx-auto px-6">
+      <div class="max-w-screen-2xl mx-auto px-6">
         <h2 class="text-3xl font-bold text-center mb-12">Popular London Wedding Venues We Serve</h2>
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -375,7 +375,7 @@
 
     <!-- Wedding FAQ Section -->
     <section class="py-16 bg-white">
-      <div class="max-w-screen-xl mx-auto px-6">
+      <div class="max-w-screen-2xl mx-auto px-6">
         <h2 class="text-3xl font-bold text-center mb-12">Wedding Chauffeur Service FAQ</h2>
         
         <div class="max-w-4xl mx-auto space-y-6">
@@ -433,7 +433,7 @@
 
     <!-- CTA Section -->
     <section class="bg-gray-50 py-16">
-      <div class="max-w-screen-xl mx-auto px-6 text-center">
+      <div class="max-w-screen-2xl mx-auto px-6 text-center">
         <h2 class="text-3xl font-bold mb-4">Create Your Perfect Wedding Day Transportation</h2>
         <p class="text-lg text-gray-600 mb-8">
           Let our experienced wedding specialists handle every detail of your transportation, so you can focus on 

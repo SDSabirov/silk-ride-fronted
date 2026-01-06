@@ -10,7 +10,7 @@
     />
 
     <!-- Service Details Section -->
-    <section class="max-w-screen-xl mx-auto py-16 px-6">
+    <section class="max-w-screen-2xl mx-auto py-16 px-6">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div>
           <h2 class="text-3xl font-bold mb-6">Premium Executive Corporate Chauffeur Service London</h2>
@@ -102,7 +102,7 @@
 
     <!-- Features Section -->
     <section class="bg-gray-50 py-16">
-      <div class="max-w-screen-xl mx-auto px-6">
+      <div class="max-w-screen-2xl mx-auto px-6">
         <h2 class="text-3xl font-bold text-center mb-12">Why Executives Choose Silk Ride</h2>
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -135,7 +135,7 @@
 
     <!-- Benefits Section -->
     <section class="py-16">
-      <div class="max-w-screen-xl mx-auto px-6">
+      <div class="max-w-screen-2xl mx-auto px-6">
         <h2 class="text-3xl font-bold text-center mb-12">Corporate Travel Benefits</h2>
         
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -188,7 +188,7 @@
 
     <!-- Corporate Pricing Section -->
     <section class="py-16 bg-white">
-      <div class="max-w-screen-xl mx-auto px-6">
+      <div class="max-w-screen-2xl mx-auto px-6">
         <h2 class="text-3xl font-bold text-center mb-12">Corporate Chauffeur Service Pricing</h2>
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -237,7 +237,7 @@
 
     <!-- Corporate FAQ Section -->
     <section class="py-16 bg-gray-50">
-      <div class="max-w-screen-xl mx-auto px-6">
+      <div class="max-w-screen-2xl mx-auto px-6">
         <h2 class="text-3xl font-bold text-center mb-12">Corporate Chauffeur Service FAQ</h2>
         
         <div class="max-w-4xl mx-auto space-y-6">
@@ -291,7 +291,7 @@
 
     <!-- Industry Solutions Section -->
     <section class="py-16 bg-white">
-      <div class="max-w-screen-xl mx-auto px-6">
+      <div class="max-w-screen-2xl mx-auto px-6">
         <h2 class="text-3xl font-bold text-center mb-12">Industry-Specific Corporate Solutions</h2>
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -332,7 +332,7 @@
 
     <!-- CTA Section -->
     <section class="bg-gray-50 py-16">
-      <div class="max-w-screen-xl mx-auto px-6 text-center">
+      <div class="max-w-screen-2xl mx-auto px-6 text-center">
         <h2 class="text-3xl font-bold mb-4">Elevate Your Corporate Travel Experience</h2>
         <p class="text-lg text-gray-600 mb-8">
           Join hundreds of businesses and executives who trust Silk Ride for professional, reliable corporate transportation.

@@ -19,7 +19,7 @@
     </div>
 
     <!-- Content -->
-    <div class="relative z-10 max-w-screen-xl mx-auto px-6 py-20 w-full">
+    <div class="relative z-10 max-w-screen-2xl mx-auto px-6 py-20 w-full">
       <div class="max-w-4xl mx-auto text-center">
         <!-- Tagline -->
         <p class="animate-reveal text-gold text-sm md:text-base font-semibold tracking-[0.2em] uppercase mb-6">

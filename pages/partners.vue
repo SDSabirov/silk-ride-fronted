@@ -11,7 +11,7 @@
 
     <!-- Partners Introduction -->
     <section class="py-16">
-      <div class="max-w-screen-xl mx-auto px-6">
+      <div class="max-w-screen-2xl mx-auto px-6">
         <div class="text-center mb-12">
           <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             {{ $t('pages.about.partners.intro.title') }}
@@ -70,7 +70,7 @@
 
     <!-- Trusted Organizations -->
     <section class="py-16 bg-gray-50">
-      <div class="max-w-screen-xl mx-auto px-6">
+      <div class="max-w-screen-2xl mx-auto px-6">
         <div class="text-center mb-12">
           <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             {{ $t('pages.about.partners.trusted.title') }}
@@ -170,7 +170,7 @@
 
     <!-- Partner Benefits -->
     <section class="py-16">
-      <div class="max-w-screen-xl mx-auto px-6">
+      <div class="max-w-screen-2xl mx-auto px-6">
         <div class="text-center mb-12">
           <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             {{ $t('pages.about.partners.benefits.title') }}
@@ -218,7 +218,7 @@
 
     <!-- Current Partners -->
     <section class="py-16 bg-gray-50">
-      <div class="max-w-screen-xl mx-auto px-6">
+      <div class="max-w-screen-2xl mx-auto px-6">
         <div class="text-center mb-12">
           <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             {{ $t('pages.about.partners.current.title') }}
@@ -285,7 +285,7 @@
 
     <!-- Partnership Types -->
     <section class="py-16">
-      <div class="max-w-screen-xl mx-auto px-6">
+      <div class="max-w-screen-2xl mx-auto px-6">
         <div class="text-center mb-12">
           <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             {{ $t('pages.about.partners.types.title') }}
@@ -373,7 +373,7 @@
 
     <!-- Partnership Process -->
     <section class="py-16">
-      <div class="max-w-screen-xl mx-auto px-6">
+      <div class="max-w-screen-2xl mx-auto px-6">
         <div class="text-center mb-12">
           <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             {{ $t('pages.about.partners.process.title') }}
@@ -421,7 +421,7 @@
 
     <!-- CTA Section -->
     <section class="py-16 bg-gray-900 text-white">
-      <div class="max-w-screen-xl mx-auto px-6 text-center">
+      <div class="max-w-screen-2xl mx-auto px-6 text-center">
         <h2 class="text-3xl md:text-4xl font-bold mb-4">
           {{ $t('pages.about.partners.cta.title') }}
         </h2>

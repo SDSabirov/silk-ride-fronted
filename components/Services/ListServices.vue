@@ -1,5 +1,5 @@
 <template>
-  <div class="services-grid max-w-screen-xl mx-auto p-6">
+  <div class="services-grid max-w-screen-2xl mx-auto p-6">
     <div class="flex items-center w-full mb-4 justify-center mb-8">
       <div class="w-full flex items-center justify-center">
         <div class="h-3 w-3 bg-gold rotate-45"></div>

@@ -1,7 +1,7 @@
 <template>
     <div>
         <Navbar />
-        <div class="w-full py-12 pt-[150px] mx-auto max-w-screen-xl">
+        <div class="w-full py-12 pt-[150px] mx-auto max-w-screen-2xl">
             <FaqSection :items="faqs" />
         </div>
         

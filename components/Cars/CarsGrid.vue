@@ -5,7 +5,7 @@
       <div class="w-1/2 h-full bg-gray-100"></div>
       <div class="w-1/2 h-full bg-gray-200"></div>
     </div>
-    <div class="container mx-auto max-w-screen-xl px-4 text-center z-20 w-full">
+    <div class="container mx-auto max-w-screen-2xl px-4 text-center z-20 w-full">
       <div class="flex flex-col w-full items-center justify-center">
         <h2
           class="text-2xl md:text-4xl font-semibold text-gray-900 mb-10 text-center w-full"

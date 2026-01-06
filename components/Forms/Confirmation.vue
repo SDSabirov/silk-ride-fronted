@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-screen-xl mx-auto p-6 bg-white w-full">
+  <div class="max-w-screen-2xl mx-auto p-6 bg-white w-full">
     <div class="grid grid-cols-1 gap-6">
 
       <!-- Full Name -->

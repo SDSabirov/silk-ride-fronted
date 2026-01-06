@@ -1,5 +1,5 @@
 <template>
-  <form @submit.prevent class="max-w-screen-xl mx-auto p-6 bg-white w-full">
+  <form @submit.prevent class="max-w-screen-2xl mx-auto p-6 bg-white w-full">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       <!-- Pickup Location -->
       <div class="mb-4 relative h-14">

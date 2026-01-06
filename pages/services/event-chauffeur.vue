@@ -10,7 +10,7 @@
     />
 
     <!-- Service Details Section -->
-    <section class="max-w-screen-xl mx-auto py-16 px-6">
+    <section class="max-w-screen-2xl mx-auto py-16 px-6">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div>
           <h2 class="text-3xl font-bold mb-6">Luxury Event Transportation</h2>
@@ -78,7 +78,7 @@
 
     <!-- Popular Events Section -->
     <section class="bg-gray-50 py-16">
-      <div class="max-w-screen-xl mx-auto px-6">
+      <div class="max-w-screen-2xl mx-auto px-6">
         <h2 class="text-3xl font-bold text-center mb-12">Popular London Events We Serve</h2>
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -135,7 +135,7 @@
 
     <!-- Service Features Section -->
     <section class="py-16">
-      <div class="max-w-screen-xl mx-auto px-6">
+      <div class="max-w-screen-2xl mx-auto px-6">
         <h2 class="text-3xl font-bold text-center mb-12">Why Choose Our Event Service</h2>
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -176,7 +176,7 @@
 
     <!-- Corporate Events Section -->
     <section class="bg-gray-50 py-16">
-      <div class="max-w-screen-xl mx-auto px-6">
+      <div class="max-w-screen-2xl mx-auto px-6">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <h2 class="text-3xl font-bold mb-6">Corporate Event Transportation</h2>
@@ -222,7 +222,7 @@
 
     <!-- Booking Process Section -->
     <section class="py-16">
-      <div class="max-w-screen-xl mx-auto px-6">
+      <div class="max-w-screen-2xl mx-auto px-6">
         <h2 class="text-3xl font-bold text-center mb-12">Simple Event Booking Process</h2>
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -255,7 +255,7 @@
 
     <!-- CTA Section -->
     <section class="bg-gray-50 py-16">
-      <div class="max-w-screen-xl mx-auto px-6 text-center">
+      <div class="max-w-screen-2xl mx-auto px-6 text-center">
         <h2 class="text-3xl font-bold mb-4">Make Your Event Unforgettable</h2>
         <p class="text-lg text-gray-600 mb-8">Professional event transportation that matches the importance of your occasion.</p>
         

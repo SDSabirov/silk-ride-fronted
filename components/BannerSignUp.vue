@@ -13,7 +13,7 @@
     </button>
 
     <!-- Banner content -->
-    <div class="max-w-screen-xl w-full mx-auto flex flex-col md:flex-row items-center justify-between">
+    <div class="max-w-screen-2xl w-full mx-auto flex flex-col md:flex-row items-center justify-between">
       <div class="text-center md:text-left mb-4 md:mb-0">
         <h3 class="text-2xl font-bold text-gray-900">Sign Up & Save!</h3>
         <p class="mt-1 text-gray-800">

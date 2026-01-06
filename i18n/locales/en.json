@@ -10,6 +10,8 @@
     "home": "Home",
     "fleet": "Our Fleet",
     "services": "Services",
+    "ourServices": "Our Services",
+    "viewAllServices": "View All Services",
     "popularRoutes": "Popular Routes",
     "airports": "Airports",
     "destinations": "UK Destinations",
@@ -19,7 +21,8 @@
     "whyChooseUs": "Why Choose Us",
     "contact": "Contact Us",
     "bookNow": "Book Now",
-    "registerLogin":"Login",
+    "registerLogin": "Login",
+    "needHelp": "Need help?",
     "servicesDropdown": {
       "all": "All Services",
       "airport": "Airport Transfers",
@@ -45,18 +48,38 @@
   },
   "footer": {
     "description": "Experience first-class travel across the UK & Europe with our premium chauffeur services. Whether for business, leisure, or special events, we ensure comfort, reliability, and elegance on every journey.",
+    "badges": {
+      "licensed": "Licensed",
+      "licensedSub": "Private Hire Operator",
+      "rating": "Rating",
+      "availability": "Always Available",
+      "insured": "Fully Insured",
+      "insuredSub": "Comprehensive Cover"
+    },
     "quickLinks": {
       "title": "Quick Links",
       "about": "About Us",
       "fleet": "Our Fleet",
       "services": "Services",
-      "blog": "Blog"
+      "blog": "Blog",
+      "partners": "Partners"
+    },
+    "services": {
+      "title": "Our Services",
+      "airport": "Airport Transfers",
+      "corporate": "Corporate Travel",
+      "wedding": "Wedding Chauffeur",
+      "hourly": "Hourly Chauffeur",
+      "event": "Event Transport"
     },
     "contact": {
-      "title": "Get in Touch",
+      "title": "Contact Us",
       "phone": "Phone",
-      "email": "Email"
+      "email": "Email",
+      "location": "Location"
     },
+    "bookNow": "Book Your Ride",
+    "paymentMethods": "We Accept",
     "rights": "All rights reserved.",
     "bottom": {
       "terms": "Terms of Service",

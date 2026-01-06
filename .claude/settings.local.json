@@ -10,7 +10,8 @@
       "WebFetch(domain:unhead.unjs.io)",
       "Bash(node:*)",
       "Bash(npm run build:nocheck:*)",
-      "Bash(npm run:*)"
+      "Bash(npm run:*)",
+      "Bash(find:*)"
     ],
     "deny": []
   }

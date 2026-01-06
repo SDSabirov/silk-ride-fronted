@@ -1,6 +1,6 @@
 <template>
   <section class="py-14">
-    <div class="max-w-screen-xl text-center flex flex-col space-y-8 mx-auto bg-white/70 px-4 md:px-0">
+    <div class="max-w-screen-2xl text-center flex flex-col space-y-8 mx-auto bg-white/70 px-4 md:px-0">
       <h2 class="text-black text-4xl font-semibold leading-loose">
         {{ t('pages.about.standards.title') }}
       </h2>

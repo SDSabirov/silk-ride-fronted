@@ -14,7 +14,7 @@
         <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/50"></div>
       </div>
 
-      <div class="relative z-10 w-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
+      <div class="relative z-10 w-full max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
         <div class="max-w-4xl">
           <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-heading font-bold leading-[1.1] mb-4 sm:mb-6">
             Stansted Airport <span class="text-gold block sm:inline">Chauffeur Service</span>
@@ -75,7 +75,7 @@
     </section>
 
     <!-- Main Content -->
-    <div class="max-w-screen-xl mx-auto px-6 py-16">
+    <div class="max-w-screen-2xl mx-auto px-6 py-16">
       
       <!-- Service Overview -->
       <section class="mb-16">

@@ -1,6 +1,6 @@
 <template>
   <section class="py-24 bg-gradient-to-br from-stone-50 to-amber-50/30">
-    <div class="max-w-screen-xl mx-auto px-6">
+    <div class="max-w-screen-2xl mx-auto px-6">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         <!-- Left Content -->
         <div>

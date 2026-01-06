@@ -10,7 +10,7 @@
     />
 
     <!-- Service Details Section -->
-    <section class="max-w-screen-xl mx-auto py-16 px-6">
+    <section class="max-w-screen-2xl mx-auto py-16 px-6">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div>
           <h2 class="text-3xl font-bold mb-6">Luxury Long-Distance Travel</h2>
@@ -78,7 +78,7 @@
 
     <!-- Tour Types Section -->
     <section class="bg-gray-50 py-16">
-      <div class="max-w-screen-xl mx-auto px-6">
+      <div class="max-w-screen-2xl mx-auto px-6">
         <h2 class="text-3xl font-bold text-center mb-12">Tour & Travel Options</h2>
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -129,7 +129,7 @@
 
     <!-- Features Section -->
     <section class="py-16">
-      <div class="max-w-screen-xl mx-auto px-6">
+      <div class="max-w-screen-2xl mx-auto px-6">
         <h2 class="text-3xl font-bold text-center mb-12">What's Included in Your Journey</h2>
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -170,7 +170,7 @@
 
     <!-- Testimonial Section -->
     <section class="bg-gray-50 py-16">
-      <div class="max-w-screen-xl mx-auto px-6 text-center">
+      <div class="max-w-screen-2xl mx-auto px-6 text-center">
         <blockquote class="text-2xl font-light italic text-gray-700 mb-6">
           "An absolutely magical journey through the Cotswolds. Our chauffeur was incredibly knowledgeable and made the trip unforgettable. The Mercedes S-Class was pure luxury."
         </blockquote>
@@ -180,7 +180,7 @@
 
     <!-- CTA Section -->
     <section class="py-16">
-      <div class="max-w-screen-xl mx-auto px-6 text-center">
+      <div class="max-w-screen-2xl mx-auto px-6 text-center">
         <h2 class="text-3xl font-bold mb-4">Plan Your Luxury Adventure</h2>
         <p class="text-lg text-gray-600 mb-8">Create memories that last a lifetime with our bespoke travel experiences.</p>
         

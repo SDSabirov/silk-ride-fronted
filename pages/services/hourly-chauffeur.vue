@@ -10,7 +10,7 @@
     />
 
     <!-- Service Details Section -->
-    <section class="max-w-screen-xl mx-auto py-16 px-6">
+    <section class="max-w-screen-2xl mx-auto py-16 px-6">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div>
           <h2 class="text-3xl font-bold mb-6">Personal Chauffeur at Your Disposal</h2>
@@ -62,7 +62,7 @@
 
     <!-- Popular Uses Section -->
     <section class="bg-gray-50 py-16">
-      <div class="max-w-screen-xl mx-auto px-6">
+      <div class="max-w-screen-2xl mx-auto px-6">
         <h2 class="text-3xl font-bold text-center mb-12">Popular Uses for Hourly Chauffeur Service</h2>
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -119,7 +119,7 @@
 
     <!-- Benefits Section -->
     <section class="py-16">
-      <div class="max-w-screen-xl mx-auto px-6">
+      <div class="max-w-screen-2xl mx-auto px-6">
         <h2 class="text-3xl font-bold text-center mb-12">Why Choose Hourly Chauffeur Service?</h2>
         
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -171,7 +171,7 @@
 
     <!-- CTA Section -->
     <section class="bg-gray-50 py-16">
-      <div class="max-w-screen-xl mx-auto px-6 text-center">
+      <div class="max-w-screen-2xl mx-auto px-6 text-center">
         <h2 class="text-3xl font-bold mb-4">Book Your Personal Chauffeur</h2>
         <p class="text-lg text-gray-600 mb-8">Experience the ultimate in personalized transportation with our hourly chauffeur service.</p>
         

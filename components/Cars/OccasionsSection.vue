@@ -1,6 +1,6 @@
 <template>
   <div class="py-20 bg-gradient-to-br from-gray-50 to-white">
-    <div class="max-w-screen-xl mx-auto px-4">
+    <div class="max-w-screen-2xl mx-auto px-4">
       <!-- Section Header -->
       <div class="text-center mb-16">
         <h2 class="text-4xl font-bold text-gray-900 mb-4">

@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-screen-xl mx-auto px-4 py-16 bg-gradient-to-br from-gray-50 to-white">
+  <div class="max-w-screen-2xl mx-auto px-4 py-16 bg-gradient-to-br from-gray-50 to-white">
     <div class="text-center mb-12">
       <h2 class="text-black text-4xl font-bold mb-4">
         {{ $t('specifications.title') }}

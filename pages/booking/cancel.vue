@@ -1,6 +1,6 @@
 <template>
   <div
-    class="w-full flex flex-col max-w-screen-xl mx-auto items-center justify-center h-screen space-y-6"
+    class="w-full flex flex-col max-w-screen-2xl mx-auto items-center justify-center h-screen space-y-6"
   >
     <h1 class="text-2xl font-semibold text-center">Checkout Cancelled</h1>
     <p class="text-lg text-center">

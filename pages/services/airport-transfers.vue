@@ -10,7 +10,7 @@
     />
 
     <!-- Service Details Section -->
-    <section class="max-w-screen-xl mx-auto py-16 px-6">
+    <section class="max-w-screen-2xl mx-auto py-16 px-6">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div>
           <h2 class="text-3xl font-bold mb-6">Premium London Airport Transfer Service</h2>
@@ -100,7 +100,7 @@
 
     <!-- Features Section -->
     <section class="bg-gray-50 py-16">
-      <div class="max-w-screen-xl mx-auto px-6">
+      <div class="max-w-screen-2xl mx-auto px-6">
         <h2 class="text-3xl font-bold text-center mb-12">Why Choose Our Airport Transfer Service?</h2>
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -133,7 +133,7 @@
 
     <!-- Airport Routes & Pricing Section -->
     <section class="py-16 bg-white">
-      <div class="max-w-screen-xl mx-auto px-6">
+      <div class="max-w-screen-2xl mx-auto px-6">
         <h2 class="text-3xl font-bold text-center mb-12">Airport Transfer Pricing to Central London</h2>
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -269,7 +269,7 @@
 
     <!-- FAQ Section -->
     <section class="py-16 bg-gray-50">
-      <div class="max-w-screen-xl mx-auto px-6">
+      <div class="max-w-screen-2xl mx-auto px-6">
         <h2 class="text-3xl font-bold text-center mb-12">Frequently Asked Questions - Airport Transfers</h2>
         
         <div class="max-w-4xl mx-auto space-y-6">
@@ -323,7 +323,7 @@
 
     <!-- CTA Section -->
     <section class="py-16">
-      <div class="max-w-screen-xl mx-auto px-6 text-center">
+      <div class="max-w-screen-2xl mx-auto px-6 text-center">
         <h2 class="text-3xl font-bold mb-4">Book Your Premium Airport Transfer Today</h2>
         <p class="text-lg text-gray-600 mb-8">
           Experience luxury, reliability, and professional service with Silk Ride's airport transfer service. 

@@ -2,7 +2,7 @@
     <div>
       <Navbar />
       <div class="w-full py-12 pt-[150px]">
-        <div class="terms-of-service px-4 py-8 max-w-screen-xl mx-auto text-gray-800">
+        <div class="terms-of-service px-4 py-8 max-w-screen-2xl mx-auto text-gray-800">
         <h1 class="text-3xl font-bold mb-2">Terms of Service</h1>
         <p class="text-sm text-gray-500 mb-6">Last updated: April 17, 2025</p>
   

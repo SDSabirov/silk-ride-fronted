@@ -18,7 +18,7 @@
 
       <!-- Content Container -->
       <div class="relative z-10 flex items-center justify-center min-h-screen px-4 py-20">
-        <div class="max-w-6xl w-full">
+        <div class="max-w-screen-2xl w-full">
           <!-- Main Content Card -->
           <div class="bg-black/30 backdrop-blur-lg rounded-3xl border border-white/20 p-8 md:p-12 shadow-2xl">
             <!-- Title Section -->

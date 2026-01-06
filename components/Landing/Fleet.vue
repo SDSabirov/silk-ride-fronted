@@ -1,6 +1,6 @@
 <template>
   <section class="py-24 bg-stone-100" data-section="services">
-    <div class="max-w-screen-xl mx-auto px-6">
+    <div class="max-w-screen-2xl mx-auto px-6">
       <!-- Section Header -->
       <div class="text-center mb-20">
         <p class="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4">

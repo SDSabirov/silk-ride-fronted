@@ -4,7 +4,7 @@
     <CommonHero :image="cover" :page="$t('pages.customer.heroTitle')" />
 
     <div class="flex items-center justify-center w-full relative h-full py-22">
-      <div class="w-full max-w-screen-xl mx-auto">
+      <div class="w-full max-w-screen-2xl mx-auto">
         <iframe
           id="eto-iframe-booking-widget"
           :src="iframeSrc"

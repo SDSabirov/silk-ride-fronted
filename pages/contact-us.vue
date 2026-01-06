@@ -11,7 +11,7 @@
 
     <!-- Contact Introduction -->
     <section class="py-16">
-      <div class="max-w-screen-xl mx-auto px-6">
+      <div class="max-w-screen-2xl mx-auto px-6">
         <div class="text-center mb-12">
           <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             {{ $t('contact.get_in_touch') }}
@@ -75,7 +75,7 @@
 
     <!-- Contact Form Section -->
     <section class="py-16 bg-gray-50">
-      <div class="max-w-screen-xl mx-auto px-6">
+      <div class="max-w-screen-2xl mx-auto px-6">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <!-- Form -->
           <div class="bg-white p-8 rounded-lg shadow-lg">

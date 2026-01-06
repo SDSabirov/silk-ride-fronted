@@ -18,7 +18,7 @@
     <section class="relative py-20 bg-white overflow-hidden">
       <div class="absolute top-0 right-0 w-80 h-80 bg-gold/5 rounded-full blur-3xl"></div>
 
-      <div class="relative max-w-screen-xl mx-auto px-6">
+      <div class="relative max-w-screen-2xl mx-auto px-6">
         <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
           <div class="text-center">
             <div class="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gold/10 mb-4">
@@ -57,7 +57,7 @@
 
     <!-- Enhanced Fleet Grid -->
     <section class="py-24 bg-gray-50">
-      <div class="max-w-screen-xl mx-auto px-6">
+      <div class="max-w-screen-2xl mx-auto px-6">
         <!-- Section Header -->
         <div class="text-center mb-16">
           <div class="w-16 h-1 bg-gold mb-6 mx-auto"></div>
@@ -281,7 +281,7 @@
     <section class="relative py-24 bg-white overflow-hidden">
       <div class="absolute bottom-0 left-0 w-80 h-80 bg-gold/5 rounded-full blur-3xl"></div>
 
-      <div class="relative max-w-screen-xl mx-auto px-6">
+      <div class="relative max-w-screen-2xl mx-auto px-6">
         <div class="text-center mb-16">
           <div class="w-16 h-1 bg-gold mb-6 mx-auto"></div>
           <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
@@ -330,7 +330,7 @@
 
     <!-- Fleet Standards Section -->
     <section class="py-24 bg-gray-50">
-      <div class="max-w-screen-xl mx-auto px-6">
+      <div class="max-w-screen-2xl mx-auto px-6">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
             <div class="w-16 h-1 bg-gold mb-6"></div>

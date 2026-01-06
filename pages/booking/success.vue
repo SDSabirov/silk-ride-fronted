@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full flex flex-col max-w-screen-xl mx-auto items-center justify-center h-screen space-y-6">
+    <div class="w-full flex flex-col max-w-screen-2xl mx-auto items-center justify-center h-screen space-y-6">
       <h1 class="text-2xl font-semibold text-center">Payment Success</h1>
       <div v-if="loading" class="text-lg text-center">Loading payment details…</div>
       <div v-else>

@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-screen-xl mx-auto px-4 py-8">
+  <div class="max-w-screen-2xl mx-auto px-4 py-8">
     <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100">
       <!-- Quick Overview Header -->
       <div class="bg-gradient-to-r from-gold/10 to-yellow-50 px-8 py-6 border-b border-gray-200">

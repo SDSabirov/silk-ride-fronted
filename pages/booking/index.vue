@@ -3,7 +3,7 @@
     <Navbar />
     <BookingHero />
     <div class="min-h-screen bg-gradient-to-br from-gray-50 to-white py-12">
-      <div class="w-full max-w-6xl mx-auto px-4">
+      <div class="w-full max-w-screen-2xl mx-auto px-4">
         <!-- Widget Container with Custom Styling -->
         <div class="bg-white/95 backdrop-blur-sm shadow-xl rounded-2xl p-8 border border-gray-100">
           <!-- Header -->
