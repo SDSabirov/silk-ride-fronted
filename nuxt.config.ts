@@ -150,14 +150,29 @@ export default defineNuxtConfig({
     xsl: false,
     autoI18n: true,
     defaultLocale: 'en',
+    defaults: {
+      changefreq: 'weekly',
+      priority: 0.8,
+      lastmod: new Date().toISOString()
+    },
     urls: async () => {
-      // Add any dynamic routes here if needed
-      return []
+      // High priority pages with custom settings
+      return [
+        { loc: '/', priority: 1.0, changefreq: 'daily' },
+        { loc: '/services', priority: 0.9, changefreq: 'weekly' },
+        { loc: '/services/airport-transfers', priority: 0.9, changefreq: 'weekly' },
+        { loc: '/fleet', priority: 0.9, changefreq: 'weekly' },
+        { loc: '/booking', priority: 0.9, changefreq: 'weekly' },
+        { loc: '/contact-us', priority: 0.8, changefreq: 'monthly' }
+      ]
     },
     exclude: [
       '/booking/cancel',
       '/booking/success',
-      '/blog/**'
+      '/customer',
+      '/customer/**',
+      '/blog/**',
+      '/api/**'
     ]
   },
   seo: {

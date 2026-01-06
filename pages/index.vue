@@ -3,11 +3,10 @@
     <Navbar />
 
     <LandingMainHero />
-    <LandingTrustSignals />
     <LandingFleet />
-    <LazyLandingKeyFeatures />
-    <LazyLandingAbout />
-    <LazyLandingTestimonials />
+    <LandingTrustSignals />
+    <LandingAbout />
+    <LandingTestimonials />
 
     <Footer />
   </div>

@@ -1,17 +1,18 @@
 <template>
   <nav
     :class="[
-      'fixed top-0 left-0 w-full text-white z-50 transition-colors duration-200 ease-in-out animate-fadeDown bg-black shadow-md'
+      'fixed top-0 left-0 w-full text-white z-50 transition-all duration-300 ease-in-out animate-fadeDown',
+      isScrolled ? 'bg-black/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
     ]"
     ref="navRef"
   >
-    <div class="container max-w-screen-xl mx-auto px-6 flex items-center justify-between py-4">
+    <div class="container max-w-screen-xl mx-auto px-6 flex items-center justify-between py-6">
       <!-- Logo -->
       <div class="flex items-center">
         <NuxtLink to="/" aria-label="Go to home page">
-          <div class="flex flex-col items-center space-y-1">
-            <NuxtImg src="/logo.svg" alt="Silk Ride Logo" class="h-10 w-10" loading="eager" width="40" height="40" />
-            <h2 class="text-sm font-semibold text-gold tracking-wide">SILK RIDE</h2>
+          <div class="flex flex-col items-center space-y-1.5">
+            <NuxtImg src="/logo.svg" alt="Silk Ride Logo" class="h-12 w-12" loading="eager" width="48" height="48" />
+            <h2 class="text-base font-semibold text-gold tracking-wide">SILK RIDE</h2>
           </div>
         </NuxtLink>
       </div>
@@ -60,9 +61,9 @@
       <!-- Links -->
       <div
         :class="[
-          'lg:flex lg:items-center lg:space-x-8 text-base lg:mt-0 transition-all duration-300',
+          'lg:flex lg:items-center lg:space-x-8 text-lg lg:mt-0 transition-all duration-300',
           menuOpen
-            ? 'fixed top-20 left-0 w-full bg-black/95 backdrop-blur-md z-50 flex flex-col items-start px-6 py-6 space-y-4 min-h-[50vh] lg:relative lg:top-auto lg:left-auto lg:w-auto lg:bg-transparent lg:px-0 lg:py-0 lg:space-y-0 lg:min-h-0 lg:flex-row lg:items-center lg:space-x-8'
+            ? 'fixed top-24 left-0 w-full bg-black/95 backdrop-blur-md z-50 flex flex-col items-start px-6 py-6 space-y-4 min-h-[50vh] lg:relative lg:top-auto lg:left-auto lg:w-auto lg:bg-transparent lg:px-0 lg:py-0 lg:space-y-0 lg:min-h-0 lg:flex-row lg:items-center lg:space-x-8'
             : 'hidden lg:flex'
         ]"
       >
@@ -199,17 +200,17 @@
       </div>
 
       <!-- Desktop Actions -->
-      <div class="hidden lg:flex items-center gap-5">
+      <div class="hidden lg:flex items-center gap-6">
         <LanguageSwitch />
         <NuxtLink
           :to="localePath('/customer')"
-          class="px-4 py-2 text-base text-white hover:text-gold transition-colors"
+          class="px-4 py-2.5 text-lg text-white hover:text-gold transition-colors"
         >
           {{$t('navbar.registerLogin')}}
         </NuxtLink>
         <NuxtLink
           :to="localePath('/booking')"
-          class="px-5 py-2 text-base bg-gold text-black hover:bg-gold/90 rounded-md font-medium transition-colors"
+          class="px-6 py-3 text-lg bg-gold text-black hover:bg-gold/90 rounded-md font-medium transition-colors"
           aria-label="Book a ride now"
         >
           {{$t('navbar.bookNow')}}

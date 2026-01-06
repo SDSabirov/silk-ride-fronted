@@ -1,7 +1,18 @@
+# Silk Ride - robots.txt
+# https://silkride.co.uk
+
 User-agent: *
-Disallow: /admin
+Allow: /
+
+# Disallow non-public pages
 Disallow: /booking/cancel
 Disallow: /booking/success
-Allow: /
-Sitemap: https://silkride.co.uk/__sitemap__/en.xml
-Sitemap: https://silkride.co.uk/__sitemap__/ru.xml
+Disallow: /customer
+Disallow: /api/
+
+# Disallow utility pages
+Disallow: /_nuxt/
+Disallow: /__nuxt_error
+
+# Sitemap locations
+Sitemap: https://silkride.co.uk/sitemap.xml

@@ -68,9 +68,9 @@
 
   "hero": {
     "title": "Tailored Chauffeur Services for Airport, Events & Business",
-    "subtitle": "Seamlessly connecting your journeys with executive-class service.",
-    "bookNow": "Book Now",
-    "exploreServices": "Explore Services",
+    "subtitle": "Experience London in style with our professional chauffeurs and Mercedes fleet. Available 24/7 for airport transfers, business travel, and special occasions.",
+    "bookNow": "Book Your Ride",
+    "exploreServices": "View Our Services",
     "brandValues": {
       "luxury": {
         "title": "Luxury Redefined",
@@ -91,7 +91,8 @@
   },
   "landing": {
     "mainHero": {
-      "title": "London's Premier Luxury Chauffeur & Executive Transport Service",
+      "tagline": "Premium Chauffeur Service",
+      "title": "Luxury Travel, Elevated",
       "badges": {
         "available": "24/7 Available",
         "licensed": "Licensed & Insured",
@@ -101,21 +102,14 @@
       "phoneNumber": "+44 7512 905514",
       "scrollCta": "Scroll to explore"
     },
-    "trustSignals": {
-      "customers": "Happy Customers",
-      "experience": "Years Experience",
-      "vehicles": "Premium vehicles",
-      "rating": "Average Rating",
-      "licensed": "Hertsmere Borough Council Licensed",
-      "fiveStars": "5-Star Rated Service",
-      "backgroundCheck": "Background Checked Drivers"
-    },
-    "fleet": {
+        "fleet": {
+      "tagline": "What We Offer",
       "title": "Our Chauffeur Services",
       "subtitle": "From airport transfers to special events, we provide luxury transportation tailored to your needs",
       "airport": {
         "title": "Airport Transfers",
         "subtitle": "All London Airports",
+        "badge": "Most Popular",
         "description": "Professional transfers to/from all London airports with meet & greet service, flight tracking, and 60 minutes free waiting time.",
         "price": "From £120",
         "route": "Heathrow to Central London",
@@ -124,14 +118,16 @@
       "corporate": {
         "title": "Corporate Travel",
         "subtitle": "Executive & Business",
+        "badge": "Business",
         "description": "Executive chauffeur service for business meetings, conferences, and corporate events. Stay productive on the move with Wi-Fi and charging facilities.",
-        "price": "From £65/hr",
+        "price": "From £50/hr",
         "minimum": "4 hour minimum",
         "learnMore": "Learn More About Corporate Travel"
       },
       "wedding": {
         "title": "Wedding & Events",
         "subtitle": "Special Occasions",
+        "badge": "Special Day",
         "description": "Elegant wedding chauffeur service and VIP event transportation. Make your special day unforgettable with luxury vehicles and professional service.",
         "customQuote": "Custom Quote",
         "packages": "Package rates available",
@@ -158,6 +154,7 @@
       }
     },
     "testimonials": {
+      "tagline": "Client Testimonials",
       "title": "What Our Clients Say",
       "subtitle": "Don't just take our word for it - hear from our satisfied customers",
       "googleReviewCount": "19 Google Reviews",
@@ -188,38 +185,72 @@
   },
   
   "why": {
-    "title": "Why Silk Ride is Your Best Choice for Luxury Travel",
-    "description": "At Silk Ride, we go beyond just transportation – we offer an exceptional travel experience. Whether you're heading to a business meeting, airport, or special event, we ensure comfort, reliability, and first-class service every step of the way.",
+    "tagline": "Why Choose Us",
+    "title": "The Silk Ride Difference",
+    "subtitle": "We combine professional service, premium vehicles, and attention to detail to deliver an exceptional chauffeur experience every time.",
     "features": {
       "chauffeurs": {
         "title": "Professional Chauffeurs",
-        "text": "Our experienced, multi-lingual chauffeurs are trained to the highest standards. Courteous, knowledgeable, and always punctual, they provide a seamless experience tailored to your needs."
+        "text": "PCO licensed, DBS checked, and trained to the highest standards. Our chauffeurs are courteous, knowledgeable, and always punctual."
       },
       "fleet": {
-        "title": "Premium Fleet & Ultimate Comfort",
-        "text": "Travel in luxury and style with our top-of-the-line vehicles, including Mercedes-Benz E-Class, V-Class, and S-Class. Spacious interiors, climate control, and advanced technology guarantee a smooth and enjoyable ride."
+        "title": "Premium Mercedes Fleet",
+        "text": "Travel in style with our immaculate Mercedes E-Class, S-Class, and V-Class vehicles. Leather interiors, climate control, and complimentary amenities."
+      },
+      "flightTracking": {
+        "title": "Real-Time Flight Tracking",
+        "text": "We monitor your flight in real-time. If delayed or early, we adjust your pickup automatically. No stress, no waiting."
+      },
+      "pricing": {
+        "title": "Fixed, Transparent Pricing",
+        "text": "No surge pricing, no hidden fees. Get an instant quote with the exact price you'll pay, confirmed before you book."
       },
       "availability": {
-        "title": "24/7 Availability – Anytime, Anywhere",
-        "text": "Your schedule is our priority. Our chauffeur services are available 24/7, so whether you need an early morning airport transfer or a late-night ride, we’ve got you covered."
+        "title": "Available 24/7, 365 Days",
+        "text": "Early morning pickup or late-night transfer, we're always available. Your schedule is our priority."
       },
       "coverage": {
-        "title": "Coverage Across London & the UK",
-        "text": "We offer transfers across London and major UK cities, ensuring you reach your destination effortlessly. Whether you need an airport pickup, a city transfer, or an intercity ride, Silk Ride is always available."
-      },
-      "trusted": {
-        "title": "Trusted by Business & VIP Clients",
-        "text": "Silk Ride is the preferred choice for corporate executives, VIP travelers, and high-profile clients who demand excellence in every journey"
+        "title": "London, UK & Europe",
+        "text": "From airport transfers to cross-country journeys. We cover all London airports, major UK cities, and destinations across Europe."
       }
     },
+    "stats": {
+      "journeys": "Completed Journeys",
+      "rating": "Google Rating",
+      "support": "Customer Support",
+      "freeWait": "Free Waiting Time"
+    },
     "badges": {
-      "experience": "10 years of Experience",
-      "clients": "satisfied clients worldwide"
+      "pco": "PCO Licensed",
+      "insured": "Fully Insured",
+      "dbs": "DBS Checked",
+      "vehicles": "Premium Vehicles"
     }
   },
   "about": {
+    "tagline": "London's Trusted Chauffeur Service",
     "title": "About Us",
+    "shortDescription": "At Silk Ride, every journey is crafted with precision and care. We provide premium chauffeur services across London and the UK, combining comfort, reliability, and sophistication for discerning travellers.",
     "description": "At Silk Ride, we believe that every journey should be as seamless and luxurious as the destination itself. We provide premium chauffeur services in London and across the UK, ensuring comfort, reliability, and sophistication at every step. Our services include airport transfers, executive business travel, intercity rides, and chauffeur hire for special events. Whether you need a smooth transfer from Heathrow, a VIP ride across the city, or a long-distance journey in ultimate comfort, we've got you covered. With over 10 years of experience and 50,000+ satisfied clients, we have built a reputation for excellence, professionalism, and personalized service. Book your ride today and experience the Silk Ride difference.",
+    "points": {
+      "experience": {
+        "title": "Years of Excellence",
+        "text": "Over a decade of providing premium chauffeur services in London"
+      },
+      "service": {
+        "title": "Personalised Service",
+        "text": "Tailored journeys to meet your specific requirements"
+      },
+      "fleet": {
+        "title": "Premium Fleet",
+        "text": "Immaculate Mercedes vehicles maintained to the highest standards"
+      }
+    },
+    "stats": {
+      "journeys": "Journeys Completed",
+      "rating": "Client Rating",
+      "available": "Always Available"
+    },
     "learnMore": "Learn More About Us"
   },
 
@@ -945,24 +976,24 @@
 
  "seo": {
     "home": {
-      "title": "London Chauffeur Service | Luxury Airport Transfers & Executive Transport | Silk Ride",
-      "description": "Premium chauffeur service in London with luxury Mercedes fleet. Airport transfers to Heathrow, Gatwick, Stansted & Luton. Professional drivers, 24/7 service.",
-      "keywords": "London chauffeur service, luxury chauffeur London, airport transfers London, Heathrow chauffeur, Gatwick transfers, executive chauffeur service, Mercedes chauffeur London, private driver London"
+      "title": "London Chauffeur Service | Luxury Airport Transfers & Executive Travel | Silk Ride",
+      "description": "Premium chauffeur service in London. Mercedes fleet, professional drivers, 24/7 airport transfers from Heathrow, Gatwick & more. Book your luxury ride today.",
+      "keywords": "london chauffeur service, luxury chauffeur london, airport transfer london, heathrow chauffeur service, private chauffeur hire london, mercedes chauffeur london, executive car service"
     },
     "fleet": {
-      "title": "Luxury Mercedes Fleet | Chauffeur Service London | V-Class, S-Class & E-Class",
-      "description": "Professional chauffeur service with Mercedes V-Class for groups, S-Class for VIP travel, E-Class for business. Wi-Fi, climate control & premium comfort included.",
-      "keywords": "Mercedes chauffeur London, luxury chauffeur service, Mercedes V-Class chauffeur, Mercedes S-Class chauffeur, Mercedes E-Class London, executive chauffeur service"
+      "title": "Luxury Mercedes Fleet | E-Class, S-Class & V-Class Chauffeur Hire London",
+      "description": "Hire a luxury Mercedes with professional chauffeur in London. E-Class for business, S-Class for VIP, V-Class for groups. Book your premium ride today.",
+      "keywords": "mercedes chauffeur london, luxury car hire london, mercedes e-class chauffeur, mercedes s-class hire, mercedes v-class london, executive car service london"
     },
     "services": {
-      "title": "Chauffeur Services London | Airport Transfers, Business Travel & Event Transport",
-      "description": "Professional chauffeur services across London & UK. Airport transfers, corporate travel, wedding chauffeurs, event transport. Licensed Mercedes fleet, 24/7.",
-      "keywords": "chauffeur services London, airport transfer service, corporate chauffeur London, wedding chauffeur London, event transport, hourly chauffeur service, business travel London"
+      "title": "Chauffeur Services London | Airport Transfers, Corporate & Wedding Transport",
+      "description": "Professional chauffeur services in London. Airport transfers, corporate travel, wedding cars, hourly hire. Licensed Mercedes fleet, 24/7 availability. Book now.",
+      "keywords": "chauffeur services london, airport transfer service, corporate chauffeur london, wedding car hire london, hourly chauffeur service, executive transport london"
     },
     "about": {
-      "title": "About Silk Ride | Professional Chauffeur Company London | Licensed & Insured",
-      "description": "Licensed Hertsmere Borough Council chauffeur service since 2014. Professional drivers, luxury Mercedes fleet, 50,000+ satisfied customers in London.",
-      "keywords": "chauffeur company London, licensed private hire, professional chauffeurs London, luxury transport company, Hertsmere Borough Council licensed"
+      "title": "About Silk Ride | London's Trusted Chauffeur Service Since 2018",
+      "description": "Meet Silk Ride - London's premium chauffeur service. Professional drivers, luxury Mercedes fleet, commitment to excellence. Licensed & insured.",
+      "keywords": "chauffeur company london, about silk ride, professional chauffeurs london, luxury transport company, licensed chauffeur service"
     },
     "partners": {
       "title": "Partners | Luxury Chauffeur Service Partnerships | Business Opportunities",
@@ -970,19 +1001,19 @@
       "keywords": "chauffeur service partnerships, corporate transport partners, hotel concierge partnerships, event planning transport, business partnerships luxury transport"
     },
     "vClass": {
-      "title": "Mercedes V-Class Chauffeur London | Luxury Group Travel & Airport Transfers",
-      "description": "Mercedes V-Class chauffeur service for group travel in London. Seats up to 7 passengers. Perfect for airport transfers, corporate groups & luxury city tours.",
-      "keywords": "Mercedes V-Class chauffeur London, group chauffeur service, 7 seater chauffeur London, family airport transfers, group transport London, luxury group transport"
+      "title": "Mercedes V-Class Chauffeur | Luxury MPV Hire London | Silk Ride",
+      "description": "Spacious Mercedes V-Class for group travel. Up to 7 passengers with luggage space. Ideal for families & corporate groups. Book now.",
+      "keywords": "mercedes v-class chauffeur london, group chauffeur service, 7 seater chauffeur london, family airport transfers, luxury mpv hire london"
     },
     "sClass": {
-      "title": "Mercedes S-Class Chauffeur London | Executive VIP Transport & Airport Transfers",
-      "description": "Ultimate luxury Mercedes S-Class chauffeur service in London. VIP airport transfers, executive business travel, special occasions. Professional drivers.",
-      "keywords": "Mercedes S-Class chauffeur London, VIP transport London, executive chauffeur service, luxury airport transfers, business chauffeur service, premium chauffeur London"
+      "title": "Mercedes S-Class Chauffeur | Luxury Limousine Hire London | Silk Ride",
+      "description": "Ultimate luxury with Mercedes S-Class chauffeur service. Perfect for VIP travel, weddings & corporate events. Up to 3 passengers. Book today.",
+      "keywords": "mercedes s-class chauffeur london, vip transport london, luxury limousine hire, executive chauffeur service, premium chauffeur london"
     },
     "eClass": {
-      "title": "Mercedes E-Class Chauffeur London | Business Travel & Executive Airport Transfers",
-      "description": "Professional Mercedes E-Class chauffeur service for business travel. Airport transfers, corporate meetings, executive transport. Comfortable & reliable.",
-      "keywords": "Mercedes E-Class chauffeur London, business chauffeur service, executive transport London, corporate chauffeur service, business airport transfers"
+      "title": "Mercedes E-Class Chauffeur | Executive Saloon Hire London | Silk Ride",
+      "description": "Hire a Mercedes E-Class with professional chauffeur in London. Ideal for business travel & airport transfers. Up to 3 passengers. Book now.",
+      "keywords": "mercedes e-class chauffeur london, business chauffeur service, executive saloon hire, corporate chauffeur service london"
     },
     "booking": {
       "title": "Book Chauffeur Online London | Instant Quote & Reservation | Silk Ride",
@@ -990,9 +1021,9 @@
       "keywords": "book chauffeur online London, chauffeur booking system, instant quote chauffeur, online chauffeur booking, book airport transfer London"
     },
     "faq": {
-      "title": "Chauffeur Service FAQ London | Booking, Pricing & Vehicle Information | Silk Ride",
-      "description": "Frequently asked questions about our London chauffeur service. Answers about booking, pricing, vehicles, airport transfers & professional drivers.",
-      "keywords": "chauffeur service FAQ London, chauffeur booking questions, airport transfer FAQ, luxury chauffeur questions, London chauffeur information"
+      "title": "FAQ | Silk Ride Chauffeur Service | Your Questions Answered",
+      "description": "Find answers to common questions about Silk Ride chauffeur services. Booking, pricing, cancellation policies, vehicle information & more.",
+      "keywords": "chauffeur service faq, chauffeur booking questions, airport transfer faq, london chauffeur questions, silk ride faq"
     },
     "blog": {
       "title": "Chauffeur Service Blog London | Travel Tips & Luxury Transport Insights | Silk Ride",
@@ -1005,9 +1036,9 @@
       "keywords": "chauffeur service account, manage bookings London, customer portal, ride history, chauffeur booking management"
     },
     "contactPage": {
-      "title": "Contact Silk Ride | London Chauffeur Service | Book Your Luxury Transfer",
-      "description": "Contact Silk Ride for luxury chauffeur services. Licensed operator. Call +44 7512 905514 or email for airport transfers & executive travel in London.",
-      "keywords": "contact chauffeur service London, book luxury transfer, chauffeur company contact details, London airport transfers contact, Silk Ride contact information"
+      "title": "Contact Silk Ride | Book Your London Chauffeur | 24/7 Service",
+      "description": "Get in touch with Silk Ride for bookings & enquiries. Call +44 7512 905514 or email. 24/7 availability for airport transfers & chauffeur hire.",
+      "keywords": "contact silk ride, book chauffeur london, chauffeur service phone, london airport transfers contact, 24/7 chauffeur service"
     },
     "privacy": {
       "title": "Privacy Policy | Silk Ride Chauffeur Services London | Data Protection",
@@ -1020,79 +1051,79 @@
       "keywords": "chauffeur service terms London, booking terms conditions, luxury transport terms, airport transfer terms London"
     },
     "airportTransfers": {
-      "title": "Airport Transfers London | Heathrow, Gatwick, Stansted & Luton Chauffeur Service",
-      "description": "Premium airport transfers to Heathrow, Gatwick, Stansted & Luton. Flight tracking, meet & greet, 60min free waiting. Luxury Mercedes chauffeur service.",
-      "keywords": "airport transfers London, Heathrow chauffeur service, Gatwick airport transfer, Stansted transfers, Luton airport chauffeur, meet and greet service London"
+      "title": "Airport Transfers London | Heathrow, Gatwick, Stansted & Luton | Silk Ride",
+      "description": "Reliable London airport transfers with meet & greet, flight tracking, and luxury Mercedes vehicles. Fixed prices from £89. Book your transfer now.",
+      "keywords": "airport transfers london, heathrow chauffeur service, gatwick airport transfer, stansted transfers, luton airport chauffeur, vip airport transfer"
     },
     "heathrowChauffeur": {
-      "title": "Heathrow Airport Chauffeur Service London | Luxury Airport Transfers | Silk Ride",
-      "description": "Premium Heathrow Airport chauffeur service with Mercedes fleet. Meet & greet, flight tracking, 60min free waiting. Book your Heathrow transfer today.",
-      "keywords": "Heathrow chauffeur service, Heathrow airport transfer, luxury chauffeur Heathrow, meet and greet Heathrow, chauffeur service London, airport transfer London, Heathrow T2 T3 T4 T5 transfer"
+      "title": "Heathrow Airport Transfer | Chauffeur Service from £89 | Silk Ride",
+      "description": "Premium Heathrow airport transfers with meet & greet at arrivals. Flight tracking, complimentary wait time, luxury Mercedes. Book your transfer now.",
+      "keywords": "heathrow chauffeur service, heathrow airport transfer, london to heathrow private car, meet and greet heathrow, heathrow t2 t3 t4 t5 transfer"
     },
     "gatwickChauffeur": {
-      "title": "Gatwick Airport Chauffeur Service London | North & South Terminal Transfers | Silk Ride",
-      "description": "Premium Gatwick Airport chauffeur service for North & South terminals. Mercedes fleet, meet & greet, flight tracking. Book your Gatwick transfer today.",
-      "keywords": "Gatwick chauffeur service, Gatwick airport transfer, Gatwick North Terminal, Gatwick South Terminal, luxury chauffeur Gatwick, meet and greet Gatwick, chauffeur service London"
+      "title": "Gatwick Airport Transfer | Private Chauffeur Service | Silk Ride",
+      "description": "Reliable Gatwick airport transfers in luxury Mercedes vehicles. Meet & greet, flight monitoring, fixed prices. Book your South London transfer.",
+      "keywords": "gatwick chauffeur service, gatwick airport transfer, gatwick north terminal, gatwick south terminal, luxury chauffeur gatwick"
     },
     "stanstedChauffeur": {
-      "title": "Stansted Airport Chauffeur Service London | Professional Airport Transfers | Silk Ride",
-      "description": "Professional Stansted Airport chauffeur service with Mercedes fleet. Reliable transfers, flight monitoring, meet & greet. Book your Stansted transfer today.",
-      "keywords": "Stansted chauffeur service, Stansted airport transfer, Stansted airport chauffeur, luxury chauffeur Stansted, meet and greet Stansted, Ryanair transfer Stansted, chauffeur service London"
+      "title": "Stansted Airport Transfer | Executive Chauffeur Service | Silk Ride",
+      "description": "Professional Stansted airport transfers with door-to-door service. Mercedes E-Class & V-Class. Fixed prices, no hidden fees. Book today.",
+      "keywords": "stansted chauffeur service, stansted airport transfer, stansted chauffeur, meet and greet stansted, ryanair transfer stansted"
     },
     "lutonChauffeur": {
-      "title": "Luton Airport Chauffeur Service London | Premium Airport Transfers | Silk Ride",
-      "description": "Premium Luton Airport chauffeur service with Mercedes fleet & shuttle coordination. Meet & greet, flight tracking. Book your Luton transfer with Silk Ride.",
-      "keywords": "Luton chauffeur service, Luton airport transfer, Luton airport chauffeur, luxury chauffeur Luton, meet and greet Luton, easyJet transfer Luton, shuttle service Luton, chauffeur service London"
+      "title": "Luton Airport Transfer | Private Car Service London | Silk Ride",
+      "description": "Comfortable Luton airport transfers in luxury vehicles. Professional chauffeurs, flight tracking, meet & greet service. Book your ride.",
+      "keywords": "luton chauffeur service, luton airport transfer, luton airport car service, meet and greet luton, easyjet transfer luton"
     },
     "oxfordChauffeur": {
-      "title": "Oxford Chauffeur Service & Tours from London | University City Visits | Silk Ride",
-      "description": "Luxury Oxford chauffeur service & private tours from London. Visit Oxford University, Christ Church, Bodleian Library. Professional drivers & Mercedes fleet.",
-      "keywords": "Oxford chauffeur service, Oxford tours from London, Oxford University visits, Christ Church tours, Bodleian Library, Bicester Village, luxury chauffeur Oxford, private tours Oxford"
+      "title": "Oxford Day Trip from London | Private Chauffeur Tour | Silk Ride",
+      "description": "Explore Oxford's historic colleges with a private chauffeur tour from London. Flexible itinerary, luxury Mercedes, door-to-door service.",
+      "keywords": "oxford day trip london, oxford chauffeur service, oxford tours from london, private tour oxford, oxford university visit"
     },
     "cambridgeChauffeur": {
-      "title": "Cambridge Chauffeur Service & University Tours from London | Historic City Visits | Silk Ride",
-      "description": "Luxury Cambridge chauffeur service & private tours from London. Visit Cambridge University, King's College, River Cam. Professional drivers & Mercedes fleet.",
-      "keywords": "Cambridge chauffeur service, Cambridge tours from London, Cambridge University visits, King's College tours, River Cam punting, luxury chauffeur Cambridge, private tours Cambridge"
+      "title": "Cambridge Day Trip from London | Chauffeur-Driven Tour | Silk Ride",
+      "description": "Visit Cambridge University with a luxury chauffeur tour. Punting, colleges, museums - all at your pace. Book your private day trip.",
+      "keywords": "cambridge day trip london, cambridge chauffeur service, cambridge tours from london, kings college tour, river cam punting"
     },
     "bathChauffeur": {
-      "title": "Bath Chauffeur Service & Historic City Tours from London | Roman Baths & Georgian Architecture | Silk Ride",
-      "description": "Luxury Bath chauffeur service & private tours from London. Visit Roman Baths, Bath Abbey, Georgian architecture. UNESCO World Heritage Site tours.",
-      "keywords": "Bath chauffeur service, Bath tours from London, Roman Baths visits, Bath Abbey tours, Georgian architecture, UNESCO World Heritage Site, luxury chauffeur Bath, private tours Bath"
+      "title": "Bath Day Trip from London | Luxury Chauffeur Tour | Silk Ride",
+      "description": "Visit historic Bath with a private chauffeur. Roman Baths, Royal Crescent, Georgian architecture. Luxury Mercedes transport included.",
+      "keywords": "bath day trip london, bath chauffeur service, roman baths tour, bath tours from london, private tour bath"
     },
     "cotswoldsChauffeur": {
-      "title": "Cotswolds Chauffeur Service & Village Tours from London | Countryside & Historic Villages | Silk Ride",
-      "description": "Luxury Cotswolds chauffeur service & countryside tours from London. Visit Chipping Campden, Bourton-on-the-Water, Stow-on-the-Wold. Mercedes fleet.",
-      "keywords": "Cotswolds chauffeur service, Cotswolds tours from London, Chipping Campden visits, Bourton-on-the-Water tours, Stow-on-the-Wold, countryside tours, luxury chauffeur Cotswolds"
+      "title": "Cotswolds Tour from London | Private Chauffeur Day Trip | Silk Ride",
+      "description": "Discover the beautiful Cotswolds villages with a private chauffeur. Bourton, Bibury, Stow - explore at your leisure. Book today.",
+      "keywords": "cotswolds tour london, cotswolds chauffeur service, cotswolds day trip, bourton on the water tour, private cotswolds tour"
     },
     "stonehengeChauffeur": {
-      "title": "Stonehenge Chauffeur Service & Historic Tours from London | Prehistoric Monument Visits | Silk Ride",
-      "description": "Luxury Stonehenge chauffeur service & private tours from London. Visit the prehistoric monument, Salisbury Cathedral, Avebury Circle. UNESCO World Heritage tours.",
-      "keywords": "Stonehenge chauffeur service, Stonehenge tours from London, prehistoric monument visits, Salisbury Cathedral tours, Avebury Stone Circle, UNESCO World Heritage Site, luxury chauffeur Stonehenge"
+      "title": "Stonehenge Tour from London | Private Chauffeur Day Trip | Silk Ride",
+      "description": "Experience Stonehenge with a private chauffeur tour from London. Skip the crowds, flexible timing, luxury Mercedes. Book your tour.",
+      "keywords": "stonehenge tour london, stonehenge chauffeur service, stonehenge day trip, private stonehenge tour, salisbury cathedral tour"
     },
     "corporateTravel": {
-      "title": "Corporate Chauffeur Service London | Executive Business Travel & Transport",
-      "description": "Professional corporate chauffeur service for executives in London. Luxury Mercedes fleet, Wi-Fi, discretion. Meeting transfers & corporate events.",
-      "keywords": "corporate chauffeur London, executive transport, business travel chauffeur, corporate chauffeur service London, executive airport transfers, business meeting transport"
+      "title": "Corporate Chauffeur London | Executive Car Service for Business | Silk Ride",
+      "description": "Professional corporate chauffeur service in London. Punctual executive travel for meetings, events & roadshows. Hourly hire from £55/hr. Book today.",
+      "keywords": "corporate chauffeur london, executive car service, business travel chauffeur, executive transport london, corporate chauffeur service"
     },
     "hourlyChauffeur": {
-      "title": "Hourly Chauffeur Service London | Private Driver Service by the Hour",
-      "description": "Flexible hourly chauffeur service in London. Minimum 4 hours for business meetings, sightseeing, shopping. Professional drivers with Mercedes fleet.",
-      "keywords": "hourly chauffeur London, private driver service, chauffeur by the hour, hourly chauffeur service, personal chauffeur service, London sightseeing chauffeur"
+      "title": "Hourly Chauffeur Hire London | As-Directed Service | Silk Ride",
+      "description": "Flexible hourly chauffeur service in London. Mercedes S-Class & V-Class available. Perfect for shopping, tours & multiple stops. From £55/hour.",
+      "keywords": "hourly chauffeur london, chauffeur by the hour, private driver service, hourly chauffeur hire london, as directed chauffeur"
     },
     "ukEuropeTravel": {
-      "title": "UK & Europe Luxury Travel | Long Distance Chauffeur Service | Private Tours",
-      "description": "Luxury long-distance chauffeur service across UK & Europe. Bespoke tours to Cotswolds, Stonehenge, Paris, Amsterdam. Mercedes fleet & professional drivers.",
-      "keywords": "UK long distance chauffeur, Europe travel chauffeur, Cotswolds private tour, Stonehenge chauffeur tour, luxury UK travel, European chauffeur service"
+      "title": "Long Distance Chauffeur UK & Europe | Executive Travel Service | Silk Ride",
+      "description": "Luxury long-distance chauffeur service across UK & Europe. Comfortable Mercedes vehicles for business trips, tours & transfers. Get a quote.",
+      "keywords": "long distance chauffeur uk, europe travel chauffeur, uk chauffeur service, european chauffeur service, luxury uk travel"
     },
     "weddingChauffeur": {
-      "title": "Wedding Chauffeur Service London | Luxury Wedding Transport & Bridal Chauffeur",
-      "description": "Elegant wedding chauffeur service with luxury Mercedes vehicles. Bridal vehicle decoration, guest transport, professional drivers. Perfect wedding day service.",
-      "keywords": "wedding chauffeur London, wedding chauffeur service, bridal chauffeur London, luxury wedding transport, wedding Mercedes chauffeur, wedding guest transport"
+      "title": "Wedding Car Hire London | Luxury Chauffeur for Your Special Day | Silk Ride",
+      "description": "Make your wedding unforgettable with our luxury Mercedes wedding cars. Professional chauffeurs, ribbon decorations, champagne service. Get a quote.",
+      "keywords": "wedding car hire london, wedding chauffeur service london, bridal chauffeur london, luxury wedding transport, mercedes wedding car"
     },
     "eventChauffeur": {
-      "title": "Event Chauffeur Service London | Concert, Sporting & Corporate Event Transport",
-      "description": "Premium event chauffeur service for concerts, sporting events, corporate galas & private parties. Professional transport to Wembley, Royal Albert Hall, West End.",
-      "keywords": "event chauffeur London, concert transport, sporting event chauffeur, corporate event transport, Wembley chauffeur, West End theatre transport"
+      "title": "Event Transport London | Chauffeur Service for Galas & Premieres | Silk Ride",
+      "description": "VIP event transport in London. Red carpet arrivals, corporate events, theatre trips. Luxury Mercedes fleet with professional chauffeurs.",
+      "keywords": "event chauffeur london, concert transport london, vip event transport, corporate event chauffeur, wembley chauffeur"
     }
   },
   "faq": {
