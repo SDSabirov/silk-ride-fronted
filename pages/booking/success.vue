@@ -21,12 +21,19 @@
   <script setup>
   import { ref, onMounted } from 'vue'
   import { useRoute } from 'vue-router'
-  
+  import { useAnalytics } from '~/composables/useAnalytics'
+  import { useTrafficSource } from '~/composables/useTrafficSource'
+
   const paymentStatus = ref('')
   const customerEmail = ref('')
   const loading = ref(true)
   const route = useRoute()
-  
+  const { trackPurchase } = useAnalytics()
+  const { getAttributionForEvent } = useTrafficSource()
+
+  // Track if purchase has been tracked to prevent duplicates
+  const purchaseTracked = ref(false)
+
   onMounted(async () => {
     const sessionId = route.query.session_id
     if (sessionId) {
@@ -36,6 +43,22 @@
         const data = await response.json()
         paymentStatus.value = data.status
         customerEmail.value = data.customer_email
+
+        // Track purchase conversion if payment was successful
+        if (data.status === 'complete' && !purchaseTracked.value) {
+          purchaseTracked.value = true
+
+          // Get attribution data
+          const attribution = getAttributionForEvent()
+
+          // Track purchase event
+          trackPurchase({
+            transaction_id: sessionId,
+            value: data.amount_total ? data.amount_total / 100 : 0, // Convert from cents if applicable
+            currency: data.currency || 'GBP',
+            ...attribution
+          })
+        }
       } catch (error) {
         console.error('Error retrieving session status:', error)
       }

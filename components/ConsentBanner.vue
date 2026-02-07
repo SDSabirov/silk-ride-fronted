@@ -149,6 +149,8 @@
 <script setup>
 import { onMounted, onUnmounted, ref, reactive } from 'vue'
 
+const emit = defineEmits(['consent-updated'])
+
 const show = ref(false)
 const showDetails = ref(false)
 const showCustomize = ref(false)
@@ -240,6 +242,14 @@ function saveConsent(type, preferences) {
     localStorage.setItem('cookie_consent', type)
     localStorage.setItem('cookie_consent_date', new Date().toISOString())
     localStorage.setItem('cookie_preferences', JSON.stringify(preferences))
+
+    // Emit event for other components to react to consent changes
+    emit('consent-updated', { type, preferences })
+
+    // Dispatch a custom event for global listeners (plugins, composables)
+    window.dispatchEvent(new CustomEvent('consent-updated', {
+      detail: { type, preferences }
+    }))
   } catch (error) {
     console.error('Error saving cookie consent:', error)
   }

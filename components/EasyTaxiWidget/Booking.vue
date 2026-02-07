@@ -38,8 +38,12 @@
 <script setup>
 import { onMounted, onBeforeUnmount, ref } from 'vue'
 import { useFacebookPixel } from '~/composables/useFacebookPixel'
+import { useAnalytics } from '~/composables/useAnalytics'
+import { useTrafficSource } from '~/composables/useTrafficSource'
 
 const { track } = useFacebookPixel()
+const { trackPurchase, trackLead, fireGA4Event } = useAnalytics()
+const { getAttributionForEvent } = useTrafficSource()
 
 // EasyTaxiOffice site key & base booking URL
 const siteKey = '7e3f3d3085b900d598bc40543d611575'
@@ -52,16 +56,40 @@ const iframeSrc = ref('')
 function handleMessage(event) {
   if (event.origin !== 'https://app.silkride.co.uk/') return;
   console.log('📣 Received message:', event.data);
-  const { type, value, currency } = event.data;
+  const { type, value, currency, transactionId } = event.data;
   if (type === 'bookingCompleted' && typeof value === 'number') {
     console.log(`📦 Firing Purchase: value=${value}, currency=${currency}`);
+
+    // Get attribution data for enhanced tracking
+    const attribution = getAttributionForEvent()
+
+    // Track via Facebook Pixel (existing)
     track('Purchase', { value, currency });
+
+    // Track purchase via unified analytics (GA4, Google Ads, Yandex)
+    trackPurchase({
+      transaction_id: transactionId || `booking_${Date.now()}`,
+      value: value,
+      currency: currency || 'GBP',
+      ...attribution
+    });
   }
 }
 
 onMounted(() => {
   // 1) Track Lead when booking page is viewed
   track('Lead')
+
+  // Track booking widget view with attribution
+  trackLead({
+    form_type: 'booking_widget_view',
+    form_location: 'booking_page'
+  })
+
+  // Fire GA4 event for booking widget initiation
+  fireGA4Event('begin_checkout', {
+    ...getAttributionForEvent()
+  })
 
   // 2) Listen for purchase-completion messages
   window.addEventListener('message', handleMessage)

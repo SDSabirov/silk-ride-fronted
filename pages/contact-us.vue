@@ -249,7 +249,14 @@
 </template>
 <script setup>
 import { useSeo } from '~/utils/useSeo'
+import { useAnalytics } from '~/composables/useAnalytics'
+import { useEngagement } from '~/composables/useEngagement'
+
 const cover = "/images/covers/contactus.webp"
+const { trackLead } = useAnalytics()
+
+// Initialize engagement tracking for this page
+useEngagement()
 
 const form = ref({
   name: '',
@@ -264,12 +271,19 @@ const isSubmitting = ref(false);
 
 const submitForm = async () => {
   isSubmitting.value = true;
-  
+
   try {
     // Here you would typically send the form data to your backend
     // For now, we'll just simulate the submission
     await new Promise(resolve => setTimeout(resolve, 2000));
-    
+
+    // Track lead conversion
+    trackLead({
+      form_type: 'contact_page_form',
+      form_location: 'contact_page',
+      service_type: form.value.service || 'not_specified'
+    })
+
     // Reset form after successful submission
     form.value = {
       name: '',
@@ -279,10 +293,10 @@ const submitForm = async () => {
       service: '',
       message: ''
     };
-    
+
     // You could show a success message here
     alert('Message sent successfully! We will get back to you soon.');
-    
+
   } catch (error) {
     console.error('Error submitting form:', error);
     alert('There was an error sending your message. Please try again.');

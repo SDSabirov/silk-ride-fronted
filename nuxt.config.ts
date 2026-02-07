@@ -88,15 +88,24 @@ export default defineNuxtConfig({
     loadingStrategy: 'defer', // Defer loading for better Time to Interactive
     tags:[
       {
-      id: 'G-KGTCEM0MZ4',
-      config: {
-        send_page_view: true,
-        anonymize_ip: true
-      }
+        id: 'G-KGTCEM0MZ4',
+        config: {
+          send_page_view: true,
+          anonymize_ip: true,
+          // Custom dimensions for traffic attribution
+          custom_map: {
+            'dimension1': 'traffic_source',
+            'dimension2': 'traffic_medium',
+            'dimension3': 'landing_page'
+          }
+        }
       },
       {
-      id:'AW-16982457254',
-      // Google Ads conversion tracking
+        id: 'AW-16982457254',
+        // Google Ads conversion tracking
+        // Conversion labels to be added:
+        // - Lead: AW-16982457254/XXXXXX (replace XXXXXX with actual label)
+        // - Purchase: AW-16982457254/YYYYYY (replace YYYYYY with actual label)
       }
     ]
   },

@@ -204,7 +204,9 @@
 </template>
 <script setup>
 import { ref, onMounted } from "vue";
+import { useAnalytics } from '~/composables/useAnalytics'
 
+const { trackLead } = useAnalytics()
 const isOpen = ref(false);
 const showButton = ref(false);
 const showText = ref(false);
@@ -250,6 +252,12 @@ const submitForm = async () => {
     
     console.log("Form submitted successfully:", data);
     successMessage.value = "Thank you! We'll get back to you within 24 hours.";
+
+    // Track lead conversion
+    trackLead({
+      form_type: 'contact_drawer',
+      form_location: 'floating_drawer'
+    });
     
     // Clear the form after successful submission
     form.value = {
