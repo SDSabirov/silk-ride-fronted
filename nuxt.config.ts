@@ -149,9 +149,11 @@ export default defineNuxtConfig({
       fallbackLocale: "en",
     },
   },
-  site:{
+  site: {
     url: 'https://silkride.co.uk',
-    name:"Silk Ride Chauffeur Services",
+    name: 'Silk Ride Chauffeur Services',
+    description: 'Silk Ride Chauffeur Services offers premium airport transfers to Heathrow, Gatwick, Luton, Stansted & beyond, luxury business transport in Central London, wedding cars, and more.',
+    defaultLocale: 'en',
   },
   sitemap: {
     enabled: true,
@@ -184,25 +186,16 @@ export default defineNuxtConfig({
       '/api/**'
     ]
   },
-  seo: {
-    baseUrl: 'https://silkride.co.uk',
-    siteName: 'Silk Ride Chauffeur Services',
-    title: 'Luxury Chauffeur & Airport Transfers in London ',
-    description: 'Silk Ride Chauffeur Services offers premium airport transfers to Heathrow, Gatwick, Luton, Stansted & beyond, luxury business transport in Central London, wedding cars, and more. Travel in comfort and style with our V-Class, E-Class, and S-Class vehicles.',
-    ogSiteName: 'Silk Ride',
-    ogTitle: 'Luxury Chauffeur & Airport Transfers in London | Silk Ride',
-    ogDescription: 'Experience exceptional chauffeur service across London and all major airports with Silk Ride.',
-    ogImage: '/og-image.jpg',
-    twitterCard: 'summary_large_image',
-    twitterSite: '@silkridechauffeur',
-    lang: 'en',
-    additionalMeta: [
-      { name: 'author', content: 'Silk Ride Ltd' }
-    ],
-
-  },
   app: {
     head: {
+      titleTemplate: '%s | Silk Ride',
+      meta: [
+        { name: 'author', content: 'Silk Ride Ltd' },
+        { property: 'og:site_name', content: 'Silk Ride' },
+        { property: 'og:image', content: 'https://silkride.co.uk/og-image.jpg' },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:site', content: '@silkridechauffeur' },
+      ],
       link: [
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' },

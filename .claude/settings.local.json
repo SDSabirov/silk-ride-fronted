@@ -12,7 +12,9 @@
       "Bash(npm run build:nocheck:*)",
       "Bash(npm run:*)",
       "Bash(find:*)",
-      "Bash(tree:*)"
+      "Bash(tree:*)",
+      "WebSearch",
+      "WebFetch(domain:nuxtseo.com)"
     ],
     "deny": []
   }
