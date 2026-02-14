@@ -80,7 +80,7 @@
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <!-- Uzbek Culture Week -->
           <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
             <div class="flex flex-col items-center text-center">
@@ -134,14 +134,17 @@
           <!-- Oshpaz -->
           <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
             <div class="flex flex-col items-center text-center">
-              <div class="w-24 h-24 bg-gray-100 rounded-lg flex items-center justify-center mb-6">
-                <!-- Logo placeholder - add oshpaz logo when available -->
-                <i class="bx bx-restaurant text-4xl text-gray-400"></i>
+              <div class="w-24 h-24 rounded-lg flex items-center justify-center mb-6 p-4" style="background-color: rgb(134, 33, 47);">
+                <img
+                  src="https://static.wixstatic.com/media/1d3348_94401baf87b044cf88177b0e315fffe6~mv2.png/v1/fill/w_379,h_248,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/1d3348_94401baf87b044cf88177b0e315fffe6~mv2.png"
+                  alt="Oshpaz Logo"
+                  class="w-full h-full object-contain"
+                />
               </div>
               <h3 class="text-xl font-semibold mb-4">
-                <a 
-                  href="https://oshpaz.co.uk/" 
-                  target="_blank" 
+                <a
+                  href="https://oshpaz.co.uk/"
+                  target="_blank"
                   rel="noopener noreferrer"
                   class="hover:text-gold transition-colors"
                 >
@@ -150,6 +153,31 @@
               </h3>
               <p class="text-gray-600 mb-4">{{ $t('pages.about.partners.trusted.organizations.oshpaz.description') }}</p>
               <p class="text-sm text-gold font-medium">{{ $t('pages.about.partners.trusted.organizations.oshpaz.service') }}</p>
+            </div>
+          </div>
+
+          <!-- VIP Air Assist -->
+          <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+            <div class="flex flex-col items-center text-center">
+              <div class="w-24 h-24 bg-gray-100 rounded-lg flex items-center justify-center mb-6 p-4">
+                <img
+                  src="https://vipairassist.com/logo.png"
+                  alt="VIP Air Assist Logo"
+                  class="w-full h-full object-contain"
+                />
+              </div>
+              <h3 class="text-xl font-semibold mb-4">
+                <a
+                  href="https://vipairassist.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="hover:text-gold transition-colors"
+                >
+                  {{ $t('pages.about.partners.trusted.organizations.vipAirAssist.name') }}
+                </a>
+              </h3>
+              <p class="text-gray-600 mb-4">{{ $t('pages.about.partners.trusted.organizations.vipAirAssist.description') }}</p>
+              <p class="text-sm text-gold font-medium">{{ $t('pages.about.partners.trusted.organizations.vipAirAssist.service') }}</p>
             </div>
           </div>
         </div>

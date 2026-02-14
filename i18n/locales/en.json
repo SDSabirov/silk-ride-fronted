@@ -666,6 +666,11 @@
               "name": "Oshpaz",
               "description": "Premium food chain restaurant offering authentic cuisine and exceptional dining experiences.",
               "service": "Executive and event transportation"
+            },
+            "vipAirAssist": {
+              "name": "VIP Air Assist",
+              "description": "Premium airport meet and assist service providing VIP treatment, fast-track immigration, and personalized assistance at airports worldwide.",
+              "service": "Airport transfer services"
             }
           },
           "cta": {
