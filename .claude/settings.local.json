@@ -15,7 +15,8 @@
       "Bash(tree:*)",
       "WebSearch",
       "WebFetch(domain:nuxtseo.com)",
-      "mcp__ide__getDiagnostics"
+      "mcp__ide__getDiagnostics",
+      "mcp__plugin_playwright_playwright__browser_navigate"
     ],
     "deny": []
   }

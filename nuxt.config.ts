@@ -85,29 +85,26 @@ export default defineNuxtConfig({
   modules: ["@nuxtjs/seo", "@nuxtjs/google-fonts", "@nuxt/image", "@pinia/nuxt", "@nuxtjs/i18n", 'nuxt-gtag'],
   gtag: {
     // Google Consent Mode v2 Implementation
-    // initCommands run BEFORE gtag('config') - this is where consent defaults MUST be set
     loadingStrategy: 'async',
-    initCommands: [
-      // Set consent defaults to DENIED - enables cookieless pings for users who haven't consented
-      // This MUST run before gtag('config') for Consent Mode v2 to work properly
-      ['consent', 'default', {
-        ad_storage: 'denied',
-        ad_user_data: 'denied',
-        ad_personalization: 'denied',
-        analytics_storage: 'denied',
-        functionality_storage: 'denied',
-        personalization_storage: 'denied',
-        security_storage: 'granted',
-        wait_for_update: 500 // Wait 500ms for consent banner interaction
-      }]
-    ],
     tags:[
       {
         id: 'G-KGTCEM0MZ4',
+        // initCommands run BEFORE gtag('config') - consent defaults MUST be here
+        initCommands: [
+          ['consent', 'default', {
+            ad_storage: 'denied',
+            ad_user_data: 'denied',
+            ad_personalization: 'denied',
+            analytics_storage: 'denied',
+            functionality_storage: 'denied',
+            personalization_storage: 'denied',
+            security_storage: 'granted',
+            wait_for_update: 500
+          }]
+        ],
         config: {
           send_page_view: true,
           anonymize_ip: true,
-          // Custom dimensions for traffic attribution
           custom_map: {
             'dimension1': 'traffic_source',
             'dimension2': 'traffic_medium',
@@ -117,9 +114,6 @@ export default defineNuxtConfig({
       },
       {
         id: 'AW-16982457254',
-        // Google Ads conversion tracking - Consent Mode v2 handles consent automatically
-        // Conversion labels:
-        // - Lead: AW-16982457254/GijACI3t0PMbEKb37qE_
         config: {
           allow_ad_personalization_signals: false
         }
