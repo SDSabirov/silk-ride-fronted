@@ -84,9 +84,23 @@ export default defineNuxtConfig({
   css: ["~/assets/css/main.css", "boxicons/css/boxicons.min.css"],
   modules: ["@nuxtjs/seo", "@nuxtjs/google-fonts", "@nuxt/image", "@pinia/nuxt", "@nuxtjs/i18n", 'nuxt-gtag'],
   gtag: {
-    // Load gtag script - consent defaults are set by 00.consent-mode.client.ts plugin FIRST
-    // This ensures Google Consent Mode v2 is properly initialized before gtag('config') runs
-    loadingStrategy: 'async', // Use async to load ASAP after consent defaults are set
+    // Google Consent Mode v2 Implementation
+    // initCommands run BEFORE gtag('config') - this is where consent defaults MUST be set
+    loadingStrategy: 'async',
+    initCommands: [
+      // Set consent defaults to DENIED - enables cookieless pings for users who haven't consented
+      // This MUST run before gtag('config') for Consent Mode v2 to work properly
+      ['consent', 'default', {
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        analytics_storage: 'denied',
+        functionality_storage: 'denied',
+        personalization_storage: 'denied',
+        security_storage: 'granted',
+        wait_for_update: 500 // Wait 500ms for consent banner interaction
+      }]
+    ],
     tags:[
       {
         id: 'G-KGTCEM0MZ4',
@@ -103,11 +117,11 @@ export default defineNuxtConfig({
       },
       {
         id: 'AW-16982457254',
-        // Google Ads conversion tracking - configured for Consent Mode v2
+        // Google Ads conversion tracking - Consent Mode v2 handles consent automatically
         // Conversion labels:
         // - Lead: AW-16982457254/GijACI3t0PMbEKb37qE_
         config: {
-          allow_ad_personalization_signals: false // Respect consent mode
+          allow_ad_personalization_signals: false
         }
       }
     ]

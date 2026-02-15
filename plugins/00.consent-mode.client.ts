@@ -1,6 +1,6 @@
-// Google Consent Mode v2 Plugin
-// This plugin MUST run BEFORE gtag.js loads to properly initialize consent defaults
-// File is prefixed with "00." to ensure it runs first among client plugins
+// Google Consent Mode v2 - Consent Restoration Plugin
+// This plugin restores consent for returning visitors who previously accepted cookies
+// Consent DEFAULTS are set in nuxt.config.ts via gtag.initCommands (runs before gtag('config'))
 
 import { defineNuxtPlugin } from '#imports'
 
@@ -13,43 +13,15 @@ interface ConsentPreferences {
 
 export default defineNuxtPlugin({
   name: 'consent-mode',
-  enforce: 'pre', // Run before other plugins
+  enforce: 'pre', // Run early to restore consent quickly
   setup() {
     if (!process.client) return
 
-    // Initialize dataLayer and gtag function BEFORE gtag.js loads
+    // Ensure dataLayer exists (nuxt-gtag creates it, but be safe)
     window.dataLayer = window.dataLayer || []
 
-    // Define gtag function if not already defined
-    if (typeof window.gtag !== 'function') {
-      window.gtag = function gtag(...args: any[]) {
-        window.dataLayer.push(args)
-      }
-    }
-
-    // Set default consent to DENIED - this MUST happen before gtag.js loads
-    // This enables Google's cookieless pings for users who haven't consented yet
-    window.gtag('consent', 'default', {
-      ad_storage: 'denied',
-      ad_user_data: 'denied',
-      ad_personalization: 'denied',
-      analytics_storage: 'denied',
-      functionality_storage: 'denied',
-      personalization_storage: 'denied',
-      security_storage: 'granted', // Always granted for security features
-      wait_for_update: 500 // Wait 500ms for consent banner interaction
-    })
-
-    // Set region-specific defaults for EEA/UK (more restrictive by default)
-    window.gtag('consent', 'default', {
-      ad_storage: 'denied',
-      ad_user_data: 'denied',
-      ad_personalization: 'denied',
-      analytics_storage: 'denied',
-      region: ['GB', 'EU'] // UK and EU regions
-    })
-
-    // Check if user has previously consented and restore their preferences
+    // Restore consent for returning visitors ASAP
+    // This runs after nuxt-gtag sets defaults but before page fully loads
     restorePreviousConsent()
 
     // Listen for consent updates from the consent banner
@@ -97,7 +69,7 @@ function restorePreviousConsent(): void {
         functional: true
       })
     }
-    // If 'essentials' or no consent, leave defaults as denied
+    // If 'essentials' or no consent, leave defaults as denied (set by nuxt.config.ts)
   } catch (error) {
     console.warn('[Consent Mode] Error restoring previous consent:', error)
   }
@@ -105,9 +77,16 @@ function restorePreviousConsent(): void {
 
 /**
  * Update gtag consent state based on user preferences
+ * Uses the gtag function wrapper to push to dataLayer in the correct format
  */
 function updateGtagConsent(preferences: ConsentPreferences): void {
-  if (typeof window.gtag !== 'function') return
+  // Ensure gtag function exists (creates wrapper if needed)
+  window.dataLayer = window.dataLayer || []
+  if (typeof window.gtag !== 'function') {
+    window.gtag = function gtag(..._args: any[]) {
+      window.dataLayer.push(arguments)
+    }
+  }
 
   window.gtag('consent', 'update', {
     ad_storage: preferences.advertising ? 'granted' : 'denied',
