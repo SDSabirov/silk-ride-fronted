@@ -1,6 +1,6 @@
-// Google Consent Mode v2 - Consent Restoration Plugin
-// This plugin restores consent for returning visitors who previously accepted cookies
-// Consent DEFAULTS are set in nuxt.config.ts via gtag.initCommands (runs before gtag('config'))
+// Google Consent Mode v2 - Advanced Mode
+// This plugin MUST run BEFORE nuxt-gtag to set consent defaults
+// With Advanced Mode, gtag.js loads immediately and sends cookieless pings when consent is denied
 
 import { defineNuxtPlugin } from '#imports'
 
@@ -13,18 +13,41 @@ interface ConsentPreferences {
 
 export default defineNuxtPlugin({
   name: 'consent-mode',
-  enforce: 'pre', // Run early to restore consent quickly
+  enforce: 'pre', // Critical: Run BEFORE other plugins including nuxt-gtag
   setup() {
     if (!process.client) return
 
-    // Ensure dataLayer exists (nuxt-gtag creates it, but be safe)
+    // Create dataLayer and gtag function FIRST, before nuxt-gtag
     window.dataLayer = window.dataLayer || []
 
-    // Restore consent for returning visitors ASAP
-    // This runs after nuxt-gtag sets defaults but before page fully loads
+    // Define gtag function for pushing to dataLayer
+    window.gtag = function gtag(..._args: any[]) {
+      window.dataLayer.push(arguments)
+    }
+
+    // Set consent defaults IMMEDIATELY - this enables Advanced Mode
+    // gtag.js will see these defaults when it loads and send cookieless pings
+    window.gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      functionality_storage: 'denied',
+      personalization_storage: 'denied',
+      security_storage: 'granted',
+      wait_for_update: 500
+    })
+
+    // Enable URL passthrough for conversion modeling when cookies denied
+    window.gtag('set', 'url_passthrough', true)
+
+    // Redact ad click identifiers when ad_storage is denied
+    window.gtag('set', 'ads_data_redaction', true)
+
+    // Check if user previously consented and update immediately
     restorePreviousConsent()
 
-    // Listen for consent updates from the consent banner
+    // Listen for consent updates from the banner
     window.addEventListener('consent-updated', ((event: CustomEvent) => {
       const { preferences } = event.detail
       if (preferences) {
@@ -35,8 +58,7 @@ export default defineNuxtPlugin({
 })
 
 /**
- * Restore consent preferences from localStorage for returning visitors
- * This ensures users who previously consented get full tracking immediately
+ * Restore consent for returning visitors
  */
 function restorePreviousConsent(): void {
   try {
@@ -44,13 +66,12 @@ function restorePreviousConsent(): void {
     const consentType = localStorage.getItem('cookie_consent')
     const consentDate = localStorage.getItem('cookie_consent_date')
 
-    // Check if consent has expired (12 months)
+    // Check if consent expired (12 months)
     if (consentDate) {
       const consentTime = new Date(consentDate).getTime()
       const oneYear = 365 * 24 * 60 * 60 * 1000
       if (Date.now() - consentTime > oneYear) {
-        // Consent expired, don't restore - let user re-consent
-        return
+        return // Expired, don't restore
       }
     }
 
@@ -60,7 +81,6 @@ function restorePreviousConsent(): void {
       return
     }
 
-    // Fallback: check consent type if preferences not stored
     if (consentType === 'all') {
       updateGtagConsent({
         essential: true,
@@ -69,24 +89,16 @@ function restorePreviousConsent(): void {
         functional: true
       })
     }
-    // If 'essentials' or no consent, leave defaults as denied (set by nuxt.config.ts)
   } catch (error) {
-    console.warn('[Consent Mode] Error restoring previous consent:', error)
+    console.warn('[Consent Mode] Error restoring consent:', error)
   }
 }
 
 /**
- * Update gtag consent state based on user preferences
- * Uses the gtag function wrapper to push to dataLayer in the correct format
+ * Update gtag consent state
  */
 function updateGtagConsent(preferences: ConsentPreferences): void {
-  // Ensure gtag function exists (creates wrapper if needed)
-  window.dataLayer = window.dataLayer || []
-  if (typeof window.gtag !== 'function') {
-    window.gtag = function gtag(..._args: any[]) {
-      window.dataLayer.push(arguments)
-    }
-  }
+  if (typeof window.gtag !== 'function') return
 
   window.gtag('consent', 'update', {
     ad_storage: preferences.advertising ? 'granted' : 'denied',
@@ -98,7 +110,6 @@ function updateGtagConsent(preferences: ConsentPreferences): void {
   })
 }
 
-// Extend Window interface for dataLayer
 declare global {
   interface Window {
     dataLayer: any[]

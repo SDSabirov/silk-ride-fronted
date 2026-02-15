@@ -84,24 +84,13 @@ export default defineNuxtConfig({
   css: ["~/assets/css/main.css", "boxicons/css/boxicons.min.css"],
   modules: ["@nuxtjs/seo", "@nuxtjs/google-fonts", "@nuxt/image", "@pinia/nuxt", "@nuxtjs/i18n", 'nuxt-gtag'],
   gtag: {
-    // Google Consent Mode v2 Implementation
+    // Google Consent Mode v2 - Advanced Mode Implementation
+    // Consent defaults are set via 00.consent-mode.client.ts plugin which runs BEFORE nuxt-gtag
+    // This ensures gtag.js loads and sends cookieless pings even when consent is denied
     loadingStrategy: 'async',
     tags:[
       {
         id: 'G-KGTCEM0MZ4',
-        // initCommands run BEFORE gtag('config') - consent defaults MUST be here
-        initCommands: [
-          ['consent', 'default', {
-            ad_storage: 'denied',
-            ad_user_data: 'denied',
-            ad_personalization: 'denied',
-            analytics_storage: 'denied',
-            functionality_storage: 'denied',
-            personalization_storage: 'denied',
-            security_storage: 'granted',
-            wait_for_update: 500
-          }]
-        ],
         config: {
           send_page_view: true,
           anonymize_ip: true,
