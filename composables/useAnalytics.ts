@@ -93,10 +93,14 @@ export function useAnalytics() {
 
   /**
    * Fire event to Google Analytics 4
+   * NOTE: Do NOT gate this with consent checks - Google Consent Mode v2 handles consent at the gtag level.
+   * When consent is denied, gtag automatically sends cookieless pings (anonymized, GDPR-compliant).
+   * When consent is granted, gtag sends full data with cookies.
    */
   function fireGA4Event(eventName: string, params: Record<string, any> = {}): void {
     if (!process.client) return
-    if (!hasAnalyticsConsent()) return
+    // REMOVED: if (!hasAnalyticsConsent()) return
+    // Consent Mode v2 handles this - gtag will send cookieless pings when denied
 
     const attribution = getAttributionForEvent()
 
@@ -110,10 +114,15 @@ export function useAnalytics() {
 
   /**
    * Fire conversion to Google Ads
+   * NOTE: Do NOT gate this with consent checks - Google Consent Mode v2 handles consent at the gtag level.
+   * When consent is denied, gtag automatically sends cookieless conversion pings.
+   * When consent is granted, gtag sends full conversion data with cookies.
+   * Google uses modelling to fill gaps in conversion data for users who didn't consent.
    */
   function fireGoogleAdsConversion(conversionLabel: string, value?: number, currency?: string): void {
     if (!process.client) return
-    if (!hasAdvertisingConsent()) return
+    // REMOVED: if (!hasAdvertisingConsent()) return
+    // Consent Mode v2 handles this - gtag will send cookieless conversion pings when denied
     if (!conversionLabel) return // Skip if no label configured
 
     if (typeof window.gtag === 'function') {
@@ -132,9 +141,13 @@ export function useAnalytics() {
 
   /**
    * Fire event to Facebook Pixel
+   * NOTE: Unlike Google, Facebook does NOT have a Consent Mode equivalent.
+   * We keep the consent check here because Facebook cannot send anonymized/cookieless pings.
+   * Facebook Pixel should only fire when the user has explicitly granted advertising consent.
    */
   function fireFacebookEvent(eventName: string, params: Record<string, any> = {}): void {
     if (!process.client) return
+    // Keep this check - Facebook has no consent mode, so we must gate events manually
     if (!hasAdvertisingConsent()) return
 
     if (typeof window.fbq === 'function') {

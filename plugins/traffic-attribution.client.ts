@@ -1,5 +1,7 @@
 // Traffic Attribution Plugin
 // Initializes traffic source tracking on every page load
+// Works with Google Consent Mode v2 - events are fired regardless of consent state
+// gtag will handle consent appropriately (cookieless pings when denied, full data when granted)
 
 import { defineNuxtPlugin } from '#imports'
 import { useTrafficSource } from '~/composables/useTrafficSource'
@@ -20,17 +22,24 @@ export default defineNuxtPlugin((nuxtApp) => {
 
   // Fire landing event based on traffic source
   const fireLandingEvent = () => {
-    // Wait for gtag to be available
+    // gtag is now initialized by 00.consent-mode.client.ts plugin which runs first
+    // We still check for availability in case of edge cases
     const waitForGtag = (callback: () => void, attempts = 0) => {
       if (typeof window.gtag === 'function') {
         callback()
-      } else if (attempts < 20) {
-        setTimeout(() => waitForGtag(callback, attempts + 1), 250)
+      } else if (attempts < 10) {
+        // Reduced attempts since gtag should be available quickly now
+        setTimeout(() => waitForGtag(callback, attempts + 1), 100)
       }
     }
 
     waitForGtag(() => {
       const attributionData = getAttributionForEvent()
+
+      // NOTE: We fire these events regardless of consent state
+      // Google Consent Mode v2 handles consent at the gtag level
+      // When consent is denied, gtag sends cookieless pings
+      // When consent is granted, gtag sends full data with cookies
 
       if (isOrganicSearch()) {
         // Fire organic landing event
@@ -40,7 +49,7 @@ export default defineNuxtPlugin((nuxtApp) => {
           ...attributionData
         })
       } else if (isPaidTraffic()) {
-        // Fire ad click landing event
+        // Fire ad click landing event - critical for Google Ads attribution
         window.gtag('event', 'ad_click_landing', {
           source: source.source,
           medium: source.medium,
@@ -58,8 +67,9 @@ export default defineNuxtPlugin((nuxtApp) => {
     })
   }
 
-  // Fire landing event after a short delay to ensure analytics scripts are loaded
-  setTimeout(fireLandingEvent, 2000)
+  // Fire landing event with minimal delay - gtag should be ready quickly now
+  // thanks to 00.consent-mode.client.ts plugin which initializes it first
+  setTimeout(fireLandingEvent, 500)
 
   // Listen for route changes to track SPA navigation
   nuxtApp.hook('page:finish', () => {

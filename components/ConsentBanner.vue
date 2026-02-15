@@ -154,7 +154,8 @@ const emit = defineEmits(['consent-updated'])
 const show = ref(false)
 const showDetails = ref(false)
 const showCustomize = ref(false)
-const { gtag } = useGtag()
+// Use window.gtag directly for consistency with consent-mode plugin
+// This ensures gtag('consent', 'update') works even if nuxt-gtag hasn't fully initialized
 
 const customPreferences = reactive({
   analytics: true,
@@ -270,8 +271,9 @@ function applyConsentSettings(consentType, preferences = {}) {
 }
 
 function grantAllConsent() {
-  if (typeof gtag !== 'undefined') {
-    gtag('consent', 'update', {
+  // Use window.gtag for consistency with consent-mode plugin
+  if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+    window.gtag('consent', 'update', {
       ad_user_data: 'granted',
       ad_personalization: 'granted',
       ad_storage: 'granted',
@@ -283,8 +285,9 @@ function grantAllConsent() {
 }
 
 function grantEssentialOnly() {
-  if (typeof gtag !== 'undefined') {
-    gtag('consent', 'update', {
+  // Use window.gtag for consistency with consent-mode plugin
+  if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+    window.gtag('consent', 'update', {
       ad_user_data: 'denied',
       ad_personalization: 'denied',
       ad_storage: 'denied',
@@ -296,8 +299,9 @@ function grantEssentialOnly() {
 }
 
 function grantCustomConsent(preferences) {
-  if (typeof gtag !== 'undefined') {
-    gtag('consent', 'update', {
+  // Use window.gtag for consistency with consent-mode plugin
+  if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+    window.gtag('consent', 'update', {
       ad_user_data: preferences.advertising ? 'granted' : 'denied',
       ad_personalization: preferences.advertising ? 'granted' : 'denied',
       ad_storage: preferences.advertising ? 'granted' : 'denied',

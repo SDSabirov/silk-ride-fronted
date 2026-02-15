@@ -84,8 +84,9 @@ export default defineNuxtConfig({
   css: ["~/assets/css/main.css", "boxicons/css/boxicons.min.css"],
   modules: ["@nuxtjs/seo", "@nuxtjs/google-fonts", "@nuxt/image", "@pinia/nuxt", "@nuxtjs/i18n", 'nuxt-gtag'],
   gtag: {
-    // Optimize loading strategy for better performance
-    loadingStrategy: 'defer', // Defer loading for better Time to Interactive
+    // Load gtag script - consent defaults are set by 00.consent-mode.client.ts plugin FIRST
+    // This ensures Google Consent Mode v2 is properly initialized before gtag('config') runs
+    loadingStrategy: 'async', // Use async to load ASAP after consent defaults are set
     tags:[
       {
         id: 'G-KGTCEM0MZ4',
@@ -102,10 +103,12 @@ export default defineNuxtConfig({
       },
       {
         id: 'AW-16982457254',
-        // Google Ads conversion tracking
-        // Conversion labels to be added:
-        // - Lead: AW-16982457254/XXXXXX (replace XXXXXX with actual label)
-        // - Purchase: AW-16982457254/YYYYYY (replace YYYYYY with actual label)
+        // Google Ads conversion tracking - configured for Consent Mode v2
+        // Conversion labels:
+        // - Lead: AW-16982457254/GijACI3t0PMbEKb37qE_
+        config: {
+          allow_ad_personalization_signals: false // Respect consent mode
+        }
       }
     ]
   },

@@ -14,7 +14,8 @@
       "Bash(find:*)",
       "Bash(tree:*)",
       "WebSearch",
-      "WebFetch(domain:nuxtseo.com)"
+      "WebFetch(domain:nuxtseo.com)",
+      "mcp__ide__getDiagnostics"
     ],
     "deny": []
   }
