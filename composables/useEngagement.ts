@@ -20,7 +20,7 @@ export function useEngagement(options: EngagementOptions = {}) {
     trackOnMount = true
   } = options
 
-  const { trackScrollDepth, trackTimeOnPage, hasAnalyticsConsent } = useAnalytics()
+  const { trackScrollDepth, trackTimeOnPage } = useAnalytics()
 
   // State
   const scrollDepthTracked = ref<Set<number>>(new Set())
@@ -53,10 +53,10 @@ export function useEngagement(options: EngagementOptions = {}) {
 
   /**
    * Handle scroll event
+   * NOTE: No consent check here - Consent Mode v2 handles consent at the gtag level.
+   * trackScrollDepth() → fireGA4Event() → window.gtag() which sends cookieless pings when denied.
    */
   function handleScroll(): void {
-    if (!hasAnalyticsConsent()) return
-
     const currentDepth = getScrollDepth()
 
     for (const threshold of scrollThresholds) {
@@ -69,9 +69,10 @@ export function useEngagement(options: EngagementOptions = {}) {
 
   /**
    * Check and track time on page
+   * NOTE: No consent check here - Consent Mode v2 handles consent at the gtag level.
+   * trackTimeOnPage() → fireGA4Event() → window.gtag() which sends cookieless pings when denied.
    */
   function checkTimeOnPage(): void {
-    if (!hasAnalyticsConsent()) return
     if (!startTime.value) return
 
     const elapsedSeconds = Math.floor((Date.now() - startTime.value) / 1000)

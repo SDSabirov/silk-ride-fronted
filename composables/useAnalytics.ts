@@ -9,13 +9,6 @@ interface LeadEventParams {
   [key: string]: any
 }
 
-interface PurchaseEventParams {
-  transaction_id: string
-  value: number
-  currency: string
-  [key: string]: any
-}
-
 interface EngagementEventParams {
   event_name: string
   [key: string]: any
@@ -31,8 +24,6 @@ interface ConsentPreferences {
 // Google Ads conversion labels
 const GOOGLE_ADS_CONVERSION_ID = 'AW-16982457254'
 const GOOGLE_ADS_LEAD_LABEL = 'AW-16982457254/GijACI3t0PMbEKb37qE_'
-const GOOGLE_ADS_PURCHASE_LABEL = '' // Add your Purchase conversion label here
-
 export function useAnalytics() {
   const { getAttributionForEvent } = useTrafficSource()
 
@@ -182,33 +173,6 @@ export function useAnalytics() {
   }
 
   /**
-   * Track a purchase event (booking completion)
-   */
-  function trackPurchase(params: PurchaseEventParams): void {
-    const attribution = getAttributionForEvent()
-    const enhancedParams = {
-      ...params,
-      ...attribution
-    }
-
-    // GA4
-    fireGA4Event('purchase', enhancedParams)
-
-    // Google Ads conversion with value
-    if (GOOGLE_ADS_PURCHASE_LABEL) {
-      fireGoogleAdsConversion(GOOGLE_ADS_PURCHASE_LABEL, params.value, params.currency)
-    }
-
-    // Facebook Pixel
-    fireFacebookEvent('Purchase', {
-      value: params.value,
-      currency: params.currency,
-      content_ids: [params.transaction_id],
-      content_type: 'service'
-    })
-  }
-
-  /**
    * Track page view (for SPA navigation)
    */
   function trackPageView(pagePath?: string, pageTitle?: string): void {
@@ -273,7 +237,6 @@ export function useAnalytics() {
 
   return {
     trackLead,
-    trackPurchase,
     trackPageView,
     trackEngagement,
     trackScrollDepth,

@@ -36,13 +36,13 @@
 </template>
 
 <script setup>
-import { onMounted, onBeforeUnmount, ref } from 'vue'
+import { onMounted, ref } from 'vue'
 import { useFacebookPixel } from '~/composables/useFacebookPixel'
 import { useAnalytics } from '~/composables/useAnalytics'
 import { useTrafficSource } from '~/composables/useTrafficSource'
 
 const { track } = useFacebookPixel()
-const { trackPurchase, trackLead, fireGA4Event } = useAnalytics()
+const { trackLead, fireGA4Event } = useAnalytics()
 const { getAttributionForEvent } = useTrafficSource()
 
 // EasyTaxiOffice site key & base booking URL
@@ -51,30 +51,6 @@ const vendorBaseUrl = `https://app.silkride.co.uk//booking?site_key=${siteKey}`
 
 // Reactive iframe source
 const iframeSrc = ref('')
-
-// Handle postMessage from iframe
-function handleMessage(event) {
-  if (event.origin !== 'https://app.silkride.co.uk/') return;
-  console.log('📣 Received message:', event.data);
-  const { type, value, currency, transactionId } = event.data;
-  if (type === 'bookingCompleted' && typeof value === 'number') {
-    console.log(`📦 Firing Purchase: value=${value}, currency=${currency}`);
-
-    // Get attribution data for enhanced tracking
-    const attribution = getAttributionForEvent()
-
-    // Track via Facebook Pixel (existing)
-    track('Purchase', { value, currency });
-
-    // Track purchase via unified analytics (GA4, Google Ads, Yandex)
-    trackPurchase({
-      transaction_id: transactionId || `booking_${Date.now()}`,
-      value: value,
-      currency: currency || 'GBP',
-      ...attribution
-    });
-  }
-}
 
 onMounted(() => {
   // 1) Track Lead when booking page is viewed
@@ -91,10 +67,7 @@ onMounted(() => {
     ...getAttributionForEvent()
   })
 
-  // 2) Listen for purchase-completion messages
-  window.addEventListener('message', handleMessage)
-
-  // 3) Build the final iframe URL (includes return_url for post-booking redirect)
+  // 2) Build the final iframe URL (includes return_url for post-booking redirect)
   const returnUrl = `${window.location.origin}/booking-complete`
   const fullUrl = `${vendorBaseUrl}&return_url=${encodeURIComponent(returnUrl)}`
   iframeSrc.value = fullUrl
@@ -111,10 +84,6 @@ onMounted(() => {
     }
   }
   document.head.appendChild(script)
-})
-
-onBeforeUnmount(() => {
-  window.removeEventListener('message', handleMessage)
 })
 </script>
 

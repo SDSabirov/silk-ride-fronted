@@ -1,76 +1,89 @@
 <template>
+  <!-- Backdrop overlay -->
+  <Transition name="fade">
+    <div
+      v-if="show"
+      class="fixed inset-0 bg-black/40 z-[9997] pointer-events-none"
+    />
+  </Transition>
+
+  <!-- Consent Banner -->
   <Transition name="slide-up" appear>
-    <div 
-      v-if="show" 
-      class="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 shadow-lg p-4 z-[9998] text-sm"
+    <div
+      v-if="show"
+      class="fixed bottom-0 left-0 w-full z-[9998]"
       role="dialog"
       aria-labelledby="consent-title"
       aria-describedby="consent-description"
     >
-      <div class="max-w-screen-lg mx-auto">
-        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          <div class="flex-1">
-            <h3 id="consent-title" class="font-semibold text-gray-900 mb-1">Cookie Preferences</h3>
-            <p id="consent-description" class="text-gray-700 mb-2">
-              We use cookies to enhance your browsing experience, provide personalized content, and analyze our traffic. 
-              You can choose which types of cookies to allow.
-            </p>
-            <div class="flex flex-wrap gap-4 text-xs">
-              <NuxtLink to="/privacy-policy" class="text-blue-600 hover:underline">Privacy Policy</NuxtLink>
-              <button @click="showDetails = !showDetails" class="text-blue-600 hover:underline">
-                {{ showDetails ? 'Hide Details' : 'Cookie Details' }}
+      <!-- Gold accent bar -->
+      <div class="h-1 bg-gold" />
+      <div class="bg-gray-950 px-4 py-6 sm:py-5">
+        <div class="max-w-screen-lg mx-auto">
+          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
+            <div class="flex-1">
+              <h3 id="consent-title" class="font-semibold text-white text-base mb-1.5">Cookie Preferences</h3>
+              <p id="consent-description" class="text-gray-300 text-sm leading-relaxed mb-3">
+                We use cookies to enhance your browsing experience, provide personalized content, and analyze our traffic.
+                You can choose which types of cookies to allow.
+              </p>
+              <div class="flex flex-wrap gap-4 text-xs">
+                <NuxtLink to="/privacy-policy" class="text-gold hover:text-gold/80 hover:underline transition-colors">Privacy Policy</NuxtLink>
+                <button @click="showDetails = !showDetails" class="text-gold hover:text-gold/80 hover:underline transition-colors">
+                  {{ showDetails ? 'Hide Details' : 'Cookie Details' }}
+                </button>
+              </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-2.5 min-w-fit w-full sm:w-auto">
+              <button
+                @click="acceptAll"
+                class="bg-gold text-black font-semibold px-6 py-2.5 rounded-md hover:bg-gold/90 transition-colors focus:outline-none focus:ring-2 focus:ring-gold/50"
+                aria-label="Accept all cookies"
+              >
+                Accept All
+              </button>
+              <button
+                @click="essentialsOnly"
+                class="bg-transparent text-white border border-white/30 px-6 py-2.5 rounded-md hover:bg-white/10 transition-colors focus:outline-none focus:ring-2 focus:ring-white/30"
+                aria-label="Accept essential cookies only"
+              >
+                Essentials Only
+              </button>
+              <button
+                @click="showCustomize = true"
+                class="bg-transparent text-gray-400 border border-white/10 px-6 py-2.5 rounded-md hover:bg-white/5 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white/20"
+                aria-label="Customize cookie preferences"
+              >
+                Customize
               </button>
             </div>
           </div>
-          
-          <div class="flex flex-col sm:flex-row gap-2 min-w-fit">
-            <button 
-              @click="acceptAll" 
-              class="bg-black text-white px-4 py-2 rounded hover:bg-gray-800 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-500"
-              aria-label="Accept all cookies"
-            >
-              Accept All
-            </button>
-            <button 
-              @click="essentialsOnly" 
-              class="bg-gray-200 text-gray-800 px-4 py-2 rounded hover:bg-gray-300 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-400"
-              aria-label="Accept essential cookies only"
-            >
-              Essentials Only
-            </button>
-            <button 
-              @click="showCustomize = true" 
-              class="bg-white border border-gray-300 text-gray-800 px-4 py-2 rounded hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-400"
-              aria-label="Customize cookie preferences"
-            >
-              Customize
-            </button>
-          </div>
-        </div>
-        
-        <!-- Cookie Details -->
-        <Transition name="expand">
-          <div v-if="showDetails" class="mt-4 pt-4 border-t border-gray-200">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
-              <div>
-                <h4 class="font-semibold mb-1">Essential Cookies</h4>
-                <p class="text-gray-600">Required for basic website functionality and cannot be disabled.</p>
-              </div>
-              <div>
-                <h4 class="font-semibold mb-1">Analytics Cookies</h4>
-                <p class="text-gray-600">Help us understand how visitors use our website to improve user experience.</p>
-              </div>
-              <div>
-                <h4 class="font-semibold mb-1">Advertising Cookies</h4>
-                <p class="text-gray-600">Used to deliver personalized advertisements based on your interests.</p>
-              </div>
-              <div>
-                <h4 class="font-semibold mb-1">Functional Cookies</h4>
-                <p class="text-gray-600">Enable enhanced functionality and personalization features.</p>
+
+          <!-- Cookie Details -->
+          <Transition name="expand">
+            <div v-if="showDetails" class="mt-4 pt-4 border-t border-white/10">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+                <div>
+                  <h4 class="font-semibold text-white mb-1">Essential Cookies</h4>
+                  <p class="text-gray-400">Required for basic website functionality and cannot be disabled.</p>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-white mb-1">Analytics Cookies</h4>
+                  <p class="text-gray-400">Help us understand how visitors use our website to improve user experience.</p>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-white mb-1">Advertising Cookies</h4>
+                  <p class="text-gray-400">Used to deliver personalized advertisements based on your interests.</p>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-white mb-1">Functional Cookies</h4>
+                  <p class="text-gray-400">Enable enhanced functionality and personalization features.</p>
+                </div>
               </div>
             </div>
-          </div>
-        </Transition>
+          </Transition>
+        </div>
       </div>
     </div>
   </Transition>
@@ -186,10 +199,10 @@ onMounted(() => {
       setTimeout(() => {
         show.value = true
       }, 1000)
-    } else {
-      const preferences = JSON.parse(localStorage.getItem('cookie_preferences') || '{}')
-      applyConsentSettings(consent, preferences)
     }
+    // Note: No need to call applyConsentSettings() for returning visitors here.
+    // The 00.consent-mode.client.ts plugin already restores consent via restorePreviousConsent()
+    // before this component mounts, so calling it again would be a duplicate gtag('consent', 'update').
   } catch (error) {
     console.warn('Error reading cookie consent:', error)
     show.value = true
