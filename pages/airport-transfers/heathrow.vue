@@ -6,7 +6,7 @@
     <section class="relative min-h-screen lg:min-h-[90vh] flex items-center py-20">
       <div class="absolute inset-0 overflow-hidden">
         <img
-          src="~/assets/images/vclassjett.webp"
+          src="~/assets/images/airports/5906.webp"
           alt="Heathrow Airport Chauffeur Service London"
           class="w-full h-full object-cover"
           loading="eager"
@@ -93,7 +93,7 @@
                 Whether you're arriving on an international flight or departing for business, our premium Mercedes fleet and professionally trained chauffeurs ensure your journey is comfortable, punctual, and stress-free.
               </p>
               <p class="text-gray-700 leading-relaxed">
-                We provide comprehensive coverage for all Heathrow terminals (T1, T2, T3, T4, and T5) with complimentary meet and greet service, flight monitoring, and generous waiting times.
+                We provide comprehensive coverage for all Heathrow terminals (T2, T3, T4, and T5) with complimentary meet and greet service, flight monitoring, and generous waiting times.
               </p>
             </div>
           </div>
@@ -103,7 +103,7 @@
               <ul class="space-y-4 text-left">
                 <li class="flex items-start space-x-3">
                   <i class="bx bx-check-circle text-gold text-xl mt-1"></i>
-                  <span class="text-gray-700">All Heathrow terminals covered (T1-T5)</span>
+                  <span class="text-gray-700">All Heathrow terminals covered (T2-T5)</span>
                 </li>
                 <li class="flex items-start space-x-3">
                   <i class="bx bx-check-circle text-gold text-xl mt-1"></i>
@@ -240,60 +240,70 @@
           Choose Your Luxury Vehicle
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <!-- Mercedes S-Class -->
-          <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300">
-            <div class="h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
-              <i class="bx bx-car text-6xl text-gray-400"></i>
-            </div>
-            <div class="p-6">
-              <h3 class="text-xl font-bold text-black mb-3">Mercedes S-Class</h3>
-              <p class="text-gray-600 mb-4">The pinnacle of luxury with executive comfort, perfect for business travelers and VIP clients.</p>
-              <ul class="text-sm text-gray-700 space-y-2 mb-4">
-                <li>• Up to 3 passengers</li>
-                <li>• Premium leather interior</li>
-                <li>• Advanced climate control</li>
-                <li>• Complimentary Wi-Fi & refreshments</li>
-              </ul>
-              <div class="text-gold font-bold text-lg">£160</div>
-            </div>
-          </div>
-
           <!-- Mercedes E-Class -->
           <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300">
-            <div class="h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
-              <i class="bx bx-car text-6xl text-gray-400"></i>
+            <div class="h-48 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center p-4">
+              <img src="~/assets/images/transparentcars/eclass.webp" alt="Mercedes E-Class" class="h-full w-full object-contain" loading="lazy" />
             </div>
             <div class="p-6">
               <h3 class="text-xl font-bold text-black mb-3">Mercedes E-Class</h3>
               <p class="text-gray-600 mb-4">Perfect balance of luxury and efficiency, ideal for business and leisure travel.</p>
               <ul class="text-sm text-gray-700 space-y-2 mb-4">
-                <li>• Up to 3 passengers</li>
-                <li>• Comfortable leather seats</li>
-                <li>• Professional service</li>
-                <li>• Ample luggage space</li>
+                <li class="flex items-center"><i class="bx bx-check text-gold mr-2"></i>Up to 3 passengers</li>
+                <li class="flex items-center"><i class="bx bx-check text-gold mr-2"></i>Comfortable leather seats</li>
+                <li class="flex items-center"><i class="bx bx-check text-gold mr-2"></i>Professional service</li>
+                <li class="flex items-center"><i class="bx bx-check text-gold mr-2"></i>Ample luggage space</li>
               </ul>
-              <div class="text-gold font-bold text-lg">£120</div>
+              <div class="flex items-baseline gap-1">
+                <span class="text-sm text-gray-500">From</span>
+                <span class="text-gold font-bold text-2xl">£120</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mercedes S-Class -->
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300">
+            <div class="h-48 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center p-4">
+              <img src="~/assets/images/transparentcars/sclass.webp" alt="Mercedes S-Class" class="h-full w-full object-contain" loading="lazy" />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-black mb-3">Mercedes S-Class</h3>
+              <p class="text-gray-600 mb-4">The pinnacle of luxury with executive comfort, perfect for business travelers and VIP clients.</p>
+              <ul class="text-sm text-gray-700 space-y-2 mb-4">
+                <li class="flex items-center"><i class="bx bx-check text-gold mr-2"></i>Up to 3 passengers</li>
+                <li class="flex items-center"><i class="bx bx-check text-gold mr-2"></i>Premium leather interior</li>
+                <li class="flex items-center"><i class="bx bx-check text-gold mr-2"></i>Advanced climate control</li>
+                <li class="flex items-center"><i class="bx bx-check text-gold mr-2"></i>Complimentary Wi-Fi & refreshments</li>
+              </ul>
+              <div class="flex items-baseline gap-1">
+                <span class="text-sm text-gray-500">From</span>
+                <span class="text-gold font-bold text-2xl">£160</span>
+              </div>
             </div>
           </div>
 
           <!-- Mercedes V-Class -->
           <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300">
-            <div class="h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
-              <i class="bx bx-car text-6xl text-gray-400"></i>
+            <div class="h-48 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center p-4">
+              <img src="~/assets/images/transparentcars/vclass.jpg" alt="Mercedes V-Class" class="h-full w-full object-contain" loading="lazy" />
             </div>
             <div class="p-6">
               <h3 class="text-xl font-bold text-black mb-3">Mercedes V-Class</h3>
               <p class="text-gray-600 mb-4">Spacious luxury MPV perfect for groups, families, or clients with extra luggage.</p>
               <ul class="text-sm text-gray-700 space-y-2 mb-4">
-                <li>• Up to 7 passengers</li>
-                <li>• Extra luggage capacity</li>
-                <li>• Group travel comfort</li>
-                <li>• Premium amenities</li>
+                <li class="flex items-center"><i class="bx bx-check text-gold mr-2"></i>Up to 7 passengers</li>
+                <li class="flex items-center"><i class="bx bx-check text-gold mr-2"></i>Extra luggage capacity</li>
+                <li class="flex items-center"><i class="bx bx-check text-gold mr-2"></i>Group travel comfort</li>
+                <li class="flex items-center"><i class="bx bx-check text-gold mr-2"></i>Premium amenities</li>
               </ul>
-              <div class="text-gold font-bold text-lg">£160</div>
+              <div class="flex items-baseline gap-1">
+                <span class="text-sm text-gray-500">From</span>
+                <span class="text-gold font-bold text-2xl">£160</span>
+              </div>
             </div>
           </div>
         </div>
+        <p class="text-center text-gray-500 text-sm mt-6">All prices include meet & greet, flight monitoring, and 60 minutes free waiting time.</p>
       </section>
 
       <!-- Contact CTA -->

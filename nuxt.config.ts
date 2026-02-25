@@ -81,7 +81,7 @@ export default defineNuxtConfig({
       }
     }
   },
-  css: ["~/assets/css/main.css", "boxicons/css/boxicons.min.css"],
+  css: ["~/assets/css/main.css"],
   modules: ["@nuxtjs/seo", "@nuxtjs/google-fonts", "@nuxt/image", "@pinia/nuxt", "@nuxtjs/i18n", 'nuxt-gtag'],
   gtag: {
     // Google Consent Mode v2 - Advanced Mode Implementation

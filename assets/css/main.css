@@ -1,6 +1,9 @@
 /* Import Design System */
 @import './design-system.css';
 
+/* Import Boxicons */
+@import 'boxicons/css/boxicons.min.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
