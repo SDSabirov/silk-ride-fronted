@@ -25,7 +25,20 @@
       "Bash(wmic process where \"processid=39508\" get commandline 2>/dev/null || tasklist /FI \"PID eq 39508\" /V 2>/dev/null)",
       "Bash(taskkill:*)",
       "Bash(head:*)",
-      "mcp__plugin_playwright_playwright__browser_resize"
+      "mcp__plugin_playwright_playwright__browser_resize",
+      "Bash(ls does:*)",
+      "Bash(npx nuxi:*)",
+      "mcp__plugin_playwright_playwright__browser_click",
+      "mcp__plugin_playwright_playwright__browser_snapshot",
+      "mcp__plugin_playwright_playwright__browser_run_code",
+      "mcp__plugin_playwright_playwright__browser_close",
+      "WebFetch(domain:nluxchauffeurs.com)",
+      "mcp__plugin_playwright_playwright__browser_type",
+      "Bash(cp:*)",
+      "Bash(python3:*)",
+      "Bash(rm:*)",
+      "mcp__plugin_playwright_playwright__browser_select_option",
+      "mcp__plugin_playwright_playwright__browser_tabs"
     ],
     "deny": []
   }

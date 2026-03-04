@@ -1,5 +1,5 @@
 <template>
-  <section class="relative min-h-screen flex items-center overflow-hidden">
+  <section id="main-hero" class="relative min-h-screen flex items-center overflow-hidden">
     <!-- Background Image -->
     <div class="absolute inset-0">
       <NuxtImg
@@ -37,23 +37,31 @@
         </p>
 
         <!-- CTA Buttons -->
-        <div class="animate-reveal-delay-3 flex flex-col sm:flex-row gap-5 justify-center">
-          <NuxtLink
-            :to="localePath('/booking')"
-            class="btn-hero-primary"
-          >
-            {{ $t("hero.bookNow") }}
-            <i class="bx bx-right-arrow-alt text-xl transition-transform group-hover:translate-x-1"></i>
+        <div class="animate-reveal-delay-3 flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
+          <button class="btn-hero-primary" @click="showBookingModal = true">
+            Get Instant Quote
+          </button>
+          <NuxtLink :to="localePath('/booking')" class="btn-hero-secondary">
+            Book Your Journey
           </NuxtLink>
-          <NuxtLink
-            :to="localePath('/services')"
-            class="btn-hero-secondary"
-          >
-            {{ $t("hero.exploreServices") }}
-          </NuxtLink>
+        </div>
+
+        <!-- Trust Indicators -->
+        <div class="animate-reveal-delay-3 flex flex-wrap items-center justify-center gap-x-6 gap-y-3">
+          <span v-for="badge in trustBadges" :key="badge" class="flex items-center gap-2 text-gray-400 text-xs sm:text-sm">
+            <svg class="w-4 h-4 text-gold flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+            </svg>
+            {{ badge }}
+          </span>
         </div>
       </div>
     </div>
+
+    <!-- Booking Modal -->
+    <BookingModal v-model="showBookingModal">
+      <QuoteWidget phone-number="+44 7512 905514" />
+    </BookingModal>
   </section>
 </template>
 
@@ -61,4 +69,12 @@
 import { useLocalePath } from "#imports";
 
 const localePath = useLocalePath();
+const showBookingModal = ref(false);
+
+const trustBadges = [
+  '5-Star Rated',
+  'Flight Tracking',
+  '24/7 Service',
+  'Fixed Pricing',
+]
 </script>

@@ -10,6 +10,7 @@
     
     <NuxtLayout>
       <NuxtPage />
+
       <FormsContactDrawer/>
       <BackToTop />
       <ConsentBanner />

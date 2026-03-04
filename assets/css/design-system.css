@@ -657,12 +657,44 @@
   .btn-primary {
     border-width: 3px;
   }
-  
+
   .btn-secondary {
     border-width: 3px;
   }
-  
+
   .card {
     border: 2px solid var(--color-gray-300);
+  }
+}
+
+/* Glass Card — dark theme */
+.glass-card {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--border-radius-2xl);
+}
+
+/* Modal Animations */
+@keyframes modalIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes modalOut {
+  from {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.95) translateY(10px);
   }
 }

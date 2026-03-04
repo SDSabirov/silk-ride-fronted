@@ -1,0 +1,1241 @@
+/*
+ * Silk Ride — EasyTaxi Widget CSS Overrides
+ * ------------------------------------------
+ * REPLACES all existing custom CSS in the EasyTaxi dashboard.
+ * Paste this entire file into:
+ *   EasyTaxi Dashboard → Settings → Custom CSS
+ *
+ * Purpose: Force the booking widget to match Silk Ride's
+ * premium dark theme (Open Sans + Playfair Display, dark
+ * backgrounds, gold accents, light text).
+ *
+ * Every rule uses !important to override booking.css.
+ */
+
+/* ================================================
+   1. Google Fonts Import
+   ================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Playfair+Display:wght@400;500;700&display=swap');
+
+/* ================================================
+   2. Global Font & Color Reset
+   ================================================ */
+body,
+body *,
+.form-control,
+input,
+select,
+textarea,
+label,
+p,
+span,
+div,
+a,
+li,
+td,
+th {
+  font-family: 'Open Sans', sans-serif !important;
+}
+
+body {
+  background: none !important;
+  padding: 10px !important;
+  font-size: 14px !important;
+  color: #F5F0E8 !important;
+}
+
+body.component {
+  padding: 0 !important;
+}
+
+/* ================================================
+   2a. Structural — carried over from existing CSS
+   ================================================ */
+
+/* Hide widget's own title (redundant with page heading) */
+.etoStep1HeaderMini {
+  display: none !important;
+}
+
+/* Hide duplicate return section */
+#etoRoute2Container {
+  display: none !important;
+}
+
+/* Mobile intl-tel-input fix */
+.iti-mobile .intl-tel-input.iti-container {
+  position: fixed !important;
+  top: auto !important;
+  bottom: auto !important;
+  left: 10px !important;
+  right: 10px !important;
+  height: 200px !important;
+  max-height: 90% !important;
+}
+
+/* System message cleanup */
+#system-message .alert .alert-heading { display: none !important; }
+#system-message .alert .alert-message { margin: 0 !important; }
+
+/* ================================================
+   2b. Base dark backgrounds — form containers
+   ================================================ */
+.eto-main-container,
+.etoOuterContainer,
+.etoInnerContainer,
+.etoMinimalContainer,
+#etoForm,
+#etoRoute1Container,
+#etoRoute2Container,
+#etoStep1Container,
+.eto-v2-form-horizontal,
+.etoRoutesContainer {
+  background: #0F0F0F !important;
+  color: #F5F0E8 !important;
+  border: none !important;
+}
+
+/* ================================================
+   2b2. AdminLTE .box — white background killer
+   ================================================ */
+.box,
+.box-body,
+.box-header,
+.box-footer {
+  background-color: #0F0F0F !important;
+  border-color: rgba(201, 168, 76, 0.15) !important;
+  color: #F5F0E8 !important;
+  box-shadow: none !important;
+}
+
+/* Vehicle card containers — specific override */
+.etoVehicleInnerContainer {
+  background-color: #141414 !important;
+  border: 1px solid rgba(201, 168, 76, 0.15) !important;
+  color: #F5F0E8 !important;
+}
+
+.etoVehicleInnerContainer:hover {
+  border-color: #C9A84C !important;
+  background-color: #1a1a1a !important;
+}
+
+.etoVehicleInnerContainerSelected {
+  border-color: #C9A84C !important;
+  background-color: #1a1a1a !important;
+}
+
+/* Meet and greet / child seats / other options */
+.etoVehicleOtherOptionsContainer,
+.etoVehicleChildSeatsOptionsContainer,
+.meet_and_greet_box,
+.meet_and_greet_route {
+  background-color: #141414 !important;
+  color: #F5F0E8 !important;
+  border-color: rgba(201, 168, 76, 0.15) !important;
+}
+
+.meet_and_greet_subtext {
+  color: rgba(245, 240, 232, 0.5) !important;
+}
+
+/* Vehicle select button (the gold checkbox/tick) */
+.etoVehicleSelectButton {
+  color: #F5F0E8 !important;
+}
+
+/* Vehicle image background */
+.etoVehicleImageBG {
+  background-color: #141414 !important;
+}
+
+/* ================================================
+   2c. Link colors
+   ================================================ */
+a { color: #C9A84C !important; }
+a:hover, a:focus, a:active { color: #E8C97A !important; }
+a[data-action="close"] { color: #C9A84C !important; }
+
+/* ================================================
+   2d. Global border-radius (carried over)
+   ================================================ */
+.etoFieldError,
+.pagination>.active>span,
+.pagination>li>a:hover,
+.eto-v2-vehicle-bottom .eto-v2-vehicle-price,
+.etoVehicleChildSeatsOptionsContainer,
+.etoVehicleOtherOptionsContainer,
+.etoVehicleInnerContainer,
+.eto-v2-services-tabs .cr-val,
+.eto-v2-tickets-field,
+.eto-v2-preferred-field,
+#etoRoute1DateContainer,
+#etoRoute2DateContainer,
+.checkbox .cr,
+.radio .cr,
+.form-control,
+.btn,
+.etoGhostDateTime,
+.twitter-typeahead .input-group .input-group-addon,
+.twitter-typeahead .tt-menu,
+.input-group,
+.input-group-addon {
+  border-radius: 5px !important;
+}
+
+/* ================================================
+   2e. Checkbox / Radio — gold accents
+   ================================================ */
+
+/* Checkbox wrapper — was light gray */
+.checkbox {
+  background-color: transparent !important;
+  color: #F5F0E8 !important;
+}
+
+/* Unchecked checkbox/radio indicator — was white */
+.cr {
+  background-color: transparent !important;
+  border-color: rgba(201, 168, 76, 0.3) !important;
+}
+
+.checkbox .cr:hover,
+.radio .cr:hover {
+  border-color: #C9A84C !important;
+}
+.checkbox label input[type="checkbox"]:checked+.cr {
+  background: #C9A84C !important;
+  border-color: #C9A84C !important;
+  color: #000000 !important;
+}
+.radio label input[type="radio"]:checked+.cr {
+  color: #C9A84C !important;
+}
+
+/* Radio/checkbox value text (inactive tab labels, toggle text) */
+.cr-val {
+  color: rgba(245, 240, 232, 0.5) !important;
+}
+.radio input[type="radio"]:checked+.cr+.cr-val,
+.checkbox input[type="checkbox"]:checked+.cr+.cr-val {
+  color: #080808 !important;
+}
+
+/* ================================================
+   3. Step Bar Overrides
+   ================================================ */
+
+/* Step bar container — was white, needs dark */
+.v2-steps,
+.v2-steps-main {
+  background-color: #0F0F0F !important;
+  border-color: rgba(201, 168, 76, 0.15) !important;
+}
+
+/* Individual step items */
+.v2-steps-step {
+  background-color: transparent !important;
+  color: rgba(245, 240, 232, 0.4) !important;
+  border-color: rgba(201, 168, 76, 0.15) !important;
+}
+
+/* Active step */
+.v2-steps-step-active {
+  background-color: rgba(201, 168, 76, 0.08) !important;
+  color: #F5F0E8 !important;
+  border-color: rgba(201, 168, 76, 0.3) !important;
+}
+
+/* Step icon carets */
+.v2-steps-icon,
+.v2-steps-icon i {
+  color: rgba(201, 168, 76, 0.4) !important;
+}
+
+.v2-steps-step-active .v2-steps-icon,
+.v2-steps-step-active .v2-steps-icon i {
+  color: #C9A84C !important;
+}
+
+/* Step title ("Step 1", "Step 2", "Step 3") */
+.v2-steps-title {
+  color: rgba(245, 240, 232, 0.5) !important;
+  font-family: 'Open Sans', sans-serif !important;
+}
+
+.v2-steps-step-active .v2-steps-title {
+  color: #C9A84C !important;
+}
+
+/* Step name ("Booking Itinerary", "Quotation", etc.) */
+.v2-steps-name {
+  color: #F5F0E8 !important;
+  font-family: 'Playfair Display', serif !important;
+}
+
+.v2-steps-step-active .v2-steps-name {
+  color: #F5F0E8 !important;
+}
+
+/* Edit button on completed steps */
+.v2-steps-edit,
+.v2-steps-edit-name {
+  color: rgba(201, 168, 76, 0.5) !important;
+}
+
+.v2-steps-step-can-edit:hover .v2-steps-edit,
+.v2-steps-step-can-edit:hover .v2-steps-edit-name {
+  color: #C9A84C !important;
+}
+
+/* "Book by phone here" link below steps */
+.v2-book-by-phone,
+.v2-book-by-phone a {
+  color: #F5F0E8 !important;
+}
+
+.v2-book-by-phone a:hover {
+  color: #C9A84C !important;
+}
+
+/* ================================================
+   4. Service Tabs
+   ================================================ */
+.eto-v2-services-tabs,
+#etoServicesContainer {
+  background: #0F0F0F !important;
+  border-bottom: 1px solid rgba(201, 168, 76, 0.2) !important;
+  font-family: 'Open Sans', sans-serif !important;
+}
+
+.eto-v2-services-tabs .btn,
+#etoServicesContainer .btn {
+  background: transparent !important;
+  border: none !important;
+  border-bottom: 1px solid transparent !important;
+  border-radius: 0 !important;
+  color: rgba(245, 240, 232, 0.4) !important;
+  font-family: 'Open Sans', sans-serif !important;
+  font-size: 10px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.16em !important;
+  text-transform: uppercase !important;
+  box-shadow: none !important;
+  margin-bottom: -1px !important;
+  transition: color 0.2s !important;
+}
+
+.eto-v2-services-tabs .btn.active,
+.eto-v2-services-tabs .btn-primary,
+#etoServicesContainer .btn.active,
+#etoServicesContainer .btn-primary {
+  background: rgba(201, 168, 76, 0.08) !important;
+  border-bottom-color: #C9A84C !important;
+  color: #C9A84C !important;
+  font-weight: 500 !important;
+  box-shadow: none !important;
+}
+
+.eto-v2-services-tabs .btn:hover {
+  color: rgba(201, 168, 76, 0.75) !important;
+}
+
+/* Nav tab variant (if present) */
+.eto-v2-services-tabs .nav-tabs {
+  border-bottom-color: rgba(201, 168, 76, 0.15) !important;
+}
+
+.eto-v2-services-tabs .nav-tabs li a {
+  color: rgba(245, 240, 232, 0.4) !important;
+  background-color: transparent !important;
+  font-family: 'Open Sans', sans-serif !important;
+}
+
+.eto-v2-services-tabs .nav-tabs li.active a,
+.eto-v2-services-tabs .nav-tabs li a:hover {
+  color: #F5F0E8 !important;
+  background-color: #141414 !important;
+  border-color: rgba(201, 168, 76, 0.15) !important;
+  border-bottom-color: transparent !important;
+}
+
+/* Service tab radio-style (v2 vehicle price pills) */
+.eto-v2-services-tabs .radio:hover .cr-val,
+.eto-v2-services-tabs .radio input[type="radio"]:checked+.cr+.cr-val {
+  background-color: #C9A84C !important;
+  border-color: #C9A84C !important;
+  color: #000000 !important;
+}
+
+/* ================================================
+   5. Input / Field Styling
+   ================================================ */
+.form-control,
+.tt-input,
+textarea.form-control {
+  background: transparent !important;
+  color: #F5F0E8 !important;
+  border-color: rgba(201, 168, 76, 0.15) !important;
+  font-family: 'Open Sans', sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 300 !important;
+  box-shadow: none !important;
+}
+
+.form-control:hover,
+.form-control.hover,
+.form-control:focus,
+.form-control.focus,
+.input-group:hover,
+.input-group.hover,
+.input-group:focus,
+.input-group.focus {
+  border-color: #C9A84C !important;
+}
+
+.form-control:focus,
+.tt-input:focus {
+  border-color: #C9A84C !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+.form-control::placeholder,
+.tt-input::placeholder {
+  color: rgba(245, 240, 232, 0.28) !important;
+}
+
+.tt-hint {
+  color: rgba(245, 240, 232, 0.15) !important;
+  background: transparent !important;
+}
+
+.form-group label {
+  color: #F5F0E8 !important;
+}
+
+/* Field labels (EasyTaxi specific) */
+.eto-v2-field-label,
+.etoLabel {
+  color: rgba(201, 168, 76, 0.65) !important;
+  font-family: 'Open Sans', sans-serif !important;
+  font-size: 8px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.22em !important;
+  text-transform: uppercase !important;
+}
+
+/* Input group addons */
+.input-group-addon,
+.input-group {
+  background: transparent !important;
+  border-color: rgba(201, 168, 76, 0.15) !important;
+  color: rgba(201, 168, 76, 0.55) !important;
+}
+
+/* Widget icons — gold tint */
+.input-group-addon i,
+.input-group-addon span,
+.ion-ios-location-outline,
+.ion-android-locate,
+.ion-ios-calendar-outline,
+.ion-ios-clock-outline,
+.ion-ios-stopwatch-outline,
+.ion-record,
+.glyphicon-screenshot {
+  color: rgba(201, 168, 76, 0.55) !important;
+}
+
+/* Select dropdowns */
+select.form-control {
+  background-color: #0F0F0F !important;
+  color: #F5F0E8 !important;
+}
+
+select.form-control option {
+  background-color: #161616 !important;
+  color: #F5F0E8 !important;
+}
+
+/* Date/time ghost elements */
+.etoGhostDateBox,
+.etoGhostTimeBox,
+.etoGhostDateTime,
+#etoRoute1DateGhostDateBox,
+#etoRoute1DateGhostTimeBox {
+  background: transparent !important;
+  border-color: rgba(201, 168, 76, 0.15) !important;
+  color: rgba(245, 240, 232, 0.55) !important;
+  font-family: 'Open Sans', sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 300 !important;
+}
+
+.etoRoute1DateContainer,
+#etoRoute1DateContainer {
+  background: transparent !important;
+  border-color: rgba(201, 168, 76, 0.15) !important;
+}
+
+select.hour,
+select.minute,
+#etoRoute1DateGhostTimeDropdown select {
+  background: #0F0F0F !important;
+  border-color: rgba(201, 168, 76, 0.15) !important;
+  color: rgba(245, 240, 232, 0.55) !important;
+  font-family: 'Open Sans', sans-serif !important;
+  font-size: 13px !important;
+}
+
+/* Duration dropdown (Hourly service) */
+#etoServicesDuration {
+  background: #0F0F0F !important;
+  border-color: rgba(201, 168, 76, 0.15) !important;
+  color: #F5F0E8 !important;
+  font-family: 'Open Sans', sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 300 !important;
+}
+#etoServicesDuration option {
+  background: #161616 !important;
+  color: #F5F0E8 !important;
+}
+
+/* Via + Return links */
+#etoRoute1WaypointsButton,
+.etoWaypointsAddButton,
+#etoRouteReturnContainer,
+.etoJourneyTypeOneWay,
+.cr-label {
+  color: rgba(201, 168, 76, 0.6) !important;
+  font-family: 'Open Sans', sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.08em !important;
+}
+
+.ion-plus,
+.ion-arrow-swap {
+  color: rgba(201, 168, 76, 0.6) !important;
+}
+
+.etoWaypointsAddButton:hover,
+.etoRoute1MapBtnShow:hover,
+.etoRoute2MapBtnShow:hover {
+  color: #C9A84C !important;
+}
+
+.etoSwapLocationsButton:hover {
+  color: #E8C97A !important;
+}
+
+#etoRouteReturnContainer:hover .cr-label {
+  color: #E8C97A !important;
+  border-color: #E8C97A !important;
+}
+
+/* Autocomplete dropdown */
+.tt-menu,
+.tt-dataset {
+  background: #161616 !important;
+  border: 1px solid rgba(201, 168, 76, 0.2) !important;
+  border-top: none !important;
+  border-radius: 0 !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.7) !important;
+}
+
+.tt-suggestion {
+  background: transparent !important;
+  color: rgba(245, 240, 232, 0.7) !important;
+  font-family: 'Open Sans', sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 300 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04) !important;
+}
+
+.tt-suggestion:hover,
+.tt-suggestion.tt-cursor {
+  background: rgba(201, 168, 76, 0.1) !important;
+  color: #F5F0E8 !important;
+}
+
+.tt-menu:hover {
+  border-color: #D2D6DE !important;
+}
+
+/* ================================================
+   6. Button Overrides
+   ================================================ */
+
+/* Generic buttons — reset shadow/radius, set font */
+.btn {
+  border-radius: 0px !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  outline: 0 !important;
+  font-family: 'Open Sans', sans-serif !important;
+}
+
+/* Link-style buttons */
+.btn-link,
+.btn-link:active,
+.btn-link:focus {
+  color: #C9A84C !important;
+}
+.btn-link:hover {
+  color: #E8C97A !important;
+  text-decoration: none !important;
+}
+
+/* Primary buttons (Book Now, Calculate Price) */
+.btn-primary,
+.btn-primary.active,
+.btn-primary:active,
+.btn-primary.focus,
+.btn-primary:focus {
+  background-color: #C9A84C !important;
+  border-color: #C9A84C !important;
+  color: #000000 !important;
+  font-family: 'Open Sans', sans-serif !important;
+  font-weight: 600 !important;
+}
+.btn-primary.hover,
+.btn-primary:hover {
+  background-color: #E8C97A !important;
+  border-color: #C9A84C !important;
+  color: #000000 !important;
+}
+
+/* Submit button (Calculate Price) */
+#etoSubmitButton,
+.eto-v2-button-SubmitButton,
+#etoSubmitButtonContainer .btn {
+  background: #C9A84C !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  cursor: pointer !important;
+  transition: background 0.2s !important;
+}
+#etoSubmitButton:hover,
+.eto-v2-button-SubmitButton:hover {
+  background: #E8C97A !important;
+}
+
+/* Submit button label + icon */
+#etoSubmitButton .fa,
+#etoSubmitButtonContainer .fa,
+#etoSubmitButtonLabel,
+.eto-v2-button-label {
+  color: #080808 !important;
+  font-family: 'Open Sans', sans-serif !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+}
+
+/* Reset button */
+#etoResetButton {
+  background: transparent !important;
+  border: none !important;
+  color: rgba(245, 240, 232, 0.25) !important;
+}
+#etoResetButton:hover {
+  color: rgba(201, 168, 76, 0.6) !important;
+}
+
+/* Nav pills / stacked (carried over) */
+.nav-pills>li.active>a,
+.nav-pills>li.active>a:hover,
+.nav-pills>li.active>a:focus {
+  border-top-color: #C9A84C !important;
+}
+.nav-stacked>li.active>a,
+.nav-stacked>li.active>a:hover {
+  border-left-color: #C9A84C !important;
+}
+
+/* Pagination */
+.pagination>.active>a,
+.pagination>.active>a:focus,
+.pagination>.active>a:hover,
+.pagination>.active>span,
+.pagination>.active>span:focus,
+.pagination>.active>span:hover {
+  background-color: #E8C97A !important;
+  border-color: #C9A84C !important;
+  color: #000000 !important;
+}
+
+/* ================================================
+   7. Vehicle Cards (Step 2)
+   ================================================ */
+.etoVehicleName {
+  color: #F5F0E8 !important;
+  font-family: 'Playfair Display', serif !important;
+}
+
+.etoVehicleTotalPrice {
+  font-family: 'Playfair Display', serif !important;
+  font-size: 20px !important;
+  font-weight: 400 !important;
+  color: #F5F0E8 !important;
+  background-color: transparent !important;
+}
+
+.etoVehicleDetails {
+  color: rgba(245, 240, 232, 0.6) !important;
+  font-family: 'Open Sans', sans-serif !important;
+}
+
+.etoVehicleDetails i,
+.etoVehicleDetails .fa {
+  color: rgba(245, 240, 232, 0.4) !important;
+}
+
+/* Vehicle card container */
+.etoVehicle,
+.etoVehicleBox {
+  background-color: #141414 !important;
+  border-color: rgba(201, 168, 76, 0.15) !important;
+}
+
+.etoVehicle:hover,
+.etoVehicleBox:hover,
+.etoVehicleInnerContainer:hover {
+  border-color: #C9A84C !important;
+}
+
+.etoVehicle.selected,
+.etoVehicleBox.selected,
+.etoVehicleInnerContainerSelected {
+  border-color: #C9A84C !important;
+}
+
+/* V2 vehicle price badge — hover & selected */
+.eto-v2-vehicle:hover label .eto-v2-vehicle-price,
+.eto-v2-vehicle label.etoVehicleInnerContainerSelected .eto-v2-vehicle-price {
+  background-color: #C9A84C !important;
+  border-color: #C9A84C !important;
+  color: #000000 !important;
+}
+
+/* Checkout radio price pills */
+.eto-v2-checkout .radio input[type="radio"]+.cr+.cr-val:hover,
+.eto-v2-checkout .radio input[type="radio"]:checked+.cr+.cr-val {
+  background-color: #C9A84C !important;
+  border-color: #C9A84C !important;
+  color: #000000 !important;
+}
+
+/* Step bar edit button hover */
+.v2-steps-step-can-edit:hover .v2-steps-edit {
+  color: #C9A84C !important;
+}
+
+/* ================================================
+   8. Nav Tabs — Outbound / Return
+   ================================================ */
+.nav-tabs {
+  border-bottom-color: rgba(201, 168, 76, 0.15) !important;
+}
+
+.nav-tabs > li > a {
+  color: rgba(245, 240, 232, 0.4) !important;
+  background-color: transparent !important;
+  border-color: transparent !important;
+  font-family: 'Open Sans', sans-serif !important;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  color: #F5F0E8 !important;
+  background-color: #141414 !important;
+  border-color: rgba(201, 168, 76, 0.15) !important;
+  border-bottom-color: #141414 !important;
+}
+
+.nav-tabs > li > a:hover {
+  color: #F5F0E8 !important;
+  background-color: rgba(20, 20, 20, 0.5) !important;
+  border-color: rgba(201, 168, 76, 0.1) !important;
+}
+
+/* ================================================
+   9. Email Quote Button + "OR" Divider
+   ================================================ */
+.etoBtnOther {
+  background-color: transparent !important;
+  border: 1px solid rgba(201, 168, 76, 0.3) !important;
+  color: #C9A84C !important;
+  font-family: 'Open Sans', sans-serif !important;
+}
+
+.etoBtnOther:hover {
+  background-color: rgba(201, 168, 76, 0.08) !important;
+  border-color: #C9A84C !important;
+  color: #E8C97A !important;
+}
+
+/* "OR" text — already OK but ensure font */
+.etoBtnOtherOr {
+  color: rgba(201, 168, 76, 0.6) !important;
+  font-family: 'Open Sans', sans-serif !important;
+}
+
+/* ================================================
+   10. Booking Summary / Map Panel
+   ================================================ */
+.etoMapStyle2Directions {
+  background-color: rgba(15, 15, 15, 0.95) !important;
+  color: #F5F0E8 !important;
+  border-color: rgba(201, 168, 76, 0.15) !important;
+}
+
+.etoMapStyle2Directions h3,
+.etoMapStyle2Directions h4,
+.etoMapStyle2Directions p,
+.etoMapStyle2Directions span,
+.etoMapStyle2Directions div,
+.etoMapStyle2Directions label {
+  color: #F5F0E8 !important;
+}
+
+/* ================================================
+   11. Journey Detail Lines
+   ================================================ */
+.etoJourneyLine,
+.etoJourneyLineServices,
+.etoJourneyLineDate,
+.etoJourneyLineTime,
+.etoJourneyLineVehicle,
+.etoJourneyLineFrom,
+.etoJourneyLineTo,
+.etoJourneyLineVia,
+.etoJourneyLineDistance,
+.etoJourneyLineDuration,
+.etoJourneyLinePrice {
+  color: #F5F0E8 !important;
+  font-family: 'Open Sans', sans-serif !important;
+}
+
+/* Journey line labels (the descriptors) */
+.etoJourneyLine strong,
+.etoJourneyLine b,
+.etoJourneyLine .etoLabel {
+  color: rgba(201, 168, 76, 0.65) !important;
+}
+
+/* Journey line container text (was rgb(51,51,51)) */
+.etoJourneyLineContainer,
+.etoJourneyLineContainer div,
+.etoJourneyLineContainer span {
+  color: #F5F0E8 !important;
+}
+
+/* ================================================
+   11b. Section Boxes — light gray bg killer
+   ================================================ */
+
+/* Section box containers — contact, options, journey, comments */
+.eto-v2-section-box {
+  background-color: #141414 !important;
+  color: #F5F0E8 !important;
+  border-color: rgba(201, 168, 76, 0.15) !important;
+}
+
+/* Non-box sections — just fix text color */
+.eto-v2-section {
+  color: #F5F0E8 !important;
+}
+
+/* Journey line container — was dark gray text */
+.etoJourneyLineContainer {
+  color: #F5F0E8 !important;
+}
+
+/* Login / Register / Logout form boxes */
+.eto-v2-section-login-form,
+.eto-v2-section-register-form,
+.eto-v2-section-logout-form {
+  background-color: #141414 !important;
+  color: #F5F0E8 !important;
+  border-color: rgba(201, 168, 76, 0.15) !important;
+}
+
+/* "More Options" toggle */
+.etoMoreOptionToggle,
+.etoMoreOptionToggle .checkbox {
+  color: #F5F0E8 !important;
+}
+
+/* Flight number and city sections */
+.etoPickupFlightNumberSection,
+.etoPickupFlightCitySection,
+.etoPickupNameBoardSection,
+.etoPickupFlightNumberSection *,
+.etoPickupFlightCitySection * {
+  color: #F5F0E8 !important;
+}
+
+/* Pickup/Dropoff detail sections in Step 3 */
+.eto-v2-section-journey-details div,
+.eto-v2-section-journey-details span {
+  color: #F5F0E8 !important;
+}
+
+/* "Private" / "Company" account type labels */
+.eto-v2-contact-form label,
+.eto-v2-section-contact-details label,
+#etoContactSectionContainer label {
+  color: #F5F0E8 !important;
+}
+
+/* Map style 2 button (collapse/expand) */
+.etoMapStyle2Button {
+  background-color: #141414 !important;
+  color: #F5F0E8 !important;
+  border-color: rgba(201, 168, 76, 0.15) !important;
+}
+
+/* ================================================
+   12. Step 3 — Contact Form, Terms, Payment
+   ================================================ */
+
+/* Guest / Login / Register tabs */
+.eto-v2-checkout .nav-tabs,
+.eto-v2-step3 .nav-tabs {
+  border-bottom-color: rgba(201, 168, 76, 0.2) !important;
+  background: transparent !important;
+}
+
+.eto-v2-checkout .nav-tabs > li > a,
+.eto-v2-step3 .nav-tabs > li > a {
+  color: rgba(245, 240, 232, 0.4) !important;
+  background: transparent !important;
+  border-color: transparent !important;
+  font-family: 'Open Sans', sans-serif !important;
+  font-size: 10px !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+}
+
+.eto-v2-checkout .nav-tabs > li.active > a,
+.eto-v2-step3 .nav-tabs > li.active > a {
+  color: #080808 !important;
+  background-color: #C9A84C !important;
+  border-color: #C9A84C !important;
+}
+
+.eto-v2-checkout .nav-tabs > li > a:hover,
+.eto-v2-step3 .nav-tabs > li > a:hover {
+  color: #F5F0E8 !important;
+  background: rgba(201, 168, 76, 0.1) !important;
+}
+
+/* Step 3 container backgrounds */
+.eto-v2-checkout,
+.eto-v2-step3,
+#etoStep3Container {
+  background: #0F0F0F !important;
+  color: #F5F0E8 !important;
+}
+
+/* Contact form fields */
+.eto-v2-contact-form .form-control,
+.eto-v2-checkout .form-control,
+#etoStep3Container .form-control {
+  background-color: #141414 !important;
+  color: #F5F0E8 !important;
+  border-color: rgba(201, 168, 76, 0.15) !important;
+}
+
+.eto-v2-contact-form label,
+.eto-v2-checkout label,
+#etoStep3Container label {
+  color: #F5F0E8 !important;
+}
+
+/* Journey detail labels in Step 3 */
+.etoJourneyLineServices,
+.etoJourneyLineDate,
+.etoJourneyLineTime,
+.etoJourneyLineVehicle,
+.etoJourneyLineFrom,
+.etoJourneyLineTo {
+  color: #F5F0E8 !important;
+}
+
+/* The bold label part (e.g. "Service Type :", "Date :") */
+.etoLabel,
+.eto-v2-checkout .etoLabel {
+  color: rgba(201, 168, 76, 0.65) !important;
+  font-size: 8px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.22em !important;
+  text-transform: uppercase !important;
+}
+
+/* Member benefits section */
+.eto-v2-checkout .box,
+#etoStep3Container .box {
+  background-color: #141414 !important;
+  border-color: rgba(201, 168, 76, 0.15) !important;
+  color: #F5F0E8 !important;
+}
+
+/* Terms checkbox area — container was dark text */
+.form-group-terms,
+.form-group-terms div,
+.form-group-terms label,
+.form-group-terms span {
+  color: rgba(245, 240, 232, 0.6) !important;
+}
+
+/* T&C link — gold, keep as-is but ensure font */
+.etoTermsAndConditionsBtn {
+  color: #C9A84C !important;
+  font-family: 'Open Sans', sans-serif !important;
+}
+
+.etoTermsAndConditionsBtn:hover {
+  color: #E8C97A !important;
+}
+
+/* Discount code input */
+.etoDiscountCode,
+#etoDiscountCode {
+  background: #141414 !important;
+  border-color: rgba(201, 168, 76, 0.15) !important;
+  color: #F5F0E8 !important;
+}
+
+/* Payment method buttons — Cash / Card */
+.eto-v2-payment-method,
+.etoPaymentMethodButton,
+.eto-v2-checkout .btn-lg {
+  background-color: #141414 !important;
+  border: 1px solid rgba(201, 168, 76, 0.15) !important;
+  color: #F5F0E8 !important;
+  font-family: 'Open Sans', sans-serif !important;
+}
+
+.eto-v2-payment-method:hover,
+.etoPaymentMethodButton:hover {
+  border-color: rgba(201, 168, 76, 0.4) !important;
+  background-color: #1a1a1a !important;
+}
+
+.eto-v2-payment-method.selected,
+.eto-v2-payment-method.active,
+.etoPaymentMethodButton.active {
+  border-color: #C9A84C !important;
+  background-color: #C9A84C !important;
+  color: #080808 !important;
+}
+
+/* Payment method name — on gold bg, keep dark text */
+.eto-v2-payment-method-name {
+  font-family: 'Open Sans', sans-serif !important;
+}
+
+/* "Book for someone else" toggle */
+.etoDifferentRecipient,
+.eto-v2-checkout .checkbox {
+  color: #F5F0E8 !important;
+}
+
+/* Summary and Total in Step 3 */
+.etoStep3Summary,
+.eto-v2-checkout .etoStep2Info2 {
+  color: #F5F0E8 !important;
+}
+
+/* Comments textarea */
+.etoComments,
+#etoComments {
+  background: #141414 !important;
+  border-color: rgba(201, 168, 76, 0.15) !important;
+  color: #F5F0E8 !important;
+}
+
+/* ================================================
+   13. Calendar / Datepicker
+   ================================================ */
+.datepicker,
+.bootstrap-datetimepicker-widget {
+  background-color: #141414 !important;
+  border-color: rgba(201, 168, 76, 0.15) !important;
+  color: #F5F0E8 !important;
+}
+
+.table-condensed {
+  font-family: 'Open Sans', sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 300 !important;
+  color: #F5F0E8 !important;
+}
+
+.table-condensed th,
+.table-condensed td {
+  color: #F5F0E8 !important;
+}
+
+.table-condensed td.day {
+  color: #F5F0E8 !important;
+  background-color: transparent !important;
+}
+
+.table-condensed td.day:hover {
+  background-color: rgba(201, 168, 76, 0.15) !important;
+  color: #F5F0E8 !important;
+}
+
+.table-condensed td.day.active,
+.table-condensed td.day.active:hover {
+  background-color: #C9A84C !important;
+  color: #080808 !important;
+}
+
+.table-condensed td.day.today {
+  background-color: rgba(201, 168, 76, 0.2) !important;
+  color: #F5F0E8 !important;
+}
+
+.table-condensed td.day.old,
+.table-condensed td.day.new,
+.table-condensed td.day.disabled {
+  color: rgba(245, 240, 232, 0.25) !important;
+}
+
+.table-condensed th.prev,
+.table-condensed th.next,
+.table-condensed th.datepicker-switch {
+  color: #C9A84C !important;
+}
+
+.table-condensed th.dow {
+  color: rgba(245, 240, 232, 0.5) !important;
+}
+
+/* Timepicker */
+.bootstrap-datetimepicker-widget .timepicker {
+  color: #F5F0E8 !important;
+}
+
+.bootstrap-datetimepicker-widget .timepicker td a {
+  color: #F5F0E8 !important;
+}
+
+.bootstrap-datetimepicker-widget .timepicker td span {
+  color: #F5F0E8 !important;
+}
+
+/* ================================================
+   14. Misc — Phone Link, Footer, Alerts
+   ================================================ */
+
+/* "Book by phone" link */
+.v2-book-by-phone,
+.v2-book-by-phone a {
+  color: #F5F0E8 !important;
+}
+
+.v2-book-by-phone a:hover {
+  color: #C9A84C !important;
+}
+
+/* "Powered by" footer — keep muted, just ensure font */
+.footer-branding {
+  font-family: 'Open Sans', sans-serif !important;
+}
+
+/* Alert / error messages */
+.alert {
+  font-family: 'Open Sans', sans-serif !important;
+}
+
+.alert-danger {
+  background-color: rgba(220, 53, 69, 0.15) !important;
+  border-color: rgba(220, 53, 69, 0.3) !important;
+  color: #F5F0E8 !important;
+}
+
+.alert-success {
+  background-color: rgba(40, 167, 69, 0.15) !important;
+  border-color: rgba(40, 167, 69, 0.3) !important;
+  color: #F5F0E8 !important;
+}
+
+.alert-info {
+  background-color: rgba(201, 168, 76, 0.1) !important;
+  border-color: rgba(201, 168, 76, 0.2) !important;
+  color: #F5F0E8 !important;
+}
+
+/* ================================================
+   15. Headings — Playfair Display
+   ================================================ */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif !important;
+  color: #F5F0E8 !important;
+}
+
+/* ================================================
+   16. Scrollbar (WebKit) — subtle dark theme
+   ================================================ */
+::-webkit-scrollbar {
+  width: 6px !important;
+}
+
+::-webkit-scrollbar-track {
+  background: #0F0F0F !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(201, 168, 76, 0.3) !important;
+  border-radius: 3px !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(201, 168, 76, 0.5) !important;
+}
+
+/* ================================================
+   17. Tooltip / Popover Overrides
+   ================================================ */
+.tooltip-inner {
+  background-color: #141414 !important;
+  color: #F5F0E8 !important;
+  font-family: 'Open Sans', sans-serif !important;
+  border: 1px solid rgba(201, 168, 76, 0.15) !important;
+}
+
+.popover {
+  background-color: #141414 !important;
+  border-color: rgba(201, 168, 76, 0.15) !important;
+}
+
+.popover-title {
+  background-color: rgba(201, 168, 76, 0.08) !important;
+  color: #F5F0E8 !important;
+  border-bottom-color: rgba(201, 168, 76, 0.15) !important;
+  font-family: 'Playfair Display', serif !important;
+}
+
+.popover-content {
+  color: #F5F0E8 !important;
+  font-family: 'Open Sans', sans-serif !important;
+}
+
+/* ================================================
+   18. Focus / Active Cleanup
+   ================================================ */
+.btn:focus,
+.btn:active,
+input:focus,
+select:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
