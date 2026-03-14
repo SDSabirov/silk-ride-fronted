@@ -39,6 +39,6 @@ useHead({
     // Performance optimizations
     { name: 'theme-color', content: '#D4AF37' },
     { name: 'color-scheme', content: 'light' }
-  ]
+  ],
 })
 </script>

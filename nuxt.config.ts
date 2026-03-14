@@ -24,6 +24,19 @@ export default defineNuxtConfig({
     },
   },
   vite: {
+    server: {
+      proxy: {
+        '/api/widget': {
+          target: 'https://api.chat4biz.com',
+          changeOrigin: true,
+        },
+        '/ws/chat': {
+          target: 'https://api.chat4biz.com',
+          changeOrigin: true,
+          ws: true,
+        },
+      },
+    },
     build: {
       cssCodeSplit: true,
       rollupOptions: {
@@ -199,7 +212,7 @@ export default defineNuxtConfig({
       link: [
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' },
-      ]
+      ],
     }
   },
   googleFonts: {
