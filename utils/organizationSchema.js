@@ -11,7 +11,7 @@ export const organizationSchema = {
     "https://silkride.co.uk/sclassSide.webp",
     "https://silkride.co.uk/eclassSide.webp"
   ],
-  "telephone": "+44 7512 905514",
+  "telephone": "+44 203 488 2324",
   "email": "info@silkride.co.uk",
   "address": {
     "@type": "PostalAddress",

@@ -32,11 +32,11 @@
               Book Luton Transfer
             </NuxtLink>
             <a
-              href="tel:+447512905514"
+              href="tel:+442034882324"
               class="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-semibold text-lg rounded-lg hover:bg-white hover:text-black transition-all duration-300"
             >
               <i class="bx bx-phone mr-2"></i>
-              Call +44 7512 905514
+              Call +44 203 488 2324
             </a>
           </div>
 
@@ -380,11 +380,11 @@
             Book Luton Transfer
           </NuxtLink>
           <a
-            href="tel:+447512905514"
+            href="tel:+442034882324"
             class="inline-flex items-center justify-center px-8 py-4 border-2 border-gold text-gold font-semibold text-lg rounded-lg hover:bg-gold hover:text-black transition-all duration-300"
           >
             <i class="bx bx-phone mr-2"></i>
-            Call +44 7512 905514
+            Call +44 203 488 2324
           </a>
         </div>
       </section>
@@ -419,7 +419,7 @@ useSchemaOrg([
       latitude: 51.8763,
       longitude: -0.3717
     },
-    telephone: '+44 7512 905514',
+    telephone: '+44 203 488 2324',
     url: 'https://silkride.co.uk/airport-transfers/luton',
     areaServed: [
       {

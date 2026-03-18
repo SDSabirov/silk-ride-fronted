@@ -50,7 +50,7 @@ const schema = {
       "name": "United Kingdom"
     }
   ],
-  "telephone": "+44 7512 905514",
+  "telephone": "+44 203 488 2324",
   "email": "info@silkride.co.uk",
   "priceRange": "£££",
   "openingHoursSpecification": {

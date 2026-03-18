@@ -97,8 +97,8 @@
             >info@silkride.co.uk</a
           ><br />
           Phone:
-          <a href="tel:+447512905514" class="text-blue-600 underline"
-            >+44 7512 905514</a
+          <a href="tel:+442034882324" class="text-blue-600 underline"
+            >+44 203 488 2324</a
           >
         </address>
 

@@ -2,7 +2,7 @@
 import { resolve } from "path";
 
 export default defineNuxtConfig({
-  compatibilityDate: "2024-11-01",
+  compatibilityDate: "2026-03-18",
   devtools: { enabled: true },
   runtimeConfig: {
     public: {

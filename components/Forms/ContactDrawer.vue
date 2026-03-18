@@ -185,13 +185,13 @@
               </div>
             </a>
             
-            <a href="tel:+447512905514" class="flex items-center space-x-3 p-3 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors duration-200 group">
+            <a href="tel:+442034882324" class="flex items-center space-x-3 p-3 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors duration-200 group">
               <div class="w-10 h-10 bg-gold rounded-full flex items-center justify-center group-hover:scale-105 transition-transform duration-200">
                 <i class="bx bx-phone text-black text-lg"></i>
               </div>
               <div>
                 <p class="text-sm font-medium text-gray-700">Call Us</p>
-                <p class="text-sm text-gray-500">+44 7512 905514</p>
+                <p class="text-sm text-gray-500">+44 203 488 2324</p>
               </div>
             </a>
           </div>

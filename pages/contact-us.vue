@@ -31,10 +31,10 @@
             <h3 class="text-xl font-semibold mb-4">{{ $t('contact.phone_title') }}</h3>
             <p class="text-gray-600 mb-4">{{ $t('contact.phone_description') }}</p>
             <a 
-              href="tel:+447512905514" 
+              href="tel:+442034882324"
               class="text-gold font-semibold hover:text-gold/80 transition-colors text-lg"
             >
-              +44 7512 905514
+              +44 203 488 2324
             </a>
           </div>
 
@@ -232,7 +232,7 @@
               <h3 class="text-xl font-semibold mb-4 text-gold">{{ $t('contact.emergency.title') }}</h3>
               <p class="text-gray-700 mb-4">{{ $t('contact.emergency.description') }}</p>
               <a 
-                href="tel:+447512905514" 
+                href="tel:+442034882324"
                 class="inline-flex items-center bg-gold text-black px-6 py-3 rounded-lg font-semibold hover:bg-gold/90 transition-colors"
               >
                 <i class="bx bx-phone mr-2"></i>

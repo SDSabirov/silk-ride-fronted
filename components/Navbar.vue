@@ -307,8 +307,8 @@
           <!-- Contact Info -->
           <div class="pt-8 text-center">
             <p class="text-gray-500 text-sm mb-2">{{ $t('navbar.needHelp') }}</p>
-            <a href="tel:+447512905514" class="text-gold text-lg font-medium">
-              +44 7512 905514
+            <a href="tel:+442034882324" class="text-gold text-lg font-medium">
+              +44 203 488 2324
             </a>
           </div>
         </div>

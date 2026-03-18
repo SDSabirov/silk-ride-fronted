@@ -74,7 +74,7 @@
           Contact Us
         </NuxtLink>
         <a
-          href="tel:+447512905514"
+          href="tel:+442034882324"
           class="inline-flex items-center justify-center px-6 py-3 bg-gold text-black rounded-lg hover:bg-gold/90 transition-colors duration-200 font-medium"
         >
           Call Now

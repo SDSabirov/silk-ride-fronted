@@ -128,7 +128,7 @@
             >info@silkride.co.uk</a
           >
         </p>
-        <p class="mb-4">Phone: +44 7512 905514</p>
+        <p class="mb-4">Phone: +44 203 488 2324</p>
   
         <p>Thank you for choosing Silk Ride.</p>
       </div>

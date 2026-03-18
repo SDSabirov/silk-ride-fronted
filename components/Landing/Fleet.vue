@@ -277,11 +277,11 @@
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+447512905514"
+              href="tel:+442034882324"
               class="inline-flex items-center justify-center gap-2 bg-gold text-black px-8 py-3.5 rounded-lg font-semibold hover:bg-gold/90 transition-colors"
             >
               <i class="bx bx-phone text-lg"></i>
-              +44 7512 905514
+              +44 203 488 2324
             </a>
             <NuxtLink
               :to="localePath('/contact-us')"

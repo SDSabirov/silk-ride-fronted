@@ -186,8 +186,8 @@
               <i class="bx bx-phone text-gold text-lg mt-0.5"></i>
               <div>
                 <p class="text-gray-500 text-xs">{{ $t('footer.contact.phone') }}</p>
-                <a href="tel:+447512905514" class="text-white hover:text-gold transition-colors">
-                  +44 7512 905514
+                <a href="tel:+442034882324" class="text-white hover:text-gold transition-colors">
+                  +44 203 488 2324
                 </a>
               </div>
             </li>

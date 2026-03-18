@@ -60,7 +60,7 @@
 
     <!-- Booking Modal -->
     <BookingModal v-model="showBookingModal">
-      <QuoteWidget phone-number="+44 7512 905514" />
+      <QuoteWidget phone-number="+44 203 488 2324" />
     </BookingModal>
   </section>
 </template>
