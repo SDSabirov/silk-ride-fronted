@@ -20,12 +20,10 @@
 
 <script setup>
 import { onMounted, ref } from 'vue'
-import { useFacebookPixel } from '~/composables/useFacebookPixel'
 import { useAnalytics } from '~/composables/useAnalytics'
 import { useTrafficSource } from '~/composables/useTrafficSource'
 
-const { track } = useFacebookPixel()
-const { trackLead, fireGA4Event } = useAnalytics()
+const { fireGA4Event } = useAnalytics()
 const { getAttributionForEvent } = useTrafficSource()
 
 // EasyTaxiOffice site key & base booking URL
@@ -36,16 +34,7 @@ const vendorBaseUrl = `https://app.silkride.co.uk//booking?site_key=${siteKey}`
 const iframeSrc = ref('')
 
 onMounted(() => {
-  // 1) Track Lead when booking page is viewed
-  track('Lead')
-
-  // Track booking widget view with attribution
-  trackLead({
-    form_type: 'booking_widget_view',
-    form_location: 'booking_page'
-  })
-
-  // Fire GA4 event for booking widget initiation
+  // Fire GA4 event for booking widget initiation (not a conversion)
   fireGA4Event('begin_checkout', {
     ...getAttributionForEvent()
   })

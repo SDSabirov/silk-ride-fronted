@@ -160,9 +160,9 @@ export function useAnalytics() {
     // GA4
     fireGA4Event('generate_lead', enhancedParams)
 
-    // Google Ads conversion
+    // Google Ads conversion - only fires on actual form submissions
     if (GOOGLE_ADS_LEAD_LABEL) {
-      fireGoogleAdsConversion(GOOGLE_ADS_LEAD_LABEL)
+      fireGoogleAdsConversion(GOOGLE_ADS_LEAD_LABEL, 1.0, 'GBP')
     }
 
     // Facebook Pixel
