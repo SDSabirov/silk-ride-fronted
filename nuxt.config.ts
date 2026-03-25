@@ -13,6 +13,7 @@ export default defineNuxtConfig({
   },
   experimental: {
     payloadExtraction: false,
+    appManifest: false,
   },
   nitro: {
     prerender: {
@@ -23,6 +24,15 @@ export default defineNuxtConfig({
     routeRules: {
       '/__sitemap__/en.xml': { redirect: '/__sitemap__/en-GB.xml' },
       '/__sitemap__/ru.xml': { redirect: '/__sitemap__/ru-RU.xml' },
+      // 301 redirects for moved/renamed pages (fixes GSC 404s and 5xx errors)
+      '/booking/customer': { redirect: { to: '/customer', statusCode: 301 } },
+      '/booking/customer/': { redirect: { to: '/customer', statusCode: 301 } },
+      '/our-partners': { redirect: { to: '/partners', statusCode: 301 } },
+      '/our-partners/': { redirect: { to: '/partners', statusCode: 301 } },
+      '/testimonials': { redirect: { to: '/', statusCode: 301 } },
+      '/testimonials/': { redirect: { to: '/', statusCode: 301 } },
+      '/Luxury': { redirect: { to: '/', statusCode: 301 } },
+      '/Luxury/': { redirect: { to: '/', statusCode: 301 } },
     },
   },
   vite: {
@@ -197,7 +207,6 @@ export default defineNuxtConfig({
       '/booking/success',
       '/customer',
       '/customer/**',
-      '/blog/**',
       '/api/**'
     ]
   },

@@ -41,7 +41,9 @@
       "mcp__plugin_playwright_playwright__browser_tabs",
       "Bash(find /c/Users/saido/Desktop/silkride/silk-ride-frontend -type f \\\\\\(-name *.ts -o -name *.tsx -o -name *.js -o -name *.jsx -o -name *.json -o -name *.html -o -name *.css -o -name *.md -o -name *.env* -o -name *.config* \\\\\\))",
       "Bash(find /c/Users/saido/Desktop/silkride/silk-ride-frontend -type f \\\\\\(-name *.vue -o -name *.ts -o -name *.json -o -name *.md -o -name *.txt \\\\\\) ! -path */.nuxt/* ! -path */node_modules/*)",
-      "Bash(cd:*)"
+      "Bash(cd:*)",
+      "Bash(xargs cat:*)",
+      "Bash(git log:*)"
     ],
     "deny": []
   }
