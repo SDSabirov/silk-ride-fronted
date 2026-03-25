@@ -28,8 +28,7 @@ const { pending } = await useLazyAsyncData('app-init', () => Promise.resolve(tru
 // Performance optimizations - hreflang is automatically handled by @nuxtjs/i18n
 useHead({
   link: [
-    // Preload critical images for better performance
-    { rel: 'preload', href: '/images/vclassjett.webp', as: 'image', type: 'image/webp' },
+    // Preload logo for faster navbar render
     { rel: 'preload', href: '/logo.svg', as: 'image', type: 'image/svg+xml' },
     // DNS prefetch for external resources
     { rel: 'dns-prefetch', href: '//fonts.googleapis.com' },

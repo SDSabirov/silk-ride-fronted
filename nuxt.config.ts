@@ -5,6 +5,8 @@ export default defineNuxtConfig({
   compatibilityDate: "2026-03-18",
   devtools: { enabled: true },
   runtimeConfig: {
+    googlePlacesApiKey: process.env.GOOGLE_PLACES_API_KEY || '',
+    googlePlaceId: process.env.GOOGLE_PLACE_ID || '',
     public: {
       siteUrl: 'https://silkride.co.uk'
     }

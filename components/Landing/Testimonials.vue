@@ -22,9 +22,9 @@
             <i class="bx bxs-star"></i>
             <i class="bx bxs-star"></i>
           </div>
-          <span class="text-2xl font-bold">5.0</span>
+          <span class="text-2xl font-bold">{{ rating }}</span>
           <span class="text-gray-500">|</span>
-          <span class="text-gray-400">{{ $t('landing.testimonials.googleReviewCount') }}</span>
+          <span class="text-gray-400">{{ reviewCount }} Google Reviews</span>
         </div>
       </div>
 
@@ -115,6 +115,8 @@
 
 <script setup>
 import { ref } from "vue";
+
+const { rating, reviewCount } = useGoogleReviews()
 
 // Testimonials data
 const testimonials = ref([

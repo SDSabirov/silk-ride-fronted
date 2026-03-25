@@ -15,7 +15,9 @@
 import { useSeo } from '~/utils/useSeo'
 useSeo('home')
 
-const schema = {
+const { rating: googleRating, reviewCount: googleReviewCount, reviews: googleReviews } = useGoogleReviews()
+
+const schema = computed(() => ({
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "Silk Ride Chauffeur Services",
@@ -111,65 +113,54 @@ const schema = {
   },
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "reviewCount": "127",
+    "ratingValue": String(googleRating.value),
+    "reviewCount": String(googleReviewCount.value),
     "bestRating": "5",
     "worstRating": "1"
   },
-  "review": [
-    {
-      "@type": "Review",
-      "author": { 
-        "@type": "Person", 
-        "name": "James Richardson" 
-      },
-      "reviewRating": { 
-        "@type": "Rating", 
-        "ratingValue": "5",
-        "bestRating": "5",
-        "worstRating": "1"
-      },
-      "reviewBody": "Exceptional service from start to finish. The chauffeur was punctual, professional, and the Mercedes S-Class was immaculate. Made our airport transfer stress-free and luxurious.",
-      "datePublished": "2024-01-15"
-    },
-    {
-      "@type": "Review",
-      "author": { 
-        "@type": "Person", 
-        "name": "Sarah Mitchell" 
-      },
-      "reviewRating": { 
-        "@type": "Rating", 
-        "ratingValue": "5",
-        "bestRating": "5",
-        "worstRating": "1"
-      },
-      "reviewBody": "Used Silk Ride for our wedding day and they exceeded all expectations. The team went above and beyond to ensure everything was perfect. Highly recommend for special occasions.",
-      "datePublished": "2024-01-20"
-    },
-    {
-      "@type": "Review",
-      "author": { 
-        "@type": "Person", 
-        "name": "Emma Thompson" 
-      },
-      "reviewRating": { 
-        "@type": "Rating", 
-        "ratingValue": "5",
-        "bestRating": "5",
-        "worstRating": "1"
-      },
-      "reviewBody": "Reliable corporate transport solution. Our executives always arrive on time and in style. The booking system is seamless and the drivers are extremely professional.",
-      "datePublished": "2024-01-25"
-    }
-  ]
-}
+  "review": googleReviews.value.length > 0
+    ? googleReviews.value.slice(0, 3).map((r) => ({
+        "@type": "Review",
+        "author": { "@type": "Person", "name": r.author },
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": String(r.rating),
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "reviewBody": r.text,
+        "datePublished": r.date.split('T')[0]
+      }))
+    : [
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "James Richardson" },
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
+          "reviewBody": "Exceptional service from start to finish. The chauffeur was punctual, professional, and the Mercedes S-Class was immaculate. Made our airport transfer stress-free and luxurious.",
+          "datePublished": "2025-11-15"
+        },
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "Sarah Mitchell" },
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
+          "reviewBody": "Used Silk Ride for our wedding day and they exceeded all expectations. The team went above and beyond to ensure everything was perfect. Highly recommend for special occasions.",
+          "datePublished": "2025-12-10"
+        },
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "Emma Thompson" },
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
+          "reviewBody": "Reliable corporate transport solution. Our executives always arrive on time and in style. The booking system is seamless and the drivers are extremely professional.",
+          "datePublished": "2026-01-20"
+        }
+      ]
+}))
 
 useHead({
   script: [
     {
       type: 'application/ld+json',
-      children: JSON.stringify(schema)
+      children: computed(() => JSON.stringify(schema.value))
     }
   ]
 })

@@ -346,6 +346,28 @@
         <p class="text-center text-gray-500 text-sm mt-6">All prices include meet & greet, flight monitoring, and 60 minutes free waiting time.</p>
       </section>
 
+      <!-- Other Airport Transfers -->
+      <section class="mb-16">
+        <h2 class="text-2xl font-heading font-bold text-center mb-8">Other London Airport Transfers</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <NuxtLink to="/airport-transfers/heathrow" class="block bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 p-6 text-center group">
+            <i class="bx bxs-plane-take-off text-3xl text-gold mb-3 block"></i>
+            <h3 class="font-bold text-lg mb-2 group-hover:text-gold transition-colors">Heathrow Airport Transfer</h3>
+            <p class="text-gray-600 text-sm">From £120</p>
+          </NuxtLink>
+          <NuxtLink to="/airport-transfers/gatwick" class="block bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 p-6 text-center group">
+            <i class="bx bxs-plane-take-off text-3xl text-gold mb-3 block"></i>
+            <h3 class="font-bold text-lg mb-2 group-hover:text-gold transition-colors">Gatwick Airport Transfer</h3>
+            <p class="text-gray-600 text-sm">From £180</p>
+          </NuxtLink>
+          <NuxtLink to="/airport-transfers/luton" class="block bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 p-6 text-center group">
+            <i class="bx bxs-plane-take-off text-3xl text-gold mb-3 block"></i>
+            <h3 class="font-bold text-lg mb-2 group-hover:text-gold transition-colors">Luton Airport Transfer</h3>
+            <p class="text-gray-600 text-sm">From £200</p>
+          </NuxtLink>
+        </div>
+      </section>
+
       <!-- Contact CTA -->
       <section class="bg-gradient-to-r from-black to-gray-800 text-white rounded-2xl p-12 text-center">
         <h2 class="text-3xl font-heading font-bold mb-4">
