@@ -4,6 +4,11 @@
 
     <CommonHero :image="cover" :page="$t('pages.services.heroTitle')" loading="lazy" />
 
+    <!-- Breadcrumbs -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <CommonBreadcrumbs :items="breadcrumbs" />
+    </div>
+
     <CommonPageIntro
       :title="$t('pages.services.introTitle')"
       :paragraph="$t('pages.services.introParagraph')"
@@ -101,12 +106,17 @@ const { t } = useI18n()
 const localePath = useLocalePath()
 useSeo('services')
 
+const breadcrumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'Services', path: '/services' },
+]
+
 const detailedServices = [
   {
     slug: 'airport-transfers',
     title: 'Airport Transfers',
     description: 'Premium transfers to/from all London airports with flight tracking and meet & greet service.',
-    icon: 'bx bx-plane-take-off',
+    icon: 'bx bxs-plane-take-off',
     path: '/services/airport-transfers'
   },
   {

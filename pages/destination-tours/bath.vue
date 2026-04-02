@@ -74,6 +74,11 @@
       </div>
     </section>
 
+    <!-- Breadcrumbs -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <CommonBreadcrumbs :items="breadcrumbs" />
+    </div>
+
     <!-- Main Content -->
     <div class="max-w-screen-2xl mx-auto px-6 py-16">
       
@@ -332,6 +337,12 @@
 
 <script setup>
 // SEO Meta Tags
+const breadcrumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'Destinations', path: '/destination-tours' },
+  { name: 'Bath', path: '/destination-tours/bath' },
+]
+
 useSeo('bathChauffeur')
 
 // Structured Data for Local Business

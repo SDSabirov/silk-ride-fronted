@@ -9,6 +9,12 @@
       :altText="$t('fleetPages.sclass.alt')"
       :car="SClass"
     />
+
+    <!-- Breadcrumbs -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <CommonBreadcrumbs :items="breadcrumbs" />
+    </div>
+
     <CommonPageIntro
       :title="$t('fleetPages.sclass.slogan')"
       :paragraph="$t('fleetPages.sclass.description')"
@@ -51,6 +57,12 @@
 
 <script setup>
 const hero = "/images/sclassBackground.webp"
+
+const breadcrumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'Our Fleet', path: '/fleet' },
+  { name: 'Mercedes S-Class', path: '/fleet/mercedes-s-class' },
+]
 const businessTripImg = "/images/covers/business-trip.webp"
 const assistImg = "/images/covers/assist.webp"
 const weddingImg = "/images/covers/wedding.webp"
@@ -90,14 +102,14 @@ const SClassDetailed = {
     { name: "4-Zone Climate Control", icon: "bx bx-wind", description: "Individual climate zones for all passengers" },
     { name: "Burmester High-End 3D", icon: "bx bx-volume-full", description: "30-speaker reference sound system" },
     { name: "MBUX Hyperscreen", icon: "bx bx-tv", description: "56-inch curved glass display" },
-    { name: "Wireless Charging Console", icon: "bx bx-battery-charging", description: "Front and rear wireless charging" },
+    { name: "Wireless Charging Console", icon: "bx bxs-battery-charging", description: "Front and rear wireless charging" },
     { name: "Rear Seat Entertainment", icon: "bx bx-mobile", description: "11.6-inch OLED displays with streaming" },
     { name: "Interactive Ambient Light", icon: "bx bx-bulb", description: "253 LEDs with gesture control" },
     { name: "Executive Chauffeur Service", icon: "bx bx-crown", description: "Trained in VIP passenger service" },
     { name: "ENERGIZING Comfort", icon: "bx bx-spa", description: "Wellness programs with fragrance" },
     { name: "Refrigerated Compartment", icon: "bx bx-drink", description: "Champagne cooler with crystal glasses" },
     { name: "Executive Rear Seats", icon: "bx bx-chair", description: "Business class aircraft-style seating" },
-    { name: "Magic Body Control", icon: "bx bx-magic-wand", description: "Road surface scanning suspension" }
+    { name: "Magic Body Control", icon: "bx bxs-magic-wand", description: "Road surface scanning suspension" }
   ],
   safety: [
     "Active Distance Assist DISTRONIC",
@@ -135,7 +147,7 @@ const whyChooseFeatures = [
     description: t('whyChoose.executive.description')
   },
   {
-    icon: 'bx bx-shield-check',
+    icon: 'bx bx-check-shield',
     title: t('whyChoose.safety.title'),
     description: t('whyChoose.safety.description')
   },

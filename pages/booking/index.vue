@@ -3,6 +3,11 @@
     <Navbar />
     <BookingHeroCompact />
 
+    <!-- Breadcrumbs -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <CommonBreadcrumbs :items="breadcrumbs" />
+    </div>
+
     <!-- Main Content -->
     <section class="bg-[#0E0E14] relative">
       <!-- Gold accent line -->
@@ -46,6 +51,11 @@
 
 <script setup>
 import { useSeo } from "~/utils/useSeo";
+
+const breadcrumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'Booking', path: '/booking' },
+]
 
 useSeo("booking");
 </script>

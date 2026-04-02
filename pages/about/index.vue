@@ -9,6 +9,11 @@
       :showTrustBadges="false"
     />
 
+    <!-- Breadcrumbs -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <CommonBreadcrumbs :items="breadcrumbs" />
+    </div>
+
     <!-- Company Introduction -->
     <section class="py-16">
       <div class="max-w-screen-2xl mx-auto px-6">
@@ -163,7 +168,7 @@
 
           <div class="bg-white p-8 rounded-lg shadow-md text-center">
             <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-6">
-              <i class="bx bx-shield-check text-white text-2xl"></i>
+              <i class="bx bx-check-shield text-white text-2xl"></i>
             </div>
             <h3 class="text-xl font-semibold mb-4">{{ t('pages.about.values.reliability.title') }}</h3>
             <p class="text-gray-600">{{ t('pages.about.values.reliability.description') }}</p>
@@ -316,6 +321,11 @@ import { useSeo } from '~/utils/useSeo'
 
 const { t } = useI18n();
 const localePath = useLocalePath();
+
+const breadcrumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'About Us', path: '/about' },
+]
 
 useSeo('about')
 </script>

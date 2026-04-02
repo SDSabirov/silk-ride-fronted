@@ -188,7 +188,7 @@
             <!-- Safety Systems -->
             <div v-if="car.safety" class="bg-gradient-to-br from-green-50 to-teal-50 rounded-xl p-6 border border-green-100">
               <div class="flex items-center mb-6">
-                <i class="bx bxs-shield-check text-2xl text-green-600 mr-3"></i>
+                <i class="bx bxs-check-shield text-2xl text-green-600 mr-3"></i>
                 <h3 class="text-xl font-bold text-gray-800">{{ $t('specifications.safety.title') }}</h3>
               </div>
               <div class="space-y-3">
@@ -232,7 +232,7 @@
               </div>
               <div class="text-center">
                 <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <i class="bx bx-certificate text-2xl text-purple-600"></i>
+                  <i class="bx bx-certification text-2xl text-purple-600"></i>
                 </div>
                 <h4 class="font-semibold text-gray-800 mb-2">{{ $t('specifications.technical.certified.title') }}</h4>
                 <p class="text-sm text-gray-600">{{ $t('specifications.technical.certified.description') }}</p>
@@ -271,7 +271,7 @@ const tabs = [
   },
   {
     title: t('specifications.tabs.performance'),
-    icon: 'bx bx-shield-check'
+    icon: 'bx bx-check-shield'
   }
 ]
 </script>

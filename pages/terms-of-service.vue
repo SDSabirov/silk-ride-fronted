@@ -2,6 +2,11 @@
     <div>
       <Navbar />
       <div class="w-full py-12 pt-[150px]">
+        <!-- Breadcrumbs -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <CommonBreadcrumbs :items="breadcrumbs" />
+        </div>
+
         <div class="terms-of-service px-4 py-8 max-w-screen-2xl mx-auto text-gray-800">
         <h1 class="text-3xl font-bold mb-2">Terms of Service</h1>
         <p class="text-sm text-gray-500 mb-6">Last updated: April 17, 2025</p>
@@ -140,6 +145,11 @@
 
 <script setup>
 import { useSeo } from '~/utils/useSeo'
+const breadcrumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'Terms of Service', path: '/terms-of-service' },
+]
+
 useSeo('terms')
 </script>
   

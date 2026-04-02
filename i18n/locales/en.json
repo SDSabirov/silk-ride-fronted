@@ -36,7 +36,9 @@
       "heathrow": "Heathrow Airport",
       "gatwick": "Gatwick Airport",
       "stansted": "Stansted Airport",
-      "luton": "Luton Airport"
+      "luton": "Luton Airport",
+      "bigginHill": "Biggin Hill Airport",
+      "farnborough": "Farnborough Airport"
     },
     "destinationsDropdown": {
       "oxford": "Oxford",
@@ -1152,6 +1154,16 @@
       "title": "Event Transport London | VIP Chauffeur Service",
       "description": "VIP event transport in London. Red carpet arrivals, corporate events, theatre trips. Luxury Mercedes fleet with professional chauffeurs.",
       "keywords": "event chauffeur london, concert transport london, vip event transport, corporate event chauffeur, wembley chauffeur"
+    },
+    "bigginHillChauffeur": {
+      "title": "Biggin Hill Private Jet Transfer | Executive Chauffeur Service",
+      "description": "Discreet executive chauffeur service for Biggin Hill Airport private jet passengers. Mercedes S-Class, planeside pickup, 30 mins to Central London.",
+      "keywords": "biggin hill airport transfer, biggin hill chauffeur, private jet chauffeur london, biggin hill private jet, executive airport transfer bromley"
+    },
+    "farnboroughChauffeur": {
+      "title": "Farnborough Airport Transfer | Private Jet Chauffeur Service",
+      "description": "Premium chauffeur service for TAG Farnborough Airport. Europe's leading business aviation hub. Mercedes fleet, planeside service, direct M3 to London.",
+      "keywords": "farnborough airport transfer, farnborough chauffeur, TAG farnborough chauffeur, private jet transfer london, business aviation chauffeur"
     }
   },
   "faq": {
@@ -1590,6 +1602,22 @@
       "refreshments": "Complimentary refreshments",
       "flightMonitoring": "Flight monitoring"
     }
+  },
+  "blog": {
+    "home": "Home",
+    "title": "Our Blog",
+    "subtitle": "Travel tips, chauffeur insights, and luxury transport guides from the Silk Ride team.",
+    "allCategories": "All",
+    "readMore": "Read More",
+    "minRead": "min read",
+    "publishedOn": "Published on",
+    "writtenBy": "Written by",
+    "byAuthor": "By",
+    "relatedPosts": "Related Articles",
+    "backToBlog": "Back to Blog",
+    "noPosts": "No articles found. Check back soon!",
+    "previousPage": "Previous",
+    "nextPage": "Next"
   }
 }
 

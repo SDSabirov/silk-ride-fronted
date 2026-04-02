@@ -74,6 +74,11 @@
       </div>
     </section>
 
+    <!-- Breadcrumbs -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <CommonBreadcrumbs :items="breadcrumbs" />
+    </div>
+
     <!-- Main Content -->
     <div class="max-w-screen-2xl mx-auto px-6 py-16">
       
@@ -157,7 +162,7 @@
           <!-- Visitor Center -->
           <div class="bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-all duration-300">
             <div class="w-12 h-12 bg-gold rounded-full flex items-center justify-center mb-4">
-              <i class="bx bx-museum text-black text-xl"></i>
+              <i class="bx bx-building-house text-black text-xl"></i>
             </div>
             <h3 class="text-xl font-semibold text-black mb-3">Stonehenge Visitor Center</h3>
             <p class="text-gray-600 mb-4 text-sm">
@@ -191,7 +196,7 @@
           <!-- Avebury Stone Circle -->
           <div class="bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-all duration-300">
             <div class="w-12 h-12 bg-gold rounded-full flex items-center justify-center mb-4">
-              <i class="bx bx-target text-black text-xl"></i>
+              <i class="bx bx-target-lock text-black text-xl"></i>
             </div>
             <h3 class="text-xl font-semibold text-black mb-3">Avebury Stone Circle</h3>
             <p class="text-gray-600 mb-4 text-sm">
@@ -208,7 +213,7 @@
           <!-- Old Sarum -->
           <div class="bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-all duration-300">
             <div class="w-12 h-12 bg-gold rounded-full flex items-center justify-center mb-4">
-              <i class="bx bx-castle text-black text-xl"></i>
+              <i class="bx bxs-castle text-black text-xl"></i>
             </div>
             <h3 class="text-xl font-semibold text-black mb-3">Old Sarum</h3>
             <p class="text-gray-600 mb-4 text-sm">
@@ -225,7 +230,7 @@
           <!-- Woodhenge -->
           <div class="bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-all duration-300">
             <div class="w-12 h-12 bg-gold rounded-full flex items-center justify-center mb-4">
-              <i class="bx bx-tree text-black text-xl"></i>
+              <i class="bx bx-landscape text-black text-xl"></i>
             </div>
             <h3 class="text-xl font-semibold text-black mb-3">Woodhenge & Durrington Walls</h3>
             <p class="text-gray-600 mb-4 text-sm">
@@ -332,6 +337,12 @@
 
 <script setup>
 // SEO Meta Tags
+const breadcrumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'Destinations', path: '/destination-tours' },
+  { name: 'Stonehenge', path: '/destination-tours/stonehenge' },
+]
+
 useSeo('stonehengeChauffeur')
 
 // Structured Data for Local Business

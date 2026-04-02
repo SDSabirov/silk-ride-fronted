@@ -9,7 +9,7 @@ Disallow: /booking/cancel
 Disallow: /booking/success
 Disallow: /customer
 Disallow: /api/
-Disallow: /blog/
+Allow: /blog/
 
 # Disallow utility pages
 Disallow: /_nuxt/

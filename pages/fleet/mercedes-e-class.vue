@@ -9,6 +9,12 @@
       altText="Mercedes Benz E-Class side view"
       :car="EClass"
     />
+
+    <!-- Breadcrumbs -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <CommonBreadcrumbs :items="breadcrumbs" />
+    </div>
+
     <CommonPageIntro
       :title="t('fleetPages.eClass.intro.title')"
       :paragraph="t('fleetPages.eClass.intro.paragraph')"
@@ -51,6 +57,12 @@
 
 <script setup>
 const hero = "/images/eclass.webp"
+
+const breadcrumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'Our Fleet', path: '/fleet' },
+  { name: 'Mercedes E-Class', path: '/fleet/mercedes-e-class' },
+]
 const businessTripImg = "/images/covers/business-trip.webp"
 const assistImg = "/images/covers/assist.webp"
 const weddingImg = "/images/covers/wedding.webp"
@@ -142,7 +154,7 @@ const whyChooseFeatures = [
     description: t('whyChoose.practical.description')
   },
   {
-    icon: 'bx bx-shield-check',
+    icon: 'bx bx-check-shield',
     title: t('whyChoose.safety.title'),
     description: t('whyChoose.safety.description')
   },
@@ -177,7 +189,7 @@ const occasionScenarios = [
     title: t('occasions.airport.title'),
     description: t('occasions.airport.description'),
     image: assistImg,
-    icon: 'bx bx-plane',
+    icon: 'bx bxs-plane',
     keyPoints: [
       t('occasions.airport.points.0'),
       t('occasions.airport.points.1'),

@@ -62,7 +62,7 @@
             </div>
             <div class="flex items-center space-x-3 sm:col-span-2 lg:col-span-1">
               <div class="w-10 h-10 sm:w-12 sm:h-12 bg-gold rounded-full flex items-center justify-center flex-shrink-0">
-                <i class="bx bx-plane-takeoff text-black text-lg sm:text-xl"></i>
+                <i class="bx bxs-plane-take-off text-black text-lg sm:text-xl"></i>
               </div>
               <div>
                 <h3 class="font-semibold text-base sm:text-lg">Low-Cost Hub</h3>
@@ -73,6 +73,11 @@
         </div>
       </div>
     </section>
+
+    <!-- Breadcrumbs -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <CommonBreadcrumbs :items="breadcrumbs" />
+    </div>
 
     <!-- Main Content -->
     <div class="max-w-screen-2xl mx-auto px-6 py-16">
@@ -157,7 +162,7 @@
           <!-- Airlines -->
           <div class="bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-all duration-300">
             <div class="w-12 h-12 bg-gold rounded-full flex items-center justify-center mb-4">
-              <i class="bx bx-plane text-black text-xl"></i>
+              <i class="bx bxs-plane text-black text-xl"></i>
             </div>
             <h3 class="text-xl font-semibold text-black mb-3">Major Airlines</h3>
             <p class="text-gray-600 mb-4 text-sm">
@@ -251,7 +256,7 @@
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div class="text-center">
               <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-4">
-                <i class="bx bx-shield-check text-black text-2xl"></i>
+                <i class="bx bx-check-shield text-black text-2xl"></i>
               </div>
               <h3 class="text-xl font-semibold text-black mb-3">Reliable Service</h3>
               <p class="text-gray-700">Professional, punctual service you can depend on for all your Stansted transfers.</p>
@@ -401,6 +406,12 @@
 
 <script setup>
 // SEO Meta Tags
+const breadcrumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'Airport Transfers', path: '/airport-transfers' },
+  { name: 'Stansted', path: '/airport-transfers/stansted' },
+]
+
 useSeo('stanstedChauffeur')
 
 // Structured Data for Local Business

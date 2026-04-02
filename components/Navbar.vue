@@ -91,7 +91,7 @@
                       class="flex items-center gap-3 px-3 py-3 rounded-lg text-gray-300 hover:text-white hover:bg-white/5 transition-colors"
                       @click="closeServices"
                     >
-                      <i class="bx bx-plane-take-off text-gold text-xl"></i>
+                      <i class="bx bxs-plane-take-off text-gold text-xl"></i>
                       <span>{{ airport.label }}</span>
                     </NuxtLink>
 
@@ -255,7 +255,7 @@
                 class="flex items-center gap-3 py-3 px-4 text-gray-400 hover:text-gold"
                 @click="closeMobileMenu"
               >
-                <i class="bx bx-plane-take-off text-gold"></i>
+                <i class="bx bxs-plane-take-off text-gold"></i>
                 {{ airport.label }}
               </NuxtLink>
             </div>
@@ -353,7 +353,9 @@ const airportItems = [
   { path: localePath('/airport-transfers/heathrow'), label: t('navbar.airportsDropdown.heathrow') },
   { path: localePath('/airport-transfers/gatwick'), label: t('navbar.airportsDropdown.gatwick') },
   { path: localePath('/airport-transfers/stansted'), label: t('navbar.airportsDropdown.stansted') },
-  { path: localePath('/airport-transfers/luton'), label: t('navbar.airportsDropdown.luton') }
+  { path: localePath('/airport-transfers/luton'), label: t('navbar.airportsDropdown.luton') },
+  { path: localePath('/airport-transfers/biggin-hill'), label: t('navbar.airportsDropdown.bigginHill') },
+  { path: localePath('/airport-transfers/farnborough'), label: t('navbar.airportsDropdown.farnborough') }
 ]
 
 // Company items with icons

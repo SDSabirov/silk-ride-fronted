@@ -74,6 +74,11 @@
       </div>
     </section>
 
+    <!-- Breadcrumbs -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <CommonBreadcrumbs :items="breadcrumbs" />
+    </div>
+
     <!-- Main Content -->
     <div class="max-w-screen-2xl mx-auto px-6 py-16">
       
@@ -169,7 +174,7 @@
           <div class="bg-white rounded-xl shadow-lg p-8 border border-gray-100 hover:shadow-xl transition-all duration-300">
             <div class="flex items-center mb-6">
               <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mr-4">
-                <i class="bx bx-plane text-black text-2xl"></i>
+                <i class="bx bxs-plane text-black text-2xl"></i>
               </div>
               <div>
                 <h3 class="text-2xl font-semibold text-black">Airlines & Routes</h3>
@@ -207,7 +212,7 @@
             </div>
             <div>
               <div class="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-4">
-                <i class="bx bx-road text-gold text-xl"></i>
+                <i class="bx bx-trip text-gold text-xl"></i>
               </div>
               <h4 class="font-semibold text-lg mb-2">Excellent Connectivity</h4>
               <p class="text-sm">Direct access to M1 motorway and easy connections to M25 orbital motorway.</p>
@@ -418,6 +423,12 @@
 
 <script setup>
 // SEO Meta Tags
+const breadcrumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'Airport Transfers', path: '/airport-transfers' },
+  { name: 'Luton', path: '/airport-transfers/luton' },
+]
+
 useSeo('lutonChauffeur')
 
 // Structured Data for Local Business

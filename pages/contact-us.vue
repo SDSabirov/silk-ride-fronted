@@ -9,6 +9,11 @@
       :showTrustBadges="false"
     />
 
+    <!-- Breadcrumbs -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <CommonBreadcrumbs :items="breadcrumbs" />
+    </div>
+
     <!-- Contact Introduction -->
     <section class="py-16">
       <div class="max-w-screen-2xl mx-auto px-6">
@@ -304,6 +309,11 @@ const submitForm = async () => {
     isSubmitting.value = false;
   }
 };
+
+const breadcrumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'Contact Us', path: '/contact-us' },
+]
 
 useSeo('contactPage')
 </script>

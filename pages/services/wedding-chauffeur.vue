@@ -4,6 +4,11 @@
 
     <CommonHero :image="heroImage" :page="$t('pages.services.cards.wedding.title')" />
 
+    <!-- Breadcrumbs -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <CommonBreadcrumbs :items="breadcrumbs" />
+    </div>
+
     <CommonPageIntro
       :title="$t('pages.services.cards.wedding.title')"
       :paragraph="$t('pages.services.cards.wedding.description')"
@@ -472,6 +477,12 @@ const { t } = useI18n()
 const localePath = useLocalePath()
 
 useSeo('weddingChauffeur')
+
+const breadcrumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'Services', path: '/services' },
+  { name: 'Wedding Chauffeur', path: '/services/wedding-chauffeur' },
+]
 
 const serviceBullets = computed(() => {
   const bullets = []

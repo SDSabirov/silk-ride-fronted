@@ -74,6 +74,11 @@
       </div>
     </section>
 
+    <!-- Breadcrumbs -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <CommonBreadcrumbs :items="breadcrumbs" />
+    </div>
+
     <!-- Main Content -->
     <div class="max-w-screen-2xl mx-auto px-6 py-16">
       
@@ -196,7 +201,7 @@
           <!-- All Terminals -->
           <div class="bg-gradient-to-br from-gold to-yellow-400 rounded-xl shadow-lg p-6 text-black md:col-span-2 lg:col-span-1">
             <div class="w-12 h-12 bg-black rounded-full flex items-center justify-center mb-4">
-              <i class="bx bx-plane-takeoff text-gold text-lg"></i>
+              <i class="bx bxs-plane-take-off text-gold text-lg"></i>
             </div>
             <h3 class="text-xl font-semibold mb-3">Complete Coverage</h3>
             <p class="mb-4 text-sm">Our experienced chauffeurs know every terminal, every route, and every pickup point at Heathrow Airport.</p>
@@ -361,6 +366,12 @@
 
 <script setup>
 // SEO Meta Tags
+const breadcrumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'Airport Transfers', path: '/airport-transfers' },
+  { name: 'Heathrow', path: '/airport-transfers/heathrow' },
+]
+
 useSeo('heathrowChauffeur')
 
 // Structured Data for Local Business

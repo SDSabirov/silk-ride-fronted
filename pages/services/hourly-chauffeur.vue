@@ -4,6 +4,11 @@
 
     <CommonHero :image="heroImage" :page="$t('pages.services.cards.hourly.title')" />
 
+    <!-- Breadcrumbs -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <CommonBreadcrumbs :items="breadcrumbs" />
+    </div>
+
     <CommonPageIntro
       :title="$t('pages.services.cards.hourly.title')"
       :paragraph="$t('pages.services.cards.hourly.description')"
@@ -108,7 +113,7 @@
           
           <div class="bg-white p-6 rounded-lg shadow-md">
             <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-4">
-              <i class="bx bx-medical text-white text-2xl"></i>
+              <i class="bx bx-plus-medical text-white text-2xl"></i>
             </div>
             <h3 class="text-xl font-semibold mb-3 text-center">Medical Appointments</h3>
             <p class="text-gray-600 text-center">Comfortable, reliable transport for medical appointments with waiting time included.</p>
@@ -207,6 +212,12 @@ const { t } = useI18n()
 const localePath = useLocalePath()
 
 useSeo('hourlyChauffeur')
+
+const breadcrumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'Services', path: '/services' },
+  { name: 'Hourly Chauffeur', path: '/services/hourly-chauffeur' },
+]
 
 const serviceBullets = computed(() => {
   const bullets = []

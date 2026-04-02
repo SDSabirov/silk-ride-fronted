@@ -74,6 +74,11 @@
       </div>
     </section>
 
+    <!-- Breadcrumbs -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <CommonBreadcrumbs :items="breadcrumbs" />
+    </div>
+
     <!-- Main Content -->
     <div class="max-w-screen-2xl mx-auto px-6 py-16">
       
@@ -371,6 +376,12 @@
 
 <script setup>
 // SEO Meta Tags
+const breadcrumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'Airport Transfers', path: '/airport-transfers' },
+  { name: 'Gatwick', path: '/airport-transfers/gatwick' },
+]
+
 useSeo('gatwickChauffeur')
 
 // Structured Data for Local Business

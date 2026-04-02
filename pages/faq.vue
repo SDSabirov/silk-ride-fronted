@@ -2,6 +2,11 @@
     <div>
         <Navbar />
         <div class="w-full py-12 pt-[150px] mx-auto max-w-screen-2xl">
+            <!-- Breadcrumbs -->
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <CommonBreadcrumbs :items="breadcrumbs" />
+            </div>
+
             <FaqSection :items="faqs" />
         </div>
         
@@ -14,6 +19,11 @@ import { useHead }  from '#imports'
 import { computed } from 'vue'
 
 const { t, te } = useI18n()
+
+const breadcrumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'FAQ', path: '/faq' },
+]
 
 // 1) Build FAQs array
 const faqs = computed(() => {

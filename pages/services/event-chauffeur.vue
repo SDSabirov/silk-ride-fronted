@@ -4,6 +4,11 @@
 
     <CommonHero :image="heroImage" :page="$t('pages.services.cards.event.title')" />
 
+    <!-- Breadcrumbs -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <CommonBreadcrumbs :items="breadcrumbs" />
+    </div>
+
     <CommonPageIntro
       :title="$t('pages.services.cards.event.title')"
       :paragraph="$t('pages.services.cards.event.description')"
@@ -116,7 +121,7 @@
           
           <div class="bg-white p-6 rounded-lg shadow-md text-center">
             <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-4">
-              <i class="bx bx-theater text-white text-2xl"></i>
+              <i class="bx bx-film text-white text-2xl"></i>
             </div>
             <h3 class="text-xl font-semibold mb-3">West End Theatres</h3>
             <p class="text-gray-600">Musical shows, plays, and theatre premieres in London's entertainment district.</p>
@@ -291,6 +296,12 @@ const { t } = useI18n()
 const localePath = useLocalePath()
 
 useSeo('eventChauffeur')
+
+const breadcrumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'Services', path: '/services' },
+  { name: 'Event Transport', path: '/services/event-chauffeur' },
+]
 
 const serviceBullets = computed(() => {
   const bullets = []

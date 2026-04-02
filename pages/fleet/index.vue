@@ -9,6 +9,11 @@
       :showTrustBadges="false"
     />
 
+    <!-- Breadcrumbs -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <CommonBreadcrumbs :items="breadcrumbs" />
+    </div>
+
     <CommonPageIntro
       :title="$t('pages.fleet.introTitle')"
       :paragraph="$t('pages.fleet.introText')"
@@ -30,7 +35,7 @@
 
           <div class="text-center">
             <div class="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gold/10 mb-4">
-              <i class="bx bx-shield-check text-gold text-xl"></i>
+              <i class="bx bx-check-shield text-gold text-xl"></i>
             </div>
             <h3 class="text-4xl md:text-5xl font-bold text-gray-900 mb-2">100%</h3>
             <p class="text-sm text-gray-600">{{ $t('pages.fleet.stats.maintained') }}</p>
@@ -295,7 +300,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
           <div class="text-center">
             <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gold/10 mb-6">
-              <i class="bx bx-shield-check text-gold text-2xl"></i>
+              <i class="bx bx-check-shield text-gold text-2xl"></i>
             </div>
             <h3 class="text-xl font-bold mb-3 text-gray-900">{{ $t('pages.fleet.features.safety') }}</h3>
             <p class="text-gray-600 leading-relaxed">{{ $t('pages.fleet.features.safetyDesc') }}</p>
@@ -419,6 +424,11 @@
 
 <script setup>
 const cover = "/images/covers/fleet.webp"
+
+const breadcrumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'Our Fleet', path: '/fleet' },
+]
 import { useI18n, useLocalePath } from "#imports";
 
 const { t } = useI18n();

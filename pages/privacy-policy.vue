@@ -2,6 +2,11 @@
   <div>
     <Navbar />
     <div class="w-full py-12 pt-[150px]">
+      <!-- Breadcrumbs -->
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <CommonBreadcrumbs :items="breadcrumbs" />
+      </div>
+
       <section class="max-w-screen-2xl mx-auto px-4 ">
         <h1 class="text-3xl font-bold mb-4">Privacy Policy</h1>
         <p class="text-sm text-gray-500 mb-8">Last updated: April 17, 2025</p>
@@ -112,5 +117,10 @@
 
 <script setup>
 import { useSeo } from '~/utils/useSeo'
+const breadcrumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'Privacy Policy', path: '/privacy-policy' },
+]
+
 useSeo('privacy')
 </script>

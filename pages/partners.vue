@@ -9,6 +9,11 @@
       :showTrustBadges="false"
     />
 
+    <!-- Breadcrumbs -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <CommonBreadcrumbs :items="breadcrumbs" />
+    </div>
+
     <!-- Partners Introduction -->
     <section class="py-16">
       <div class="max-w-screen-2xl mx-auto px-6">
@@ -485,6 +490,11 @@ import { useSeo } from '~/utils/useSeo'
 
 const { t } = useI18n();
 const localePath = useLocalePath();
+
+const breadcrumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'Partners', path: '/partners' },
+]
 
 useSeo('partners')
 </script>

@@ -9,6 +9,12 @@
       altText="Mercedes Benz V-Class side view"
       :car="VClass"
     />
+
+    <!-- Breadcrumbs -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <CommonBreadcrumbs :items="breadcrumbs" />
+    </div>
+
     <div
       class="bg-[url(/assets/images/covers/bgpattern.png)] bg-cover bg-center bg-no-repeat"
     >
@@ -54,6 +60,12 @@
 
 <script setup>
 const hero = "/images/v-classshero.webp"
+
+const breadcrumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'Our Fleet', path: '/fleet' },
+  { name: 'Mercedes V-Class', path: '/fleet/mercedes-v-class' },
+]
 const businessTripImg = "/images/covers/business-trip.webp"
 const assistImg = "/images/covers/assist.webp"
 const weddingImg = "/images/covers/wedding.webp"
@@ -98,9 +110,9 @@ const VClassDetailed = {
     { name: "All-Round Privacy Glass", icon: "bx bx-glasses", description: "Comprehensive window tinting" },
     { name: "Group Travel Specialist", icon: "bx bx-group", description: "Experienced in group transportation" },
     { name: "Easy-PACK Tailgate", icon: "bx bx-door-open", description: "Electric tailgate with kick sensor" },
-    { name: "MBUX Tablet", icon: "bx bx-tablet", description: "10.25-inch touchscreen control center" },
+    { name: "MBUX Tablet", icon: "bx bx-tab", description: "10.25-inch touchscreen control center" },
     { name: "Individual Climate Zones", icon: "bx bx-wind", description: "Separate climate control for each row" },
-    { name: "Comfort Suspension", icon: "bx bx-road", description: "AGILITY CONTROL with selective damping" }
+    { name: "Comfort Suspension", icon: "bx bx-trip", description: "AGILITY CONTROL with selective damping" }
   ],
   safety: [
     "Crosswind Assist Stabilization",
@@ -137,7 +149,7 @@ const whyChooseFeatures = [
     description: t('whyChoose.connectivity.description')
   },
   {
-    icon: 'bx bx-shield-check',
+    icon: 'bx bx-check-shield',
     title: t('whyChoose.safety.title'),
     description: t('whyChoose.safety.description')
   },
