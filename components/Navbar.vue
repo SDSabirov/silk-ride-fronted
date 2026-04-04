@@ -110,6 +110,15 @@
             </Transition>
           </div>
 
+          <!-- Blog -->
+          <NuxtLink
+            :to="localePath('/blog')"
+            class="nav-link px-5 py-2 text-lg text-white hover:text-gold transition-colors relative group"
+          >
+            {{ $t('navbar.blog') }}
+            <span class="nav-underline"></span>
+          </NuxtLink>
+
           <!-- Company Dropdown -->
           <div class="relative" @mouseenter="openCompany" @mouseleave="closeCompany">
             <button
@@ -223,6 +232,15 @@
             @click="closeMobileMenu"
           >
             {{ $t('navbar.fleet') }}
+          </NuxtLink>
+
+          <!-- Blog -->
+          <NuxtLink
+            :to="localePath('/blog')"
+            class="block py-4 text-xl text-white hover:text-gold border-b border-white/10"
+            @click="closeMobileMenu"
+          >
+            {{ $t('navbar.blog') }}
           </NuxtLink>
 
           <!-- Services Accordion -->
@@ -355,7 +373,8 @@ const airportItems = [
   { path: localePath('/airport-transfers/stansted'), label: t('navbar.airportsDropdown.stansted') },
   { path: localePath('/airport-transfers/luton'), label: t('navbar.airportsDropdown.luton') },
   { path: localePath('/airport-transfers/biggin-hill'), label: t('navbar.airportsDropdown.bigginHill') },
-  { path: localePath('/airport-transfers/farnborough'), label: t('navbar.airportsDropdown.farnborough') }
+  { path: localePath('/airport-transfers/farnborough'), label: t('navbar.airportsDropdown.farnborough') },
+  { path: localePath('/airport-transfers/london-city'), label: t('navbar.airportsDropdown.londonCity') }
 ]
 
 // Company items with icons

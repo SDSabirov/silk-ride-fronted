@@ -1,5 +1,6 @@
 <template>
   <div v-if="post">
+    <Navbar />
     <!-- Hero Section -->
     <section class="relative bg-gray-900">
       <div class="absolute inset-0">

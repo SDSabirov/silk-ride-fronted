@@ -22,6 +22,7 @@
     "contact": "Contact Us",
     "bookNow": "Book Now",
     "registerLogin": "Login",
+    "blog": "Insights",
     "needHelp": "Need help?",
     "servicesDropdown": {
       "all": "All Services",
@@ -38,7 +39,8 @@
       "stansted": "Stansted Airport",
       "luton": "Luton Airport",
       "bigginHill": "Biggin Hill Airport",
-      "farnborough": "Farnborough Airport"
+      "farnborough": "Farnborough Airport",
+      "londonCity": "London City Airport"
     },
     "destinationsDropdown": {
       "oxford": "Oxford",
@@ -1104,6 +1106,11 @@
       "title": "Luton Airport Transfer | Private Car Service from £200",
       "description": "Comfortable Luton airport transfers in luxury vehicles. Professional chauffeurs, flight tracking, meet & greet service. Book your ride.",
       "keywords": "luton chauffeur service, luton airport transfer, luton airport car service, meet and greet luton, easyjet transfer luton"
+    },
+    "londonCityChauffeur": {
+      "title": "London City Airport Transfer | Chauffeur Service from £120",
+      "description": "Premium London City Airport transfers with meet & greet. Closest airport to Central London. Flight tracking, luxury Mercedes fleet. Book your transfer now.",
+      "keywords": "london city airport chauffeur, london city airport transfer, LCY transfer, docklands airport transfer, london city airport car service"
     },
     "oxfordChauffeur": {
       "title": "Oxford Day Trip from London | Private Chauffeur Tour",

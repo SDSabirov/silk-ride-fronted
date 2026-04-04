@@ -35,6 +35,14 @@ export default defineNuxtConfig({
       '/testimonials/': { redirect: { to: '/', statusCode: 301 } },
       '/Luxury': { redirect: { to: '/', statusCode: 301 } },
       '/Luxury/': { redirect: { to: '/', statusCode: 301 } },
+      // Trailing slash duplicates — redirect to non-trailing
+      '/ru/contact-us/': { redirect: { to: '/ru/contact-us', statusCode: 301 } },
+      '/ru/airport-transfers/gatwick/': { redirect: { to: '/ru/airport-transfers/gatwick', statusCode: 301 } },
+      '/ru/airport-transfers/stansted/': { redirect: { to: '/ru/airport-transfers/stansted', statusCode: 301 } },
+      '/ru/airport-transfers/luton/': { redirect: { to: '/ru/airport-transfers/luton', statusCode: 301 } },
+      '/ru/services/event-chauffeur/': { redirect: { to: '/ru/services/event-chauffeur', statusCode: 301 } },
+      '/ru/services/uk-europe-travel/': { redirect: { to: '/ru/services/uk-europe-travel', statusCode: 301 } },
+      '/ru/fleet/mercedes-s-class/': { redirect: { to: '/ru/fleet/mercedes-s-class', statusCode: 301 } },
     },
   },
   vite: {

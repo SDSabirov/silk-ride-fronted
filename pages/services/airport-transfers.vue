@@ -222,6 +222,26 @@
             <p class="mt-4 text-sm text-gray-500 text-center">Journey Time: 60-90 minutes</p>
           </div>
 
+          <!-- London City Airport -->
+          <div class="p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-shadow">
+            <h3 class="text-xl font-semibold mb-4 text-center">London City Airport</h3>
+            <div class="space-y-3">
+              <div class="flex justify-between items-center">
+                <span class="font-medium">Mercedes E-Class:</span>
+                <span class="font-bold text-gold">£120</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="font-medium">Mercedes S-Class:</span>
+                <span class="font-bold text-gold">£160</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="font-medium">Mercedes V-Class:</span>
+                <span class="font-bold text-gold">£160</span>
+              </div>
+            </div>
+            <p class="mt-4 text-sm text-gray-500 text-center">Journey Time: 20-40 minutes</p>
+          </div>
+
           <!-- Biggin Hill Airport -->
           <div class="p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-shadow">
             <h3 class="text-xl font-semibold mb-4 text-center">Biggin Hill Airport</h3>

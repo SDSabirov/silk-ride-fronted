@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Navbar />
     <!-- Hero Section -->
     <section class="relative bg-gray-900 py-20 md:py-28">
       <div class="absolute inset-0 bg-gradient-to-r from-black/80 to-black/40"></div>
