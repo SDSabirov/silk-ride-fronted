@@ -21,7 +21,7 @@
       <div class="max-w-screen-2xl mx-auto px-6">
         <div class="text-center mb-16">
           <div class="w-16 h-1 bg-gold mb-6 mx-auto"></div>
-          <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Our Complete Range of Chauffeur Services</h2>
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">{{ $t('pages.services.servicesRangeTitle') }}</h2>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -34,10 +34,10 @@
               <p class="text-gray-600 mb-6 leading-relaxed">{{ service.description }}</p>
               <NuxtLink
                 :to="localePath(service.path)"
-                :aria-label="`Learn More About ${service.title}`"
+                :aria-label="`${$t('pages.services.learnMore')} - ${service.title}`"
                 class="inline-flex items-center text-sm font-semibold text-gray-900 hover:text-gold transition-colors"
               >
-                Learn More
+                {{ $t('pages.services.learnMore') }}
                 <i class="bx bx-right-arrow-alt ml-1 text-lg"></i>
               </NuxtLink>
             </div>
@@ -53,7 +53,7 @@
       <div class="relative max-w-screen-2xl mx-auto px-6">
         <div class="text-center mb-16">
           <div class="w-16 h-1 bg-gold mb-6 mx-auto"></div>
-          <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Why Choose Silk Ride for Your Transportation Needs?</h2>
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">{{ $t('pages.services.whyChooseTitle') }}</h2>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
@@ -61,32 +61,32 @@
             <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gold/10 mb-6">
               <i class="bx bx-shield text-gold text-2xl"></i>
             </div>
-            <h3 class="text-xl font-bold mb-3 text-gray-900">Licensed & Insured</h3>
-            <p class="text-gray-600 leading-relaxed">Hertsmere Borough Council licensed operator with comprehensive insurance coverage.</p>
+            <h3 class="text-xl font-bold mb-3 text-gray-900">{{ $t('pages.services.whyChoose.licensed.title') }}</h3>
+            <p class="text-gray-600 leading-relaxed">{{ $t('pages.services.whyChoose.licensed.text') }}</p>
           </div>
 
           <div class="text-center">
             <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gold/10 mb-6">
               <i class="bx bx-user-check text-gold text-2xl"></i>
             </div>
-            <h3 class="text-xl font-bold mb-3 text-gray-900">Professional Chauffeurs</h3>
-            <p class="text-gray-600 leading-relaxed">Background-checked, experienced drivers trained to the highest service standards.</p>
+            <h3 class="text-xl font-bold mb-3 text-gray-900">{{ $t('pages.services.whyChoose.chauffeurs.title') }}</h3>
+            <p class="text-gray-600 leading-relaxed">{{ $t('pages.services.whyChoose.chauffeurs.text') }}</p>
           </div>
 
           <div class="text-center">
             <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gold/10 mb-6">
               <i class="bx bx-car text-gold text-2xl"></i>
             </div>
-            <h3 class="text-xl font-bold mb-3 text-gray-900">Luxury Fleet</h3>
-            <p class="text-gray-600 leading-relaxed">Premium Mercedes-Benz vehicles with Wi-Fi, climate control, and luxury amenities.</p>
+            <h3 class="text-xl font-bold mb-3 text-gray-900">{{ $t('pages.services.whyChoose.fleet.title') }}</h3>
+            <p class="text-gray-600 leading-relaxed">{{ $t('pages.services.whyChoose.fleet.text') }}</p>
           </div>
 
           <div class="text-center">
             <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gold/10 mb-6">
               <i class="bx bx-time-five text-gold text-2xl"></i>
             </div>
-            <h3 class="text-xl font-bold mb-3 text-gray-900">24/7 Availability</h3>
-            <p class="text-gray-600 leading-relaxed">Round-the-clock service for all your transportation needs, any day of the year.</p>
+            <h3 class="text-xl font-bold mb-3 text-gray-900">{{ $t('pages.services.whyChoose.availability.title') }}</h3>
+            <p class="text-gray-600 leading-relaxed">{{ $t('pages.services.whyChoose.availability.text') }}</p>
           </div>
         </div>
       </div>
@@ -106,55 +106,55 @@ const { t } = useI18n()
 const localePath = useLocalePath()
 useSeo('services')
 
-const breadcrumbs = [
-  { name: 'Home', path: '/' },
-  { name: 'Services', path: '/services' },
-]
+const breadcrumbs = computed(() => [
+  { name: t('pages.services.breadcrumbHome'), path: '/' },
+  { name: t('pages.services.breadcrumbServices'), path: '/services' },
+])
 
-const detailedServices = [
+const detailedServices = computed(() => [
   {
     slug: 'airport-transfers',
-    title: 'Airport Transfers',
-    description: 'Premium transfers to/from all London airports with flight tracking and meet & greet service.',
+    title: t('pages.services.servicesList.airport.title'),
+    description: t('pages.services.servicesList.airport.description'),
     icon: 'bx bxs-plane-take-off',
     path: '/services/airport-transfers'
   },
   {
     slug: 'corporate-travel',
-    title: 'Corporate Travel',
-    description: 'Executive chauffeur service for business meetings, conferences, and corporate events.',
+    title: t('pages.services.servicesList.corporate.title'),
+    description: t('pages.services.servicesList.corporate.description'),
     icon: 'bx bx-briefcase',
     path: '/services/corporate-travel'
   },
   {
     slug: 'hourly-chauffeur',
-    title: 'Hourly Chauffeur',
-    description: 'Flexible hourly hire for business meetings, sightseeing, and personal appointments.',
+    title: t('pages.services.servicesList.hourly.title'),
+    description: t('pages.services.servicesList.hourly.description'),
     icon: 'bx bx-time',
     path: '/services/hourly-chauffeur'
   },
   {
     slug: 'uk-europe-travel',
-    title: 'UK & Europe Travel',
-    description: 'Luxury long-distance travel and bespoke private tours across the UK and Europe.',
+    title: t('pages.services.servicesList.ukEurope.title'),
+    description: t('pages.services.servicesList.ukEurope.description'),
     icon: 'bx bx-world',
     path: '/services/uk-europe-travel'
   },
   {
     slug: 'wedding-chauffeur',
-    title: 'Wedding Transport',
-    description: 'Elegant wedding chauffeur service with decorated vehicles for your special day.',
+    title: t('pages.services.servicesList.wedding.title'),
+    description: t('pages.services.servicesList.wedding.description'),
     icon: 'bx bx-heart',
     path: '/services/wedding-chauffeur'
   },
   {
     slug: 'event-chauffeur',
-    title: 'Event Transport',
-    description: 'Professional transport to concerts, sporting events, corporate galas, and private parties.',
+    title: t('pages.services.servicesList.event.title'),
+    description: t('pages.services.servicesList.event.description'),
     icon: 'bx bx-calendar-event',
     path: '/services/event-chauffeur'
   }
-]
+])
 
 const servicesSchema = {
   "@context": "https://schema.org",

@@ -65,7 +65,10 @@
       "Bash(sed -i 's/\"bx bx-plane \"/\"bx bxs-plane \"/g; s/bx bx-plane text/bx bxs-plane text/g' pages/airport-transfers/luton.vue)",
       "Bash(sed -i 's/bx-shield-check/bx-check-shield/g' components/Cars/Specifications.vue pages/fleet/mercedes-v-class.vue pages/fleet/mercedes-s-class.vue pages/fleet/mercedes-e-class.vue)",
       "Bash(sed -i \"s/bx bx-plane'/bx bxs-plane'/g\" pages/fleet/mercedes-e-class.vue)",
-      "Bash(sed -i 's/bx bx-plane text/bx bxs-plane text/g' pages/airport-transfers/stansted.vue)"
+      "Bash(sed -i 's/bx bx-plane text/bx bxs-plane text/g' pages/airport-transfers/stansted.vue)",
+      "Read(//c/Users/saido/.claude/plugins/marketplaces/ui-ux-pro-max-skill/.claude/skills/ui-ux-pro-max/**)",
+      "Bash(python scripts/search.py \"luxury wedding pricing cards premium elegant gold dark\" --design-system -p \"Silk Ride Wedding Packages\")",
+      "Bash(python scripts/search.py \"pricing cards tier comparison\" --domain landing -n 5)"
     ],
     "deny": []
   }

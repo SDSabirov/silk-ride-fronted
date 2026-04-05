@@ -20,10 +20,10 @@ import { computed } from 'vue'
 
 const { t, te } = useI18n()
 
-const breadcrumbs = [
-  { name: 'Home', path: '/' },
-  { name: 'FAQ', path: '/faq' },
-]
+const breadcrumbs = computed(() => [
+  { name: t('faq.breadcrumbHome'), path: '/' },
+  { name: t('faq.breadcrumbFaq'), path: '/faq' },
+])
 
 // 1) Build FAQs array
 const faqs = computed(() => {

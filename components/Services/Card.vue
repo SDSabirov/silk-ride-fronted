@@ -36,7 +36,7 @@
             :to="localePath(serviceDetailPath)"
             class="py-2 px-4 text-gold text-md border border-gold hover:bg-gold hover:text-black transition flex justify-center"
           >
-            Learn More<span class="sr-only"> about {{ t(`pages.services.cards.${card}.title`) }}</span>
+            {{ t('pages.services.learnMore') }}<span class="sr-only"> - {{ t(`pages.services.cards.${card}.title`) }}</span>
           </NuxtLink>
           <NuxtLink
             :to="localePath('/booking')"

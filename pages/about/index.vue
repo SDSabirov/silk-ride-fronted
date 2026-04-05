@@ -322,10 +322,10 @@ import { useSeo } from '~/utils/useSeo'
 const { t } = useI18n();
 const localePath = useLocalePath();
 
-const breadcrumbs = [
-  { name: 'Home', path: '/' },
-  { name: 'About Us', path: '/about' },
-]
+const breadcrumbs = computed(() => [
+  { name: t('pages.services.breadcrumbHome'), path: '/' },
+  { name: t('pages.about.title'), path: '/about' },
+])
 
 useSeo('about')
 </script>

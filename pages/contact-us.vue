@@ -256,6 +256,9 @@
 import { useSeo } from '~/utils/useSeo'
 import { useAnalytics } from '~/composables/useAnalytics'
 import { useEngagement } from '~/composables/useEngagement'
+import { useI18n } from '#imports'
+
+const { t } = useI18n()
 
 const cover = "/images/covers/contactus.webp"
 const { trackLead } = useAnalytics()
@@ -310,10 +313,10 @@ const submitForm = async () => {
   }
 };
 
-const breadcrumbs = [
-  { name: 'Home', path: '/' },
-  { name: 'Contact Us', path: '/contact-us' },
-]
+const breadcrumbs = computed(() => [
+  { name: t('pages.services.breadcrumbHome'), path: '/' },
+  { name: t('contact.contact_us'), path: '/contact-us' },
+])
 
 useSeo('contactPage')
 </script>

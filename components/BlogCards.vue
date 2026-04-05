@@ -24,10 +24,10 @@
             {{ post.category }}
           </span>
           <span v-if="post.featured" class="bg-white text-black text-xs font-bold px-3 py-1 rounded-full shadow">
-            <i class="bx bxs-star text-gold mr-0.5"></i> Featured
+            <i class="bx bxs-star text-gold mr-0.5"></i> {{ $t('blog.featured') }}
           </span>
           <span v-if="post.postType === 'event'" class="bg-white/90 text-black text-xs font-bold px-3 py-1 rounded-full shadow backdrop-blur-sm">
-            <i class="bx bx-calendar-event mr-0.5"></i> Event
+            <i class="bx bx-calendar-event mr-0.5"></i> {{ $t('blog.event') }}
           </span>
         </div>
 
@@ -58,7 +58,7 @@
           </div>
           <div class="flex items-center space-x-2">
             <i class="bx bx-time-five text-gold"></i>
-            <span>{{ post.readTime || '5 min read' }}</span>
+            <span>{{ post.readTime || $t('blog.defaultReadTime') }}</span>
           </div>
         </div>
 

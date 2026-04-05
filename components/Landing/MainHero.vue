@@ -39,10 +39,10 @@
         <!-- CTA Buttons -->
         <div class="animate-reveal-delay-3 flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
           <button class="btn-hero-primary" @click="showBookingModal = true">
-            Get Instant Quote
+            {{ $t('landing.mainHero.getInstantQuote') }}
           </button>
           <NuxtLink :to="localePath('/booking')" class="btn-hero-secondary">
-            Book Your Journey
+            {{ $t('landing.mainHero.bookYourJourney') }}
           </NuxtLink>
         </div>
 
@@ -66,15 +66,16 @@
 </template>
 
 <script setup>
-import { useLocalePath } from "#imports";
+import { useLocalePath, useI18n } from "#imports";
 
+const { t } = useI18n();
 const localePath = useLocalePath();
 const showBookingModal = ref(false);
 
-const trustBadges = [
-  '5-Star Rated',
-  'Flight Tracking',
-  '24/7 Service',
-  'Fixed Pricing',
-]
+const trustBadges = computed(() => [
+  t('landing.mainHero.trustBadges.rated'),
+  t('landing.mainHero.trustBadges.flightTracking'),
+  t('landing.mainHero.trustBadges.service'),
+  t('landing.mainHero.trustBadges.pricing'),
+])
 </script>

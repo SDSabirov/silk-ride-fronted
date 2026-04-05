@@ -22,7 +22,7 @@
             </div>
             <div>
               <p class="text-white font-semibold text-sm">5.0 {{ $t('footer.badges.rating') }}</p>
-              <p class="text-gray-500 text-xs">Google Reviews</p>
+              <p class="text-gray-500 text-xs">{{ $t('footer.badges.googleReviews') }}</p>
             </div>
           </div>
           <div class="flex items-center gap-3">
@@ -125,7 +125,7 @@
             <li>
               <NuxtLink :to="localePath('/faq')" class="text-gray-400 hover:text-gold transition-colors text-sm flex items-center gap-2">
                 <i class="bx bx-chevron-right text-gold"></i>
-                FAQ
+                {{ $t('footer.bottom.faq') }}
               </NuxtLink>
             </li>
             <li>

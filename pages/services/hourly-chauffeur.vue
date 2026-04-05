@@ -18,11 +18,9 @@
     <section class="max-w-screen-2xl mx-auto py-16 px-6">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div>
-          <h2 class="text-3xl font-bold mb-6">Personal Chauffeur at Your Disposal</h2>
+          <h2 class="text-3xl font-bold mb-6">{{ $t('seo.hourlyPage.detailsTitle') }}</h2>
           <p class="text-lg text-gray-600 mb-6">
-            Enjoy the ultimate freedom and flexibility with our hourly chauffeur service. 
-            Whether you need transportation for business meetings, sightseeing, shopping, 
-            or special occasions, your dedicated chauffeur will be at your complete disposal.
+            {{ $t('seo.hourlyPage.detailsDesc') }}
           </p>
           
           <div class="space-y-4">
@@ -33,23 +31,23 @@
           </div>
 
           <div class="mt-8 p-6 bg-gray-50 rounded-lg">
-            <h3 class="text-xl font-semibold mb-3">Booking Options</h3>
+            <h3 class="text-xl font-semibold mb-3">{{ $t('seo.hourlyPage.bookingOptionsTitle') }}</h3>
             <div class="space-y-3">
               <div class="flex items-center space-x-2">
                 <div class="h-2 w-2 bg-gold rounded-full"></div>
-                <span><strong>4 Hours Minimum:</strong> Perfect for city tours or shopping trips</span>
+                <span><strong>{{ $t('seo.hourlyPage.bookingOption1Label') }}</strong> {{ $t('seo.hourlyPage.bookingOption1Desc') }}</span>
               </div>
               <div class="flex items-center space-x-2">
                 <div class="h-2 w-2 bg-gold rounded-full"></div>
-                <span><strong>Half Day (6 Hours):</strong> Ideal for business meetings or sightseeing</span>
+                <span><strong>{{ $t('seo.hourlyPage.bookingOption2Label') }}</strong> {{ $t('seo.hourlyPage.bookingOption2Desc') }}</span>
               </div>
               <div class="flex items-center space-x-2">
                 <div class="h-2 w-2 bg-gold rounded-full"></div>
-                <span><strong>Full Day (8+ Hours):</strong> Complete day at your disposal</span>
+                <span><strong>{{ $t('seo.hourlyPage.bookingOption3Label') }}</strong> {{ $t('seo.hourlyPage.bookingOption3Desc') }}</span>
               </div>
               <div class="flex items-center space-x-2">
                 <div class="h-2 w-2 bg-gold rounded-full"></div>
-                <span><strong>Extended Hire:</strong> Multi-day packages available</span>
+                <span><strong>{{ $t('seo.hourlyPage.bookingOption4Label') }}</strong> {{ $t('seo.hourlyPage.bookingOption4Desc') }}</span>
               </div>
             </div>
           </div>
@@ -68,55 +66,55 @@
     <!-- Popular Uses Section -->
     <section class="bg-gray-50 py-16">
       <div class="max-w-screen-2xl mx-auto px-6">
-        <h2 class="text-3xl font-bold text-center mb-12">Popular Uses for Hourly Chauffeur Service</h2>
-        
+        <h2 class="text-3xl font-bold text-center mb-12">{{ $t('seo.hourlyPage.popularUsesTitle') }}</h2>
+
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div class="bg-white p-6 rounded-lg shadow-md">
             <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-4">
               <i class="bx bx-building text-white text-2xl"></i>
             </div>
-            <h3 class="text-xl font-semibold mb-3 text-center">Business Meetings</h3>
-            <p class="text-gray-600 text-center">Multiple appointments across London with reliable transportation between venues.</p>
+            <h3 class="text-xl font-semibold mb-3 text-center">{{ $t('seo.hourlyPage.use1Title') }}</h3>
+            <p class="text-gray-600 text-center">{{ $t('seo.hourlyPage.use1Desc') }}</p>
           </div>
-          
+
           <div class="bg-white p-6 rounded-lg shadow-md">
             <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-4">
               <i class="bx bx-camera text-white text-2xl"></i>
             </div>
-            <h3 class="text-xl font-semibold mb-3 text-center">Sightseeing Tours</h3>
-            <p class="text-gray-600 text-center">Explore London's landmarks at your own pace with a knowledgeable local chauffeur.</p>
+            <h3 class="text-xl font-semibold mb-3 text-center">{{ $t('seo.hourlyPage.use2Title') }}</h3>
+            <p class="text-gray-600 text-center">{{ $t('seo.hourlyPage.use2Desc') }}</p>
           </div>
-          
+
           <div class="bg-white p-6 rounded-lg shadow-md">
             <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-4">
               <i class="bx bx-shopping-bag text-white text-2xl"></i>
             </div>
-            <h3 class="text-xl font-semibold mb-3 text-center">Shopping Trips</h3>
-            <p class="text-gray-600 text-center">Luxury shopping in Oxford Street, Knightsbridge, or Bond Street with door-to-door service.</p>
+            <h3 class="text-xl font-semibold mb-3 text-center">{{ $t('seo.hourlyPage.use3Title') }}</h3>
+            <p class="text-gray-600 text-center">{{ $t('seo.hourlyPage.use3Desc') }}</p>
           </div>
-          
+
           <div class="bg-white p-6 rounded-lg shadow-md">
             <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-4">
               <i class="bx bx-calendar-event text-white text-2xl"></i>
             </div>
-            <h3 class="text-xl font-semibold mb-3 text-center">Special Occasions</h3>
-            <p class="text-gray-600 text-center">Anniversaries, birthdays, or romantic evenings with luxury transportation.</p>
+            <h3 class="text-xl font-semibold mb-3 text-center">{{ $t('seo.hourlyPage.use4Title') }}</h3>
+            <p class="text-gray-600 text-center">{{ $t('seo.hourlyPage.use4Desc') }}</p>
           </div>
-          
+
           <div class="bg-white p-6 rounded-lg shadow-md">
             <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-4">
               <i class="bx bx-group text-white text-2xl"></i>
             </div>
-            <h3 class="text-xl font-semibold mb-3 text-center">Group Travel</h3>
-            <p class="text-gray-600 text-center">Family outings or group events with spacious Mercedes V-Class vehicles.</p>
+            <h3 class="text-xl font-semibold mb-3 text-center">{{ $t('seo.hourlyPage.use5Title') }}</h3>
+            <p class="text-gray-600 text-center">{{ $t('seo.hourlyPage.use5Desc') }}</p>
           </div>
-          
+
           <div class="bg-white p-6 rounded-lg shadow-md">
             <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-4">
               <i class="bx bx-plus-medical text-white text-2xl"></i>
             </div>
-            <h3 class="text-xl font-semibold mb-3 text-center">Medical Appointments</h3>
-            <p class="text-gray-600 text-center">Comfortable, reliable transport for medical appointments with waiting time included.</p>
+            <h3 class="text-xl font-semibold mb-3 text-center">{{ $t('seo.hourlyPage.use6Title') }}</h3>
+            <p class="text-gray-600 text-center">{{ $t('seo.hourlyPage.use6Desc') }}</p>
           </div>
         </div>
       </div>
@@ -125,8 +123,8 @@
     <!-- Benefits Section -->
     <section class="py-16">
       <div class="max-w-screen-2xl mx-auto px-6">
-        <h2 class="text-3xl font-bold text-center mb-12">Why Choose Hourly Chauffeur Service?</h2>
-        
+        <h2 class="text-3xl font-bold text-center mb-12">{{ $t('seo.hourlyPage.benefitsTitle') }}</h2>
+
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div class="space-y-6">
             <div class="flex items-start space-x-4">
@@ -134,28 +132,28 @@
                 <i class="bx bx-time text-white text-xl"></i>
               </div>
               <div>
-                <h3 class="text-xl font-semibold mb-2">Complete Flexibility</h3>
-                <p class="text-gray-600">Change your itinerary on the go. Your chauffeur adapts to your schedule, not the other way around.</p>
+                <h3 class="text-xl font-semibold mb-2">{{ $t('seo.hourlyPage.benefit1Title') }}</h3>
+                <p class="text-gray-600">{{ $t('seo.hourlyPage.benefit1Desc') }}</p>
               </div>
             </div>
-            
+
             <div class="flex items-start space-x-4">
               <div class="w-12 h-12 bg-gold rounded-full flex items-center justify-center flex-shrink-0">
                 <i class="bx bx-map text-white text-xl"></i>
               </div>
               <div>
-                <h3 class="text-xl font-semibold mb-2">Local Knowledge</h3>
-                <p class="text-gray-600">Professional chauffeurs with extensive London knowledge to optimize routes and suggest destinations.</p>
+                <h3 class="text-xl font-semibold mb-2">{{ $t('seo.hourlyPage.benefit2Title') }}</h3>
+                <p class="text-gray-600">{{ $t('seo.hourlyPage.benefit2Desc') }}</p>
               </div>
             </div>
-            
+
             <div class="flex items-start space-x-4">
               <div class="w-12 h-12 bg-gold rounded-full flex items-center justify-center flex-shrink-0">
                 <i class="bx bx-shield text-white text-xl"></i>
               </div>
               <div>
-                <h3 class="text-xl font-semibold mb-2">Safety & Security</h3>
-                <p class="text-gray-600">Licensed, insured, and background-checked chauffeurs ensuring your safety and peace of mind.</p>
+                <h3 class="text-xl font-semibold mb-2">{{ $t('seo.hourlyPage.benefit3Title') }}</h3>
+                <p class="text-gray-600">{{ $t('seo.hourlyPage.benefit3Desc') }}</p>
               </div>
             </div>
           </div>
@@ -177,21 +175,21 @@
     <!-- CTA Section -->
     <section class="bg-gray-50 py-16">
       <div class="max-w-screen-2xl mx-auto px-6 text-center">
-        <h2 class="text-3xl font-bold mb-4">Book Your Personal Chauffeur</h2>
-        <p class="text-lg text-gray-600 mb-8">Experience the ultimate in personalized transportation with our hourly chauffeur service.</p>
-        
+        <h2 class="text-3xl font-bold mb-4">{{ $t('seo.hourlyPage.ctaTitle') }}</h2>
+        <p class="text-lg text-gray-600 mb-8">{{ $t('seo.hourlyPage.ctaDesc') }}</p>
+
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <NuxtLink
             :to="localePath('/booking')"
             class="px-8 py-3 bg-gold text-black font-semibold rounded hover:bg-yellow-500 transition"
           >
-            Book Hourly Service
+            {{ $t('seo.hourlyPage.ctaBookButton') }}
           </NuxtLink>
           <NuxtLink
             :to="localePath('/contact-us')"
             class="px-8 py-3 border border-gold text-gold font-semibold rounded hover:bg-gold hover:text-black transition"
           >
-            Custom Quote
+            {{ $t('seo.hourlyPage.ctaQuoteButton') }}
           </NuxtLink>
         </div>
       </div>
@@ -213,11 +211,11 @@ const localePath = useLocalePath()
 
 useSeo('hourlyChauffeur')
 
-const breadcrumbs = [
-  { name: 'Home', path: '/' },
-  { name: 'Services', path: '/services' },
-  { name: 'Hourly Chauffeur', path: '/services/hourly-chauffeur' },
-]
+const breadcrumbs = computed(() => [
+  { name: t('seo.hourlyPage.breadcrumbHome'), path: '/' },
+  { name: t('seo.hourlyPage.breadcrumbServices'), path: '/services' },
+  { name: t('seo.hourlyPage.breadcrumbHourly'), path: '/services/hourly-chauffeur' },
+])
 
 const serviceBullets = computed(() => {
   const bullets = []

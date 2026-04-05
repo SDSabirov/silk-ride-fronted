@@ -5,7 +5,7 @@
         <h2 class="text-4xl md:text-5xl font-heading font-bold text-black mb-4">{{ $t('faq.title') }}</h2>
         <div class="w-24 h-1 bg-gold mx-auto mb-6"></div>
         <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-          Find answers to the most common questions about our luxury chauffeur services
+          {{ $t('faq.subtitle') }}
         </p>
       </div>
     </slot>
@@ -61,23 +61,23 @@
     <!-- Contact CTA -->
     <div class="mt-12 text-center bg-gradient-to-r from-gray-50 to-gray-100 rounded-2xl p-8">
       <h3 class="text-2xl font-heading font-semibold text-gray-900 mb-3">
-        Still have questions?
+        {{ $t('faq.stillHaveQuestions') }}
       </h3>
       <p class="text-gray-600 mb-6">
-        Our friendly team is here to help with any additional questions about our luxury chauffeur services.
+        {{ $t('faq.stillHaveQuestionsDesc') }}
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <NuxtLink
           :to="localePath('/contact-us')"
           class="inline-flex items-center justify-center px-6 py-3 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors duration-200 font-medium"
         >
-          Contact Us
+          {{ $t('faq.contactUs') }}
         </NuxtLink>
         <a
           href="tel:+442034882324"
           class="inline-flex items-center justify-center px-6 py-3 bg-gold text-black rounded-lg hover:bg-gold/90 transition-colors duration-200 font-medium"
         >
-          Call Now
+          {{ $t('faq.callNow') }}
         </a>
       </div>
     </div>

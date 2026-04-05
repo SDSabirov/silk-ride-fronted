@@ -382,7 +382,7 @@ const companyItems = [
   { path: localePath('/about'), label: t('navbar.about'), icon: 'bx bx-info-circle' },
   { path: localePath('/partners'), label: t('navbar.partners'), icon: 'bx bx-group' },
   { path: localePath('/contact-us'), label: t('navbar.contact'), icon: 'bx bx-envelope' },
-  { path: localePath('/faq'), label: 'FAQ', icon: 'bx bx-help-circle' }
+  { path: localePath('/faq'), label: t('navbar.faq'), icon: 'bx bx-help-circle' }
 ]
 
 // Desktop dropdown functions

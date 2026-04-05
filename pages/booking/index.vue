@@ -23,7 +23,7 @@
                 
                 <div class="w-16 h-0.5 bg-gold mb-3"></div>
                 <p class="text-gray-400 text-sm">
-                  Complete the form below to get an instant quote for your luxury chauffeur service
+                  {{ $t('bookingPage.formIntro') }}
                 </p>
               </div>
 
@@ -52,10 +52,12 @@
 <script setup>
 import { useSeo } from "~/utils/useSeo";
 
-const breadcrumbs = [
-  { name: 'Home', path: '/' },
-  { name: 'Booking', path: '/booking' },
-]
+const { t } = useI18n()
+
+const breadcrumbs = computed(() => [
+  { name: t('bookingPage.breadcrumbHome'), path: '/' },
+  { name: t('bookingPage.breadcrumbBooking'), path: '/booking' },
+])
 
 useSeo("booking");
 </script>

@@ -18,13 +18,11 @@
     <section class="max-w-screen-2xl mx-auto py-16 px-6">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div>
-          <h2 class="text-3xl font-bold mb-6">Luxury Event Transportation</h2>
+          <h2 class="text-3xl font-bold mb-6">{{ $t('seo.eventPage.luxuryTitle') }}</h2>
           <p class="text-lg text-gray-600 mb-6">
-            Arrive in style at any occasion with Silk Ride's premium event chauffeur service. 
-            Whether it's a corporate gala, sporting event, concert, or private party, we ensure 
-            your transportation is as memorable as the event itself.
+            {{ $t('seo.eventPage.luxuryDesc') }}
           </p>
-          
+
           <div class="space-y-4">
             <div v-for="(bullet, index) in serviceBullets" :key="index" class="flex items-start space-x-3">
               <div class="h-3 w-3 bg-gold rotate-45 mt-2 flex-shrink-0"></div>
@@ -33,39 +31,11 @@
           </div>
 
           <div class="mt-8 p-6 bg-gray-50 rounded-lg">
-            <h3 class="text-xl font-semibold mb-3">Event Types We Serve</h3>
+            <h3 class="text-xl font-semibold mb-3">{{ $t('seo.eventPage.eventTypesTitle') }}</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-              <div class="flex items-center space-x-2">
+              <div v-for="i in 8" :key="i" class="flex items-center space-x-2">
                 <div class="h-2 w-2 bg-gold rounded-full"></div>
-                <span>Corporate Events & Galas</span>
-              </div>
-              <div class="flex items-center space-x-2">
-                <div class="h-2 w-2 bg-gold rounded-full"></div>
-                <span>Award Ceremonies</span>
-              </div>
-              <div class="flex items-center space-x-2">
-                <div class="h-2 w-2 bg-gold rounded-full"></div>
-                <span>Concerts & Theatre</span>
-              </div>
-              <div class="flex items-center space-x-2">
-                <div class="h-2 w-2 bg-gold rounded-full"></div>
-                <span>Sporting Events</span>
-              </div>
-              <div class="flex items-center space-x-2">
-                <div class="h-2 w-2 bg-gold rounded-full"></div>
-                <span>Private Parties</span>
-              </div>
-              <div class="flex items-center space-x-2">
-                <div class="h-2 w-2 bg-gold rounded-full"></div>
-                <span>Product Launches</span>
-              </div>
-              <div class="flex items-center space-x-2">
-                <div class="h-2 w-2 bg-gold rounded-full"></div>
-                <span>Fashion Shows</span>
-              </div>
-              <div class="flex items-center space-x-2">
-                <div class="h-2 w-2 bg-gold rounded-full"></div>
-                <span>Art Exhibitions</span>
+                <span>{{ $t(`seo.eventPage.eventType${i - 1}`) }}</span>
               </div>
             </div>
           </div>
@@ -84,55 +54,15 @@
     <!-- Popular Events Section -->
     <section class="bg-gray-50 py-16">
       <div class="max-w-screen-2xl mx-auto px-6">
-        <h2 class="text-3xl font-bold text-center mb-12">Popular London Events We Serve</h2>
-        
+        <h2 class="text-3xl font-bold text-center mb-12">{{ $t('seo.eventPage.popularTitle') }}</h2>
+
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div class="bg-white p-6 rounded-lg shadow-md text-center">
+          <div v-for="(venue, index) in venues" :key="index" class="bg-white p-6 rounded-lg shadow-md text-center">
             <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-4">
-              <i class="bx bx-football text-white text-2xl"></i>
+              <i :class="venue.icon" class="text-white text-2xl"></i>
             </div>
-            <h3 class="text-xl font-semibold mb-3">Wembley Stadium</h3>
-            <p class="text-gray-600">Football matches, concerts, and major sporting events. Skip the crowds with luxury transport.</p>
-          </div>
-          
-          <div class="bg-white p-6 rounded-lg shadow-md text-center">
-            <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-4">
-              <i class="bx bx-music text-white text-2xl"></i>
-            </div>
-            <h3 class="text-xl font-semibold mb-3">Royal Albert Hall</h3>
-            <p class="text-gray-600">Classical concerts, award shows, and prestigious events in London's most iconic venue.</p>
-          </div>
-          
-          <div class="bg-white p-6 rounded-lg shadow-md text-center">
-            <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-4">
-              <i class="bx bx-trophy text-white text-2xl"></i>
-            </div>
-            <h3 class="text-xl font-semibold mb-3">Wimbledon</h3>
-            <p class="text-gray-600">Tennis championships and summer events. Arrive refreshed and ready for the action.</p>
-          </div>
-          
-          <div class="bg-white p-6 rounded-lg shadow-md text-center">
-            <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-4">
-              <i class="bx bx-building text-white text-2xl"></i>
-            </div>
-            <h3 class="text-xl font-semibold mb-3">ExCeL London</h3>
-            <p class="text-gray-600">Trade shows, exhibitions, and corporate conferences with convenient transportation.</p>
-          </div>
-          
-          <div class="bg-white p-6 rounded-lg shadow-md text-center">
-            <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-4">
-              <i class="bx bx-film text-white text-2xl"></i>
-            </div>
-            <h3 class="text-xl font-semibold mb-3">West End Theatres</h3>
-            <p class="text-gray-600">Musical shows, plays, and theatre premieres in London's entertainment district.</p>
-          </div>
-          
-          <div class="bg-white p-6 rounded-lg shadow-md text-center">
-            <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-4">
-              <i class="bx bx-star text-white text-2xl"></i>
-            </div>
-            <h3 class="text-xl font-semibold mb-3">Red Carpet Events</h3>
-            <p class="text-gray-600">Film premieres, fashion weeks, and VIP parties requiring luxury transportation.</p>
+            <h3 class="text-xl font-semibold mb-3">{{ $t(`seo.eventPage.venue${index}Title`) }}</h3>
+            <p class="text-gray-600">{{ $t(`seo.eventPage.venue${index}Desc`) }}</p>
           </div>
         </div>
       </div>
@@ -141,39 +71,15 @@
     <!-- Service Features Section -->
     <section class="py-16">
       <div class="max-w-screen-2xl mx-auto px-6">
-        <h2 class="text-3xl font-bold text-center mb-12">Why Choose Our Event Service</h2>
-        
+        <h2 class="text-3xl font-bold text-center mb-12">{{ $t('seo.eventPage.whyTitle') }}</h2>
+
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div class="text-center">
+          <div v-for="(feature, index) in features" :key="index" class="text-center">
             <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-4">
-              <i class="bx bx-time text-white text-2xl"></i>
+              <i :class="feature.icon" class="text-white text-2xl"></i>
             </div>
-            <h3 class="text-xl font-semibold mb-3">Punctual Arrival</h3>
-            <p class="text-gray-600">Never miss the opening act or important moment with our reliable, on-time service.</p>
-          </div>
-          
-          <div class="text-center">
-            <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-4">
-              <i class="bx bx-map text-white text-2xl"></i>
-            </div>
-            <h3 class="text-xl font-semibold mb-3">Traffic Management</h3>
-            <p class="text-gray-600">Expert knowledge of London traffic patterns and alternative routes to busy venues.</p>
-          </div>
-          
-          <div class="text-center">
-            <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-4">
-              <i class="bx bx-group text-white text-2xl"></i>
-            </div>
-            <h3 class="text-xl font-semibold mb-3">Group Options</h3>
-            <p class="text-gray-600">Individual or group transportation with our range of luxury Mercedes vehicles.</p>
-          </div>
-          
-          <div class="text-center">
-            <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-4">
-              <i class="bx bx-shield text-white text-2xl"></i>
-            </div>
-            <h3 class="text-xl font-semibold mb-3">VIP Treatment</h3>
-            <p class="text-gray-600">Discreet, professional service that maintains your privacy and enhances your experience.</p>
+            <h3 class="text-xl font-semibold mb-3">{{ $t(`seo.eventPage.feature${index}Title`) }}</h3>
+            <p class="text-gray-600">{{ $t(`seo.eventPage.feature${index}Desc`) }}</p>
           </div>
         </div>
       </div>
@@ -184,33 +90,19 @@
       <div class="max-w-screen-2xl mx-auto px-6">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 class="text-3xl font-bold mb-6">Corporate Event Transportation</h2>
+            <h2 class="text-3xl font-bold mb-6">{{ $t('seo.eventPage.corporateTitle') }}</h2>
             <p class="text-lg text-gray-600 mb-6">
-              Elevate your corporate events with professional transportation solutions. 
-              From client entertainment to award ceremonies, ensure your guests arrive 
-              in style and on time.
+              {{ $t('seo.eventPage.corporateDesc') }}
             </p>
-            
+
             <div class="space-y-4">
-              <div class="flex items-start space-x-3">
+              <div v-for="i in 4" :key="i" class="flex items-start space-x-3">
                 <div class="h-3 w-3 bg-gold rotate-45 mt-2 flex-shrink-0"></div>
-                <span class="text-gray-700">Executive transport for VIP guests and speakers</span>
-              </div>
-              <div class="flex items-start space-x-3">
-                <div class="h-3 w-3 bg-gold rotate-45 mt-2 flex-shrink-0"></div>
-                <span class="text-gray-700">Group transportation for teams and delegates</span>
-              </div>
-              <div class="flex items-start space-x-3">
-                <div class="h-3 w-3 bg-gold rotate-45 mt-2 flex-shrink-0"></div>
-                <span class="text-gray-700">Airport transfers for international attendees</span>
-              </div>
-              <div class="flex items-start space-x-3">
-                <div class="h-3 w-3 bg-gold rotate-45 mt-2 flex-shrink-0"></div>
-                <span class="text-gray-700">Multi-venue event coordination</span>
+                <span class="text-gray-700">{{ $t(`seo.eventPage.corpBullet${i - 1}`) }}</span>
               </div>
             </div>
           </div>
-          
+
           <div>
             <NuxtImg
               src="/images/covers/business-trip.webp"
@@ -228,31 +120,15 @@
     <!-- Booking Process Section -->
     <section class="py-16">
       <div class="max-w-screen-2xl mx-auto px-6">
-        <h2 class="text-3xl font-bold text-center mb-12">Simple Event Booking Process</h2>
-        
+        <h2 class="text-3xl font-bold text-center mb-12">{{ $t('seo.eventPage.bookingTitle') }}</h2>
+
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="text-center">
+          <div v-for="i in 3" :key="i" class="text-center">
             <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
-              1
+              {{ i }}
             </div>
-            <h3 class="text-xl font-semibold mb-3">Plan Ahead</h3>
-            <p class="text-gray-600">Contact us with your event details, timing, and transportation requirements.</p>
-          </div>
-          
-          <div class="text-center">
-            <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
-              2
-            </div>
-            <h3 class="text-xl font-semibold mb-3">Customize Service</h3>
-            <p class="text-gray-600">Choose your vehicle, pickup/drop-off points, and any special requirements.</p>
-          </div>
-          
-          <div class="text-center">
-            <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
-              3
-            </div>
-            <h3 class="text-xl font-semibold mb-3">Enjoy the Event</h3>
-            <p class="text-gray-600">Relax and enjoy your event while we handle all transportation logistics.</p>
+            <h3 class="text-xl font-semibold mb-3">{{ $t(`seo.eventPage.step${i - 1}Title`) }}</h3>
+            <p class="text-gray-600">{{ $t(`seo.eventPage.step${i - 1}Desc`) }}</p>
           </div>
         </div>
       </div>
@@ -261,21 +137,21 @@
     <!-- CTA Section -->
     <section class="bg-gray-50 py-16">
       <div class="max-w-screen-2xl mx-auto px-6 text-center">
-        <h2 class="text-3xl font-bold mb-4">Make Your Event Unforgettable</h2>
-        <p class="text-lg text-gray-600 mb-8">Professional event transportation that matches the importance of your occasion.</p>
-        
+        <h2 class="text-3xl font-bold mb-4">{{ $t('seo.eventPage.ctaTitle') }}</h2>
+        <p class="text-lg text-gray-600 mb-8">{{ $t('seo.eventPage.ctaDesc') }}</p>
+
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <NuxtLink
             :to="localePath('/booking')"
             class="px-8 py-3 bg-gold text-black font-semibold rounded hover:bg-yellow-500 transition"
           >
-            Book Event Transport
+            {{ $t('seo.eventPage.ctaBook') }}
           </NuxtLink>
           <NuxtLink
             :to="localePath('/contact-us')"
             class="px-8 py-3 border border-gold text-gold font-semibold rounded hover:bg-gold hover:text-black transition"
           >
-            Event Quote
+            {{ $t('seo.eventPage.ctaQuote') }}
           </NuxtLink>
         </div>
       </div>
@@ -297,11 +173,11 @@ const localePath = useLocalePath()
 
 useSeo('eventChauffeur')
 
-const breadcrumbs = [
-  { name: 'Home', path: '/' },
-  { name: 'Services', path: '/services' },
-  { name: 'Event Transport', path: '/services/event-chauffeur' },
-]
+const breadcrumbs = computed(() => [
+  { name: t('seo.eventPage.breadcrumbHome'), path: '/' },
+  { name: t('seo.eventPage.breadcrumbServices'), path: '/services' },
+  { name: t('seo.eventPage.breadcrumbEvent'), path: '/services/event-chauffeur' },
+])
 
 const serviceBullets = computed(() => {
   const bullets = []
@@ -313,6 +189,22 @@ const serviceBullets = computed(() => {
   }
   return bullets
 })
+
+const venues = [
+  { icon: 'bx bx-football' },
+  { icon: 'bx bx-music' },
+  { icon: 'bx bx-trophy' },
+  { icon: 'bx bx-building' },
+  { icon: 'bx bx-film' },
+  { icon: 'bx bx-star' },
+]
+
+const features = [
+  { icon: 'bx bx-time' },
+  { icon: 'bx bx-map' },
+  { icon: 'bx bx-group' },
+  { icon: 'bx bx-shield' },
+]
 
 const eventChauffeurSchema = {
   "@context": "https://schema.org",

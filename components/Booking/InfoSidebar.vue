@@ -2,20 +2,20 @@
   <aside class="space-y-6">
     <!-- Why Choose Silk Ride -->
     <div class="glass-card p-6">
-      <h3 class="text-white font-semibold text-lg mb-5">Why Choose Silk Ride</h3>
+      <h3 class="text-white font-semibold text-lg mb-5">{{ $t('bookingSidebar.whyChoose') }}</h3>
       <ul class="space-y-4">
-        <li v-for="item in features" :key="item.text" class="flex items-start gap-3">
+        <li v-for="item in features" :key="item" class="flex items-start gap-3">
           <svg class="w-5 h-5 text-gold flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
             <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
           </svg>
-          <span class="text-gray-300 text-sm leading-relaxed">{{ item.text }}</span>
+          <span class="text-gray-300 text-sm leading-relaxed">{{ item }}</span>
         </li>
       </ul>
     </div>
 
     <!-- Our Fleet -->
     <div class="glass-card p-6">
-      <h3 class="text-white font-semibold text-lg mb-5">Our Fleet</h3>
+      <h3 class="text-white font-semibold text-lg mb-5">{{ $t('bookingSidebar.ourFleet') }}</h3>
       <div class="space-y-4">
         <div v-for="car in fleet" :key="car.name" class="flex items-center gap-4">
           <div class="w-20 h-14 rounded-lg overflow-hidden bg-white/[0.06] flex-shrink-0">
@@ -30,7 +30,7 @@
           </div>
           <div>
             <p class="text-white text-sm font-medium">{{ car.name }}</p>
-            <p class="text-gray-400 text-xs">Up to {{ car.passengers }} passengers</p>
+            <p class="text-gray-400 text-xs">{{ $t('bookingSidebar.upToPassengers', { count: car.passengers }) }}</p>
           </div>
         </div>
       </div>
@@ -38,8 +38,8 @@
 
     <!-- Need Help? -->
     <div class="glass-card p-6">
-      <h3 class="text-white font-semibold text-lg mb-4">Need Help?</h3>
-      <p class="text-gray-400 text-sm mb-4">Our team is available 24/7 to assist you.</p>
+      <h3 class="text-white font-semibold text-lg mb-4">{{ $t('bookingSidebar.needHelp') }}</h3>
+      <p class="text-gray-400 text-sm mb-4">{{ $t('bookingSidebar.needHelpText') }}</p>
       <div class="space-y-3">
         <a
           href="tel:+442034882324"
@@ -66,13 +66,17 @@
 </template>
 
 <script setup>
-const features = [
-  { text: 'Professional uniformed chauffeurs' },
-  { text: 'Real-time flight tracking for airport transfers' },
-  { text: 'Fixed pricing — no hidden charges' },
-  { text: 'Free cancellation up to 24 hours before' },
-  { text: '24/7 availability, 365 days a year' },
-]
+import { useI18n } from '#imports'
+
+const { t } = useI18n()
+
+const features = computed(() => [
+  t('bookingSidebar.features.chauffeurs'),
+  t('bookingSidebar.features.flightTracking'),
+  t('bookingSidebar.features.pricing'),
+  t('bookingSidebar.features.cancellation'),
+  t('bookingSidebar.features.availability'),
+])
 
 const fleet = [
   { name: 'Mercedes E-Class', passengers: 3, image: '/images/transparentcars/eclass.webp' },

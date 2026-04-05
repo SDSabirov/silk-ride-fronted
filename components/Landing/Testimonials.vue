@@ -24,7 +24,7 @@
           </div>
           <span class="text-2xl font-bold">{{ rating }}</span>
           <span class="text-gray-500">|</span>
-          <span class="text-gray-400">{{ reviewCount }} Google Reviews</span>
+          <span class="text-gray-400">{{ reviewCount }} {{ $t('landing.testimonials.googleReviewCount') }}</span>
         </div>
       </div>
 
