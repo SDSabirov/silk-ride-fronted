@@ -174,7 +174,7 @@
       "eclass": {
         "title": "Mercedes E-Class",
         "description": "Perfect for business & executive travel",
-        "capacity": "Up to 4 passengers",
+        "capacity": "Up to 3 passengers",
         "comfort": "Premium comfort"
       },
       "sclass": {
@@ -332,7 +332,7 @@
       "luxury": "Luxury",
       "spacious": "Spacious",
       "capacity": {
-        "eClass": "Up to 4 passengers",
+        "eClass": "Up to 3 passengers",
         "sClass": "Up to 3 passengers",
         "vClass": "Up to 7 passengers"
       },
@@ -1510,7 +1510,7 @@
       "sclassP3": "Climate control",
       "sclassP4": "Tinted windows",
       "eclassDesc": "Stylish elegance for bridal party and family members. Perfect balance of luxury and comfort.",
-      "eclassP1": "Up to 4 passengers",
+      "eclassP1": "Up to 3 passengers",
       "eclassP2": "Luxury seating",
       "eclassP3": "Advanced safety",
       "eclassP4": "Smooth ride",
