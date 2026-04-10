@@ -34,9 +34,10 @@
         <div class="mt-auto space-y-3">
           <NuxtLink
             :to="localePath(serviceDetailPath)"
+            :aria-label="learnMoreLabel"
             class="py-2 px-4 text-gold text-md border border-gold hover:bg-gold hover:text-black transition flex justify-center"
           >
-            {{ t('pages.services.learnMore') }}<span class="sr-only"> - {{ t(`pages.services.cards.${card}.title`) }}</span>
+            {{ t('pages.services.learnMore') }}
           </NuxtLink>
           <NuxtLink
             :to="localePath('/booking')"
@@ -90,16 +91,8 @@
     return pathMap[props.card] || '/services'
   })
 
-  const learnMoreLabel = computed(() => {
-    const labelMap = {
-      'airport': 'Learn More About Airport Transfers',
-      'corporate': 'Learn More About Corporate Travel',
-      'hourly': 'Learn More About Hourly Chauffeur Service',
-      'longDistance': 'Learn More About UK & Europe Travel',
-      'wedding': 'Learn More About Wedding Chauffeur Service',
-      'event': 'Learn More About Event Chauffeur Service'
-    }
-    return labelMap[props.card] || 'Learn More About Our Services'
-  })
+  const learnMoreLabel = computed(() =>
+    t(`pages.services.cards.${props.card}.learnMoreLabel`)
+  )
   </script>
   

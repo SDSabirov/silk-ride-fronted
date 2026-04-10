@@ -8,9 +8,11 @@
         class="w-full h-full object-cover hero-image"
         loading="eager"
         fetchpriority="high"
+        format="webp"
+        quality="80"
         width="1920"
         height="1080"
-        preset="hero"
+        sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:1920px"
       />
       <!-- Premium Multi-layer Overlay -->
       <div class="hero-overlay-premium"></div>

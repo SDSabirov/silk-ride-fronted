@@ -51,7 +51,7 @@
       <h3 class="w-full text-black text-4xl font-semibold leading-loose text-center mb-10">
         {{ t('fleetPages.vClass.galleryTitle') || 'Our Gallery' }}
       </h3>
-      <CarsGallerySlider />
+      <LazyCarsGallerySlider />
     </div>
 
     <Footer />

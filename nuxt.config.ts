@@ -19,8 +19,11 @@ export default defineNuxtConfig({
   },
   nitro: {
     prerender: {
-      crawlLinks: false,
-      routes: [],
+      crawlLinks: true,
+      routes: ['/', '/ru', '/sitemap.xml', '/robots.txt'],
+      // Blog detail pages stay SSR in Phase 0 — Sanity-driven, prerendered in Phase 1
+      ignore: ['/blog', '/blog/', '/blog/**', '/ru/blog', '/ru/blog/', '/ru/blog/**', '/api/**'],
+      failOnError: false,
     },
     compressPublicAssets: true,
     routeRules: {
@@ -257,7 +260,16 @@ export default defineNuxtConfig({
   },
   googleFonts: {
     families: {
-      "Playfair+Display": [400, 500, 700],
+      // NOTE: @nuxtjs/google-fonts in this version has a known bug where
+      // multi-weight families generate @font-face rules that all src: the
+      // lowest weight's woff2 file (verified in build output). As a result
+      // only the first listed weight is actually rendered correctly; the
+      // others are browser-synthesised. Keep this list to weights that are
+      // actually used to avoid wasting downloads. Playfair Display only
+      // ever pairs with font-bold (700) in the codebase (grep-confirmed), so
+      // 400 here acts as the rendered weight for any unexpected fallback.
+      // Fix: migrate to @nuxt/fonts in Phase 1.
+      "Playfair+Display": [400, 700],
       "Open+Sans": [300, 400, 600],
     },
     display: "swap",

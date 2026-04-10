@@ -454,7 +454,8 @@
             "Meet & Greet Service – Personal welcome at arrivals.",
             "No Waiting Charges – 60 minutes of free waiting time included."
           ],
-          "note": "Serving all major airports: Heathrow, Gatwick, Luton, Stansted & more."
+          "note": "Serving all major airports: Heathrow, Gatwick, Luton, Stansted & more.",
+          "learnMoreLabel": "Learn more about our airport transfer service"
         },
         "corporate": {
           "title": "Corporate Travel",
@@ -464,7 +465,8 @@
             "Luxury Mercedes-Benz fleet – First-class comfort for professionals.",
             "Hourly or full-day hire – Flexible booking to fit your schedule."
           ],
-          "note": "Maximize your productivity—book a corporate chauffeur today."
+          "note": "Maximize your productivity—book a corporate chauffeur today.",
+          "learnMoreLabel": "Learn more about our corporate travel service"
         },
         "hourly": {
           "title": "Hourly Chauffeur Hire",
@@ -474,7 +476,8 @@
             "Door-to-door service – Your chauffeur is at your disposal.",
             "Explore in style – Perfect for city tours & special occasions."
           ],
-          "note": "Enjoy personalized travel—book your private chauffeur today."
+          "note": "Enjoy personalized travel—book your private chauffeur today.",
+          "learnMoreLabel": "Learn more about our hourly chauffeur service"
         },
         "longDistance": {
           "title": "Travel Across the UK & Europe",
@@ -484,7 +487,8 @@
             "Luxury Road Trips – Travel in a first-class Mercedes-Benz with a professional chauffeur.",
             "Cross-Border Travel – Chauffeur-driven transfers to European cities."
           ],
-          "note": "Explore in comfort—book your private tour today."
+          "note": "Explore in comfort—book your private tour today.",
+          "learnMoreLabel": "Learn more about our UK and Europe travel service"
         },
         "wedding": {
           "title": "Wedding Chauffeur Services",
@@ -495,7 +499,8 @@
             "Bridal Car Decoration Available – Personalize your wedding car with ribbons & flowers.",
             "Guest & Family Transfers – Comfortable transport for bridesmaids, groomsmen, and guests."
           ],
-          "note": "Make your wedding day unforgettable—book your luxury wedding chauffeur today."
+          "note": "Make your wedding day unforgettable—book your luxury wedding chauffeur today.",
+          "learnMoreLabel": "Learn more about our wedding chauffeur service"
         },
         "event": {
           "title": "Event Chauffeur Services",
@@ -506,7 +511,8 @@
             "Perfect for All Events – Concerts, sporting events, private parties, award ceremonies, and corporate galas.",
             "Group & VIP Transfers Available – Tailored transport solutions for individuals and groups."
           ],
-          "note": ""
+          "note": "",
+          "learnMoreLabel": "Learn more about our event chauffeur service"
         }
       }
     },

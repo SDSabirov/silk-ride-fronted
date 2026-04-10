@@ -41,6 +41,7 @@
         <div class="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
           <NuxtLink
             :to="localePath('/blog/' + post.slug)"
+            :aria-label="`${$t('blog.readMore')}: ${post.title}`"
             class="bg-white text-black px-4 py-2 rounded-full text-sm font-semibold hover:bg-gold transition-colors duration-200 shadow-lg"
           >
             {{ $t('blog.readMore') }}
@@ -96,6 +97,7 @@
 
           <NuxtLink
             :to="localePath('/blog/' + post.slug)"
+            :aria-label="`${$t('blog.readMore')}: ${post.title}`"
             class="text-gold hover:text-yellow-600 transition-colors duration-200 flex items-center space-x-1 text-sm font-semibold"
           >
             <span>{{ $t('blog.readMore') }}</span>
