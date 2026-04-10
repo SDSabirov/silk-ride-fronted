@@ -34,7 +34,7 @@
               <p class="text-gray-600 mb-6 leading-relaxed">{{ service.description }}</p>
               <NuxtLink
                 :to="localePath(service.path)"
-                :aria-label="`${$t('pages.services.learnMore')} - ${service.title}`"
+                :aria-label="t(`pages.services.cards.${service.cardKey}.learnMoreLabel`)"
                 class="inline-flex items-center text-sm font-semibold text-gray-900 hover:text-gold transition-colors"
               >
                 {{ $t('pages.services.learnMore') }}
@@ -111,9 +111,12 @@ const breadcrumbs = computed(() => [
   { name: t('pages.services.breadcrumbServices'), path: '/services' },
 ])
 
+// cardKey maps to pages.services.cards.<cardKey>.learnMoreLabel i18n keys
+// shared with components/Services/Card.vue (same six services, different grid).
 const detailedServices = computed(() => [
   {
     slug: 'airport-transfers',
+    cardKey: 'airport',
     title: t('pages.services.servicesList.airport.title'),
     description: t('pages.services.servicesList.airport.description'),
     icon: 'bx bxs-plane-take-off',
@@ -121,6 +124,7 @@ const detailedServices = computed(() => [
   },
   {
     slug: 'corporate-travel',
+    cardKey: 'corporate',
     title: t('pages.services.servicesList.corporate.title'),
     description: t('pages.services.servicesList.corporate.description'),
     icon: 'bx bx-briefcase',
@@ -128,6 +132,7 @@ const detailedServices = computed(() => [
   },
   {
     slug: 'hourly-chauffeur',
+    cardKey: 'hourly',
     title: t('pages.services.servicesList.hourly.title'),
     description: t('pages.services.servicesList.hourly.description'),
     icon: 'bx bx-time',
@@ -135,6 +140,7 @@ const detailedServices = computed(() => [
   },
   {
     slug: 'uk-europe-travel',
+    cardKey: 'longDistance',
     title: t('pages.services.servicesList.ukEurope.title'),
     description: t('pages.services.servicesList.ukEurope.description'),
     icon: 'bx bx-world',
@@ -142,6 +148,7 @@ const detailedServices = computed(() => [
   },
   {
     slug: 'wedding-chauffeur',
+    cardKey: 'wedding',
     title: t('pages.services.servicesList.wedding.title'),
     description: t('pages.services.servicesList.wedding.description'),
     icon: 'bx bx-heart',
@@ -149,6 +156,7 @@ const detailedServices = computed(() => [
   },
   {
     slug: 'event-chauffeur',
+    cardKey: 'event',
     title: t('pages.services.servicesList.event.title'),
     description: t('pages.services.servicesList.event.description'),
     icon: 'bx bx-calendar-event',

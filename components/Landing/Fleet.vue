@@ -49,6 +49,7 @@
               <div class="flex gap-3">
                 <NuxtLink
                   :to="localePath('/services/airport-transfers')"
+                  :aria-label="$t('pages.services.cards.airport.learnMoreLabel')"
                   class="flex-1 text-center py-3 bg-gray-900 text-white text-sm font-semibold rounded-lg hover:bg-gray-800 transition-colors"
                 >
                   {{ $t('common.learnMore') }}
@@ -97,6 +98,7 @@
               <div class="flex gap-3">
                 <NuxtLink
                   :to="localePath('/services/corporate-travel')"
+                  :aria-label="$t('pages.services.cards.corporate.learnMoreLabel')"
                   class="flex-1 text-center py-3 bg-gray-900 text-white text-sm font-semibold rounded-lg hover:bg-gray-800 transition-colors"
                 >
                   {{ $t('common.learnMore') }}
@@ -145,6 +147,7 @@
               <div class="flex gap-3">
                 <NuxtLink
                   :to="localePath('/services/wedding-chauffeur')"
+                  :aria-label="$t('pages.services.cards.wedding.learnMoreLabel')"
                   class="flex-1 text-center py-3 bg-gray-900 text-white text-sm font-semibold rounded-lg hover:bg-gray-800 transition-colors"
                 >
                   {{ $t('common.learnMore') }}

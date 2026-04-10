@@ -1,0 +1,14 @@
+name = "silk-ride"
+compatibility_date = "2026-03-18"
+# Required for Nuxt's cloudflare-pages preset — lets the Workers runtime use
+# the Node.js compat shims that Nitro/h3 rely on (Buffer, stream, etc.).
+compatibility_flags = ["nodejs_compat"]
+# Nuxt's cloudflare-pages preset emits the deployable bundle to ./dist
+pages_build_output_dir = "dist"
+
+# Public (non-secret) env vars available to Pages Functions at runtime.
+# Secrets (SANITY_PROJECT_ID, SANITY_DATASET, GOOGLE_PLACES_API_KEY,
+# GOOGLE_PLACE_ID, CLOUDFLARE_API_TOKEN) are set in GitHub Actions and the
+# Cloudflare dashboard — never committed here.
+[vars]
+NUXT_PUBLIC_SITE_URL = "https://silkride.co.uk"

@@ -1,4 +1,42 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+
+// Fetch blog post slugs from Sanity ONCE at build time. Shared by both
+// nitro.prerender.routes (to generate static HTML per post) and sitemap.urls
+// (to list them in sitemap.xml). Runs at `nuxt build` time in CI with
+// SANITY_PROJECT_ID in env.
+type SanityBlogPost = { slug: string; language?: string; publishedAt?: string }
+
+async function fetchSanityBlogPosts(): Promise<SanityBlogPost[]> {
+  const projectId = process.env.SANITY_PROJECT_ID
+  const dataset = process.env.SANITY_DATASET || 'production'
+  if (!projectId) {
+    console.warn('[build] SANITY_PROJECT_ID not set — skipping blog slug fetch')
+    return []
+  }
+  const query = encodeURIComponent(
+    '*[_type == "post" && defined(slug.current)]{ "slug": slug.current, language, publishedAt }'
+  )
+  const url = `https://${projectId}.api.sanity.io/v2024-01-01/data/query/${dataset}?query=${query}`
+  try {
+    const r = await fetch(url)
+    if (!r.ok) throw new Error(`Sanity responded ${r.status}`)
+    const { result = [] } = await r.json()
+    return Array.isArray(result) ? result : []
+  } catch (e) {
+    console.error('[build] Failed to fetch blog slugs from Sanity:', e)
+    return []
+  }
+}
+
+const blogPosts = await fetchSanityBlogPosts()
+
+const blogPrerenderRoutes: string[] = ['/blog', '/ru/blog']
+for (const post of blogPosts) {
+  if (!post.slug) continue
+  if (post.language === 'ru') blogPrerenderRoutes.push(`/ru/blog/${post.slug}`)
+  else blogPrerenderRoutes.push(`/blog/${post.slug}`)
+}
+
 export default defineNuxtConfig({
   compatibilityDate: "2026-03-18",
   srcDir: '.',
@@ -18,11 +56,18 @@ export default defineNuxtConfig({
     payloadExtraction: false,
   },
   nitro: {
+    preset: 'cloudflare-pages',
     prerender: {
       crawlLinks: true,
-      routes: ['/', '/ru', '/sitemap.xml', '/robots.txt'],
-      // Blog detail pages stay SSR in Phase 0 — Sanity-driven, prerendered in Phase 1
-      ignore: ['/blog', '/blog/', '/blog/**', '/ru/blog', '/ru/blog/', '/ru/blog/**', '/api/**'],
+      routes: [
+        '/',
+        '/ru',
+        '/sitemap.xml',
+        '/robots.txt',
+        ...blogPrerenderRoutes,
+      ],
+      // /api/** is served by the Cloudflare Pages Functions runtime (Workers)
+      ignore: ['/api/**'],
       failOnError: false,
     },
     compressPublicAssets: true,
@@ -209,30 +254,19 @@ export default defineNuxtConfig({
         { loc: '/airport-transfers/farnborough', priority: 0.8, changefreq: 'weekly' },
       ]
 
-      // Fetch blog post slugs from Sanity for dynamic sitemap entries
-      try {
-        const projectId = process.env.SANITY_PROJECT_ID
-        const dataset = process.env.SANITY_DATASET || 'production'
-        if (projectId) {
-          const query = encodeURIComponent('*[_type == "post"]{ "slug": slug.current, publishedAt }')
-          const url = `https://${projectId}.api.sanity.io/v2024-01-01/data/query/${dataset}?query=${query}`
-          const response = await fetch(url)
-          const data = await response.json()
-          if (data.result) {
-            const blogUrls = data.result.map((post: any) => ({
-              loc: `/blog/${post.slug}`,
-              priority: 0.7,
-              changefreq: 'monthly',
-              lastmod: post.publishedAt || new Date().toISOString(),
-            }))
-            return [...staticUrls, ...blogUrls]
-          }
-        }
-      } catch (e) {
-        // Silently fall back to static URLs if Sanity is unavailable
-      }
+      // Reuse the blog slugs already fetched for nitro.prerender.routes
+      // (see fetchSanityBlogPosts at the top of this file). This avoids a
+      // second round-trip to Sanity per build.
+      const blogUrls = blogPosts
+        .filter((post) => post.slug && post.language !== 'ru')
+        .map((post) => ({
+          loc: `/blog/${post.slug}`,
+          priority: 0.7,
+          changefreq: 'monthly',
+          lastmod: post.publishedAt || new Date().toISOString(),
+        }))
 
-      return staticUrls
+      return [...staticUrls, ...blogUrls]
     },
     exclude: [
       '/booking/cancel',
