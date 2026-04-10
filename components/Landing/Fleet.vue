@@ -53,6 +53,7 @@
                   class="flex-1 text-center py-3 bg-gray-900 text-white text-sm font-semibold rounded-lg hover:bg-gray-800 transition-colors"
                 >
                   {{ $t('common.learnMore') }}
+                  <span class="sr-only">{{ $t('pages.services.cards.airport.learnMoreLabel') }}</span>
                 </NuxtLink>
                 <NuxtLink
                   :to="localePath('/booking')"
@@ -102,6 +103,7 @@
                   class="flex-1 text-center py-3 bg-gray-900 text-white text-sm font-semibold rounded-lg hover:bg-gray-800 transition-colors"
                 >
                   {{ $t('common.learnMore') }}
+                  <span class="sr-only">{{ $t('pages.services.cards.corporate.learnMoreLabel') }}</span>
                 </NuxtLink>
                 <NuxtLink
                   :to="localePath('/booking')"
@@ -151,6 +153,7 @@
                   class="flex-1 text-center py-3 bg-gray-900 text-white text-sm font-semibold rounded-lg hover:bg-gray-800 transition-colors"
                 >
                   {{ $t('common.learnMore') }}
+                  <span class="sr-only">{{ $t('pages.services.cards.wedding.learnMoreLabel') }}</span>
                 </NuxtLink>
                 <NuxtLink
                   :to="localePath('/contact-us')"

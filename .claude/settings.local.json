@@ -68,7 +68,13 @@
       "Bash(sed -i 's/bx bx-plane text/bx bxs-plane text/g' pages/airport-transfers/stansted.vue)",
       "Read(//c/Users/saido/.claude/plugins/marketplaces/ui-ux-pro-max-skill/.claude/skills/ui-ux-pro-max/**)",
       "Bash(python scripts/search.py \"luxury wedding pricing cards premium elegant gold dark\" --design-system -p \"Silk Ride Wedding Packages\")",
-      "Bash(python scripts/search.py \"pricing cards tier comparison\" --domain landing -n 5)"
+      "Bash(python scripts/search.py \"pricing cards tier comparison\" --domain landing -n 5)",
+      "Bash(nslookup silkride.co.uk)",
+      "Bash(nslookup www.silkride.co.uk)",
+      "Bash(nslookup -type=ns silkride.co.uk 8.8.8.8)",
+      "Bash(nslookup silkride.co.uk 8.8.8.8)",
+      "Bash(nslookup silkride.co.uk 1.1.1.1)",
+      "Bash(nslookup www.silkride.co.uk 8.8.8.8)"
     ],
     "deny": []
   }

@@ -38,6 +38,7 @@
                 class="inline-flex items-center text-sm font-semibold text-gray-900 hover:text-gold transition-colors"
               >
                 {{ $t('pages.services.learnMore') }}
+                <span class="sr-only">{{ t(`pages.services.cards.${service.cardKey}.learnMoreLabel`) }}</span>
                 <i class="bx bx-right-arrow-alt ml-1 text-lg"></i>
               </NuxtLink>
             </div>
