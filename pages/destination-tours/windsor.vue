@@ -6,8 +6,8 @@
     <section class="relative min-h-screen lg:min-h-[90vh] flex items-center py-20">
       <div class="absolute inset-0 overflow-hidden">
         <img
-          src="~/assets/images/covers/stonehenge.webp"
-          alt="Stonehenge prehistoric stone circle at sunrise — private chauffeur tour from London"
+          src="~/assets/images/covers/winsdor.webp"
+          alt="Windsor Castle round tower and royal grounds — private chauffeur tour from London"
           class="w-full h-full object-cover"
           loading="eager"
           fetchpriority="high"
@@ -20,10 +20,10 @@
       <div class="relative z-10 w-full max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
         <div class="max-w-4xl">
           <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-heading font-bold leading-[1.1] mb-4 sm:mb-6">
-            Private Stonehenge Tours <span class="text-gold block sm:inline">from London</span>
+            Private Windsor Castle Tours <span class="text-gold block sm:inline">from London</span>
           </h1>
           <p class="text-base sm:text-lg md:text-xl lg:text-2xl font-light mb-6 sm:mb-8 opacity-90 leading-relaxed">
-            Skip the coach crowds. Travel to the world's most famous prehistoric monument in a chauffeured Mercedes — door-to-door from your London hotel, with skip-the-line tickets and a fully flexible itinerary.
+            Step inside the world's oldest occupied royal castle in true comfort. A chauffeured Mercedes collects you in London, drives you to Windsor in under an hour, and waits while you explore at your own pace.
           </p>
 
           <div class="flex flex-col sm:flex-row gap-4 mb-8">
@@ -32,7 +32,7 @@
               class="inline-flex items-center justify-center px-8 py-4 bg-gold text-black font-bold text-lg rounded-lg hover:bg-gold/90 transition-all duration-300 transform hover:-translate-y-1 shadow-lg"
             >
               <i class="bx bx-calendar mr-2"></i>
-              Book Stonehenge Tour
+              Book Windsor Castle Tour
             </NuxtLink>
             <a
               href="tel:+442034882324"
@@ -50,17 +50,17 @@
                 <i class="bx bx-time-five text-black text-lg sm:text-xl"></i>
               </div>
               <div>
-                <h2 class="font-semibold text-base sm:text-lg">~2 Hours Each Way</h2>
-                <p class="text-xs sm:text-sm opacity-75">From Central London via M3 / A303</p>
+                <h2 class="font-semibold text-base sm:text-lg">~50 Minutes</h2>
+                <p class="text-xs sm:text-sm opacity-75">From Central London via M4</p>
               </div>
             </div>
             <div class="flex items-center space-x-3">
               <div class="w-10 h-10 sm:w-12 sm:h-12 bg-gold rounded-full flex items-center justify-center flex-shrink-0">
-                <i class="bx bx-medal text-black text-lg sm:text-xl"></i>
+                <i class="bx bx-crown text-black text-lg sm:text-xl"></i>
               </div>
               <div>
-                <h2 class="font-semibold text-base sm:text-lg">UNESCO World Heritage</h2>
-                <p class="text-xs sm:text-sm opacity-75">5,000-year-old stone circle</p>
+                <h2 class="font-semibold text-base sm:text-lg">1,000 Years of Royals</h2>
+                <p class="text-xs sm:text-sm opacity-75">The King's official residence</p>
               </div>
             </div>
             <div class="flex items-center space-x-3 sm:col-span-2 lg:col-span-1">
@@ -90,18 +90,18 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <h2 class="text-3xl md:text-4xl font-heading font-bold text-black mb-6">
-              A Private Stonehenge Day Trip Built Around You
+              The Oldest &amp; Largest Occupied Castle in the World
             </h2>
             <div class="w-16 h-1 bg-gold mb-6"></div>
             <div class="prose prose-lg">
               <p class="text-gray-700 leading-relaxed mb-4">
-                A Stonehenge tour from London is one of the most rewarding day trips in the UK — but the standard coach experience means a 5am hotel pickup, a packed 50-seater, and only an hour at the stones. Silk Ride does it differently. Your chauffeur collects you from your London address in a private Mercedes, drives the 90-mile route via the M3 and A303 in around two hours, and waits as long as you need at the monument.
+                A Windsor Castle tour from London is the most accessible — and the most cinematic — royal day trip in the UK. Just 22 miles west of central London via the M4, Windsor has been the official residence of the British monarch for almost a thousand years, from William the Conqueror to King Charles III. Silk Ride chauffeurs collect you from your London address, drive you to the castle gate in around 50 minutes, and wait while you explore.
               </p>
               <p class="text-gray-700 leading-relaxed mb-4">
-                Located on Salisbury Plain in Wiltshire, Stonehenge has stood as one of humanity's most enigmatic monuments for over 5,000 years. The site's massive sarsen trilithons and Welsh bluestones — some weighing up to 25 tonnes — were transported and raised by Neolithic communities using methods that still puzzle archaeologists. Today the monument is a UNESCO World Heritage Site managed by English Heritage, with a visitor centre, museum, and reconstructed Neolithic houses on the approach.
+                Inside the castle precincts you'll see the State Apartments — still used today for State visits and investitures — the breathtaking St George's Chapel, where Henry VIII, Queen Elizabeth II and Prince Philip are buried, and Queen Mary's Dolls' House, the largest and most detailed in the world. Allow 2.5 to 3 hours on site to do it properly.
               </p>
               <p class="text-gray-700 leading-relaxed">
-                Because you have a private car and driver, you choose the timing. Arrive at opening to beat the coaches, combine Stonehenge with Bath, Salisbury Cathedral, or the larger stone circle at Avebury, or book an exclusive Inner Circle access tour outside public hours. Your driver is happy to share what they know about the route and the monument — but you set the pace.
+                Because the journey is short, Windsor pairs beautifully with other day-trip favourites: Stonehenge (1h20 from Windsor), Bath (1h45), the Roman amphitheatre at Verulamium, or a punt at Oxford. Your driver will plan the day around your pace — no coach schedules, no rushed exits.
               </p>
             </div>
           </div>
@@ -119,7 +119,7 @@
                 </li>
                 <li class="flex items-start space-x-3">
                   <i class="bx bx-check-circle text-gold text-xl mt-1"></i>
-                  <span class="text-gray-700">Skip-the-line Stonehenge entry tickets</span>
+                  <span class="text-gray-700">Pre-booked Windsor Castle admission (skip the line)</span>
                 </li>
                 <li class="flex items-start space-x-3">
                   <i class="bx bx-check-circle text-gold text-xl mt-1"></i>
@@ -127,11 +127,11 @@
                 </li>
                 <li class="flex items-start space-x-3">
                   <i class="bx bx-check-circle text-gold text-xl mt-1"></i>
-                  <span class="text-gray-700">Flexible itinerary — combine with Bath, Salisbury, or Avebury</span>
+                  <span class="text-gray-700">Flexible itinerary — add Stonehenge, Bath or Eton</span>
                 </li>
                 <li class="flex items-start space-x-3">
                   <i class="bx bx-check-circle text-gold text-xl mt-1"></i>
-                  <span class="text-gray-700">Inner Circle access available on request</span>
+                  <span class="text-gray-700">Private tour guide available on request</span>
                 </li>
               </ul>
             </div>
@@ -142,41 +142,25 @@
       <!-- Attractions -->
       <section class="mb-16">
         <h2 class="text-3xl font-heading font-bold text-center text-black mb-4">
-          Stonehenge & Surrounding Attractions
+          What to See at Windsor Castle &amp; Beyond
         </h2>
         <p class="text-gray-600 text-center max-w-3xl mx-auto mb-12">
-          Stonehenge sits at the centre of one of Europe's richest prehistoric landscapes. Pair the monument with any of these nearby sites — your driver will plan the route.
+          The castle alone is a full half-day. With a private chauffeur you can add nearby Eton, Runnymede or the Long Walk — all without a second transfer.
         </p>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div class="bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-all duration-300">
             <div class="w-12 h-12 bg-gold rounded-full flex items-center justify-center mb-4">
-              <i class="bx bx-circle text-black text-xl"></i>
+              <i class="bx bx-buildings text-black text-xl"></i>
             </div>
-            <h3 class="text-xl font-semibold text-black mb-3">The Stone Circle</h3>
+            <h3 class="text-xl font-semibold text-black mb-3">The State Apartments</h3>
             <p class="text-gray-600 mb-4 text-sm">
-              Walk the perimeter path to view the iconic sarsen trilithons up close. Inner Circle access (before/after public hours) lets you stand among the stones.
+              The grand ceremonial rooms used by the Royal Family for State visits. Houses Van Dyck, Rubens, Canaletto and Holbein paintings from the Royal Collection.
             </p>
             <ul class="text-sm text-gray-700 space-y-1">
-              <li>• Sarsen trilithons up to 30 ft tall</li>
-              <li>• Welsh bluestones from 150+ miles away</li>
-              <li>• Solstice astronomical alignment</li>
-              <li>• Inner Circle access (special tours)</li>
-            </ul>
-          </div>
-
-          <div class="bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-all duration-300">
-            <div class="w-12 h-12 bg-gold rounded-full flex items-center justify-center mb-4">
-              <i class="bx bx-building-house text-black text-xl"></i>
-            </div>
-            <h3 class="text-xl font-semibold text-black mb-3">Stonehenge Visitor Centre</h3>
-            <p class="text-gray-600 mb-4 text-sm">
-              English Heritage's award-winning visitor centre — 360-degree virtual circle, archaeological finds and outdoor Neolithic houses.
-            </p>
-            <ul class="text-sm text-gray-700 space-y-1">
-              <li>• 360-degree immersive theatre</li>
-              <li>• Neolithic skeletal remains & artefacts</li>
-              <li>• Reconstructed thatched houses</li>
-              <li>• Café and gift shop</li>
+              <li>• Waterloo Chamber &amp; St George's Hall</li>
+              <li>• Van Dyck, Rubens &amp; Holbein masterpieces</li>
+              <li>• Royal armoury &amp; tapestries</li>
+              <li>• Semi-State Rooms open in winter</li>
             </ul>
           </div>
 
@@ -184,63 +168,79 @@
             <div class="w-12 h-12 bg-gold rounded-full flex items-center justify-center mb-4">
               <i class="bx bx-church text-black text-xl"></i>
             </div>
-            <h3 class="text-xl font-semibold text-black mb-3">Salisbury Cathedral</h3>
+            <h3 class="text-xl font-semibold text-black mb-3">St George's Chapel</h3>
             <p class="text-gray-600 mb-4 text-sm">
-              A 15-minute drive from Stonehenge — Britain's tallest spire and one of only four surviving original copies of the Magna Carta.
+              One of the finest examples of Perpendicular Gothic architecture in England — the venue for royal weddings and the resting place of ten monarchs.
             </p>
             <ul class="text-sm text-gray-700 space-y-1">
-              <li>• Britain's tallest spire (123m)</li>
-              <li>• Original 1215 Magna Carta</li>
-              <li>• Medieval cathedral close</li>
-              <li>• World's oldest working clock</li>
+              <li>• Burial place of Henry VIII &amp; Charles I</li>
+              <li>• Queen Elizabeth II &amp; Prince Philip memorial</li>
+              <li>• Site of Harry &amp; Meghan's 2018 wedding</li>
+              <li>• Evensong daily at 17:15</li>
             </ul>
           </div>
 
           <div class="bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-all duration-300">
             <div class="w-12 h-12 bg-gold rounded-full flex items-center justify-center mb-4">
-              <i class="bx bx-target-lock text-black text-xl"></i>
+              <i class="bx bx-home-heart text-black text-xl"></i>
             </div>
-            <h3 class="text-xl font-semibold text-black mb-3">Avebury Stone Circle</h3>
+            <h3 class="text-xl font-semibold text-black mb-3">Queen Mary's Dolls' House</h3>
             <p class="text-gray-600 mb-4 text-sm">
-              The world's largest prehistoric stone circle. Unlike Stonehenge, you can walk freely among the stones, with a village built inside the henge.
+              The largest and most famous dolls' house in the world — a 1:12 scale Edwardian residence with working lifts, running water and a stocked wine cellar.
             </p>
             <ul class="text-sm text-gray-700 space-y-1">
-              <li>• World's largest stone circle</li>
-              <li>• Free open access to the stones</li>
-              <li>• Alexander Keiller Museum</li>
-              <li>• Silbury Hill & West Kennet Long Barrow nearby</li>
+              <li>• Designed by Sir Edwin Lutyens (1924)</li>
+              <li>• Contributions from 1,500+ craftspeople</li>
+              <li>• Miniature library with original works</li>
+              <li>• Real electricity &amp; plumbing</li>
             </ul>
           </div>
 
           <div class="bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-all duration-300">
             <div class="w-12 h-12 bg-gold rounded-full flex items-center justify-center mb-4">
-              <i class="bx bxs-castle text-black text-xl"></i>
+              <i class="bx bxs-tree text-black text-xl"></i>
             </div>
-            <h3 class="text-xl font-semibold text-black mb-3">Old Sarum</h3>
+            <h3 class="text-xl font-semibold text-black mb-3">Windsor Great Park &amp; Long Walk</h3>
             <p class="text-gray-600 mb-4 text-sm">
-              The Iron Age hillfort and Norman cathedral that preceded modern Salisbury — panoramic views over Wiltshire and dramatic ruins.
+              The 4,800-acre royal park stretches south of the castle. The Long Walk — a 2.6-mile tree-lined avenue — gives the iconic postcard view of the castle.
             </p>
             <ul class="text-sm text-gray-700 space-y-1">
-              <li>• Iron Age earthwork ramparts</li>
-              <li>• Norman royal castle ruins</li>
-              <li>• Original cathedral foundations</li>
-              <li>• 360° views of Salisbury Plain</li>
+              <li>• 2.6-mile Long Walk to Snow Hill</li>
+              <li>• Savill Garden &amp; Valley Gardens</li>
+              <li>• Roaming red deer herd</li>
+              <li>• Free public access</li>
             </ul>
           </div>
 
           <div class="bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-all duration-300">
             <div class="w-12 h-12 bg-gold rounded-full flex items-center justify-center mb-4">
-              <i class="bx bx-landscape text-black text-xl"></i>
+              <i class="bx bx-book-reader text-black text-xl"></i>
             </div>
-            <h3 class="text-xl font-semibold text-black mb-3">Woodhenge & Durrington Walls</h3>
+            <h3 class="text-xl font-semibold text-black mb-3">Eton College</h3>
             <p class="text-gray-600 mb-4 text-sm">
-              Stonehenge's timber counterpart and the remains of what may have been the largest Neolithic settlement in northwest Europe.
+              England's most famous boys' school, founded by Henry VI in 1440. The high street and chapel are a 10-minute walk over the Thames from the castle.
             </p>
             <ul class="text-sm text-gray-700 space-y-1">
-              <li>• Concrete posts mark the original timber circle</li>
-              <li>• Durrington Walls superhenge</li>
-              <li>• Believed to house Stonehenge's builders</li>
-              <li>• Free open access</li>
+              <li>• Founded 1440 by Henry VI</li>
+              <li>• Alma mater of 20 British PMs</li>
+              <li>• Perpendicular Gothic chapel</li>
+              <li>• Pedestrian bridge to Windsor</li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-all duration-300">
+            <div class="w-12 h-12 bg-gold rounded-full flex items-center justify-center mb-4">
+              <i class="bx bx-flag text-black text-xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-black mb-3">Runnymede</h3>
+            <p class="text-gray-600 mb-4 text-sm">
+              The Thames-side meadow where King John sealed the Magna Carta in 1215 — the foundational document of English common law. A 10-minute drive from Windsor.
+            </p>
+            <ul class="text-sm text-gray-700 space-y-1">
+              <li>• Site of Magna Carta signing (1215)</li>
+              <li>• American Bar Association memorial</li>
+              <li>• John F. Kennedy memorial</li>
+              <li>• Riverside walks &amp; café</li>
             </ul>
           </div>
         </div>
@@ -249,28 +249,28 @@
       <!-- Journey Information -->
       <section class="mb-16">
         <h2 class="text-3xl font-heading font-bold text-center text-black mb-12">
-          Journey Times & Routes
+          Journey Times &amp; Routes
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <div class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow duration-300">
             <h3 class="font-semibold text-lg text-black mb-2">Central London</h3>
-            <p class="text-gold font-bold text-xl mb-2">~2 hours</p>
-            <p class="text-sm text-gray-600">Via M3 &amp; A303</p>
+            <p class="text-gold font-bold text-xl mb-2">~50 min</p>
+            <p class="text-sm text-gray-600">Via M4 westbound</p>
           </div>
           <div class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow duration-300">
             <h3 class="font-semibold text-lg text-black mb-2">Heathrow Airport</h3>
-            <p class="text-gold font-bold text-xl mb-2">~1h 30</p>
-            <p class="text-sm text-gray-600">Ideal for layover day trips</p>
+            <p class="text-gold font-bold text-xl mb-2">~15 min</p>
+            <p class="text-sm text-gray-600">Perfect layover day trip</p>
+          </div>
+          <div class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow duration-300">
+            <h3 class="font-semibold text-lg text-black mb-2">Stonehenge</h3>
+            <p class="text-gold font-bold text-xl mb-2">~1h 20</p>
+            <p class="text-sm text-gray-600">Royal &amp; ancient combo</p>
           </div>
           <div class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow duration-300">
             <h3 class="font-semibold text-lg text-black mb-2">Bath</h3>
-            <p class="text-gold font-bold text-xl mb-2">~45 min</p>
-            <p class="text-sm text-gray-600">Most popular combo tour</p>
-          </div>
-          <div class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow duration-300">
-            <h3 class="font-semibold text-lg text-black mb-2">Windsor Castle</h3>
-            <p class="text-gold font-bold text-xl mb-2">~1h 20</p>
-            <p class="text-sm text-gray-600">Royal &amp; ancient combo</p>
+            <p class="text-gold font-bold text-xl mb-2">~1h 45</p>
+            <p class="text-sm text-gray-600">Roman Baths add-on</p>
           </div>
         </div>
       </section>
@@ -278,10 +278,10 @@
       <!-- FAQ -->
       <section class="mb-16">
         <h2 class="text-3xl font-heading font-bold text-center text-black mb-4">
-          Stonehenge Tour: Frequently Asked Questions
+          Windsor Castle Tour: Frequently Asked Questions
         </h2>
         <p class="text-gray-600 text-center max-w-3xl mx-auto mb-12">
-          Everything you need to know before booking a private Stonehenge tour from London.
+          The most common questions we hear about visiting Windsor Castle from London.
         </p>
         <div class="max-w-4xl mx-auto space-y-4">
           <details
@@ -304,7 +304,7 @@
       <section class="mb-16">
         <div class="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 md:p-12 border border-gray-100">
           <h2 class="text-3xl font-heading font-bold text-center text-black mb-12">
-            Why Choose Silk Ride for Your Stonehenge Tour
+            Why Choose Silk Ride for Your Windsor Castle Tour
           </h2>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div class="text-center">
@@ -342,10 +342,10 @@
       <!-- Related Tours -->
       <section class="mb-16">
         <h2 class="text-3xl font-heading font-bold text-center text-black mb-4">
-          Combine Stonehenge With Another Destination
+          Combine Windsor With Another Destination
         </h2>
         <p class="text-gray-600 text-center max-w-3xl mx-auto mb-12">
-          A private chauffeur makes multi-stop day trips effortless. Popular pairings:
+          With a private chauffeur, multi-stop day trips are effortless. The most popular pairings:
         </p>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           <NuxtLink
@@ -371,7 +371,7 @@
       <!-- Contact CTA -->
       <section class="bg-gradient-to-r from-black to-gray-800 text-white rounded-2xl p-12 text-center">
         <h2 class="text-3xl font-heading font-bold mb-4">
-          Plan Your Private Stonehenge Tour
+          Plan Your Private Windsor Castle Tour
         </h2>
         <p class="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
           Tell us your dates, group size and any add-on stops — we'll send back a tailored quote within an hour.
@@ -382,7 +382,7 @@
             class="inline-flex items-center justify-center px-8 py-4 bg-gold text-black font-bold text-lg rounded-lg hover:bg-gold/90 transition-all duration-300"
           >
             <i class="bx bx-calendar mr-2"></i>
-            Book Stonehenge Tour
+            Book Windsor Castle Tour
           </NuxtLink>
           <a
             href="tel:+442034882324"
@@ -405,58 +405,58 @@ const localePath = useLocalePath()
 const breadcrumbs = [
   { name: 'Home', path: '/' },
   { name: 'Destinations', path: '/destination-tours' },
-  { name: 'Stonehenge', path: '/destination-tours/stonehenge' },
+  { name: 'Windsor Castle', path: '/destination-tours/windsor' },
 ]
 
 const faqs = [
   {
-    question: 'How long does it take to drive from London to Stonehenge?',
-    answer: 'The drive is around 90 miles and takes approximately two hours each way via the M3 and A303. From Heathrow it is closer to 90 minutes. Your chauffeur will plan around traffic conditions on the day.',
+    question: 'How long does it take to drive from London to Windsor Castle?',
+    answer: 'The drive is around 22 miles and takes 50–60 minutes via the M4 from central London. From Heathrow it is only 15 minutes — making Windsor an ideal layover day trip.',
   },
   {
-    question: 'Are Stonehenge entry tickets included in the tour?',
-    answer: 'Yes. Every Silk Ride Stonehenge tour includes timed English Heritage entry tickets so you skip the queue at the visitor centre. Just let us know your preferred arrival window when you book.',
+    question: 'Are Windsor Castle tickets included in the tour?',
+    answer: 'Yes. Every Silk Ride Windsor Castle tour includes pre-booked timed-entry tickets so you skip the ticket queue. As of 2026, the published gate prices are £31 adult, £20 youth (18–24) and £15.50 child (5–17). Children under 5 enter free.',
   },
   {
-    question: 'Can I get Inner Circle access to walk among the stones?',
-    answer: 'Yes — Inner Circle access is bookable in advance for visits before or after public opening hours, when no other visitors are on site. Spaces are limited and sell out months ahead, so contact us early if you would like to add this to your tour.',
+    question: 'What days is Windsor Castle open?',
+    answer: 'Windsor Castle is open Thursday through Monday year-round. It is closed every Wednesday, and additionally closed Tuesdays from November through February. Summer hours are 10:00–17:15 (last entry 16:00); winter hours are 10:00–16:15 (last entry 15:00). The castle occasionally closes at short notice for State events.',
   },
   {
-    question: 'Is Stonehenge worth combining with Bath or Salisbury?',
-    answer: 'Most of our guests choose a combination tour. <strong>Stonehenge + Bath</strong> is the most popular full-day option (around 9 hours total). <strong>Stonehenge + Salisbury Cathedral</strong> is a shorter half-day (around 6 hours). <strong>Stonehenge + Avebury</strong> is the choice for visitors interested in the wider Neolithic landscape.',
+    question: 'How long should I plan to spend at Windsor Castle?',
+    answer: 'Royal Collection Trust recommends 2.5 to 3 hours to see the State Apartments, St George\'s Chapel and Queen Mary\'s Dolls\' House without rushing. If you want to attend Evensong at 17:15 in the chapel, add another hour.',
   },
   {
-    question: 'What is the best time of year to visit Stonehenge?',
-    answer: 'Stonehenge is open year-round. May to September has the best weather and longest daylight hours. The summer solstice (around 21 June) and winter solstice draw large crowds — your chauffeur can advise on the best timing for a quieter visit.',
+    question: 'Can I see St George\'s Chapel and the Royal Tombs?',
+    answer: 'Yes — St George\'s Chapel is included in the standard admission and is one of the highlights. It is the burial place of ten British monarchs including Henry VIII, Charles I, and most recently Queen Elizabeth II and Prince Philip. The chapel is closed to tourists on Sundays for services, but Evensong is open to all at 17:15 most evenings.',
   },
   {
-    question: 'How long should I plan to spend at Stonehenge?',
-    answer: 'Most visitors spend 1.5 to 2 hours on site — enough to see the stone circle, walk the perimeter path, explore the visitor centre and the reconstructed Neolithic houses. Add another 30 minutes if you want to take the optional walk back to the stones rather than the shuttle bus.',
+    question: 'Is the Changing of the Guard at Windsor Castle?',
+    answer: 'Yes. The Changing of the Guard takes place at 11:00 on most Tuesday, Thursday and Saturday mornings (subject to weather and operational requirements). It is included in your castle admission — no extra ticket needed.',
   },
   {
-    question: 'How many passengers can you accommodate?',
-    answer: 'Our Mercedes S-Class carries up to 3 passengers comfortably. For groups of 4 to 7 we use a Mercedes V-Class with extra luggage space. Larger groups can be arranged on request.',
+    question: 'Can I combine Windsor Castle with Stonehenge or Bath?',
+    answer: 'Yes — these are our most-requested combination tours. <strong>Windsor + Stonehenge</strong> is a long but rewarding full day (around 10 hours). <strong>Windsor + Bath</strong> is the classic royal-and-Roman combo (around 11 hours). Tell us which you prefer and we will build the itinerary.',
   },
   {
-    question: 'How much does a private Stonehenge tour from London cost?',
+    question: 'How much does a private Windsor Castle tour from London cost?',
     answer: 'Pricing depends on group size, the vehicle chosen, total tour length, and any additional stops. Send us your dates and itinerary and we will send back a tailored quote — usually within the hour.',
   },
 ]
 
 const relatedDestinations = [
-  { name: 'Bath', path: '/destination-tours/bath', tagline: 'Roman Baths and Georgian crescents — 45 minutes from Stonehenge.', icon: 'bx-building-house' },
-  { name: 'Windsor Castle', path: '/destination-tours/windsor', tagline: 'Combine ancient Britain with 1,000 years of royal history.', icon: 'bxs-castle' },
-  { name: 'Oxford', path: '/destination-tours/oxford', tagline: 'Add the dreaming spires to a multi-day private itinerary.', icon: 'bx-book-reader' },
+  { name: 'Stonehenge', path: '/destination-tours/stonehenge', tagline: 'Pair Britain\'s most famous royal castle with its most famous prehistoric monument.', icon: 'bx-circle' },
+  { name: 'Bath', path: '/destination-tours/bath', tagline: 'Roman Baths, Georgian crescents — 1h 45 from Windsor.', icon: 'bx-building-house' },
+  { name: 'Oxford', path: '/destination-tours/oxford', tagline: 'Dreaming spires and 38 historic colleges.', icon: 'bx-book-reader' },
   { name: 'Cambridge', path: '/destination-tours/cambridge', tagline: 'Punting on the Cam and centuries-old colleges.', icon: 'bx-water' },
   { name: 'Cotswolds', path: '/destination-tours/cotswolds', tagline: 'Honey-stone villages and rolling English countryside.', icon: 'bx-landscape' },
 ]
 
-useSeo('stonehengeChauffeur')
+useSeo('windsorChauffeur')
 
 useSchemaOrg([
   defineLocalBusiness({
-    name: 'Silk Ride Stonehenge Chauffeur Service',
-    description: 'Private chauffeur-driven tours to Stonehenge from London. Luxury Mercedes, skip-the-line tickets, flexible itineraries and door-to-door service.',
+    name: 'Silk Ride Windsor Castle Chauffeur Service',
+    description: 'Private chauffeur-driven tours to Windsor Castle from London. Luxury Mercedes, skip-the-line entry, expert drivers and door-to-door service.',
     image: [
       'https://silkride.co.uk/logo.svg',
       'https://silkride.co.uk/vclassSide.webp',
@@ -470,37 +470,39 @@ useSchemaOrg([
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: 51.1789,
-      longitude: -1.8262,
+      latitude: 51.4839,
+      longitude: -0.6044,
     },
     telephone: '+44 203 488 2324',
-    url: 'https://silkride.co.uk/destination-tours/stonehenge',
+    url: 'https://silkride.co.uk/destination-tours/windsor',
     areaServed: [
-      { '@type': 'Place', name: 'Stonehenge' },
+      { '@type': 'Place', name: 'Windsor Castle' },
+      { '@type': 'City', name: 'Windsor' },
       { '@type': 'City', name: 'London' },
-      { '@type': 'City', name: 'Salisbury' },
-      { '@type': 'Place', name: 'Avebury' },
-      { '@type': 'City', name: 'Bath' },
+      { '@type': 'Place', name: 'Eton' },
+      { '@type': 'Place', name: 'Runnymede' },
     ],
     serviceType: 'Chauffeur Service and Private Tours',
     priceRange: '£££',
   }),
   {
     '@type': 'TouristAttraction',
-    name: 'Stonehenge',
-    description: 'Prehistoric stone circle on Salisbury Plain, Wiltshire, England — a UNESCO World Heritage Site dating to around 3000 BC.',
+    name: 'Windsor Castle',
+    description: 'The oldest and largest occupied castle in the world, official residence of the British monarch for over 900 years. Located in Windsor, Berkshire.',
     image: 'https://silkride.co.uk/og-image.jpg',
-    url: 'https://silkride.co.uk/destination-tours/stonehenge',
+    url: 'https://silkride.co.uk/destination-tours/windsor',
     address: {
       '@type': 'PostalAddress',
-      addressLocality: 'Amesbury',
-      addressRegion: 'Wiltshire',
+      streetAddress: 'Windsor Castle',
+      addressLocality: 'Windsor',
+      addressRegion: 'Berkshire',
+      postalCode: 'SL4 1NJ',
       addressCountry: 'GB',
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: 51.1789,
-      longitude: -1.8262,
+      latitude: 51.4839,
+      longitude: -0.6044,
     },
     isAccessibleForFree: false,
     publicAccess: true,

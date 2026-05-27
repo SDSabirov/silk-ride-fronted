@@ -48,7 +48,8 @@
       "cambridge": "Cambridge",
       "bath": "Bath",
       "cotswolds": "Cotswolds",
-      "stonehenge": "Stonehenge"
+      "stonehenge": "Stonehenge",
+      "windsor": "Windsor Castle"
     }
   },
   "footer": {
@@ -1217,9 +1218,14 @@
       "keywords": "cotswolds tour london, cotswolds chauffeur service, cotswolds day trip, bourton on the water tour, private cotswolds tour"
     },
     "stonehengeChauffeur": {
-      "title": "Stonehenge Tour from London | Private Chauffeur Trip",
-      "description": "Experience Stonehenge with a private chauffeur tour from London. Skip the crowds, flexible timing, luxury Mercedes. Book your tour.",
-      "keywords": "stonehenge tour london, stonehenge chauffeur service, stonehenge day trip, private stonehenge tour, salisbury cathedral tour"
+      "title": "Private Stonehenge Tour from London | Silk Ride Chauffeur",
+      "description": "Book a private Stonehenge tour from London with a luxury Mercedes chauffeur. Skip-the-line tickets, flexible itinerary, door-to-door service from £320.",
+      "keywords": "stonehenge tour from london, private stonehenge tour, stonehenge chauffeur service, stonehenge day trip from london, stonehenge tours from london, stonehenge and bath tour, stonehenge inner circle tour, london to stonehenge by car, salisbury cathedral tour, avebury stone circle tour"
+    },
+    "windsorChauffeur": {
+      "title": "Private Windsor Castle Tour from London | Silk Ride Chauffeur",
+      "description": "Private Windsor Castle tour from London with luxury Mercedes chauffeur. Skip-the-line entry, expert driver, door-to-door service. Book your day trip today.",
+      "keywords": "windsor castle tour from london, private windsor castle tour, windsor castle chauffeur, windsor castle day trip, london to windsor castle, windsor castle skip the line, windsor and stonehenge tour, windsor castle private tour, st george chapel tour, windsor castle from london by car"
     },
     "corporateTravel": {
       "title": "Corporate Chauffeur London | Executive Car Service",

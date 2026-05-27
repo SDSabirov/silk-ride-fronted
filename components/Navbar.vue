@@ -110,6 +110,37 @@
             </Transition>
           </div>
 
+          <!-- Destinations Dropdown -->
+          <div class="relative" @mouseenter="openDestinations" @mouseleave="closeDestinations">
+            <button
+              class="nav-link px-5 py-2 text-lg text-white hover:text-gold transition-colors flex items-center gap-1.5 relative group"
+            >
+              {{ $t('navbar.destinations') }}
+              <svg class="w-4 h-4 transition-transform duration-200" :class="showDestinations ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+              <span class="nav-underline"></span>
+            </button>
+
+            <Transition name="dropdown">
+              <div
+                v-show="showDestinations"
+                class="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-64 bg-gray-900/95 backdrop-blur-md rounded-xl shadow-2xl border border-white/10 overflow-hidden py-2"
+              >
+                <NuxtLink
+                  v-for="item in destinationsItems"
+                  :key="item.path"
+                  :to="item.path"
+                  class="flex items-center gap-3 px-5 py-3 text-gray-300 hover:text-white hover:bg-white/5 transition-colors"
+                  @click="closeDestinations"
+                >
+                  <i :class="item.icon" class="text-gold text-lg"></i>
+                  <span>{{ item.label }}</span>
+                </NuxtLink>
+              </div>
+            </Transition>
+          </div>
+
           <!-- Blog -->
           <NuxtLink
             :to="localePath('/blog')"
@@ -279,6 +310,29 @@
             </div>
           </div>
 
+          <!-- Destinations Accordion -->
+          <div class="border-b border-white/10">
+            <button
+              @click="toggleMobileDestinations"
+              class="w-full flex items-center justify-between py-4 text-xl text-white"
+            >
+              {{ $t('navbar.destinations') }}
+              <i :class="mobileDestinationsOpen ? 'bx-chevron-up' : 'bx-chevron-down'" class="bx text-2xl"></i>
+            </button>
+            <div v-show="mobileDestinationsOpen" class="pb-4 space-y-1">
+              <NuxtLink
+                v-for="item in destinationsItems"
+                :key="item.path"
+                :to="item.path"
+                class="flex items-center gap-3 py-3 px-4 text-gray-400 hover:text-gold"
+                @click="closeMobileMenu"
+              >
+                <i :class="item.icon" class="text-gold"></i>
+                {{ item.label }}
+              </NuxtLink>
+            </div>
+          </div>
+
           <!-- Company Accordion -->
           <div class="border-b border-white/10">
             <button
@@ -347,13 +401,16 @@ const { t } = useI18n()
 // State
 const isScrolled = ref(false)
 const showServices = ref(false)
+const showDestinations = ref(false)
 const showCompany = ref(false)
 const mobileMenuOpen = ref(false)
 const mobileServicesOpen = ref(false)
+const mobileDestinationsOpen = ref(false)
 const mobileCompanyOpen = ref(false)
 
 // Dropdown timers
 let servicesTimer = null
+let destinationsTimer = null
 let companyTimer = null
 
 // Services items with icons
@@ -377,6 +434,16 @@ const airportItems = [
   { path: localePath('/airport-transfers/london-city'), label: t('navbar.airportsDropdown.londonCity') }
 ]
 
+// Destinations items with icons
+const destinationsItems = [
+  { path: localePath('/destination-tours/oxford'), label: t('navbar.destinationsDropdown.oxford'), icon: 'bx bx-book-reader' },
+  { path: localePath('/destination-tours/cambridge'), label: t('navbar.destinationsDropdown.cambridge'), icon: 'bx bx-water' },
+  { path: localePath('/destination-tours/bath'), label: t('navbar.destinationsDropdown.bath'), icon: 'bx bx-building-house' },
+  { path: localePath('/destination-tours/cotswolds'), label: t('navbar.destinationsDropdown.cotswolds'), icon: 'bx bx-landscape' },
+  { path: localePath('/destination-tours/stonehenge'), label: t('navbar.destinationsDropdown.stonehenge'), icon: 'bx bx-circle' },
+  { path: localePath('/destination-tours/windsor'), label: t('navbar.destinationsDropdown.windsor'), icon: 'bx bxs-castle' }
+]
+
 // Company items with icons
 const companyItems = [
   { path: localePath('/about'), label: t('navbar.about'), icon: 'bx bx-info-circle' },
@@ -389,6 +456,7 @@ const companyItems = [
 const openServices = () => {
   clearTimeout(servicesTimer)
   showServices.value = true
+  showDestinations.value = false
   showCompany.value = false
 }
 
@@ -398,10 +466,24 @@ const closeServices = () => {
   }, 150)
 }
 
+const openDestinations = () => {
+  clearTimeout(destinationsTimer)
+  showDestinations.value = true
+  showServices.value = false
+  showCompany.value = false
+}
+
+const closeDestinations = () => {
+  destinationsTimer = setTimeout(() => {
+    showDestinations.value = false
+  }, 150)
+}
+
 const openCompany = () => {
   clearTimeout(companyTimer)
   showCompany.value = true
   showServices.value = false
+  showDestinations.value = false
 }
 
 const closeCompany = () => {
@@ -423,18 +505,27 @@ const toggleMobileMenu = () => {
 const closeMobileMenu = () => {
   mobileMenuOpen.value = false
   mobileServicesOpen.value = false
+  mobileDestinationsOpen.value = false
   mobileCompanyOpen.value = false
   document.body.style.overflow = ''
 }
 
 const toggleMobileServices = () => {
   mobileServicesOpen.value = !mobileServicesOpen.value
+  mobileDestinationsOpen.value = false
+  mobileCompanyOpen.value = false
+}
+
+const toggleMobileDestinations = () => {
+  mobileDestinationsOpen.value = !mobileDestinationsOpen.value
+  mobileServicesOpen.value = false
   mobileCompanyOpen.value = false
 }
 
 const toggleMobileCompany = () => {
   mobileCompanyOpen.value = !mobileCompanyOpen.value
   mobileServicesOpen.value = false
+  mobileDestinationsOpen.value = false
 }
 
 // Scroll handler

@@ -74,7 +74,8 @@
       "Bash(nslookup -type=ns silkride.co.uk 8.8.8.8)",
       "Bash(nslookup silkride.co.uk 8.8.8.8)",
       "Bash(nslookup silkride.co.uk 1.1.1.1)",
-      "Bash(nslookup www.silkride.co.uk 8.8.8.8)"
+      "Bash(nslookup www.silkride.co.uk 8.8.8.8)",
+      "Bash(nslookup www.silkride.co.uk 1.1.1.1)"
     ],
     "deny": []
   }
