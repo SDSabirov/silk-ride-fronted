@@ -6,6 +6,69 @@
     "viewDetails": "View Details →",
     "getCustomQuote": "Get Custom Quote"
   },
+  "tours": {
+    "home": "Home",
+    "tours": "Tours",
+    "bookTour": "Book {name} Tour",
+    "callPhone": "Call {phone}",
+    "callCustomQuote": "Call for a Custom Quote",
+    "getQuote": "Get a tailored quote",
+    "exploreTour": "Explore tour",
+    "viewTour": "View tour",
+    "trustLine": "TfL-licensed Private Hire Operator · Fully insured · 5-star rated chauffeurs",
+    "journeysDefaultIntro": "Approximate door-to-door driving times in a private chauffeured Mercedes.",
+    "pricing": {
+      "kicker": "Pricing",
+      "title": "Tour Pricing",
+      "intro": "Transparent flat rates per vehicle — not per person. Choose chauffeur-only, or add a private expert guide.",
+      "from": "from",
+      "perVehicle": "Per vehicle · up to 7 guests",
+      "note": "Attraction entry tickets can be added to any quote.",
+      "popular": "Most popular",
+      "chauffeurTitle": "Private Chauffeur",
+      "cf1": "Luxury Mercedes S-Class or V-Class",
+      "cf2": "Professional chauffeur, door-to-door",
+      "cf3": "Generous waiting time included",
+      "cf4": "Flexible, fully private itinerary",
+      "guideTitle": "Chauffeur + Private Guide",
+      "gf1": "Everything in Private Chauffeur",
+      "gf2": "Expert Blue Badge tourist guide",
+      "gf3": "In-depth walking tour & commentary",
+      "gf4": "Skip-the-line entry where available"
+    },
+    "kicker": {
+      "destination": "The Destination",
+      "whatToSee": "What to See",
+      "gettingThere": "Getting There",
+      "goodToKnow": "Good to Know",
+      "difference": "The Silk Ride Difference",
+      "moreDayTrips": "More Day Trips"
+    },
+    "pillars": {
+      "fleetTitle": "Luxury Mercedes Fleet",
+      "fleetText": "S-Class for couples, V-Class for groups up to 7 passengers.",
+      "licensedTitle": "Licensed & Insured",
+      "licensedText": "TfL-licensed Private Hire Operator with full passenger insurance.",
+      "flexibleTitle": "Flexible Itinerary",
+      "flexibleText": "Stay as long as you like at each stop — no rushed coach schedules.",
+      "serviceTitle": "5-Star Service",
+      "serviceText": "Professional chauffeurs with deep knowledge of every route."
+    },
+    "hub": {
+      "kicker": "Private Chauffeur Day Trips",
+      "title": "Discover Britain's Finest Destinations ",
+      "titleAccent": "from London",
+      "subtitle": "Royal castles, ancient stone circles, dreaming spires and honey-stone villages — all door-to-door in a chauffeured Mercedes, entirely at your own pace.",
+      "planTrip": "Plan Your Day Trip",
+      "chooseKicker": "Choose Your Destination",
+      "chooseTitle": "Six Unforgettable Day Trips",
+      "chooseSubtitle": "Every tour is private, flexible and chauffeur-driven. Pick one destination or combine several into a bespoke itinerary.",
+      "ctaTitle": "Build Your Perfect Day Out",
+      "ctaSubtitle": "Tell us where you'd like to go and how many of you are travelling — we'll send back a tailored quote, usually within the hour.",
+      "ctaPrimary": "Get a Tailored Quote",
+      "ctaOutline": "Call for a Custom Tour"
+    }
+  },
   "navbar": {
     "home": "Home",
     "fleet": "Our Fleet",
@@ -14,7 +77,7 @@
     "viewAllServices": "View All Services",
     "popularRoutes": "Popular Routes",
     "airports": "Airports",
-    "destinations": "UK Destinations",
+    "destinations": "Tours",
     "ourCompany": "Our Company",
     "about": "About Us",
     "partners": "Partners",
@@ -1226,6 +1289,11 @@
       "title": "Private Windsor Castle Tour from London | Silk Ride Chauffeur",
       "description": "Private Windsor Castle tour from London with luxury Mercedes chauffeur. Skip-the-line entry, expert driver, door-to-door service. Book your day trip today.",
       "keywords": "windsor castle tour from london, private windsor castle tour, windsor castle chauffeur, windsor castle day trip, london to windsor castle, windsor castle skip the line, windsor and stonehenge tour, windsor castle private tour, st george chapel tour, windsor castle from london by car"
+    },
+    "destinationsHub": {
+      "title": "Private Day Trips & Tours from London | Silk Ride Chauffeur",
+      "description": "Private chauffeur-driven day trips from London — Windsor Castle, Stonehenge, Oxford, Cambridge, Bath and the Cotswolds. Luxury Mercedes, door-to-door, flexible itineraries.",
+      "keywords": "day trips from london, private tours from london, chauffeur day tours, london day trips by car, windsor stonehenge oxford cambridge bath cotswolds tour, private day trip chauffeur london"
     },
     "corporateTravel": {
       "title": "Corporate Chauffeur London | Executive Car Service",

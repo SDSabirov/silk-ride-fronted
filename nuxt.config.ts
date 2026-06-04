@@ -252,6 +252,7 @@ export default defineNuxtConfig({
         { loc: '/blog', priority: 0.8, changefreq: 'daily' },
         { loc: '/airport-transfers/biggin-hill', priority: 0.8, changefreq: 'weekly' },
         { loc: '/airport-transfers/farnborough', priority: 0.8, changefreq: 'weekly' },
+        { loc: '/destination-tours', priority: 0.85, changefreq: 'monthly' },
         { loc: '/destination-tours/oxford', priority: 0.85, changefreq: 'monthly' },
         { loc: '/destination-tours/cambridge', priority: 0.85, changefreq: 'monthly' },
         { loc: '/destination-tours/bath', priority: 0.85, changefreq: 'monthly' },

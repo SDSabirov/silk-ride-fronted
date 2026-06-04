@@ -75,7 +75,10 @@
       "Bash(nslookup silkride.co.uk 8.8.8.8)",
       "Bash(nslookup silkride.co.uk 1.1.1.1)",
       "Bash(nslookup www.silkride.co.uk 8.8.8.8)",
-      "Bash(nslookup www.silkride.co.uk 1.1.1.1)"
+      "Bash(nslookup www.silkride.co.uk 1.1.1.1)",
+      "Bash(python \"C:\\\\Users\\\\saido\\\\.claude\\\\plugins\\\\cache\\\\ui-ux-pro-max-skill\\\\ui-ux-pro-max\\\\2.0.1\\\\.claude\\\\skills\\\\ui-ux-pro-max\\\\scripts\\\\search.py\" \"luxury chauffeur service private tours destination landing page elegant premium\" --design-system -p \"Silk Ride Destinations\")",
+      "Bash(python \"C:/Users/saido/.claude/plugins/cache/ui-ux-pro-max-skill/ui-ux-pro-max/2.0.1/src/ui-ux-pro-max/scripts/search.py\" \"luxury chauffeur private tours destination travel premium elegant\" --design-system -p \"Silk Ride Destinations\")",
+      "Bash(python -c \"import json; d=json.load\\(open\\('i18n/locales/en.json',encoding='utf-8'\\)\\)['seo']; [print\\('===',k,'===\\\\nT:',d[k].get\\('title'\\),'\\\\nD:',d[k].get\\('description'\\),'\\\\nK:',d[k].get\\('keywords','\\(none\\)'\\)\\) for k in ['oxfordChauffeur','cambridgeChauffeur','bathChauffeur','cotswoldsChauffeur','stonehengeChauffeur','windsorChauffeur']]\")"
     ],
     "deny": []
   }

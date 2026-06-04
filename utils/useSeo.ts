@@ -3,12 +3,22 @@ import { useHead, useRoute } from '#imports'
 
 const SITE_URL = 'https://silkride.co.uk'
 
-export function useSeo(pageKey: string) {
+interface UseSeoOptions {
+  /** Page-specific social share image. Absolute URL or root-relative path. */
+  image?: string
+}
+
+export function useSeo(pageKey: string, options: UseSeoOptions = {}) {
   const { t, locale } = useI18n()
   const route = useRoute()
 
   const title = t(`seo.${pageKey}.title`)
   const description = t(`seo.${pageKey}.description`)
+
+  // Per-page OG/Twitter image (falls back to the global default in app.head)
+  const ogImage = options.image
+    ? (options.image.startsWith('http') ? options.image : `${SITE_URL}${options.image}`)
+    : `${SITE_URL}/og-image.jpg`
 
   // Generate canonical URL (without locale prefix for default, with prefix for others)
   const canonicalPath = locale.value === 'en'
@@ -29,12 +39,12 @@ export function useSeo(pageKey: string) {
       { property: 'og:description', content: description },
       { property: 'og:type', content: 'website' },
       { property: 'og:url', content: canonicalUrl },
-      { property: 'og:image', content: `${SITE_URL}/og-image.jpg` },
+      { property: 'og:image', content: ogImage },
       { property: 'og:locale', content: locale.value === 'en' ? 'en_GB' : 'ru_RU' },
       { name: 'twitter:card', content: 'summary_large_image' },
       { name: 'twitter:title', content: title },
       { name: 'twitter:description', content: description },
-      { name: 'twitter:image', content: `${SITE_URL}/og-image.jpg` }
+      { name: 'twitter:image', content: ogImage }
     ],
     link: [
       { rel: 'canonical', href: canonicalUrl },
