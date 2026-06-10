@@ -88,10 +88,11 @@ export interface Destination {
   /**
    * Flat day-rate per vehicle in GBP. `withoutGuide` = chauffeur only,
    * `withGuide` = chauffeur + private Blue Badge guide.
-   * NOTE: only Stonehenge (500 / 950) is confirmed — the rest are
-   * placeholders to be updated later.
+   * `hours` = maximum tour duration shown on the pricing cards.
+   * `entryNote` = show "entry tickets not included" instead of the default
+   * pricing footnote (Stonehenge & Windsor).
    */
-  pricing: { withoutGuide: number; withGuide: number }
+  pricing: { withoutGuide: number; withGuide: number; hours?: number; entryNote?: boolean }
   /** Used by related-tour cards and the hub grid. */
   card: { tagline: string; icon: string }
   schema: {
@@ -112,20 +113,20 @@ export const destinations: Record<string, Destination> = {
       title: 'Private Windsor Castle Tours',
       titleAccent: 'from London',
       subtitle:
-        "Step inside the world's oldest occupied royal castle in true comfort. A chauffeured Mercedes collects you in London, drives you to Windsor in under an hour, and waits while you explore at your own pace.",
+        "Step inside the world's oldest occupied royal castle in true comfort. A chauffeured Mercedes collects you in London, drives you to Windsor in around an hour, and waits while you explore at your own pace.",
       image: '/images/covers/windsor.webp',
       alt: 'Windsor Castle round tower and royal grounds — private chauffeur tour from London',
       ogImage: '/images/covers/windsor.webp',
     },
     stats: [
-      { icon: 'bx-time-five', label: '~50 Minutes', sub: 'From Central London via M4' },
+      { icon: 'bx-time-five', label: '~1 Hour', sub: 'From Central London via M4' },
       { icon: 'bx-crown', label: '1,000 Years of Royals', sub: "The King's official residence" },
       { icon: 'bx-user-voice', label: 'Private Chauffeur', sub: 'Mercedes S-Class or V-Class' },
     ],
     overview: {
       heading: 'The Oldest & Largest Occupied Castle in the World',
       paragraphs: [
-        'A Windsor Castle tour from London is the most accessible — and the most cinematic — royal day trip in the UK. Just 22 miles west of central London via the M4, Windsor has been the official residence of the British monarch for almost a thousand years, from William the Conqueror to King Charles III. Silk Ride chauffeurs collect you from your London address, drive you to the castle gate in around 50 minutes, and wait while you explore.',
+        'A Windsor Castle tour from London is the most accessible — and the most cinematic — royal day trip in the UK. Just 22 miles west of central London via the M4, Windsor has been the official residence of the British monarch for almost a thousand years, from William the Conqueror to King Charles III. Silk Ride chauffeurs collect you from your London address, drive you to the castle gate in around an hour, and wait while you explore.',
         "Inside the castle precincts you'll see the State Apartments — still used today for State visits and investitures — the breathtaking St George's Chapel, where Henry VIII, Queen Elizabeth II and Prince Philip are buried, and Queen Mary's Dolls' House, the largest and most detailed in the world. Allow 2.5 to 3 hours on site to do it properly.",
         'Because the journey is short, Windsor pairs beautifully with other day-trip favourites: Stonehenge (1h20 from Windsor), Bath (1h45), the Roman amphitheatre at Verulamium, or a punt at Oxford. Your driver will plan the day around your pace — no coach schedules, no rushed exits.',
       ],
@@ -133,7 +134,7 @@ export const destinations: Record<string, Destination> = {
       includes: [
         'Private Mercedes with professional chauffeur',
         'Door-to-door pickup from any London address',
-        'Pre-booked Windsor Castle admission (skip the line)',
+        'Timed-entry castle tickets arranged on request (admission not included)',
         'Complimentary bottled water and Wi-Fi onboard',
         'Flexible itinerary — add Stonehenge, Bath or Eton',
         'Private tour guide available on request',
@@ -221,7 +222,7 @@ export const destinations: Record<string, Destination> = {
     journeys: {
       title: 'Journey Times & Routes',
       items: [
-        { place: 'Central London', time: '~50 min', note: 'Via M4 westbound' },
+        { place: 'Central London', time: '~1 hour', note: 'Via M4 westbound' },
         { place: 'Heathrow Airport', time: '~15 min', note: 'Perfect layover day trip' },
         { place: 'Stonehenge', time: '~1h 20', note: 'Royal & ancient combo' },
         { place: 'Bath', time: '~1h 45', note: 'Roman Baths add-on' },
@@ -238,7 +239,7 @@ export const destinations: Record<string, Destination> = {
       {
         question: 'Are Windsor Castle tickets included in the tour?',
         answer:
-          'Yes. Every Silk Ride Windsor Castle tour includes pre-booked timed-entry tickets so you skip the ticket queue. As of 2026, the published gate prices are £31 adult, £20 youth (18–24) and £15.50 child (5–17). Children under 5 enter free.',
+          'No — castle entry tickets are not included in the tour price. We are happy to pre-book timed-entry tickets for you and add them to your quote so you still skip the ticket queue. As of 2026, the published gate prices are £31 adult, £20 youth (18–24) and £15.50 child (5–17). Children under 5 enter free.',
       },
       {
         question: 'What days is Windsor Castle open?',
@@ -281,13 +282,13 @@ export const destinations: Record<string, Destination> = {
         "Tell us your dates, group size and any add-on stops — we'll send back a tailored quote within an hour.",
     },
     card: {
-      tagline: "Britain's most famous royal castle — 1,000 years of history, 50 minutes from London.",
+      tagline: "Britain's most famous royal castle — 1,000 years of history, an hour from London.",
       icon: 'bxs-castle',
     },
-    pricing: { withoutGuide: 450, withGuide: 850 },
+    pricing: { withoutGuide: 450, withGuide: 850, entryNote: true },
     schema: {
       description:
-        'Private chauffeur-driven tours to Windsor Castle from London. Luxury Mercedes, skip-the-line entry, expert drivers and door-to-door service.',
+        'Private chauffeur-driven tours to Windsor Castle from London. Luxury Mercedes, expert drivers and door-to-door service.',
       geo: { lat: 51.4839, lng: -0.6044 },
       areaServed: [
         { type: 'Place', name: 'Windsor Castle' },
@@ -319,7 +320,7 @@ export const destinations: Record<string, Destination> = {
       title: 'Private Stonehenge Tours',
       titleAccent: 'from London',
       subtitle:
-        "Skip the coach crowds. Travel to the world's most famous prehistoric monument in a chauffeured Mercedes — door-to-door from your London hotel, with skip-the-line tickets and a fully flexible itinerary.",
+        "Skip the coach crowds. Travel to the world's most famous prehistoric monument in a chauffeured Mercedes — door-to-door from your London hotel, with a fully flexible itinerary.",
       image: '/images/covers/stonehenge.webp',
       alt: 'Stonehenge prehistoric stone circle at sunrise — private chauffeur tour from London',
       ogImage: '/images/covers/stonehenge.webp',
@@ -340,7 +341,7 @@ export const destinations: Record<string, Destination> = {
       includes: [
         'Private Mercedes with professional chauffeur',
         'Door-to-door pickup from any London address',
-        'Skip-the-line Stonehenge entry tickets',
+        'Timed entry tickets arranged on request (admission not included)',
         'Complimentary bottled water and Wi-Fi onboard',
         'Flexible itinerary — combine with Bath, Salisbury, or Avebury',
         'Inner Circle access available on request',
@@ -445,7 +446,7 @@ export const destinations: Record<string, Destination> = {
       {
         question: 'Are Stonehenge entry tickets included in the tour?',
         answer:
-          'Yes. Every Silk Ride Stonehenge tour includes timed English Heritage entry tickets so you skip the queue at the visitor centre. Just let us know your preferred arrival window when you book.',
+          'No — English Heritage entry tickets are not included in the tour price. We can pre-book timed entry tickets for you and add them to your quote so you skip the queue at the visitor centre. Just let us know your preferred arrival window when you book.',
       },
       {
         question: 'Can I get Inner Circle access to walk among the stones?',
@@ -490,10 +491,10 @@ export const destinations: Record<string, Destination> = {
       tagline: "The world's most famous prehistoric monument — a UNESCO stone circle on Salisbury Plain.",
       icon: 'bx-circle',
     },
-    pricing: { withoutGuide: 500, withGuide: 950 },
+    pricing: { withoutGuide: 450, withGuide: 750, hours: 6, entryNote: true },
     schema: {
       description:
-        'Private chauffeur-driven tours to Stonehenge from London. Luxury Mercedes, skip-the-line tickets, flexible itineraries and door-to-door service.',
+        'Private chauffeur-driven tours to Stonehenge from London. Luxury Mercedes, flexible itineraries and door-to-door service.',
       geo: { lat: 51.1789, lng: -1.8262 },
       areaServed: [
         { type: 'Place', name: 'Stonehenge' },
@@ -523,13 +524,13 @@ export const destinations: Record<string, Destination> = {
       title: 'Private Oxford Tours',
       titleAccent: 'from London',
       subtitle:
-        'Explore the City of Dreaming Spires in comfort. A chauffeured Mercedes collects you in London, reaches Oxford in around an hour, and waits while you wander 900 years of colleges, libraries and gardens at your own pace.',
+        'Explore the City of Dreaming Spires in comfort. A chauffeured Mercedes collects you in London, reaches Oxford in around 1.5 to 2 hours, and waits while you wander 900 years of colleges, libraries and gardens at your own pace.',
       image: '/images/covers/oxford.png',
       alt: 'Oxford university spires and historic college architecture — private chauffeur tour from London',
       ogImage: '/images/covers/oxford.png',
     },
     stats: [
-      { icon: 'bx-time-five', label: '~60 Minutes', sub: 'From Central London via M40' },
+      { icon: 'bx-time-five', label: '1.5–2 Hours', sub: 'From Central London via M40' },
       { icon: 'bx-book-reader', label: '38 Historic Colleges', sub: "The world's oldest English-speaking university" },
       { icon: 'bx-user-voice', label: 'Private Chauffeur', sub: 'Mercedes S-Class or V-Class' },
     ],
@@ -689,7 +690,7 @@ export const destinations: Record<string, Destination> = {
       tagline: 'Dreaming spires and 38 historic colleges — an hour from London.',
       icon: 'bx-book-reader',
     },
-    pricing: { withoutGuide: 450, withGuide: 850 },
+    pricing: { withoutGuide: 650, withGuide: 1250, hours: 9 },
     schema: {
       description:
         'Luxury chauffeur service and private tours to Oxford from London, featuring university visits, museums and historic attractions.',
@@ -720,13 +721,13 @@ export const destinations: Record<string, Destination> = {
       title: 'Private Cambridge Tours',
       titleAccent: 'from London',
       subtitle:
-        'Glide into 800 years of academic history. A chauffeured Mercedes collects you in London, reaches Cambridge in under an hour, and waits while you explore the colleges, chapels and the River Cam at your own pace.',
+        'Glide into 800 years of academic history. A chauffeured Mercedes collects you in London, reaches Cambridge in around 1.5 to 2 hours, and waits while you explore the colleges, chapels and the River Cam at your own pace.',
       image: '/images/covers/cambridge.png',
       alt: "King's College Chapel and the River Cam — private chauffeur tour of Cambridge from London",
       ogImage: '/images/covers/cambridge.png',
     },
     stats: [
-      { icon: 'bx-time-five', label: '~55 Minutes', sub: 'From Central London via M11' },
+      { icon: 'bx-time-five', label: '1.5–2 Hours', sub: 'From Central London via M11' },
       { icon: 'bx-book-reader', label: '800 Years of History', sub: 'World-renowned colleges & chapels' },
       { icon: 'bx-water', label: 'Punting on the Cam', sub: 'The classic Cambridge experience' },
     ],
@@ -886,7 +887,7 @@ export const destinations: Record<string, Destination> = {
       tagline: 'Punting on the Cam and centuries-old colleges — under an hour from London.',
       icon: 'bx-water',
     },
-    pricing: { withoutGuide: 450, withGuide: 850 },
+    pricing: { withoutGuide: 650, withGuide: 1250, hours: 9 },
     schema: {
       description:
         'Luxury chauffeur service and private tours to Cambridge from London, featuring university visits, punting and historic attractions.',
@@ -1083,7 +1084,7 @@ export const destinations: Record<string, Destination> = {
       tagline: 'Roman Baths, Georgian crescents and thermal springs — a UNESCO World Heritage city.',
       icon: 'bx-building-house',
     },
-    pricing: { withoutGuide: 650, withGuide: 1100 },
+    pricing: { withoutGuide: 650, withGuide: 1250, hours: 9 },
     schema: {
       description:
         'Luxury chauffeur service and private tours to Bath from London, featuring the Roman Baths, Georgian architecture and UNESCO World Heritage attractions.',
@@ -1283,7 +1284,7 @@ export const destinations: Record<string, Destination> = {
       tagline: 'Honey-stone villages and rolling English countryside — off the coach routes.',
       icon: 'bx-landscape',
     },
-    pricing: { withoutGuide: 600, withGuide: 1050 },
+    pricing: { withoutGuide: 650, withGuide: 1250, hours: 9 },
     schema: {
       description:
         'Luxury chauffeur service and private countryside tours to the Cotswolds from London, featuring historic villages and scenic landscapes.',
@@ -1309,7 +1310,7 @@ export const destinations: Record<string, Destination> = {
 }
 
 // Display / crawl order for the hub grid and related-tour cards.
-export const destinationOrder = ['windsor', 'stonehenge', 'oxford', 'cambridge', 'bath', 'cotswolds']
+export const destinationOrder = ['stonehenge', 'windsor', 'oxford', 'cambridge', 'cotswolds', 'bath']
 
 export const destinationList: Destination[] = destinationOrder.map((slug) => destinations[slug])
 

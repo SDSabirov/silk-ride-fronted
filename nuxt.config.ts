@@ -54,6 +54,9 @@ export default defineNuxtConfig({
   },
   experimental: {
     payloadExtraction: false,
+    // Shared-element morphs on client-side navigation (fleet card → detail hero).
+    // No effect on SSR/prerender; unsupported browsers fall back silently.
+    viewTransition: true,
   },
   nitro: {
     preset: 'cloudflare-pages',
@@ -154,7 +157,7 @@ export default defineNuxtConfig({
     }
   },
   css: ["~/assets/css/main.css"],
-  modules: ["@nuxtjs/seo", "@nuxtjs/google-fonts", "@nuxt/image", "@pinia/nuxt", "@nuxtjs/i18n", 'nuxt-gtag'],
+  modules: ["@nuxtjs/seo", "@nuxt/fonts", "@nuxt/image", "@pinia/nuxt", "@nuxtjs/i18n", 'nuxt-gtag'],
   ogImage: {
     enabled: false,
   },
@@ -294,30 +297,22 @@ export default defineNuxtConfig({
         { name: 'twitter:site', content: '@silkridechauffeur' },
       ],
       link: [
-        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' },
+        // Fonts are self-hosted by @nuxt/fonts — no Google Fonts preconnect needed.
+        // Warm up the booking-widget origin so the hero/booking iframe resolves faster.
+        { rel: 'preconnect', href: 'https://app.silkride.co.uk' },
       ],
     }
   },
-  googleFonts: {
-    families: {
-      // NOTE: @nuxtjs/google-fonts in this version has a known bug where
-      // multi-weight families generate @font-face rules that all src: the
-      // lowest weight's woff2 file (verified in build output). As a result
-      // only the first listed weight is actually rendered correctly; the
-      // others are browser-synthesised. Keep this list to weights that are
-      // actually used to avoid wasting downloads. Playfair Display only
-      // ever pairs with font-bold (700) in the codebase (grep-confirmed), so
-      // 400 here acts as the rendered weight for any unexpected fallback.
-      // Fix: migrate to @nuxt/fonts in Phase 1.
-      "Playfair+Display": [400, 700],
-      "Open+Sans": [300, 400, 600],
+  // Self-hosted fonts via @nuxt/fonts (replaces @nuxtjs/google-fonts, which
+  // served every weight from the lowest weight's woff2 — faux-bold bug).
+  // Cyrillic subsets cover the RU locale.
+  fonts: {
+    defaults: {
+      subsets: ['latin', 'latin-ext', 'cyrillic'],
     },
-    display: "swap",
-    preload: true,
-    preconnect: true,
-    inject: true
+    families: [
+      { name: 'Playfair Display', provider: 'google', weights: [400, 500, 700], styles: ['normal', 'italic'] },
+      { name: 'Open Sans', provider: 'google', weights: [400, 600], styles: ['normal'] },
+    ],
   },
- 
- 
 });

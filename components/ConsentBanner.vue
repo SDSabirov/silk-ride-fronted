@@ -1,83 +1,69 @@
 <template>
-  <!-- Backdrop overlay -->
-  <Transition name="fade">
-    <div
-      v-if="show"
-      class="fixed inset-0 bg-black/40 z-[9997] pointer-events-none"
-    />
-  </Transition>
-
-  <!-- Consent Banner -->
+  <!-- Consent Banner — compact bottom-left card; never dims the page -->
   <Transition name="slide-up" appear>
     <div
       v-if="show"
-      class="fixed bottom-0 left-0 w-full z-[9998]"
+      class="fixed bottom-0 left-0 z-[9998] w-full p-3 sm:bottom-4 sm:left-4 sm:w-auto sm:max-w-md sm:p-0"
       role="dialog"
       aria-labelledby="consent-title"
       aria-describedby="consent-description"
     >
-      <!-- Gold accent bar -->
-      <div class="h-1 bg-gold" />
-      <div class="bg-gray-950 px-4 py-6 sm:py-5">
-        <div class="max-w-screen-lg mx-auto">
-          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
-            <div class="flex-1">
-              <h3 id="consent-title" class="font-semibold text-white text-base mb-1.5">Cookie Preferences</h3>
-              <p id="consent-description" class="text-gray-300 text-sm leading-relaxed mb-3">
-                We use cookies to enhance your browsing experience, provide personalized content, and analyze our traffic.
-                You can choose which types of cookies to allow.
-              </p>
-              <div class="flex flex-wrap gap-4 text-xs">
-                <NuxtLink to="/privacy-policy" class="text-gold hover:text-gold/80 hover:underline transition-colors">Privacy Policy</NuxtLink>
-                <button @click="showDetails = !showDetails" class="text-gold hover:text-gold/80 hover:underline transition-colors">
-                  {{ showDetails ? 'Hide Details' : 'Cookie Details' }}
-                </button>
-              </div>
-            </div>
+      <div class="overflow-hidden rounded-xl border border-white/10 bg-[#121110] shadow-2xl">
+        <!-- Gold accent bar -->
+        <div class="h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent" />
+        <div class="px-5 py-4">
+          <h3 id="consent-title" class="font-semibold text-white text-sm mb-1">Cookie Preferences</h3>
+          <p id="consent-description" class="text-gray-400 text-xs leading-relaxed mb-3">
+            We use cookies to enhance your experience and analyze our traffic.
+            <NuxtLink to="/privacy-policy" class="text-gold hover:text-gold-400 hover:underline transition-colors">Privacy Policy</NuxtLink>
+            ·
+            <button @click="showDetails = !showDetails" class="text-gold hover:text-gold-400 hover:underline transition-colors">
+              {{ showDetails ? 'Hide Details' : 'Details' }}
+            </button>
+          </p>
 
-            <div class="flex flex-col sm:flex-row gap-2.5 min-w-fit w-full sm:w-auto">
-              <button
-                @click="acceptAll"
-                class="bg-gold text-black font-semibold px-6 py-2.5 rounded-md hover:bg-gold/90 transition-colors focus:outline-none focus:ring-2 focus:ring-gold/50"
-                aria-label="Accept all cookies"
-              >
-                Accept All
-              </button>
-              <button
-                @click="essentialsOnly"
-                class="bg-transparent text-white border border-white/30 px-6 py-2.5 rounded-md hover:bg-white/10 transition-colors focus:outline-none focus:ring-2 focus:ring-white/30"
-                aria-label="Accept essential cookies only"
-              >
-                Essentials Only
-              </button>
-              <button
-                @click="showCustomize = true"
-                class="bg-transparent text-gray-400 border border-white/10 px-6 py-2.5 rounded-md hover:bg-white/5 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white/20"
-                aria-label="Customize cookie preferences"
-              >
-                Customize
-              </button>
-            </div>
+          <div class="flex items-center gap-2">
+            <button
+              @click="acceptAll"
+              class="flex-1 bg-gold text-black text-sm font-semibold px-4 py-2.5 rounded-md hover:bg-gold-400 transition-colors focus:outline-none focus:ring-2 focus:ring-gold/50"
+              aria-label="Accept all cookies"
+            >
+              Accept All
+            </button>
+            <button
+              @click="essentialsOnly"
+              class="flex-1 bg-transparent text-white text-sm border border-white/20 px-4 py-2.5 rounded-md hover:bg-white/10 transition-colors focus:outline-none focus:ring-2 focus:ring-white/30"
+              aria-label="Accept essential cookies only"
+            >
+              Essentials
+            </button>
+            <button
+              @click="showCustomize = true"
+              class="text-gray-500 text-xs underline-offset-2 hover:text-white hover:underline transition-colors px-1 focus:outline-none"
+              aria-label="Customize cookie preferences"
+            >
+              Customize
+            </button>
           </div>
 
           <!-- Cookie Details -->
           <Transition name="expand">
-            <div v-if="showDetails" class="mt-4 pt-4 border-t border-white/10">
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+            <div v-if="showDetails" class="mt-3 pt-3 border-t border-white/10">
+              <div class="grid grid-cols-1 gap-2 text-xs">
                 <div>
-                  <h4 class="font-semibold text-white mb-1">Essential Cookies</h4>
+                  <h4 class="font-semibold text-white mb-0.5">Essential Cookies</h4>
                   <p class="text-gray-400">Required for basic website functionality and cannot be disabled.</p>
                 </div>
                 <div>
-                  <h4 class="font-semibold text-white mb-1">Analytics Cookies</h4>
+                  <h4 class="font-semibold text-white mb-0.5">Analytics Cookies</h4>
                   <p class="text-gray-400">Help us understand how visitors use our website to improve user experience.</p>
                 </div>
                 <div>
-                  <h4 class="font-semibold text-white mb-1">Advertising Cookies</h4>
+                  <h4 class="font-semibold text-white mb-0.5">Advertising Cookies</h4>
                   <p class="text-gray-400">Used to deliver personalized advertisements based on your interests.</p>
                 </div>
                 <div>
-                  <h4 class="font-semibold text-white mb-1">Functional Cookies</h4>
+                  <h4 class="font-semibold text-white mb-0.5">Functional Cookies</h4>
                   <p class="text-gray-400">Enable enhanced functionality and personalization features.</p>
                 </div>
               </div>
@@ -195,10 +181,10 @@ onMounted(() => {
     }
     
     if (!consent) {
-      // Delay showing banner slightly for better UX
+      // Delay so the hero gets a clean first impression before the banner slides in
       setTimeout(() => {
         show.value = true
-      }, 1000)
+      }, 2500)
     }
     // Note: No need to call applyConsentSettings() for returning visitors here.
     // The 00.consent-mode.client.ts plugin already restores consent via restorePreviousConsent()

@@ -3,9 +3,11 @@
     <Navbar />
 
     <LandingMainHero />
+    <LandingServices />
     <LandingFleet />
     <LandingTrustSignals />
     <LandingAbout />
+    <LandingShowcase />
     <LandingTestimonials />
 
     <Footer />

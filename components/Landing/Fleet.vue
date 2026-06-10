@@ -1,325 +1,145 @@
 <template>
-  <section class="py-24 bg-stone-100" data-section="services">
-    <div class="max-w-screen-2xl mx-auto px-6">
-      <!-- Section Header -->
-      <div class="text-center mb-20">
-        <p class="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4">
-          {{ $t('landing.fleet.tagline') }}
-        </p>
-        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-          {{ $t('landing.fleet.title') }}
-        </h2>
-        <p class="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-          {{ $t('landing.fleet.subtitle') }}
-        </p>
-      </div>
+  <section class="dark-luxe relative overflow-hidden pt-44 md:pt-48 pb-24 md:pb-28" data-section="fleet">
+    <div class="grain" aria-hidden="true"></div>
 
-      <!-- Service Cards Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
-        <!-- Airport Transfers -->
-        <article class="group h-full">
-          <div class="service-card h-full flex flex-col bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500">
-            <div class="h-52 relative overflow-hidden">
-              <NuxtImg
-                src="/images/vclassjett.webp"
-                alt="Airport Transfer Service"
-                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                loading="lazy"
-                width="600"
-                height="400"
-              />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
-              <div class="absolute top-4 left-4">
-                <span class="px-3 py-1.5 bg-gold text-black text-xs font-semibold rounded-full">
-                  {{ $t('landing.fleet.airport.badge') }}
-                </span>
-              </div>
-            </div>
-            <div class="flex-1 flex flex-col p-6">
-              <h3 class="text-xl font-bold text-gray-900 mb-2">
-                {{ $t('landing.fleet.airport.title') }}
-              </h3>
-              <p class="text-gray-600 text-sm leading-relaxed mb-6 flex-1">
-                {{ $t('landing.fleet.airport.description') }}
-              </p>
-              <div class="flex items-baseline gap-2 mb-6 pb-6 border-b border-gray-100">
-                <span class="text-2xl font-bold text-gray-900">{{ $t('landing.fleet.airport.price') }}</span>
-                <span class="text-sm text-gray-500">{{ $t('landing.fleet.airport.route') }}</span>
-              </div>
-              <div class="flex gap-3">
-                <NuxtLink
-                  :to="localePath('/services/airport-transfers')"
-                  :aria-label="$t('pages.services.cards.airport.learnMoreLabel')"
-                  class="flex-1 text-center py-3 bg-gray-900 text-white text-sm font-semibold rounded-lg hover:bg-gray-800 transition-colors"
-                >
-                  {{ $t('common.learnMore') }}
-                  <span class="sr-only">{{ $t('pages.services.cards.airport.learnMoreLabel') }}</span>
-                </NuxtLink>
-                <NuxtLink
-                  :to="localePath('/booking')"
-                  class="flex-1 text-center py-3 bg-gold text-black text-sm font-semibold rounded-lg hover:bg-gold/90 transition-colors"
-                >
-                  {{ $t('common.bookNow') }}
-                </NuxtLink>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <!-- Corporate Travel -->
-        <article class="group h-full">
-          <div class="service-card h-full flex flex-col bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500">
-            <div class="h-52 relative overflow-hidden">
-              <NuxtImg
-                src="/images/covers/business-trip.webp"
-                alt="Corporate Travel Service"
-                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                loading="lazy"
-                width="600"
-                height="400"
-              />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
-              <div class="absolute top-4 left-4">
-                <span class="px-3 py-1.5 bg-white/90 text-gray-900 text-xs font-semibold rounded-full">
-                  {{ $t('landing.fleet.corporate.badge') }}
-                </span>
-              </div>
-            </div>
-            <div class="flex-1 flex flex-col p-6">
-              <h3 class="text-xl font-bold text-gray-900 mb-2">
-                {{ $t('landing.fleet.corporate.title') }}
-              </h3>
-              <p class="text-gray-600 text-sm leading-relaxed mb-6 flex-1">
-                {{ $t('landing.fleet.corporate.description') }}
-              </p>
-              <div class="flex items-baseline gap-2 mb-6 pb-6 border-b border-gray-100">
-                <span class="text-2xl font-bold text-gray-900">{{ $t('landing.fleet.corporate.price') }}</span>
-                <span class="text-sm text-gray-500">{{ $t('landing.fleet.corporate.minimum') }}</span>
-              </div>
-              <div class="flex gap-3">
-                <NuxtLink
-                  :to="localePath('/services/corporate-travel')"
-                  :aria-label="$t('pages.services.cards.corporate.learnMoreLabel')"
-                  class="flex-1 text-center py-3 bg-gray-900 text-white text-sm font-semibold rounded-lg hover:bg-gray-800 transition-colors"
-                >
-                  {{ $t('common.learnMore') }}
-                  <span class="sr-only">{{ $t('pages.services.cards.corporate.learnMoreLabel') }}</span>
-                </NuxtLink>
-                <NuxtLink
-                  :to="localePath('/booking')"
-                  class="flex-1 text-center py-3 bg-gold text-black text-sm font-semibold rounded-lg hover:bg-gold/90 transition-colors"
-                >
-                  {{ $t('common.bookNow') }}
-                </NuxtLink>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <!-- Wedding & Events -->
-        <article class="group h-full">
-          <div class="service-card h-full flex flex-col bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500">
-            <div class="h-52 relative overflow-hidden">
-              <NuxtImg
-                src="/images/covers/wedding.webp"
-                alt="Wedding & Event Service"
-                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                loading="lazy"
-                width="600"
-                height="400"
-              />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
-              <div class="absolute top-4 left-4">
-                <span class="px-3 py-1.5 bg-gold text-black text-xs font-semibold rounded-full">
-                  {{ $t('landing.fleet.wedding.badge') }}
-                </span>
-              </div>
-            </div>
-            <div class="flex-1 flex flex-col p-6">
-              <h3 class="text-xl font-bold text-gray-900 mb-2">
-                {{ $t('landing.fleet.wedding.title') }}
-              </h3>
-              <p class="text-gray-600 text-sm leading-relaxed mb-6 flex-1">
-                {{ $t('landing.fleet.wedding.description') }}
-              </p>
-              <div class="flex items-baseline gap-2 mb-6 pb-6 border-b border-gray-100">
-                <span class="text-2xl font-bold text-gray-900">{{ $t('landing.fleet.wedding.customQuote') }}</span>
-                <span class="text-sm text-gray-500">{{ $t('landing.fleet.wedding.packages') }}</span>
-              </div>
-              <div class="flex gap-3">
-                <NuxtLink
-                  :to="localePath('/services/wedding-chauffeur')"
-                  :aria-label="$t('pages.services.cards.wedding.learnMoreLabel')"
-                  class="flex-1 text-center py-3 bg-gray-900 text-white text-sm font-semibold rounded-lg hover:bg-gray-800 transition-colors"
-                >
-                  {{ $t('common.learnMore') }}
-                  <span class="sr-only">{{ $t('pages.services.cards.wedding.learnMoreLabel') }}</span>
-                </NuxtLink>
-                <NuxtLink
-                  :to="localePath('/contact-us')"
-                  class="flex-1 text-center py-3 bg-gold text-black text-sm font-semibold rounded-lg hover:bg-gold/90 transition-colors"
-                >
-                  {{ $t('commonHero.getQuote') }}
-                </NuxtLink>
-              </div>
-            </div>
-          </div>
-        </article>
-      </div>
-
-      <!-- Fleet Overview -->
-      <div class="mb-24">
-        <div class="text-center mb-12">
-          <h3 class="text-2xl md:text-3xl font-bold text-gray-900">
-            {{ $t('landing.fleet.fleetTitle') }}
-          </h3>
+    <!-- Destinations marquee (decorative breather strip) -->
+    <div class="marquee mb-16 md:mb-20" aria-hidden="true">
+      <div class="marquee-track">
+        <div class="flex items-center whitespace-nowrap">
+          <template v-for="(place, i) in places" :key="`a-${i}`">
+            <span class="font-serif italic text-2xl md:text-4xl text-white/25 whitespace-nowrap">{{ place }}</span>
+            <i class="bx bxs-circle text-gold/50 text-[0.4rem] mx-6 self-center"></i>
+          </template>
         </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <!-- E-Class -->
-          <NuxtLink
-            :to="localePath('/fleet/mercedes-e-class')"
-            class="group fleet-card"
-          >
-            <div class="relative h-48 overflow-hidden rounded-t-xl">
-              <NuxtImg
-                src="/images/eclass.webp"
-                alt="Mercedes E-Class"
-                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                loading="lazy"
-                width="500"
-                height="300"
-              />
-              <div class="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors"></div>
-            </div>
-            <div class="p-5 bg-white rounded-b-xl border border-t-0 border-gray-100">
-              <div class="flex items-center justify-between mb-3">
-                <h4 class="text-lg font-bold text-gray-900">{{ $t('landing.fleet.eclass.title') }}</h4>
-                <i class="bx bx-right-arrow-alt text-xl text-gray-400 group-hover:text-gold group-hover:translate-x-1 transition-all"></i>
-              </div>
-              <p class="text-gray-600 text-sm mb-4">{{ $t('landing.fleet.eclass.description') }}</p>
-              <div class="flex gap-2">
-                <span class="px-2.5 py-1 bg-gray-100 text-gray-700 text-xs rounded-md">{{ $t('landing.fleet.eclass.capacity') }}</span>
-                <span class="px-2.5 py-1 bg-gray-100 text-gray-700 text-xs rounded-md">{{ $t('landing.fleet.eclass.comfort') }}</span>
-              </div>
-            </div>
-          </NuxtLink>
-
-          <!-- S-Class -->
-          <NuxtLink
-            :to="localePath('/fleet/mercedes-s-class')"
-            class="group fleet-card"
-          >
-            <div class="relative h-48 overflow-hidden rounded-t-xl">
-              <NuxtImg
-                src="/images/sclassBackground.webp"
-                alt="Mercedes S-Class"
-                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                loading="lazy"
-                width="500"
-                height="300"
-              />
-              <div class="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors"></div>
-              <div class="absolute top-3 right-3">
-                <span class="px-2 py-1 bg-gold text-black text-xs font-semibold rounded">Premium</span>
-              </div>
-            </div>
-            <div class="p-5 bg-white rounded-b-xl border border-t-0 border-gray-100">
-              <div class="flex items-center justify-between mb-3">
-                <h4 class="text-lg font-bold text-gray-900">{{ $t('landing.fleet.sclass.title') }}</h4>
-                <i class="bx bx-right-arrow-alt text-xl text-gray-400 group-hover:text-gold group-hover:translate-x-1 transition-all"></i>
-              </div>
-              <p class="text-gray-600 text-sm mb-4">{{ $t('landing.fleet.sclass.description') }}</p>
-              <div class="flex gap-2">
-                <span class="px-2.5 py-1 bg-gray-100 text-gray-700 text-xs rounded-md">{{ $t('landing.fleet.sclass.capacity') }}</span>
-                <span class="px-2.5 py-1 bg-gray-100 text-gray-700 text-xs rounded-md">{{ $t('landing.fleet.sclass.luxury') }}</span>
-              </div>
-            </div>
-          </NuxtLink>
-
-          <!-- V-Class -->
-          <NuxtLink
-            :to="localePath('/fleet/mercedes-v-class')"
-            class="group fleet-card"
-          >
-            <div class="relative h-48 overflow-hidden rounded-t-xl">
-              <NuxtImg
-                src="/images/vclassjett.webp"
-                alt="Mercedes V-Class"
-                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                loading="lazy"
-                width="500"
-                height="300"
-              />
-              <div class="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors"></div>
-              <div class="absolute top-3 right-3">
-                <span class="px-2 py-1 bg-gray-900 text-white text-xs font-semibold rounded">Groups</span>
-              </div>
-            </div>
-            <div class="p-5 bg-white rounded-b-xl border border-t-0 border-gray-100">
-              <div class="flex items-center justify-between mb-3">
-                <h4 class="text-lg font-bold text-gray-900">{{ $t('landing.fleet.vclass.title') }}</h4>
-                <i class="bx bx-right-arrow-alt text-xl text-gray-400 group-hover:text-gold group-hover:translate-x-1 transition-all"></i>
-              </div>
-              <p class="text-gray-600 text-sm mb-4">{{ $t('landing.fleet.vclass.description') }}</p>
-              <div class="flex gap-2">
-                <span class="px-2.5 py-1 bg-gray-100 text-gray-700 text-xs rounded-md">{{ $t('landing.fleet.vclass.capacity') }}</span>
-                <span class="px-2.5 py-1 bg-gray-100 text-gray-700 text-xs rounded-md">{{ $t('landing.fleet.vclass.luggage') }}</span>
-              </div>
-            </div>
-          </NuxtLink>
+        <div class="flex items-center whitespace-nowrap" aria-hidden="true">
+          <template v-for="(place, i) in places" :key="`b-${i}`">
+            <span class="font-serif italic text-2xl md:text-4xl text-white/25 whitespace-nowrap">{{ place }}</span>
+            <i class="bx bxs-circle text-gold/50 text-[0.4rem] mx-6 self-center"></i>
+          </template>
         </div>
       </div>
+    </div>
 
-      <!-- Custom Request CTA -->
-      <div class="relative overflow-hidden rounded-2xl bg-gray-900 p-10 md:p-14">
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(212,175,55,0.15),transparent_50%)]"></div>
-        <div class="relative z-10 text-center">
-          <h3 class="text-2xl md:text-3xl font-bold mb-4 text-white">
-            {{ $t('servicesSection.customRequest.title') }}
-          </h3>
-          <p class="text-gray-400 mb-8 max-w-xl mx-auto">
-            {{ $t('servicesSection.customRequest.description') }}
+    <!-- Editorial header -->
+    <div v-reveal class="max-w-screen-2xl mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
+        <div class="lg:col-span-7">
+          <p class="text-xs font-semibold tracking-[0.25em] uppercase text-gold">
+            {{ $t('landing.fleet.fleetTagline') }}
           </p>
-          <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="tel:+442034882324"
-              class="inline-flex items-center justify-center gap-2 bg-gold text-black px-8 py-3.5 rounded-lg font-semibold hover:bg-gold/90 transition-colors"
-            >
-              <i class="bx bx-phone text-lg"></i>
-              +44 203 488 2324
-            </a>
-            <NuxtLink
-              :to="localePath('/contact-us')"
-              class="inline-flex items-center justify-center gap-2 border border-white/30 text-white px-8 py-3.5 rounded-lg font-semibold hover:bg-white/10 transition-colors"
-            >
-              {{ $t('common.getCustomQuote') }}
-            </NuxtLink>
-          </div>
+          <h2 class="mt-4 font-serif font-medium tracking-tight text-4xl md:text-5xl text-white [text-wrap:balance]">
+            {{ $t('landing.fleet.fleetTitle') }}
+          </h2>
+          <p class="text-gray-400 mt-4 max-w-xl">
+            {{ $t('landing.fleet.fleetSubtitle') }}
+          </p>
+        </div>
+        <div class="hidden lg:block lg:col-span-3 lg:col-start-10 self-end text-right">
+          <span class="font-serif text-gold/60 text-lg tracking-[0.3em]">
+            {{ $t('landing.fleet.fleetCount') }}
+          </span>
         </div>
       </div>
+    </div>
+
+    <!-- Horizontal snap rail -->
+    <div class="mt-12 flex gap-6 overflow-x-auto snap-x snap-mandatory pb-8 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden pl-6 pr-6 xl:pl-[max(1.5rem,calc((100vw-1536px)/2+1.5rem))]">
+      <NuxtLink
+        v-for="(car, i) in cars"
+        :key="car.key"
+        v-reveal="i"
+        :to="localePath(car.route)"
+        class="snap-start shrink-0 w-[min(85vw,580px)] group relative aspect-[16/10] rounded-2xl overflow-hidden border border-white/10 lift-card cursor-pointer focus-visible:ring-2 focus-visible:ring-gold/60 focus-visible:outline-none"
+      >
+        <NuxtImg
+          :src="car.img"
+          :alt="$t(`${car.prefix}.title`)"
+          class="absolute inset-0 w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-700"
+          :style="`view-transition-name: ${car.viewTransitionName}`"
+          loading="lazy"
+          width="580"
+          height="363"
+          sizes="(max-width: 768px) 85vw, 580px"
+        />
+
+        <!-- Overlays -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent" aria-hidden="true"></div>
+        <div class="absolute bottom-0 inset-x-0 h-24 bg-[radial-gradient(60%_100%_at_50%_100%,rgba(212,175,55,0.16),transparent_70%)]" aria-hidden="true"></div>
+
+        <!-- Index -->
+        <span class="absolute top-5 right-6 font-serif text-gold/50 text-lg tracking-[0.2em]" aria-hidden="true">
+          {{ car.index }}
+        </span>
+
+        <!-- Content -->
+        <div class="absolute bottom-0 inset-x-0 p-7">
+          <div class="flex items-end justify-between gap-4">
+            <div>
+              <h3 class="font-serif font-medium text-2xl md:text-3xl text-white">
+                {{ $t(`${car.prefix}.title`) }}
+              </h3>
+              <p class="text-white/60 text-sm mt-1">
+                {{ $t(`${car.prefix}.description`) }}
+              </p>
+              <div class="flex flex-wrap gap-2 mt-4">
+                <span class="border border-white/15 text-white/70 text-xs rounded-full px-3 py-1.5">
+                  {{ $t(`${car.prefix}.capacity`) }}
+                </span>
+                <span class="border border-white/15 text-white/70 text-xs rounded-full px-3 py-1.5">
+                  {{ $t(`${car.prefix}.${car.tagKey}`) }}
+                </span>
+              </div>
+            </div>
+            <i
+              class="bx bx-right-arrow-alt text-2xl text-gold shrink-0 group-hover:translate-x-1 transition-transform"
+              aria-hidden="true"
+            ></i>
+          </div>
+        </div>
+      </NuxtLink>
     </div>
   </section>
 </template>
 
 <script setup>
-import { useLocalePath } from '#imports'
+import { computed } from 'vue'
+import { useLocalePath, useI18n } from '#imports'
 
 const localePath = useLocalePath()
+const { tm, rt } = useI18n()
+
+const places = computed(() => {
+  const raw = tm('landing.marquee')
+  return Array.isArray(raw) ? raw.map((i) => rt(i)) : []
+})
+
+const cars = [
+  {
+    key: 'eclass',
+    route: '/fleet/mercedes-e-class',
+    img: '/images/eclass.webp',
+    prefix: 'landing.fleet.eclass',
+    viewTransitionName: 'fleet-eclass',
+    index: '01',
+    tagKey: 'comfort'
+  },
+  {
+    key: 'sclass',
+    route: '/fleet/mercedes-s-class',
+    img: '/images/sclassBackground.webp',
+    prefix: 'landing.fleet.sclass',
+    viewTransitionName: 'fleet-sclass',
+    index: '02',
+    tagKey: 'luxury'
+  },
+  {
+    key: 'vclass',
+    route: '/fleet/mercedes-v-class',
+    img: '/images/vclassjett.webp',
+    prefix: 'landing.fleet.vclass',
+    viewTransitionName: 'fleet-vclass',
+    index: '03',
+    tagKey: 'luggage'
+  }
+]
 </script>
-
-<style scoped>
-.service-card {
-  border: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.fleet-card {
-  display: block;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.fleet-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
-}
-</style>

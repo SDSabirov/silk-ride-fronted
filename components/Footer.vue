@@ -1,10 +1,11 @@
 <template>
-  <footer class="bg-gradient-to-b from-gray-900 to-black text-white">
+  <footer class="bg-gradient-to-b from-[#121110] to-[#0A0908] text-white">
     <!-- Gold accent line -->
     <div class="h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent"></div>
 
-    <!-- Trust Badges Section -->
-    <div class="border-b border-white/10">
+    <!-- Trust Badges Section — hidden on the homepage, where the hero strip and
+         "Why Choose Us" section already show the same signals -->
+    <div v-if="!isHomepage" class="border-b border-white/10">
       <div class="max-w-screen-2xl mx-auto px-6 py-8">
         <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
           <div class="flex items-center gap-3">
@@ -258,8 +259,16 @@
 </template>
 
 <script setup>
+import { computed } from 'vue'
 import { useLocalePath } from '#imports'
+import { useRoute } from 'vue-router'
 
 const localePath = useLocalePath()
+const route = useRoute()
 const currentYear = new Date().getFullYear()
+
+const isHomepage = computed(() => {
+  const path = route.path.replace(/\/$/, '') || '/'
+  return path === '/' || path === '/ru'
+})
 </script>

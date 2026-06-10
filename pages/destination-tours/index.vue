@@ -3,12 +3,12 @@
     <Navbar />
 
     <!-- Hero band -->
-    <section class="relative overflow-hidden bg-gray-950 py-20 text-white sm:py-24 lg:py-28">
+    <section class="relative overflow-hidden bg-[#0A0908] py-20 text-white sm:py-24 lg:py-28">
       <div class="pointer-events-none absolute -left-24 -top-24 h-72 w-72 rounded-full bg-gold/10 blur-3xl"></div>
       <div class="pointer-events-none absolute -bottom-24 -right-24 h-80 w-80 rounded-full bg-gold/10 blur-3xl"></div>
       <div class="relative mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
         <p class="dt-hub-kicker">{{ $t('tours.hub.kicker') }}</p>
-        <h1 class="mx-auto mt-5 max-w-3xl font-heading text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">
+        <h1 class="mx-auto mt-5 max-w-3xl font-heading text-3xl font-medium leading-tight sm:text-4xl md:text-5xl">
           {{ $t('tours.hub.title') }}<span class="text-gold">{{ $t('tours.hub.titleAccent') }}</span>
         </h1>
         <p class="mx-auto mt-5 max-w-2xl text-base text-white/85 sm:text-lg">
@@ -39,7 +39,7 @@
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="mx-auto max-w-3xl text-center">
           <p class="dt-kicker justify-center">{{ $t('tours.hub.chooseKicker') }}</p>
-          <h2 class="mt-4 font-heading text-3xl font-bold text-black md:text-4xl">{{ $t('tours.hub.chooseTitle') }}</h2>
+          <h2 class="mt-4 font-heading text-3xl font-medium text-black md:text-4xl">{{ $t('tours.hub.chooseTitle') }}</h2>
           <p class="mt-4 leading-relaxed text-gray-600">
             {{ $t('tours.hub.chooseSubtitle') }}
           </p>
@@ -80,11 +80,11 @@
     <!-- CTA -->
     <section class="bg-white pb-16 sm:pb-20 lg:pb-24">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-black via-gray-900 to-black px-6 py-14 text-center text-white shadow-2xl sm:px-12 sm:py-16">
+        <div class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#0A0908] via-[#1A1816] to-[#0A0908] px-6 py-14 text-center text-white shadow-2xl sm:px-12 sm:py-16">
           <div class="pointer-events-none absolute -left-20 -top-20 h-64 w-64 rounded-full bg-gold/15 blur-3xl"></div>
           <div class="pointer-events-none absolute -bottom-20 -right-20 h-64 w-64 rounded-full bg-gold/15 blur-3xl"></div>
           <div class="relative">
-            <h2 class="font-heading text-3xl font-bold md:text-4xl">{{ $t('tours.hub.ctaTitle') }}</h2>
+            <h2 class="font-heading text-3xl font-medium md:text-4xl">{{ $t('tours.hub.ctaTitle') }}</h2>
             <p class="mx-auto mt-4 max-w-2xl text-lg text-white/85">
               {{ $t('tours.hub.ctaSubtitle') }}
             </p>
@@ -150,14 +150,14 @@ useSchemaOrg([
   font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #FFCB6C;
+  color: #D4AF37;
 }
 .dt-hub-kicker::before,
 .dt-hub-kicker::after {
   content: '';
   width: 1.75rem;
   height: 1px;
-  background-color: #FFCB6C;
+  background-color: #D4AF37;
 }
 
 .dt-kicker {
@@ -174,7 +174,7 @@ useSchemaOrg([
   content: '';
   width: 1.75rem;
   height: 1px;
-  background-color: #FFCB6C;
+  background-color: #D4AF37;
 }
 
 .dt-hub-btn-primary,
@@ -189,7 +189,7 @@ useSchemaOrg([
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .dt-hub-btn-primary {
-  background-color: #FFCB6C;
+  background-color: #D4AF37;
   color: #000;
   font-weight: 700;
   box-shadow: 0 10px 25px -8px rgba(0, 0, 0, 0.5);
@@ -199,18 +199,18 @@ useSchemaOrg([
   filter: brightness(0.96);
 }
 .dt-hub-btn-outline {
-  color: #FFCB6C;
-  border: 2px solid #FFCB6C;
+  color: #D4AF37;
+  border: 2px solid #D4AF37;
   font-weight: 600;
 }
 .dt-hub-btn-outline:hover {
-  background-color: #FFCB6C;
+  background-color: #D4AF37;
   color: #000;
   transform: translateY(-2px);
 }
 .dt-hub-btn-primary:focus-visible,
 .dt-hub-btn-outline:focus-visible {
-  outline: 2px solid #FFCB6C;
+  outline: 2px solid #D4AF37;
   outline-offset: 3px;
 }
 

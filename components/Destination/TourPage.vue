@@ -9,7 +9,7 @@
       Desktop (lg+): image becomes a full-bleed background and the text
       overlays it cinematically.
     -->
-    <section class="relative flex flex-col overflow-hidden bg-gray-950 lg:min-h-[90vh] lg:justify-center">
+    <section class="relative flex flex-col overflow-hidden bg-[#0A0908] lg:min-h-[90vh] lg:justify-center">
       <img
         :src="heroSrc"
         :alt="d.hero.alt"
@@ -26,14 +26,14 @@
       <div class="absolute inset-0 hidden bg-gradient-to-r from-black/85 via-black/45 to-transparent lg:block"></div>
 
       <!-- content: solid dark panel on mobile, transparent overlay on desktop -->
-      <div class="relative z-10 w-full bg-gray-950 lg:bg-transparent">
+      <div class="relative z-10 w-full bg-[#0A0908] lg:bg-transparent">
         <div class="mx-auto w-full max-w-7xl px-4 py-10 sm:px-6 lg:px-8 lg:py-24">
           <div class="max-w-3xl text-white">
           <p class="dt-reveal mb-5 inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.22em] text-gold sm:text-sm">
             <span class="h-px w-8 bg-gold"></span>
             {{ d.kicker }}
           </p>
-          <h1 class="dt-reveal dt-reveal-1 font-heading text-3xl font-bold leading-[1.1] sm:text-4xl md:text-5xl xl:text-6xl">
+          <h1 class="dt-reveal dt-reveal-1 font-heading text-3xl font-medium leading-[1.1] sm:text-4xl md:text-5xl xl:text-6xl">
             {{ d.hero.title }}
             <span class="block text-gold sm:inline">{{ d.hero.titleAccent }}</span>
           </h1>
@@ -89,7 +89,7 @@
       <div class="mx-auto grid max-w-7xl items-start gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-8">
         <div>
           <p class="dt-kicker">{{ $t('tours.kicker.destination') }}</p>
-          <h2 class="mt-4 font-heading text-3xl font-bold text-black md:text-4xl">{{ d.overview.heading }}</h2>
+          <h2 class="mt-4 font-heading text-3xl font-medium text-black md:text-4xl">{{ d.overview.heading }}</h2>
           <div class="mt-5 h-1 w-16 bg-gold"></div>
           <div class="mt-6 space-y-4">
             <p
@@ -123,12 +123,72 @@
       </div>
     </section>
 
+    <!-- ========================== PRICING ========================== -->
+    <section class="bg-gradient-to-b from-white to-gray-50 py-16 sm:py-20 lg:py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-3xl text-center">
+          <p class="dt-kicker justify-center">{{ $t('tours.pricing.kicker') }}</p>
+          <h2 class="mt-4 font-heading text-3xl font-medium text-black md:text-4xl">{{ $t('tours.pricing.title') }}</h2>
+          <p class="mt-4 leading-relaxed text-gray-600">{{ $t('tours.pricing.intro') }}</p>
+        </div>
+
+        <div class="mx-auto mt-12 grid max-w-4xl items-start gap-6 md:grid-cols-2">
+          <!-- Chauffeur only -->
+          <div class="flex flex-col rounded-2xl border border-gray-200 bg-white p-8 shadow-sm">
+            <h3 class="font-heading text-xl font-bold text-black">{{ $t('tours.pricing.chauffeurTitle') }}</h3>
+            <div class="mt-4 flex items-baseline gap-2">
+              <span class="text-sm text-gray-500">{{ $t('tours.pricing.from') }}</span>
+              <span class="font-heading text-4xl font-bold text-black">£{{ d.pricing.withoutGuide }}</span>
+            </div>
+            <p class="mt-1 text-sm text-gray-500">{{ $t('tours.pricing.perVehicle') }}</p>
+            <p v-if="d.pricing.hours" class="mt-0.5 text-sm text-gray-500">{{ $t('tours.pricing.upToHours', { hours: d.pricing.hours }) }}</p>
+            <ul class="mt-6 space-y-3 border-t border-gray-100 pt-6 text-sm text-gray-700">
+              <li v-for="key in chauffeurFeatures" :key="key" class="flex items-start gap-2">
+                <i class="bx bx-check mt-0.5 shrink-0 text-gold" aria-hidden="true"></i>
+                <span>{{ $t(key) }}</span>
+              </li>
+            </ul>
+            <NuxtLink
+              :to="bookingPath"
+              class="mt-8 inline-flex items-center justify-center gap-2 rounded-lg border-2 border-black px-6 py-3 font-semibold text-black transition-colors hover:bg-black hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
+            >
+              {{ $t('tours.bookTour', { name: d.name }) }}
+            </NuxtLink>
+          </div>
+
+          <!-- Chauffeur + private guide (featured) -->
+          <div class="relative flex flex-col rounded-2xl border-2 border-gold bg-[#0A0908] p-8 text-white shadow-xl">
+            <span class="absolute -top-3 left-8 rounded-full bg-gold px-3 py-1 text-xs font-bold uppercase tracking-wide text-black">{{ $t('tours.pricing.popular') }}</span>
+            <h3 class="font-heading text-xl font-bold">{{ $t('tours.pricing.guideTitle') }}</h3>
+            <div class="mt-4 flex items-baseline gap-2">
+              <span class="text-sm text-white/60">{{ $t('tours.pricing.from') }}</span>
+              <span class="font-heading text-4xl font-bold text-gold">£{{ d.pricing.withGuide }}</span>
+            </div>
+            <p class="mt-1 text-sm text-white/60">{{ $t('tours.pricing.perVehicle') }}</p>
+            <p v-if="d.pricing.hours" class="mt-0.5 text-sm text-white/60">{{ $t('tours.pricing.upToHours', { hours: d.pricing.hours }) }}</p>
+            <ul class="mt-6 space-y-3 border-t border-white/10 pt-6 text-sm text-white/85">
+              <li v-for="key in guideFeatures" :key="key" class="flex items-start gap-2">
+                <i class="bx bx-check mt-0.5 shrink-0 text-gold" aria-hidden="true"></i>
+                <span>{{ $t(key) }}</span>
+              </li>
+            </ul>
+            <NuxtLink :to="bookingPath" class="dt-btn-primary mt-8">
+              {{ $t('tours.bookTour', { name: d.name }) }}
+            </NuxtLink>
+          </div>
+        </div>
+        <p class="mx-auto mt-6 max-w-2xl text-center text-sm text-gray-500">
+          {{ d.pricing.entryNote ? $t('tours.pricing.entryNotIncluded') : $t('tours.pricing.note') }}
+        </p>
+      </div>
+    </section>
+
     <!-- ========================= ATTRACTIONS ======================= -->
     <section class="bg-gradient-to-b from-gray-50 to-white py-16 sm:py-20 lg:py-24">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="mx-auto max-w-3xl text-center">
           <p class="dt-kicker justify-center">{{ $t('tours.kicker.whatToSee') }}</p>
-          <h2 class="mt-4 font-heading text-3xl font-bold text-black md:text-4xl">{{ d.attractions.title }}</h2>
+          <h2 class="mt-4 font-heading text-3xl font-medium text-black md:text-4xl">{{ d.attractions.title }}</h2>
           <p v-if="d.attractions.intro" class="mt-4 leading-relaxed text-gray-600">{{ d.attractions.intro }}</p>
         </div>
 
@@ -159,7 +219,7 @@
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="mx-auto max-w-3xl text-center">
           <p class="dt-kicker justify-center">{{ $t('tours.kicker.gettingThere') }}</p>
-          <h2 class="mt-4 font-heading text-3xl font-bold text-black md:text-4xl">{{ d.journeys.title }}</h2>
+          <h2 class="mt-4 font-heading text-3xl font-medium text-black md:text-4xl">{{ d.journeys.title }}</h2>
           <p class="mt-4 leading-relaxed text-gray-600">
             {{ d.journeys.intro || $t('tours.journeysDefaultIntro') }}
           </p>
@@ -182,68 +242,12 @@
       </div>
     </section>
 
-    <!-- ========================== PRICING ========================== -->
-    <section class="bg-gradient-to-b from-white to-gray-50 py-16 sm:py-20 lg:py-24">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="mx-auto max-w-3xl text-center">
-          <p class="dt-kicker justify-center">{{ $t('tours.pricing.kicker') }}</p>
-          <h2 class="mt-4 font-heading text-3xl font-bold text-black md:text-4xl">{{ $t('tours.pricing.title') }}</h2>
-          <p class="mt-4 leading-relaxed text-gray-600">{{ $t('tours.pricing.intro') }}</p>
-        </div>
-
-        <div class="mx-auto mt-12 grid max-w-4xl items-start gap-6 md:grid-cols-2">
-          <!-- Chauffeur only -->
-          <div class="flex flex-col rounded-2xl border border-gray-200 bg-white p-8 shadow-sm">
-            <h3 class="font-heading text-xl font-bold text-black">{{ $t('tours.pricing.chauffeurTitle') }}</h3>
-            <div class="mt-4 flex items-baseline gap-2">
-              <span class="text-sm text-gray-500">{{ $t('tours.pricing.from') }}</span>
-              <span class="font-heading text-4xl font-bold text-black">£{{ d.pricing.withoutGuide }}</span>
-            </div>
-            <p class="mt-1 text-sm text-gray-500">{{ $t('tours.pricing.perVehicle') }}</p>
-            <ul class="mt-6 space-y-3 border-t border-gray-100 pt-6 text-sm text-gray-700">
-              <li v-for="key in chauffeurFeatures" :key="key" class="flex items-start gap-2">
-                <i class="bx bx-check mt-0.5 shrink-0 text-gold" aria-hidden="true"></i>
-                <span>{{ $t(key) }}</span>
-              </li>
-            </ul>
-            <NuxtLink
-              :to="bookingPath"
-              class="mt-8 inline-flex items-center justify-center gap-2 rounded-lg border-2 border-black px-6 py-3 font-semibold text-black transition-colors hover:bg-black hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
-            >
-              {{ $t('tours.bookTour', { name: d.name }) }}
-            </NuxtLink>
-          </div>
-
-          <!-- Chauffeur + private guide (featured) -->
-          <div class="relative flex flex-col rounded-2xl border-2 border-gold bg-gray-950 p-8 text-white shadow-xl">
-            <span class="absolute -top-3 left-8 rounded-full bg-gold px-3 py-1 text-xs font-bold uppercase tracking-wide text-black">{{ $t('tours.pricing.popular') }}</span>
-            <h3 class="font-heading text-xl font-bold">{{ $t('tours.pricing.guideTitle') }}</h3>
-            <div class="mt-4 flex items-baseline gap-2">
-              <span class="text-sm text-white/60">{{ $t('tours.pricing.from') }}</span>
-              <span class="font-heading text-4xl font-bold text-gold">£{{ d.pricing.withGuide }}</span>
-            </div>
-            <p class="mt-1 text-sm text-white/60">{{ $t('tours.pricing.perVehicle') }}</p>
-            <ul class="mt-6 space-y-3 border-t border-white/10 pt-6 text-sm text-white/85">
-              <li v-for="key in guideFeatures" :key="key" class="flex items-start gap-2">
-                <i class="bx bx-check mt-0.5 shrink-0 text-gold" aria-hidden="true"></i>
-                <span>{{ $t(key) }}</span>
-              </li>
-            </ul>
-            <NuxtLink :to="bookingPath" class="dt-btn-primary mt-8">
-              {{ $t('tours.bookTour', { name: d.name }) }}
-            </NuxtLink>
-          </div>
-        </div>
-        <p class="mx-auto mt-6 max-w-2xl text-center text-sm text-gray-500">{{ $t('tours.pricing.note') }}</p>
-      </div>
-    </section>
-
     <!-- ============================ FAQ ============================ -->
     <section class="bg-gradient-to-b from-gray-50 to-white py-16 sm:py-20 lg:py-24">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="mx-auto max-w-3xl text-center">
           <p class="dt-kicker justify-center">{{ $t('tours.kicker.goodToKnow') }}</p>
-          <h2 class="mt-4 font-heading text-3xl font-bold text-black md:text-4xl">{{ d.faqTitle }}</h2>
+          <h2 class="mt-4 font-heading text-3xl font-medium text-black md:text-4xl">{{ d.faqTitle }}</h2>
           <p v-if="d.faqIntro" class="mt-4 leading-relaxed text-gray-600">{{ d.faqIntro }}</p>
         </div>
 
@@ -266,13 +270,13 @@
     </section>
 
     <!-- ======================== WHY SILK RIDE ====================== -->
-    <section class="relative overflow-hidden bg-gray-950 py-16 text-white sm:py-20 lg:py-24">
+    <section class="relative overflow-hidden bg-[#0A0908] py-16 text-white sm:py-20 lg:py-24">
       <div class="pointer-events-none absolute -left-24 -top-24 h-72 w-72 rounded-full bg-gold/10 blur-3xl"></div>
       <div class="pointer-events-none absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-gold/10 blur-3xl"></div>
       <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="mx-auto max-w-3xl text-center">
           <p class="dt-kicker justify-center">{{ $t('tours.kicker.difference') }}</p>
-          <h2 class="mt-4 font-heading text-3xl font-bold md:text-4xl">{{ d.whyTitle }}</h2>
+          <h2 class="mt-4 font-heading text-3xl font-medium md:text-4xl">{{ d.whyTitle }}</h2>
         </div>
         <div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           <div v-for="pillar in pillars" :key="pillar.title" class="text-center">
@@ -291,7 +295,7 @@
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="mx-auto max-w-3xl text-center">
           <p class="dt-kicker justify-center">{{ $t('tours.kicker.moreDayTrips') }}</p>
-          <h2 class="mt-4 font-heading text-3xl font-bold text-black md:text-4xl">{{ d.relatedTitle }}</h2>
+          <h2 class="mt-4 font-heading text-3xl font-medium text-black md:text-4xl">{{ d.relatedTitle }}</h2>
           <p v-if="d.relatedIntro" class="mt-4 leading-relaxed text-gray-600">{{ d.relatedIntro }}</p>
         </div>
 
@@ -321,11 +325,11 @@
     <!-- ============================ CTA ============================ -->
     <section class="bg-white pb-16 sm:pb-20 lg:pb-24">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-black via-gray-900 to-black px-6 py-14 text-center text-white shadow-2xl sm:px-12 sm:py-16">
+        <div class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#0A0908] via-[#1A1816] to-[#0A0908] px-6 py-14 text-center text-white shadow-2xl sm:px-12 sm:py-16">
           <div class="pointer-events-none absolute -left-20 -top-20 h-64 w-64 rounded-full bg-gold/15 blur-3xl"></div>
           <div class="pointer-events-none absolute -bottom-20 -right-20 h-64 w-64 rounded-full bg-gold/15 blur-3xl"></div>
           <div class="relative">
-            <h2 class="font-heading text-3xl font-bold md:text-4xl">{{ d.cta.title }}</h2>
+            <h2 class="font-heading text-3xl font-medium md:text-4xl">{{ d.cta.title }}</h2>
             <p class="mx-auto mt-4 max-w-2xl text-lg text-white/85">{{ d.cta.subtitle }}</p>
             <div class="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
               <NuxtLink :to="bookingPath" class="dt-btn-primary">
@@ -519,7 +523,7 @@ useSchemaOrg(schemaBlocks)
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .dt-btn-primary {
-  background-color: #FFCB6C;
+  background-color: #D4AF37;
   color: #000;
   box-shadow: 0 10px 25px -8px rgba(0, 0, 0, 0.5);
 }
@@ -541,19 +545,19 @@ useSchemaOrg(schemaBlocks)
   transform: translateY(-2px);
 }
 .dt-btn-outline-gold {
-  color: #FFCB6C;
-  border: 2px solid #FFCB6C;
+  color: #D4AF37;
+  border: 2px solid #D4AF37;
   font-weight: 600;
 }
 .dt-btn-outline-gold:hover {
-  background: #FFCB6C;
+  background: #D4AF37;
   color: #000;
   transform: translateY(-2px);
 }
 .dt-btn-primary:focus-visible,
 .dt-btn-glass:focus-visible,
 .dt-btn-outline-gold:focus-visible {
-  outline: 2px solid #FFCB6C;
+  outline: 2px solid #D4AF37;
   outline-offset: 3px;
 }
 
@@ -572,7 +576,7 @@ useSchemaOrg(schemaBlocks)
   content: '';
   width: 1.75rem;
   height: 1px;
-  background-color: #FFCB6C;
+  background-color: #D4AF37;
 }
 
 /* Respect reduced-motion: kill entrance + looping + lift animations */

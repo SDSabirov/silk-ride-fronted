@@ -162,8 +162,9 @@ function setupVisibilityTrigger() {
     return
   }
 
-  // Wait for consent
-  if (!hasConsent()) return
+  // Note: deliberately NOT gated on cookie consent — a first-party booking CTA
+  // is not a tracking concern. Only the analytics events depend on consent
+  // (handled inside useAnalytics).
 
   // Homepage: use IntersectionObserver on #main-hero
   const heroEl = document.getElementById('main-hero')
@@ -228,12 +229,9 @@ function loadIframeResizer() {
   document.head.appendChild(script)
 }
 
-// Consent event listener
-function onConsentUpdated() {
-  if (hasConsent()) {
-    setupVisibilityTrigger()
-  }
-}
+// Consent event listener — visibility no longer depends on consent;
+// keep the hook as a no-op so the event wiring stays in place if needed later.
+function onConsentUpdated() {}
 
 // Watch route changes
 watch(
@@ -266,9 +264,7 @@ onMounted(() => {
   window.addEventListener('resize', checkMobile)
   loadCollapseState()
 
-  if (hasConsent()) {
-    setupVisibilityTrigger()
-  }
+  setupVisibilityTrigger()
 
   window.addEventListener('consent-updated', onConsentUpdated)
 
@@ -296,6 +292,8 @@ onBeforeUnmount(() => {
   transform: translateY(100%);
   transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
   opacity: 0;
+  padding-bottom: env(safe-area-inset-bottom);
+  background: #0e0e14;
 }
 
 .sticky-booking-visible {

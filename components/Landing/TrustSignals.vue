@@ -1,118 +1,122 @@
 <template>
-  <section class="py-24 bg-gray-900 text-white overflow-hidden" id="why-choose-us">
+  <section
+    id="why-choose-us"
+    class="dark-luxe-bottom relative overflow-hidden border-t border-gold/10 py-24 md:py-32"
+  >
+    <div class="grain" aria-hidden="true"></div>
+
     <div class="max-w-screen-2xl mx-auto px-6">
-      <!-- Section Header -->
-      <div class="text-center mb-16">
-        <p class="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4">
-          {{ $t('why.tagline') }}
-        </p>
-        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-          {{ $t('why.title') }}
-        </h2>
-        <p class="text-gray-400 text-lg max-w-2xl mx-auto">
-          {{ $t('why.subtitle') }}
-        </p>
-      </div>
+      <!-- Header with ghost watermark -->
+      <div class="relative mb-16" v-reveal>
+        <span
+          class="ghost-text absolute -top-8 md:-top-14 left-0 text-[clamp(5rem,13vw,11rem)] leading-none select-none"
+          aria-hidden="true"
+        >01</span>
 
-      <!-- Features Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-        <!-- Feature 1: Professional Chauffeurs -->
-        <div class="group p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-gold/30 transition-all duration-300">
-          <div class="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center mb-5 group-hover:bg-gold/20 transition-colors">
-            <i class="bx bx-user-check text-gold text-2xl"></i>
-          </div>
-          <h3 class="text-lg font-bold mb-3">{{ $t('why.features.chauffeurs.title') }}</h3>
-          <p class="text-gray-400 text-sm leading-relaxed">{{ $t('why.features.chauffeurs.text') }}</p>
-        </div>
+        <div class="relative z-10">
+          <p class="text-xs font-semibold tracking-[0.25em] uppercase text-gold mb-5">
+            {{ $t('why.tagline') }}
+          </p>
 
-        <!-- Feature 2: Premium Fleet -->
-        <div class="group p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-gold/30 transition-all duration-300">
-          <div class="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center mb-5 group-hover:bg-gold/20 transition-colors">
-            <i class="bx bx-car text-gold text-2xl"></i>
-          </div>
-          <h3 class="text-lg font-bold mb-3">{{ $t('why.features.fleet.title') }}</h3>
-          <p class="text-gray-400 text-sm leading-relaxed">{{ $t('why.features.fleet.text') }}</p>
-        </div>
-
-        <!-- Feature 3: Flight Tracking -->
-        <div class="group p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-gold/30 transition-all duration-300">
-          <div class="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center mb-5 group-hover:bg-gold/20 transition-colors">
-            <i class="bx bx-radar text-gold text-2xl"></i>
-          </div>
-          <h3 class="text-lg font-bold mb-3">{{ $t('why.features.flightTracking.title') }}</h3>
-          <p class="text-gray-400 text-sm leading-relaxed">{{ $t('why.features.flightTracking.text') }}</p>
-        </div>
-
-        <!-- Feature 4: Fixed Pricing -->
-        <div class="group p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-gold/30 transition-all duration-300">
-          <div class="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center mb-5 group-hover:bg-gold/20 transition-colors">
-            <i class="bx bx-pound text-gold text-2xl"></i>
-          </div>
-          <h3 class="text-lg font-bold mb-3">{{ $t('why.features.pricing.title') }}</h3>
-          <p class="text-gray-400 text-sm leading-relaxed">{{ $t('why.features.pricing.text') }}</p>
-        </div>
-
-        <!-- Feature 5: 24/7 Availability -->
-        <div class="group p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-gold/30 transition-all duration-300">
-          <div class="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center mb-5 group-hover:bg-gold/20 transition-colors">
-            <i class="bx bx-time-five text-gold text-2xl"></i>
-          </div>
-          <h3 class="text-lg font-bold mb-3">{{ $t('why.features.availability.title') }}</h3>
-          <p class="text-gray-400 text-sm leading-relaxed">{{ $t('why.features.availability.text') }}</p>
-        </div>
-
-        <!-- Feature 6: UK & Europe Coverage -->
-        <div class="group p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-gold/30 transition-all duration-300">
-          <div class="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center mb-5 group-hover:bg-gold/20 transition-colors">
-            <i class="bx bx-globe text-gold text-2xl"></i>
-          </div>
-          <h3 class="text-lg font-bold mb-3">{{ $t('why.features.coverage.title') }}</h3>
-          <p class="text-gray-400 text-sm leading-relaxed">{{ $t('why.features.coverage.text') }}</p>
-        </div>
-      </div>
-
-      <!-- Stats Bar -->
-      <div class="relative mb-12">
-        <div class="absolute inset-0 bg-gradient-to-r from-gold/20 via-gold/5 to-gold/20 rounded-2xl blur-xl"></div>
-        <div class="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 md:p-10">
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4">
-            <div class="text-center">
-              <div class="text-3xl md:text-4xl font-bold text-gold mb-2">5,000+</div>
-              <div class="text-sm text-gray-400">{{ $t('why.stats.journeys') }}</div>
-            </div>
-            <div class="text-center">
-              <div class="text-3xl md:text-4xl font-bold text-gold mb-2">5.0<span class="text-xl">★</span></div>
-              <div class="text-sm text-gray-400">{{ $t('why.stats.rating') }}</div>
-            </div>
-            <div class="text-center">
-              <div class="text-3xl md:text-4xl font-bold text-gold mb-2">24/7</div>
-              <div class="text-sm text-gray-400">{{ $t('why.stats.support') }}</div>
-            </div>
-            <div class="text-center">
-              <div class="text-3xl md:text-4xl font-bold text-gold mb-2">60<span class="text-xl">min</span></div>
-              <div class="text-sm text-gray-400">{{ $t('why.stats.freeWait') }}</div>
-            </div>
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
+            <h2 class="lg:col-span-7 font-serif font-medium tracking-tight text-4xl md:text-5xl text-white [text-wrap:balance]">
+              {{ $t('why.title') }}
+            </h2>
+            <p class="lg:col-span-4 lg:col-start-9 self-end text-gray-400 leading-relaxed">
+              {{ $t('why.subtitle') }}
+            </p>
           </div>
         </div>
       </div>
 
-      <!-- Trust Badges -->
-      <div class="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 text-sm text-gray-500">
-        <div class="flex items-center gap-2">
-          <i class="bx bx-check-circle text-gold"></i>
-          <span>{{ $t('why.badges.pco') }}</span>
+      <!-- Bento grid -->
+      <div class="grid grid-cols-2 lg:grid-cols-12 gap-4 md:gap-5">
+        <!-- Stat: Journeys -->
+        <div
+          v-reveal="0"
+          class="col-span-2 lg:col-span-5 rounded-2xl bg-white/[0.04] border border-white/10 card-catchlight p-8 md:p-10 flex flex-col justify-between"
+        >
+          <div>
+            <span
+              :ref="(e) => { journeys.el.value = e }"
+              class="font-serif text-6xl md:text-7xl text-gold tabular-nums"
+            >{{ journeys.output.value }}</span><span class="font-serif text-3xl text-white/40">+</span>
+          </div>
+          <p class="text-xs uppercase tracking-[0.2em] text-gray-500 mt-6">
+            {{ $t('why.stats.journeys') }}
+          </p>
         </div>
-        <div class="flex items-center gap-2">
-          <i class="bx bx-check-circle text-gold"></i>
-          <span>{{ $t('why.badges.insured') }}</span>
+
+        <!-- Stat: Rating -->
+        <div
+          v-reveal="1"
+          class="col-span-1 lg:col-span-4 rounded-2xl bg-white/[0.04] border border-white/10 card-catchlight p-8 md:p-10 flex flex-col justify-between"
+        >
+          <div>
+            <span class="font-serif text-5xl md:text-6xl text-gold tabular-nums">5.0</span>
+            <div class="flex items-center gap-1 mt-3" aria-hidden="true">
+              <i v-for="n in 5" :key="n" class="bx bxs-star text-gold text-sm"></i>
+            </div>
+          </div>
+          <p class="text-xs uppercase tracking-[0.2em] text-gray-500 mt-6">
+            {{ $t('why.stats.rating') }}
+          </p>
         </div>
-        <div class="flex items-center gap-2">
-          <i class="bx bx-check-circle text-gold"></i>
-          <span>{{ $t('why.badges.dbs') }}</span>
+
+        <!-- Stat: Free wait -->
+        <div
+          v-reveal="2"
+          class="col-span-1 lg:col-span-3 rounded-2xl bg-white/[0.04] border border-white/10 card-catchlight p-8 md:p-10 flex flex-col justify-between"
+        >
+          <div>
+            <span
+              :ref="(e) => { wait.el.value = e }"
+              class="font-serif text-5xl md:text-6xl text-gold tabular-nums"
+            >{{ wait.output.value }}</span><span class="font-serif text-2xl text-white/40">min</span>
+          </div>
+          <p class="text-xs uppercase tracking-[0.2em] text-gray-500 mt-6">
+            {{ $t('why.stats.freeWait') }}
+          </p>
         </div>
-        <div class="flex items-center gap-2">
-          <i class="bx bx-check-circle text-gold"></i>
-          <span>{{ $t('why.badges.vehicles') }}</span>
+
+        <!-- Feature cells -->
+        <div
+          v-for="(feature, i) in features"
+          :key="feature.key"
+          v-reveal="i + 3"
+          class="relative overflow-hidden col-span-1 lg:col-span-4 rounded-2xl bg-white/[0.03] border border-white/10 p-6 md:p-7 group hover:border-gold/30 transition-colors duration-300"
+        >
+          <!-- Decorative radar rings (flight tracking only) -->
+          <div
+            v-if="feature.key === 'flightTracking'"
+            class="absolute -top-16 -right-16 w-48 h-48 pointer-events-none"
+            aria-hidden="true"
+          >
+            <span class="absolute inset-0 rounded-full border border-gold/10"></span>
+            <span class="absolute inset-7 rounded-full border border-gold/10"></span>
+            <span class="absolute inset-14 rounded-full border border-gold/10"></span>
+          </div>
+
+          <div class="relative flex items-start justify-between gap-4">
+            <div class="w-11 h-11 rounded-xl bg-gold/10 text-gold flex items-center justify-center text-xl group-hover:bg-gold/20 transition-colors">
+              <i :class="`bx ${feature.icon}`"></i>
+            </div>
+
+            <!-- 24/7 numeral folded into the availability cell -->
+            <div v-if="feature.key === 'availability'" class="text-right">
+              <span class="font-serif text-4xl text-gold leading-none">24/7</span>
+              <p class="text-[10px] uppercase tracking-[0.2em] text-gray-500 mt-1">
+                {{ $t('why.stats.support') }}
+              </p>
+            </div>
+          </div>
+
+          <h3 class="relative text-base font-semibold text-white mt-4">
+            {{ $t(`why.features.${feature.key}.title`) }}
+          </h3>
+          <p class="relative text-sm text-gray-400 leading-relaxed mt-1.5">
+            {{ $t(`why.features.${feature.key}.text`) }}
+          </p>
         </div>
       </div>
     </div>
@@ -120,5 +124,15 @@
 </template>
 
 <script setup>
-// Merged TrustSignals + KeyFeatures component
+const journeys = useCountUp(5000)
+const wait = useCountUp(60)
+
+const features = [
+  { key: 'chauffeurs', icon: 'bx-user-check' },
+  { key: 'fleet', icon: 'bx-car' },
+  { key: 'flightTracking', icon: 'bx-radar' },
+  { key: 'pricing', icon: 'bx-pound' },
+  { key: 'availability', icon: 'bx-time-five' },
+  { key: 'coverage', icon: 'bx-globe' },
+]
 </script>

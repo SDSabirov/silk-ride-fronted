@@ -1,113 +1,101 @@
 <template>
-  <section class="py-24 bg-gray-900 text-white">
+  <section
+    id="testimonials"
+    class="dark-luxe relative overflow-hidden border-t border-gold/10 py-24 md:py-32"
+  >
+    <div class="grain" aria-hidden="true"></div>
+
     <div class="max-w-screen-2xl mx-auto px-6">
-      <!-- Section Header -->
-      <div class="text-center mb-16">
-        <p class="text-gold text-sm font-semibold tracking-[0.2em] uppercase mb-4">
-          {{ $t('landing.testimonials.tagline') }}
-        </p>
-        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-          {{ $t('landing.testimonials.title') }}
-        </h2>
-        <p class="text-lg text-gray-400 max-w-2xl mx-auto">
-          {{ $t('landing.testimonials.subtitle') }}
-        </p>
+      <div class="grid lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+        <!-- Sticky rating panel -->
+        <div v-reveal class="lg:col-span-4 lg:sticky lg:top-28">
+          <span
+            class="font-serif text-gold/20 text-[7rem] leading-[0.6] block select-none"
+            aria-hidden="true"
+            >&ldquo;</span
+          >
 
-        <!-- Google Reviews Summary -->
-        <div class="flex items-center justify-center gap-3 mt-8">
-          <div class="flex text-gold text-xl">
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-            <i class="bx bxs-star"></i>
-          </div>
-          <span class="text-2xl font-bold">{{ rating }}</span>
-          <span class="text-gray-500">|</span>
-          <span class="text-gray-400">{{ reviewCount }} {{ $t('landing.testimonials.googleReviewCount') }}</span>
-        </div>
-      </div>
-
-      <!-- Testimonial Carousel -->
-      <div class="relative max-w-4xl mx-auto">
-        <!-- Main Card -->
-        <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-white/10">
-          <!-- Quote Icon -->
-          <div class="text-gold/30 text-6xl mb-6">
-            <i class="bx bxs-quote-left"></i>
-          </div>
-
-          <!-- Stars -->
-          <div class="flex gap-1 mb-6 text-gold">
-            <i v-for="star in testimonials[currentIndex].rating" :key="star" class="bx bxs-star text-xl"></i>
-          </div>
-
-          <!-- Testimonial Text -->
-          <p class="text-xl md:text-2xl text-gray-200 leading-relaxed mb-8">
-            "{{ testimonials[currentIndex].text }}"
+          <p class="text-xs font-semibold tracking-[0.25em] uppercase text-gold mt-6">
+            {{ $t('landing.testimonials.tagline') }}
           </p>
 
-          <!-- Author Info -->
-          <div class="flex items-center gap-4 pt-6 border-t border-white/10">
-            <div class="w-14 h-14 rounded-full bg-gold/20 flex items-center justify-center">
-              <span class="text-gold text-xl font-bold">{{ getInitials(testimonials[currentIndex].author) }}</span>
+          <h2
+            class="font-serif font-medium tracking-tight text-4xl md:text-5xl text-white mt-2 [text-wrap:balance]"
+          >
+            {{ $t('landing.testimonials.title') }}
+          </h2>
+
+          <!-- Rating block -->
+          <div class="mt-8">
+            <div class="flex items-center gap-4">
+              <span class="font-serif text-5xl text-white">{{ rating }}</span>
+              <div class="flex text-gold text-xl" aria-hidden="true">
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+              </div>
             </div>
-            <div>
-              <h4 class="text-lg font-bold text-white">
-                {{ testimonials[currentIndex].author }}
-              </h4>
-              <p class="text-gray-400 text-sm">{{ testimonials[currentIndex].location }}</p>
-            </div>
-            <div class="ml-auto text-right hidden sm:block">
-              <p class="text-gold text-sm font-medium">{{ testimonials[currentIndex].service }}</p>
-              <p class="text-gray-500 text-xs">{{ testimonials[currentIndex].date }}</p>
-            </div>
+            <span class="block text-gray-400 text-sm mt-2">
+              {{ reviewCount }} {{ $t('landing.testimonials.googleReviewCount') }}
+            </span>
+          </div>
+
+          <!-- Google CTA -->
+          <div class="mt-8">
+            <a
+              href="https://maps.app.goo.gl/jKFx8rtmUACaqVcF7"
+              target="_blank"
+              rel="noopener"
+              class="inline-flex items-center gap-2 bg-gold text-black font-semibold text-sm tracking-wide px-7 py-3.5 rounded-lg hover:bg-gold-400 transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/60 focus-visible:ring-offset-2 focus-visible:ring-offset-surface-950"
+            >
+              <i class="bx bxl-google text-lg" aria-hidden="true"></i>
+              {{ $t('landing.testimonials.viewAllReviews') }}
+            </a>
           </div>
         </div>
 
-        <!-- Navigation Arrows -->
-        <button
-          @click="previousTestimonial"
-          class="absolute -left-4 md:-left-6 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-gold hover:border-gold hover:text-black transition-all"
-          aria-label="Previous testimonial"
-        >
-          <i class="bx bx-chevron-left text-2xl"></i>
-        </button>
+        <!-- Masonry review collage -->
+        <div class="lg:col-span-8">
+          <div class="columns-1 md:columns-2 gap-6">
+            <figure
+              v-for="(testimonial, i) in testimonials"
+              :key="testimonial.author"
+              v-reveal="i % 4"
+              class="break-inside-avoid mb-6 rounded-2xl bg-white/[0.04] border border-white/10 card-catchlight p-7"
+            >
+              <div class="flex gap-0.5 text-gold text-sm" aria-hidden="true">
+                <i
+                  v-for="star in testimonial.rating"
+                  :key="star"
+                  class="bx bxs-star"
+                ></i>
+              </div>
 
-        <button
-          @click="nextTestimonial"
-          class="absolute -right-4 md:-right-6 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-gold hover:border-gold hover:text-black transition-all"
-          aria-label="Next testimonial"
-        >
-          <i class="bx bx-chevron-right text-2xl"></i>
-        </button>
-      </div>
+              <blockquote class="font-serif text-lg md:text-xl text-white/90 leading-snug mt-4">
+                &ldquo;{{ testimonial.text }}&rdquo;
+              </blockquote>
 
-      <!-- Navigation Dots -->
-      <div class="flex justify-center mt-8 gap-2">
-        <button
-          v-for="(testimonial, index) in testimonials"
-          :key="index"
-          @click="navigateTo(index)"
-          :class="[
-            'w-2 h-2 rounded-full transition-all duration-300',
-            currentIndex === index ? 'bg-gold w-6' : 'bg-white/30 hover:bg-white/50',
-          ]"
-          :aria-label="`Go to testimonial ${index + 1}`"
-        ></button>
-      </div>
-
-      <!-- Google Reviews CTA -->
-      <div class="text-center mt-12">
-        <a
-          href="https://maps.app.goo.gl/jKFx8rtmUACaqVcF7"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-flex items-center gap-2 px-8 py-4 bg-gold text-black font-semibold rounded-lg hover:bg-gold/90 transition-colors"
-        >
-          <i class="bx bxl-google text-xl"></i>
-          {{ $t('landing.testimonials.viewAllReviews') }}
-        </a>
+              <figcaption class="mt-6 pt-5 border-t border-white/10 flex items-center gap-3">
+                <div
+                  class="w-11 h-11 rounded-full bg-gold/15 flex items-center justify-center text-gold font-semibold text-sm shrink-0"
+                  aria-hidden="true"
+                >
+                  {{ getInitials(testimonial.author) }}
+                </div>
+                <div class="min-w-0">
+                  <p class="text-white text-sm font-semibold">{{ testimonial.author }}</p>
+                  <p class="text-gray-500 text-xs">{{ testimonial.location }}</p>
+                </div>
+                <div class="ml-auto text-right shrink-0">
+                  <p class="text-gold/80 text-xs font-medium">{{ testimonial.service }}</p>
+                  <p class="text-gray-600 text-xs">{{ testimonial.date }}</p>
+                </div>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -167,23 +155,7 @@ const testimonials = ref([
   },
 ]);
 
-const currentIndex = ref(0);
-
 const getInitials = (name) => {
   return name.split(' ').map(n => n[0]).slice(0, 2).join('').toUpperCase();
-};
-
-const navigateTo = (index) => {
-  currentIndex.value = index;
-};
-
-const nextTestimonial = () => {
-  currentIndex.value = (currentIndex.value + 1) % testimonials.value.length;
-};
-
-const previousTestimonial = () => {
-  currentIndex.value = currentIndex.value === 0
-    ? testimonials.value.length - 1
-    : currentIndex.value - 1;
 };
 </script>

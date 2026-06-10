@@ -8,6 +8,7 @@
       :slogan="$t('fleetPages.sclass.slogan')"
       :altText="$t('fleetPages.sclass.alt')"
       :car="SClass"
+      transition-name="fleet-sclass"
     />
 
     <!-- Breadcrumbs -->

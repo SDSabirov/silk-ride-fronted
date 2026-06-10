@@ -8,6 +8,7 @@
       :slogan="t('fleetPages.eClass.slogan')"
       altText="Mercedes Benz E-Class side view"
       :car="EClass"
+      transition-name="fleet-eclass"
     />
 
     <!-- Breadcrumbs -->

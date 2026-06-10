@@ -102,7 +102,7 @@
         <span>Call to Book</span>
       </a>
 
-      <div class="badges">
+      <div v-if="showBadges" class="badges">
         <span class="badge">
           <svg class="badge-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
             <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
@@ -138,6 +138,12 @@ defineProps({
   phoneNumber: {
     type: String,
     default: '+44XXXXXXXXXX',
+  },
+  // Hide the footer badge row where the surrounding section already shows
+  // the same trust signals (e.g. the homepage hero data strip).
+  showBadges: {
+    type: Boolean,
+    default: true,
   },
 })
 
@@ -226,20 +232,20 @@ onBeforeUnmount(() => {
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap');
+/* Fonts come from the site-wide self-hosted faces (@nuxt/fonts) — no @import. */
 
 /* ── Tokens ── */
 .sr-quote-card {
   --bg: #0F0F0F;
   --surface-2: #141414;
-  --gold: #C9A84C;
-  --gold-light: #E8C97A;
-  --gold-dim: rgba(201, 168, 76, 0.1);
-  --gold-border: rgba(201, 168, 76, 0.2);
+  --gold: #D4AF37;
+  --gold-light: #E3C36A;
+  --gold-dim: rgba(212, 175, 55, 0.1);
+  --gold-border: rgba(212, 175, 55, 0.2);
   --text: #F5F0E8;
   --text-muted: rgba(245, 240, 232, 0.4);
-  --font-display: 'Cormorant Garamond', Georgia, serif;
-  --font-body: 'Jost', 'Helvetica Neue', Arial, sans-serif;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
 
   position: relative;
   width: 100%;

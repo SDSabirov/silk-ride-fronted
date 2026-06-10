@@ -14,6 +14,7 @@
       <FormsContactDrawer/>
       <BackToTop />
       <ConsentBanner />
+      <CROStickyBookingWidget />
     </NuxtLayout>
   </div>
 </template>
@@ -30,8 +31,7 @@ useHead({
   link: [
     // Preload logo for faster navbar render
     { rel: 'preload', href: '/logo.svg', as: 'image', type: 'image/svg+xml' },
-    // DNS prefetch for external resources
-    { rel: 'dns-prefetch', href: '//fonts.googleapis.com' },
+    // DNS prefetch for external resources (fonts are self-hosted via @nuxt/fonts)
     { rel: 'dns-prefetch', href: '//www.google-analytics.com' }
   ],
   meta: [

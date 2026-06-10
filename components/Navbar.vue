@@ -1,15 +1,15 @@
 <template>
   <nav
     :class="[
-      'fixed top-0 left-0 w-full z-[999] transition-all duration-300',
-      isScrolled ? 'bg-black/95 backdrop-blur-md shadow-lg' : 'bg-transparent lg:bg-transparent'
+      'fixed top-0 left-0 w-full z-[999] transition-[background-color,box-shadow] duration-300',
+      isScrolled ? 'bg-[#0A0908]/90 backdrop-blur-md shadow-lg' : 'bg-transparent lg:bg-transparent'
     ]"
   >
     <!-- Gold accent line -->
     <div class="h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent"></div>
 
     <div class="max-w-screen-2xl mx-auto px-6">
-      <div class="flex items-center justify-between h-24">
+      <div class="flex items-center justify-between h-20 lg:h-24">
         <!-- Logo - Vertical Layout -->
         <NuxtLink to="/" class="flex flex-col items-center group" aria-label="Go to home page">
           <NuxtImg
@@ -28,7 +28,7 @@
           <!-- Home -->
           <NuxtLink
             :to="localePath('/')"
-            class="nav-link px-5 py-2 text-lg text-white hover:text-gold transition-colors relative group"
+            class="nav-link px-5 py-2 text-[0.9375rem] font-medium tracking-wide text-white hover:text-gold transition-colors relative group"
           >
             {{ $t('navbar.home') }}
             <span class="nav-underline"></span>
@@ -37,7 +37,7 @@
           <!-- Fleet -->
           <NuxtLink
             :to="localePath('/fleet')"
-            class="nav-link px-5 py-2 text-lg text-white hover:text-gold transition-colors relative group"
+            class="nav-link px-5 py-2 text-[0.9375rem] font-medium tracking-wide text-white hover:text-gold transition-colors relative group"
           >
             {{ $t('navbar.fleet') }}
             <span class="nav-underline"></span>
@@ -46,7 +46,7 @@
           <!-- Services Mega Menu -->
           <div class="relative" @mouseenter="openServices" @mouseleave="closeServices">
             <button
-              class="nav-link px-5 py-2 text-lg text-white hover:text-gold transition-colors flex items-center gap-1.5 relative group"
+              class="nav-link px-5 py-2 text-[0.9375rem] font-medium tracking-wide text-white hover:text-gold transition-colors flex items-center gap-1.5 relative group"
             >
               {{ $t('navbar.services') }}
               <svg class="w-4 h-4 transition-transform duration-200" :class="showServices ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -113,7 +113,7 @@
           <!-- Destinations Dropdown -->
           <div class="relative" @mouseenter="openDestinations" @mouseleave="closeDestinations">
             <button
-              class="nav-link px-5 py-2 text-lg text-white hover:text-gold transition-colors flex items-center gap-1.5 relative group"
+              class="nav-link px-5 py-2 text-[0.9375rem] font-medium tracking-wide text-white hover:text-gold transition-colors flex items-center gap-1.5 relative group"
             >
               {{ $t('navbar.destinations') }}
               <svg class="w-4 h-4 transition-transform duration-200" :class="showDestinations ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -144,7 +144,7 @@
           <!-- Blog -->
           <NuxtLink
             :to="localePath('/blog')"
-            class="nav-link px-5 py-2 text-lg text-white hover:text-gold transition-colors relative group"
+            class="nav-link px-5 py-2 text-[0.9375rem] font-medium tracking-wide text-white hover:text-gold transition-colors relative group"
           >
             {{ $t('navbar.blog') }}
             <span class="nav-underline"></span>
@@ -153,7 +153,7 @@
           <!-- Company Dropdown -->
           <div class="relative" @mouseenter="openCompany" @mouseleave="closeCompany">
             <button
-              class="nav-link px-5 py-2 text-lg text-white hover:text-gold transition-colors flex items-center gap-1.5 relative group"
+              class="nav-link px-5 py-2 text-[0.9375rem] font-medium tracking-wide text-white hover:text-gold transition-colors flex items-center gap-1.5 relative group"
             >
               {{ $t('navbar.ourCompany') }}
               <svg class="w-4 h-4 transition-transform duration-200" :class="showCompany ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -186,6 +186,15 @@
         <div class="hidden lg:flex items-center gap-3">
           <!-- Language Switch Button -->
           <LanguageSwitch />
+
+          <!-- Phone (urgent same-day bookings happen by phone) -->
+          <a
+            href="tel:+442034882324"
+            class="hidden xl:flex items-center gap-2 px-3 py-2.5 text-white hover:text-gold transition-colors whitespace-nowrap"
+          >
+            <i class="bx bx-phone text-gold text-lg" aria-hidden="true"></i>
+            <span class="text-sm font-medium tracking-wide">+44 203 488 2324</span>
+          </a>
 
           <!-- Login Button -->
           <NuxtLink
@@ -436,12 +445,12 @@ const airportItems = [
 
 // Destinations items with icons
 const destinationsItems = [
+  { path: localePath('/destination-tours/stonehenge'), label: t('navbar.destinationsDropdown.stonehenge'), icon: 'bx bx-circle' },
+  { path: localePath('/destination-tours/windsor'), label: t('navbar.destinationsDropdown.windsor'), icon: 'bx bxs-castle' },
   { path: localePath('/destination-tours/oxford'), label: t('navbar.destinationsDropdown.oxford'), icon: 'bx bx-book-reader' },
   { path: localePath('/destination-tours/cambridge'), label: t('navbar.destinationsDropdown.cambridge'), icon: 'bx bx-water' },
-  { path: localePath('/destination-tours/bath'), label: t('navbar.destinationsDropdown.bath'), icon: 'bx bx-building-house' },
   { path: localePath('/destination-tours/cotswolds'), label: t('navbar.destinationsDropdown.cotswolds'), icon: 'bx bx-landscape' },
-  { path: localePath('/destination-tours/stonehenge'), label: t('navbar.destinationsDropdown.stonehenge'), icon: 'bx bx-circle' },
-  { path: localePath('/destination-tours/windsor'), label: t('navbar.destinationsDropdown.windsor'), icon: 'bx bxs-castle' }
+  { path: localePath('/destination-tours/bath'), label: t('navbar.destinationsDropdown.bath'), icon: 'bx bx-building-house' }
 ]
 
 // Company items with icons

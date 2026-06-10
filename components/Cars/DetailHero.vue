@@ -10,6 +10,7 @@
           loading="eager"
           width="1920"
           height="1080"
+          :style="transitionName ? { viewTransitionName: transitionName } : undefined"
         />
         <!-- Enhanced Gradient Overlay -->
         <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/30 to-black/80"></div>
@@ -103,6 +104,12 @@ export default {
     altText: {
       type: String,
       default: "Car image",
+    },
+    // Shared-element morph target: must match the view-transition-name set on
+    // the corresponding homepage fleet-card image (e.g. "fleet-eclass").
+    transitionName: {
+      type: String,
+      default: "",
     },
     car:{
       type:Object,

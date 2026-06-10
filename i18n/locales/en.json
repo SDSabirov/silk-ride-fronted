@@ -22,8 +22,10 @@
       "title": "Tour Pricing",
       "intro": "Transparent flat rates per vehicle — not per person. Choose chauffeur-only, or add a private expert guide.",
       "from": "from",
-      "perVehicle": "Per vehicle · up to 7 guests",
+      "perVehicle": "Per vehicle · up to 6 guests",
+      "upToHours": "Up to {hours} hours on tour",
       "note": "Attraction entry tickets can be added to any quote.",
+      "entryNotIncluded": "Attraction entry tickets are not included.",
       "popular": "Most popular",
       "chauffeurTitle": "Private Chauffeur",
       "cf1": "Luxury Mercedes S-Class or V-Class",
@@ -110,7 +112,7 @@
       "oxford": "Oxford",
       "cambridge": "Cambridge",
       "bath": "Bath",
-      "cotswolds": "Cotswolds",
+      "cotswolds": "Cotswold Villages",
       "stonehenge": "Stonehenge",
       "windsor": "Windsor Castle"
     }
@@ -183,8 +185,20 @@
     }
   },
   "landing": {
+    "marquee": ["Heathrow", "Mayfair", "Gatwick", "Canary Wharf", "Knightsbridge", "Stansted", "Westminster", "Luton", "The City", "Belgravia"],
+    "showcase": {
+      "quote": "Arrive as you mean to continue.",
+      "alt": "Mercedes S-Class — luxury chauffeur interior"
+    },
     "mainHero": {
       "tagline": "Premium Chauffeur Service",
+      "kicker": "Mercedes-Benz Fleet · London · 24/7",
+      "titlePre": "London's Premium",
+      "titleAccent": "Chauffeur",
+      "titlePost": "Service",
+      "subtitleShort": "Professional chauffeurs and an immaculate Mercedes fleet — available 24/7 across London and the UK.",
+      "proofLine": "Heathrow ↔ Central London from £120 · Fixed fare · 60-min free wait",
+      "reviewsLabel": "Google reviews",
       "title": "London's Premium Chauffeur Service",
       "badges": {
         "available": "24/7 Available",
@@ -235,6 +249,9 @@
         "learnMore": "Learn More About Wedding Chauffeur"
       },
       "fleetTitle": "Our Premium Mercedes Fleet",
+      "fleetTagline": "The Fleet",
+      "fleetSubtitle": "Mercedes-Benz only — chosen for comfort, presence and quiet.",
+      "fleetCount": "01 — 03",
       "eclass": {
         "title": "Mercedes E-Class",
         "description": "Perfect for business & executive travel",
