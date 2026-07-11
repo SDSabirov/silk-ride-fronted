@@ -78,8 +78,15 @@ export default defineNuxtConfig({
       '/__sitemap__/en.xml': { redirect: '/__sitemap__/en-GB.xml' },
       '/__sitemap__/ru.xml': { redirect: '/__sitemap__/ru-RU.xml' },
       // 301 redirects for moved/renamed pages (fixes GSC 404s and 5xx errors)
-      '/booking/customer': { redirect: { to: '/customer', statusCode: 301 } },
-      '/booking/customer/': { redirect: { to: '/customer', statusCode: 301 } },
+      '/booking/customer': { redirect: { to: '/booking', statusCode: 301 } },
+      '/booking/customer/': { redirect: { to: '/booking', statusCode: 301 } },
+      // Customer portal removed with the EasyTaxiOffice booking system
+      '/customer': { redirect: { to: '/booking', statusCode: 301 } },
+      '/customer/': { redirect: { to: '/booking', statusCode: 301 } },
+      '/ru/customer': { redirect: { to: '/ru/booking', statusCode: 301 } },
+      '/ru/customer/': { redirect: { to: '/ru/booking', statusCode: 301 } },
+      '/ru/booking/customer': { redirect: { to: '/ru/booking', statusCode: 301 } },
+      '/ru/booking/customer/': { redirect: { to: '/ru/booking', statusCode: 301 } },
       '/our-partners': { redirect: { to: '/partners', statusCode: 301 } },
       '/our-partners/': { redirect: { to: '/partners', statusCode: 301 } },
       '/testimonials': { redirect: { to: '/', statusCode: 301 } },

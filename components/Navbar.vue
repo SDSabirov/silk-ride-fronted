@@ -196,15 +196,6 @@
             <span class="text-sm font-medium tracking-wide">+44 203 488 2324</span>
           </a>
 
-          <!-- Login Button -->
-          <NuxtLink
-            :to="localePath('/customer')"
-            class="flex items-center gap-2 px-5 py-2.5 text-white hover:text-gold border border-white/20 hover:border-gold/50 rounded-lg transition-all"
-          >
-            <i class="bx bx-user text-lg"></i>
-            <span>{{ $t('navbar.registerLogin') }}</span>
-          </NuxtLink>
-
           <!-- Book Now Button -->
           <NuxtLink
             :to="localePath('/booking')"
@@ -367,14 +358,6 @@
 
           <!-- Mobile CTA Buttons -->
           <div class="pt-8 space-y-4">
-            <NuxtLink
-              :to="localePath('/customer')"
-              class="flex items-center justify-center gap-2 w-full py-4 text-white border border-white/20 rounded-lg hover:bg-white/5"
-              @click="closeMobileMenu"
-            >
-              <i class="bx bx-user text-xl"></i>
-              {{ $t('navbar.registerLogin') }}
-            </NuxtLink>
             <NuxtLink
               :to="localePath('/booking')"
               class="flex items-center justify-center gap-2 w-full py-4 bg-gold text-black font-semibold rounded-lg hover:bg-gold/90"

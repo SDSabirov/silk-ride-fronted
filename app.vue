@@ -11,10 +11,8 @@
     <NuxtLayout>
       <NuxtPage />
 
-      <FormsContactDrawer/>
       <BackToTop />
       <ConsentBanner />
-      <CROStickyBookingWidget />
     </NuxtLayout>
   </div>
 </template>

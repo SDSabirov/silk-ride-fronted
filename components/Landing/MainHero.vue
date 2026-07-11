@@ -60,13 +60,11 @@
             </span>
           </a>
 
-          <!-- CTA Buttons. The quote button only shows below lg — on desktop the
-               live booking card sits beside the headline, so a second entry to
-               the same third-party form would be a duplicate. -->
+          <!-- CTA Buttons -->
           <div class="animate-reveal-delay-3 flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-5">
-            <button class="btn-hero-primary lg:hidden" @click="showBookingModal = true">
+            <NuxtLink :to="localePath('/booking')" class="btn-hero-primary">
               {{ $t('landing.mainHero.getInstantQuote') }}
-            </button>
+            </NuxtLink>
             <a href="tel:+442034882324" class="btn-hero-secondary">
               <i class="bx bx-phone text-gold text-base" aria-hidden="true"></i>
               +44 203 488 2324
@@ -77,22 +75,6 @@
           <p class="animate-reveal-delay-3 text-white/50 text-[0.8125rem] tracking-wide">
             {{ $t("landing.mainHero.proofLine") }}
           </p>
-        </div>
-
-        <!-- Right: booking card (desktop only — never costs mobile a byte) -->
-        <div class="hidden lg:block lg:col-span-5 xl:pl-8">
-          <ClientOnly>
-            <QuoteWidget v-if="showInlineWidget" phone-number="+44 203 488 2324" :show-badges="false" />
-            <template #fallback>
-              <div class="widget-placeholder" aria-hidden="true">
-                <div class="ph-bar w-2/5 mx-auto"></div>
-                <div class="ph-bar-lg w-3/4 mx-auto"></div>
-                <div class="ph-field"></div>
-                <div class="ph-field"></div>
-                <div class="ph-field w-2/3"></div>
-              </div>
-            </template>
-          </ClientOnly>
         </div>
       </div>
     </div>
@@ -116,29 +98,16 @@
       </div>
     </div>
 
-    <!-- Booking Modal (mobile/tablet entry to the quote form) -->
-    <BookingModal v-model="showBookingModal">
-      <QuoteWidget phone-number="+44 203 488 2324" :show-badges="false" />
-    </BookingModal>
   </section>
 </template>
 
 <script setup>
-import { useI18n } from "#imports";
+import { useI18n, useLocalePath } from "#imports";
 
 const { t } = useI18n();
-const showBookingModal = ref(false);
-const showInlineWidget = ref(false);
+const localePath = useLocalePath();
 
 const { rating, reviewCount } = useGoogleReviews();
-
-onMounted(() => {
-  // Mount the live booking widget only on desktop viewports so mobile never
-  // pays the third-party iframe cost in the critical path.
-  if (window.matchMedia("(min-width: 1024px)").matches) {
-    showInlineWidget.value = true;
-  }
-});
 
 const trustBadges = computed(() => [
   { icon: "bx bxs-star", label: t("landing.mainHero.trustBadges.rated") },
@@ -149,29 +118,6 @@ const trustBadges = computed(() => [
 </script>
 
 <style scoped>
-/* Placeholder skeleton shown while the live widget mounts (and for SSR HTML) */
-.widget-placeholder {
-  max-width: 520px;
-  margin-left: auto;
-  border: 1px solid rgba(212, 175, 55, 0.2);
-  background: rgba(10, 9, 8, 0.72);
-  padding: 32px 28px;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.ph-bar,
-.ph-bar-lg,
-.ph-field {
-  border-radius: 3px;
-  background: rgba(255, 255, 255, 0.05);
-}
-
-.ph-bar { height: 10px; }
-.ph-bar-lg { height: 26px; margin-bottom: 10px; }
-.ph-field { height: 44px; }
-
 /* Scroll-driven hero depth: content drifts up and fades as you scroll away.
    Pure CSS, zero JS; browsers without animation-timeline simply skip it. */
 @supports (animation-timeline: scroll()) {

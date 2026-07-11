@@ -1030,9 +1030,15 @@
   },
 
   "bookingPage": {
-    "formIntro": "Complete the form below to get an instant quote for your luxury chauffeur service",
+    "formIntro": "Book your luxury chauffeur service in minutes — chat with our team for an instant quote",
     "breadcrumbHome": "Home",
-    "breadcrumbBooking": "Booking"
+    "breadcrumbBooking": "Booking",
+    "chatTitle": "Book via Live Chat",
+    "chatText": "Our team is online 24/7. Open the chat in the corner of your screen, tell us your pickup point, destination and time — and we'll confirm your booking with an instant quote.",
+    "chatHint": "Look for the chat bubble in the bottom-right corner of your screen",
+    "orContact": "or contact us directly",
+    "callUs": "Call +44 203 488 2324",
+    "emailUs": "Email info{'@'}silkride.co.uk"
   },
   "bookingSidebar": {
     "whyChoose": "Why Choose Silk Ride",
