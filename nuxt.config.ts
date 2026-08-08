@@ -112,6 +112,8 @@ export default defineNuxtConfig({
     },
     build: {
       cssCodeSplit: true,
+      // Modern browsers only — drops legacy transpilation helpers from the bundle
+      target: 'es2022',
       rollupOptions: {
         output: {
           manualChunks: (id) => {
@@ -171,7 +173,11 @@ export default defineNuxtConfig({
   gtag: {
     // Google Consent Mode v2 - Advanced Mode Implementation
     // Consent defaults are set via 00.consent-mode.client.ts plugin which runs BEFORE nuxt-gtag
-    // This ensures gtag.js loads and sends cookieless pings even when consent is denied
+    // This ensures gtag.js loads and sends cookieless pings even when consent is denied.
+    // initMode 'manual': gtag.js is loaded by plugins/gtag-init.client.ts on first
+    // interaction (or a 3.5s fallback) so it stays off the critical path — consent
+    // defaults and updates queue in dataLayer and replay when the script arrives.
+    initMode: 'manual',
     loadingStrategy: 'async',
     tags:[
       {
@@ -319,7 +325,7 @@ export default defineNuxtConfig({
     },
     families: [
       { name: 'Playfair Display', provider: 'google', weights: [400, 500, 700], styles: ['normal', 'italic'] },
-      { name: 'Open Sans', provider: 'google', weights: [400, 600], styles: ['normal'] },
+      { name: 'Inter', provider: 'google', weights: [400, 600], styles: ['normal'] },
     ],
   },
 });

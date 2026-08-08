@@ -4,6 +4,17 @@
 /* Import Boxicons */
 @import 'boxicons/css/boxicons.min.css';
 
+/* Re-declare the boxicons face with font-display so icon glyphs never block
+   paint (Lighthouse "font-display" audit). Later declaration wins. */
+@font-face {
+  font-family: 'boxicons';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url('../../node_modules/boxicons/fonts/boxicons.woff2') format('woff2'),
+       url('../../node_modules/boxicons/fonts/boxicons.woff') format('woff');
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

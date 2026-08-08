@@ -1,133 +1,64 @@
-# Silk Ride - London's Premier Luxury Chauffeur Service
+# Silk Ride — London's Premier Luxury Chauffeur Service
 
-> Premium chauffeur service in London offering luxury airport transfers, executive car hire, wedding transport, and corporate travel. Mercedes fleet with professional drivers, available 24/7.
+> Premium chauffeur service in London offering luxury airport transfers, executive car hire, wedding transport, and corporate travel. Mercedes fleet with professional drivers, available 24/7. Phone: +44 203 488 2324 · Email: info@silkride.co.uk · Rated 5.0/5 on Google (24 reviews).
 
-## Quick Facts
-
-- **Company**: Silk Ride Ltd
-- **Location**: London, United Kingdom
-- **Service Area**: London, UK & Europe
-- **Phone**: +44 203 488 2324
-- **Email**: info@silkride.co.uk
-- **Website**: https://silkride.co.uk
-- **Operating Hours**: 24/7, 365 days a year
-- **License**: Licensed Private Hire Operator
-
-## Fleet
-
-Silk Ride operates a luxury Mercedes fleet:
-
-- **Mercedes E-Class**: Executive saloon, up to 3 passengers, ideal for business travel
-- **Mercedes S-Class**: Flagship luxury limousine, up to 3 passengers, VIP transport
-- **Mercedes V-Class**: Luxury MPV, up to 7 passengers, perfect for groups & families
-
-All vehicles feature: leather interiors, climate control, complimentary Wi-Fi, phone chargers, bottled water.
-
-## Services & Pricing
-
-### Airport Transfers
-Premium transfers to all London airports with meet & greet, flight tracking, and complimentary waiting time.
-
-- **Heathrow Airport**: From £120 | https://silkride.co.uk/airport-transfers/heathrow
-- **Gatwick Airport**: From £130 | https://silkride.co.uk/airport-transfers/gatwick
-- **Stansted Airport**: From £140 | https://silkride.co.uk/airport-transfers/stansted
-- **Luton Airport**: From £130 | https://silkride.co.uk/airport-transfers/luton
-
-Includes: 60 min free waiting (international), 45 min (domestic), meet & greet, flight monitoring.
-
-### Hourly Chauffeur Hire
-Flexible as-directed service for business, shopping, or sightseeing.
-
-- **Rate**: From £50/hour (4-hour minimum)
-- **Page**: https://silkride.co.uk/services/hourly-chauffeur
-
-### Corporate Travel
-Executive transport for business professionals, meetings, and roadshows.
-
-- **Page**: https://silkride.co.uk/services/corporate-travel
-
-### Wedding Chauffeur
-Luxury wedding car hire with ribbon decorations and champagne service.
-
-- **Page**: https://silkride.co.uk/services/wedding-chauffeur
-
-### Event Transport
-VIP transport for concerts, galas, theatre, and sporting events.
-
-- **Page**: https://silkride.co.uk/services/event-chauffeur
-
-### UK & Europe Travel
-Long-distance chauffeur service across the UK and Europe.
-
-- **Page**: https://silkride.co.uk/services/uk-europe-travel
-
-## Popular Day Trips from London
-
-Private chauffeur tours to popular UK destinations:
-
-- **Oxford**: Historic university city | https://silkride.co.uk/destination-tours/oxford
-- **Cambridge**: Colleges & River Cam | https://silkride.co.uk/destination-tours/cambridge
-- **Bath**: Roman Baths & Georgian architecture | https://silkride.co.uk/destination-tours/bath
-- **Cotswolds**: Picturesque villages | https://silkride.co.uk/destination-tours/cotswolds
-- **Stonehenge**: Prehistoric monument | https://silkride.co.uk/destination-tours/stonehenge
+Silk Ride Ltd is a licensed private hire operator based in London, United Kingdom, serving London, the UK and Europe, 24/7, 365 days a year. All vehicles are Mercedes-Benz with leather interiors, climate control, complimentary Wi-Fi, phone chargers and bottled water. Fixed, transparent pricing with no hidden fees. Payment: Visa, Mastercard, Amex, Apple Pay, Google Pay, bank transfer.
 
 ## Key Pages
 
-| Page | URL |
-|------|-----|
-| Homepage | https://silkride.co.uk |
-| All Services | https://silkride.co.uk/services |
-| Our Fleet | https://silkride.co.uk/fleet |
-| Book Now | https://silkride.co.uk/booking |
-| About Us | https://silkride.co.uk/about |
-| Contact | https://silkride.co.uk/contact-us |
-| FAQ | https://silkride.co.uk/faq |
+- [Homepage](https://silkride.co.uk): Overview of services, fleet and reviews
+- [Book Now](https://silkride.co.uk/booking): Online booking and instant quotes
+- [All Services](https://silkride.co.uk/services): Full list of chauffeur services
+- [Our Fleet](https://silkride.co.uk/fleet): Mercedes fleet overview
+- [About Us](https://silkride.co.uk/about): Company story and standards
+- [Contact](https://silkride.co.uk/contact-us): Contact form and details
+- [FAQ](https://silkride.co.uk/faq): Frequently asked questions
+- [Blog](https://silkride.co.uk/blog): Travel guides and company news
 
-## Fleet Details
+## Services
 
-| Vehicle | URL |
-|---------|-----|
-| Mercedes E-Class | https://silkride.co.uk/fleet/mercedes-e-class |
-| Mercedes S-Class | https://silkride.co.uk/fleet/mercedes-s-class |
-| Mercedes V-Class | https://silkride.co.uk/fleet/mercedes-v-class |
+- [Airport Transfers](https://silkride.co.uk/services/airport-transfers): Meet & greet, real-time flight tracking, 60 min free waiting (international) / 45 min (domestic)
+- [Heathrow Airport](https://silkride.co.uk/airport-transfers/heathrow): From £120 to Central London
+- [Gatwick Airport](https://silkride.co.uk/airport-transfers/gatwick): From £130
+- [Stansted Airport](https://silkride.co.uk/airport-transfers/stansted): From £140
+- [Luton Airport](https://silkride.co.uk/airport-transfers/luton): From £130
+- [Hourly Chauffeur Hire](https://silkride.co.uk/services/hourly-chauffeur): From £50/hour, 4-hour minimum, as-directed service
+- [Corporate Travel](https://silkride.co.uk/services/corporate-travel): Executive transport for meetings and roadshows
+- [Wedding Chauffeur](https://silkride.co.uk/services/wedding-chauffeur): Luxury wedding cars with ribbons and champagne service
+- [Event Transport](https://silkride.co.uk/services/event-chauffeur): VIP transport for concerts, galas, theatre and sport
+- [UK & Europe Travel](https://silkride.co.uk/services/uk-europe-travel): Long-distance chauffeur-driven journeys
 
-## Why Choose Silk Ride
+## Fleet
 
-- **Licensed & Insured**: Fully licensed private hire operator
-- **Professional Drivers**: Vetted, trained, PCO-licensed chauffeurs
-- **24/7 Availability**: Round-the-clock service, every day of the year
-- **Flight Tracking**: Real-time monitoring for airport pickups
-- **Fixed Pricing**: No hidden fees, transparent quotes
-- **Luxury Fleet**: Immaculate Mercedes vehicles
+- [Mercedes E-Class](https://silkride.co.uk/fleet/mercedes-e-class): Executive saloon, up to 3 passengers, ideal for business travel
+- [Mercedes S-Class](https://silkride.co.uk/fleet/mercedes-s-class): Flagship luxury limousine, up to 3 passengers, VIP transport
+- [Mercedes V-Class](https://silkride.co.uk/fleet/mercedes-v-class): Luxury MPV, up to 7 passengers, ideal for groups and families
 
-## Booking Information
+## Private Day Trips from London
 
-- **Online Booking**: https://silkride.co.uk/booking
-- **Phone**: +44 203 488 2324
-- **Email**: info@silkride.co.uk
-- **Payment Methods**: Visa, Mastercard, Amex, Apple Pay, Google Pay, Bank Transfer
+- [Destination Tours overview](https://silkride.co.uk/destination-tours): All chauffeured day trips, priced per vehicle
+- [Oxford](https://silkride.co.uk/destination-tours/oxford): Historic university city
+- [Cambridge](https://silkride.co.uk/destination-tours/cambridge): Colleges and the River Cam
+- [Bath](https://silkride.co.uk/destination-tours/bath): Roman Baths and Georgian architecture
+- [Cotswolds](https://silkride.co.uk/destination-tours/cotswolds): Picturesque villages
+- [Stonehenge](https://silkride.co.uk/destination-tours/stonehenge): Prehistoric monument
+- [Windsor](https://silkride.co.uk/destination-tours/windsor): Windsor Castle and the Long Walk
 
-## Legal & Policies
+## Reviews & Policies
 
-- **Terms of Service**: https://silkride.co.uk/terms-of-service
-- **Privacy Policy**: https://silkride.co.uk/privacy-policy
-
-## Customer Reviews
-
-- **Google Reviews**: https://maps.app.goo.gl/jKFx8rtmUACaqVcF7
-- **Rating**: 4.9/5 stars
+- [Google Reviews](https://maps.app.goo.gl/jKFx8rtmUACaqVcF7): 5.0/5 stars from 24 reviews
+- [Terms of Service](https://silkride.co.uk/terms-of-service): Booking terms and conditions
+- [Privacy Policy](https://silkride.co.uk/privacy-policy): Data handling and cookies
 
 ## Languages
 
-The website is available in:
-- English: https://silkride.co.uk
-- Russian: https://silkride.co.uk/ru
+- [English](https://silkride.co.uk): Default site
+- [Russian](https://silkride.co.uk/ru): Полная русская версия сайта
 
-## Social Media
+## Optional
 
-- Instagram: @silkridechauffeur
-- LinkedIn: Silk Ride Ltd
+- [Biggin Hill Airport transfers](https://silkride.co.uk/airport-transfers/biggin-hill): Private jet terminal transfers
+- [Farnborough Airport transfers](https://silkride.co.uk/airport-transfers/farnborough): Business aviation transfers
+- [Partners](https://silkride.co.uk/partners): Partner programme
 
----
-
-*For booking enquiries or custom quotes, contact info@silkride.co.uk or call +44 203 488 2324*
+For booking enquiries or custom quotes, email info@silkride.co.uk or call +44 203 488 2324.
