@@ -2,7 +2,7 @@
   <nav
     :class="[
       'fixed top-0 left-0 w-full z-[999] transition-[background-color,box-shadow] duration-300',
-      isScrolled ? 'bg-[#0A0908]/90 backdrop-blur-md shadow-lg' : 'bg-transparent lg:bg-transparent'
+      (isScrolled || solid) ? 'bg-[#0A0908]/90 backdrop-blur-md shadow-lg' : 'bg-transparent lg:bg-transparent'
     ]"
   >
     <!-- Gold accent line -->
@@ -391,6 +391,12 @@ const router = useRouter()
 const { t } = useI18n()
 
 // State
+// Pages without a dark hero (FAQ, legal pages) need a solid bar from the
+// start — the transparent variant leaves white links invisible on white.
+const { solid } = defineProps({
+  solid: { type: Boolean, default: false }
+})
+
 const isScrolled = ref(false)
 const showServices = ref(false)
 const showDestinations = ref(false)

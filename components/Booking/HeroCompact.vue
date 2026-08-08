@@ -1,5 +1,5 @@
 <template>
-  <section class="relative h-[45vh] min-h-[320px] flex items-end overflow-hidden">
+  <section class="relative h-[45vh] min-h-[360px] flex items-end overflow-hidden">
     <!-- Background Image -->
     <div class="absolute inset-0">
       <NuxtImg
@@ -20,7 +20,7 @@
         <p class="text-gold text-xs md:text-sm font-semibold tracking-[0.2em] uppercase mb-4">
           {{ $t('landing.mainHero.tagline') }}
         </p>
-        <h1 class="hero-title text-white mb-4">
+        <h1 class="font-serif font-medium tracking-tight text-4xl md:text-5xl text-white mb-4 [text-wrap:balance]">
           {{ $t('bookingForm.heading') }}
         </h1>
         <p class="hero-subtitle text-gray-300 max-w-xl mx-auto">

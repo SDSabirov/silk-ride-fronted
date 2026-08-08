@@ -24,9 +24,9 @@
           <div class="bg-black/30 backdrop-blur-lg rounded-3xl border border-white/20 p-8 md:p-12 shadow-2xl">
             <!-- Title Section -->
             <div class="text-center mb-12">
-              <h1 class="text-4xl md:text-7xl font-bold text-white mb-4 leading-tight">
+              <h1 class="font-serif font-medium tracking-tight text-4xl md:text-6xl text-white mb-4 leading-tight [text-wrap:balance]">
                 {{ title }}
-                <span class="block text-gold mt-2">{{ subtitle }}</span>
+                <span class="block text-gold mt-2 italic">{{ subtitle }}</span>
               </h1>
               <p class="text-xl md:text-2xl text-gray-200 font-light max-w-3xl mx-auto leading-relaxed">
                 {{ slogan }}

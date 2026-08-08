@@ -260,7 +260,7 @@ import { useI18n } from '#imports'
 
 const { t } = useI18n()
 
-const cover = "/images/covers/contactus.webp"
+const cover = "/images/hero-chauffeur.webp"
 const { trackLead } = useAnalytics()
 
 // Initialize engagement tracking for this page
