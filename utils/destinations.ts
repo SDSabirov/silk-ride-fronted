@@ -1,4 +1,4 @@
-﻿// Central source of truth for the /destination-tours pages.
+// Central source of truth for the /destination-tours pages.
 //
 // Each page (pages/destination-tours/<slug>.vue) is a thin wrapper that passes
 // one of these objects to <DestinationTourPage>. The hub page
@@ -108,14 +108,14 @@ export const destinations: Record<string, Destination> = {
     slug: 'windsor',
     name: 'Windsor Castle',
     seoKey: 'windsorChauffeur',
-    kicker: 'Private Chauffeur Tour Â· From London',
+    kicker: 'Private Chauffeur Tour · From London',
     hero: {
       title: 'Private Windsor Castle Tours',
       titleAccent: 'from London',
       subtitle:
         "Step inside the world's oldest occupied royal castle in true comfort. A chauffeured Mercedes collects you in London, drives you to Windsor in around an hour, and waits while you explore at your own pace.",
       image: '/images/covers/windsor.webp',
-      alt: 'Windsor Castle round tower and royal grounds â€” private chauffeur tour from London',
+      alt: 'Windsor Castle round tower and royal grounds — private chauffeur tour from London',
       ogImage: '/images/covers/windsor.webp',
     },
     stats: [
@@ -126,9 +126,9 @@ export const destinations: Record<string, Destination> = {
     overview: {
       heading: 'The Oldest & Largest Occupied Castle in the World',
       paragraphs: [
-        'A Windsor Castle tour from London is the most accessible â€” and the most cinematic â€” royal day trip in the UK. Just 22 miles west of central London via the M4, Windsor has been the official residence of the British monarch for almost a thousand years, from William the Conqueror to King Charles III. Silk Ride chauffeurs collect you from your London address, drive you to the castle gate in around an hour, and wait while you explore.',
-        "Inside the castle precincts you'll see the State Apartments â€” still used today for State visits and investitures â€” the breathtaking St George's Chapel, where Henry VIII, Queen Elizabeth II and Prince Philip are buried, and Queen Mary's Dolls' House, the largest and most detailed in the world. Allow 2.5 to 3 hours on site to do it properly.",
-        'Because the journey is short, Windsor pairs beautifully with other day-trip favourites: Stonehenge (1h20 from Windsor), Bath (1h45), the Roman amphitheatre at Verulamium, or a punt at Oxford. Your driver will plan the day around your pace â€” no coach schedules, no rushed exits.',
+        'A Windsor Castle tour from London is the most accessible — and the most cinematic — royal day trip in the UK. Just 22 miles west of central London via the M4, Windsor has been the official residence of the British monarch for almost a thousand years, from William the Conqueror to King Charles III. Silk Ride chauffeurs collect you from your London address, drive you to the castle gate in around an hour, and wait while you explore.',
+        "Inside the castle precincts you'll see the State Apartments — still used today for State visits and investitures — the breathtaking St George's Chapel, where Henry VIII, Queen Elizabeth II and Prince Philip are buried, and Queen Mary's Dolls' House, the largest and most detailed in the world. Allow 2.5 to 3 hours on site to do it properly.",
+        'Because the journey is short, Windsor pairs beautifully with other day-trip favourites: Stonehenge (1h20 from Windsor), Bath (1h45), the Roman amphitheatre at Verulamium, or a punt at Oxford. Your driver will plan the day around your pace — no coach schedules, no rushed exits.',
       ],
       includesTitle: "What's Included",
       includes: [
@@ -136,14 +136,14 @@ export const destinations: Record<string, Destination> = {
         'Door-to-door pickup from any London address',
         'Timed-entry castle tickets arranged on request (admission not included)',
         'Complimentary bottled water and Wi-Fi onboard',
-        'Flexible itinerary â€” add Stonehenge, Bath or Eton',
+        'Flexible itinerary — add Stonehenge, Bath or Eton',
         'Private tour guide available on request',
       ],
     },
     attractions: {
       title: 'What to See at Windsor Castle & Beyond',
       intro:
-        'The castle alone is a full half-day. With a private chauffeur you can add nearby Eton, Runnymede or the Long Walk â€” all without a second transfer.',
+        'The castle alone is a full half-day. With a private chauffeur you can add nearby Eton, Runnymede or the Long Walk — all without a second transfer.',
       items: [
         {
           icon: 'bx-buildings',
@@ -161,7 +161,7 @@ export const destinations: Record<string, Destination> = {
           icon: 'bx-church',
           title: "St George's Chapel",
           description:
-            'One of the finest examples of Perpendicular Gothic architecture in England â€” the venue for royal weddings and the resting place of ten monarchs.',
+            'One of the finest examples of Perpendicular Gothic architecture in England — the venue for royal weddings and the resting place of ten monarchs.',
           points: [
             'Burial place of Henry VIII & Charles I',
             'Queen Elizabeth II & Prince Philip memorial',
@@ -173,7 +173,7 @@ export const destinations: Record<string, Destination> = {
           icon: 'bx-home-heart',
           title: "Queen Mary's Dolls' House",
           description:
-            "The largest and most famous dolls' house in the world â€” a 1:12 scale Edwardian residence with working lifts, running water and a stocked wine cellar.",
+            "The largest and most famous dolls' house in the world — a 1:12 scale Edwardian residence with working lifts, running water and a stocked wine cellar.",
           points: [
             'Designed by Sir Edwin Lutyens (1924)',
             'Contributions from 1,500+ craftspeople',
@@ -185,7 +185,7 @@ export const destinations: Record<string, Destination> = {
           icon: 'bxs-tree',
           title: 'Windsor Great Park & Long Walk',
           description:
-            'The 4,800-acre royal park stretches south of the castle. The Long Walk â€” a 2.6-mile tree-lined avenue â€” gives the iconic postcard view of the castle.',
+            'The 4,800-acre royal park stretches south of the castle. The Long Walk — a 2.6-mile tree-lined avenue — gives the iconic postcard view of the castle.',
           points: [
             '2.6-mile Long Walk to Snow Hill',
             'Savill Garden & Valley Gardens',
@@ -209,12 +209,12 @@ export const destinations: Record<string, Destination> = {
           icon: 'bx-flag',
           title: 'Runnymede',
           description:
-            'The Thames-side meadow where King John sealed the Magna Carta in 1215 â€” the foundational document of English common law. A 10-minute drive from Windsor.',
+            'The Thames-side meadow where King John sealed the Magna Carta in 1215 — the foundational document of English common law. A 10-minute drive from Windsor.',
           points: [
             'Site of Magna Carta signing (1215)',
             'American Bar Association memorial',
             'John F. Kennedy memorial',
-            'Riverside walks & cafÃ©',
+            'Riverside walks & café',
           ],
         },
       ],
@@ -234,17 +234,17 @@ export const destinations: Record<string, Destination> = {
       {
         question: 'How long does it take to drive from London to Windsor Castle?',
         answer:
-          'The drive is around 22 miles and takes 50â€“60 minutes via the M4 from central London. From Heathrow it is only 15 minutes â€” making Windsor an ideal layover day trip.',
+          'The drive is around 22 miles and takes 50–60 minutes via the M4 from central London. From Heathrow it is only 15 minutes — making Windsor an ideal layover day trip.',
       },
       {
         question: 'Are Windsor Castle tickets included in the tour?',
         answer:
-          'No â€” castle entry tickets are not included in the tour price. We are happy to pre-book timed-entry tickets for you and add them to your quote so you still skip the ticket queue. As of 2026, the published gate prices are Â£31 adult, Â£20 youth (18â€“24) and Â£15.50 child (5â€“17). Children under 5 enter free.',
+          'No — castle entry tickets are not included in the tour price. We are happy to pre-book timed-entry tickets for you and add them to your quote so you still skip the ticket queue. As of 2026, the published gate prices are £31 adult, £20 youth (18–24) and £15.50 child (5–17). Children under 5 enter free.',
       },
       {
         question: 'What days is Windsor Castle open?',
         answer:
-          'Windsor Castle is open Thursday through Monday year-round. It is closed every Wednesday, and additionally closed Tuesdays from November through February. Summer hours are 10:00â€“17:15 (last entry 16:00); winter hours are 10:00â€“16:15 (last entry 15:00). The castle occasionally closes at short notice for State events.',
+          'Windsor Castle is open Thursday through Monday year-round. It is closed every Wednesday, and additionally closed Tuesdays from November through February. Summer hours are 10:00–17:15 (last entry 16:00); winter hours are 10:00–16:15 (last entry 15:00). The castle occasionally closes at short notice for State events.',
       },
       {
         question: 'How long should I plan to spend at Windsor Castle?',
@@ -254,22 +254,22 @@ export const destinations: Record<string, Destination> = {
       {
         question: "Can I see St George's Chapel and the Royal Tombs?",
         answer:
-          "Yes â€” St George's Chapel is included in the standard admission and is one of the highlights. It is the burial place of ten British monarchs including Henry VIII, Charles I, and most recently Queen Elizabeth II and Prince Philip. The chapel is closed to tourists on Sundays for services, but Evensong is open to all at 17:15 most evenings.",
+          "Yes — St George's Chapel is included in the standard admission and is one of the highlights. It is the burial place of ten British monarchs including Henry VIII, Charles I, and most recently Queen Elizabeth II and Prince Philip. The chapel is closed to tourists on Sundays for services, but Evensong is open to all at 17:15 most evenings.",
       },
       {
         question: 'Is the Changing of the Guard at Windsor Castle?',
         answer:
-          'Yes. The Changing of the Guard takes place at 11:00 on most Tuesday, Thursday and Saturday mornings (subject to weather and operational requirements). It is included in your castle admission â€” no extra ticket needed.',
+          'Yes. The Changing of the Guard takes place at 11:00 on most Tuesday, Thursday and Saturday mornings (subject to weather and operational requirements). It is included in your castle admission — no extra ticket needed.',
       },
       {
         question: 'Can I combine Windsor Castle with Stonehenge or Bath?',
         answer:
-          'Yes â€” these are our most-requested combination tours. <strong>Windsor + Stonehenge</strong> is a long but rewarding full day (around 10 hours). <strong>Windsor + Bath</strong> is the classic royal-and-Roman combo (around 11 hours). Tell us which you prefer and we will build the itinerary.',
+          'Yes — these are our most-requested combination tours. <strong>Windsor + Stonehenge</strong> is a long but rewarding full day (around 10 hours). <strong>Windsor + Bath</strong> is the classic royal-and-Roman combo (around 11 hours). Tell us which you prefer and we will build the itinerary.',
       },
       {
         question: 'How much does a private Windsor Castle tour from London cost?',
         answer:
-          'Pricing depends on group size, the vehicle chosen, total tour length, and any additional stops. Send us your dates and itinerary and we will send back a tailored quote â€” usually within the hour.',
+          'Pricing depends on group size, the vehicle chosen, total tour length, and any additional stops. Send us your dates and itinerary and we will send back a tailored quote — usually within the hour.',
       },
     ],
     whyTitle: 'Why Choose Silk Ride for Your Windsor Castle Tour',
@@ -279,10 +279,10 @@ export const destinations: Record<string, Destination> = {
     cta: {
       title: 'Plan Your Private Windsor Castle Tour',
       subtitle:
-        "Tell us your dates, group size and any add-on stops â€” we'll send back a tailored quote within an hour.",
+        "Tell us your dates, group size and any add-on stops — we'll send back a tailored quote within an hour.",
     },
     card: {
-      tagline: "Britain's most famous royal castle â€” 1,000 years of history, an hour from London.",
+      tagline: "Britain's most famous royal castle — 1,000 years of history, an hour from London.",
       icon: 'bxs-castle',
     },
     pricing: { withoutGuide: 450, withGuide: 850, entryNote: true },
@@ -315,14 +315,14 @@ export const destinations: Record<string, Destination> = {
     slug: 'stonehenge',
     name: 'Stonehenge',
     seoKey: 'stonehengeChauffeur',
-    kicker: 'Private Chauffeur Tour Â· From London',
+    kicker: 'Private Chauffeur Tour · From London',
     hero: {
       title: 'Private Stonehenge Tours',
       titleAccent: 'from London',
       subtitle:
-        "Skip the coach crowds. Travel to the world's most famous prehistoric monument in a chauffeured Mercedes â€” door-to-door from your London hotel, with a fully flexible itinerary.",
+        "Skip the coach crowds. Travel to the world's most famous prehistoric monument in a chauffeured Mercedes — door-to-door from your London hotel, with a fully flexible itinerary.",
       image: '/images/covers/stonehenge.webp',
-      alt: 'Stonehenge prehistoric stone circle at sunrise â€” private chauffeur tour from London',
+      alt: 'Stonehenge prehistoric stone circle at sunrise — private chauffeur tour from London',
       ogImage: '/images/covers/stonehenge.webp',
     },
     stats: [
@@ -333,9 +333,9 @@ export const destinations: Record<string, Destination> = {
     overview: {
       heading: 'A Private Stonehenge Day Trip Built Around You',
       paragraphs: [
-        'A Stonehenge tour from London is one of the most rewarding day trips in the UK â€” but the standard coach experience means a 5am hotel pickup, a packed 50-seater, and only an hour at the stones. Silk Ride does it differently. Your chauffeur collects you from your London address in a private Mercedes, drives the 90-mile route via the M3 and A303 in around two hours, and waits as long as you need at the monument.',
-        "Located on Salisbury Plain in Wiltshire, Stonehenge has stood as one of humanity's most enigmatic monuments for over 5,000 years. The site's massive sarsen trilithons and Welsh bluestones â€” some weighing up to 25 tonnes â€” were transported and raised by Neolithic communities using methods that still puzzle archaeologists. Today the monument is a UNESCO World Heritage Site managed by English Heritage, with a visitor centre, museum, and reconstructed Neolithic houses on the approach.",
-        'Because you have a private car and driver, you choose the timing. Arrive at opening to beat the coaches, combine Stonehenge with Bath, Salisbury Cathedral, or the larger stone circle at Avebury, or book an exclusive Inner Circle access tour outside public hours. Your driver is happy to share what they know about the route and the monument â€” but you set the pace.',
+        'A Stonehenge tour from London is one of the most rewarding day trips in the UK — but the standard coach experience means a 5am hotel pickup, a packed 50-seater, and only an hour at the stones. Silk Ride does it differently. Your chauffeur collects you from your London address in a private Mercedes, drives the 90-mile route via the M3 and A303 in around two hours, and waits as long as you need at the monument.',
+        "Located on Salisbury Plain in Wiltshire, Stonehenge has stood as one of humanity's most enigmatic monuments for over 5,000 years. The site's massive sarsen trilithons and Welsh bluestones — some weighing up to 25 tonnes — were transported and raised by Neolithic communities using methods that still puzzle archaeologists. Today the monument is a UNESCO World Heritage Site managed by English Heritage, with a visitor centre, museum, and reconstructed Neolithic houses on the approach.",
+        'Because you have a private car and driver, you choose the timing. Arrive at opening to beat the coaches, combine Stonehenge with Bath, Salisbury Cathedral, or the larger stone circle at Avebury, or book an exclusive Inner Circle access tour outside public hours. Your driver is happy to share what they know about the route and the monument — but you set the pace.',
       ],
       includesTitle: "What's Included",
       includes: [
@@ -343,14 +343,14 @@ export const destinations: Record<string, Destination> = {
         'Door-to-door pickup from any London address',
         'Timed entry tickets arranged on request (admission not included)',
         'Complimentary bottled water and Wi-Fi onboard',
-        'Flexible itinerary â€” combine with Bath, Salisbury, or Avebury',
+        'Flexible itinerary — combine with Bath, Salisbury, or Avebury',
         'Inner Circle access available on request',
       ],
     },
     attractions: {
       title: 'Stonehenge & Surrounding Attractions',
       intro:
-        "Stonehenge sits at the centre of one of Europe's richest prehistoric landscapes. Pair the monument with any of these nearby sites â€” your driver will plan the route.",
+        "Stonehenge sits at the centre of one of Europe's richest prehistoric landscapes. Pair the monument with any of these nearby sites — your driver will plan the route.",
       items: [
         {
           icon: 'bx-circle',
@@ -368,19 +368,19 @@ export const destinations: Record<string, Destination> = {
           icon: 'bx-building-house',
           title: 'Stonehenge Visitor Centre',
           description:
-            "English Heritage's award-winning visitor centre â€” 360-degree virtual circle, archaeological finds and outdoor Neolithic houses.",
+            "English Heritage's award-winning visitor centre — 360-degree virtual circle, archaeological finds and outdoor Neolithic houses.",
           points: [
             '360-degree immersive theatre',
             'Neolithic skeletal remains & artefacts',
             'Reconstructed thatched houses',
-            'CafÃ© and gift shop',
+            'Café and gift shop',
           ],
         },
         {
           icon: 'bx-church',
           title: 'Salisbury Cathedral',
           description:
-            "A 15-minute drive from Stonehenge â€” Britain's tallest spire and one of only four surviving original copies of the Magna Carta.",
+            "A 15-minute drive from Stonehenge — Britain's tallest spire and one of only four surviving original copies of the Magna Carta.",
           points: [
             "Britain's tallest spire (123m)",
             'Original 1215 Magna Carta',
@@ -404,12 +404,12 @@ export const destinations: Record<string, Destination> = {
           icon: 'bxs-castle',
           title: 'Old Sarum',
           description:
-            'The Iron Age hillfort and Norman cathedral that preceded modern Salisbury â€” panoramic views over Wiltshire and dramatic ruins.',
+            'The Iron Age hillfort and Norman cathedral that preceded modern Salisbury — panoramic views over Wiltshire and dramatic ruins.',
           points: [
             'Iron Age earthwork ramparts',
             'Norman royal castle ruins',
             'Original cathedral foundations',
-            '360Â° views of Salisbury Plain',
+            '360° views of Salisbury Plain',
           ],
         },
         {
@@ -446,12 +446,12 @@ export const destinations: Record<string, Destination> = {
       {
         question: 'Are Stonehenge entry tickets included in the tour?',
         answer:
-          'No â€” English Heritage entry tickets are not included in the tour price. We can pre-book timed entry tickets for you and add them to your quote so you skip the queue at the visitor centre. Just let us know your preferred arrival window when you book.',
+          'No — English Heritage entry tickets are not included in the tour price. We can pre-book timed entry tickets for you and add them to your quote so you skip the queue at the visitor centre. Just let us know your preferred arrival window when you book.',
       },
       {
         question: 'Can I get Inner Circle access to walk among the stones?',
         answer:
-          'Yes â€” Inner Circle access is bookable in advance for visits before or after public opening hours, when no other visitors are on site. Spaces are limited and sell out months ahead, so contact us early if you would like to add this to your tour.',
+          'Yes — Inner Circle access is bookable in advance for visits before or after public opening hours, when no other visitors are on site. Spaces are limited and sell out months ahead, so contact us early if you would like to add this to your tour.',
       },
       {
         question: 'Is Stonehenge worth combining with Bath or Salisbury?',
@@ -461,12 +461,12 @@ export const destinations: Record<string, Destination> = {
       {
         question: 'What is the best time of year to visit Stonehenge?',
         answer:
-          'Stonehenge is open year-round. May to September has the best weather and longest daylight hours. The summer solstice (around 21 June) and winter solstice draw large crowds â€” your chauffeur can advise on the best timing for a quieter visit.',
+          'Stonehenge is open year-round. May to September has the best weather and longest daylight hours. The summer solstice (around 21 June) and winter solstice draw large crowds — your chauffeur can advise on the best timing for a quieter visit.',
       },
       {
         question: 'How long should I plan to spend at Stonehenge?',
         answer:
-          'Most visitors spend 1.5 to 2 hours on site â€” enough to see the stone circle, walk the perimeter path, explore the visitor centre and the reconstructed Neolithic houses. Add another 30 minutes if you want to take the optional walk back to the stones rather than the shuttle bus.',
+          'Most visitors spend 1.5 to 2 hours on site — enough to see the stone circle, walk the perimeter path, explore the visitor centre and the reconstructed Neolithic houses. Add another 30 minutes if you want to take the optional walk back to the stones rather than the shuttle bus.',
       },
       {
         question: 'How many passengers can you accommodate?',
@@ -476,7 +476,7 @@ export const destinations: Record<string, Destination> = {
       {
         question: 'How much does a private Stonehenge tour from London cost?',
         answer:
-          'Pricing depends on group size, the vehicle chosen, total tour length, and any additional stops. Send us your dates and itinerary and we will send back a tailored quote â€” usually within the hour.',
+          'Pricing depends on group size, the vehicle chosen, total tour length, and any additional stops. Send us your dates and itinerary and we will send back a tailored quote — usually within the hour.',
       },
     ],
     whyTitle: 'Why Choose Silk Ride for Your Stonehenge Tour',
@@ -485,10 +485,10 @@ export const destinations: Record<string, Destination> = {
     cta: {
       title: 'Plan Your Private Stonehenge Tour',
       subtitle:
-        "Tell us your dates, group size and any add-on stops â€” we'll send back a tailored quote within an hour.",
+        "Tell us your dates, group size and any add-on stops — we'll send back a tailored quote within an hour.",
     },
     card: {
-      tagline: "The world's most famous prehistoric monument â€” a UNESCO stone circle on Salisbury Plain.",
+      tagline: "The world's most famous prehistoric monument — a UNESCO stone circle on Salisbury Plain.",
       icon: 'bx-circle',
     },
     pricing: { withoutGuide: 450, withGuide: 750, hours: 6, entryNote: true },
@@ -506,7 +506,7 @@ export const destinations: Record<string, Destination> = {
       attraction: {
         name: 'Stonehenge',
         description:
-          'Prehistoric stone circle on Salisbury Plain, Wiltshire, England â€” a UNESCO World Heritage Site dating to around 3000 BC.',
+          'Prehistoric stone circle on Salisbury Plain, Wiltshire, England — a UNESCO World Heritage Site dating to around 3000 BC.',
         locality: 'Amesbury',
         region: 'Wiltshire',
         geo: { lat: 51.1789, lng: -1.8262 },
@@ -519,25 +519,25 @@ export const destinations: Record<string, Destination> = {
     slug: 'oxford',
     name: 'Oxford',
     seoKey: 'oxfordChauffeur',
-    kicker: 'Private Chauffeur Tour Â· From London',
+    kicker: 'Private Chauffeur Tour · From London',
     hero: {
       title: 'Private Oxford Tours',
       titleAccent: 'from London',
       subtitle:
         'Explore the City of Dreaming Spires in comfort. A chauffeured Mercedes collects you in London, reaches Oxford in around 1.5 to 2 hours, and waits while you wander 900 years of colleges, libraries and gardens at your own pace.',
       image: '/images/covers/oxford.webp',
-      alt: 'Oxford university spires and historic college architecture â€” private chauffeur tour from London',
+      alt: 'Oxford university spires and historic college architecture — private chauffeur tour from London',
       ogImage: '/images/covers/oxford.webp',
     },
     stats: [
-      { icon: 'bx-time-five', label: '1.5â€“2 Hours', sub: 'From Central London via M40' },
+      { icon: 'bx-time-five', label: '1.5–2 Hours', sub: 'From Central London via M40' },
       { icon: 'bx-book-reader', label: '38 Historic Colleges', sub: "The world's oldest English-speaking university" },
       { icon: 'bx-user-voice', label: 'Private Chauffeur', sub: 'Mercedes S-Class or V-Class' },
     ],
     overview: {
       heading: 'Discover Oxford, the City of Dreaming Spires',
       paragraphs: [
-        'Experience the "City of Dreaming Spires" with our private Oxford chauffeur service. Home to the world\'s oldest English-speaking university, Oxford combines nearly 900 years of academic heritage with stunning architecture, beautiful gardens, and vibrant cultural life â€” all just 60 miles northwest of London via the M40.',
+        'Experience the "City of Dreaming Spires" with our private Oxford chauffeur service. Home to the world\'s oldest English-speaking university, Oxford combines nearly 900 years of academic heritage with stunning architecture, beautiful gardens, and vibrant cultural life — all just 60 miles northwest of London via the M40.',
         "Your chauffeur provides door-to-door transfers from London to Oxford, or a comprehensive tour of the city. Whether you're visiting for a university event, business meeting, sightseeing, or shopping at Bicester Village, we make sure the journey is relaxing and the day is entirely your own.",
         'Because you travel by private car, there are no coach timetables. Arrive early to beat the crowds at Christ Church, add the Cotswolds or Blenheim Palace in the afternoon, and let your driver share the best routes and stories along the way.',
       ],
@@ -554,7 +554,7 @@ export const destinations: Record<string, Destination> = {
     attractions: {
       title: "Oxford's Must-Visit Attractions",
       intro:
-        'From Harry Potter filming locations to Britain\'s first public museum â€” with a private chauffeur you can see far more of Oxford in a day.',
+        'From Harry Potter filming locations to Britain\'s first public museum — with a private chauffeur you can see far more of Oxford in a day.',
       items: [
         {
           icon: 'bx-buildings',
@@ -620,7 +620,7 @@ export const destinations: Record<string, Destination> = {
           icon: 'bx-water',
           title: 'River Activities',
           description:
-            'Enjoy peaceful river activities along the Cherwell and Thames â€” punting, river walks and scenic viewpoints perfect for photography.',
+            'Enjoy peaceful river activities along the Cherwell and Thames — punting, river walks and scenic viewpoints perfect for photography.',
           points: [
             'Punting on the River Cherwell',
             'Thames Path walking',
@@ -633,10 +633,10 @@ export const destinations: Record<string, Destination> = {
     journeys: {
       title: 'Journey Times & Routes',
       items: [
-        { place: 'Central London', time: '~60â€“90 min', note: 'Via M40 motorway' },
-        { place: 'Heathrow Airport', time: '~45â€“60 min', note: 'Direct via M40' },
-        { place: 'Bicester Village', time: '~15â€“20 min', note: 'Perfect shopping combination' },
-        { place: 'Cotswolds', time: '~30â€“45 min', note: 'Extend your countryside tour' },
+        { place: 'Central London', time: '~60–90 min', note: 'Via M40 motorway' },
+        { place: 'Heathrow Airport', time: '~45–60 min', note: 'Direct via M40' },
+        { place: 'Bicester Village', time: '~15–20 min', note: 'Perfect shopping combination' },
+        { place: 'Cotswolds', time: '~30–45 min', note: 'Extend your countryside tour' },
       ],
     },
     faqTitle: 'Oxford Tour: Frequently Asked Questions',
@@ -645,27 +645,27 @@ export const destinations: Record<string, Destination> = {
       {
         question: 'How long does it take to drive from London to Oxford?',
         answer:
-          'Oxford is around 60 miles from central London and takes 60â€“90 minutes via the M40, depending on traffic. From Heathrow it is closer to 45â€“60 minutes. Your chauffeur plans the route around conditions on the day.',
+          'Oxford is around 60 miles from central London and takes 60–90 minutes via the M40, depending on traffic. From Heathrow it is closer to 45–60 minutes. Your chauffeur plans the route around conditions on the day.',
       },
       {
         question: 'Can I go inside the Oxford colleges?',
         answer:
-          'Most colleges, including Christ Church, the Bodleian Library and Magdalen, are open to visitors for a small admission fee, though opening hours vary and some close during exams or events. We recommend Christ Church (the Harry Potter Great Hall) and the Bodleian â€” your driver can advise on what is open the day you visit.',
+          'Most colleges, including Christ Church, the Bodleian Library and Magdalen, are open to visitors for a small admission fee, though opening hours vary and some close during exams or events. We recommend Christ Church (the Harry Potter Great Hall) and the Bodleian — your driver can advise on what is open the day you visit.',
       },
       {
         question: 'Can I combine Oxford with Bicester Village or the Cotswolds?',
         answer:
-          '<strong>Oxford + Bicester Village</strong> is one of our most popular days â€” the luxury outlet is just 15 minutes away. <strong>Oxford + the Cotswolds</strong> pairs the dreaming spires with England\'s prettiest villages (30â€“45 minutes on). Blenheim Palace, birthplace of Winston Churchill, is another easy add-on.',
+          '<strong>Oxford + Bicester Village</strong> is one of our most popular days — the luxury outlet is just 15 minutes away. <strong>Oxford + the Cotswolds</strong> pairs the dreaming spires with England\'s prettiest villages (30–45 minutes on). Blenheim Palace, birthplace of Winston Churchill, is another easy add-on.',
       },
       {
         question: 'How long should I spend in Oxford?',
         answer:
-          'A half-day (around 4 hours) covers the highlights â€” Christ Church, the Bodleian and Radcliffe Camera, plus the city centre. A full day lets you add museums, punting on the Cherwell, or a shopping or countryside extension.',
+          'A half-day (around 4 hours) covers the highlights — Christ Church, the Bodleian and Radcliffe Camera, plus the city centre. A full day lets you add museums, punting on the Cherwell, or a shopping or countryside extension.',
       },
       {
         question: 'Is Oxford suitable as a day trip with the family?',
         answer:
-          'Yes. Oxford is compact and walkable, with plenty for all ages â€” the Harry Potter filming locations, the Natural History and Pitt Rivers museums, punting, and the Covered Market. Our Mercedes V-Class comfortably carries families of up to 7 with luggage.',
+          'Yes. Oxford is compact and walkable, with plenty for all ages — the Harry Potter filming locations, the Natural History and Pitt Rivers museums, punting, and the Covered Market. Our Mercedes V-Class comfortably carries families of up to 7 with luggage.',
       },
       {
         question: 'How many passengers can you accommodate?',
@@ -675,7 +675,7 @@ export const destinations: Record<string, Destination> = {
       {
         question: 'How much does a private Oxford tour from London cost?',
         answer:
-          'Pricing depends on group size, the vehicle chosen, total tour length, and any additional stops. Send us your dates and itinerary and we will send back a tailored quote â€” usually within the hour.',
+          'Pricing depends on group size, the vehicle chosen, total tour length, and any additional stops. Send us your dates and itinerary and we will send back a tailored quote — usually within the hour.',
       },
     ],
     whyTitle: 'Why Choose Silk Ride for Your Oxford Tour',
@@ -684,10 +684,10 @@ export const destinations: Record<string, Destination> = {
     cta: {
       title: 'Plan Your Oxford Experience Today',
       subtitle:
-        "Tell us your dates, group size and any add-on stops â€” we'll send back a tailored quote within an hour.",
+        "Tell us your dates, group size and any add-on stops — we'll send back a tailored quote within an hour.",
     },
     card: {
-      tagline: 'Dreaming spires and 38 historic colleges â€” an hour from London.',
+      tagline: 'Dreaming spires and 38 historic colleges — an hour from London.',
       icon: 'bx-book-reader',
     },
     pricing: { withoutGuide: 650, withGuide: 1250, hours: 9 },
@@ -716,27 +716,27 @@ export const destinations: Record<string, Destination> = {
     slug: 'cambridge',
     name: 'Cambridge',
     seoKey: 'cambridgeChauffeur',
-    kicker: 'Private Chauffeur Tour Â· From London',
+    kicker: 'Private Chauffeur Tour · From London',
     hero: {
       title: 'Private Cambridge Tours',
       titleAccent: 'from London',
       subtitle:
         'Glide into 800 years of academic history. A chauffeured Mercedes collects you in London, reaches Cambridge in around 1.5 to 2 hours, and waits while you explore the colleges, chapels and the River Cam at your own pace.',
       image: '/images/covers/cambridge.webp',
-      alt: "King's College Chapel and the River Cam â€” private chauffeur tour of Cambridge from London",
+      alt: "King's College Chapel and the River Cam — private chauffeur tour of Cambridge from London",
       ogImage: '/images/covers/cambridge.webp',
     },
     stats: [
-      { icon: 'bx-time-five', label: '1.5â€“2 Hours', sub: 'From Central London via M11' },
+      { icon: 'bx-time-five', label: '1.5–2 Hours', sub: 'From Central London via M11' },
       { icon: 'bx-book-reader', label: '800 Years of History', sub: 'World-renowned colleges & chapels' },
       { icon: 'bx-water', label: 'Punting on the Cam', sub: 'The classic Cambridge experience' },
     ],
     overview: {
       heading: 'Discover Cambridge in Luxury',
       paragraphs: [
-        "Experience the prestigious university city of Cambridge with our private chauffeur service. Home to one of the world's oldest and most renowned universities, Cambridge combines 800 years of academic excellence with stunning architecture, riverside gardens and a vibrant cultural life â€” just 55 miles north of London.",
+        "Experience the prestigious university city of Cambridge with our private chauffeur service. Home to one of the world's oldest and most renowned universities, Cambridge combines 800 years of academic excellence with stunning architecture, riverside gardens and a vibrant cultural life — just 55 miles north of London.",
         "Your chauffeur provides door-to-door transfers from London to Cambridge, or a comprehensive tour of the city. Whether you're visiting for a university event, a business meeting, sightseeing, or punting on the Cam, we make sure the journey is relaxing and the day is entirely your own.",
-        'Cambridge is easily reached via the M11 and A14, and pairs beautifully with Ely Cathedral or even Oxford for a two-university itinerary. With a private car, you set the pace â€” no coach timetables, no rushed exits.',
+        'Cambridge is easily reached via the M11 and A14, and pairs beautifully with Ely Cathedral or even Oxford for a two-university itinerary. With a private car, you set the pace — no coach timetables, no rushed exits.',
       ],
       includesTitle: "What's Included",
       includes: [
@@ -751,7 +751,7 @@ export const destinations: Record<string, Destination> = {
     attractions: {
       title: "Cambridge's Must-Visit Attractions",
       intro:
-        'From King\'s College Chapel to punting on the Backs â€” a private chauffeur lets you see the best of Cambridge without the rush.',
+        'From King\'s College Chapel to punting on the Backs — a private chauffeur lets you see the best of Cambridge without the rush.',
       items: [
         {
           icon: 'bx-buildings',
@@ -830,10 +830,10 @@ export const destinations: Record<string, Destination> = {
     journeys: {
       title: 'Journey Times & Routes',
       items: [
-        { place: 'Central London', time: '~55â€“75 min', note: 'Via M11 motorway' },
-        { place: 'Stansted Airport', time: '~30â€“45 min', note: 'Direct via M11' },
-        { place: 'Ely Cathedral', time: '~25â€“35 min', note: 'Extended countryside tour' },
-        { place: 'Oxford', time: '~90â€“120 min', note: 'Two-university day' },
+        { place: 'Central London', time: '~55–75 min', note: 'Via M11 motorway' },
+        { place: 'Stansted Airport', time: '~30–45 min', note: 'Direct via M11' },
+        { place: 'Ely Cathedral', time: '~25–35 min', note: 'Extended countryside tour' },
+        { place: 'Oxford', time: '~90–120 min', note: 'Two-university day' },
       ],
     },
     faqTitle: 'Cambridge Tour: Frequently Asked Questions',
@@ -842,12 +842,12 @@ export const destinations: Record<string, Destination> = {
       {
         question: 'How long does it take to drive from London to Cambridge?',
         answer:
-          'Cambridge is around 55 miles from central London and takes 55â€“75 minutes via the M11, depending on traffic. From Stansted Airport it is only 30â€“45 minutes. Your chauffeur plans the route around conditions on the day.',
+          'Cambridge is around 55 miles from central London and takes 55–75 minutes via the M11, depending on traffic. From Stansted Airport it is only 30–45 minutes. Your chauffeur plans the route around conditions on the day.',
       },
       {
         question: 'Can I go punting on the River Cam?',
         answer:
-          'Yes â€” punting along the Backs, past King\'s College Chapel and under the Mathematical Bridge, is the classic Cambridge experience. We can arrange chauffeured or self-punt hire in advance; just let us know when you book and your driver will time the day around it.',
+          'Yes — punting along the Backs, past King\'s College Chapel and under the Mathematical Bridge, is the classic Cambridge experience. We can arrange chauffeured or self-punt hire in advance; just let us know when you book and your driver will time the day around it.',
       },
       {
         question: 'Can I visit the colleges and King\'s College Chapel?',
@@ -872,7 +872,7 @@ export const destinations: Record<string, Destination> = {
       {
         question: 'How much does a private Cambridge tour from London cost?',
         answer:
-          'Pricing depends on group size, the vehicle chosen, total tour length, and any additional stops. Send us your dates and itinerary and we will send back a tailored quote â€” usually within the hour.',
+          'Pricing depends on group size, the vehicle chosen, total tour length, and any additional stops. Send us your dates and itinerary and we will send back a tailored quote — usually within the hour.',
       },
     ],
     whyTitle: 'Why Choose Silk Ride for Your Cambridge Tour',
@@ -881,10 +881,10 @@ export const destinations: Record<string, Destination> = {
     cta: {
       title: 'Plan Your Cambridge Experience Today',
       subtitle:
-        "Tell us your dates, group size and any add-on stops â€” we'll send back a tailored quote within an hour.",
+        "Tell us your dates, group size and any add-on stops — we'll send back a tailored quote within an hour.",
     },
     card: {
-      tagline: 'Punting on the Cam and centuries-old colleges â€” under an hour from London.',
+      tagline: 'Punting on the Cam and centuries-old colleges — under an hour from London.',
       icon: 'bx-water',
     },
     pricing: { withoutGuide: 650, withGuide: 1250, hours: 9 },
@@ -913,18 +913,18 @@ export const destinations: Record<string, Destination> = {
     slug: 'bath',
     name: 'Bath',
     seoKey: 'bathChauffeur',
-    kicker: 'Private Chauffeur Tour Â· From London',
+    kicker: 'Private Chauffeur Tour · From London',
     hero: {
       title: 'Private Bath Tours',
       titleAccent: 'from London',
       subtitle:
-        "Discover England's only UNESCO World Heritage city in style. A chauffeured Mercedes brings you door-to-door from London to the Roman Baths, Georgian crescents and thermal springs â€” and waits while you explore.",
+        "Discover England's only UNESCO World Heritage city in style. A chauffeured Mercedes brings you door-to-door from London to the Roman Baths, Georgian crescents and thermal springs — and waits while you explore.",
       image: '/images/covers/bath.webp',
-      alt: 'The Roman Baths and Bath Abbey in the Georgian city of Bath â€” private chauffeur tour from London',
+      alt: 'The Roman Baths and Bath Abbey in the Georgian city of Bath — private chauffeur tour from London',
       ogImage: '/images/covers/bath.webp',
     },
     stats: [
-      { icon: 'bx-time-five', label: '~2â€“2.5 Hours', sub: 'From Central London via M4' },
+      { icon: 'bx-time-five', label: '~2–2.5 Hours', sub: 'From Central London via M4' },
       { icon: 'bx-medal', label: 'UNESCO World Heritage', sub: '2,000 years of Roman & Georgian history' },
       { icon: 'bx-user-voice', label: 'Private Chauffeur', sub: 'Mercedes S-Class or V-Class' },
     ],
@@ -933,7 +933,7 @@ export const destinations: Record<string, Destination> = {
       paragraphs: [
         "Discover the elegance of Bath, England's only UNESCO World Heritage city, with our private chauffeur service. This Georgian masterpiece combines 2,000 years of history with stunning architecture, the world-famous Roman Baths, and the literary heritage of Jane Austen.",
         "Your chauffeur provides door-to-door transfers from London to Bath, or a comprehensive tour of the city. Whether you're visiting the Roman Baths, Bath Abbey, the Jane Austen Centre, or simply admiring the Georgian architecture, we make the journey comfortable and the day entirely your own.",
-        'Located in Somerset, around 115 miles west of London via the M4, Bath is the perfect partner for Stonehenge â€” the two combine into our most popular full-day tour. With a private car, you set the pace, and your driver shares fascinating insights along the way.',
+        'Located in Somerset, around 115 miles west of London via the M4, Bath is the perfect partner for Stonehenge — the two combine into our most popular full-day tour. With a private car, you set the pace, and your driver shares fascinating insights along the way.',
       ],
       includesTitle: "What's Included",
       includes: [
@@ -948,7 +948,7 @@ export const destinations: Record<string, Destination> = {
     attractions: {
       title: "Bath's Historic Attractions",
       intro:
-        'Roman engineering, Georgian elegance and Britain\'s only natural thermal spa â€” all within a compact, walkable city.',
+        'Roman engineering, Georgian elegance and Britain\'s only natural thermal spa — all within a compact, walkable city.',
       items: [
         {
           icon: 'bx-bath',
@@ -1027,10 +1027,10 @@ export const destinations: Record<string, Destination> = {
     journeys: {
       title: 'Journey Times & Routes',
       items: [
-        { place: 'Central London', time: '~2â€“2.5 hours', note: 'Via M4 motorway' },
-        { place: 'Heathrow Airport', time: '~90â€“120 min', note: 'Direct via M4' },
-        { place: 'Stonehenge', time: '~45â€“60 min', note: 'Most popular combo tour' },
-        { place: 'Cotswolds', time: '~60â€“90 min', note: 'Countryside extension' },
+        { place: 'Central London', time: '~2–2.5 hours', note: 'Via M4 motorway' },
+        { place: 'Heathrow Airport', time: '~90–120 min', note: 'Direct via M4' },
+        { place: 'Stonehenge', time: '~45–60 min', note: 'Most popular combo tour' },
+        { place: 'Cotswolds', time: '~60–90 min', note: 'Countryside extension' },
       ],
     },
     faqTitle: 'Bath Tour: Frequently Asked Questions',
@@ -1039,7 +1039,7 @@ export const destinations: Record<string, Destination> = {
       {
         question: 'How long does it take to drive from London to Bath?',
         answer:
-          'Bath is around 115 miles from central London and takes approximately 2 to 2.5 hours via the M4, depending on traffic. From Heathrow it is closer to 90â€“120 minutes. Your chauffeur plans the route around conditions on the day.',
+          'Bath is around 115 miles from central London and takes approximately 2 to 2.5 hours via the M4, depending on traffic. From Heathrow it is closer to 90–120 minutes. Your chauffeur plans the route around conditions on the day.',
       },
       {
         question: 'Are Roman Baths tickets included in the tour?',
@@ -1049,7 +1049,7 @@ export const destinations: Record<string, Destination> = {
       {
         question: 'Can I combine Bath with Stonehenge?',
         answer:
-          '<strong>Stonehenge + Bath</strong> is our single most popular full-day tour from London â€” the two sites are only 45â€“60 minutes apart. A typical day runs around 9â€“10 hours door-to-door. <strong>Bath + the Cotswolds</strong> is a beautiful alternative for those who prefer countryside to ancient stones.',
+          '<strong>Stonehenge + Bath</strong> is our single most popular full-day tour from London — the two sites are only 45–60 minutes apart. A typical day runs around 9–10 hours door-to-door. <strong>Bath + the Cotswolds</strong> is a beautiful alternative for those who prefer countryside to ancient stones.',
       },
       {
         question: 'How long should I spend in Bath?',
@@ -1059,7 +1059,7 @@ export const destinations: Record<string, Destination> = {
       {
         question: 'Can I bathe in the thermal waters?',
         answer:
-          'You cannot bathe in the historic Roman Baths themselves, but the modern Thermae Bath Spa nearby uses the same natural thermal springs â€” its open-air rooftop pool with views over the city is a highlight. We can build spa time into your itinerary.',
+          'You cannot bathe in the historic Roman Baths themselves, but the modern Thermae Bath Spa nearby uses the same natural thermal springs — its open-air rooftop pool with views over the city is a highlight. We can build spa time into your itinerary.',
       },
       {
         question: 'How many passengers can you accommodate?',
@@ -1069,7 +1069,7 @@ export const destinations: Record<string, Destination> = {
       {
         question: 'How much does a private Bath tour from London cost?',
         answer:
-          'Pricing depends on group size, the vehicle chosen, total tour length, and any additional stops such as Stonehenge. Send us your dates and itinerary and we will send back a tailored quote â€” usually within the hour.',
+          'Pricing depends on group size, the vehicle chosen, total tour length, and any additional stops such as Stonehenge. Send us your dates and itinerary and we will send back a tailored quote — usually within the hour.',
       },
     ],
     whyTitle: 'Why Choose Silk Ride for Your Bath Tour',
@@ -1078,10 +1078,10 @@ export const destinations: Record<string, Destination> = {
     cta: {
       title: "Discover Bath's Timeless Beauty",
       subtitle:
-        "Tell us your dates, group size and any add-on stops â€” we'll send back a tailored quote within an hour.",
+        "Tell us your dates, group size and any add-on stops — we'll send back a tailored quote within an hour.",
     },
     card: {
-      tagline: 'Roman Baths, Georgian crescents and thermal springs â€” a UNESCO World Heritage city.',
+      tagline: 'Roman Baths, Georgian crescents and thermal springs — a UNESCO World Heritage city.',
       icon: 'bx-building-house',
     },
     pricing: { withoutGuide: 650, withGuide: 1250, hours: 9 },
@@ -1113,14 +1113,14 @@ export const destinations: Record<string, Destination> = {
     slug: 'cotswolds',
     name: 'Cotswolds',
     seoKey: 'cotswoldsChauffeur',
-    kicker: 'Private Chauffeur Tour Â· From London',
+    kicker: 'Private Chauffeur Tour · From London',
     hero: {
       title: 'Private Cotswolds Tours',
       titleAccent: 'from London',
       subtitle:
-        "Escape to England's prettiest countryside in comfort. A chauffeured Mercedes takes you door-to-door from London through honey-stone villages and rolling hills â€” off the coach routes, entirely at your pace.",
+        "Escape to England's prettiest countryside in comfort. A chauffeured Mercedes takes you door-to-door from London through honey-stone villages and rolling hills — off the coach routes, entirely at your pace.",
       image: '/images/covers/cotswolds.webp',
-      alt: 'Honey-coloured stone cottages and rolling hills of the Cotswolds â€” private chauffeur tour from London',
+      alt: 'Honey-coloured stone cottages and rolling hills of the Cotswolds — private chauffeur tour from London',
       ogImage: '/images/covers/cotswolds.webp',
     },
     stats: [
@@ -1132,8 +1132,8 @@ export const destinations: Record<string, Destination> = {
       heading: "Discover England's Most Beautiful Countryside",
       paragraphs: [
         'Experience the quintessential English countryside with our private Cotswolds chauffeur service. This Area of Outstanding Natural Beauty spans nearly 800 square miles of rolling hills, honey-coloured stone villages, and peaceful pastoral landscapes that have barely changed in centuries.',
-        "Your chauffeur provides comfortable transfers from London to the Cotswolds, or a comprehensive tour of the region's most picturesque villages â€” Chipping Campden, Bourton-on-the-Water, Stow-on-the-Wold, Broadway and the hidden gems known only to locals.",
-        'The Cotswolds spread across Gloucestershire, Oxfordshire, Warwickshire and Worcestershire, reached from London via the M40 and A40. A private car is the ideal way to explore â€” your driver takes the scenic country lanes the coaches cannot, and you stop wherever a view, a tea room or a pub catches your eye.',
+        "Your chauffeur provides comfortable transfers from London to the Cotswolds, or a comprehensive tour of the region's most picturesque villages — Chipping Campden, Bourton-on-the-Water, Stow-on-the-Wold, Broadway and the hidden gems known only to locals.",
+        'The Cotswolds spread across Gloucestershire, Oxfordshire, Warwickshire and Worcestershire, reached from London via the M40 and A40. A private car is the ideal way to explore — your driver takes the scenic country lanes the coaches cannot, and you stop wherever a view, a tea room or a pub catches your eye.',
       ],
       includesTitle: "What's Included",
       includes: [
@@ -1227,10 +1227,10 @@ export const destinations: Record<string, Destination> = {
     journeys: {
       title: 'Journey Times & Routes',
       items: [
-        { place: 'Central London', time: '~90â€“120 min', note: 'Via M40 & A40' },
-        { place: 'Heathrow Airport', time: '~60â€“90 min', note: 'Direct via M40' },
-        { place: 'Oxford', time: '~45â€“60 min', note: 'Perfect combination tour' },
-        { place: 'Bath', time: '~60â€“90 min', note: 'Historic-cities combination' },
+        { place: 'Central London', time: '~90–120 min', note: 'Via M40 & A40' },
+        { place: 'Heathrow Airport', time: '~60–90 min', note: 'Direct via M40' },
+        { place: 'Oxford', time: '~45–60 min', note: 'Perfect combination tour' },
+        { place: 'Bath', time: '~60–90 min', note: 'Historic-cities combination' },
       ],
     },
     faqTitle: 'Cotswolds Tour: Frequently Asked Questions',
@@ -1244,17 +1244,17 @@ export const destinations: Record<string, Destination> = {
       {
         question: 'Which Cotswolds villages will I visit?',
         answer:
-          'A typical day takes in three to five villages â€” most guests choose from Bourton-on-the-Water, Stow-on-the-Wold, Chipping Campden, Broadway and Bibury. Tell us whether you prefer famous highlights or quieter hidden gems and your driver will plan the route.',
+          'A typical day takes in three to five villages — most guests choose from Bourton-on-the-Water, Stow-on-the-Wold, Chipping Campden, Broadway and Bibury. Tell us whether you prefer famous highlights or quieter hidden gems and your driver will plan the route.',
       },
       {
         question: 'Can I combine the Cotswolds with Oxford or Bath?',
         answer:
-          '<strong>Oxford + the Cotswolds</strong> is our most popular combination â€” the dreaming spires are only 30â€“45 minutes from the southern villages. <strong>Bath + the Cotswolds</strong> works well for a scenic full day in the west. Blenheim Palace is another easy add-on.',
+          '<strong>Oxford + the Cotswolds</strong> is our most popular combination — the dreaming spires are only 30–45 minutes from the southern villages. <strong>Bath + the Cotswolds</strong> works well for a scenic full day in the west. Blenheim Palace is another easy add-on.',
       },
       {
         question: 'Is there time to stop for lunch or photos?',
         answer:
-          'Absolutely â€” that is the advantage of a private chauffeur. We build in stops for a traditional pub lunch, a riverside tea room, or simply to photograph a view. There are no coach timetables, so the pace is entirely yours.',
+          'Absolutely — that is the advantage of a private chauffeur. We build in stops for a traditional pub lunch, a riverside tea room, or simply to photograph a view. There are no coach timetables, so the pace is entirely yours.',
       },
       {
         question: 'When is the best time of year to visit the Cotswolds?',
@@ -1269,7 +1269,7 @@ export const destinations: Record<string, Destination> = {
       {
         question: 'How much does a private Cotswolds tour from London cost?',
         answer:
-          'Pricing depends on group size, the vehicle chosen, total tour length, and any additional stops such as Oxford or Blenheim Palace. Send us your dates and itinerary and we will send back a tailored quote â€” usually within the hour.',
+          'Pricing depends on group size, the vehicle chosen, total tour length, and any additional stops such as Oxford or Blenheim Palace. Send us your dates and itinerary and we will send back a tailored quote — usually within the hour.',
       },
     ],
     whyTitle: 'Why Choose Silk Ride for Your Cotswolds Tour',
@@ -1278,10 +1278,10 @@ export const destinations: Record<string, Destination> = {
     cta: {
       title: "Experience England's Most Beautiful Countryside",
       subtitle:
-        "Tell us your dates, group size and any add-on stops â€” we'll send back a tailored quote within an hour.",
+        "Tell us your dates, group size and any add-on stops — we'll send back a tailored quote within an hour.",
     },
     card: {
-      tagline: 'Honey-stone villages and rolling English countryside â€” off the coach routes.',
+      tagline: 'Honey-stone villages and rolling English countryside — off the coach routes.',
       icon: 'bx-landscape',
     },
     pricing: { withoutGuide: 650, withGuide: 1250, hours: 9 },

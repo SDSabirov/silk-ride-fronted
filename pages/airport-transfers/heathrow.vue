@@ -116,51 +116,18 @@
           {{ $t('airportPages.heathrow.terminalTitle') }}
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Terminal 2 -->
-          <div class="bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-all duration-300">
+          <div
+            v-for="terminal in terminals"
+            :key="terminal.id"
+            class="bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-all duration-300"
+          >
             <div class="w-12 h-12 bg-gold rounded-full flex items-center justify-center mb-4">
-              <span class="text-black font-bold text-lg">T2</span>
+              <span class="text-black font-bold text-lg">{{ terminal.id }}</span>
             </div>
-            <h3 class="text-xl font-semibold text-black mb-3">{{ $t('airportPages.heathrow.t2Title') }}</h3>
-            <p class="text-gray-600 mb-4 text-sm">{{ $t('airportPages.heathrow.t2Desc') }}</p>
+            <h3 class="text-xl font-semibold text-black mb-3">{{ terminal.title }}</h3>
+            <p class="text-gray-600 mb-4 text-sm">{{ terminal.desc }}</p>
             <ul class="text-sm text-gray-700 space-y-1">
-              <li v-for="(f, i) in t('airportPages.heathrow.t2Features')" :key="i">• {{ f }}</li>
-            </ul>
-          </div>
-
-          <!-- Terminal 3 -->
-          <div class="bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-all duration-300">
-            <div class="w-12 h-12 bg-gold rounded-full flex items-center justify-center mb-4">
-              <span class="text-black font-bold text-lg">T3</span>
-            </div>
-            <h3 class="text-xl font-semibold text-black mb-3">{{ $t('airportPages.heathrow.t3Title') }}</h3>
-            <p class="text-gray-600 mb-4 text-sm">{{ $t('airportPages.heathrow.t3Desc') }}</p>
-            <ul class="text-sm text-gray-700 space-y-1">
-              <li v-for="(f, i) in t('airportPages.heathrow.t3Features')" :key="i">• {{ f }}</li>
-            </ul>
-          </div>
-
-          <!-- Terminal 4 -->
-          <div class="bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-all duration-300">
-            <div class="w-12 h-12 bg-gold rounded-full flex items-center justify-center mb-4">
-              <span class="text-black font-bold text-lg">T4</span>
-            </div>
-            <h3 class="text-xl font-semibold text-black mb-3">{{ $t('airportPages.heathrow.t4Title') }}</h3>
-            <p class="text-gray-600 mb-4 text-sm">{{ $t('airportPages.heathrow.t4Desc') }}</p>
-            <ul class="text-sm text-gray-700 space-y-1">
-              <li v-for="(f, i) in t('airportPages.heathrow.t4Features')" :key="i">• {{ f }}</li>
-            </ul>
-          </div>
-
-          <!-- Terminal 5 -->
-          <div class="bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-all duration-300">
-            <div class="w-12 h-12 bg-gold rounded-full flex items-center justify-center mb-4">
-              <span class="text-black font-bold text-lg">T5</span>
-            </div>
-            <h3 class="text-xl font-semibold text-black mb-3">{{ $t('airportPages.heathrow.t5Title') }}</h3>
-            <p class="text-gray-600 mb-4 text-sm">{{ $t('airportPages.heathrow.t5Desc') }}</p>
-            <ul class="text-sm text-gray-700 space-y-1">
-              <li v-for="(f, i) in t('airportPages.heathrow.t5Features')" :key="i">• {{ f }}</li>
+              <li v-for="(f, i) in terminal.features" :key="i">• {{ f }}</li>
             </ul>
           </div>
 
@@ -269,17 +236,17 @@
           <NuxtLink :to="localePath('/airport-transfers/gatwick')" class="block bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 p-6 text-center group">
             <i class="bx bxs-plane-take-off text-3xl text-gold mb-3 block"></i>
             <h3 class="font-bold text-lg mb-2 group-hover:text-gold transition-colors">{{ $t('airportPages.gatwick.heroTitle') }}</h3>
-            <p class="text-gray-600 text-sm">{{ $t('airportPages.common.from') }} £180</p>
+            <p class="text-gray-600 text-sm">{{ $t('airportPages.common.from') }} {{ $t('airportPages.gatwick.eClassPrice') }}</p>
           </NuxtLink>
           <NuxtLink :to="localePath('/airport-transfers/stansted')" class="block bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 p-6 text-center group">
             <i class="bx bxs-plane-take-off text-3xl text-gold mb-3 block"></i>
             <h3 class="font-bold text-lg mb-2 group-hover:text-gold transition-colors">{{ $t('airportPages.stansted.heroTitle') }}</h3>
-            <p class="text-gray-600 text-sm">{{ $t('airportPages.common.from') }} £200</p>
+            <p class="text-gray-600 text-sm">{{ $t('airportPages.common.from') }} {{ $t('airportPages.stansted.eClassPrice') }}</p>
           </NuxtLink>
           <NuxtLink :to="localePath('/airport-transfers/luton')" class="block bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 p-6 text-center group">
             <i class="bx bxs-plane-take-off text-3xl text-gold mb-3 block"></i>
             <h3 class="font-bold text-lg mb-2 group-hover:text-gold transition-colors">{{ $t('airportPages.luton.heroTitle') }}</h3>
-            <p class="text-gray-600 text-sm">{{ $t('airportPages.common.from') }} £200</p>
+            <p class="text-gray-600 text-sm">{{ $t('airportPages.common.from') }} {{ $t('airportPages.luton.eClassPrice') }}</p>
           </NuxtLink>
         </div>
       </section>
@@ -318,8 +285,15 @@
 <script setup>
 import { useI18n, useLocalePath } from '#imports'
 
-const { t } = useI18n()
+const { t, tm, rt } = useI18n()
 const localePath = useLocalePath()
+
+// i18n array messages need tm() + rt(); t() would return the key itself
+// and v-for would iterate it character by character.
+const toList = (key) => {
+  const raw = tm(key)
+  return Array.isArray(raw) ? raw.map((item) => rt(item)) : []
+}
 
 const breadcrumbs = computed(() => [
   { name: t('airportPages.common.breadcrumbHome'), path: '/' },
@@ -327,16 +301,16 @@ const breadcrumbs = computed(() => [
   { name: 'Heathrow', path: '/airport-transfers/heathrow' },
 ])
 
-const highlights = computed(() => {
-  const items = []
-  for (let i = 0; i < 10; i++) {
-    const key = `airportPages.heathrow.highlights[${i}]`
-    const val = t(key)
-    if (val === key) break
-    items.push(val)
-  }
-  return items
-})
+const highlights = computed(() => toList('airportPages.heathrow.highlights'))
+
+const terminals = computed(() =>
+  ['t2', 't3', 't4', 't5'].map((key) => ({
+    id: key.toUpperCase(),
+    title: t(`airportPages.heathrow.${key}Title`),
+    desc: t(`airportPages.heathrow.${key}Desc`),
+    features: toList(`airportPages.heathrow.${key}Features`)
+  }))
+)
 
 const routes = computed(() => [
   { name: t('airportPages.heathrow.routes.centralLondon.name'), time: t('airportPages.heathrow.routes.centralLondon.time'), desc: t('airportPages.heathrow.routes.centralLondon.desc') },
