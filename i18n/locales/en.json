@@ -185,14 +185,17 @@
     }
   },
   "landing": {
-    "marquee": ["Heathrow", "Mayfair", "Gatwick", "Canary Wharf", "Knightsbridge", "Stansted", "Westminster", "Luton", "The City", "Belgravia"],
     "showcase": {
       "quote": "Arrive as you mean to continue.",
-      "alt": "Mercedes S-Class — luxury chauffeur interior"
+      "alt": "Silk Ride chauffeur arriving with a Mercedes V-Class"
+    },
+    "finale": {
+      "support": "Airport transfers, corporate travel, weddings and bespoke journeys — planned to the minute, driven with care.",
+      "ourStory": "Our story"
     },
     "mainHero": {
       "tagline": "Premium Chauffeur Service",
-      "kicker": "Mercedes-Benz Fleet · London · 24/7",
+      "kicker": "Mercedes-Benz · London · 24/7",
       "titlePre": "London's Premium",
       "titleAccent": "Chauffeur",
       "titlePost": "Service",
@@ -209,15 +212,9 @@
       "phoneNumber": "+44 203 488 2324",
       "scrollCta": "Scroll to explore",
       "getInstantQuote": "Get Instant Quote",
-      "bookYourJourney": "Book Your Journey",
-      "trustBadges": {
-        "rated": "5-Star Rated",
-        "flightTracking": "Flight Tracking",
-        "service": "24/7 Service",
-        "pricing": "Fixed Pricing"
-      }
+      "bookYourJourney": "Book Your Journey"
     },
-        "fleet": {
+    "services": {
       "tagline": "What We Offer",
       "title": "Our Chauffeur Services",
       "subtitle": "From airport transfers to special events, we provide luxury transportation tailored to your needs",
@@ -247,11 +244,12 @@
         "customQuote": "Custom Quote",
         "packages": "Package rates available",
         "learnMore": "Learn More About Wedding Chauffeur"
-      },
+      }
+    },
+    "fleet": {
       "fleetTitle": "Our Premium Mercedes Fleet",
       "fleetTagline": "The Fleet",
       "fleetSubtitle": "Mercedes-Benz only — chosen for comfort, presence and quiet.",
-      "fleetCount": "01 — 03",
       "eclass": {
         "title": "Mercedes E-Class",
         "description": "Perfect for business & executive travel",
@@ -298,7 +296,7 @@
     "learnMore": "Learn More",
     "customRequest": {
       "title": "Not your ordinary booking?",
-      "description": "Whether you need a fleet or something extra, our team is here to help. Contact us at"
+      "description": "Whether you need multiple vehicles, a bespoke itinerary or something in between — our team is here to help."
     }
   },
   

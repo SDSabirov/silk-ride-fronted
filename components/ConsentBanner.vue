@@ -3,36 +3,31 @@
   <Transition name="slide-up" appear>
     <div
       v-if="show"
-      class="fixed bottom-0 left-0 z-[9998] w-full p-3 sm:bottom-4 sm:left-4 sm:w-auto sm:max-w-md sm:p-0"
+      class="fixed bottom-0 left-0 z-[9998] w-full p-3 sm:bottom-4 sm:left-4 sm:w-auto sm:max-w-xl sm:p-0"
       role="dialog"
-      aria-labelledby="consent-title"
+      aria-label="Cookie preferences"
       aria-describedby="consent-description"
     >
       <div class="overflow-hidden rounded-xl border border-white/10 bg-[#121110] shadow-2xl">
         <!-- Gold accent bar -->
         <div class="h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent" />
-        <div class="px-5 py-4">
-          <h3 id="consent-title" class="font-semibold text-white text-sm mb-1">Cookie Preferences</h3>
-          <p id="consent-description" class="text-gray-400 text-xs leading-relaxed mb-3">
-            We use cookies to enhance your experience and analyze our traffic.
+        <div class="px-4 py-3 flex flex-col sm:flex-row sm:items-center gap-3">
+          <p id="consent-description" class="text-gray-400 text-xs leading-relaxed">
+            We use cookies to enhance your experience.
             <NuxtLink to="/privacy-policy" class="text-gold hover:text-gold-400 hover:underline transition-colors">Privacy Policy</NuxtLink>
-            ·
-            <button @click="showDetails = !showDetails" class="text-gold hover:text-gold-400 hover:underline transition-colors">
-              {{ showDetails ? 'Hide Details' : 'Details' }}
-            </button>
           </p>
 
-          <div class="flex items-center gap-2">
+          <div class="flex items-center gap-2 shrink-0">
             <button
               @click="acceptAll"
-              class="flex-1 bg-gold text-black text-sm font-semibold px-4 py-2.5 rounded-md hover:bg-gold-400 transition-colors focus:outline-none focus:ring-2 focus:ring-gold/50"
+              class="flex-1 sm:flex-none bg-gold text-black text-xs font-semibold px-4 py-2 rounded-md hover:bg-gold-400 transition-colors focus:outline-none focus:ring-2 focus:ring-gold/50"
               aria-label="Accept all cookies"
             >
               Accept All
             </button>
             <button
               @click="essentialsOnly"
-              class="flex-1 bg-transparent text-white text-sm border border-white/20 px-4 py-2.5 rounded-md hover:bg-white/10 transition-colors focus:outline-none focus:ring-2 focus:ring-white/30"
+              class="flex-1 sm:flex-none bg-transparent text-white text-xs border border-white/20 px-3 py-2 rounded-md hover:bg-white/10 transition-colors focus:outline-none focus:ring-2 focus:ring-white/30"
               aria-label="Accept essential cookies only"
             >
               Essentials
@@ -45,30 +40,6 @@
               Customize
             </button>
           </div>
-
-          <!-- Cookie Details -->
-          <Transition name="expand">
-            <div v-if="showDetails" class="mt-3 pt-3 border-t border-white/10">
-              <div class="grid grid-cols-1 gap-2 text-xs">
-                <div>
-                  <h4 class="font-semibold text-white mb-0.5">Essential Cookies</h4>
-                  <p class="text-gray-400">Required for basic website functionality and cannot be disabled.</p>
-                </div>
-                <div>
-                  <h4 class="font-semibold text-white mb-0.5">Analytics Cookies</h4>
-                  <p class="text-gray-400">Help us understand how visitors use our website to improve user experience.</p>
-                </div>
-                <div>
-                  <h4 class="font-semibold text-white mb-0.5">Advertising Cookies</h4>
-                  <p class="text-gray-400">Used to deliver personalized advertisements based on your interests.</p>
-                </div>
-                <div>
-                  <h4 class="font-semibold text-white mb-0.5">Functional Cookies</h4>
-                  <p class="text-gray-400">Enable enhanced functionality and personalization features.</p>
-                </div>
-              </div>
-            </div>
-          </Transition>
         </div>
       </div>
     </div>
@@ -151,7 +122,6 @@ import { onMounted, onUnmounted, ref, reactive } from 'vue'
 const emit = defineEmits(['consent-updated'])
 
 const show = ref(false)
-const showDetails = ref(false)
 const showCustomize = ref(false)
 // Use window.gtag directly for consistency with consent-mode plugin
 // This ensures gtag('consent', 'update') works even if nuxt-gtag hasn't fully initialized
@@ -339,18 +309,6 @@ onUnmounted(() => {
 
 .slide-up-leave-to {
   transform: translateY(100%);
-}
-
-.expand-enter-active,
-.expand-leave-active {
-  transition: all 0.3s ease;
-  overflow: hidden;
-}
-
-.expand-enter-from,
-.expand-leave-to {
-  height: 0;
-  opacity: 0;
 }
 
 .fade-enter-active,

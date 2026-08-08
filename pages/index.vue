@@ -5,10 +5,8 @@
     <LandingMainHero />
     <LandingServices />
     <LandingFleet />
-    <LandingTrustSignals />
-    <LandingAbout />
-    <LandingShowcase />
     <LandingTestimonials />
+    <LandingShowcase />
 
     <Footer />
   </div>
