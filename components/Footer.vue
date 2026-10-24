@@ -174,6 +174,12 @@
                 {{ $t('footer.services.event') }}
               </NuxtLink>
             </li>
+            <li>
+              <NuxtLink :to="localePath('/cruise-transfers/heathrow-to-southampton')" class="text-gray-400 hover:text-gold transition-colors text-sm flex items-center gap-2">
+                <i class="bx bx-chevron-right text-gold"></i>
+                {{ $t('footer.services.cruise') }}
+              </NuxtLink>
+            </li>
           </ul>
         </div>
 

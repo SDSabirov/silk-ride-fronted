@@ -91,7 +91,7 @@
                       class="flex items-center gap-3 px-3 py-3 rounded-lg text-gray-300 hover:text-white hover:bg-white/5 transition-colors"
                       @click="closeServices"
                     >
-                      <i class="bx bxs-plane-take-off text-gold text-xl"></i>
+                      <i :class="airport.icon || 'bx bxs-plane-take-off'" class="text-gold text-xl"></i>
                       <span>{{ airport.label }}</span>
                     </NuxtLink>
 
@@ -304,7 +304,7 @@
                 class="flex items-center gap-3 py-3 px-4 text-gray-400 hover:text-gold"
                 @click="closeMobileMenu"
               >
-                <i class="bx bxs-plane-take-off text-gold"></i>
+                <i :class="airport.icon || 'bx bxs-plane-take-off'" class="text-gold"></i>
                 {{ airport.label }}
               </NuxtLink>
             </div>
@@ -429,7 +429,8 @@ const airportItems = [
   { path: localePath('/airport-transfers/luton'), label: t('navbar.airportsDropdown.luton') },
   { path: localePath('/airport-transfers/biggin-hill'), label: t('navbar.airportsDropdown.bigginHill') },
   { path: localePath('/airport-transfers/farnborough'), label: t('navbar.airportsDropdown.farnborough') },
-  { path: localePath('/airport-transfers/london-city'), label: t('navbar.airportsDropdown.londonCity') }
+  { path: localePath('/airport-transfers/london-city'), label: t('navbar.airportsDropdown.londonCity') },
+  { path: localePath('/cruise-transfers/heathrow-to-southampton'), label: t('navbar.airportsDropdown.southamptonCruise'), icon: 'bx bxs-ship' }
 ]
 
 // Destinations items with icons

@@ -491,7 +491,7 @@ export const destinations: Record<string, Destination> = {
       tagline: "The world's most famous prehistoric monument — a UNESCO stone circle on Salisbury Plain.",
       icon: 'bx-circle',
     },
-    pricing: { withoutGuide: 450, withGuide: 750, hours: 6, entryNote: true },
+    pricing: { withoutGuide: 450, withGuide: 850, hours: 6, entryNote: true },
     schema: {
       description:
         'Private chauffeur-driven tours to Stonehenge from London. Luxury Mercedes, flexible itineraries and door-to-door service.',
@@ -690,7 +690,7 @@ export const destinations: Record<string, Destination> = {
       tagline: 'Dreaming spires and 38 historic colleges — an hour from London.',
       icon: 'bx-book-reader',
     },
-    pricing: { withoutGuide: 650, withGuide: 1250, hours: 9 },
+    pricing: { withoutGuide: 750, withGuide: 1350, hours: 9 },
     schema: {
       description:
         'Luxury chauffeur service and private tours to Oxford from London, featuring university visits, museums and historic attractions.',
@@ -887,7 +887,7 @@ export const destinations: Record<string, Destination> = {
       tagline: 'Punting on the Cam and centuries-old colleges — under an hour from London.',
       icon: 'bx-water',
     },
-    pricing: { withoutGuide: 650, withGuide: 1250, hours: 9 },
+    pricing: { withoutGuide: 750, withGuide: 1350, hours: 9 },
     schema: {
       description:
         'Luxury chauffeur service and private tours to Cambridge from London, featuring university visits, punting and historic attractions.',
@@ -1084,7 +1084,7 @@ export const destinations: Record<string, Destination> = {
       tagline: 'Roman Baths, Georgian crescents and thermal springs — a UNESCO World Heritage city.',
       icon: 'bx-building-house',
     },
-    pricing: { withoutGuide: 650, withGuide: 1250, hours: 9 },
+    pricing: { withoutGuide: 750, withGuide: 1350, hours: 9 },
     schema: {
       description:
         'Luxury chauffeur service and private tours to Bath from London, featuring the Roman Baths, Georgian architecture and UNESCO World Heritage attractions.',
@@ -1284,7 +1284,7 @@ export const destinations: Record<string, Destination> = {
       tagline: 'Honey-stone villages and rolling English countryside — off the coach routes.',
       icon: 'bx-landscape',
     },
-    pricing: { withoutGuide: 650, withGuide: 1250, hours: 9 },
+    pricing: { withoutGuide: 750, withGuide: 1350, hours: 9 },
     schema: {
       description:
         'Luxury chauffeur service and private countryside tours to the Cotswolds from London, featuring historic villages and scenic landscapes.',

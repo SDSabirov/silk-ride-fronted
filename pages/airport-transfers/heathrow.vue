@@ -251,6 +251,32 @@
         </div>
       </section>
 
+      <!-- Cruise transfer cross-link -->
+      <section class="mb-16">
+        <NuxtLink
+          :to="localePath('/cruise-transfers/heathrow-to-southampton')"
+          class="group relative block overflow-hidden rounded-2xl bg-[#0A0908] text-white shadow-xl ring-1 ring-gold/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
+        >
+          <div class="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-gold/15 blur-3xl"></div>
+          <div class="relative flex flex-col gap-6 p-8 sm:p-10 lg:flex-row lg:items-center lg:justify-between">
+            <div class="flex items-start gap-5">
+              <span class="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-gold text-black">
+                <i class="bx bxs-ship text-3xl" aria-hidden="true"></i>
+              </span>
+              <div>
+                <p class="text-xs font-semibold uppercase tracking-[0.2em] text-gold">{{ $t('airportPages.common.cruiseBanner.kicker') }}</p>
+                <h2 class="mt-2 font-heading text-2xl font-bold sm:text-3xl">{{ $t('airportPages.common.cruiseBanner.title') }}</h2>
+                <p class="mt-3 max-w-2xl text-white/75">{{ $t('airportPages.common.cruiseBanner.desc') }}</p>
+              </div>
+            </div>
+            <span class="inline-flex shrink-0 items-center justify-center gap-2 rounded-lg bg-gold px-6 py-3 font-bold text-black transition-colors group-hover:bg-white">
+              {{ $t('airportPages.common.cruiseBanner.cta') }}
+              <i class="bx bx-right-arrow-alt text-xl transition-transform group-hover:translate-x-1" aria-hidden="true"></i>
+            </span>
+          </div>
+        </NuxtLink>
+      </section>
+
       <!-- Contact CTA -->
       <section class="bg-gradient-to-r from-black to-gray-800 text-white rounded-2xl p-12 text-center">
         <h2 class="text-3xl font-heading font-bold mb-4">

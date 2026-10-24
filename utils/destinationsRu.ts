@@ -396,7 +396,7 @@ export const destinationsRu: Record<string, Destination> = {
       tagline: 'Самый знаменитый доисторический памятник мира — каменный круг ЮНЕСКО на Солсберийской равнине.',
       icon: 'bx-circle',
     },
-    pricing: { withoutGuide: 450, withGuide: 750, hours: 6, entryNote: true },
+    pricing: { withoutGuide: 450, withGuide: 850, hours: 6, entryNote: true },
     schema: {
       description:
         'Частные туры с водителем в Стоунхендж из Лондона. Роскошные Mercedes, гибкие маршруты и трансфер от двери до двери.',
@@ -595,7 +595,7 @@ export const destinationsRu: Record<string, Destination> = {
       tagline: 'Дремлющие шпили и 38 исторических колледжей — в 1,5–2 часах езды от Лондона.',
       icon: 'bx-book-reader',
     },
-    pricing: { withoutGuide: 650, withGuide: 1250, hours: 9 },
+    pricing: { withoutGuide: 750, withGuide: 1350, hours: 9 },
     schema: {
       description:
         'Частный сервис с водителем и туры в Оксфорд из Лондона: посещение университета, музеи и исторические достопримечательности.',
@@ -792,7 +792,7 @@ export const destinationsRu: Record<string, Destination> = {
       tagline: 'Плоскодонки по Каму и многовековые колледжи — в 1,5–2 часах езды от Лондона.',
       icon: 'bx-water',
     },
-    pricing: { withoutGuide: 650, withGuide: 1250, hours: 9 },
+    pricing: { withoutGuide: 750, withGuide: 1350, hours: 9 },
     schema: {
       description:
         'Частный сервис с водителем и туры в Кембридж из Лондона: посещение университета, прогулки на плоскодонке и исторические достопримечательности.',
@@ -989,7 +989,7 @@ export const destinationsRu: Record<string, Destination> = {
       tagline: 'Римские бани, георгианские полумесяцы и термальные источники — город Всемирного наследия ЮНЕСКО.',
       icon: 'bx-building-house',
     },
-    pricing: { withoutGuide: 650, withGuide: 1250, hours: 9 },
+    pricing: { withoutGuide: 750, withGuide: 1350, hours: 9 },
     schema: {
       description:
         'Частный сервис с водителем и туры в Бат из Лондона: Римские бани, георгианская архитектура и достопримечательности Всемирного наследия ЮНЕСКО.',
@@ -1189,7 +1189,7 @@ export const destinationsRu: Record<string, Destination> = {
       tagline: 'Деревни из медового камня и холмы английской глубинки — вдали от автобусных маршрутов.',
       icon: 'bx-landscape',
     },
-    pricing: { withoutGuide: 650, withGuide: 1250, hours: 9 },
+    pricing: { withoutGuide: 750, withGuide: 1350, hours: 9 },
     schema: {
       description:
         'Частный сервис с водителем и туры по сельской местности в Котсуолдс из Лондона: исторические деревни и живописные пейзажи.',
