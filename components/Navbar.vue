@@ -382,6 +382,7 @@
 </template>
 
 <script setup>
+import { SEASONAL } from '~/config/seasonal'
 import { ref, onMounted, onUnmounted } from "vue";
 import { useRouter } from "vue-router";
 import { useLocalePath } from '#imports'
@@ -413,6 +414,8 @@ let companyTimer = null
 
 // Services items with icons
 const servicesItems = [
+  // Seasonal entry, switched in config/seasonal.ts
+  ...(SEASONAL.christmas ? [{ path: localePath('/christmas'), label: t('navbar.christmas'), icon: 'bx bx-gift' }] : []),
   { path: localePath('/services/airport-transfers'), label: t('navbar.servicesDropdown.airport'), icon: 'bx bx-car' },
   { path: localePath('/services/corporate-travel'), label: t('navbar.servicesDropdown.corporate'), icon: 'bx bx-briefcase' },
   { path: localePath('/services/wedding-chauffeur'), label: t('navbar.servicesDropdown.wedding'), icon: 'bx bx-heart' },

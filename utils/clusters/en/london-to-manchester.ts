@@ -15,8 +15,8 @@ const guide: ClusterGuide = {
     titleAccent: 'Door to Door',
     subtitle:
       'About 200 miles from your London address to your Manchester one in a single car, with no stations, changes or onward taxis. One fixed price, quoted before you book.',
-    image: '/images/sclass.webp',
-    alt: 'A black Mercedes S-Class, front three-quarter view',
+    image: '/images/sclassBackground.webp',
+    alt: 'A black Mercedes S-Class parked outside a modern glass building',
   },
   stats: [
     { icon: 'bx-map', label: 'About 200 miles', sub: 'Via the M40/M6 or the M1/M6' },

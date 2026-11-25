@@ -14,6 +14,9 @@
       :paragraph="$t('pages.services.cards.corporate.description')"
     />
 
+    <!-- Seasonal promotion (config/seasonal.ts) -->
+    <LandingSeasonal />
+
     <!-- Service Details Section -->
     <section class="max-w-screen-2xl mx-auto py-16 px-6">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">

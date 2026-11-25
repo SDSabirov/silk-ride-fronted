@@ -187,6 +187,12 @@
               </NuxtLink>
             </li>
             <li>
+              <NuxtLink :to="localePath('/christmas')" class="text-gray-400 hover:text-gold transition-colors text-sm flex items-center gap-2">
+                <i class="bx bx-chevron-right text-gold"></i>
+                {{ $t('navbar.christmas') }}
+              </NuxtLink>
+            </li>
+            <li>
               <NuxtLink :to="localePath('/services/uk-europe-travel')" class="text-gray-400 hover:text-gold transition-colors text-sm flex items-center gap-2">
                 <i class="bx bx-chevron-right text-gold"></i>
                 {{ $t('navbar.servicesDropdown.ukEurope') }}

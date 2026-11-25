@@ -1,4 +1,146 @@
 {
+  "christmasPage": {
+    "breadcrumb": "Christmas",
+    "banner": {
+      "kicker": "Christmas & New Year",
+      "title": "Booking now for Christmas and New Year",
+      "text": "Airport transfers, Christmas lights tours, shopping days and party cars. We work every day of the holidays, including 25 December.",
+      "cta": "Christmas services"
+    },
+    "hero": {
+      "kicker": "Christmas & New Year",
+      "title": "Christmas Chauffeur Service",
+      "titleAccent": "in London",
+      "subtitle": "A Mercedes and a professional chauffeur for the busiest weeks of the year: airport runs, present shopping, parties, the lights, and the journey home afterwards.",
+      "alt": "A chauffeur in a white glove opening the door of a black Mercedes"
+    },
+    "stats": {
+      "open": "Open on 25 December",
+      "openSub": "24 hours a day, every day of the year",
+      "hourly": "From £{hourly} per hour",
+      "hourlySub": "Hourly hire, 4-hour minimum",
+      "airport": "Airports from £{heathrow}",
+      "airportSub": "Fixed prices to central London"
+    },
+    "overview": {
+      "kicker": "The festive season",
+      "heading": "Getting around London at Christmas",
+      "paragraphs": [
+        "December is the hardest month of the year to travel in London. The West End fills with shoppers, party season takes every available taxi on Thursday and Friday nights, and the airports have some of their busiest days in the week before Christmas and the first days of January.",
+        "Then the network stops. On Christmas Day there is no Tube, no bus and no national rail service in London, and services on Boxing Day are reduced. If you need to reach family across town, catch a flight or get home from lunch, a pre-booked car is how it is done.",
+        "Silk Ride works straight through the holidays, 24 hours a day. You can book a single transfer, a car and chauffeur by the hour, or a whole day out, in a Mercedes E-Class, S-Class or seven-seat V-Class."
+      ],
+      "includesTitle": "What you get over the holidays",
+      "includes": [
+        "Service every day, including Christmas Eve, Christmas Day, Boxing Day and New Year’s Day",
+        "Mercedes E-Class, S-Class or V-Class for up to seven passengers",
+        "Professional, licensed and background-checked chauffeurs",
+        "Flight tracking and meet & greet on airport collections",
+        "Complimentary child seats on request, plus bottled water, Wi-Fi and chargers",
+        "The price for your date confirmed before you book"
+      ]
+    },
+    "services": {
+      "kicker": "Our services at Christmas",
+      "title": "How each service works over the holidays",
+      "intro": "Everything we do the rest of the year is available through Christmas and New Year. Here is how people use it in December.",
+      "items": {
+        "airport": {
+          "title": "Airport transfers",
+          "text": "Fixed prices to and from central London, from £{heathrow} for Heathrow and £{gatwick} for Gatwick, with flight tracking and meet & greet. Available on Christmas Day, when the airport trains do not run.",
+          "link": "Airport transfers"
+        },
+        "hourly": {
+          "title": "Hourly chauffeur hire",
+          "text": "A car and chauffeur at your disposal from £{hourly} per hour. Use it for present shopping, an evening tour of the lights, or a round of family visits, with the car waiting at every stop.",
+          "link": "Hourly hire"
+        },
+        "corporate": {
+          "title": "Corporate travel",
+          "text": "Cars for the office Christmas party, client dinners and end-of-year meetings, with everyone taken home afterwards. One schedule, one invoice.",
+          "link": "Corporate travel"
+        },
+        "event": {
+          "title": "Event chauffeur",
+          "text": "Theatre and pantomime, carol concerts, the ballet, New Year’s Eve. Your chauffeur takes you to the door and is there when you come out.",
+          "link": "Event chauffeur"
+        },
+        "longDistance": {
+          "title": "Long-distance journeys",
+          "text": "Home for Christmas without the crowded train: door to door anywhere in the UK, with room for luggage and presents, at a fixed price quoted in advance.",
+          "link": "Long-distance travel"
+        },
+        "tours": {
+          "title": "Private day tours",
+          "text": "Windsor, Bath, Oxford and the Cotswolds are at their most atmospheric in winter. A private day trip from London, priced per vehicle.",
+          "link": "Day tours from London"
+        }
+      }
+    },
+    "dates": {
+      "kicker": "Plan ahead",
+      "title": "The dates to book first",
+      "intro": "Cars are in short supply across London on a handful of days each December. If your plans fall on one of these, book as soon as you know your times. Changes and cancellations are free up to 24 hours before the booking.",
+      "items": [
+        {
+          "title": "The last two weekends before Christmas",
+          "text": "Peak party season and peak shopping at once. Thursday, Friday and Saturday evenings are the busiest of the year for taxis and private hire."
+        },
+        {
+          "title": "Christmas Eve",
+          "text": "Airport departures in the morning, family journeys in the afternoon, and public transport winding down early in the evening."
+        },
+        {
+          "title": "Christmas Day",
+          "text": "No Tube, bus or national rail service in London. Every journey, including airport transfers, has to be made by road."
+        },
+        {
+          "title": "Boxing Day",
+          "text": "Reduced public transport, the start of the sales, and a full programme of football and racing."
+        },
+        {
+          "title": "New Year’s Eve",
+          "text": "Central London streets around the Thames close for the fireworks, and cars are hard to find after midnight. Pick-up points need agreeing in advance."
+        },
+        {
+          "title": "The first days of January",
+          "text": "Return flights arrive in a concentrated wave. Meet & greet and flight tracking make the last leg home simple."
+        }
+      ]
+    },
+    "faqKicker": "FAQ",
+    "faqTitle": "Christmas chauffeur questions",
+    "faq": [
+      {
+        "q": "Do you operate on Christmas Day?",
+        "a": "Yes. We operate 24 hours a day, 365 days a year, which includes Christmas Eve, Christmas Day, Boxing Day, New Year’s Eve and New Year’s Day."
+      },
+      {
+        "q": "Is there public transport in London on Christmas Day?",
+        "a": "No. There is no Tube, bus or national rail service in London on 25 December, so the rail links to the airports do not run either. Services on Boxing Day are reduced. A pre-booked car is the practical way to travel on both days."
+      },
+      {
+        "q": "How far ahead should I book for Christmas and New Year?",
+        "a": "As early as you can, particularly for Christmas Eve, Christmas Day and New Year’s Eve, when demand for cars across London is at its highest. You can change or cancel free of charge up to 24 hours before your booking."
+      },
+      {
+        "q": "How much does a chauffeur cost at Christmas?",
+        "a": "Our standard prices are from £{hourly} per hour for a Mercedes E-Class and from £{hourlyPremium} per hour for an S-Class or V-Class, with a four-hour minimum, and fixed airport transfers from £{heathrow} between Heathrow and central London. We confirm the price for your date and journey before you book."
+      },
+      {
+        "q": "Can you fit luggage, presents and child seats?",
+        "a": "Yes. The Mercedes V-Class seats up to seven and has extra luggage space, which suits families travelling with cases and presents. Child seats are complimentary on request; tell us the children’s ages when you book."
+      },
+      {
+        "q": "Can I book a car for a Christmas party or New Year’s Eve?",
+        "a": "Yes. The usual way is to book a car and chauffeur by the hour, so it takes you there, waits, and brings you home when you are ready. For a company party we can also run staff home in several vehicles to an agreed schedule."
+      }
+    ],
+    "cta": {
+      "title": "Book your Christmas chauffeur",
+      "subtitle": "Tell us the date, the addresses and how many are travelling, and we will confirm the car and the price."
+    }
+  },
   "clusters": {
     "book": "Book Now",
     "getQuote": "Get a tailored quote",
@@ -15,6 +157,10 @@
     "hub": {
       "kicker": "Guides",
       "learnMore": "Read the guide",
+      "christmas": {
+        "title": "Christmas and New Year guides",
+        "intro": "The practical detail for each kind of festive journey: what to expect on the roads, which car to choose and how to plan the timings."
+      },
       "eventChauffeur": {
         "title": "Event guides for the season’s key dates",
         "intro": "Detailed guides to the season’s headline events: typical journey times, which car suits the day and how the return journey works."
@@ -110,6 +256,7 @@
     }
   },
   "navbar": {
+    "christmas": "Christmas & New Year",
     "home": "Home",
     "fleet": "Our Fleet",
     "services": "Services",
@@ -1219,6 +1366,10 @@
   },
 
  "seo": {
+    "christmas": {
+      "title": "Christmas Chauffeur Service in London",
+      "description": "Chauffeur-driven Mercedes in London over Christmas and New Year: airport transfers, lights tours, shopping and party cars. Open 24/7, including 25 December."
+    },
     "home": {
       "title": "London Chauffeur Service & Airport Transfers",
       "description": "Premium London chauffeur service in a Mercedes E-Class, S-Class or V-Class. Fixed-price airport transfers, corporate travel, weddings and events, 24/7.",

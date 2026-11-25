@@ -18,6 +18,7 @@ export type ClusterSection =
   | 'hourly-chauffeur'
   | 'long-distance-chauffeur'
   | 'wedding-cars'
+  | 'christmas'
 
 export type FleetKey = 'eClass' | 'sClass' | 'vClass'
 

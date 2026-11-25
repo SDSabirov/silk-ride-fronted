@@ -57,6 +57,18 @@ export const CLUSTER_SECTIONS: Record<ClusterSection, ClusterSectionMeta> = {
       ru: 'Поездки от двери до двери по Великобритании и в Европу.',
     },
   },
+  // Seasonal section. Its pillar is the Christmas landing page itself
+  // (pages/christmas/index.vue), not a /services page.
+  christmas: {
+    base: '/christmas',
+    pillarPath: '/christmas',
+    pillarIcon: 'bx-gift',
+    pillarName: { en: 'Christmas Chauffeur', ru: 'Водитель на Рождество' },
+    pillarTagline: {
+      en: 'Everything we offer over Christmas and New Year, in one place.',
+      ru: 'Все наши услуги на Рождество и Новый год — на одной странице.',
+    },
+  },
   'wedding-cars': {
     base: '/wedding-cars',
     pillarPath: '/services/wedding-chauffeur',
@@ -231,6 +243,67 @@ export const CLUSTER_PAGES: ClusterEntry[] = [
     tagline: {
       en: 'V-Class shuttles between hotel, ceremony and reception for family and guests.',
       ru: 'V-Class между отелем, церемонией и банкетом для семьи и гостей.',
+    },
+  },
+  // ---- Christmas & New Year --------------------------------------------
+  {
+    section: 'christmas',
+    slug: 'london-christmas-lights-tour',
+    icon: 'bx-star',
+    title: { en: 'London Christmas Lights Tour', ru: 'Рождественские огни Лондона' },
+    tagline: {
+      en: 'Regent Street, Oxford Street, Covent Garden and more from a warm, private car.',
+      ru: 'Риджент-стрит, Оксфорд-стрит, Ковент-Гарден и другие — из тёплого автомобиля.',
+    },
+  },
+  {
+    section: 'christmas',
+    slug: 'christmas-shopping-chauffeur',
+    icon: 'bx-shopping-bag',
+    title: { en: 'Christmas Shopping Chauffeur', ru: 'Рождественский шопинг с водителем' },
+    tagline: {
+      en: 'Bond Street, Knightsbridge and Bicester Village with the car waiting and the boot filling.',
+      ru: 'Бонд-стрит, Найтсбридж и Bicester Village: автомобиль ждёт, а багажник наполняется.',
+    },
+  },
+  {
+    section: 'christmas',
+    slug: 'christmas-party-transport',
+    icon: 'bx-party',
+    title: { en: 'Christmas Party Transport', ru: 'Транспорт на корпоратив' },
+    tagline: {
+      en: 'Cars for the office party: guests there on time and everyone home safely.',
+      ru: 'Автомобили на рождественский корпоратив: все приедут вовремя и вернутся домой.',
+    },
+  },
+  {
+    section: 'christmas',
+    slug: 'christmas-airport-transfers',
+    icon: 'bxs-plane-alt',
+    title: { en: 'Christmas Airport Transfers', ru: 'Трансферы в аэропорт на Рождество' },
+    tagline: {
+      en: 'Fixed-price transfers through the holidays, including Christmas Day.',
+      ru: 'Трансферы по фиксированной цене в праздники, включая день Рождества.',
+    },
+  },
+  {
+    section: 'christmas',
+    slug: 'new-years-eve-chauffeur',
+    icon: 'bx-time',
+    title: { en: 'New Year’s Eve Chauffeur', ru: 'Водитель на Новый год' },
+    tagline: {
+      en: 'A car and chauffeur for the night, planned around the road closures.',
+      ru: 'Автомобиль с водителем на всю ночь — с учётом перекрытых улиц.',
+    },
+  },
+  {
+    section: 'christmas',
+    slug: 'christmas-markets-day-trips',
+    icon: 'bx-gift',
+    title: { en: 'Christmas Market Day Trips', ru: 'Поездки на рождественские ярмарки' },
+    tagline: {
+      en: 'Bath, Winchester, Windsor and Blenheim Palace from London, door to door.',
+      ru: 'Бат, Винчестер, Виндзор и Бленхеймский дворец из Лондона — от двери до двери.',
     },
   },
 ]

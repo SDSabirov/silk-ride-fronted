@@ -3,6 +3,7 @@
     <Navbar />
 
     <LandingMainHero />
+    <LandingSeasonal />
     <LandingServices />
     <LandingFleet />
     <LandingTestimonials />

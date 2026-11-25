@@ -15,8 +15,8 @@ const guide: ClusterGuide = {
     titleAccent: 'с водителем, от двери до двери',
     subtitle:
       'Около 320 км от вашего адреса в Лондоне до адреса в Манчестере на одном автомобиле — без вокзалов, пересадок и такси на месте. Фиксированную цену называем до бронирования.',
-    image: '/images/sclass.webp',
-    alt: 'Чёрный Mercedes S-Class, вид спереди в три четверти',
+    image: '/images/sclassBackground.webp',
+    alt: 'Чёрный Mercedes S-Class у современного здания из стекла',
   },
   stats: [
     { icon: 'bx-map', label: 'Около 320 км', sub: 'По M40/M6 или M1/M6' },
