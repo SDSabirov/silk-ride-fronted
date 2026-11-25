@@ -89,7 +89,9 @@ export default defineNuxtConfig({
         '/ru/testimonials',
         '/ru/Luxury',
         '/ru/our-partners',
-        '/ru/ru/**',
+        // Entries are prefix matches (not globs). i18n re-prefixes every
+        // redirect rule, so the explicit /ru/* rules also yield /ru/ru/*.
+        '/ru/ru',
       ],
       failOnError: false,
     },
