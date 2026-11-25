@@ -46,8 +46,8 @@ const guide: ClusterGuide = {
       kicker: 'Ways to book',
       heading: 'Four ways to arrange cars for a Christmas party',
       paragraphs: [
-        'Most party transport is built from the same four pieces, used on their own or together. Which of them you need depends on the size of the group, where people live and how the evening is expected to end.',
-        'Hourly hire is the flexible option: the car and chauffeur stay with you for the whole booking, from four hours upwards, so the plan can follow the evening. One-way journeys suit guests who know exactly when and where they are going. If you are not sure which fits, give us the outline and we will suggest an arrangement.',
+        'Most party transport is built from the same four pieces, used on their own or together. Which you need depends on the size of the group, where people live and how the evening is expected to end.',
+        'Hourly hire is the flexible option: the car and chauffeur stay with you for the whole booking, from four hours upwards, so the plan can follow the evening. One-way journeys suit guests who know exactly when and where they are going.',
       ],
       bullets: [
         'A car by the hour that takes the hosts or directors to the venue and waits until they leave',
@@ -62,7 +62,6 @@ const guide: ClusterGuide = {
       paragraphs: [
         'The return is the part worth planning carefully. The usual approach is to sort the guest list by direction — south-west London, the eastern suburbs, the home counties — and give each vehicle a route and a departure time. A V-Class hired by the hour can make more than one run when the first drop-offs are close to the venue; for longer routes it is normally one vehicle per direction.',
         'Agree the departure times in advance and tell guests which car is theirs before the evening begins. A first run for those who want to leave early and a later one at the end of the party suits most groups. Parties rarely finish exactly when the invitation says, so set the last run a little after the official end.',
-        'On the night, the chauffeurs wait as near to the venue as parking and local restrictions allow and come to the entrance when the organiser calls.',
       ],
     },
     {

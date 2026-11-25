@@ -28,7 +28,7 @@ const guide: ClusterGuide = {
     heading: 'A car that is already yours at midnight',
     paragraphs: [
       'New Year’s Eve is the hardest night of the year to get home in London. Streets around the Thames, Westminster and the South Bank are closed to traffic for the ticketed fireworks, taxis and ride-hailing cars are scarce and expensive once midnight has passed, and the crowds leaving the centre are very large. A New Year’s Eve chauffeur in London does not make the closures disappear, but it does mean a car is already yours when everyone else is looking for one.',
-      'The service is booked by the hour. Your chauffeur collects you from home or your hotel, takes you to dinner, a party or the place you are staying, waits nearby, and drives you home when you decide the night is over rather than when an app finally finds a driver. Nobody in your party has to stay sober to drive, and nobody has to stand on a cold pavement at one in the morning.',
+      'The service is booked by the hour. Your chauffeur collects you from home or your hotel, takes you to dinner, a party or the place you are staying, waits nearby, and drives you home when you decide the night is over rather than when an app finally finds a driver. Nobody in your party has to stay sober to drive.',
       'We operate 24 hours a day, 365 days a year, so the same service carries on into New Year’s Day: the drive back from a house party in the morning, a lunch reservation, or a flight from Heathrow or Gatwick on 1 January.',
     ],
     includesTitle: 'Included with every New Year’s Eve booking',
@@ -48,7 +48,7 @@ const guide: ClusterGuide = {
       paragraphs: [
         'The fireworks are launched from the Thames in the heart of London, and an area on both banks is closed to vehicles for the evening. The closures begin well before midnight and stay in place into the early hours. No private car, taxi or chauffeur vehicle can drive into that zone, and ours is no exception.',
         'If your evening is inside or beside the closed area — a riverside restaurant, a hotel in Westminster, a ticketed viewing area — we agree a set-down point at the edge of the closures before the night, and a collection point for afterwards. You walk the last stretch, so allow time for it and choose your shoes accordingly. The closure map is published ahead of each New Year’s Eve, and we plan around the current one rather than last year’s.',
-        'Journeys in the first hour or so after midnight are slow across the centre. Crowds spill onto the roads, and the routes that remain open carry all the diverted traffic. We will tell you plainly what to expect on your route, but nobody can promise a journey time on this night.',
+        'Journeys in the first hour or so after midnight are slow across the centre, as crowds spill onto the roads and the routes that remain open carry the diverted traffic. We will tell you plainly what to expect, but nobody can promise a journey time on this night.',
       ],
       bullets: [
         'The car cannot enter the closed zone, with or without a fireworks ticket',
@@ -62,7 +62,7 @@ const guide: ClusterGuide = {
       heading: 'House parties, country hotels and New Year’s Day',
       paragraphs: [
         'Plenty of New Year’s Eve plans are nowhere near the fireworks. For a house party in Richmond or Hampstead, a country hotel in Berkshire or Surrey, or a venue elsewhere in the home counties, the car goes door to door exactly as it would on any other evening, although roads everywhere are busier than usual after midnight.',
-        'Because the hire is by the hour, the route can be as simple or as involved as the evening needs: collect friends on the way, move from dinner to a second address before midnight, then take each person home in turn. Give us the addresses in order when you book so that the first pick-up time is right.',
+        'Because the hire is by the hour, the evening can have several stops: collect friends on the way, move from dinner to a second address before midnight, then take each person home in turn.',
         'On New Year’s Day the roads are generally quiet in the morning. A parade passes through the West End around the middle of the day and streets along its route are closed for it, so a lunch booking or hotel pick-up in that area needs a little planning. Airport transfers run as on any other day, with flight tracking on arrivals.',
       ],
     },
@@ -128,7 +128,7 @@ const guide: ClusterGuide = {
       {
         question: 'How long will the journey home take after midnight?',
         answer:
-          'Longer than on a normal night, particularly in the first hour or so after midnight and anywhere near the river. We plan the route around the closures and tell you honestly what to expect, but we cannot guarantee a journey time on New Year’s Eve. Away from the centre the difference is much smaller.',
+          'Longer than on a normal night, particularly in the first hour or so after midnight and anywhere near the river. We plan the route around the closures, but we cannot guarantee a journey time on New Year’s Eve.',
       },
       {
         question: 'Can you collect and drop several people at different addresses?',

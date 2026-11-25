@@ -46,9 +46,8 @@ const guide: ClusterGuide = {
       kicker: 'Christmas Day and Boxing Day',
       heading: 'When the Tube and the trains stop',
       paragraphs: [
-        'London’s public transport closes down on 25 December. There is no Tube, no bus and no national rail service, which means no train to any of the airports. Some flights still operate on Christmas Day, Heathrow’s among them, and the passengers on them have to travel by road.',
+        'London’s public transport closes down on 25 December. There is no Tube, no bus and no national rail service, which means no train to any of the airports. Some flights still operate on Christmas Day, Heathrow’s among them, and the passengers on them, whether leaving or landing, have to travel by road.',
         'On Boxing Day services are reduced, so check what is running before you rely on it. A booked car removes the question: your chauffeur collects you from the door at the agreed time, whatever the timetable says.',
-        'The same applies in the other direction. If you land on Christmas Day there is no train or bus into the city, so it is not a day to arrive without transport arranged.',
       ],
       bullets: [
         '25 December: no Tube, bus or national rail service in London',
@@ -63,7 +62,7 @@ const guide: ClusterGuide = {
       paragraphs: [
         'Give us your flight number when you book and your chauffeur follows the flight rather than the timetable. If you land early or late, the pick-up moves with it. You are met in the arrivals hall and walked to the car.',
         'In the days before Christmas, passport control and baggage reclaim can take longer than usual. The free waiting time after you land allows for that: 60 minutes for international arrivals and 45 minutes for domestic flights.',
-        'Because the service runs around the clock, a late-night landing, or a delayed flight that arrives in the small hours, is handled like any other arrival.',
+        'Because we operate around the clock, a late-night landing is handled like any other arrival.',
       ],
     },
     {
