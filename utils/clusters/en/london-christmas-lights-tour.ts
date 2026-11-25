@@ -28,8 +28,8 @@ const guide: ClusterGuide = {
     heading: 'A private evening drive around London’s lights',
     paragraphs: [
       'A London Christmas lights tour by chauffeur is the comfortable way to see the city’s displays: one private car, one evening, and no need to settle for a single street. London’s Christmas lights are typically switched on from mid-November until early January, and they are spread across the West End, Knightsbridge and the river — too far apart to cover on foot on a cold night, and awkward by Tube with children or older relatives.',
-      'With a car hired by the hour, you are collected from your home or hotel, driven beneath the Regent Street angels and past the shop windows of Mayfair and Knightsbridge, and set down wherever the best of it is on foot. Covent Garden’s piazza and Carnaby Street are pedestrian areas, so your chauffeur drops you as close as the roads allow and waits nearby while you walk, with spare layers and shopping left in the car.',
-      'It suits families with young children, grandparents who would rather not stand in a crowd, and visitors with one free evening in December. Because the time is yours, the drive combines easily with dinner, a theatre show or a ticketed event such as Winter Wonderland — tell us the plan and we shape the evening around it.',
+      'With a car hired by the hour, you are collected from your home or hotel, driven beneath the Regent Street angels and past the shop windows of Mayfair and Knightsbridge, and set down wherever the best of it is on foot. Covent Garden’s piazza and Carnaby Street are pedestrian areas, so your chauffeur drops you as close as the roads allow and waits nearby while you walk.',
+      'It suits families with young children, grandparents who would rather not stand in a crowd, and visitors with one free evening in December. Because the time is yours, the drive combines easily with dinner, a theatre show or a ticketed event such as Winter Wonderland.',
     ],
     includesTitle: 'Included with every lights tour booking',
     includes: [
