@@ -59,8 +59,8 @@ const guide: ClusterGuide = {
       kicker: 'Planning your day',
       heading: 'Timing the journey from London',
       paragraphs: [
-        'From central London we normally take the A3 past Guildford and then cross the Downs on the A286 through Midhurst or the A285 through Petworth. In normal traffic that is a little over two hours; on an event morning the final few miles can add a good deal more. We usually suggest leaving between 6.30am and 8am, depending on the event and how much of the day you want to see.',
-        'Goodwood publishes travel information for each event, including where taxis and private hire cars may set down and collect, and the arrangements change from year to year. We follow the current plan and confirm your drop-off and meeting points before the day. If you have a car park pass or hospitality parking, tell us when you book so that your chauffeur can use it.',
+        'From central London we normally take the A3 past Guildford and then cross the Downs on the A286 through Midhurst or the A285 through Petworth. In normal traffic that is a little over two hours; on an event morning the final few miles can add a good deal more. We suggest leaving between 6.30am and 8am, depending on the event and how much of the day you want to see.',
+        'Goodwood publishes travel information for each event, including where taxis and private hire cars may set down and collect, and it changes from year to year. We follow the current plan. If you have a car park pass or hospitality parking, tell us when you book so that your chauffeur can use it.',
         'At the Revival and Glorious Goodwood, clothes are part of the occasion. A tweed suit, a 1950s dress or a linen jacket and panama hat survives two hours in the back of an S-Class far better than a crowded train to Chichester followed by a shuttle bus.',
       ],
     },
@@ -91,7 +91,7 @@ const guide: ClusterGuide = {
     kicker: 'Pricing',
     title: 'What does a Goodwood chauffeur cost?',
     paragraphs: [
-      'Goodwood is booked as hourly chauffeur hire, charged from the moment you are collected until you are home again, with the car and chauffeur at your disposal throughout. A stop on the way down or back is simply part of the booked time.',
+      'Goodwood is booked as hourly chauffeur hire, charged from the moment you are collected until you are home again, with the car and chauffeur at your disposal throughout.',
       'With around two hours on the road in each direction and six to eight hours at the event, a Goodwood day from central London typically comes to between ten and thirteen hours. Tell us which event you are attending and we will quote for the whole day before you book.',
     ],
     points: [
@@ -110,7 +110,7 @@ const guide: ClusterGuide = {
       {
         question: 'How far ahead should I book a Goodwood chauffeur?',
         answer:
-          'Once you have your tickets, book the car. All three headline events fall in the summer season and each booking takes a car and chauffeur for the full day, so earlier is better. Same-day bookings are sometimes possible, subject to availability, but we recommend at least 24 hours’ notice. Changes and cancellation are free up to 24 hours beforehand.',
+          'Once you have your tickets, book the car. All three headline events fall in the summer season and each booking takes a car and chauffeur for the full day, so earlier is better. Changes and cancellation are free up to 24 hours beforehand.',
       },
       {
         question: 'Does the chauffeur stay at Goodwood all day?',
@@ -120,7 +120,7 @@ const guide: ClusterGuide = {
       {
         question: 'Where will we be dropped off?',
         answer:
-          'That depends on the event. Goodwood House, the Racecourse and the Motor Circuit each have their own entrances and their own set-down arrangements for private hire cars, which are set by Goodwood and revised each year. We get as close to your entrance as the current plan allows and confirm the drop-off and collection points before you travel.',
+          'That depends on the event: Goodwood House, the Racecourse and the Motor Circuit each have their own entrances and set-down arrangements for private hire cars, revised each year. We get as close to your entrance as the current plan allows and confirm the drop-off and collection points before you travel.',
       },
       {
         question: 'Can we stay overnight and travel back the next day?',
@@ -135,7 +135,7 @@ const guide: ClusterGuide = {
       {
         question: 'Do you drive to other events at Goodwood?',
         answer:
-          'Yes. The same service covers the other race meetings at Goodwood Racecourse through the summer season, the Members’ Meeting at the Motor Circuit in spring, and track days and private events on the estate during the rest of the year.',
+          'Yes. The same service covers the other race meetings at Goodwood Racecourse through the summer season, the Members’ Meeting at the Motor Circuit in spring, and private events on the estate.',
       },
     ],
   },

@@ -7,7 +7,7 @@ const guide: ClusterGuide = {
   seo: {
     title: 'Silverstone Grand Prix Chauffeur from London',
     description:
-      'London to the British Grand Prix at Silverstone in a Mercedes V-Class or S-Class. Your chauffeur waits all day. Hourly hire from £50, 4-hour minimum.',
+      'London to the British Grand Prix at Silverstone in a chauffeur-driven Mercedes. Your chauffeur waits all day. Hourly hire from £50, 4-hour minimum.',
   },
   kicker: 'Event Chauffeur · Silverstone',
   hero: {
@@ -47,13 +47,12 @@ const guide: ClusterGuide = {
       heading: 'Why race day starts early',
       paragraphs: [
         'Cars are on track from Friday, with qualifying on Saturday and the Grand Prix itself on Sunday afternoon. Sunday is by far the busiest day on the roads, and the support races and build-up begin hours before the main event, so most spectators aim to be inside the circuit by mid-morning.',
-        'From central London that means an early pick-up — we usually suggest between 6am and 7am on Sunday. It sounds severe, but leaving an hour later can add much more than an hour to the journey once the queues on the A43 have formed. When you book, we propose a departure time based on your address, your entrance and the day you are attending.',
-        'The return deserves the same thought. You can walk out as the race ends and accept slow traffic for the first few miles, or stay for the post-race atmosphere and leave once the roads have eased. Either way, your chauffeur is at the end of the phone and ready when you are.',
+        'From central London that means an early pick-up — we suggest between 6am and 7am on Sunday. It sounds severe, but leaving an hour later can add much more than an hour to the journey once the queues on the A43 have formed. When you book, we propose a departure time based on your address, your entrance and the day you are attending.',
+        'The return deserves the same thought: leave as the race ends and accept slow traffic for the first few miles, or stay on and travel once the roads have eased.',
       ],
       bullets: [
         'Qualifying on Saturday, the Grand Prix on Sunday afternoon',
         'Sunday morning is the busiest time on the approach roads',
-        'Expect slow traffic for some time after the chequered flag',
         'Friday and Saturday are generally easier journeys than race day',
       ],
     },
@@ -62,8 +61,7 @@ const guide: ClusterGuide = {
       heading: 'Arriving at and leaving the circuit',
       paragraphs: [
         'Silverstone publishes a traffic plan for each Grand Prix, with signed routes from the M1 and M40, designated car parks and set-down areas, and temporary restrictions on the surrounding lanes. The plan is revised each year, and the police and marshals may change it on the day. We follow the current plan and tell you before you travel where you will be dropped and collected.',
-        'If your tickets or hospitality come with a car park pass, let us know when you book: your chauffeur can park on it and the car becomes your base for the day. If not, the chauffeur waits off site and returns to the agreed pick-up point when you call.',
-        'Mobile coverage around the circuit can be patchy when the crowd is at its largest, so it is worth agreeing a fallback meeting time and place with your chauffeur when you are dropped off in the morning.',
+        'If your tickets or hospitality come with a car park pass, let us know when you book so that your chauffeur can park on it. It is also worth agreeing a fallback meeting time and place when you are dropped off, in case mobile networks are congested later in the day.',
       ],
     },
   ],
@@ -102,13 +100,12 @@ const guide: ClusterGuide = {
       'Mercedes V-Class (up to 7 passengers) from £75 per hour',
       'Minimum booking of 4 hours',
       'Quote for the full day confirmed before you book',
-      'Corporate accounts with VAT invoices available',
     ],
   },
   faq: {
     kicker: 'FAQ',
     title: 'Silverstone chauffeur questions',
-    intro: 'The questions we are asked most often about travelling to the British Grand Prix.',
+    intro: 'The practical questions to settle before travelling to the British Grand Prix.',
     items: [
       {
         question: 'How early should I book a Silverstone Grand Prix chauffeur?',
@@ -138,7 +135,7 @@ const guide: ClusterGuide = {
       {
         question: 'Do you drive to other events at Silverstone?',
         answer:
-          'Yes. The same service is available for the MotoGP British Grand Prix, the Silverstone Festival of historic racing in late summer, and track days and corporate events at the circuit through the year. Outside Grand Prix weekend the roads are far quieter and the day is usually shorter.',
+          'Yes. The same service is available for the MotoGP British Grand Prix, the Silverstone Festival of historic racing in late summer, and track days and corporate events at the circuit through the year.',
       },
     ],
   },

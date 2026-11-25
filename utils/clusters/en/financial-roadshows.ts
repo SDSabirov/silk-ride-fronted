@@ -61,7 +61,7 @@ const guide: ClusterGuide = {
       kicker: 'Between meetings',
       heading: 'Time in the car you can use',
       paragraphs: [
-        'The twenty or thirty minutes between meetings are often the only time the team has to debrief, take a call or change a slide. The cabin is quiet, Wi-Fi and phone chargers are complimentary and there is bottled water on board. The S-Class, with its generous rear legroom, is the car we usually suggest for the principals.',
+        'The twenty or thirty minutes between meetings are often the only time the team has to debrief, take a call or change a slide. The cabin is quiet, Wi-Fi and phone chargers are complimentary and there is bottled water on board. The S-Class, with its generous rear legroom, is the car we suggest for the principals.',
         'Discretion matters on a roadshow, when much of what is discussed is not yet public. Our chauffeurs are professionally trained, background-checked and discreet: what is said in the car is not repeated outside it.',
       ],
     },

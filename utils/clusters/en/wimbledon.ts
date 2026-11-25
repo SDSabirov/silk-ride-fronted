@@ -7,7 +7,7 @@ const guide: ClusterGuide = {
   seo: {
     title: 'Wimbledon Chauffeur Service from London',
     description:
-      'Chauffeur-driven travel to The Championships, Wimbledon, in a Mercedes S-Class. Your driver stays for a flexible return. From £50 per hour, 4-hour minimum.',
+      'Chauffeur-driven travel to The Championships, Wimbledon, in a Mercedes. Your driver stays for a flexible return. Hourly hire from £50, 4-hour minimum.',
   },
   kicker: 'Event Chauffeur · Wimbledon',
   hero: {
@@ -28,8 +28,8 @@ const guide: ClusterGuide = {
     heading: 'A private car to Wimbledon and home again',
     paragraphs: [
       'The Championships take over the All England Lawn Tennis Club on Church Road, SW19, for two weeks from late June or the start of July until mid-July. For most spectators the journey is the least enjoyable part of the day: District line trains to Southfields are packed, the walk from the station takes a good fifteen minutes, and taxis are hard to find once play has finished. A Wimbledon chauffeur takes that part of the day off your hands.',
-      'We collect you from your home, hotel or office in a Mercedes, drive you to SW19 and set you down as close to your gate as that year’s traffic arrangements allow. The same chauffeur then stays on the booking for the rest of the day, so the car you arrived in is the car that takes you home.',
-      'That matters at Wimbledon more than at most events, because nobody can tell you when your day will end. A match on Centre Court can go to five sets, rain can hold up the outside courts, and play under the roofs can continue late into the evening. With hourly hire there is no pre-booked return slot to worry about — you message your chauffeur when you are ready to leave.',
+      'We collect you from your home, hotel or office in a Mercedes, drive you to SW19 and set you down as close to your gate as that year’s traffic arrangements allow. The same chauffeur then stays on the booking for the rest of the day, so the car you arrived in is the car that takes you home — by way of dinner in Wimbledon Village or Chelsea, if you wish.',
+      'That matters at Wimbledon, because nobody can tell you when your day will end: a five-set match, a rain delay or an evening session under the roof can all push it back. With hourly hire there is no pre-booked return slot — you message your chauffeur when you are ready to leave.',
     ],
     includesTitle: 'Included with every Wimbledon booking',
     includes: [
@@ -47,14 +47,13 @@ const guide: ClusterGuide = {
       heading: 'How a day at The Championships runs',
       paragraphs: [
         'On most days the Grounds open in the morning, play on the outside courts starts at 11am and the show courts begin in the early afternoon. The order of play is published the evening before, which is the moment to decide how early you want to arrive — and to tell us if you would like to move your pick-up.',
-        'From Mayfair, Knightsbridge or Kensington we normally suggest allowing a full hour during the fortnight, even though the distance is short. The roads through Putney, Wandsworth and Wimbledon Village carry far more traffic than usual, and the final approach to the Club is the slowest part.',
-        'Finishing times are the unknown. Centre Court and No.1 Court both have roofs and lights, and matches there can run until the 11pm curfew, so a day you expected to end at seven can end at half past ten. Your chauffeur keeps their phone on and the car nearby; message as you leave your seat and they will head for the agreed collection point.',
+        'From Mayfair, Knightsbridge or Kensington we suggest allowing a full hour during the fortnight, even though the distance is short. The roads through Putney, Wandsworth and Wimbledon Village carry far more traffic than usual, and the final approach to the Club is the slowest part.',
+        'Finishing times are the unknown. Centre Court and No.1 Court both have roofs and lights, and matches there can run until the 11pm curfew. Your chauffeur keeps the car nearby; message as you leave your seat and they will head for the agreed collection point.',
       ],
       bullets: [
         'Play on the outside courts from 11am, show courts from early afternoon',
         'The order of play is published the evening before',
         'Show-court matches can continue under the roof until 11pm',
-        'Rain can delay the outside courts and lengthen the day',
       ],
     },
     {
@@ -62,7 +61,7 @@ const guide: ClusterGuide = {
       heading: 'Drop-off and collection in SW19',
       paragraphs: [
         'During The Championships the roads around the Club are managed differently from the rest of the year. Parts of Church Road and the neighbouring streets are closed or restricted, parking nearby is tightly controlled, and the set-down and pick-up points for taxis and private hire cars are decided by the Club and the local council. The details change from year to year.',
-        'We work to the current year’s arrangements rather than from habit. Before your booking we tell you where you will be set down for your gate and where your chauffeur will meet you afterwards, and on the day the chauffeur stays in touch in case the police or stewards redirect traffic.',
+        'We work to the current year’s arrangements, and tell you before the day where you will be set down and where your chauffeur will meet you afterwards.',
         'If you have a car park pass from the Club or from your hospitality provider, tell us when you book and your chauffeur can use it. Without one, the car waits away from the immediate area and returns when you call, so allow a little time between your message and the pick-up.',
       ],
     },
@@ -102,7 +101,6 @@ const guide: ClusterGuide = {
       'Mercedes V-Class (up to 7 passengers) from £75 per hour',
       'Minimum booking of 4 hours',
       'Pay by card, Apple Pay, Google Pay or bank transfer',
-      'Corporate accounts with VAT invoices for client hospitality',
     ],
   },
   faq: {
@@ -118,22 +116,17 @@ const guide: ClusterGuide = {
       {
         question: 'What happens if play finishes late?',
         answer:
-          'Your chauffeur stays with you for the whole booking, so there is no return slot to miss. Matches under the roofs can run until 11pm; if you think you may stay that late, tell us when you book so the hours are allowed for. On the day, keep your chauffeur updated and they will make their way to the collection point as you leave.',
+          'Your chauffeur stays with you for the whole booking, so there is no return slot to miss. Matches under the roofs can run until 11pm; if you think you may stay that late, tell us when you book so the hours are allowed for.',
       },
       {
         question: 'How close to the gates can you drop us?',
         answer:
-          'As close as that year’s traffic arrangements allow. Roads around Church Road are closed or restricted during The Championships and the set-down points for private hire cars are fixed by the Club and the local council, so we cannot promise a particular gate. We confirm the set-down and collection points with you before the day.',
+          'As close as that year’s traffic arrangements allow. Set-down points for private hire cars are fixed by the Club and the local council, so we cannot promise a particular gate; we confirm the set-down and collection points with you before the day.',
       },
       {
         question: 'Can you collect us from Heathrow or Gatwick and drive straight to Wimbledon?',
         answer:
           'Yes. Your chauffeur tracks the flight and adjusts the pick-up if you land early or late, and your luggage stays in the car while you watch the tennis. If you would rather go to your hotel first, see our fixed-price <a href="/airport-transfers/heathrow">Heathrow</a> and <a href="/airport-transfers/gatwick">Gatwick</a> transfers.',
-      },
-      {
-        question: 'Can we stop for dinner on the way home?',
-        answer:
-          'Yes. With hourly hire a stop is simply part of the route. Wimbledon Village is a few minutes up the hill from the Club, or you may prefer a table in Chelsea or Mayfair on the way back. Tell your chauffeur on the day or let us know in advance.',
       },
       {
         question: 'Do you drive to other tennis events in London?',

@@ -135,7 +135,7 @@ const guide: ClusterGuide = {
       {
         question: 'Do you provide child seats?',
         answer:
-          'Yes, child seats are complimentary on request. Tell us each child’s age when you book so the right seats are fitted before the car arrives. For families we usually suggest the <a href="/fleet/mercedes-v-class">Mercedes V-Class</a>, which has room for a pushchair as well.',
+          'Yes, child seats are complimentary on request. Tell us each child’s age when you book so the right seats are fitted before the car arrives. For families we suggest the <a href="/fleet/mercedes-v-class">Mercedes V-Class</a>, which has room for a pushchair as well.',
       },
       {
         question: 'Can we see London during a layover at Heathrow?',
