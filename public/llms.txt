@@ -22,12 +22,37 @@ Silk Ride Ltd is a licensed private hire operator based in London, United Kingdo
 - [Gatwick Airport](https://silkride.co.uk/airport-transfers/gatwick): From £180
 - [Stansted Airport](https://silkride.co.uk/airport-transfers/stansted): From £200
 - [Luton Airport](https://silkride.co.uk/airport-transfers/luton): From £200
+- [London City Airport](https://silkride.co.uk/airport-transfers/london-city): From £120
 - [Heathrow to Southampton Cruise Terminal](https://silkride.co.uk/cruise-transfers/heathrow-to-southampton): Fixed £450 per vehicle, one way, all five Southampton cruise terminals, meet & greet and 60 min free waiting
 - [Hourly Chauffeur Hire](https://silkride.co.uk/services/hourly-chauffeur): From £50/hour, 4-hour minimum, as-directed service
 - [Corporate Travel](https://silkride.co.uk/services/corporate-travel): Executive transport for meetings and roadshows
 - [Wedding Chauffeur](https://silkride.co.uk/services/wedding-chauffeur): Luxury wedding cars with ribbons and champagne service
 - [Event Transport](https://silkride.co.uk/services/event-chauffeur): VIP transport for concerts, galas, theatre and sport
 - [UK & Europe Travel](https://silkride.co.uk/services/uk-europe-travel): Long-distance chauffeur-driven journeys
+
+## Event Chauffeur Guides
+
+- [Royal Ascot](https://silkride.co.uk/event-chauffeur/royal-ascot): Chauffeur to Ascot Racecourse from London, chauffeur waits for the return
+- [Wimbledon](https://silkride.co.uk/event-chauffeur/wimbledon): Chauffeur to The Championships, SW19
+- [Silverstone Grand Prix](https://silkride.co.uk/event-chauffeur/silverstone): London to the British Grand Prix and back
+- [Goodwood](https://silkride.co.uk/event-chauffeur/goodwood): Festival of Speed, Revival and Glorious Goodwood
+- [Henley Royal Regatta](https://silkride.co.uk/event-chauffeur/henley-royal-regatta): Chauffeur to Henley-on-Thames
+- [Chelsea Flower Show](https://silkride.co.uk/event-chauffeur/chelsea-flower-show): Chauffeur to the Royal Hospital Chelsea
+
+## Corporate, Hourly and Wedding Guides
+
+- [Financial Roadshows](https://silkride.co.uk/corporate-chauffeur/financial-roadshows): Dedicated car and chauffeur for investor meeting days
+- [Conference & Exhibition Transport](https://silkride.co.uk/corporate-chauffeur/conference-transport): Delegate and speaker transport for London venues
+- [Bicester Village](https://silkride.co.uk/hourly-chauffeur/bicester-village): Private shopping day from London by the hour
+- [London Sightseeing](https://silkride.co.uk/hourly-chauffeur/london-sightseeing): As-directed tour of London landmarks by the hour
+- [Mercedes S-Class Wedding Car](https://silkride.co.uk/wedding-cars/mercedes-s-class-wedding-car): Modern bridal car, priced by quote
+- [Wedding Guest Transport](https://silkride.co.uk/wedding-cars/wedding-guest-transport): V-Class shuttles for family and guests
+
+## Long-Distance Routes
+
+- [London to Manchester](https://silkride.co.uk/long-distance-chauffeur/london-to-manchester): Door-to-door, fixed quote in advance
+- [London to Birmingham](https://silkride.co.uk/long-distance-chauffeur/london-to-birmingham): Door-to-door, fixed quote in advance
+- [London to Paris](https://silkride.co.uk/long-distance-chauffeur/london-to-paris): Same car and chauffeur via Eurotunnel LeShuttle
 
 ## Fleet
 

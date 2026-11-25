@@ -57,10 +57,15 @@
           <div class="mt-8 p-6 bg-gray-50 rounded-lg">
             <h3 class="text-xl font-semibold mb-3">{{ $t('airportTransfersPage.airportsTitle') }}</h3>
             <div class="grid grid-cols-2 gap-3">
-              <div v-for="airport in airportsList" :key="airport.key" class="flex items-center space-x-2">
-                <div class="h-2 w-2 bg-gold rounded-full"></div>
+              <NuxtLink
+                v-for="airport in airportsList"
+                :key="airport.key"
+                :to="localePath(airport.path)"
+                class="flex items-center space-x-2 text-gray-900 underline decoration-gold/60 underline-offset-4 transition-colors hover:text-gold"
+              >
+                <span class="h-2 w-2 bg-gold rounded-full shrink-0"></span>
                 <span>{{ $t(airport.titleKey) }}</span>
-              </div>
+              </NuxtLink>
             </div>
           </div>
         </div>
@@ -115,7 +120,9 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div v-for="airport in pricingAirports" :key="airport.key" class="p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-shadow">
-            <h3 class="text-xl font-semibold mb-4 text-center">{{ $t(airport.titleKey) }}</h3>
+            <h3 class="text-xl font-semibold mb-4 text-center">
+              <NuxtLink :to="localePath(airport.path)" class="transition-colors hover:text-gold">{{ $t(airport.titleKey) }}</NuxtLink>
+            </h3>
             <div class="space-y-3">
               <div class="flex justify-between items-center">
                 <span class="font-medium">Mercedes E-Class:</span>
@@ -131,6 +138,13 @@
               </div>
             </div>
             <p class="mt-4 text-sm text-gray-500 text-center">{{ $t('airportTransfersPage.journeyTime', { time: airport.journeyTime }) }}</p>
+            <NuxtLink
+              :to="localePath(airport.path)"
+              class="mt-4 flex items-center justify-center gap-1 text-sm font-semibold text-gray-900 transition-colors hover:text-gold"
+            >
+              {{ $t('airportTransfersPage.viewAirport', { airport: $t(airport.titleKey) }) }}
+              <i class="bx bx-right-arrow-alt text-lg" aria-hidden="true"></i>
+            </NuxtLink>
           </div>
         </div>
 
@@ -245,22 +259,23 @@ const serviceBullets = computed(() => {
 })
 
 const airportsList = [
-  { key: 'heathrow', titleKey: 'airportPages.heathrow.heroTitle' },
-  { key: 'gatwick', titleKey: 'airportPages.gatwick.heroTitle' },
-  { key: 'stansted', titleKey: 'airportPages.stansted.heroTitle' },
-  { key: 'luton', titleKey: 'airportPages.luton.heroTitle' },
-  { key: 'londonCity', titleKey: 'airportPages.londonCity.heroTitle' },
-  { key: 'farnborough', titleKey: 'airportPages.farnborough.heroTitle' },
+  { key: 'heathrow', path: '/airport-transfers/heathrow', titleKey: 'airportPages.heathrow.heroTitle' },
+  { key: 'gatwick', path: '/airport-transfers/gatwick', titleKey: 'airportPages.gatwick.heroTitle' },
+  { key: 'stansted', path: '/airport-transfers/stansted', titleKey: 'airportPages.stansted.heroTitle' },
+  { key: 'luton', path: '/airport-transfers/luton', titleKey: 'airportPages.luton.heroTitle' },
+  { key: 'londonCity', path: '/airport-transfers/london-city', titleKey: 'airportPages.londonCity.heroTitle' },
+  { key: 'farnborough', path: '/airport-transfers/farnborough', titleKey: 'airportPages.farnborough.heroTitle' },
+  { key: 'bigginHill', path: '/airport-transfers/biggin-hill', titleKey: 'airportPages.bigginHill.heroTitle' },
 ]
 
 const pricingAirports = [
-  { key: 'heathrow', titleKey: 'airportPages.heathrow.heroTitle', eClass: '£120', sClass: '£160', vClass: '£160', journeyTime: '45-90 minutes' },
-  { key: 'gatwick', titleKey: 'airportPages.gatwick.heroTitle', eClass: '£180', sClass: '£230', vClass: '£230', journeyTime: '60-120 minutes' },
-  { key: 'stansted', titleKey: 'airportPages.stansted.heroTitle', eClass: '£200', sClass: '£250', vClass: '£250', journeyTime: '60-90 minutes' },
-  { key: 'luton', titleKey: 'airportPages.luton.heroTitle', eClass: '£200', sClass: '£240', vClass: '£240', journeyTime: '60-90 minutes' },
-  { key: 'londonCity', titleKey: 'airportPages.londonCity.heroTitle', eClass: '£120', sClass: '£160', vClass: '£160', journeyTime: '20-40 minutes' },
-  { key: 'bigginHill', titleKey: 'airportPages.bigginHill.heroTitle', eClass: '£170', sClass: '£210', vClass: '£210', journeyTime: '45-75 minutes' },
-  { key: 'farnborough', titleKey: 'airportPages.farnborough.heroTitle', eClass: '£240', sClass: '£270', vClass: '£270', journeyTime: '60-90 minutes' },
+  { key: 'heathrow', path: '/airport-transfers/heathrow', titleKey: 'airportPages.heathrow.heroTitle', eClass: '£120', sClass: '£160', vClass: '£160', journeyTime: '45-90 minutes' },
+  { key: 'gatwick', path: '/airport-transfers/gatwick', titleKey: 'airportPages.gatwick.heroTitle', eClass: '£180', sClass: '£230', vClass: '£230', journeyTime: '60-120 minutes' },
+  { key: 'stansted', path: '/airport-transfers/stansted', titleKey: 'airportPages.stansted.heroTitle', eClass: '£200', sClass: '£250', vClass: '£250', journeyTime: '60-90 minutes' },
+  { key: 'luton', path: '/airport-transfers/luton', titleKey: 'airportPages.luton.heroTitle', eClass: '£200', sClass: '£240', vClass: '£240', journeyTime: '60-90 minutes' },
+  { key: 'londonCity', path: '/airport-transfers/london-city', titleKey: 'airportPages.londonCity.heroTitle', eClass: '£120', sClass: '£160', vClass: '£160', journeyTime: '20-40 minutes' },
+  { key: 'bigginHill', path: '/airport-transfers/biggin-hill', titleKey: 'airportPages.bigginHill.heroTitle', eClass: '£170', sClass: '£210', vClass: '£210', journeyTime: '45-75 minutes' },
+  { key: 'farnborough', path: '/airport-transfers/farnborough', titleKey: 'airportPages.farnborough.heroTitle', eClass: '£240', sClass: '£270', vClass: '£270', journeyTime: '60-90 minutes' },
 ]
 
 const faqs = computed(() => {

@@ -34,8 +34,13 @@
             <h3 class="text-xl font-semibold mb-3">{{ $t('seo.ukEuropePage.destTitle') }}</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
               <div v-for="i in 8" :key="i" class="flex items-center space-x-2">
-                <div class="h-2 w-2 bg-gold rounded-full"></div>
-                <span>{{ $t(`seo.ukEuropePage.dest${i - 1}`) }}</span>
+                <div class="h-2 w-2 bg-gold rounded-full shrink-0"></div>
+                <NuxtLink
+                  v-if="destinationLinks[i - 1]"
+                  :to="localePath(destinationLinks[i - 1])"
+                  class="text-gray-900 underline decoration-gold/60 underline-offset-4 transition-colors hover:text-gold"
+                >{{ $t(`seo.ukEuropePage.dest${i - 1}`) }}</NuxtLink>
+                <span v-else>{{ $t(`seo.ukEuropePage.dest${i - 1}`) }}</span>
               </div>
             </div>
           </div>
@@ -98,6 +103,23 @@
       </div>
     </section>
 
+    <!-- FAQ Section -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-screen-2xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-12">{{ $t('seo.ukEuropePage.faqTitle') }}</h2>
+
+        <div class="max-w-4xl mx-auto space-y-6">
+          <div v-for="(item, index) in faqItems" :key="index" class="bg-white p-6 rounded-lg shadow">
+            <h3 class="text-xl font-semibold mb-3">{{ item.q }}</h3>
+            <p class="text-gray-600">{{ item.a }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cluster guides that belong to this pillar page -->
+    <ClusterHub section="long-distance-chauffeur" />
+
     <!-- CTA Section -->
     <section class="py-16">
       <div class="max-w-screen-2xl mx-auto px-6 text-center">
@@ -133,7 +155,7 @@ import { computed } from 'vue'
 const heroImage = '/images/covers/assist.webp'
 const serviceImage = '/images/covers/assist.webp'
 
-const { t, locale } = useI18n()
+const { t, te, locale } = useI18n()
 const localePath = useLocalePath()
 
 const seo = useSeo('ukEuropeTravel')
@@ -155,6 +177,16 @@ const serviceBullets = computed(() => {
   return bullets
 })
 
+// "Popular destinations" list (seo.ukEuropePage.dest0…7) → the page that
+// covers each one, where we have it. Index matches the i18n key number.
+const destinationLinks = {
+  0: '/destination-tours/cotswolds',
+  1: '/destination-tours/stonehenge',
+  2: '/destination-tours/bath',
+  3: '/destination-tours',
+  6: '/long-distance-chauffeur/london-to-paris',
+}
+
 const tours = [
   { icon: 'bx bx-map' },
   { icon: 'bx bx-trip' },
@@ -168,6 +200,16 @@ const features = [
   { icon: 'bx bx-calendar' },
 ]
 
+const faqItems = computed(() => {
+  const items = []
+  for (let i = 0; i < 12; i++) {
+    const qKey = `seo.ukEuropePage.faq[${i}].q`
+    if (!te(qKey)) break
+    items.push({ q: t(qKey), a: t(`seo.ukEuropePage.faq[${i}].a`) })
+  }
+  return items
+})
+
 // Structured data: a Service offered by the site-wide business identity
 // (declared once in nuxt.config.ts → schemaOrg.identity).
 useSchemaOrg([
@@ -180,5 +222,6 @@ useSchemaOrg([
     areaServed: [{ type: 'Country', name: 'United Kingdom' }, { type: 'Continent', name: 'Europe' }],
     image: '/images/covers/assist.webp',
   }),
+  faqSchema(faqItems.value.map((f) => ({ question: f.q, answer: f.a })), '/services/uk-europe-travel', locale.value),
 ])
 </script>

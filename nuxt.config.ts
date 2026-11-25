@@ -367,10 +367,13 @@ export default defineNuxtConfig({
       // Reuse the blog slugs already fetched for nitro.prerender.routes
       // (see fetchSanityBlogPosts at the top of this file). This avoids a
       // second round-trip to Sanity per build.
+      // Posts are authored per language. A path under /ru is routed to the
+      // Russian sitemap automatically; posts that share a slug across both
+      // languages are cross-linked as hreflang alternates by the module.
       const blogUrls = blogPosts
-        .filter((post) => post.slug && post.language !== 'ru')
+        .filter((post) => post.slug)
         .map((post) => ({
-          loc: `/blog/${post.slug}`,
+          loc: post.language === 'ru' ? `/ru/blog/${post.slug}` : `/blog/${post.slug}`,
           priority: 0.7,
           changefreq: 'monthly',
           ...(post.publishedAt ? { lastmod: post.publishedAt } : {}),

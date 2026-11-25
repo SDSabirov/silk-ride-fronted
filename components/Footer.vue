@@ -130,6 +130,18 @@
               </NuxtLink>
             </li>
             <li>
+              <NuxtLink :to="localePath('/destination-tours')" class="text-gray-400 hover:text-gold transition-colors text-sm flex items-center gap-2">
+                <i class="bx bx-chevron-right text-gold"></i>
+                {{ $t('footer.quickLinks.tours') }}
+              </NuxtLink>
+            </li>
+            <li>
+              <NuxtLink :to="localePath('/blog')" class="text-gray-400 hover:text-gold transition-colors text-sm flex items-center gap-2">
+                <i class="bx bx-chevron-right text-gold"></i>
+                {{ $t('footer.quickLinks.blogLink') }}
+              </NuxtLink>
+            </li>
+            <li>
               <NuxtLink :to="localePath('/partners')" class="text-gray-400 hover:text-gold transition-colors text-sm flex items-center gap-2">
                 <i class="bx bx-chevron-right text-gold"></i>
                 {{ $t('footer.quickLinks.partners') }}
@@ -172,6 +184,12 @@
               <NuxtLink :to="localePath('/services/event-chauffeur')" class="text-gray-400 hover:text-gold transition-colors text-sm flex items-center gap-2">
                 <i class="bx bx-chevron-right text-gold"></i>
                 {{ $t('footer.services.event') }}
+              </NuxtLink>
+            </li>
+            <li>
+              <NuxtLink :to="localePath('/services/uk-europe-travel')" class="text-gray-400 hover:text-gold transition-colors text-sm flex items-center gap-2">
+                <i class="bx bx-chevron-right text-gold"></i>
+                {{ $t('navbar.servicesDropdown.ukEurope') }}
               </NuxtLink>
             </li>
             <li>

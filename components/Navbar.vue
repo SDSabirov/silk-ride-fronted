@@ -435,6 +435,7 @@ const airportItems = [
 
 // Destinations items with icons
 const destinationsItems = [
+  { path: localePath('/destination-tours'), label: t('navbar.destinationsDropdown.all'), icon: 'bx bx-map-alt' },
   { path: localePath('/destination-tours/stonehenge'), label: t('navbar.destinationsDropdown.stonehenge'), icon: 'bx bx-circle' },
   { path: localePath('/destination-tours/windsor'), label: t('navbar.destinationsDropdown.windsor'), icon: 'bx bxs-castle' },
   { path: localePath('/destination-tours/oxford'), label: t('navbar.destinationsDropdown.oxford'), icon: 'bx bx-book-reader' },

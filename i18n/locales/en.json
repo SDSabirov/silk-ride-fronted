@@ -1,4 +1,42 @@
 {
+  "clusters": {
+    "book": "Book Now",
+    "getQuote": "Get a tailored quote",
+    "partOf": "See our full service:",
+    "breadcrumbHome": "Home",
+    "breadcrumbServices": "Services",
+    "mostPopular": "Our suggestion",
+    "passengers": "Up to {count} passengers",
+    "hourlyFrom": "From £{price} per hour, 4-hour minimum",
+    "quotedInAdvance": "Fixed price quoted in advance",
+    "viewVehicle": "View the {name}",
+    "vehicleAlt": "{name} chauffeur car",
+    "journeyDisclaimer": "Typical driving times in normal traffic. On event days and at peak hours journeys take longer — we plan your pick-up time around this.",
+    "hub": {
+      "kicker": "Guides",
+      "learnMore": "Read the guide",
+      "eventChauffeur": {
+        "title": "Event guides for the season’s key dates",
+        "intro": "Detailed guides to the season’s headline events: typical journey times, which car suits the day and how the return journey works."
+      },
+      "corporateChauffeur": {
+        "title": "Corporate travel guides",
+        "intro": "How we handle the two corporate bookings that need the most planning: investor roadshows and conference transport."
+      },
+      "hourlyChauffeur": {
+        "title": "Popular ways to use hourly hire",
+        "intro": "A car and chauffeur by the hour can be shaped around almost any day. Here are two popular examples."
+      },
+      "longDistanceChauffeur": {
+        "title": "Popular long-distance routes",
+        "intro": "Door-to-door journeys from London, with typical driving times and what to expect on the way."
+      },
+      "weddingCars": {
+        "title": "Wedding car guides",
+        "intro": "More detail on two things worth planning early: the bridal car itself, and getting everyone else there on time."
+      }
+    }
+  },
   "common": {
     "fromPrice": "From £{price}/hour",
     "learnMore": "Learn More",
@@ -110,6 +148,7 @@
       "southamptonCruise": "Southampton Cruise Terminal"
     },
     "destinationsDropdown": {
+      "all": "All Day Tours",
       "oxford": "Oxford",
       "cambridge": "Cambridge",
       "bath": "Bath",
@@ -130,6 +169,8 @@
       "insuredSub": "Comprehensive Cover"
     },
     "quickLinks": {
+      "tours": "Day Tours from London",
+      "blogLink": "Blog",
       "title": "Quick Links",
       "about": "About Us",
       "fleet": "Our Fleet",
@@ -1320,7 +1361,7 @@
     },
     "corporateTravel": {
       "title": "Corporate Chauffeur London – Executive Car Service",
-      "description": "Professional corporate chauffeur service in London. Punctual executive travel for meetings, events & roadshows. Hourly hire from £55/hr. Book today.",
+      "description": "Professional corporate chauffeur service in London. Punctual executive travel for meetings, events & roadshows. Hourly hire from £50. Book today.",
       "keywords": "corporate chauffeur london, executive car service, business travel chauffeur, executive transport london, corporate chauffeur service"
     },
     "hourlyChauffeur": {
@@ -1334,6 +1375,33 @@
       "keywords": "long distance chauffeur uk, europe travel chauffeur, uk chauffeur service, european chauffeur service, luxury uk travel"
     },
     "hourlyPage": {
+      "faqTitle": "Hourly Chauffeur Hire: Common Questions",
+      "faq": [
+        {
+          "q": "What is the minimum booking for hourly chauffeur hire?",
+          "a": "The minimum booking is four hours. You can book for longer in hourly steps, for a full day, or over several days. The car and the same chauffeur stay with you for the whole booking."
+        },
+        {
+          "q": "How much does hourly chauffeur hire cost in London?",
+          "a": "Hourly hire starts from £50 per hour in a Mercedes E-Class, and from £75 per hour in a Mercedes S-Class or a V-Class seating up to seven. We confirm the price for your booking before you pay."
+        },
+        {
+          "q": "Can I change my plans during the booking?",
+          "a": "Yes. Hourly hire is an as-directed service: you can add stops, change the order of the day or stay longer at an appointment. Just tell your chauffeur."
+        },
+        {
+          "q": "Does the chauffeur wait while I am in a meeting or shopping?",
+          "a": "Yes. Your chauffeur waits with the car nearby and returns to collect you when you call, so you never need to find a taxi between stops. Shopping and luggage can stay safely in the car."
+        },
+        {
+          "q": "Can I use hourly hire outside London?",
+          "a": "Yes. Hourly hire is often used for days out of town, such as a shopping trip to Bicester Village, a day at the races or a countryside lunch. For a fixed itinerary to places such as Windsor, Oxford or Bath, see our private day tours."
+        },
+        {
+          "q": "How much notice do you need?",
+          "a": "We recommend booking at least 24 hours ahead to secure the car you want. Same-day bookings are often possible, subject to availability, and changes or cancellations are free up to 24 hours before the booking."
+        }
+      ],
       "breadcrumbHome": "Home",
       "breadcrumbServices": "Services",
       "breadcrumbHourly": "Hourly Chauffeur",
@@ -1374,6 +1442,29 @@
       "ctaQuoteButton": "Custom Quote"
     },
     "eventPage": {
+      "faqTitle": "Event Chauffeur: Common Questions",
+      "faq": [
+        {
+          "q": "Does the chauffeur wait during the event?",
+          "a": "With hourly hire, yes: the car and chauffeur stay nearby for the whole event and collect you when you are ready to leave. If you prefer, you can book two separate journeys instead, one to the venue and one home."
+        },
+        {
+          "q": "How much does an event chauffeur cost?",
+          "a": "Events are usually booked as hourly hire, from £50 per hour in a Mercedes E-Class and from £75 per hour in an S-Class or a V-Class, with a four-hour minimum. We confirm the price before you book."
+        },
+        {
+          "q": "How far ahead should I book for a major event?",
+          "a": "As early as you can. Demand for chauffeur-driven cars rises sharply around the big dates of the summer season. You can change or cancel free of charge up to 24 hours before your booking."
+        },
+        {
+          "q": "Can you take a group to an event?",
+          "a": "Yes. A Mercedes V-Class seats up to seven passengers, and for larger parties we send several vehicles that travel together and work to one schedule."
+        },
+        {
+          "q": "Where will we be dropped off and collected?",
+          "a": "As close to your entrance as the venue’s traffic arrangements allow. Large venues often set specific points for chauffeur vehicles on event days; we follow the current plan and agree a collection point with you in advance."
+        }
+      ],
       "breadcrumbHome": "Home",
       "breadcrumbServices": "Services",
       "breadcrumbEvent": "Event Transport",
@@ -1429,6 +1520,33 @@
       "ctaQuote": "Event Quote"
     },
     "ukEuropePage": {
+      "faqTitle": "Long-Distance Chauffeur: Common Questions",
+      "faq": [
+        {
+          "q": "How is a long-distance journey priced?",
+          "a": "We give you one fixed price before you book, based on the route, the vehicle and whether the chauffeur waits or returns for you. There is nothing to work out per mile on the day."
+        },
+        {
+          "q": "Can the chauffeur wait and bring me back the same day?",
+          "a": "Yes. For day trips and business visits the same chauffeur waits at your destination and drives you home. For longer stays we can arrange a separate return journey or keep the car with you for several days."
+        },
+        {
+          "q": "Do you drive to Europe?",
+          "a": "Yes. We drive clients from London to Paris, Brussels, Amsterdam and other European cities on request. Every passenger needs a valid passport, and any visas required are the passenger’s own responsibility."
+        },
+        {
+          "q": "Can we stop on the way?",
+          "a": "Of course. Comfort breaks, lunch stops and short detours are part of travelling by chauffeur. Tell us about planned stops when you book so we can allow for them in the timings and the price."
+        },
+        {
+          "q": "Which car is best for a long journey?",
+          "a": "The Mercedes S-Class is the most comfortable choice for up to three passengers. The V-Class seats up to seven and has extra luggage space, which suits families and groups. The E-Class is a good option for one or two business travellers."
+        },
+        {
+          "q": "How much notice do you need for a long-distance booking?",
+          "a": "We recommend at least 24 hours, and more for multi-day trips and journeys to Europe, which need extra planning. Changes and cancellations are free up to 24 hours before travel."
+        }
+      ],
       "breadcrumbHome": "Home",
       "breadcrumbServices": "Services",
       "breadcrumbUkEurope": "UK & Europe Travel",
@@ -2212,6 +2330,7 @@
     "nextPage": "Next"
   },
   "airportTransfersPage": {
+    "viewAirport": "{airport}: prices and details",
     "breadcrumbHome": "Home",
     "breadcrumbServices": "Services",
     "breadcrumbAirportTransfers": "Airport Transfers",

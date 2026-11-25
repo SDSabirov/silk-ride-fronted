@@ -134,6 +134,23 @@
       </div>
     </section>
 
+    <!-- FAQ Section -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-screen-2xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-12">{{ $t('seo.eventPage.faqTitle') }}</h2>
+
+        <div class="max-w-4xl mx-auto space-y-6">
+          <div v-for="(item, index) in faqItems" :key="index" class="bg-white p-6 rounded-lg shadow">
+            <h3 class="text-xl font-semibold mb-3">{{ item.q }}</h3>
+            <p class="text-gray-600">{{ item.a }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cluster guides that belong to this pillar page -->
+    <ClusterHub section="event-chauffeur" />
+
     <!-- CTA Section -->
     <section class="bg-gray-50 py-16">
       <div class="max-w-screen-2xl mx-auto px-6 text-center">
@@ -169,7 +186,7 @@ import { computed } from 'vue'
 const heroImage = '/images/womanpassenger.webp'
 const serviceImage = '/images/womanpassenger.webp'
 
-const { t, locale } = useI18n()
+const { t, te, locale } = useI18n()
 const localePath = useLocalePath()
 
 const seo = useSeo('eventChauffeur')
@@ -207,6 +224,16 @@ const features = [
   { icon: 'bx bx-shield' },
 ]
 
+const faqItems = computed(() => {
+  const items = []
+  for (let i = 0; i < 12; i++) {
+    const qKey = `seo.eventPage.faq[${i}].q`
+    if (!te(qKey)) break
+    items.push({ q: t(qKey), a: t(`seo.eventPage.faq[${i}].a`) })
+  }
+  return items
+})
+
 // Structured data: a Service offered by the site-wide business identity
 // (declared once in nuxt.config.ts → schemaOrg.identity).
 useSchemaOrg([
@@ -219,5 +246,6 @@ useSchemaOrg([
     areaServed: [{ type: 'City', name: 'London' }, { type: 'Country', name: 'United Kingdom' }],
     image: '/images/womanpassenger.webp',
   }),
+  faqSchema(faqItems.value.map((f) => ({ question: f.q, answer: f.a })), '/services/event-chauffeur', locale.value),
 ])
 </script>

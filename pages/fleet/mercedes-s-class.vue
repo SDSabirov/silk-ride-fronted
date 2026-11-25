@@ -70,15 +70,32 @@ const weddingImg = "/images/covers/wedding.webp"
 const aboutUsImg = "/images/covers/about-us.webp"
 import { useI18n } from '#imports';
 import { useSeo } from '~/utils/useSeo'
+import { serviceSchema } from '~/utils/siteSchema'
+import { PRICING } from '~/config/pricing'
 
-const { t } = useI18n()
-useSeo('sClass')
+const { t, locale } = useI18n()
+const seo = useSeo('sClass')
+
+// Structured data: hiring this car with a chauffeur, priced from the hourly
+// rate in config/pricing.ts (single source of truth for prices).
+useSchemaOrg([
+  serviceSchema({
+    path: '/fleet/mercedes-s-class',
+    locale: locale.value,
+    name: seo.title,
+    description: seo.description,
+    serviceType: 'Chauffeur-driven car hire',
+    areaServed: [{ type: 'City', name: 'London' }, { type: 'Country', name: 'United Kingdom' }],
+    priceFrom: PRICING.hourly.sClass,
+    priceUnit: 'per hour',
+  }),
+])
 
 const SClass = {
   passengers: 3,
   cabinLuggage: 3,
   mediumLuggage: 2,
-  hourlyRate: 75,
+  hourlyRate: PRICING.hourly.sClass,
   minHours: 4,
 };
 
