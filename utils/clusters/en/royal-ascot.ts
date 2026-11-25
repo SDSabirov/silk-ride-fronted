@@ -7,7 +7,7 @@ const guide: ClusterGuide = {
   seo: {
     title: 'Royal Ascot Chauffeur Service from London',
     description:
-      'Chauffeur-driven travel to Royal Ascot from London in a Mercedes S-Class or V-Class. Your driver stays for the day. Hourly hire from £50, 4-hour minimum.',
+      'Chauffeur-driven travel to Royal Ascot from London in a Mercedes E-Class, S-Class or V-Class. Your driver stays all day. Hourly hire from £50, 4-hour minimum.',
   },
   kicker: 'Event Chauffeur · Royal Ascot',
   hero: {
