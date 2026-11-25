@@ -424,60 +424,28 @@
 <script setup>
 import { useI18n, useLocalePath } from '#imports'
 
-const { t } = useI18n()
+const { t, locale } = useI18n()
 const localePath = useLocalePath()
 
 const breadcrumbs = computed(() => [
   { name: t('airportPages.common.breadcrumbHome'), path: '/' },
-  { name: t('airportPages.common.breadcrumbAirportTransfers'), path: '/airport-transfers' },
+  { name: t('airportPages.common.breadcrumbAirportTransfers'), path: '/services/airport-transfers' },
   { name: 'Luton', path: '/airport-transfers/luton' },
 ])
 
-useSeo('lutonChauffeur')
+const seo = useSeo('lutonChauffeur')
 
-// Structured Data for Local Business
+// Structured data: this page's airport transfer Service, provided by the
+// site-wide business identity (nuxt.config.ts → schemaOrg.identity).
 useSchemaOrg([
-  defineLocalBusiness({
-    name: 'Silk Ride Luton Chauffeur Service',
-    description: 'Premium luxury chauffeur service for Luton Airport transfers with professional shuttle coordination and luxury Mercedes vehicles.',
-    image: [
-      'https://silkride.co.uk/logo.svg',
-      'https://silkride.co.uk/vclassSide.webp',
-      'https://silkride.co.uk/sclassSide.webp',
-      'https://silkride.co.uk/eclassSide.webp'
-    ],
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: 'London',
-      addressCountry: 'GB'
-    },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: 51.8763,
-      longitude: -0.3717
-    },
-    telephone: '+44 203 488 2324',
-    url: 'https://silkride.co.uk/airport-transfers/luton',
-    areaServed: [
-      {
-        '@type': 'Place',
-        name: 'Luton Airport'
-      },
-      {
-        '@type': 'City',
-        name: 'London'
-      },
-      {
-        '@type': 'AdministrativeArea',
-        name: 'Bedfordshire'
-      },
-      {
-        '@type': 'AdministrativeArea',
-        name: 'Hertfordshire'
-      }
-    ],
-    serviceType: 'Airport Transfer Service',
-    priceRange: '£££'
-  })
+  serviceSchema({
+    path: '/airport-transfers/luton',
+    locale: locale.value,
+    name: seo.title,
+    description: seo.description,
+    serviceType: 'Airport transfer',
+    areaServed: [{ type: 'Airport', name: 'Luton Airport' }, { type: 'City', name: 'London' }, { type: 'AdministrativeArea', name: 'Bedfordshire' }, { type: 'AdministrativeArea', name: 'Hertfordshire' }],
+    priceFrom: 200,
+  }),
 ])
 </script>

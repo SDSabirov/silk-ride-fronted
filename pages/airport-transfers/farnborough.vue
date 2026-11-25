@@ -353,48 +353,28 @@
 <script setup>
 import { useI18n, useLocalePath } from '#imports'
 
-const { t } = useI18n()
+const { t, locale } = useI18n()
 const localePath = useLocalePath()
 
 const breadcrumbs = computed(() => [
   { name: t('airportPages.common.breadcrumbHome'), path: '/' },
-  { name: t('airportPages.common.breadcrumbAirportTransfers'), path: '/airport-transfers' },
+  { name: t('airportPages.common.breadcrumbAirportTransfers'), path: '/services/airport-transfers' },
   { name: 'Farnborough', path: '/airport-transfers/farnborough' },
 ])
 
-useSeo('farnboroughChauffeur')
+const seo = useSeo('farnboroughChauffeur')
 
+// Structured data: this page's airport transfer Service, provided by the
+// site-wide business identity (nuxt.config.ts → schemaOrg.identity).
 useSchemaOrg([
-  defineLocalBusiness({
-    name: 'Silk Ride Farnborough Private Jet Chauffeur Service',
-    description: 'Premium executive chauffeur service for TAG Farnborough Airport. Luxury Mercedes transfers for private jet and business aviation clients.',
-    image: [
-      'https://silkride.co.uk/logo.svg',
-      'https://silkride.co.uk/vclassSide.webp',
-      'https://silkride.co.uk/sclassSide.webp',
-      'https://silkride.co.uk/eclassSide.webp'
-    ],
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: 'Farnborough',
-      addressRegion: 'Hampshire',
-      addressCountry: 'GB'
-    },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: 51.2757,
-      longitude: -0.7764
-    },
-    telephone: '+44 203 488 2324',
-    url: 'https://silkride.co.uk/airport-transfers/farnborough',
-    areaServed: [
-      { '@type': 'Place', name: 'TAG Farnborough Airport' },
-      { '@type': 'City', name: 'London' },
-      { '@type': 'Place', name: 'Hampshire' },
-      { '@type': 'Place', name: 'Surrey' }
-    ],
-    serviceType: 'Private Jet Airport Transfer Service',
-    priceRange: '££££'
-  })
+  serviceSchema({
+    path: '/airport-transfers/farnborough',
+    locale: locale.value,
+    name: seo.title,
+    description: seo.description,
+    serviceType: 'Airport transfer',
+    areaServed: [{ type: 'Airport', name: 'Farnborough Airport' }, { type: 'City', name: 'London' }, { type: 'Place', name: 'Hampshire' }, { type: 'Place', name: 'Surrey' }],
+    priceFrom: 240,
+  }),
 ])
 </script>

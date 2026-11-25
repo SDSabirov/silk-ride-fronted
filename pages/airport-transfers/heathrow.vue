@@ -311,7 +311,7 @@
 <script setup>
 import { useI18n, useLocalePath } from '#imports'
 
-const { t, tm, rt } = useI18n()
+const { t, tm, rt, locale } = useI18n()
 const localePath = useLocalePath()
 
 // i18n array messages need tm() + rt(); t() would return the key itself
@@ -323,7 +323,7 @@ const toList = (key) => {
 
 const breadcrumbs = computed(() => [
   { name: t('airportPages.common.breadcrumbHome'), path: '/' },
-  { name: t('airportPages.common.breadcrumbAirportTransfers'), path: '/airport-transfers' },
+  { name: t('airportPages.common.breadcrumbAirportTransfers'), path: '/services/airport-transfers' },
   { name: 'Heathrow', path: '/airport-transfers/heathrow' },
 ])
 
@@ -345,36 +345,19 @@ const routes = computed(() => [
   { name: t('airportPages.heathrow.routes.oxford.name'), time: t('airportPages.heathrow.routes.oxford.time'), desc: t('airportPages.heathrow.routes.oxford.desc') },
 ])
 
-useSeo('heathrowChauffeur')
+const seo = useSeo('heathrowChauffeur')
 
+// Structured data: this page's airport transfer Service, provided by the
+// site-wide business identity (nuxt.config.ts → schemaOrg.identity).
 useSchemaOrg([
-  defineLocalBusiness({
-    name: 'Silk Ride Heathrow Chauffeur Service',
-    description: 'Premium luxury chauffeur service for Heathrow Airport transfers with professional drivers and luxury Mercedes vehicles.',
-    image: [
-      'https://silkride.co.uk/logo.svg',
-      'https://silkride.co.uk/vclassSide.webp',
-      'https://silkride.co.uk/sclassSide.webp',
-      'https://silkride.co.uk/eclassSide.webp'
-    ],
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: 'London',
-      addressCountry: 'GB'
-    },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: 51.4700,
-      longitude: -0.4543
-    },
-    telephone: '+44 203 488 2324',
-    url: 'https://silkride.co.uk/airport-transfers/heathrow',
-    areaServed: [
-      { '@type': 'Place', name: 'Heathrow Airport' },
-      { '@type': 'City', name: 'London' }
-    ],
-    serviceType: 'Airport Transfer Service',
-    priceRange: '£££'
-  })
+  serviceSchema({
+    path: '/airport-transfers/heathrow',
+    locale: locale.value,
+    name: seo.title,
+    description: seo.description,
+    serviceType: 'Airport transfer',
+    areaServed: [{ type: 'Airport', name: 'Heathrow Airport' }, { type: 'City', name: 'London' }],
+    priceFrom: 120,
+  }),
 ])
 </script>

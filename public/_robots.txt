@@ -4,16 +4,13 @@
 User-agent: *
 Allow: /
 
-# Disallow non-public pages
+# Non-public pages
 Disallow: /booking/cancel
 Disallow: /booking/success
 Disallow: /customer
 Disallow: /api/
-Allow: /blog/
 
-# Disallow utility pages
-Disallow: /_nuxt/
-Disallow: /__nuxt_error
+# NOTE: do not disallow /_nuxt/ — Googlebot needs the CSS/JS bundles to render
+# pages; blocking them makes pages look broken to the renderer.
 
-# Sitemap locations
-Sitemap: https://silkride.co.uk/sitemap.xml
+Sitemap: https://silkride.co.uk/sitemap_index.xml

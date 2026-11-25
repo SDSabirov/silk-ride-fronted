@@ -7,92 +7,48 @@
               <CommonBreadcrumbs :items="breadcrumbs" />
             </div>
 
-            <FaqSection :items="faqs" />
+            <FaqSection :items="faqs">
+              <template #title>
+                <div class="text-center mb-12">
+                  <h1 class="text-4xl md:text-5xl font-heading font-bold text-black mb-4">{{ $t('faq.title') }}</h1>
+                  <div class="w-24 h-1 bg-gold mx-auto mb-6"></div>
+                  <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    {{ $t('faq.subtitle') }}
+                  </p>
+                </div>
+              </template>
+            </FaqSection>
         </div>
         
         <Footer />
     </div>
 </template>
 <script setup>
-import { useI18n }  from 'vue-i18n'
-import { useHead }  from '#imports'
+import { useI18n } from 'vue-i18n'
 import { computed } from 'vue'
+import { useSeo } from '~/utils/useSeo'
+import { faqSchema } from '~/utils/siteSchema'
 
-const { t, te } = useI18n()
+const { t, te, locale } = useI18n()
+
+// Title, description, canonical, hreflang and social tags
+useSeo('faq')
 
 const breadcrumbs = computed(() => [
   { name: t('faq.breadcrumbHome'), path: '/' },
   { name: t('faq.breadcrumbFaq'), path: '/faq' },
 ])
 
-// 1) Build FAQs array
 const faqs = computed(() => {
   const arr = []
   for (let i = 0; ; i++) {
     const qKey = `faq.items[${i}].question`
     const aKey = `faq.items[${i}].answer`
     if (!te(qKey) || !te(aKey)) break
-    arr.push({
-      question: t(qKey),
-      answer:   t(aKey),
-      id:       `https://silkride.co.uk/faq/#question${i+1}`
-    })
+    arr.push({ question: t(qKey), answer: t(aKey) })
   }
   return arr
 })
 
-// 2) Build unified JSON-LD @graph
-const jsonLd = computed(() => ({
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "WebSite",
-      "@id":   "https://silkride.co.uk/#website",
-      url:     "https://silkride.co.uk/",
-      name:    "Silk Ride Chauffeur Services"
-    },
-    {
-      "@type":       "WebPage",
-      "@id":         "https://silkride.co.uk/faq/#webpage",
-      url:           "https://silkride.co.uk/faq",
-      name:          t('seo.faq.title'),
-      description:   t('seo.faq.description'),
-      isPartOf:      { "@id": "https://silkride.co.uk/#website" },
-      inLanguage:    "en",
-      mainEntity:    { "@id": "https://silkride.co.uk/faq/#faq" }
-    },
-    {
-      "@type":     "FAQPage",
-      "@id":       "https://silkride.co.uk/faq/#faq",
-      mainEntity: faqs.value.map(faq => ({
-        "@type":          "Question",
-        "@id":            faq.id,
-        name:             faq.question,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text:    faq.answer
-        }
-      }))
-    }
-  ]
-}))
-
-useHead({
-  title: t('seo.faq.title'),
-  meta: [
-    { name: 'description', content: t('seo.faq.description') }
-  ]
-})
-
-// 3) Let Unhead emit the FAQPage + Question JSON-LD for you
-useSchemaOrg([
-  defineWebPage({ '@type': 'FAQPage' }),
-  // map each localised FAQ into a defineQuestion node
-  ...faqs.value.map(faq =>
-    defineQuestion({
-      name: faq.question,
-      acceptedAnswer: faq.answer
-    })
-  )
-])
+useSchemaOrg([faqSchema(faqs.value, '/faq', locale.value)])
 </script>

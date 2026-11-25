@@ -1,6 +1,9 @@
 import { urlFor } from './sanityImage'
+import { IDENTITY_ID, DEFAULT_OG_IMAGE, localizedUrl } from './siteSchema'
 
-const SITE_URL = 'https://silkride.co.uk'
+// The publisher is the site-wide business identity (nuxt.config.ts →
+// schemaOrg.identity), referenced by @id rather than redefined per post.
+const PUBLISHER = { '@id': IDENTITY_ID }
 
 interface BlogPost {
   title: string
@@ -8,6 +11,7 @@ interface BlogPost {
   mainImage?: any
   slug: { current: string }
   publishedAt?: string
+  _updatedAt?: string
   author?: { name: string; image?: any }
   body?: any[]
   postType?: string
@@ -19,7 +23,8 @@ interface BlogPost {
   }
 }
 
-export function articleSchema(post: BlogPost) {
+export function articleSchema(post: BlogPost, locale = 'en') {
+  const url = localizedUrl(`/blog/${post.slug.current}`, locale)
   return {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -27,30 +32,23 @@ export function articleSchema(post: BlogPost) {
     description: post.excerpt || '',
     image: post.mainImage
       ? urlFor(post.mainImage).width(1200).height(630).format('webp').url()
-      : `${SITE_URL}/og-image.jpg`,
-    datePublished: post.publishedAt || '',
-    dateModified: post.publishedAt || '',
-    url: `${SITE_URL}/blog/${post.slug.current}`,
-    author: {
-      '@type': 'Person',
-      name: post.author?.name || 'Silk Ride Team',
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: 'Silk Ride Ltd',
-      logo: {
-        '@type': 'ImageObject',
-        url: `${SITE_URL}/logo.png`,
-      },
-    },
+      : DEFAULT_OG_IMAGE,
+    ...(post.publishedAt ? { datePublished: post.publishedAt } : {}),
+    ...(post._updatedAt || post.publishedAt ? { dateModified: post._updatedAt || post.publishedAt } : {}),
+    inLanguage: locale === 'ru' ? 'ru-RU' : 'en-GB',
+    url,
+    author: post.author?.name
+      ? { '@type': 'Person', name: post.author.name }
+      : PUBLISHER,
+    publisher: PUBLISHER,
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `${SITE_URL}/blog/${post.slug.current}`,
+      '@id': url,
     },
   }
 }
 
-export function eventSchema(post: BlogPost) {
+export function eventSchema(post: BlogPost, locale = 'en') {
   const event = post.event
   if (!event) return null
 
@@ -63,36 +61,25 @@ export function eventSchema(post: BlogPost) {
     endDate: event.eventEndDate || event.eventDate || '',
     image: post.mainImage
       ? urlFor(post.mainImage).width(1200).height(630).format('webp').url()
-      : `${SITE_URL}/og-image.jpg`,
-    url: event.eventUrl || `${SITE_URL}/blog/${post.slug.current}`,
+      : DEFAULT_OG_IMAGE,
+    url: event.eventUrl || localizedUrl(`/blog/${post.slug.current}`, locale),
     location: event.venue
       ? {
           '@type': 'Place',
           name: event.venue,
         }
       : undefined,
-    organizer: {
-      '@type': 'Organization',
-      name: 'Silk Ride Ltd',
-      url: SITE_URL,
-    },
+    organizer: PUBLISHER,
   }
 }
 
-export function blogListingSchema() {
+export function blogListingSchema(locale = 'en') {
   return {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
     name: 'Silk Ride Blog',
     description: 'Luxury chauffeur travel tips, guides, and insights from Silk Ride.',
-    url: `${SITE_URL}/blog`,
-    publisher: {
-      '@type': 'Organization',
-      name: 'Silk Ride Ltd',
-      logo: {
-        '@type': 'ImageObject',
-        url: `${SITE_URL}/logo.png`,
-      },
-    },
+    url: localizedUrl('/blog', locale),
+    publisher: PUBLISHER,
   }
 }

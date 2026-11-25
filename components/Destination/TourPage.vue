@@ -356,6 +356,7 @@ import { ref } from 'vue'
 import { useLocalePath, useI18n } from '#imports'
 import { PHONE_DISPLAY, PHONE_HREF, HERO_FALLBACK_IMAGE, getRelatedDestinations } from '~/utils/destinations'
 import { useSeo } from '~/utils/useSeo'
+import { serviceSchema, faqSchema, localizedUrl, absoluteUrl } from '~/utils/siteSchema'
 
 const props = defineProps({
   destination: { type: Object, required: true },
@@ -365,10 +366,9 @@ const d = props.destination
 const localePath = useLocalePath()
 const { t, locale } = useI18n()
 
-const SITE_URL = 'https://silkride.co.uk'
 const bookingPath = localePath('/booking')
-const pageUrl = `${SITE_URL}/destination-tours/${d.slug}`
-const absImage = (path) => (path.startsWith('http') ? path : `${SITE_URL}${path}`)
+const pageUrl = localizedUrl(`/destination-tours/${d.slug}`, locale.value)
+const absImage = absoluteUrl
 
 // Hero image: fall back to a known-good asset if the per-destination photo
 // has not been added to /public/images/covers yet.
@@ -398,34 +398,19 @@ const breadcrumbs = [
 ]
 
 // --- SEO ---------------------------------------------------------------
-useSeo(d.seoKey, { image: d.hero.ogImage })
+const seo = useSeo(d.seoKey, { image: d.hero.ogImage })
 
 // --- Structured data ---------------------------------------------------
 const schemaBlocks = [
-  defineLocalBusiness({
-    name: `Silk Ride ${d.name} Chauffeur Service`,
+  serviceSchema({
+    path: `/destination-tours/${d.slug}`,
+    locale: locale.value,
+    name: seo.title,
     description: d.schema.description,
-    image: [
-      `${SITE_URL}/logo.svg`,
-      `${SITE_URL}/vclassSide.webp`,
-      `${SITE_URL}/sclassSide.webp`,
-      `${SITE_URL}/eclassSide.webp`,
-    ],
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: 'London',
-      addressCountry: 'GB',
-    },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: d.schema.geo.lat,
-      longitude: d.schema.geo.lng,
-    },
-    telephone: PHONE_DISPLAY,
-    url: pageUrl,
-    areaServed: d.schema.areaServed.map((a) => ({ '@type': a.type, name: a.name })),
-    serviceType: 'Chauffeur Service and Private Tours',
-    priceRange: '£££',
+    serviceType: 'Private chauffeur day tour',
+    areaServed: d.schema.areaServed.map((a) => ({ type: a.type, name: a.name })),
+    image: d.hero.ogImage,
+    priceFrom: d.pricing.withoutGuide,
   }),
 ]
 
@@ -455,9 +440,12 @@ if (d.schema.attraction) {
   })
 }
 
+// Kept as a Product so the two per-vehicle price tiers stay eligible for price
+// display in search results.
 schemaBlocks.push({
   '@type': 'Product',
-  name: `${d.name} Private Chauffeur Tour from London`,
+  '@id': `${pageUrl}#product`,
+  name: seo.title,
   description: d.schema.description,
   image: absImage(d.hero.ogImage),
   brand: { '@type': 'Brand', name: 'Silk Ride' },
@@ -472,17 +460,7 @@ schemaBlocks.push({
   },
 })
 
-schemaBlocks.push({
-  '@type': 'FAQPage',
-  mainEntity: d.faqs.map((q) => ({
-    '@type': 'Question',
-    name: q.question,
-    acceptedAnswer: {
-      '@type': 'Answer',
-      text: q.answer.replace(/<[^>]+>/g, ''),
-    },
-  })),
-})
+schemaBlocks.push(faqSchema(d.faqs, `/destination-tours/${d.slug}`, locale.value))
 
 useSchemaOrg(schemaBlocks)
 </script>

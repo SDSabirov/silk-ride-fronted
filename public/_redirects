@@ -3,17 +3,32 @@
 # Syntax: <from> <to> <status>
 #   - 301 = permanent
 #   - 301! (with !) forces the redirect even if a static file exists at the path
-# Replaces server/middleware/www-redirect.ts and nitro.routeRules entries.
+# Every rule goes straight to its final destination (no redirect chains).
+# Nitro appends the nitro.routeRules redirects from nuxt.config.ts below these.
 
 # www → apex
 https://www.silkride.co.uk/*  https://silkride.co.uk/:splat  301!
 
 # Moved/renamed pages (fixes GSC 404s)
-/booking/customer       /customer   301
-/booking/customer/      /customer   301
-/our-partners           /partners   301
-/our-partners/          /partners   301
-/testimonials           /           301
-/testimonials/          /           301
-/Luxury                 /           301
-/Luxury/                /           301
+/booking/customer        /booking       301
+/booking/customer/       /booking       301
+/customer                /booking       301
+/customer/               /booking       301
+/our-partners            /partners      301
+/our-partners/           /partners      301
+/testimonials            /              301
+/testimonials/           /              301
+/Luxury                  /              301
+/Luxury/                 /              301
+
+# Same legacy paths under the Russian prefix
+/ru/booking/customer     /ru/booking    301
+/ru/booking/customer/    /ru/booking    301
+/ru/customer             /ru/booking    301
+/ru/customer/            /ru/booking    301
+/ru/our-partners         /ru/partners   301
+/ru/our-partners/        /ru/partners   301
+/ru/testimonials         /ru            301
+/ru/testimonials/        /ru            301
+/ru/Luxury               /ru            301
+/ru/Luxury/              /ru            301

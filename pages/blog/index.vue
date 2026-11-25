@@ -66,7 +66,7 @@ useHead({
   script: [
     {
       type: 'application/ld+json',
-      innerHTML: JSON.stringify(blogListingSchema()),
+      innerHTML: JSON.stringify(blogListingSchema(locale.value)),
     },
   ],
 })

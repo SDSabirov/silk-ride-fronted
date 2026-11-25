@@ -61,7 +61,7 @@
             <!-- Call to Action -->
             <div class="text-center">
               <NuxtLink
-                to="/booking"
+                :to="$localePath('/booking')"
                 class="inline-flex items-center px-10 py-5 bg-gradient-to-r from-gold to-yellow-400 text-black text-xl font-bold rounded-2xl hover:from-yellow-400 hover:to-gold transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-gold/50"
               >
                 <i class="bx bx-calendar-check mr-3 text-2xl"></i>

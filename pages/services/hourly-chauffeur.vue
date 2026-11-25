@@ -201,15 +201,17 @@
 
 <script setup>
 import { useSeo } from '~/utils/useSeo'
+import { serviceSchema, faqSchema } from '~/utils/siteSchema'
+import { PRICING } from '~/config/pricing'
 import { useLocalePath, useI18n } from '#imports'
 import { computed } from 'vue'
 const heroImage = '/images/covers/about-us.webp'
 const serviceImage = '/images/covers/about-us.webp'
 
-const { t } = useI18n()
+const { t, locale } = useI18n()
 const localePath = useLocalePath()
 
-useSeo('hourlyChauffeur')
+const seo = useSeo('hourlyChauffeur')
 
 const breadcrumbs = computed(() => [
   { name: t('seo.hourlyPage.breadcrumbHome'), path: '/' },
@@ -228,33 +230,19 @@ const serviceBullets = computed(() => {
   return bullets
 })
 
-const hourlyChauffeurSchema = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "Hourly Chauffeur Service",
-  "provider": {
-    "@type": "LocalBusiness",
-    "name": "Silk Ride Chauffeur Services",
-    "url": "https://silkride.co.uk",
-    "telephone": "+44 203 488 2324",
-    "image": [
-      "https://silkride.co.uk/logo.svg",
-      "https://silkride.co.uk/vclassSide.webp",
-      "https://silkride.co.uk/sclassSide.webp",
-      "https://silkride.co.uk/eclassSide.webp"
-    ]
-  },
-  "serviceType": "Hourly Chauffeur Hire",
-  "areaServed": ["London", "United Kingdom"],
-  "description": "Flexible hourly chauffeur service for business meetings, sightseeing, shopping, and special occasions. Minimum 4 hours booking with luxury Mercedes vehicles."
-}
-
-useHead({
-  script: [
-    {
-      type: 'application/ld+json',
-      children: JSON.stringify(hourlyChauffeurSchema)
-    }
-  ]
-})
+// Structured data: a Service offered by the site-wide business identity
+// (declared once in nuxt.config.ts → schemaOrg.identity).
+useSchemaOrg([
+  serviceSchema({
+    path: '/services/hourly-chauffeur',
+    locale: locale.value,
+    name: seo.title,
+    description: seo.description,
+    serviceType: 'Hourly chauffeur hire',
+    areaServed: [{ type: 'City', name: 'London' }, { type: 'Country', name: 'United Kingdom' }],
+    image: '/images/eclass.webp',
+    priceFrom: PRICING.hourly.eClass,
+    priceUnit: 'per hour',
+  }),
+])
 </script>

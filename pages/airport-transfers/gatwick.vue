@@ -330,12 +330,12 @@
 <script setup>
 import { useI18n, useLocalePath } from '#imports'
 
-const { t } = useI18n()
+const { t, locale } = useI18n()
 const localePath = useLocalePath()
 
 const breadcrumbs = computed(() => [
   { name: t('airportPages.common.breadcrumbHome'), path: '/' },
-  { name: t('airportPages.common.breadcrumbAirportTransfers'), path: '/airport-transfers' },
+  { name: t('airportPages.common.breadcrumbAirportTransfers'), path: '/services/airport-transfers' },
   { name: 'Gatwick', path: '/airport-transfers/gatwick' },
 ])
 
@@ -379,47 +379,19 @@ const routes = computed(() => [
   { name: t('airportPages.gatwick.routes.surrey.name'), time: t('airportPages.gatwick.routes.surrey.time'), desc: t('airportPages.gatwick.routes.surrey.desc') },
 ])
 
-useSeo('gatwickChauffeur')
+const seo = useSeo('gatwickChauffeur')
 
-// Structured Data for Local Business
+// Structured data: this page's airport transfer Service, provided by the
+// site-wide business identity (nuxt.config.ts → schemaOrg.identity).
 useSchemaOrg([
-  defineLocalBusiness({
-    name: 'Silk Ride Gatwick Chauffeur Service',
-    description: 'Premium luxury chauffeur service for Gatwick Airport transfers covering North & South terminals with professional drivers.',
-    image: [
-      'https://silkride.co.uk/logo.svg',
-      'https://silkride.co.uk/vclassSide.webp',
-      'https://silkride.co.uk/sclassSide.webp',
-      'https://silkride.co.uk/eclassSide.webp'
-    ],
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: 'London',
-      addressCountry: 'GB'
-    },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: 51.1481,
-      longitude: -0.1903
-    },
-    telephone: '+44 203 488 2324',
-    url: 'https://silkride.co.uk/airport-transfers/gatwick',
-    areaServed: [
-      {
-        '@type': 'Place',
-        name: 'Gatwick Airport'
-      },
-      {
-        '@type': 'City',
-        name: 'London'
-      },
-      {
-        '@type': 'City',
-        name: 'Brighton'
-      }
-    ],
-    serviceType: 'Airport Transfer Service',
-    priceRange: '£££'
-  })
+  serviceSchema({
+    path: '/airport-transfers/gatwick',
+    locale: locale.value,
+    name: seo.title,
+    description: seo.description,
+    serviceType: 'Airport transfer',
+    areaServed: [{ type: 'Airport', name: 'Gatwick Airport' }, { type: 'City', name: 'London' }, { type: 'City', name: 'Brighton' }],
+    priceFrom: 180,
+  }),
 ])
 </script>

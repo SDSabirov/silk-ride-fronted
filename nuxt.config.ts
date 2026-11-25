@@ -37,6 +37,17 @@ for (const post of blogPosts) {
   else blogPrerenderRoutes.push(`/blog/${post.slug}`)
 }
 
+// Section roots that only exist as URL prefixes for cluster pages.
+const SECTION_ROOT_REDIRECTS: Record<string, string> = {
+  '/airport-transfers': '/services/airport-transfers',
+  '/cruise-transfers': '/services/airport-transfers',
+  '/event-chauffeur': '/services/event-chauffeur',
+  '/corporate-chauffeur': '/services/corporate-travel',
+  '/hourly-chauffeur': '/services/hourly-chauffeur',
+  '/long-distance-chauffeur': '/services/uk-europe-travel',
+  '/wedding-cars': '/services/wedding-chauffeur',
+}
+
 export default defineNuxtConfig({
   compatibilityDate: "2026-03-18",
   srcDir: '.',
@@ -69,8 +80,17 @@ export default defineNuxtConfig({
         '/robots.txt',
         ...blogPrerenderRoutes,
       ],
-      // /api/** is served by the Cloudflare Pages Functions runtime (Workers)
-      ignore: ['/api/**'],
+      // /api/** is served by the Cloudflare Pages Functions runtime (Workers).
+      // The legacy paths below are redirect-only (see public/_redirects); without
+      // this the i18n-prefixed variants (/ru/testimonials, /ru/Luxury, …) were
+      // prerendered as empty, indexable 200 pages (soft 404s).
+      ignore: [
+        '/api/**',
+        '/ru/testimonials',
+        '/ru/Luxury',
+        '/ru/our-partners',
+        '/ru/ru/**',
+      ],
       failOnError: false,
     },
     compressPublicAssets: true,
@@ -93,6 +113,14 @@ export default defineNuxtConfig({
       '/testimonials/': { redirect: { to: '/', statusCode: 301 } },
       '/Luxury': { redirect: { to: '/', statusCode: 301 } },
       '/Luxury/': { redirect: { to: '/', statusCode: 301 } },
+      // Cluster section roots have no index page — send them to their pillar.
+      // (/airport-transfers was linked from every airport page breadcrumb and 404'd.)
+      ...Object.fromEntries(
+        Object.entries(SECTION_ROOT_REDIRECTS).flatMap(([from, to]) => [
+          [from, { redirect: { to, statusCode: 301 } }],
+          [`/ru${from}`, { redirect: { to: `/ru${to}`, statusCode: 301 } }],
+        ])
+      ),
       // Trailing slash redirects handled globally by middleware/redirect-en.global.ts
     },
   },
@@ -170,6 +198,13 @@ export default defineNuxtConfig({
   ogImage: {
     enabled: false,
   },
+  seo: {
+    // nuxt-seo-utils injects the site-wide description (and og:type/og:url/
+    // og:site_name) at tagPriority 30 by default, which outranks every
+    // page-level useHead/useSeoMeta tag (weight 100) — so all pages shipped the
+    // same generic meta description. Demote the defaults to true fallbacks.
+    tagPriority: 110,
+  },
   gtag: {
     // Google Consent Mode v2 - Advanced Mode Implementation
     // Consent defaults are set via 00.consent-mode.client.ts plugin which runs BEFORE nuxt-gtag
@@ -242,9 +277,61 @@ export default defineNuxtConfig({
   },
   site: {
     url: 'https://silkride.co.uk',
-    name: 'Silk Ride Chauffeur Services',
-    description: 'Silk Ride Chauffeur Services offers premium airport transfers to Heathrow, Gatwick, Luton, Stansted & beyond, luxury business transport in Central London, wedding cars, and more.',
+    name: 'Silk Ride',
+    description: 'Silk Ride is a London chauffeur company offering airport transfers, corporate travel, wedding cars, event transport and private day tours in a Mercedes fleet.',
     defaultLocale: 'en',
+  },
+  // One business entity for the whole site (https://silkride.co.uk/#identity).
+  // Pages add Service / FAQPage / Product nodes that point back to it via
+  // utils/siteSchema.ts — they must NOT redefine the LocalBusiness.
+  schemaOrg: {
+    identity: {
+      type: 'LocalBusiness',
+      name: 'Silk Ride Chauffeur Services',
+      legalName: 'Silk Ride Ltd',
+      url: 'https://silkride.co.uk',
+      logo: 'https://silkride.co.uk/logo.svg',
+      image: [
+        'https://silkride.co.uk/og-image.jpg',
+        'https://silkride.co.uk/images/vclassSide.webp',
+        'https://silkride.co.uk/images/sclass.webp',
+        'https://silkride.co.uk/images/eclass.webp',
+      ],
+      description: 'London chauffeur company providing airport transfers, corporate travel, wedding cars, event transport, hourly hire and private day tours in a Mercedes E-Class, S-Class and V-Class fleet.',
+      telephone: '+44 203 488 2324',
+      email: 'info@silkride.co.uk',
+      priceRange: '£££',
+      currenciesAccepted: 'GBP',
+      address: {
+        streetAddress: '42 Watling Street, Centre 42',
+        addressLocality: 'Radlett',
+        addressRegion: 'Hertfordshire',
+        postalCode: 'WD7 7NN',
+        addressCountry: 'GB',
+      },
+      geo: {
+        '@type': 'GeoCoordinates',
+        latitude: 51.6879,
+        longitude: -0.3197,
+      },
+      areaServed: [
+        { '@type': 'City', name: 'London' },
+        { '@type': 'Country', name: 'United Kingdom' },
+      ],
+      openingHoursSpecification: [
+        {
+          '@type': 'OpeningHoursSpecification',
+          dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+          opens: '00:00',
+          closes: '23:59',
+        },
+      ],
+      hasMap: 'https://maps.app.goo.gl/jKFx8rtmUACaqVcF7',
+      sameAs: [
+        'https://www.instagram.com/silkrideofficial',
+        'https://www.linkedin.com/company/silk-ride',
+      ],
+    },
   },
   sitemap: {
     enabled: true,
@@ -255,7 +342,6 @@ export default defineNuxtConfig({
     defaults: {
       changefreq: 'weekly',
       priority: 0.8,
-      lastmod: new Date().toISOString()
     },
     urls: async () => {
       const staticUrls = [
@@ -287,7 +373,7 @@ export default defineNuxtConfig({
           loc: `/blog/${post.slug}`,
           priority: 0.7,
           changefreq: 'monthly',
-          lastmod: post.publishedAt || new Date().toISOString(),
+          ...(post.publishedAt ? { lastmod: post.publishedAt } : {}),
         }))
 
       return [...staticUrls, ...blogUrls]

@@ -11,7 +11,7 @@
     <div class="max-w-screen-2xl mx-auto px-6">
       <div class="flex items-center justify-between h-20 lg:h-24">
         <!-- Logo - Vertical Layout -->
-        <NuxtLink to="/" class="flex flex-col items-center group" aria-label="Go to home page">
+        <NuxtLink :to="$localePath('/')" class="flex flex-col items-center group" aria-label="Go to home page">
           <NuxtImg
             src="/logo.svg"
             alt="Silk Ride Logo"
@@ -234,7 +234,7 @@
       >
         <!-- Mobile Header -->
         <div class="flex items-center justify-between px-6 h-24 border-b border-white/10">
-          <NuxtLink to="/" class="flex flex-col items-center" @click="closeMobileMenu">
+          <NuxtLink :to="$localePath('/')" class="flex flex-col items-center" @click="closeMobileMenu">
             <NuxtImg src="/logo.svg" alt="Silk Ride Logo" class="h-12 w-12" width="48" height="48" />
             <span class="text-sm font-semibold text-gold tracking-widest mt-1">SILK RIDE</span>
           </NuxtLink>

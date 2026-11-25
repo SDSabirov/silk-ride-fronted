@@ -215,16 +215,17 @@
 
 <script setup>
 import { useSeo } from '~/utils/useSeo'
+import { serviceSchema, faqSchema } from '~/utils/siteSchema'
+import { PRICING } from '~/config/pricing'
 import { useLocalePath, useI18n } from '#imports'
 import { computed } from 'vue'
 const heroImage = '/images/vclassjett.webp'
 const serviceImage = '/images/vclassjett.webp'
-import { organizationSchema } from '~/utils/organizationSchema'
 
-const { t } = useI18n()
+const { t, locale } = useI18n()
 const localePath = useLocalePath()
 
-useSeo('airportTransfers')
+const seo = useSeo('airportTransfers')
 
 const breadcrumbs = computed(() => [
   { name: t('airportTransfersPage.breadcrumbHome'), path: '/' },
@@ -273,30 +274,19 @@ const faqs = computed(() => {
   return items
 })
 
-const airportTransfersSchema = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "Airport Transfer Service",
-  "provider": organizationSchema,
-  "serviceType": "Airport Transfer",
-  "areaServed": {
-    "@type": "City",
-    "name": "London"
-  },
-  "description": "Premium airport transfer service with luxury Mercedes vehicles and professional chauffeurs. Flight tracking, meet & greet service, and 60 minutes free waiting time included.",
-  "offers": {
-    "@type": "Offer",
-    "priceRange": "£120-£270",
-    "priceCurrency": "GBP"
-  }
-}
-
-useHead({
-  script: [
-    {
-      type: 'application/ld+json',
-      children: JSON.stringify(airportTransfersSchema)
-    }
-  ]
-})
+// Structured data: a Service offered by the site-wide business identity
+// (declared once in nuxt.config.ts → schemaOrg.identity).
+useSchemaOrg([
+  serviceSchema({
+    path: '/services/airport-transfers',
+    locale: locale.value,
+    name: seo.title,
+    description: seo.description,
+    serviceType: 'Airport transfer',
+    areaServed: [{ type: 'City', name: 'London' }, { type: 'Airport', name: 'Heathrow Airport' }, { type: 'Airport', name: 'Gatwick Airport' }, { type: 'Airport', name: 'Stansted Airport' }, { type: 'Airport', name: 'Luton Airport' }, { type: 'Airport', name: 'London City Airport' }],
+    image: '/images/vclassjett.webp',
+    priceFrom: PRICING.airportTransfers.heathrow.eClass,
+  }),
+  faqSchema(faqs.value.map((f) => ({ question: f.q, answer: f.a })), '/services/airport-transfers', locale.value),
+])
 </script>

@@ -127,15 +127,16 @@
 
 <script setup>
 import { useSeo } from '~/utils/useSeo'
+import { serviceSchema, faqSchema } from '~/utils/siteSchema'
 import { useLocalePath, useI18n } from '#imports'
 import { computed } from 'vue'
 const heroImage = '/images/covers/assist.webp'
 const serviceImage = '/images/covers/assist.webp'
 
-const { t } = useI18n()
+const { t, locale } = useI18n()
 const localePath = useLocalePath()
 
-useSeo('ukEuropeTravel')
+const seo = useSeo('ukEuropeTravel')
 
 const breadcrumbs = computed(() => [
   { name: t('seo.ukEuropePage.breadcrumbHome'), path: '/' },
@@ -167,50 +168,17 @@ const features = [
   { icon: 'bx bx-calendar' },
 ]
 
-const ukEuropeTravelSchema = {
-  "@context": "https://schema.org",
-  "@type": "TouristTrip",
-  "name": "UK & Europe Luxury Travel Service",
-  "provider": {
-    "@type": "LocalBusiness",
-    "name": "Silk Ride Chauffeur Services",
-    "url": "https://silkride.co.uk",
-    "telephone": "+44 203 488 2324",
-    "image": [
-      "https://silkride.co.uk/logo.svg",
-      "https://silkride.co.uk/vclassSide.webp",
-      "https://silkride.co.uk/sclassSide.webp",
-      "https://silkride.co.uk/eclassSide.webp"
-    ]
-  },
-  "touristType": "Luxury Traveler",
-  "itinerary": [
-    {
-      "@type": "Place",
-      "name": "The Cotswolds"
-    },
-    {
-      "@type": "Place",
-      "name": "Stonehenge"
-    },
-    {
-      "@type": "Place",
-      "name": "Paris"
-    },
-    {
-      "@type": "Place",
-      "name": "Amsterdam"
-    }
-  ],
-  "description": "Luxury long-distance chauffeur service for UK and European travel. Bespoke private tours, luxury road trips, and cross-border travel with professional chauffeurs."
-}
-
-useHead({
-  script: [
-    {
-      type: 'application/ld+json',
-      children: JSON.stringify(ukEuropeTravelSchema)
-    }
-  ]
-})
+// Structured data: a Service offered by the site-wide business identity
+// (declared once in nuxt.config.ts → schemaOrg.identity).
+useSchemaOrg([
+  serviceSchema({
+    path: '/services/uk-europe-travel',
+    locale: locale.value,
+    name: seo.title,
+    description: seo.description,
+    serviceType: 'Long-distance chauffeur service',
+    areaServed: [{ type: 'Country', name: 'United Kingdom' }, { type: 'Continent', name: 'Europe' }],
+    image: '/images/covers/assist.webp',
+  }),
+])
 </script>

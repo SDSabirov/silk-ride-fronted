@@ -34,7 +34,7 @@
     </div>
     <div v-if="showBookingButton" class="md:col-span-2 flex items-center justify-center mt-6">
       <NuxtLink
-        to="/booking"
+        :to="$localePath('/booking')"
         class="flex px-8 py-4 items-center justify-center border-2 border-black text-black text-xl font-medium hover:bg-gold hover:border-gold hover:text-black transform hover:scale-105 transition-all duration-300 rounded-md shadow-sm"
       >
         {{ $t('pages.common.bookNow') }}

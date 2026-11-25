@@ -163,15 +163,16 @@
 
 <script setup>
 import { useSeo } from '~/utils/useSeo'
+import { serviceSchema, faqSchema } from '~/utils/siteSchema'
 import { useLocalePath, useI18n } from '#imports'
 import { computed } from 'vue'
 const heroImage = '/images/womanpassenger.webp'
 const serviceImage = '/images/womanpassenger.webp'
 
-const { t } = useI18n()
+const { t, locale } = useI18n()
 const localePath = useLocalePath()
 
-useSeo('eventChauffeur')
+const seo = useSeo('eventChauffeur')
 
 const breadcrumbs = computed(() => [
   { name: t('seo.eventPage.breadcrumbHome'), path: '/' },
@@ -206,33 +207,17 @@ const features = [
   { icon: 'bx bx-shield' },
 ]
 
-const eventChauffeurSchema = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "Event Chauffeur Service",
-  "provider": {
-    "@type": "LocalBusiness",
-    "name": "Silk Ride Chauffeur Services",
-    "url": "https://silkride.co.uk",
-    "telephone": "+44 203 488 2324",
-    "image": [
-      "https://silkride.co.uk/logo.svg",
-      "https://silkride.co.uk/vclassSide.webp",
-      "https://silkride.co.uk/sclassSide.webp",
-      "https://silkride.co.uk/eclassSide.webp"
-    ]
-  },
-  "serviceType": "Event Transportation",
-  "areaServed": ["London", "United Kingdom"],
-  "description": "Luxury event chauffeur service for corporate events, concerts, sporting events, award ceremonies, and private parties. Professional drivers and premium Mercedes vehicles."
-}
-
-useHead({
-  script: [
-    {
-      type: 'application/ld+json',
-      children: JSON.stringify(eventChauffeurSchema)
-    }
-  ]
-})
+// Structured data: a Service offered by the site-wide business identity
+// (declared once in nuxt.config.ts → schemaOrg.identity).
+useSchemaOrg([
+  serviceSchema({
+    path: '/services/event-chauffeur',
+    locale: locale.value,
+    name: seo.title,
+    description: seo.description,
+    serviceType: 'Event chauffeur service',
+    areaServed: [{ type: 'City', name: 'London' }, { type: 'Country', name: 'United Kingdom' }],
+    image: '/images/womanpassenger.webp',
+  }),
+])
 </script>

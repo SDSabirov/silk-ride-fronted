@@ -1,8 +1,7 @@
 import { useHead, useRoute } from '#imports'
 import { useI18n } from 'vue-i18n'
 import { urlFor } from './sanityImage'
-
-const SITE_URL = 'https://silkride.co.uk'
+import { DEFAULT_OG_IMAGE, localizedUrl, stripLocale } from './siteSchema'
 
 interface BlogPost {
   title: string
@@ -30,18 +29,15 @@ export function useBlogSeo(post: BlogPost) {
     ? urlFor(post.seo.ogImage).width(1200).height(630).format('webp').url()
     : post.mainImage
       ? urlFor(post.mainImage).width(1200).height(630).format('webp').url()
-      : `${SITE_URL}/og-image.jpg`
+      : DEFAULT_OG_IMAGE
 
   // Canonical URL
-  const canonicalPath = locale.value === 'en'
-    ? route.path.replace(/^\/en/, '') || '/'
-    : route.path
-  const canonicalUrl = `${SITE_URL}${canonicalPath}`
+  const canonicalUrl = localizedUrl(stripLocale(route.path), locale.value)
 
-  // Hreflang alternates
-  const slug = post.slug.current
-  const enPath = `/blog/${slug}`
-  const ruPath = `/ru/blog/${slug}`
+  // Hreflang: posts are authored per language in Sanity and an English post is
+  // not guaranteed to have a Russian counterpart under the same slug, so only
+  // a self-reference is emitted (pointing hreflang at a 404 invalidates it).
+  const selfLang = locale.value === 'ru' ? 'ru-RU' : 'en-GB'
 
   useHead({
     title,
@@ -63,9 +59,7 @@ export function useBlogSeo(post: BlogPost) {
     ],
     link: [
       { rel: 'canonical', href: canonicalUrl },
-      { rel: 'alternate', hreflang: 'en-GB', href: `${SITE_URL}${enPath}` },
-      { rel: 'alternate', hreflang: 'ru-RU', href: `${SITE_URL}${ruPath}` },
-      { rel: 'alternate', hreflang: 'x-default', href: `${SITE_URL}${enPath}` },
+      { rel: 'alternate', hreflang: selfLang, href: canonicalUrl },
     ],
   })
 }

@@ -371,9 +371,10 @@
 </template>
 
 <script setup>
-import { useLocalePath } from '#imports'
+import { useLocalePath, useI18n } from '#imports'
 import { PHONE_DISPLAY, PHONE_HREF } from '~/utils/destinations'
 import { useSeo } from '~/utils/useSeo'
+import { serviceSchema, faqSchema } from '~/utils/siteSchema'
 
 const props = defineProps({
   transfer: { type: Object, required: true },
@@ -381,11 +382,9 @@ const props = defineProps({
 
 const d = props.transfer
 const localePath = useLocalePath()
+const { locale } = useI18n()
 
-const SITE_URL = 'https://silkride.co.uk'
 const bookingPath = localePath('/booking')
-const pageUrl = `${SITE_URL}/cruise-transfers/${d.slug}`
-const absImage = (path) => (path.startsWith('http') ? path : `${SITE_URL}${path}`)
 
 const breadcrumbs = [
   { name: d.labels.breadcrumbHome, path: '/' },
@@ -398,68 +397,22 @@ useSeo(d.seoKey, { image: d.hero.ogImage })
 
 // --- Structured data ---------------------------------------------------
 useSchemaOrg([
-  defineLocalBusiness({
-    name: 'Silk Ride Cruise Port Transfers',
-    description: d.schema.description,
-    image: [
-      `${SITE_URL}/logo.svg`,
-      `${SITE_URL}/vclassSide.webp`,
-      `${SITE_URL}/sclassSide.webp`,
-      `${SITE_URL}/eclassSide.webp`,
-    ],
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: 'London',
-      addressCountry: 'GB',
-    },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: 51.47,
-      longitude: -0.4543,
-    },
-    telephone: PHONE_DISPLAY,
-    url: pageUrl,
-    areaServed: [
-      { '@type': 'Place', name: 'Heathrow Airport' },
-      { '@type': 'Place', name: 'Port of Southampton' },
-      { '@type': 'City', name: 'Southampton' },
-      { '@type': 'City', name: 'London' },
-    ],
-    serviceType: 'Cruise Port Transfer Service',
-    priceRange: '£££',
-  }),
-  {
-    '@type': 'Service',
+  serviceSchema({
+    path: `/cruise-transfers/${d.slug}`,
+    locale: locale.value,
     name: d.schema.serviceName,
     description: d.schema.description,
-    serviceType: 'Cruise Port Transfer',
-    image: absImage(d.hero.ogImage),
-    url: pageUrl,
-    provider: { '@type': 'Organization', name: 'Silk Ride', url: SITE_URL },
+    serviceType: 'Cruise port transfer',
     areaServed: [
-      { '@type': 'Place', name: 'Heathrow Airport' },
-      { '@type': 'Place', name: 'Southampton Cruise Terminals' },
+      { type: 'Airport', name: 'Heathrow Airport' },
+      { type: 'Place', name: 'Port of Southampton' },
+      { type: 'City', name: 'Southampton' },
+      { type: 'City', name: 'London' },
     ],
-    offers: {
-      '@type': 'Offer',
-      price: d.pricing.price,
-      priceCurrency: 'GBP',
-      availability: 'https://schema.org/InStock',
-      url: pageUrl,
-      description: d.pricing.direction,
-    },
-  },
-  {
-    '@type': 'FAQPage',
-    mainEntity: d.faq.items.map((q) => ({
-      '@type': 'Question',
-      name: q.question,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: q.answer.replace(/<[^>]+>/g, ''),
-      },
-    })),
-  },
+    image: d.hero.ogImage,
+    price: d.pricing.price,
+  }),
+  faqSchema(d.faq.items, `/cruise-transfers/${d.slug}`, locale.value),
 ])
 </script>
 

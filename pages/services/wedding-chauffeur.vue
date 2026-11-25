@@ -497,15 +497,16 @@
 
 <script setup>
 import { useSeo } from '~/utils/useSeo'
+import { serviceSchema, faqSchema } from '~/utils/siteSchema'
 import { useLocalePath, useI18n } from '#imports'
 import { computed } from 'vue'
 const heroImage = '/images/covers/wedding.webp'
 const serviceImage = '/images/covers/wedding.webp'
 
-const { t } = useI18n()
+const { t, locale } = useI18n()
 const localePath = useLocalePath()
 
-useSeo('weddingChauffeur')
+const seo = useSeo('weddingChauffeur')
 
 const breadcrumbs = computed(() => [
   { name: t('seo.weddingPage.breadcrumbHome'), path: '/' },
@@ -535,33 +536,18 @@ const faqItems = computed(() => {
   return items
 })
 
-const weddingChauffeurSchema = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "Wedding Chauffeur Service",
-  "provider": {
-    "@type": "LocalBusiness",
-    "name": "Silk Ride Chauffeur Services",
-    "url": "https://silkride.co.uk",
-    "telephone": "+44 203 488 2324",
-    "image": [
-      "https://silkride.co.uk/logo.svg",
-      "https://silkride.co.uk/vclassSide.webp",
-      "https://silkride.co.uk/sclassSide.webp",
-      "https://silkride.co.uk/eclassSide.webp"
-    ]
-  },
-  "serviceType": "Wedding Transportation",
-  "areaServed": ["London", "United Kingdom"],
-  "description": "Luxury wedding chauffeur service with decorated Mercedes vehicles, professional drivers, bridal car service, and guest transportation for your special day."
-}
-
-useHead({
-  script: [
-    {
-      type: 'application/ld+json',
-      children: JSON.stringify(weddingChauffeurSchema)
-    }
-  ]
-})
+// Structured data: a Service offered by the site-wide business identity
+// (declared once in nuxt.config.ts → schemaOrg.identity).
+useSchemaOrg([
+  serviceSchema({
+    path: '/services/wedding-chauffeur',
+    locale: locale.value,
+    name: seo.title,
+    description: seo.description,
+    serviceType: 'Wedding car hire',
+    areaServed: [{ type: 'City', name: 'London' }, { type: 'Country', name: 'United Kingdom' }],
+    image: '/images/covers/wedding.webp',
+  }),
+  faqSchema(faqItems.value.map((f) => ({ question: f.q, answer: f.a })), '/services/wedding-chauffeur', locale.value),
+])
 </script>

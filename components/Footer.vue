@@ -53,7 +53,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
         <!-- Column 1: Logo & About -->
         <div class="lg:col-span-1">
-          <NuxtLink to="/" class="flex items-center gap-3 mb-6">
+          <NuxtLink :to="$localePath('/')" class="flex items-center gap-3 mb-6">
             <NuxtImg
               src="/logo.svg"
               alt="Silk Ride Logo"

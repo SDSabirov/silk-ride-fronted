@@ -11,7 +11,7 @@
       <div class="w-full flex items-center justify-center">
       <NuxtLink
         class="py-3 px-10 bg-black text-white font-medium text-lg rounded-sm hover:bg-gold hover:text-black transition-color duration-500 whitespace-nowrap"
-        to="/"
+        :to="$localePath('/')"
         >Return to Home Page</NuxtLink
       >
     </div>

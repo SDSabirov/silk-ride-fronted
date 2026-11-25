@@ -175,6 +175,7 @@ const { data: post } = await useSanityQuery(
     body,
     mainImage,
     publishedAt,
+    _updatedAt,
     tags,
     postType,
     featured,
@@ -199,11 +200,11 @@ const heroImage = computed(() => {
 if (post.value) {
   useBlogSeo(post.value)
 
-  const schemas: any[] = [articleSchema(post.value)]
+  const schemas: any[] = [articleSchema(post.value, lang)]
 
   // Add Event schema for event posts
   if (post.value.postType === 'event') {
-    const evSchema = eventSchema(post.value)
+    const evSchema = eventSchema(post.value, lang)
     if (evSchema) schemas.push(evSchema)
   }
 

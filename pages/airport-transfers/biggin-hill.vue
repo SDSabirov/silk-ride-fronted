@@ -353,48 +353,28 @@
 <script setup>
 import { useI18n, useLocalePath } from '#imports'
 
-const { t } = useI18n()
+const { t, locale } = useI18n()
 const localePath = useLocalePath()
 
 const breadcrumbs = computed(() => [
   { name: t('airportPages.common.breadcrumbHome'), path: '/' },
-  { name: t('airportPages.common.breadcrumbAirportTransfers'), path: '/airport-transfers' },
+  { name: t('airportPages.common.breadcrumbAirportTransfers'), path: '/services/airport-transfers' },
   { name: 'Biggin Hill', path: '/airport-transfers/biggin-hill' },
 ])
 
-useSeo('bigginHillChauffeur')
+const seo = useSeo('bigginHillChauffeur')
 
+// Structured data: this page's airport transfer Service, provided by the
+// site-wide business identity (nuxt.config.ts → schemaOrg.identity).
 useSchemaOrg([
-  defineLocalBusiness({
-    name: 'Silk Ride Biggin Hill Private Jet Chauffeur Service',
-    description: 'Executive chauffeur service for private jet passengers at London Biggin Hill Airport. Discreet luxury transfers with Mercedes fleet.',
-    image: [
-      'https://silkride.co.uk/logo.svg',
-      'https://silkride.co.uk/vclassSide.webp',
-      'https://silkride.co.uk/sclassSide.webp',
-      'https://silkride.co.uk/eclassSide.webp'
-    ],
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: 'London',
-      addressRegion: 'Bromley',
-      addressCountry: 'GB'
-    },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: 51.3308,
-      longitude: 0.0325
-    },
-    telephone: '+44 203 488 2324',
-    url: 'https://silkride.co.uk/airport-transfers/biggin-hill',
-    areaServed: [
-      { '@type': 'Place', name: 'London Biggin Hill Airport' },
-      { '@type': 'City', name: 'London' },
-      { '@type': 'Place', name: 'Kent' },
-      { '@type': 'Place', name: 'Surrey' }
-    ],
-    serviceType: 'Private Jet Airport Transfer Service',
-    priceRange: '££££'
-  })
+  serviceSchema({
+    path: '/airport-transfers/biggin-hill',
+    locale: locale.value,
+    name: seo.title,
+    description: seo.description,
+    serviceType: 'Airport transfer',
+    areaServed: [{ type: 'Airport', name: 'London Biggin Hill Airport' }, { type: 'City', name: 'London' }, { type: 'Place', name: 'Kent' }, { type: 'Place', name: 'Surrey' }],
+    priceFrom: 170,
+  }),
 ])
 </script>

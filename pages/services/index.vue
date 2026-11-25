@@ -99,11 +99,12 @@
 
 <script setup>
 import { useSeo } from '~/utils/useSeo'
+import { localizedUrl } from '~/utils/siteSchema'
 import { useI18n, useLocalePath } from '#imports'
 
 const cover = "/images/covers/services-cover.webp"
 
-const { t } = useI18n()
+const { t, locale } = useI18n()
 const localePath = useLocalePath()
 useSeo('services')
 
@@ -165,42 +166,18 @@ const detailedServices = computed(() => [
   }
 ])
 
-const servicesSchema = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "provider": {
-    "@type": "LocalBusiness",
-    "name": "Silk Ride Chauffeur Services",
-    "url": "https://silkride.co.uk",
-    "telephone": "+44 203 488 2324",
-    "image": [
-      "https://silkride.co.uk/logo.svg",
-      "https://silkride.co.uk/vclassSide.webp",
-      "https://silkride.co.uk/sclassSide.webp",
-      "https://silkride.co.uk/eclassSide.webp"
-    ],
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "London",
-      "addressCountry": "GB"
-    }
+// Structured data: the list of services this hub links to.
+useSchemaOrg([
+  {
+    '@type': 'ItemList',
+    '@id': `${localizedUrl('/services', locale.value)}#services`,
+    name: t('pages.services.servicesRangeTitle'),
+    itemListElement: detailedServices.value.map((service, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: service.title,
+      url: localizedUrl(service.path, locale.value),
+    })),
   },
-  "serviceType": [
-    "Airport Transfers",
-    "Hourly Chauffeur Hire",
-    "City-to-City Transfers",
-    "Wedding Chauffeur",
-    "Guided Tours"
-  ],
-  "areaServed": ["London", "United Kingdom"]
-}
-
-useHead({
-  script: [
-    {
-      type: 'application/ld+json',
-      children: JSON.stringify(servicesSchema)
-    }
-  ]
-})
+])
 </script>

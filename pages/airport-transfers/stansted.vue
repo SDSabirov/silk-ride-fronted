@@ -407,60 +407,28 @@
 <script setup>
 import { useI18n, useLocalePath } from '#imports'
 
-const { t } = useI18n()
+const { t, locale } = useI18n()
 const localePath = useLocalePath()
 
 const breadcrumbs = computed(() => [
   { name: t('airportPages.common.breadcrumbHome'), path: '/' },
-  { name: t('airportPages.common.breadcrumbAirportTransfers'), path: '/airport-transfers' },
+  { name: t('airportPages.common.breadcrumbAirportTransfers'), path: '/services/airport-transfers' },
   { name: 'Stansted', path: '/airport-transfers/stansted' },
 ])
 
-useSeo('stanstedChauffeur')
+const seo = useSeo('stanstedChauffeur')
 
-// Structured Data for Local Business
+// Structured data: this page's airport transfer Service, provided by the
+// site-wide business identity (nuxt.config.ts → schemaOrg.identity).
 useSchemaOrg([
-  defineLocalBusiness({
-    name: 'Silk Ride Stansted Chauffeur Service',
-    description: 'Professional luxury chauffeur service for Stansted Airport transfers with experienced drivers and premium Mercedes vehicles.',
-    image: [
-      'https://silkride.co.uk/logo.svg',
-      'https://silkride.co.uk/vclassSide.webp',
-      'https://silkride.co.uk/sclassSide.webp',
-      'https://silkride.co.uk/eclassSide.webp'
-    ],
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: 'London',
-      addressCountry: 'GB'
-    },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: 51.8860,
-      longitude: 0.2389
-    },
-    telephone: '+44 203 488 2324',
-    url: 'https://silkride.co.uk/airport-transfers/stansted',
-    areaServed: [
-      {
-        '@type': 'Place',
-        name: 'Stansted Airport'
-      },
-      {
-        '@type': 'City',
-        name: 'London'
-      },
-      {
-        '@type': 'City',
-        name: 'Cambridge'
-      },
-      {
-        '@type': 'AdministrativeArea',
-        name: 'Essex'
-      }
-    ],
-    serviceType: 'Airport Transfer Service',
-    priceRange: '£££'
-  })
+  serviceSchema({
+    path: '/airport-transfers/stansted',
+    locale: locale.value,
+    name: seo.title,
+    description: seo.description,
+    serviceType: 'Airport transfer',
+    areaServed: [{ type: 'Airport', name: 'Stansted Airport' }, { type: 'City', name: 'London' }, { type: 'City', name: 'Cambridge' }, { type: 'AdministrativeArea', name: 'Essex' }],
+    priceFrom: 200,
+  }),
 ])
 </script>

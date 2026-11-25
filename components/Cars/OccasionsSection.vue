@@ -65,7 +65,7 @@
                   <span class="text-gold font-semibold text-sm sm:text-base drop-shadow-sm">{{ $t('common.fromPrice', { price: basePrice }) }}</span>
                 </div>
                 <NuxtLink 
-                  to="/booking"
+                  :to="$localePath('/booking')"
                   class="bg-white/20 backdrop-blur-md hover:bg-white/30 text-white px-4 sm:px-6 py-2 rounded-full border border-white/40 hover:border-white/60 transition-all duration-300 transform hover:scale-105 text-sm sm:text-base font-medium shadow-lg"
                 >
                   {{ $t('pages.common.bookNow') }}
@@ -92,14 +92,14 @@
           
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <NuxtLink
-              to="/booking"
+              :to="$localePath('/booking')"
               class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-gold to-yellow-400 text-black text-lg font-semibold rounded-xl hover:from-yellow-400 hover:to-gold transition-all duration-300 transform hover:scale-105"
             >
               <i class="bx bx-calendar-check mr-2"></i>
               {{ $t('occasions.cta.bookStandard') }}
             </NuxtLink>
             <NuxtLink
-              to="/contact-us"
+              :to="$localePath('/contact-us')"
               class="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white text-lg font-semibold rounded-xl hover:bg-white hover:text-gray-900 transition-all duration-300"
             >
               <i class="bx bx-phone mr-2"></i>

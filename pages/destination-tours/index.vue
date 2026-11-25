@@ -116,7 +116,6 @@ import { useSeo } from '~/utils/useSeo'
 const localePath = useLocalePath()
 const { t, locale } = useI18n()
 const bookingPath = localePath('/booking')
-const SITE_URL = 'https://silkride.co.uk'
 
 const destinationList = getLocalizedDestinationList(locale.value)
 
@@ -130,12 +129,13 @@ useSeo('destinationsHub')
 useSchemaOrg([
   {
     '@type': 'ItemList',
-    name: 'Private Chauffeur Day Trips from London',
+    '@id': `${localizedUrl('/destination-tours', locale.value)}#tours`,
+    name: t('seo.destinationsHub.title'),
     itemListElement: destinationList.map((dest, i) => ({
       '@type': 'ListItem',
       position: i + 1,
-      name: `${dest.name} Tour from London`,
-      url: `${SITE_URL}/destination-tours/${dest.slug}`,
+      name: dest.name,
+      url: localizedUrl(`/destination-tours/${dest.slug}`, locale.value),
     })),
   },
 ])

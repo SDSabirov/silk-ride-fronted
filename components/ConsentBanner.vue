@@ -14,7 +14,7 @@
         <div class="px-4 py-3 flex flex-col sm:flex-row sm:items-center gap-3">
           <p id="consent-description" class="text-gray-400 text-xs leading-relaxed">
             We use cookies to enhance your experience.
-            <NuxtLink to="/privacy-policy" class="text-gold hover:text-gold-400 hover:underline transition-colors">Privacy Policy</NuxtLink>
+            <NuxtLink :to="$localePath('/privacy-policy')" class="text-gold hover:text-gold-400 hover:underline transition-colors">Privacy Policy</NuxtLink>
           </p>
 
           <div class="flex items-center gap-2 shrink-0">

@@ -95,7 +95,7 @@
         </h2>
         <p class="mb-4">
           We collect and process personal information according to our
-          <a href="/privacy-policy" class="text-blue-600 underline"
+          <a :href="$localePath('/privacy-policy')" class="text-blue-600 underline"
             >Privacy Policy</a
           >.<br />
           By using our Service, you consent to such processing and warrant that

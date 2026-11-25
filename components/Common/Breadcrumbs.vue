@@ -21,9 +21,12 @@
 
 <script setup lang="ts">
 import { useHead, useLocalePath } from '#imports'
+import { useI18n } from 'vue-i18n'
+import { localizedUrl } from '~/utils/siteSchema'
 
 interface BreadcrumbItem {
   name: string
+  /** Locale-neutral path, e.g. "/services" (the component localises it). */
   path: string
 }
 
@@ -32,8 +35,10 @@ const props = defineProps<{
 }>()
 
 const localePath = useLocalePath()
+const { locale } = useI18n()
 
-// Generate JSON-LD structured data for breadcrumbs
+// BreadcrumbList structured data — URLs must match the page's own locale,
+// otherwise /ru pages point their trail at the English site.
 const breadcrumbSchema = computed(() => ({
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
@@ -41,16 +46,16 @@ const breadcrumbSchema = computed(() => ({
     '@type': 'ListItem',
     position: index + 1,
     name: item.name,
-    item: `https://silkride.co.uk${item.path}`
+    item: localizedUrl(item.path, locale.value)
   }))
 }))
 
-// Inject JSON-LD into head
 useHead({
   script: [
     {
       type: 'application/ld+json',
-      innerHTML: JSON.stringify(breadcrumbSchema.value)
+      key: 'breadcrumb-schema',
+      innerHTML: computed(() => JSON.stringify(breadcrumbSchema.value))
     }
   ]
 })
