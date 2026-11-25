@@ -46,7 +46,7 @@ const guide: ClusterGuide = {
       kicker: 'Where to go',
       heading: 'Four destinations and what each involves',
       paragraphs: [
-        'Bath is the longest drive, about 115 miles west of London along the M4, and deserves a full day. The market is spread through pedestrian streets in the city centre, so your chauffeur sets you down as close as the city’s access rules allow and meets you again at an agreed point. Leave London early and there is time for lunch and the Roman Baths as well as the chalets.',
+        'Bath is the longest drive, about 115 miles west of London along the M4, and deserves a full day. The market is spread through pedestrian streets in the city centre, so your chauffeur sets you down as close as the city’s access rules allow and meets you again at an agreed point.',
         'Winchester is about 65 to 70 miles south-west of London via the M3. The market stands in the close beside the cathedral, and the city is compact enough to enjoy in an afternoon. Windsor is the short option, about 25 miles west of London: the castle and the streets below it make an unhurried half day, which suits families who would rather not spend long in the car.',
         'Blenheim Palace is about 65 miles north-west of London via the M40. Its illuminated trail is a ticketed evening event, so this is an afternoon departure and a late return — exactly when a waiting car is most welcome.',
       ],
@@ -111,12 +111,12 @@ const guide: ClusterGuide = {
       {
         question: 'Which Christmas markets can we visit on a day trip from London?',
         answer:
-          'The four we suggest are Bath Christmas Market, Winchester Cathedral Christmas Market, Windsor and the illuminated trail at Blenheim Palace. All are within about three hours’ drive of central London in normal traffic. If you have another market in mind, tell us: the car is yours for the day and the route is your choice.',
+          'The four we suggest are Bath Christmas Market, Winchester Cathedral Christmas Market, Windsor and the illuminated trail at Blenheim Palace. All are within about three hours’ drive of central London in normal traffic. If you have another market in mind, tell us.',
       },
       {
         question: 'Does the chauffeur wait while we are at the market?',
         answer:
-          'Yes. With hourly hire the car and chauffeur stay with you for the whole booking. Your chauffeur waits with the car and meets you at the agreed point when you call, whether that is to take you home or simply to relieve you of your bags part-way through.',
+          'Yes. With hourly hire the car and chauffeur stay with you for the whole booking. Your chauffeur waits with the car and meets you at the agreed point when you call, whether to take you home or simply to take your bags part-way through.',
       },
       {
         question: 'Are market or attraction tickets included?',

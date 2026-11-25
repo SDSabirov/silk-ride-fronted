@@ -46,17 +46,16 @@ const guide: ClusterGuide = {
       kicker: 'What you will see',
       heading: 'London’s main Christmas displays',
       paragraphs: [
-        'Regent Street is the centrepiece. Its “Spirits of Christmas” angels hang above the curve of the street, and because it is a through road you see them from the car. Oxford Street meets it at Oxford Circus with a display of its own; access for cars on Oxford Street itself is restricted, so its lights are usually seen from the junctions or on a short walk.',
+        'Regent Street is the centrepiece. Its “Spirits of Christmas” angels hang above the curve of the street, and because it is a through road you see them from the car. Oxford Street meets it at Oxford Circus with a display of its own; car access to Oxford Street itself is restricted, so its lights are usually seen from the junctions or on a short walk.',
         'A few minutes away, Bond Street and the streets of Mayfair are known for the decorated façades of their jewellers and fashion houses, and Carnaby Street for its inventive overhead installations. To the east, Covent Garden dresses its piazza with a large tree and decorations, and Trafalgar Square has the Norwegian Christmas tree given to London each year by the city of Oslo — it normally goes up in early December, later than the street lights.',
-        'Further west, Harrods and its Knightsbridge neighbours are lit along Brompton Road, and Winter Wonderland fills part of Hyde Park with rides and market stalls. The South Bank is a riverside walk and not a road, so it works as a stop, not a drive-past. Kew Gardens’ evening light trail is ticketed and lies further out in south-west London; treat it as the main event of an evening, not as one stop among many.',
+        'Further west, Harrods and its Knightsbridge neighbours are lit along Brompton Road, and Winter Wonderland fills part of Hyde Park with rides and market stalls. The South Bank is a riverside walk, so it is a stop, not a drive-past. Kew Gardens’ evening light trail is ticketed and lies further out in south-west London; treat it as the main event of an evening.',
       ],
     },
     {
       kicker: 'A sample evening',
       heading: 'A four-hour Christmas lights route',
       paragraphs: [
-        'There is no fixed itinerary, but a first visit often runs something like the route below. In December it is dark by late afternoon, so an early start works well with children; a later one leaves room for dinner first.',
-        'Treat it as a starting point. If the children want longer in Covent Garden, or you would rather skip a stop and stay in the warm, simply say so on the night.',
+        'There is no fixed itinerary, but a first visit often runs something like the route below. In December it is dark by late afternoon, so an early start works well with children; a later one leaves room for dinner first. Treat it as a starting point: if you want longer in Covent Garden, or would rather skip a stop and stay in the warm, say so on the night.',
       ],
       bullets: [
         'Collection from your home or hotel in central London in the late afternoon',
@@ -72,8 +71,8 @@ const guide: ClusterGuide = {
       kicker: 'Good to know',
       heading: 'Traffic, pedestrian streets and what to expect',
       paragraphs: [
-        'Central London’s roads are slow on December evenings, and some of the best-decorated streets are pedestrianised or closed for events on particular nights. Your chauffeur therefore chooses the exact route on the night, working around closures and queues instead of following a script. Slow traffic is no hardship on Regent Street — it is how you get a long look at the lights — but it does mean an evening covers a handful of areas, not every display in London.',
-        'Your chauffeur is a professional driver with local knowledge, not a licensed tour guide: they will take you to the right places and suggest where to walk, but there is no guided commentary. Entry to Winter Wonderland, the Kew light trail and similar attractions is ticketed by the organisers and is not included, so book those yourselves and give us your time slots when you reserve the car.',
+        'Central London’s roads are slow on December evenings, and some of the best-decorated streets are pedestrianised or closed for events on particular nights. Your chauffeur therefore chooses the exact route on the night, working around closures and queues instead of following a script. Expect an evening to cover a handful of areas, not every display in London.',
+        'Your chauffeur is a professional driver with local knowledge, not a licensed tour guide: they will take you to the right places and suggest where to walk, but there is no guided commentary. Winter Wonderland, the Kew light trail and similar attractions are ticketed by their organisers and not included, so book those yourselves and give us your time slots when you reserve the car.',
       ],
     },
   ],
@@ -106,14 +105,13 @@ const guide: ClusterGuide = {
     title: 'What does a Christmas lights tour cost?',
     paragraphs: [
       'A lights tour is booked as hourly chauffeur hire: you pay for the time the car and chauffeur are with you, from collection until you are dropped home. The minimum booking is four hours, which is enough for the central London route with two stops on foot.',
-      'Adding dinner, a show, Winter Wonderland or Kew makes for a longer evening, and because the car stays with you throughout there is nothing to rebook. Tell us the date and your plans, and the price for your evening is confirmed before you book.',
+      'Dinner, a show, Winter Wonderland or Kew make for a longer evening. Tell us the date and your plans, and the price for your evening is confirmed before you book.',
     ],
     points: [
       'Mercedes E-Class from £55 per hour',
       'Mercedes S-Class from £75 per hour',
       'Mercedes V-Class (up to 7 passengers) from £75 per hour',
       'Minimum booking of 4 hours',
-      'Tickets for attractions are not included',
       'Price confirmed before you book — pay by card, Apple Pay, Google Pay or bank transfer',
     ],
   },
@@ -130,12 +128,12 @@ const guide: ClusterGuide = {
       {
         question: 'When are London’s Christmas lights switched on?',
         answer:
-          'The main displays are typically lit from mid-November until early January, and they look best after dark, which in December means from late afternoon onwards. Switch-on dates differ from street to street and change every year, and the Trafalgar Square tree normally arrives in early December, so check the current dates if you are visiting at either end of the season.',
+          'The main displays are typically lit from mid-November until early January and look best after dark, which in December means from late afternoon. Switch-on dates differ from street to street and change every year, and the Trafalgar Square tree normally arrives in early December, so check the current dates if you are visiting at either end of the season.',
       },
       {
         question: 'Can we get out of the car and walk?',
         answer:
-          'Yes, and it is worth doing: Covent Garden’s piazza and Carnaby Street are pedestrian areas and are best seen on foot. The car cannot always stop right beside them, so your chauffeur sets you down at the nearest sensible point, waits close by and returns when you call. Anything you would rather not carry can stay on board.',
+          'Yes, and it is worth doing: Covent Garden’s piazza and Carnaby Street are pedestrian areas, best seen on foot. Your chauffeur sets you down at the nearest sensible point, waits close by and returns when you call. Anything you would rather not carry can stay on board.',
       },
       {
         question: 'Is the tour suitable for young children and grandparents?',
@@ -145,7 +143,7 @@ const guide: ClusterGuide = {
       {
         question: 'Is the chauffeur a tour guide, and are tickets included?',
         answer:
-          'No on both counts. Your chauffeur is a licensed professional driver who knows the city and will choose a sensible route, but is not a licensed guide and does not give a commentary. Tickets for Winter Wonderland, the Kew Gardens light trail or a theatre are bought separately from the organisers; tell us your entry times and we plan the evening around them.',
+          'No on both counts. Your chauffeur is a licensed professional driver who knows the city, not a licensed guide, and does not give a commentary. Tickets for Winter Wonderland, the Kew Gardens light trail or a theatre are bought separately from the organisers.',
       },
       {
         question: 'Can we book a lights tour on Christmas Eve or Christmas Day?',

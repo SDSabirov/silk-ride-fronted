@@ -62,7 +62,7 @@ const guide: ClusterGuide = {
       heading: 'How to get the most from your hours',
       paragraphs: [
         'A little order saves a lot of time. Group your shops by area so that the car makes a few short hops instead of criss-crossing the centre, and send us the list when you book so your chauffeur can plan the sequence. In the weeks before Christmas, weekdays are quieter than weekends, and an early start usually means calmer shops and easier roads.',
-        'Many of these streets do not allow a car to wait at the kerb, and some stretches are restricted or pedestrianised. Your chauffeur therefore drops you at the nearest practical point and waits close by; allow a few minutes for the car to return after you call, and longer on a busy Saturday. If the boot fills up, a run back to your home or hotel to unload is easily fitted in.',
+        'Many of these streets do not allow a car to wait at the kerb, and some stretches are restricted or pedestrianised, so your chauffeur drops you at the nearest practical point and waits close by. Allow a few minutes for the car to return after you call. If the boot fills up, a run back to your home or hotel to unload is easily fitted in.',
       ],
     },
     {
@@ -70,7 +70,7 @@ const guide: ClusterGuide = {
       heading: 'Adding Bicester Village',
       paragraphs: [
         'Bicester Village, the designer outlet in Oxfordshire, is about 60 miles from central London via the M40 — typically an hour and a half to two hours each way. Once the drive is counted it is a day in itself, so plan it as a separate outing, or as a long day that ends with a stop or two in London, and not as a quick detour.',
-        'The advantage of going by car is the journey back: everything you have bought travels in the boot to your front door, with no station platforms to carry it along.',
+        'Going by car pays off on the way back: everything you have bought travels in the boot to your front door.',
       ],
     },
   ],
@@ -102,7 +102,7 @@ const guide: ClusterGuide = {
     kicker: 'Pricing',
     title: 'What does a Christmas shopping chauffeur cost?',
     paragraphs: [
-      'Christmas shopping is booked as hourly chauffeur hire. You pay for the time the car and chauffeur are with you, from collection until you and your bags are home, and the car is yours alone throughout. The minimum booking is four hours, which suits one or two districts; three or more areas, or Bicester Village, call for a longer day.',
+      'Christmas shopping is booked as hourly chauffeur hire. You pay for the time the car and chauffeur are with you, from collection until you and your bags are home. The minimum booking is four hours, which suits one or two districts; three or more areas, or Bicester Village, call for a longer day.',
       'Tell us the date, where you would like to go and how many of you there are, and the price for your day is confirmed before you book.',
     ],
     points: [

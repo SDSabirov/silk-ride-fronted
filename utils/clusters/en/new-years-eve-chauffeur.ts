@@ -27,7 +27,7 @@ const guide: ClusterGuide = {
     kicker: 'The hardest night to get home',
     heading: 'A car that is already yours at midnight',
     paragraphs: [
-      'New Year’s Eve is the hardest night of the year to get home in London. Streets around the Thames, Westminster and the South Bank are closed to traffic for the ticketed fireworks, taxis and ride-hailing cars are scarce and expensive once midnight has passed, and the crowds leaving the centre are very large. A New Year’s Eve chauffeur in London does not make the closures disappear, but it does mean a car is already yours when everyone else is looking for one.',
+      'New Year’s Eve is the hardest night of the year to get home in London. Streets around the Thames, Westminster and the South Bank are closed to traffic for the ticketed fireworks, taxis and ride-hailing cars are scarce and expensive once midnight has passed, and the crowds leaving the centre are very large. A New Year’s Eve chauffeur in London cannot make the closures disappear, but the car is already yours when everyone else is looking for one.',
       'The service is booked by the hour. Your chauffeur collects you from home or your hotel, takes you to dinner, a party or the place you are staying, waits nearby, and drives you home when you decide the night is over rather than when an app finally finds a driver. Nobody in your party has to stay sober to drive.',
       'We operate 24 hours a day, 365 days a year, so the same service carries on into New Year’s Day: the drive back from a house party in the morning, a lunch reservation, or a flight from Heathrow or Gatwick on 1 January.',
     ],
@@ -47,7 +47,7 @@ const guide: ClusterGuide = {
       heading: 'What a car can and cannot do near the river',
       paragraphs: [
         'The fireworks are launched from the Thames in the heart of London, and an area on both banks is closed to vehicles for the evening. The closures begin well before midnight and stay in place into the early hours. No private car, taxi or chauffeur vehicle can drive into that zone, and ours is no exception.',
-        'If your evening is inside or beside the closed area — a riverside restaurant, a hotel in Westminster, a ticketed viewing area — we agree a set-down point at the edge of the closures before the night, and a collection point for afterwards. You walk the last stretch, so allow time for it and choose your shoes accordingly. The closure map is published ahead of each New Year’s Eve, and we plan around the current one rather than last year’s.',
+        'If your evening is inside or beside the closed area — a riverside restaurant, a hotel in Westminster, a ticketed viewing area — we agree a set-down point at the edge of the closures before the night, and a collection point for afterwards. You walk the last stretch, so allow time for it. The closure map is published ahead of each New Year’s Eve, and we plan around the current one rather than last year’s.',
         'Journeys in the first hour or so after midnight are slow across the centre, as crowds spill onto the roads and the routes that remain open carry the diverted traffic. We will tell you plainly what to expect, but nobody can promise a journey time on this night.',
       ],
       bullets: [
@@ -138,7 +138,7 @@ const guide: ClusterGuide = {
       {
         question: 'Are you available on New Year’s Day?',
         answer:
-          'Yes. We operate 24 hours a day, 365 days a year, including New Year’s Day. That covers the journey home from a party, a car for lunch, and <a href="/services/airport-transfers">airport transfers</a> with flight tracking and meet and greet. The price for your date is confirmed before you book.',
+          'Yes. We operate 24 hours a day, 365 days a year, including New Year’s Day. That covers the journey home from a party, a car for lunch, and <a href="/services/airport-transfers">airport transfers</a> with flight tracking. The price for your date is confirmed before you book.',
       },
     ],
   },
