@@ -7,7 +7,7 @@ const guide: ClusterGuide = {
   seo: {
     title: 'Chelsea Flower Show Chauffeur Service in London',
     description:
-      'Chauffeur to the RHS Chelsea Flower Show at the Royal Hospital Chelsea. Door to door, collected when you call. Hourly hire from £50, 4-hour minimum.',
+      'Chauffeur to the RHS Chelsea Flower Show at the Royal Hospital Chelsea. Door to door, collected when you call. Hourly hire from £55, 4-hour minimum.',
   },
   kicker: 'Event Chauffeur · Chelsea Flower Show',
   hero: {
@@ -95,7 +95,7 @@ const guide: ClusterGuide = {
       'From a central London address, a visit usually takes five to six hours with travel; from the home counties, or with lunch and shopping added, allow seven to nine. Tell us your plans and we will quote for the whole day before you book.',
     ],
     points: [
-      'Mercedes E-Class from £50 per hour',
+      'Mercedes E-Class from £55 per hour',
       'Mercedes S-Class from £75 per hour',
       'Mercedes V-Class (up to 7 passengers) from £75 per hour',
       'Minimum booking of 4 hours',

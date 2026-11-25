@@ -98,7 +98,7 @@ const guide: ClusterGuide = {
       'Because venues and hotels vary, we quote every journey for your event before you book, so the organiser sees the whole transport cost in advance. It can all be billed to one corporate account with VAT invoices.',
     ],
     points: [
-      'Hourly hire: E-Class from £50, S-Class and V-Class from £75 per hour',
+      'Hourly hire: E-Class from £55, S-Class and V-Class from £75 per hour',
       'Minimum hourly booking of 4 hours',
       'Heathrow or London City to central London from £120',
       '60 minutes’ free waiting for international arrivals, 45 for domestic',

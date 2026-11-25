@@ -31,7 +31,7 @@
               <p class="text-md">
                 {{ $t('servicesSection.eClass.description') }}
               </p>
-              <CommonPriceGuide hourlyRate="50" dayRate="400" heathrowToCenteral="120" />
+              <CommonPriceGuide hourlyRate="55" dayRate="400" heathrowToCenteral="120" />
               <div class="w-full flex flex-col space-y-2 items-center justify-center absolute bottom-4">
                 <NuxtLink :to="localePath('/booking')" class="flex w-[220px] items-center justify-center capitalize whitespace-nowrap border border-white text-white text-lg hover:bg-gold hover:text-black hover:border-gold p-2 transition-all duration-300 ease-in bg-delay-300">
                   {{ $t('servicesSection.bookNow') }}

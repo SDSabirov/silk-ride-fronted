@@ -7,7 +7,7 @@ const guide: ClusterGuide = {
   seo: {
     title: 'Wimbledon Chauffeur Service from London',
     description:
-      'Chauffeur-driven travel to The Championships, Wimbledon, in a Mercedes. Your driver stays for a flexible return. Hourly hire from £50, 4-hour minimum.',
+      'Chauffeur-driven travel to The Championships, Wimbledon, in a Mercedes. Your driver stays for a flexible return. Hourly hire from £55, 4-hour minimum.',
   },
   kicker: 'Event Chauffeur · Wimbledon',
   hero: {
@@ -96,7 +96,7 @@ const guide: ClusterGuide = {
       'From central London a day at The Championships typically comes to between seven and ten hours, depending on when you arrive and how late play runs. If you expect to stay for the evening matches, say so when you book and we will allow for it in the quote we give you beforehand.',
     ],
     points: [
-      'Mercedes E-Class from £50 per hour',
+      'Mercedes E-Class from £55 per hour',
       'Mercedes S-Class from £75 per hour',
       'Mercedes V-Class (up to 7 passengers) from £75 per hour',
       'Minimum booking of 4 hours',

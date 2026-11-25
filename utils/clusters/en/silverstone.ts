@@ -7,7 +7,7 @@ const guide: ClusterGuide = {
   seo: {
     title: 'Silverstone Grand Prix Chauffeur from London',
     description:
-      'London to the British Grand Prix at Silverstone in a chauffeur-driven Mercedes. Your chauffeur waits all day. Hourly hire from £50, 4-hour minimum.',
+      'London to the British Grand Prix at Silverstone in a chauffeur-driven Mercedes. Your chauffeur waits all day. Hourly hire from £55, 4-hour minimum.',
   },
   kicker: 'Event Chauffeur · Silverstone',
   hero: {
@@ -95,7 +95,7 @@ const guide: ClusterGuide = {
       'It pays to be realistic about the length of the day. With an early start, a full race programme and slow roads afterwards, Grand Prix Sunday from central London typically runs to between twelve and fifteen hours door to door; Friday and Saturday are usually shorter. Tell us your plans and we will quote for the whole day before you book.',
     ],
     points: [
-      'Mercedes E-Class from £50 per hour',
+      'Mercedes E-Class from £55 per hour',
       'Mercedes S-Class from £75 per hour',
       'Mercedes V-Class (up to 7 passengers) from £75 per hour',
       'Minimum booking of 4 hours',

@@ -7,7 +7,7 @@ const guide: ClusterGuide = {
   seo: {
     title: 'Goodwood Chauffeur Service from London',
     description:
-      'Chauffeur travel from London to Goodwood for the Festival of Speed, Revival and Glorious Goodwood. Your driver waits all day. Hourly hire from £50.',
+      'Chauffeur travel from London to Goodwood for the Festival of Speed, Revival and Glorious Goodwood. Your driver waits all day. Hourly hire from £55.',
   },
   kicker: 'Event Chauffeur · Goodwood',
   hero: {
@@ -95,7 +95,7 @@ const guide: ClusterGuide = {
       'With around two hours on the road in each direction and six to eight hours at the event, a Goodwood day from central London typically comes to between ten and thirteen hours. Tell us which event you are attending and we will quote for the whole day before you book.',
     ],
     points: [
-      'Mercedes E-Class from £50 per hour',
+      'Mercedes E-Class from £55 per hour',
       'Mercedes S-Class from £75 per hour',
       'Mercedes V-Class (up to 7 passengers) from £75 per hour',
       'Minimum booking of 4 hours',

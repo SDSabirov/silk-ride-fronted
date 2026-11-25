@@ -7,7 +7,7 @@ const guide: ClusterGuide = {
   seo: {
     title: 'Royal Ascot Chauffeur Service from London',
     description:
-      'Chauffeur-driven travel to Royal Ascot from London in a Mercedes E-Class, S-Class or V-Class. Your driver stays all day. Hourly hire from £50, 4-hour minimum.',
+      'Chauffeur-driven travel to Royal Ascot from London in a Mercedes E-Class, S-Class or V-Class. Your driver stays all day. Hourly hire from £55, 4-hour minimum.',
   },
   kicker: 'Event Chauffeur · Royal Ascot',
   hero: {
@@ -96,7 +96,7 @@ const guide: ClusterGuide = {
       'From central London a full race day typically comes to between eight and ten hours, depending on when you leave and whether you add stops. Tell us your plans and we will quote for the whole day before you book.',
     ],
     points: [
-      'Mercedes E-Class from £50 per hour',
+      'Mercedes E-Class from £55 per hour',
       'Mercedes S-Class from £75 per hour',
       'Mercedes V-Class (up to 7 passengers) from £75 per hour',
       'Minimum booking of 4 hours',

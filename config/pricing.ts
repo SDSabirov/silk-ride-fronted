@@ -4,7 +4,7 @@
 export const PRICING = {
   // Hourly rates
   hourly: {
-    eClass: 50,
+    eClass: 55,
     sClass: 75,
     vClass: 75,
   },

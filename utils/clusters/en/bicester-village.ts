@@ -7,7 +7,7 @@ const guide: ClusterGuide = {
   seo: {
     title: 'Bicester Village Chauffeur from London',
     description:
-      'Private chauffeur from London to Bicester Village in a Mercedes. Your driver waits and the boot holds your shopping. Hourly hire from £50, 4-hour minimum.',
+      'Private chauffeur from London to Bicester Village in a Mercedes. Your driver waits and the boot holds your shopping. Hourly hire from £55, 4-hour minimum.',
   },
   kicker: 'Hourly Chauffeur · Bicester Village',
   hero: {
@@ -94,7 +94,7 @@ const guide: ClusterGuide = {
       'From central London the day typically comes to between seven and nine hours: around three and a half hours of driving in total, plus your time at the Village. Adding Oxford or Blenheim Palace lengthens it. Tell us your plans and we will quote for the whole day before you book.',
     ],
     points: [
-      'Mercedes E-Class from £50 per hour',
+      'Mercedes E-Class from £55 per hour',
       'Mercedes S-Class from £75 per hour',
       'Mercedes V-Class (up to 7 passengers) from £75 per hour',
       'Minimum booking of 4 hours',

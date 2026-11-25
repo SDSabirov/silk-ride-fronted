@@ -7,7 +7,7 @@ const guide: ClusterGuide = {
   seo: {
     title: 'London Sightseeing by Chauffeur, by the Hour',
     description:
-      'See London’s landmarks at your own pace in a private Mercedes with a chauffeur who waits at every stop. Hourly hire from £50, 4-hour minimum.',
+      'See London’s landmarks at your own pace in a private Mercedes with a chauffeur who waits at every stop. Hourly hire from £55, 4-hour minimum.',
   },
   kicker: 'Hourly Chauffeur Hire · London Sightseeing',
   hero: {
@@ -105,7 +105,7 @@ const guide: ClusterGuide = {
       'A half-day of the main landmarks takes four to five hours and a full day eight or more. Tell us what you would like to see and we will quote for the whole booking before you book. Entrance tickets, meals and any guide you bring are separate.',
     ],
     points: [
-      'Mercedes E-Class from £50 per hour',
+      'Mercedes E-Class from £55 per hour',
       'Mercedes S-Class from £75 per hour',
       'Mercedes V-Class (up to 7 passengers) from £75 per hour',
       'Minimum booking of 4 hours',

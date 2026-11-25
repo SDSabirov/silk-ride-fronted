@@ -7,7 +7,7 @@ const guide: ClusterGuide = {
   seo: {
     title: 'Henley Royal Regatta Chauffeur from London',
     description:
-      'Chauffeur-driven travel from London to Henley Royal Regatta in a Mercedes. Your driver waits and brings you home. Hourly hire from £50, 4-hour minimum.',
+      'Chauffeur-driven travel from London to Henley Royal Regatta in a Mercedes. Your driver waits and brings you home. Hourly hire from £55, 4-hour minimum.',
   },
   kicker: 'Event Chauffeur · Henley Royal Regatta',
   hero: {
@@ -95,7 +95,7 @@ const guide: ClusterGuide = {
       'From central London, a full day at Henley typically comes to between nine and eleven hours, depending on how early you leave and how late you stay. Give us your plans and we will quote for the whole day before you commit.',
     ],
     points: [
-      'Mercedes E-Class from £50 per hour',
+      'Mercedes E-Class from £55 per hour',
       'Mercedes S-Class from £75 per hour',
       'Mercedes V-Class (up to 7 passengers) from £75 per hour',
       'Minimum booking of 4 hours',

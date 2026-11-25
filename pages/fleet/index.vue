@@ -118,7 +118,7 @@
               <div class="border-t border-gray-100 pt-5 mb-6">
                 <div class="flex justify-between items-center mb-2">
                   <span class="text-sm text-gray-500">{{ $t('priceGuide.hourly.title') }}</span>
-                  <span class="font-bold text-gray-900">£50/hour</span>
+                  <span class="font-bold text-gray-900">£55/hour</span>
                 </div>
                 <div class="flex justify-between items-center">
                   <span class="text-sm text-gray-500">{{ $t('priceGuide.heathrow') }}</span>

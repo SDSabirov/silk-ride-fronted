@@ -106,7 +106,7 @@ const guide: ClusterGuide = {
       'A full day of London meetings often runs to ten hours or more. Send us the draft schedule and we will quote for the whole day, or for each day of a longer programme, before you book. Companies that travel regularly can open a corporate account and receive VAT invoices.',
     ],
     points: [
-      'Mercedes E-Class from £50 per hour',
+      'Mercedes E-Class from £55 per hour',
       'Mercedes S-Class from £75 per hour',
       'Mercedes V-Class (up to 7 passengers) from £75 per hour',
       'Minimum booking of 4 hours',
